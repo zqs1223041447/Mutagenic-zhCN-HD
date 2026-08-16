@@ -1,0 +1,3893 @@
+{
+ "batch": 2,
+ "glossary": {
+  "Damage": "伤害",
+  "Physical Damage": "物理伤害",
+  "Fire Damage": "火焰伤害",
+  "Cold Damage": "冰冷伤害",
+  "Lightning Damage": "闪电伤害",
+  "Toxic Damage": "毒素伤害",
+  "Damage over Time": "持续伤害",
+  "More Damage": "更多伤害",
+  "Increased Damage": "增加伤害",
+  "Reduced Damage": "减少伤害",
+  "Less Damage": "更少伤害",
+  "Added Damage": "附加伤害",
+  "Extra Damage": "额外伤害",
+  "Lightning": "闪电",
+  "Fire": "火焰",
+  "Cold": "冰冷",
+  "Toxic": "毒素",
+  "Poison": "中毒",
+  "Bleed": "流血",
+  "Burn": "灼烧",
+  "Chill": "冰缓",
+  "Ailment": "异常状态",
+  "Ailments": "异常状态",
+  "Resistance": "抗性",
+  "Critical": "暴击",
+  "Critical Strike": "暴击",
+  "Spell": "法术",
+  "Attack": "攻击",
+  "Melee": "近战",
+  "Area": "范围",
+  "Projectile": "投射物",
+  "Projectiles": "投射物",
+  "Cast": "施放",
+  "Cast Speed": "施法速度",
+  "Attack Speed": "攻击速度",
+  "Movement Speed": "移动速度",
+  "Speed": "速度",
+  "Skill": "技能",
+  "Skills": "技能",
+  "Item": "物品",
+  "Items": "物品",
+  "Weapon": "武器",
+  "Weapons": "武器",
+  "Armor": "护甲",
+  "Evasion": "闪避",
+  "Shield": "盾牌",
+  "Block": "格挡",
+  "Life": "生命",
+  "Maximum Life": "最大生命",
+  "Health": "生命值",
+  "Mana": "魔力",
+  "Energy Shield": "能量护盾",
+  "Curse": "诅咒",
+  "Curses": "诅咒",
+  "Aura": "光环",
+  "Auras": "光环",
+  "Boon": "赐福",
+  "Boons": "赐福",
+  "Buff": "增益",
+  "Debuff": "减益",
+  "Penetration": "穿透",
+  "Duration": "持续",
+  "Chance": "几率",
+  "Enemies": "敌人",
+  "Enemy": "敌人",
+  "Nearby": "附近",
+  "Level": "等级",
+  "Zone": "区域",
+  "Ladder": "天梯",
+  "Wave": "波次",
+  "Stats": "属性",
+  "Stat": "属性",
+  "Strength": "力量",
+  "Agility": "敏捷",
+  "Wisdom": "智慧",
+  "Toughness": "坚韧",
+  "Resilience": "韧性",
+  "Swiftness": "迅捷",
+  "Precision": "精准",
+  "Regeneration": "再生",
+  "Multiplier": "倍率",
+  "Effectiveness": "效果",
+  "Attuned": "协调",
+  "Echoing": "回响",
+  "Jolt": "震荡",
+  "Dread": "恐惧",
+  "Static": "静电",
+  "Flame": "烈焰",
+  "Blade": "利刃",
+  "Bomb": "炸弹",
+  "Tether": "链接",
+  "Reach": "范围",
+  "Strike": "打击",
+  "Strikes": "打击",
+  "Blows": "重击",
+  "Hits": "命中",
+  "Hit": "命中",
+  "Lava": "熔岩",
+  "Skeleton": "骷髅",
+  "Hidden": "隐藏",
+  "Orb": "宝珠",
+  "Orb of Experimentation": "实验宝珠",
+  "Orb of Honing": "磨砺宝珠",
+  "Orb of Enhancement": "强化宝珠",
+  "Orb of Knowledge": "知识宝珠",
+  "Corruption Shard": "腐化碎片",
+  "Gene": "基因",
+  "Gene Tree": "基因树",
+  "Passive Tree": "被动天赋树",
+  "Passive": "被动",
+  "Passives": "被动",
+  "Minor": "次要",
+  "Major": "主要",
+  "Helmet": "头盔",
+  "Body": "胸甲",
+  "Belt": "腰带",
+  "Gloves": "手套",
+  "Boots": "靴子",
+  "Pants": "护腿",
+  "Melee Weapon": "近战武器",
+  "Caster Weapon": "法杖武器",
+  "Range Weapon": "远程武器",
+  "Hybrid": "混合",
+  "Offensive": "攻击型",
+  "Life Shield": "生命盾",
+  "Armor Shield": "护甲盾",
+  "Evasion Shield": "闪避盾",
+  "Hybrid Shield": "混合盾",
+  "Offensive Shield": "攻击盾",
+  "Life Body": "生命胸甲",
+  "Armor Body": "护甲胸甲",
+  "Evasion Body": "闪避胸甲",
+  "Hybrid Body": "混合胸甲",
+  "Offensive Body": "攻击胸甲",
+  "Evasion Helmet": "闪避头盔",
+  "Armor Helmet": "护甲头盔",
+  "Hybrid Helmet": "混合头盔",
+  "Life Helmet": "生命头盔",
+  "Offensive Helmet": "攻击头盔",
+  "Armor Belt": "护甲腰带",
+  "Evasion Belt": "闪避腰带",
+  "Zone Mods": "区域词缀",
+  "Completed Zone Level": "已完成区域等级",
+  "Movement": "移动",
+  "Character": "角色",
+  "Random": "随机",
+  "Choose": "选择",
+  "Enable": "启用",
+  "Challenge": "挑战",
+  "Hideout": "藏身处",
+  "Boon of": "恩惠",
+  "Added": "附加",
+  "Increased": "增加",
+  "Reduced": "减少",
+  "More": "更多",
+  "Less": "更少",
+  "Extra": "额外",
+  "Maximum": "最大",
+  "Converted": "转化",
+  "Gain": "获得",
+  "Deal": "造成",
+  "Deals": "造成",
+  "Dealing": "造成",
+  "Dealt": "造成",
+  "Infections": "感染",
+  "Heightened": "强化",
+  "Phantom": "幻影",
+  "Slinger": "投掷者",
+  "Study": "研究",
+  "Every": "每",
+  "Infected": "感染",
+  "Mutation": "突变",
+  "Mutagen": "诱变剂",
+  "Area of Effect": "作用范围",
+  "Effects": "效果",
+  "Effect": "效果",
+  "Mods": "词缀",
+  "Mod": "词缀",
+  "Support": "辅助",
+  "Supports": "辅助",
+  "Gem": "宝石",
+  "Aura skills": "光环技能",
+  "Totem": "图腾",
+  "Mine": "地雷",
+  "Trap": "陷阱",
+  "Minion": "召唤物",
+  "Minions": "召唤物",
+  "Charge": "充能",
+  "Charges": "充能",
+  "Power": "力量",
+  "Frenzy": "狂怒",
+  "Endurance": "耐力",
+  "Kill": "击杀",
+  "Kills": "击杀",
+  "Killing": "击杀",
+  "Slain": "击杀",
+  "Dies": "死亡",
+  "Death": "死亡",
+  "Respawn": "重生",
+  "Revive": "复活",
+  "Dungeon": "地下城",
+  "Boss": "首领",
+  "Elite": "精英",
+  "Rare": "稀有",
+  "Unique": "独特",
+  "Normal": "普通",
+  "Magic": "魔法",
+  "Currency": "通货",
+  "Inventory": "背包",
+  "Stash": "仓库",
+  "Quest": "任务",
+  "Achievement": "成就",
+  "Settings": "设置",
+  "Options": "选项",
+  "Main Menu": "主菜单",
+  "Pause": "暂停",
+  "Resume": "继续",
+  "Quit": "退出",
+  "Save": "保存",
+  "Load": "加载",
+  "New Game": "新游戏",
+  "Continue": "继续",
+  "Confirm": "确认",
+  "Cancel": "取消",
+  "Accept": "接受",
+  "Decline": "拒绝",
+  "Close": "关闭",
+  "Open": "打开",
+  "Back": "返回",
+  "Next": "下一步",
+  "Previous": "上一步",
+  "Yes": "是",
+  "No": "否",
+  "OK": "确定",
+  "Search": "搜索",
+  "Filter": "筛选",
+  "Sort": "排序",
+  "Rarity": "稀有度",
+  "Sockets": "插槽",
+  "Linked": "相连",
+  "Quality": "品质",
+  "Durability": "耐久",
+  "Requires": "需求",
+  "Requirement": "需求",
+  "Level Required": "需求等级",
+  "DPS": "DPS",
+  "Thorns": "荆棘",
+  "Leech": "吸取",
+  "Lifesteal": "生命偷取",
+  "Mana Steal": "魔力偷取",
+  "Onslaught": "猛攻",
+  "Fortify": "庇护",
+  "Unholy Might": "邪恶威能",
+  "Tailwind": "顺风",
+  "Berserk": "狂战士",
+  "Warcry": "战吼",
+  "Warcries": "战吼",
+  "Corpse": "尸体",
+  "Corpses": "尸体",
+  "Destroyed": "摧毁",
+  "Banner": "旗帜",
+  "Flasks": "药剂",
+  "Flask": "药剂",
+  "Potions": "药水",
+  "Potion": "药水",
+  "Stun": "眩晕",
+  "Stunned": "眩晕",
+  "Freeze": "冰冻",
+  "Frozen": "冰冻",
+  "Shock": "感电",
+  "Ignite": "点燃",
+  "Ignited": "点燃",
+  "Burning": "灼烧",
+  "Regen": "再生",
+  "Recovery": "回复",
+  "Recovers": "回复",
+  "Recover": "回复",
+  "Heal": "治疗",
+  "Heals": "治疗",
+  "Healing": "治疗",
+  "Removes": "移除",
+  "Removed": "移除",
+  "Remove": "移除",
+  "Adds": "附加",
+  "Apply": "施加",
+  "Applies": "施加",
+  "Applied": "施加",
+  "Apply to": "施加于",
+  "Aura Effect": "光环效果",
+  "Skill Effect": "技能效果",
+  "Spell Damage": "法术伤害",
+  "Attack Damage": "攻击伤害",
+  "Ranged Attack": "远程攻击",
+  "Attacks per Second": "每秒攻击次数",
+  "Casts per Second": "每秒施法次数",
+  "Projectiles per Cast": "每次施放投射物",
+  "Pierce": "穿透",
+  "Pierces": "穿透",
+  "Chain": "连锁",
+  "Chains": "连锁",
+  "Fork": "分叉",
+  "Split": "分裂",
+  "Explosion": "爆炸",
+  "Explodes": "爆炸",
+  "Exploding": "爆炸",
+  "Knockback": "击退",
+  "Knocks Back": "击退",
+  "Slow": "减速",
+  "Slowed": "减速",
+  "Slowing": "减速",
+  "Haste": "急速",
+  "Faster": "更快",
+  "Decreased": "降低",
+  "increased": "增加",
+  "reduced": "减少",
+  "more": "更多",
+  "less": "更少",
+  "attacks": "攻击",
+  "spells": "法术",
+  "ranged": "远程",
+  "CANNON": "炮塔",
+  "EffectRenders": "特效渲染",
+  "spawn": "生成",
+  "Spawns": "生成",
+  "Spawn": "生成",
+  "Spawning": "生成",
+  "respawn": "重生",
+  "skeleton": "骷髅"
+ },
+ "glossary_notes": {
+  "based_on": "PoE-style ARPG Chinese community terminology + in-game context",
+  "notes": "More=乘算更多 / Increased=加算增加 / Reduced=减少 / Less=更少 / Added=附加"
+ },
+ "instructions": "Translate each 'text' to Simplified Chinese for a dark-fantasy ARPG. Rules: (1) use the glossary for consistent terms; keep game terminology consistent with PoE Chinese conventions; (2) preserve ALL format placeholders exactly (%s %d %f %% \\n, curly-brace or $tokens); (3) do NOT translate pure identifiers/paths/single chars/numbers (mark as skip); (4) keep punctuation structure like : ; - ; (5) Chinese should be concise for UI fit; (6) proper nouns: use clever ARPG-style Chinese names (e.g. Sanguine Decay -> 血性衰败). Output STRICT JSON: a list of {\"text\": <exact source>, \"translation\": <zh> or \"skip\": true}.",
+ "units": [
+  {
+   "text": "Physical Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 3,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1455 | \"name\": \"Physical Damage\",",
+    "Globals/SkillSupports.gd:376 | \"name\": \"Physical Damage\",",
+    "Globals/StatsInfo.gd:567 | \"physical_damage\": \"Physical Damage\","
+   ]
+  },
+  {
+   "text": "Marked for Death",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 3,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:3812 | \"name\": \"Marked for Death\",",
+    "Globals/__OldPassiveStats.gd:3095 | \"name\": \"Marked for Death\",",
+    "Globals/Keystones/TreeKeystones.gd:83 | \"name\": \"Marked for Death\","
+   ]
+  },
+  {
+   "text": "Kinetic Projectiles",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 3,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:3861 | \"name\": \"Kinetic Projectiles\",",
+    "Globals/__OldPassiveStats.gd:3194 | \"name\": \"Kinetic Projectiles\",",
+    "Globals/Keystones/TreeKeystones.gd:127 | \"name\": \"Kinetic Projectiles\","
+   ]
+  },
+  {
+   "text": "Unstable Volley",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 3,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:3893 | \"name\": \"Unstable Volley\",",
+    "Globals/__OldPassiveStats.gd:3294 | \"name\": \"Unstable Volley\",",
+    "Globals/Keystones/TreeKeystones.gd:167 | \"name\": \"Unstable Volley\","
+   ]
+  },
+  {
+   "text": "Duplicate id %s:",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 3,
+   "contexts": [
+    "Globals/PassiveTreeData.gd:53 | quit(\"Duplicate id %s:\" % node.id)",
+    "Globals/SpecializationData.gd:66 | quit(\"Duplicate id %s:\" % node.id)",
+    "Globals/WorldMapData.gd:50 | quit(\"Duplicate id %s:\" % node.id)"
+   ]
+  },
+  {
+   "text": " [",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 3,
+   "contexts": [
+    "Scenes/Popups/ItemTabContent.gd:114 | content.add_text(\" [\" + str(stepify(effective_stat[pair_item], 0.1)) + \" \" + SkillTags.TagNames[pair_item] + \"]\")",
+    "Scenes/Popups/Dialogs/SkillSelect/SkillList.gd:80 | content.add_text(\" [\" + str(stepify(effective_stat[item], 0.1)) + \" \" + SkillTags.TagNames[item] + \"]\")",
+    "Scenes/Tooltips/SkillTooltip/SkillTooltip.gd:142 | content.add_text(\" [\" + str(stepify(effective_stat[pair_item], 0.1)) + \" \" + SkillTags.TagNames[pair_item] + \"]\")"
+   ]
+  },
+  {
+   "text": "Mutated Spider",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/Levels.gd:198 | \"name\": \"Mutated Spider\",",
+    "Globals/MonsterStats/MonsterStats.gd:310 | \"name\": \"Mutated Spider\","
+   ]
+  },
+  {
+   "text": "Minor Strength",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:91 | \"name\": \"Minor Strength\",",
+    "Globals/__OldPassiveStats.gd:89 | \"name\": \"Minor Strength\","
+   ]
+  },
+  {
+   "text": "Minor Agility",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:139 | \"name\": \"Minor Agility\",",
+    "Globals/__OldPassiveStats.gd:113 | \"name\": \"Minor Agility\","
+   ]
+  },
+  {
+   "text": "Minor Finesse",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:187 | \"name\": \"Minor Finesse\",",
+    "Globals/__OldPassiveStats.gd:137 | \"name\": \"Minor Finesse\","
+   ]
+  },
+  {
+   "text": "Minor Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:379 | \"name\": \"Minor Damage\",",
+    "Globals/__OldPassiveStats.gd:149 | \"name\": \"Minor Damage\","
+   ]
+  },
+  {
+   "text": "Minor Projectile Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:566 | \"name\": \"Minor Projectile Damage\",",
+    "Globals/__OldPassiveStats.gd:567 | \"name\": \"Minor Projectile Damage\","
+   ]
+  },
+  {
+   "text": "Major Physical Resistance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:757 | \"name\": \"Major Physical Resistance\",",
+    "Globals/__OldPassiveStats.gd:318 | \"name\": \"Major Physical Resistance\","
+   ]
+  },
+  {
+   "text": "Major Cold Resistance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:805 | \"name\": \"Major Cold Resistance\",",
+    "Globals/__OldPassiveStats.gd:342 | \"name\": \"Major Cold Resistance\","
+   ]
+  },
+  {
+   "text": "Major Toxic Resistance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:853 | \"name\": \"Major Toxic Resistance\",",
+    "Globals/__OldPassiveStats.gd:366 | \"name\": \"Major Toxic Resistance\","
+   ]
+  },
+  {
+   "text": "Maximum Fire Resistance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:902 | \"name\": \"Maximum Fire Resistance\",",
+    "Globals/StatsInfo.gd:548 | \"maximum_fire_resistance\": \"Maximum Fire Resistance\","
+   ]
+  },
+  {
+   "text": "Attack Speed",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1285 | \"name\": \"Attack Speed\",",
+    "Globals/__OldPassiveStats.gd:983 | \"name\": \"Attack Speed\","
+   ]
+  },
+  {
+   "text": "Minor Cold Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1685 | \"name\": \"Minor Cold Damage\",",
+    "Globals/__OldPassiveStats.gd:426 | \"name\": \"Minor Cold Damage\","
+   ]
+  },
+  {
+   "text": "Minor Evasion",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2144 | \"name\": \"Minor Evasion\",",
+    "Globals/__OldPassiveStats.gd:2533 | \"name\": \"Minor Evasion\","
+   ]
+  },
+  {
+   "text": "Unstable Explosives",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:3747 | \"name\": \"Unstable Explosives\",",
+    "Globals/__OldPassiveStats.gd:2107 | \"name\": \"Unstable Explosives\","
+   ]
+  },
+  {
+   "text": "Blood Armor",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:4188 | \"name\": \"Blood Armor\",",
+    "Globals/Keystones/TreeKeystones.gd:211 | \"name\": \"Blood Armor\","
+   ]
+  },
+  {
+   "text": "Stifled Cursing",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:4537 | \"name\": \"Stifled Cursing\",",
+    "Globals/Keystones/TreeKeystones.gd:263 | \"name\": \"Stifled Cursing\","
+   ]
+  },
+  {
+   "text": "Capable Combatant",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:4805 | \"name\": \"Capable Combatant\",",
+    "Globals/Keystones/TreeKeystones.gd:249 | \"name\": \"Capable Combatant\","
+   ]
+  },
+  {
+   "text": "Bonded Electrons",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/Skills.gd:686 | \"name\": \"Bonded Electrons\",",
+    "Globals/Keystones/TreeKeystones.gd:233 | \"name\": \"Bonded Electrons\","
+   ]
+  },
+  {
+   "text": "Collateral Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/SkillSupports.gd:69 | \"name\": \"Collateral Damage\",",
+    "Globals/Keystones/SupportKeystones.gd:10 | \"name\": \"Collateral Damage\","
+   ]
+  },
+  {
+   "text": "Toxic Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/SkillSupports.gd:428 | \"name\": \"Toxic Damage\",",
+    "Globals/StatsInfo.gd:571 | \"toxic_damage\": \"Toxic Damage\","
+   ]
+  },
+  {
+   "text": "Fire Penetration",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/SkillSupports.gd:480 | \"name\": \"Fire Penetration\",",
+    "Globals/StatsInfo.gd:577 | \"fire_penetration\": \"Fire Penetration\","
+   ]
+  },
+  {
+   "text": "%)",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/StatsInfo.gd:1055 | return str(round(amount)) + \" (\" + str(round(100.0 * (1.0 - Mitigation.get_effective_mitigation(amount, GameState.get_account_level())))) + \"%)\"",
+    "Scenes/Pickups/Gene/GenePickup.gd:30 | button.text += \" (\" + str(gene.quality) + \"%)\""
+   ]
+  },
+  {
+   "text": "Crocodile Skin",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:2987 | \"name\": \"Crocodile Skin\",",
+    "Globals/Keystones/TreeKeystones.gd:35 | \"name\": \"Crocodile Skin\","
+   ]
+  },
+  {
+   "text": "Damage Capacitor",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:3068 | \"name\": \"Damage Capacitor\",",
+    "Globals/Keystones/TreeKeystones.gd:71 | \"name\": \"Damage Capacitor\","
+   ]
+  },
+  {
+   "text": "Way of the Ranger",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:3122 | \"name\": \"Way of the Ranger\",",
+    "Globals/Keystones/TreeKeystones.gd:95 | \"name\": \"Way of the Ranger\","
+   ]
+  },
+  {
+   "text": "Quick Getaway",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:3167 | \"name\": \"Quick Getaway\",",
+    "Globals/Keystones/TreeKeystones.gd:115 | \"name\": \"Quick Getaway\","
+   ]
+  },
+  {
+   "text": "Siphoner of Life",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:3312 | \"name\": \"Siphoner of Life\",",
+    "Globals/Keystones/TreeKeystones.gd:175 | \"name\": \"Siphoner of Life\","
+   ]
+  },
+  {
+   "text": "Spreading Flames",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/Genes/UniquePools/UniquePoolGeneric.gd:248 | \"name\": \"Spreading Flames\",",
+    "Globals/Keystones/UniqueKeystones.gd:27 | \"name\": \"Spreading Flames\","
+   ]
+  },
+  {
+   "text": "Echoing Fury",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Globals/Genes/UniquePools/UniquePoolGeneric.gd:378 | \"name\": \"Echoing Fury\",",
+    "Globals/Keystones/UniqueKeystones.gd:55 | \"name\": \"Echoing Fury\","
+   ]
+  },
+  {
+   "text": "% Increased Quantity of Items Found",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Scenes/Minimap/Minimap.gd:52 | label.text = str(stepify(Globals.stage_iiq * 100.0, 1)) + \"% Increased Quantity of Items Found\"",
+    "Scenes/Popups/Dialogs/WorldMap/MapNode.gd:42 | $MapButton / StatInfoContainer / VBoxContainer / ItemQuanityLabel.text = str(stepify(iiq * 100.0, 1)) + \"% Increased Quantity of Items Found\""
+   ]
+  },
+  {
+   "text": "% Affix Effectiveness",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 2,
+   "contexts": [
+    "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd:82 | $GeneEditor / VBoxContainer / HBoxContainer2 / VBoxContainer2 / GeneQualityLabel.text = \"+\" + str(gene.quality) + \"% Affix Effectiveness\"",
+    "Scenes/Tooltips/GeneTooltip/GeneInfo.gd:13 | $VBoxContainer / GeneQualityLabel.text = \"+\" + str(gene.quality) + \"% Affix Effectiveness\""
+   ]
+  },
+  {
+   "text": "Orb of Honing",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Constants.gd:84 | OrbType.GREEN: \"Orb of Honing\","
+   ]
+  },
+  {
+   "text": "_0_6_0.dat",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/GameState.gd:144 | return str(Steam.getSteamID()) + \"_0_6_0.dat\""
+   ]
+  },
+  {
+   "text": "Evasion Shield",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:170 | BaseType.EVASION_SHIELD: \"Evasion Shield\","
+   ]
+  },
+  {
+   "text": "Offensive Shield",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:174 | BaseType.CASTER_SHIELD: \"Offensive Shield\","
+   ]
+  },
+  {
+   "text": "Life Body",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:179 | BaseType.LIFE_BODY: \"Life Body\","
+   ]
+  },
+  {
+   "text": "Hybrid Helmet",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:184 | BaseType.HYBRID_HELMET: \"Hybrid Helmet\","
+   ]
+  },
+  {
+   "text": "Evasion Belt",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:189 | BaseType.EVASION_BELT: \"Evasion Belt\","
+   ]
+  },
+  {
+   "text": "Armor Gloves",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:194 | BaseType.ARMOR_GLOVES: \"Armor Gloves\","
+   ]
+  },
+  {
+   "text": "Offensive Gloves",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:198 | BaseType.CASTER_GLOVES: \"Offensive Gloves\","
+   ]
+  },
+  {
+   "text": "Life Boots",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:203 | BaseType.LIFE_BOOTS: \"Life Boots\","
+   ]
+  },
+  {
+   "text": "Hybrid Pants",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:208 | BaseType.HYBRID_PANTS: \"Hybrid Pants\","
+   ]
+  },
+  {
+   "text": "Offensive Ring",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:213 | BaseType.CASTER_RING: \"Offensive Ring\","
+   ]
+  },
+  {
+   "text": "Offensive Amulet",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:218 | BaseType.CASTER_AMULET: \"Offensive Amulet\","
+   ]
+  },
+  {
+   "text": "Weapon/Shield",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:540 | GeneSlot.WEAPON: \"Weapon/Shield\","
+   ]
+  },
+  {
+   "text": "Godly Scramble",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:580 | CraftType.SCRAMBLE_ULTRA: \"Godly Scramble\","
+   ]
+  },
+  {
+   "text": "Permanently Lock Random Mod",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:585 | CraftType.LOCK_MOD: \"Permanently Lock Random Mod\","
+   ]
+  },
+  {
+   "text": "Upgrade Random Mod",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes.gd:589 | CraftType.UPGRADE_TIER: \"Upgrade Random Mod\","
+   ]
+  },
+  {
+   "text": "Did Steam initialize?: ",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Globals.gd:101 | print(\"Did Steam initialize?: \" + str(INIT))"
+   ]
+  },
+  {
+   "text": "Musty Den",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Levels.gd:86 | \"name\": \"Musty Den\","
+   ]
+  },
+  {
+   "text": "Challenge Ladder 1",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Levels.gd:220 | \"name\": \"Challenge Ladder 1\","
+   ]
+  },
+  {
+   "text": "Testing Zone",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Levels.gd:274 | \"name\": \"Testing Zone\","
+   ]
+  },
+  {
+   "text": "Critically Attuned",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/MonsterMods.gd:46 | \"description\": \"Critically Attuned\","
+   ]
+  },
+  {
+   "text": "Example Item 3",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/MTXManager.gd:15 | \"name\": \"Example Item 3\","
+   ]
+  },
+  {
+   "text": "Swiftness Boon",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:250 | \"name\": \"Swiftness Boon\","
+   ]
+  },
+  {
+   "text": "Precise Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:313 | \"name\": \"Precise Damage\","
+   ]
+  },
+  {
+   "text": "Buffed Life",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:403 | \"name\": \"Buffed Life\","
+   ]
+  },
+  {
+   "text": "Zombie Blood",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:503 | \"name\": \"Zombie Blood\","
+   ]
+  },
+  {
+   "text": "Ranged Proficiency",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:590 | \"name\": \"Ranged Proficiency\","
+   ]
+  },
+  {
+   "text": "Wicked Siphon",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:678 | \"name\": \"Wicked Siphon\","
+   ]
+  },
+  {
+   "text": "Heavy Hemorrhage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:730 | \"name\": \"Heavy Hemorrhage\","
+   ]
+  },
+  {
+   "text": "Sturdy Block Chance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:998 | \"name\": \"Sturdy Block Chance\","
+   ]
+  },
+  {
+   "text": "Minor Ailment Avoidance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1055 | \"name\": \"Minor Ailment Avoidance\","
+   ]
+  },
+  {
+   "text": "Minor Crit Resistance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1132 | \"name\": \"Minor Crit Resistance\","
+   ]
+  },
+  {
+   "text": "Mastermind of Movement",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1233 | \"name\": \"Mastermind of Movement\","
+   ]
+  },
+  {
+   "text": "Spellcasting Speed",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1336 | \"name\": \"Spellcasting Speed\","
+   ]
+  },
+  {
+   "text": "Attack Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1402 | \"name\": \"Attack Damage\","
+   ]
+  },
+  {
+   "text": "Minor Physical Spell Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1496 | \"name\": \"Minor Physical Spell Damage\","
+   ]
+  },
+  {
+   "text": "Heavy Physical Spell Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1548 | \"name\": \"Heavy Physical Spell Damage\","
+   ]
+  },
+  {
+   "text": "Minor Lightning Attack Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1618 | \"name\": \"Minor Lightning Attack Damage\","
+   ]
+  },
+  {
+   "text": "Heavy Lightning Attack Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1670 | \"name\": \"Heavy Lightning Attack Damage\","
+   ]
+  },
+  {
+   "text": "Cold Attack Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1753 | \"name\": \"Cold Attack Damage\","
+   ]
+  },
+  {
+   "text": "Minor Fire Spell Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1840 | \"name\": \"Minor Fire Spell Damage\","
+   ]
+  },
+  {
+   "text": "Heavy Fire Spell Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1892 | \"name\": \"Heavy Fire Spell Damage\","
+   ]
+  },
+  {
+   "text": "Toxic Spell Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:1970 | \"name\": \"Toxic Spell Damage\","
+   ]
+  },
+  {
+   "text": "Rapid Blows",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2037 | \"name\": \"Rapid Blows\","
+   ]
+  },
+  {
+   "text": "Minor Armor",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2110 | \"name\": \"Minor Armor\","
+   ]
+  },
+  {
+   "text": "Major Defenses",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2195 | \"name\": \"Major Defenses\","
+   ]
+  },
+  {
+   "text": "Salamander Blood",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2316 | \"name\": \"Salamander Blood\","
+   ]
+  },
+  {
+   "text": "Lava Sparking",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2406 | \"name\": \"Lava Sparking\","
+   ]
+  },
+  {
+   "text": "Zapping Hands",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2486 | \"name\": \"Zapping Hands\","
+   ]
+  },
+  {
+   "text": "Jolt Chance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2581 | \"name\": \"Jolt Chance\","
+   ]
+  },
+  {
+   "text": "Burn Chance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2629 | \"name\": \"Burn Chance\","
+   ]
+  },
+  {
+   "text": "Bleed Effect",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2684 | \"name\": \"Bleed Effect\","
+   ]
+  },
+  {
+   "text": "Tesla Coil",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2737 | \"name\": \"Tesla Coil\","
+   ]
+  },
+  {
+   "text": "Poison Effect",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2813 | \"name\": \"Poison Effect\","
+   ]
+  },
+  {
+   "text": "Minor Skill Duration",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2879 | \"name\": \"Minor Skill Duration\","
+   ]
+  },
+  {
+   "text": "Ailment Amplifier",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:2949 | \"name\": \"Ailment Amplifier\","
+   ]
+  },
+  {
+   "text": "Lightning Area of Effect",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:3081 | \"name\": \"Lightning Area of Effect\","
+   ]
+  },
+  {
+   "text": "Winter Squall",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:3154 | \"name\": \"Winter Squall\","
+   ]
+  },
+  {
+   "text": "Venomous Reach",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:3234 | \"name\": \"Venomous Reach\","
+   ]
+  },
+  {
+   "text": "Projectile Critical Attunement",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:3316 | \"name\": \"Projectile Critical Attunement\","
+   ]
+  },
+  {
+   "text": "Attack Critical Multiplier",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:3381 | \"name\": \"Attack Critical Multiplier\","
+   ]
+  },
+  {
+   "text": "Magnificient Spell Critical Multiplier",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:3446 | \"name\": \"Magnificient Spell Critical Multiplier\","
+   ]
+  },
+  {
+   "text": "Volatile Strikes",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:3563 | \"name\": \"Volatile Strikes\","
+   ]
+  },
+  {
+   "text": "Curse Influence",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:3645 | \"name\": \"Curse Influence\","
+   ]
+  },
+  {
+   "text": "TEST NODE",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:3920 | \"name\": \"TEST NODE\","
+   ]
+  },
+  {
+   "text": "Affliction Study",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:4021 | \"name\": \"Affliction Study\","
+   ]
+  },
+  {
+   "text": "Thor's Apprentice",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:4138 | \"name\": \"Thor's Apprentice\","
+   ]
+  },
+  {
+   "text": "Veil of Night",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:4224 | \"name\": \"Veil of Night\","
+   ]
+  },
+  {
+   "text": "Chain Gang",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:4316 | \"name\": \"Chain Gang\","
+   ]
+  },
+  {
+   "text": "Hand to Hand Specialist",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:4410 | \"name\": \"Hand to Hand Specialist\","
+   ]
+  },
+  {
+   "text": "Oak Aegis",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:4498 | \"name\": \"Oak Aegis\","
+   ]
+  },
+  {
+   "text": "Strengthened Wisdom",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:4665 | \"name\": \"Strengthened Wisdom\","
+   ]
+  },
+  {
+   "text": "Heated Resonance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:4729 | \"name\": \"Heated Resonance\","
+   ]
+  },
+  {
+   "text": "Slippery Titan",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PassiveTagStats.gd:4876 | \"name\": \"Slippery Titan\","
+   ]
+  },
+  {
+   "text": "The Warrior class specializes in slaying enemies with attacks.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PlayableClasses.gd:70 | PLAYABLE_CLASSES.WARRIOR: \"The Warrior class specializes in slaying enemies with attacks.\","
+   ]
+  },
+  {
+   "text": "The Fiend is highly attuned to Lightning.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PlayableClasses.gd:113 | PLAYABLE_SPECIALIZATIONS.FIEND: \"The Fiend is highly attuned to Lightning.\","
+   ]
+  },
+  {
+   "text": "The Titan is an unmovable beast on the battlefield.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/PlayableClasses.gd:117 | PLAYABLE_SPECIALIZATIONS.TITAN: \"The Titan is an unmovable beast on the battlefield.\","
+   ]
+  },
+  {
+   "text": "Cast a ball of magma at a nearby enemy, with a chance to set them on fire.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:182 | \"description\": \"Cast a ball of magma at a nearby enemy, with a chance to set them on fire.\","
+   ]
+  },
+  {
+   "text": "Throw a spear of pure lightning, inflicting powerful Lightning ailments. If Lightning Spear hits an enemy affected by Jolt, it will consume the Jolt to deal 200% of the Jolts effect as More Damage.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:212 | \"description\": \"Throw a spear of pure lightning, inflicting powerful Lightning ailments. If Lightning Spear hits an enemy affected by Jolt, it will consume the "
+   ]
+  },
+  {
+   "text": "Channel a stream of Lava towards a nearby enemy, dealing massive Fire damage in an area.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:232 | \"description\": \"Channel a stream of Lava towards a nearby enemy, dealing massive Fire damage in an area.\","
+   ]
+  },
+  {
+   "text": "Cast a ball of ice at a nearby enemy. Deals 25% splash damage. Frost Orb cannot pierce or chain.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:252 | \"description\": \"Cast a ball of ice at a nearby enemy. Deals 25% splash damage. Frost Orb cannot pierce or chain.\","
+   ]
+  },
+  {
+   "text": "Cast statically charged particles around you. Charges cannot Chain.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:272 | \"description\": \"Cast statically charged particles around you. Charges cannot Chain.\","
+   ]
+  },
+  {
+   "text": "Throws a slow, heavy axe dealing extremely high damage.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:302 | \"description\": \"Throws a slow, heavy axe dealing extremely high damage.\","
+   ]
+  },
+  {
+   "text": "Throws a single explosive bomb which detonates after a delay, dealing massive damage. Shrapnel Bomb is not affected by extra projectiles.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:322 | \"description\": \"Throws a single explosive bomb which detonates after a delay, dealing massive damage. Shrapnel Bomb is not affected by extra projectiles.\","
+   ]
+  },
+  {
+   "text": "Rapid fire weapon.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:352 | \"description\": \"Rapid fire weapon.\","
+   ]
+  },
+  {
+   "text": "Slam the ground and release a powerful shock wave towards a nearby enemy, dealing damage in an area.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:382 | \"description\": \"Slam the ground and release a powerful shock wave towards a nearby enemy, dealing damage in an area.\","
+   ]
+  },
+  {
+   "text": "Debilitation Curse",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:411 | \"name\": \"Debilitation Curse\","
+   ]
+  },
+  {
+   "text": "Brittle Curse",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:429 | \"name\": \"Brittle Curse\","
+   ]
+  },
+  {
+   "text": "Protracting Curse",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:447 | \"name\": \"Protracting Curse\","
+   ]
+  },
+  {
+   "text": "Polarize Curse",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:465 | \"name\": \"Polarize Curse\","
+   ]
+  },
+  {
+   "text": "Arrow Draw",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:483 | \"name\": \"Arrow Draw\","
+   ]
+  },
+  {
+   "text": "Prismatic Slash",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:505 | \"name\": \"Prismatic Slash\","
+   ]
+  },
+  {
+   "text": "Lacerating Slash",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:525 | \"name\": \"Lacerating Slash\","
+   ]
+  },
+  {
+   "text": "Regeneration Aura",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:546 | \"name\": \"Regeneration Aura\","
+   ]
+  },
+  {
+   "text": "Sturdiness Aura",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:564 | \"name\": \"Sturdiness Aura\","
+   ]
+  },
+  {
+   "text": "Honing Aura",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:582 | \"name\": \"Honing Aura\","
+   ]
+  },
+  {
+   "text": "Metallic Aura",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:600 | \"name\": \"Metallic Aura\","
+   ]
+  },
+  {
+   "text": "Frigid Aura",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:618 | \"name\": \"Frigid Aura\","
+   ]
+  },
+  {
+   "text": "Vile Aura",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:636 | \"name\": \"Vile Aura\","
+   ]
+  },
+  {
+   "text": "Dread Aura",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:656 | \"name\": \"Dread Aura\","
+   ]
+  },
+  {
+   "text": "Nearby Enemies count as Poisoned. Nearby Enemies take 20% More Damage.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Skills.gd:672 | \"description\": \"Nearby Enemies count as Poisoned. Nearby Enemies take 20% More Damage.\","
+   ]
+  },
+  {
+   "text": "Projectiles fire with no spread.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:61 | \"description\": \"Projectiles fire with no spread.\","
+   ]
+  },
+  {
+   "text": "Ricocheting Shots",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:91 | \"name\": \"Ricocheting Shots\","
+   ]
+  },
+  {
+   "text": "Skill never deals Critical Strikes, but deals More Damage.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:123 | \"description\": \"Skill never deals Critical Strikes, but deals More Damage.\","
+   ]
+  },
+  {
+   "text": "Deal more Physical Damage with Melee Attacks, and inflicts Hamstrung for 4 seconds on hit.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:163 | \"description\": \"Deal more Physical Damage with Melee Attacks, and inflicts Hamstrung for 4 seconds on hit.\","
+   ]
+  },
+  {
+   "text": "Skill deals more damage with critical strikes.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:195 | \"description\": \"Skill deals more damage with critical strikes.\","
+   ]
+  },
+  {
+   "text": "Chills and Freezes inflicted have more effect.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:252 | \"description\": \"Chills and Freezes inflicted have more effect.\","
+   ]
+  },
+  {
+   "text": "Skill converts some Physical damage into Cold Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:319 | \"description\": \"Skill converts some Physical damage into Cold Damage\","
+   ]
+  },
+  {
+   "text": "Skill affects a larger area, and will deal more area damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:358 | \"description\": \"Skill affects a larger area, and will deal more area damage\","
+   ]
+  },
+  {
+   "text": "Skill deals more Fire Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:416 | \"description\": \"Skill deals more Fire Damage\","
+   ]
+  },
+  {
+   "text": "Cold Damage with skill penetrates Cold Resistance on enemies.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:468 | \"description\": \"Cold Damage with skill penetrates Cold Resistance on enemies.\","
+   ]
+  },
+  {
+   "text": "Convert a portion of Lightning Damage into Cold Damage.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:507 | \"description\": \"Convert a portion of Lightning Damage into Cold Damage.\","
+   ]
+  },
+  {
+   "text": "Convert a portion of Lightning Damage into Fire Damage.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:533 | \"description\": \"Convert a portion of Lightning Damage into Fire Damage.\","
+   ]
+  },
+  {
+   "text": "Ailments inflicted by this skill have a chance to inflicted the enhanced version as well.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:572 | \"description\": \"Ailments inflicted by this skill have a chance to inflicted the enhanced version as well.\","
+   ]
+  },
+  {
+   "text": "Damage over Time inflicted by this skill deal more damage.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:598 | \"description\": \"Damage over Time inflicted by this skill deal more damage.\","
+   ]
+  },
+  {
+   "text": "Large Curses",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:661 | \"name\": \"Large Curses\","
+   ]
+  },
+  {
+   "text": "Chills and Freezes inflicted by this skill have increased effect.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:702 | \"description\": \"Chills and Freezes inflicted by this skill have increased effect.\","
+   ]
+  },
+  {
+   "text": "Igni Study",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:753 | \"name\": \"Igni Study\","
+   ]
+  },
+  {
+   "text": "Conductive Movement",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:779 | \"name\": \"Conductive Movement\","
+   ]
+  },
+  {
+   "text": "Infections inflicted by this skill spread to more nearby enemies.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:806 | \"description\": \"Infections inflicted by this skill spread to more nearby enemies.\","
+   ]
+  },
+  {
+   "text": "Precision Boon on Critical Strike",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/SkillSupports.gd:863 | \"name\": \"Precision Boon on Critical Strike\","
+   ]
+  },
+  {
+   "text": "Fire Starter",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StarterBuilds.gd:36 | \"name\": \"Fire Starter\","
+   ]
+  },
+  {
+   "text": "Mow down enemies with a machine gun.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StarterBuilds.gd:99 | \"description\": \"Mow down enemies with a machine gun.\","
+   ]
+  },
+  {
+   "text": "Maximum Life",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:515 | \"health_max\": \"Maximum Life\","
+   ]
+  },
+  {
+   "text": "Max Swiftness Boons",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:524 | \"swiftness_boon\": \"Max Swiftness Boons\","
+   ]
+  },
+  {
+   "text": "Movement Speed",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:529 | \"movement_speed\": \"Movement Speed\","
+   ]
+  },
+  {
+   "text": "Curse Resistance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:551 | \"curse_resistance\": \"Curse Resistance\","
+   ]
+  },
+  {
+   "text": "Critical Resistance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:556 | \"crit_resistance\": \"Critical Resistance\","
+   ]
+  },
+  {
+   "text": "Area Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:563 | \"area_damage\": \"Area Damage\","
+   ]
+  },
+  {
+   "text": "Physical Ailment Effect",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:583 | \"physical_ailment_effect\": \"Physical Ailment Effect\","
+   ]
+  },
+  {
+   "text": "Toxic Ailment Effect",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:587 | \"toxic_ailment_effect\": \"Toxic Ailment Effect\","
+   ]
+  },
+  {
+   "text": "Fire Ailment Chance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:592 | \"fire_ailment_chance\": \"Fire Ailment Chance\","
+   ]
+  },
+  {
+   "text": "Vulnerable Effect",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:599 | \"vulnerable_effect\": \"Vulnerable Effect\","
+   ]
+  },
+  {
+   "text": "Chance to gain Swiftness Boon on Hit",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:607 | \"swiftness_boon_on_hit_chance\": \"Chance to gain Swiftness Boon on Hit\","
+   ]
+  },
+  {
+   "text": "Chance to gain Swiftness Boon on Kill",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:613 | \"swiftness_boon_on_kill_chance\": \"Chance to gain Swiftness Boon on Kill\","
+   ]
+  },
+  {
+   "text": "Physical Damage as Extra Added Cold Damage per Precision Boon",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:618 | \"extra_physical_as_cold_per_precision\": \"Physical Damage as Extra Added Cold Damage per Precision Boon\","
+   ]
+  },
+  {
+   "text": "Increased Area of Effect per Toughness Boon",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:623 | \"aoe_per_toughtness\": \"Increased Area of Effect per Toughness Boon\","
+   ]
+  },
+  {
+   "text": "Cold Damage per 25 Wisdom",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:628 | \"cold_per_25_wisdom\": \"Cold Damage per 25 Wisdom\","
+   ]
+  },
+  {
+   "text": "Lightning Damage per Swiftness Boon",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:633 | \"lightning_per_swiftness\": \"Lightning Damage per Swiftness Boon\","
+   ]
+  },
+  {
+   "text": "Damage per Toughness Boon",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:638 | \"damage_per_toughness\": \"Damage per Toughness Boon\","
+   ]
+  },
+  {
+   "text": "Armor per Toughness Boon",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:642 | \"armor_per_toughness\": \"Armor per Toughness Boon\","
+   ]
+  },
+  {
+   "text": "Skill Duration",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:650 | \"base_duration\": \"Skill Duration\","
+   ]
+  },
+  {
+   "text": "Aura Effect",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:658 | \"aura_effect\": \"Aura Effect\","
+   ]
+  },
+  {
+   "text": "Physical Damage Converted to Toxic Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:663 | \"conversion_physical_to_toxic\": \"Physical Damage Converted to Toxic Damage\","
+   ]
+  },
+  {
+   "text": "Cold Damage Converted to Fire Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:667 | \"conversion_cold_to_fire\": \"Cold Damage Converted to Fire Damage\","
+   ]
+  },
+  {
+   "text": "Physical Damage as Extra Added Cold Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:672 | \"extra_physical_as_cold\": \"Physical Damage as Extra Added Cold Damage\","
+   ]
+  },
+  {
+   "text": "Lightning Damage as Extra Added Fire Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:676 | \"extra_lightning_as_fire\": \"Lightning Damage as Extra Added Fire Damage\","
+   ]
+  },
+  {
+   "text": "Fire Damage as Extra Added Toxic Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:680 | \"extra_fire_as_toxic\": \"Fire Damage as Extra Added Toxic Damage\","
+   ]
+  },
+  {
+   "text": "Physical Damage taken as Toxic Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:685 | \"physical_taken_as_toxic\": \"Physical Damage taken as Toxic Damage\","
+   ]
+  },
+  {
+   "text": "Cold Damage taken as Fire Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:689 | \"cold_taken_as_fire\": \"Cold Damage taken as Fire Damage\","
+   ]
+  },
+  {
+   "text": "Cold Damage as Extra Added Fire Damage against Chilled Enemies",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:694 | \"extra_cold_as_fire_against_chilled\": \"Cold Damage as Extra Added Fire Damage against Chilled Enemies\","
+   ]
+  },
+  {
+   "text": "% Increased ",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/StatsInfo.gd:960 | return str(round(amount * 100)) + \"% Increased \" + stat_name[stat] + tag_postfix"
+   ]
+  },
+  {
+   "text": "%02d:%02d",
+   "tags": [
+    "uncertain"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Utils.gd:27 | var label = \"%02d:%02d\" % [minutes, seconds]"
+   ]
+  },
+  {
+   "text": "Minor Lightning Resistance",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:270 | \"name\": \"Minor Lightning Resistance\","
+   ]
+  },
+  {
+   "text": "Heavy Hitter",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:463 | \"name\": \"Heavy Hitter\","
+   ]
+  },
+  {
+   "text": "Minor Area Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:579 | \"name\": \"Minor Area Damage\","
+   ]
+  },
+  {
+   "text": "Scalding Hit",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:641 | \"name\": \"Scalding Hit\","
+   ]
+  },
+  {
+   "text": "Minor Hit Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:721 | \"name\": \"Minor Hit Damage\","
+   ]
+  },
+  {
+   "text": "Minor Lightning Penetration",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:820 | \"name\": \"Minor Lightning Penetration\","
+   ]
+  },
+  {
+   "text": "Giant Breaker",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:869 | \"name\": \"Giant Breaker\","
+   ]
+  },
+  {
+   "text": "Minor Area Increase",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:1022 | \"name\": \"Minor Area Increase\","
+   ]
+  },
+  {
+   "text": "Faster Projectiles",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:1073 | \"name\": \"Faster Projectiles\","
+   ]
+  },
+  {
+   "text": "Snow Slinger",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:1165 | \"name\": \"Snow Slinger\","
+   ]
+  },
+  {
+   "text": "Sharp Cuts",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:1310 | \"name\": \"Sharp Cuts\","
+   ]
+  },
+  {
+   "text": "Dirty Claws",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:1358 | \"name\": \"Dirty Claws\","
+   ]
+  },
+  {
+   "text": "Serrated Cut",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:1484 | \"name\": \"Serrated Cut\","
+   ]
+  },
+  {
+   "text": "Surgical Attack",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:1636 | \"name\": \"Surgical Attack\","
+   ]
+  },
+  {
+   "text": "Lasting Hexes",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:1815 | \"name\": \"Lasting Hexes\","
+   ]
+  },
+  {
+   "text": "Thick Skin",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:1882 | \"name\": \"Thick Skin\","
+   ]
+  },
+  {
+   "text": "Elemental Affinity",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:2036 | \"name\": \"Elemental Affinity\","
+   ]
+  },
+  {
+   "text": "Fast Saboteur",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:2172 | \"name\": \"Fast Saboteur\","
+   ]
+  },
+  {
+   "text": "Strong Poisons",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:2282 | \"name\": \"Strong Poisons\","
+   ]
+  },
+  {
+   "text": "Resiliece Training",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:2347 | \"name\": \"Resiliece Training\","
+   ]
+  },
+  {
+   "text": "Precision Hits",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:2482 | \"name\": \"Precision Hits\","
+   ]
+  },
+  {
+   "text": "Martial Training",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:2567 | \"name\": \"Martial Training\","
+   ]
+  },
+  {
+   "text": "Elemental Dread",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:2665 | \"name\": \"Elemental Dread\","
+   ]
+  },
+  {
+   "text": "Learned Instincts",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:2724 | \"name\": \"Learned Instincts\","
+   ]
+  },
+  {
+   "text": "Fresh Boons",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:2906 | \"name\": \"Fresh Boons\","
+   ]
+  },
+  {
+   "text": "Phantom Shielding",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/__OldPassiveStats.gd:2960 | \"name\": \"Phantom Shielding\","
+   ]
+  },
+  {
+   "text": "It's cold outside...",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes/UniquePools/UniquePoolGeneric.gd:49 | \"flavor\": \"It's cold outside...\","
+   ]
+  },
+  {
+   "text": "Echoes of Sin",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes/UniquePools/UniquePoolGeneric.gd:109 | \"name\": \"Echoes of Sin\","
+   ]
+  },
+  {
+   "text": "Sometimes one must take a hit to make it through to the end.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes/UniquePools/UniquePoolGeneric.gd:156 | \"flavor\": \"Sometimes one must take a hit to make it through to the end.\","
+   ]
+  },
+  {
+   "text": "Skull Crusher",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes/UniquePools/UniquePoolGeneric.gd:227 | \"name\": \"Skull Crusher\","
+   ]
+  },
+  {
+   "text": "Cheat-ahs",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes/UniquePools/UniquePoolGeneric.gd:290 | \"name\": \"Cheat-ahs\","
+   ]
+  },
+  {
+   "text": "A goblin is alone without a tribe. A tribe of Buff-Boons.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes/UniquePools/UniquePoolGeneric.gd:341 | \"flavor\": \"A goblin is alone without a tribe. A tribe of Buff-Boons.\","
+   ]
+  },
+  {
+   "text": "Elemental dread at the pull of a string.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes/UniquePools/UniquePoolGeneric.gd:397 | \"flavor\": \"Elemental dread at the pull of a string.\","
+   ]
+  },
+  {
+   "text": "Become a stalwart defender in critical times.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Genes/UniquePools/UniquePoolGeneric.gd:439 | \"flavor\": \"Become a stalwart defender in critical times.\","
+   ]
+  },
+  {
+   "text": "Projectiles have no spread",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/SupportKeystones.gd:7 | \"description\": \"Projectiles have no spread\""
+   ]
+  },
+  {
+   "text": "Skill is cast when hitting an enemy with any non-triggered skill. Skill consumes all Boons to deal 20% more damage for each consumed Boon. Skill does not auto cast, and cannot trigger other skills.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/SupportKeystones.gd:23 | \"description\": \"Skill is cast when hitting an enemy with any non-triggered skill. Skill consumes all Boons to deal 20% more damage for each consumed Boon. Skill"
+   ]
+  },
+  {
+   "text": "Static Electricity",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/SupportKeystones.gd:38 | \"name\": \"Static Electricity\","
+   ]
+  },
+  {
+   "text": "12% of Increased Projectile Speed also applies as More Projectile Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:15 | \"description\": \"12% of Increased Projectile Speed also applies as More Projectile Damage\""
+   ]
+  },
+  {
+   "text": "Every 10 seconds, gain 20% Maximum Life Regenerated per Second for 1 seconds.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:28 | \"description\": \"Every 10 seconds, gain 20% Maximum Life Regenerated per Second for 1 seconds.\""
+   ]
+  },
+  {
+   "text": "Deal 20% More Damage if you've been hit in the past 5 seconds",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:44 | \"description\": \"Deal 20% More Damage if you've been hit in the past 5 seconds\""
+   ]
+  },
+  {
+   "text": "35% Less Damage taken from Damage over Time",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:60 | \"description\": \"35% Less Damage taken from Damage over Time\""
+   ]
+  },
+  {
+   "text": "Curses have 10% Less effect. Curses on enemies are spread to nearby enemies when they are killed",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:76 | \"description\": \"Curses have 10% Less effect. Curses on enemies are spread to nearby enemies when they are killed\""
+   ]
+  },
+  {
+   "text": "Skills have 15% More Cast Speed. Duration skills have 30% Less Duration",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:92 | \"description\": \"Skills have 15% More Cast Speed. Duration skills have 30% Less Duration\""
+   ]
+  },
+  {
+   "text": "Every 5 seconds, switch between dealing 20% More Area Damage, and having 40% More Area of Effect",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:108 | \"description\": \"Every 5 seconds, switch between dealing 20% More Area Damage, and having 40% More Area of Effect\""
+   ]
+  },
+  {
+   "text": "Nearby enemies take 30% More Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:124 | \"description\": \"Nearby enemies take 30% More Damage\""
+   ]
+  },
+  {
+   "text": "Deal 15% More Damage if you've killed in the past 5 seconds",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:140 | \"description\": \"Deal 15% More Damage if you've killed in the past 5 seconds\""
+   ]
+  },
+  {
+   "text": "Bleeding and Ruptured enemies explode on death, dealing 50% of the remaining total Bleed and Rupture Damage on them to nearby enemies.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:156 | \"description\": \"Bleeding and Ruptured enemies explode on death, dealing 50% of the remaining total Bleed and Rupture Damage on them to nearby enemies.\""
+   ]
+  },
+  {
+   "text": "Every 10 seconds, gain 30% More Cast Speed for 4 seconds",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:172 | \"description\": \"Every 10 seconds, gain 30% More Cast Speed for 4 seconds\""
+   ]
+  },
+  {
+   "text": "Poisoned Enemies take 20% More Damage",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:189 | \"description\": \"Poisoned Enemies take 20% More Damage\","
+   ]
+  },
+  {
+   "text": "Enemies that hit you are marked with Transfusion. Transfused Enemies take 50% More Damage Over Time.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:208 | \"description\": \"Enemies that hit you are marked with Transfusion. Transfused Enemies take 50% More Damage Over Time.\","
+   ]
+  },
+  {
+   "text": "Your Lightning Damage can inflict Toxic Ailments.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:230 | \"description\": \"Your Lightning Damage can inflict Toxic Ailments.\""
+   ]
+  },
+  {
+   "text": "Capped Block Chance also applies as More Damage.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:250 | \"description\": \"Capped Block Chance also applies as More Damage.\""
+   ]
+  },
+  {
+   "text": "Gain 1% Increased Lightning Damage for every 200 Total Evasion, up to 5000%",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/TreeKeystones.gd:270 | \"description\": \"Gain 1% Increased Lightning Damage for every 200 Total Evasion, up to 5000%\""
+   ]
+  },
+  {
+   "text": "Crown of Ice",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/UniqueKeystones.gd:11 | \"name\": \"Crown of Ice\","
+   ]
+  },
+  {
+   "text": "All Evasion is converted into Armor",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/UniqueKeystones.gd:20 | \"description\": \"All Evasion is converted into Armor\""
+   ]
+  },
+  {
+   "text": "Cannot use non-Bomb Damaging Skills. Bombs Skills fire double Bombs.",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/UniqueKeystones.gd:36 | \"description\": \"Cannot use non-Bomb Damaging Skills. Bombs Skills fire double Bombs.\""
+   ]
+  },
+  {
+   "text": "Cheet-ahs",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/Keystones/UniqueKeystones.gd:51 | \"name\": \"Cheet-ahs\","
+   ]
+  },
+  {
+   "text": "Training Dummy",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/MonsterStats/MonsterStats.gd:5 | \"name\": \"Training Dummy\","
+   ]
+  },
+  {
+   "text": "Ice Golem",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/MonsterStats/MonsterStats.gd:70 | \"name\": \"Ice Golem\","
+   ]
+  },
+  {
+   "text": "Chilly Bones",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Globals/MonsterStats/MonsterStats.gd:137 | \"name\": \"Chilly Bones\","
+   ]
+  },
+  {
+   "text": "https://discord.gg/TzF3aRWnhZ",
+   "tags": [
+    "uncertain"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Menu.gd:47 | OS.shell_open(\"https://discord.gg/TzF3aRWnhZ\")"
+   ]
+  },
+  {
+   "text": "Your Hideout",
+   "tags": [
+    "uncertain"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/GUI/GUI.gd:92 | show_message(\"Your Hideout\")"
+   ]
+  },
+  {
+   "text": "Picked up ",
+   "tags": [
+    "uncertain"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/GUI/GUI.gd:221 | content.add_text(\"Picked up \")"
+   ]
+  },
+  {
+   "text": "Passive Upgrades",
+   "tags": [
+    "uncertain"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Interactables/MutationBench/MutationBench.gd:6 | return \"Passive Upgrades\""
+   ]
+  },
+  {
+   "text": "Class Specializations",
+   "tags": [
+    "uncertain"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Interactables/SpecializationStatue/SpecializationStatue.gd:13 | return \"Class Specializations\""
+   ]
+  },
+  {
+   "text": "Spawning Genes...",
+   "tags": [
+    "uncertain"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Levels/BaseLevel.gd:352 | emit_signal(\"status_changed\", \"Spawning Genes...\")"
+   ]
+  },
+  {
+   "text": " Spawning Shortly...",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Levels/Ladder/Ladder.gd:75 | Globals.show_message(\"Wave \" + str(current_wave) + \" Spawning Shortly...\")"
+   ]
+  },
+  {
+   "text": "x ",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Pickups/Orb/OrbPickup.gd:42 | button.text = str(amount) + \"x \" + Constants.OrbName[orb_type]"
+   ]
+  },
+  {
+   "text": "Rank ",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Popups/DeathScreen.gd:51 | $CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ChallengeRankLabel.text = \"Rank \" + str(new_rank) + \" with a score of \" + "
+   ]
+  },
+  {
+   "text": "Error Uploading Score",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Popups/DeathScreen.gd:59 | $CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ChallengeRankLabel.text = \"Error Uploading Score\""
+   ]
+  },
+  {
+   "text": "Added ",
+   "tags": [
+    "dict_value"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Popups/EscapeMenu.gd:177 | label.stat_name = \"Added \" + StatsInfo.stat_name[stat] + \":\""
+   ]
+  },
+  {
+   "text": "Permanently Delete this Character?",
+   "tags": [
+    "uncertain"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.gd:44 | popup.window_title = \"Permanently Delete this Character?\""
+   ]
+  },
+  {
+   "text": "Mod Level ",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd:55 | label.text = \"Mod Level \" + str(tier.tier) + \" (\" + str(tier.chance) + \"%) (Minimum Drop Level: \" + \\"
+   ]
+  },
+  {
+   "text": "Save Tree",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd:284 | popup.title = \"Save Tree\""
+   ]
+  },
+  {
+   "text": "Skill Stats",
+   "tags": [
+    "uncertain"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Popups/Dialogs/SkillSelect/SkillList.gd:62 | content.add_text(\"Skill Stats\")"
+   ]
+  },
+  {
+   "text": "Req Level: ",
+   "tags": [
+    "translatable"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Popups/Dialogs/SkillSelect/SupportButton.gd:29 | $VBoxContainer / NameLabel.text = \"Req Level: \" + str(SlotRequirements.get_required_level_for_support(slot, support_slot))"
+   ]
+  },
+  {
+   "text": "0578a6",
+   "tags": [
+    "uncertain"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Projectiles/Skills/BrittleProjectile.gd:24 | explosion.modulation = Color(\"0578a6\")"
+   ]
+  },
+  {
+   "text": "No Supports Active",
+   "tags": [
+    "uncertain"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/Skills/GenericSkill.gd:311 | return \"No Supports Active\""
+   ]
+  },
+  {
+   "text": "Mod Level Maxed: (%s - %s)",
+   "tags": [
+    "uncertain"
+   ],
+   "kinds": [
+    "gd"
+   ],
+   "occurrences": 1,
+   "contexts": [
+    "Scenes/UI/ModItem.gd:42 | mod_label.text += \"Mod Level Maxed: (%s - %s)\" % [roll_range.min_formatted, roll_range.max_formatted]"
+   ]
+  }
+ ]
+}

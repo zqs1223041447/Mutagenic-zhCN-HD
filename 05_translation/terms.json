@@ -1,0 +1,1605 @@
+{
+ "count": 400,
+ "terms": [
+  {
+   "word": "Damage",
+   "count": 270
+  },
+  {
+   "word": "Lightning",
+   "count": 67
+  },
+  {
+   "word": "Minor",
+   "count": 66
+  },
+  {
+   "word": "Fire",
+   "count": 60
+  },
+  {
+   "word": "Cold",
+   "count": 53
+  },
+  {
+   "word": "Skill",
+   "count": 52
+  },
+  {
+   "word": "Physical",
+   "count": 50
+  },
+  {
+   "word": "More",
+   "count": 46
+  },
+  {
+   "word": "Resistance",
+   "count": 41
+  },
+  {
+   "word": "Toxic",
+   "count": 41
+  },
+  {
+   "word": "Boon",
+   "count": 41
+  },
+  {
+   "word": "Life",
+   "count": 36
+  },
+  {
+   "word": "Effect",
+   "count": 34
+  },
+  {
+   "word": "Chance",
+   "count": 33
+  },
+  {
+   "word": "Enemies",
+   "count": 32
+  },
+  {
+   "word": "Attack",
+   "count": 31
+  },
+  {
+   "word": "Curse",
+   "count": 28
+  },
+  {
+   "word": "Added",
+   "count": 27
+  },
+  {
+   "word": "Ailment",
+   "count": 24
+  },
+  {
+   "word": "Spell",
+   "count": 24
+  },
+  {
+   "word": "Critical",
+   "count": 24
+  },
+  {
+   "word": "Speed",
+   "count": 23
+  },
+  {
+   "word": "Level",
+   "count": 23
+  },
+  {
+   "word": "Extra",
+   "count": 22
+  },
+  {
+   "word": "Maximum",
+   "count": 21
+  },
+  {
+   "word": "Blood",
+   "count": 20
+  },
+  {
+   "word": "Skills",
+   "count": 20
+  },
+  {
+   "word": "Major",
+   "count": 19
+  },
+  {
+   "word": "Aura",
+   "count": 18
+  },
+  {
+   "word": "Armor",
+   "count": 18
+  },
+  {
+   "word": "Precision",
+   "count": 18
+  },
+  {
+   "word": "Hit",
+   "count": 18
+  },
+  {
+   "word": "Item",
+   "count": 17
+  },
+  {
+   "word": "Area",
+   "count": 17
+  },
+  {
+   "word": "Cast",
+   "count": 17
+  },
+  {
+   "word": "Less",
+   "count": 17
+  },
+  {
+   "word": "Increased",
+   "count": 16
+  },
+  {
+   "word": "Mod",
+   "count": 16
+  },
+  {
+   "word": "Elemental",
+   "count": 16
+  },
+  {
+   "word": "Projectiles",
+   "count": 15
+  },
+  {
+   "word": "Time",
+   "count": 15
+  },
+  {
+   "word": "Toughness",
+   "count": 14
+  },
+  {
+   "word": "Heavy",
+   "count": 14
+  },
+  {
+   "word": "Strikes",
+   "count": 13
+  },
+  {
+   "word": "Gain",
+   "count": 13
+  },
+  {
+   "word": "Duration",
+   "count": 12
+  },
+  {
+   "word": "Projectile",
+   "count": 12
+  },
+  {
+   "word": "Evasion",
+   "count": 12
+  },
+  {
+   "word": "Penetration",
+   "count": 12
+  },
+  {
+   "word": "Swiftness",
+   "count": 12
+  },
+  {
+   "word": "Boons",
+   "count": 11
+  },
+  {
+   "word": "Nearby",
+   "count": 11
+  },
+  {
+   "word": "Shield",
+   "count": 11
+  },
+  {
+   "word": "Ailments",
+   "count": 10
+  },
+  {
+   "word": "Offensive",
+   "count": 10
+  },
+  {
+   "word": "Multiplier",
+   "count": 10
+  },
+  {
+   "word": "Converted",
+   "count": 10
+  },
+  {
+   "word": "Name",
+   "count": 9
+  },
+  {
+   "word": "Choose",
+   "count": 8
+  },
+  {
+   "word": "Movement",
+   "count": 8
+  },
+  {
+   "word": "Poison",
+   "count": 8
+  },
+  {
+   "word": "Enable",
+   "count": 8
+  },
+  {
+   "word": "Attuned",
+   "count": 7
+  },
+  {
+   "word": "Echoing",
+   "count": 7
+  },
+  {
+   "word": "Effectiveness",
+   "count": 7
+  },
+  {
+   "word": "Orb",
+   "count": 7
+  },
+  {
+   "word": "Hybrid",
+   "count": 7
+  },
+  {
+   "word": "Zone",
+   "count": 7
+  },
+  {
+   "word": "Block",
+   "count": 7
+  },
+  {
+   "word": "Regeneration",
+   "count": 7
+  },
+  {
+   "word": "Jolt",
+   "count": 7
+  },
+  {
+   "word": "Strike",
+   "count": 7
+  },
+  {
+   "word": "Deal",
+   "count": 7
+  },
+  {
+   "word": "Stats",
+   "count": 7
+  },
+  {
+   "word": "Strength",
+   "count": 6
+  },
+  {
+   "word": "Wisdom",
+   "count": 6
+  },
+  {
+   "word": "Weapon",
+   "count": 6
+  },
+  {
+   "word": "Infections",
+   "count": 6
+  },
+  {
+   "word": "Body",
+   "count": 6
+  },
+  {
+   "word": "Gloves",
+   "count": 6
+  },
+  {
+   "word": "Boots",
+   "count": 6
+  },
+  {
+   "word": "Chilled",
+   "count": 6
+  },
+  {
+   "word": "Resilience",
+   "count": 6
+  },
+  {
+   "word": "Bleed",
+   "count": 6
+  },
+  {
+   "word": "Burn",
+   "count": 6
+  },
+  {
+   "word": "Reach",
+   "count": 6
+  },
+  {
+   "word": "Flame",
+   "count": 6
+  },
+  {
+   "word": "Static",
+   "count": 6
+  },
+  {
+   "word": "Dread",
+   "count": 6
+  },
+  {
+   "word": "Curses",
+   "count": 6
+  },
+  {
+   "word": "Character",
+   "count": 5
+  },
+  {
+   "word": "Items",
+   "count": 5
+  },
+  {
+   "word": "Agility",
+   "count": 5
+  },
+  {
+   "word": "Melee",
+   "count": 5
+  },
+  {
+   "word": "Blows",
+   "count": 5
+  },
+  {
+   "word": "Study",
+   "count": 5
+  },
+  {
+   "word": "Bomb",
+   "count": 5
+  },
+  {
+   "word": "Gene",
+   "count": 5
+  },
+  {
+   "word": "Tree",
+   "count": 5
+  },
+  {
+   "word": "Helmet",
+   "count": 5
+  },
+  {
+   "word": "Belt",
+   "count": 5
+  },
+  {
+   "word": "Pants",
+   "count": 5
+  },
+  {
+   "word": "Random",
+   "count": 5
+  },
+  {
+   "word": "Challenge",
+   "count": 5
+  },
+  {
+   "word": "Ladder",
+   "count": 5
+  },
+  {
+   "word": "Lava",
+   "count": 5
+  },
+  {
+   "word": "Blade",
+   "count": 5
+  },
+  {
+   "word": "Heightened",
+   "count": 5
+  },
+  {
+   "word": "Chill",
+   "count": 5
+  },
+  {
+   "word": "Tether",
+   "count": 5
+  },
+  {
+   "word": "Every",
+   "count": 5
+  },
+  {
+   "word": "Bleeds",
+   "count": 5
+  },
+  {
+   "word": "Poisons",
+   "count": 5
+  },
+  {
+   "word": "Slinger",
+   "count": 5
+  },
+  {
+   "word": "Hits",
+   "count": 5
+  },
+  {
+   "word": "Phantom",
+   "count": 5
+  },
+  {
+   "word": "Weapons",
+   "count": 5
+  },
+  {
+   "word": "Skeleton",
+   "count": 5
+  },
+  {
+   "word": "Hideout",
+   "count": 5
+  },
+  {
+   "word": "Drop",
+   "count": 5
+  },
+  {
+   "word": "Reference",
+   "count": 5
+  },
+  {
+   "word": "Enhanced",
+   "count": 4
+  },
+  {
+   "word": "Flesh",
+   "count": 4
+  },
+  {
+   "word": "Constitution",
+   "count": 4
+  },
+  {
+   "word": "Finesse",
+   "count": 4
+  },
+  {
+   "word": "Regenerative",
+   "count": 4
+  },
+  {
+   "word": "Explosives",
+   "count": 4
+  },
+  {
+   "word": "Second",
+   "count": 4
+  },
+  {
+   "word": "Crit",
+   "count": 4
+  },
+  {
+   "word": "Kill",
+   "count": 4
+  },
+  {
+   "word": "Rapid",
+   "count": 4
+  },
+  {
+   "word": "Skin",
+   "count": 4
+  },
+  {
+   "word": "Delete",
+   "count": 4
+  },
+  {
+   "word": "Score",
+   "count": 4
+  },
+  {
+   "word": "Class",
+   "count": 4
+  },
+  {
+   "word": "Search",
+   "count": 4
+  },
+  {
+   "word": "Honing",
+   "count": 4
+  },
+  {
+   "word": "Ring",
+   "count": 4
+  },
+  {
+   "word": "Amulet",
+   "count": 4
+  },
+  {
+   "word": "Buff",
+   "count": 4
+  },
+  {
+   "word": "Scramble",
+   "count": 4
+  },
+  {
+   "word": "Specialist",
+   "count": 4
+  },
+  {
+   "word": "Proficiency",
+   "count": 4
+  },
+  {
+   "word": "Fast",
+   "count": 4
+  },
+  {
+   "word": "Burst",
+   "count": 4
+  },
+  {
+   "word": "Poisoned",
+   "count": 4
+  },
+  {
+   "word": "Burns",
+   "count": 4
+  },
+  {
+   "word": "Vulnerable",
+   "count": 4
+  },
+  {
+   "word": "Exposure",
+   "count": 4
+  },
+  {
+   "word": "Ice",
+   "count": 4
+  },
+  {
+   "word": "Stash",
+   "count": 4
+  },
+  {
+   "word": "Rank",
+   "count": 4
+  },
+  {
+   "word": "Available",
+   "count": 4
+  },
+  {
+   "word": "Show",
+   "count": 4
+  },
+  {
+   "word": "Volume",
+   "count": 4
+  },
+  {
+   "word": "Decay",
+   "count": 3
+  },
+  {
+   "word": "Charged",
+   "count": 3
+  },
+  {
+   "word": "Vile",
+   "count": 3
+  },
+  {
+   "word": "Found",
+   "count": 3
+  },
+  {
+   "word": "Effects",
+   "count": 3
+  },
+  {
+   "word": "Settings",
+   "count": 3
+  },
+  {
+   "word": "Hide",
+   "count": 3
+  },
+  {
+   "word": "Spirit",
+   "count": 3
+  },
+  {
+   "word": "Avoidance",
+   "count": 3
+  },
+  {
+   "word": "Strong",
+   "count": 3
+  },
+  {
+   "word": "Resonance",
+   "count": 3
+  },
+  {
+   "word": "Jolted",
+   "count": 3
+  },
+  {
+   "word": "Flames",
+   "count": 3
+  },
+  {
+   "word": "Permanently",
+   "count": 3
+  },
+  {
+   "word": "Help",
+   "count": 3
+  },
+  {
+   "word": "Lock",
+   "count": 3
+  },
+  {
+   "word": "Example",
+   "count": 3
+  },
+  {
+   "word": "Ancient",
+   "count": 3
+  },
+  {
+   "word": "Recovery",
+   "count": 3
+  },
+  {
+   "word": "Frigid",
+   "count": 3
+  },
+  {
+   "word": "Influence",
+   "count": 3
+  },
+  {
+   "word": "Warrior",
+   "count": 3
+  },
+  {
+   "word": "Chain",
+   "count": 3
+  },
+  {
+   "word": "Jolts",
+   "count": 3
+  },
+  {
+   "word": "Doom",
+   "count": 3
+  },
+  {
+   "word": "Charges",
+   "count": 3
+  },
+  {
+   "word": "Axe",
+   "count": 3
+  },
+  {
+   "word": "Throws",
+   "count": 3
+  },
+  {
+   "word": "Bombs",
+   "count": 3
+  },
+  {
+   "word": "Fires",
+   "count": 3
+  },
+  {
+   "word": "Slash",
+   "count": 3
+  },
+  {
+   "word": "Ruptures",
+   "count": 3
+  },
+  {
+   "word": "Chills",
+   "count": 3
+  },
+  {
+   "word": "Shock",
+   "count": 3
+  },
+  {
+   "word": "Convert",
+   "count": 3
+  },
+  {
+   "word": "Triggered",
+   "count": 3
+  },
+  {
+   "word": "Starter",
+   "count": 3
+  },
+  {
+   "word": "Max",
+   "count": 3
+  },
+  {
+   "word": "Total",
+   "count": 3
+  },
+  {
+   "word": "Training",
+   "count": 3
+  },
+  {
+   "word": "When",
+   "count": 3
+  },
+  {
+   "word": "Take",
+   "count": 3
+  },
+  {
+   "word": "Boil",
+   "count": 3
+  },
+  {
+   "word": "Specializations",
+   "count": 3
+  },
+  {
+   "word": "Spawning",
+   "count": 3
+  },
+  {
+   "word": "Mods",
+   "count": 3
+  },
+  {
+   "word": "Return",
+   "count": 3
+  },
+  {
+   "word": "Save",
+   "count": 3
+  },
+  {
+   "word": "Create",
+   "count": 3
+  },
+  {
+   "word": "Loadout",
+   "count": 3
+  },
+  {
+   "word": "Equipment",
+   "count": 3
+  },
+  {
+   "word": "Mutations",
+   "count": 3
+  },
+  {
+   "word": "Close",
+   "count": 2
+  },
+  {
+   "word": "Field",
+   "count": 2
+  },
+  {
+   "word": "Unstable",
+   "count": 2
+  },
+  {
+   "word": "Frozen",
+   "count": 2
+  },
+  {
+   "word": "Tissue",
+   "count": 2
+  },
+  {
+   "word": "Hands",
+   "count": 2
+  },
+  {
+   "word": "Tinkerer",
+   "count": 2
+  },
+  {
+   "word": "Amplified",
+   "count": 2
+  },
+  {
+   "word": "Cursing",
+   "count": 2
+  },
+  {
+   "word": "Blades",
+   "count": 2
+  },
+  {
+   "word": "Deals",
+   "count": 2
+  },
+  {
+   "word": "Hardened",
+   "count": 2
+  },
+  {
+   "word": "Capacitor",
+   "count": 2
+  },
+  {
+   "word": "Way",
+   "count": 2
+  },
+  {
+   "word": "Magus",
+   "count": 2
+  },
+  {
+   "word": "Piercing",
+   "count": 2
+  },
+  {
+   "word": "Quick",
+   "count": 2
+  },
+  {
+   "word": "Venom",
+   "count": 2
+  },
+  {
+   "word": "Ogre",
+   "count": 2
+  },
+  {
+   "word": "Load",
+   "count": 2
+  },
+  {
+   "word": "Shard",
+   "count": 2
+  },
+  {
+   "word": "Caster",
+   "count": 2
+  },
+  {
+   "word": "Resistant",
+   "count": 2
+  },
+  {
+   "word": "Utility",
+   "count": 2
+  },
+  {
+   "word": "Unlock",
+   "count": 2
+  },
+  {
+   "word": "Steam",
+   "count": 2
+  },
+  {
+   "word": "Chilly",
+   "count": 2
+  },
+  {
+   "word": "Cave",
+   "count": 2
+  },
+  {
+   "word": "Players",
+   "count": 2
+  },
+  {
+   "word": "Critically",
+   "count": 2
+  },
+  {
+   "word": "Precise",
+   "count": 2
+  },
+  {
+   "word": "Tough",
+   "count": 2
+  },
+  {
+   "word": "Leech",
+   "count": 2
+  },
+  {
+   "word": "Casting",
+   "count": 2
+  },
+  {
+   "word": "Lingering",
+   "count": 2
+  },
+  {
+   "word": "Hemorrhage",
+   "count": 2
+  },
+  {
+   "word": "Expert",
+   "count": 2
+  },
+  {
+   "word": "Feet",
+   "count": 2
+  },
+  {
+   "word": "Spellcasting",
+   "count": 2
+  },
+  {
+   "word": "Defenses",
+   "count": 2
+  },
+  {
+   "word": "Lizard",
+   "count": 2
+  },
+  {
+   "word": "Zapping",
+   "count": 2
+  },
+  {
+   "word": "Intensity",
+   "count": 2
+  },
+  {
+   "word": "Amplifier",
+   "count": 2
+  },
+  {
+   "word": "Extended",
+   "count": 2
+  },
+  {
+   "word": "Attunement",
+   "count": 2
+  },
+  {
+   "word": "Magnificient",
+   "count": 2
+  },
+  {
+   "word": "Volatile",
+   "count": 2
+  },
+  {
+   "word": "Wizard",
+   "count": 2
+  },
+  {
+   "word": "Monster",
+   "count": 2
+  },
+  {
+   "word": "Battle",
+   "count": 2
+  },
+  {
+   "word": "Price",
+   "count": 2
+  },
+  {
+   "word": "Veil",
+   "count": 2
+  },
+  {
+   "word": "Bloody",
+   "count": 2
+  },
+  {
+   "word": "Hand",
+   "count": 2
+  },
+  {
+   "word": "Conductive",
+   "count": 2
+  },
+  {
+   "word": "Heated",
+   "count": 2
+  },
+  {
+   "word": "Serrated",
+   "count": 2
+  },
+  {
+   "word": "Titan",
+   "count": 2
+  },
+  {
+   "word": "Surge",
+   "count": 2
+  },
+  {
+   "word": "Rogue",
+   "count": 2
+  },
+  {
+   "word": "Mage",
+   "count": 2
+  },
+  {
+   "word": "Attacks",
+   "count": 2
+  },
+  {
+   "word": "Spear",
+   "count": 2
+  },
+  {
+   "word": "Frost",
+   "count": 2
+  },
+  {
+   "word": "Freeze",
+   "count": 2
+  },
+  {
+   "word": "Shrapnel",
+   "count": 2
+  },
+  {
+   "word": "Inflict",
+   "count": 2
+  },
+  {
+   "word": "Plague",
+   "count": 2
+  },
+  {
+   "word": "Clouds",
+   "count": 2
+  },
+  {
+   "word": "Debilitation",
+   "count": 2
+  },
+  {
+   "word": "Brittle",
+   "count": 2
+  },
+  {
+   "word": "Scorch",
+   "count": 2
+  },
+  {
+   "word": "Bane",
+   "count": 2
+  },
+  {
+   "word": "Polarize",
+   "count": 2
+  },
+  {
+   "word": "Prismatic",
+   "count": 2
+  },
+  {
+   "word": "Swing",
+   "count": 2
+  },
+  {
+   "word": "Amplification",
+   "count": 2
+  },
+  {
+   "word": "Non",
+   "count": 2
+  },
+  {
+   "word": "Shots",
+   "count": 2
+  },
+  {
+   "word": "Hamstrung",
+   "count": 2
+  },
+  {
+   "word": "Freezes",
+   "count": 2
+  },
+  {
+   "word": "Electrocutions",
+   "count": 2
+  },
+  {
+   "word": "Burning",
+   "count": 2
+  },
+  {
+   "word": "Potent",
+   "count": 2
+  },
+  {
+   "word": "Toxins",
+   "count": 2
+  },
+  {
+   "word": "Archer",
+   "count": 2
+  },
+  {
+   "word": "Health",
+   "count": 2
+  },
+  {
+   "word": "Regenerated",
+   "count": 2
+  },
+  {
+   "word": "Searing",
+   "count": 2
+  },
+  {
+   "word": "Sickness",
+   "count": 2
+  },
+  {
+   "word": "Increase",
+   "count": 2
+  },
+  {
+   "word": "Sharp",
+   "count": 2
+  },
+  {
+   "word": "Cuts",
+   "count": 2
+  },
+  {
+   "word": "Tip",
+   "count": 2
+  },
+  {
+   "word": "Deep",
+   "count": 2
+  },
+  {
+   "word": "Lead",
+   "count": 2
+  },
+  {
+   "word": "Lasting",
+   "count": 2
+  },
+  {
+   "word": "Mastery",
+   "count": 2
+  },
+  {
+   "word": "Bullets",
+   "count": 2
+  },
+  {
+   "word": "Golem",
+   "count": 2
+  },
+  {
+   "word": "Charm",
+   "count": 2
+  },
+  {
+   "word": "Some",
+   "count": 2
+  },
+  {
+   "word": "Crown",
+   "count": 2
+  },
+  {
+   "word": "Resolve",
+   "count": 2
+  },
+  {
+   "word": "Sometimes",
+   "count": 2
+  },
+  {
+   "word": "Cost",
+   "count": 2
+  },
+  {
+   "word": "Recover",
+   "count": 2
+  },
+  {
+   "word": "Bleeding",
+   "count": 2
+  },
+  {
+   "word": "Cursed",
+   "count": 2
+  },
+  {
+   "word": "Taken",
+   "count": 2
+  },
+  {
+   "word": "Cannot",
+   "count": 2
+  },
+  {
+   "word": "Dog",
+   "count": 2
+  },
+  {
+   "word": "Stage",
+   "count": 2
+  },
+  {
+   "word": "Completed",
+   "count": 2
+  },
+  {
+   "word": "Cosmetic",
+   "count": 2
+  },
+  {
+   "word": "Portal",
+   "count": 2
+  },
+  {
+   "word": "Transfer",
+   "count": 2
+  },
+  {
+   "word": "Computing",
+   "count": 2
+  },
+  {
+   "word": "Generating",
+   "count": 2
+  },
+  {
+   "word": "Pickup",
+   "count": 2
+  },
+  {
+   "word": "Base",
+   "count": 2
+  },
+  {
+   "word": "Only",
+   "count": 2
+  },
+  {
+   "word": "Minimum",
+   "count": 2
+  },
+  {
+   "word": "Supports",
+   "count": 2
+  },
+  {
+   "word": "Unique",
+   "count": 2
+  },
+  {
+   "word": "Build",
+   "count": 2
+  },
+  {
+   "word": "Menu",
+   "count": 2
+  },
+  {
+   "word": "Stat",
+   "count": 2
+  },
+  {
+   "word": "Equipped",
+   "count": 2
+  },
+  {
+   "word": "Here",
+   "count": 2
+  },
+  {
+   "word": "Music",
+   "count": 2
+  },
+  {
+   "word": "SFX",
+   "count": 2
+  },
+  {
+   "word": "Numbers",
+   "count": 2
+  },
+  {
+   "word": "Shotgun",
+   "count": 2
+  },
+  {
+   "word": "Clear",
+   "count": 2
+  },
+  {
+   "word": "Cancel",
+   "count": 1
+  },
+  {
+   "word": "Impact",
+   "count": 1
+  },
+  {
+   "word": "Marked",
+   "count": 1
+  },
+  {
+   "word": "Death",
+   "count": 1
+  },
+  {
+   "word": "Sanguine",
+   "count": 1
+  },
+  {
+   "word": "Cyclic",
+   "count": 1
+  },
+  {
+   "word": "Destruction",
+   "count": 1
+  },
+  {
+   "word": "Kinetic",
+   "count": 1
+  },
+  {
+   "word": "Warp",
+   "count": 1
+  },
+  {
+   "word": "Raging",
+   "count": 1
+  },
+  {
+   "word": "Momentum",
+   "count": 1
+  },
+  {
+   "word": "Temperature",
+   "count": 1
+  },
+  {
+   "word": "Delta",
+   "count": 1
+  },
+  {
+   "word": "Volley",
+   "count": 1
+  },
+  {
+   "word": "Overloaded",
+   "count": 1
+  },
+  {
+   "word": "Shells",
+   "count": 1
+  },
+  {
+   "word": "Domain",
+   "count": 1
+  },
+  {
+   "word": "Energetic",
+   "count": 1
+  },
+  {
+   "word": "Duplicate",
+   "count": 1
+  },
+  {
+   "word": "Sludge",
+   "count": 1
+  },
+  {
+   "word": "Low",
+   "count": 1
+  },
+  {
+   "word": "Gatekeeper",
+   "count": 1
+  },
+  {
+   "word": "Mutated",
+   "count": 1
+  },
+  {
+   "word": "Spider",
+   "count": 1
+  },
+  {
+   "word": "Ancients",
+   "count": 1
+  },
+  {
+   "word": "Swift",
+   "count": 1
+  },
+  {
+   "word": "Regen",
+   "count": 1
+  },
+  {
+   "word": "Munitions",
+   "count": 1
+  },
+  {
+   "word": "Nimble",
+   "count": 1
+  },
+  {
+   "word": "Denting",
+   "count": 1
+  },
+  {
+   "word": "Shockwaves",
+   "count": 1
+  },
+  {
+   "word": "Retaliatory",
+   "count": 1
+  },
+  {
+   "word": "Mark",
+   "count": 1
+  },
+  {
+   "word": "Magmatic",
+   "count": 1
+  },
+  {
+   "word": "Shocking",
+   "count": 1
+  },
+  {
+   "word": "Moves",
+   "count": 1
+  },
+  {
+   "word": "Viridian",
+   "count": 1
+  },
+  {
+   "word": "Sage",
+   "count": 1
+  },
+  {
+   "word": "Stifled",
+   "count": 1
+  },
+  {
+   "word": "Chaotic",
+   "count": 1
+  },
+  {
+   "word": "Dexterity",
+   "count": 1
+  },
+  {
+   "word": "Capable",
+   "count": 1
+  },
+  {
+   "word": "Combatant",
+   "count": 1
+  },
+  {
+   "word": "Coated",
+   "count": 1
+  },
+  {
+   "word": "Bonded",
+   "count": 1
+  },
+  {
+   "word": "Electrons",
+   "count": 1
+  },
+  {
+   "word": "Radius",
+   "count": 1
+  },
+  {
+   "word": "Collateral",
+   "count": 1
+  },
+  {
+   "word": "Vampiric",
+   "count": 1
+  },
+  {
+   "word": "Crocodile",
+   "count": 1
+  },
+  {
+   "word": "Spiked",
+   "count": 1
+  },
+  {
+   "word": "Carapace",
+   "count": 1
+  },
+  {
+   "word": "Deflecting",
+   "count": 1
+  },
+  {
+   "word": "Infectious",
+   "count": 1
+  },
+  {
+   "word": "Malignancy",
+   "count": 1
+  },
+  {
+   "word": "Fragility",
+   "count": 1
+  },
+  {
+   "word": "Prolonged",
+   "count": 1
+  }
+ ]
+}
