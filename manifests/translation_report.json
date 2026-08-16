@@ -1,0 +1,354 @@
+{
+ "total": 1266,
+ "errors": [],
+ "files": [
+  {
+   "file": "Globals/Constants.gd",
+   "replaced": 5
+  },
+  {
+   "file": "Globals/Genes.gd",
+   "replaced": 63
+  },
+  {
+   "file": "Globals/Globals.gd",
+   "replaced": 3
+  },
+  {
+   "file": "Globals/Levels.gd",
+   "replaced": 13
+  },
+  {
+   "file": "Globals/MapMods.gd",
+   "replaced": 2
+  },
+  {
+   "file": "Globals/MonsterMods.gd",
+   "replaced": 5
+  },
+  {
+   "file": "Globals/MTXManager.gd",
+   "replaced": 3
+  },
+  {
+   "file": "Globals/PassiveTagStats.gd",
+   "replaced": 292
+  },
+  {
+   "file": "Globals/PassiveTreeData.gd",
+   "replaced": 2
+  },
+  {
+   "file": "Globals/PlayableClasses.gd",
+   "replaced": 13
+  },
+  {
+   "file": "Globals/SearchUtils.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Globals/Skills.gd",
+   "replaced": 103
+  },
+  {
+   "file": "Globals/SkillSupports.gd",
+   "replaced": 97
+  },
+  {
+   "file": "Globals/SkillTags.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Globals/SpecializationData.gd",
+   "replaced": 2
+  },
+  {
+   "file": "Globals/StarterBuilds.gd",
+   "replaced": 10
+  },
+  {
+   "file": "Globals/StatsInfo.gd",
+   "replaced": 151
+  },
+  {
+   "file": "Globals/WorldMapData.gd",
+   "replaced": 2
+  },
+  {
+   "file": "Globals/__OldPassiveStats.gd",
+   "replaced": 177
+  },
+  {
+   "file": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+   "replaced": 42
+  },
+  {
+   "file": "Globals/Genes/UniquePools/UniquePoolSOTA.gd",
+   "replaced": 2
+  },
+  {
+   "file": "Globals/Keystones/SupportKeystones.gd",
+   "replaced": 13
+  },
+  {
+   "file": "Globals/Keystones/TreeKeystones.gd",
+   "replaced": 110
+  },
+  {
+   "file": "Globals/Keystones/UniqueKeystones.gd",
+   "replaced": 26
+  },
+  {
+   "file": "Globals/MonsterStats/MonsterStats.gd",
+   "replaced": 15
+  },
+  {
+   "file": "Scenes/Stats.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/GUI/GUI.gd",
+   "replaced": 8
+  },
+  {
+   "file": "Scenes/GUI/GUI.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Interactables/ClassChanger/ClassStatue.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Interactables/CraftingBench/CraftingBench.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Interactables/GearBench/SkillBench.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Interactables/MutationBench/MutationBench.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Interactables/OutfitBench/OutfitBench.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Interactables/Portal/Portal.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Interactables/SharedStash/SharedStash.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Interactables/SpecializationStatue/SpecializationStatue.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Levels/BaseLevel.gd",
+   "replaced": 6
+  },
+  {
+   "file": "Scenes/Levels/Ladder/Ladder.gd",
+   "replaced": 2
+  },
+  {
+   "file": "Scenes/Minimap/Minimap.gd",
+   "replaced": 4
+  },
+  {
+   "file": "Scenes/Pickups/Pickup.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Pickups/Portal/PortalPickup.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Popups/DeathScreen.gd",
+   "replaced": 8
+  },
+  {
+   "file": "Scenes/Popups/EscapeMenu.gd",
+   "replaced": 10
+  },
+  {
+   "file": "Scenes/Popups/ItemTabContent.gd",
+   "replaced": 2
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/CharacterSelect/CharacterClass.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.gd",
+   "replaced": 2
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd",
+   "replaced": 3
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+   "replaced": 2
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/ModHelp/ModTab.gd",
+   "replaced": 2
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd",
+   "replaced": 3
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+   "replaced": 2
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/Settings/Settings.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/SkillSelect/SkillButton.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/SkillSelect/SkillList.gd",
+   "replaced": 2
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/SkillSelect/SkillSelect.gd",
+   "replaced": 4
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/SkillSelect/SupportButton.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/SpecializationPicker/SpecializationOption.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/StarterPicker/StarterOption.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/UniqueHelp/UniqueItem.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Popups/Dialogs/WorldMap/MapNode.gd",
+   "replaced": 3
+  },
+  {
+   "file": "Scenes/Skills/GenericSkill.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Skills/Auras/AmplificationAura/AmplificationAura.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Skills/Auras/ColdAura/ColdAura.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Skills/Auras/DoTAura/DoTAura.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Skills/Auras/Elusiveness/Elusiveness.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Skills/Auras/FireAura/FireAura.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Skills/Auras/Honing/Honing.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Skills/Auras/LightningAura/LightningAura.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Skills/Auras/PhysicalAura/PhysicalAura.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Skills/Auras/Regeneration/Regeneration.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Skills/Auras/Resilience/Resilience.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Skills/Auras/Sturdiness/Sturdiness.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Skills/Auras/ToxicAura/ToxicAura.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/StatusEffects/Boons/PrecisionBoon.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/StatusEffects/Boons/SwiftnessBoon.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/StatusEffects/Boons/ToughnessBoon.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/StatusEffects/Keystones/GrowingPain.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/StatusEffects/Keystones/HardenedFlesh.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/StatusEffects/Keystones/KillMomentum.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/StatusEffects/Keystones/RegenerativeFleshEffect.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/StatusEffects/Keystones/VampiricSkin.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/StatusEffects/Skills/BondedElectrons.tscn",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/Tooltips/GeneTooltip/GeneInfo.gd",
+   "replaced": 2
+  },
+  {
+   "file": "Scenes/Tooltips/SkillTooltip/SkillTooltip.gd",
+   "replaced": 1
+  },
+  {
+   "file": "Scenes/UI/ModItem.gd",
+   "replaced": 4
+  }
+ ]
+}

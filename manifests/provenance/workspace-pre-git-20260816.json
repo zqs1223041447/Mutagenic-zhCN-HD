@@ -1,0 +1,107 @@
+{
+ "recorded_at": "2026-08-16T03:29:46+00:00",
+ "workspace_root": "G:\\opencode-Mutageni",
+ "purpose": "pre-git freeze snapshot; key assets SHA256 before governance/cleanup/git",
+ "entries": [
+  {
+   "path": "00_original/Mutagenic.exe",
+   "classification": "immutable-provenance",
+   "immutable": true,
+   "size": 103290320,
+   "sha256": "c7b5d5a529cd776609f72730662f1f6a8049fe5de20541f7eafe06d0f2451209"
+  },
+  {
+   "path": "01_baseline/game_fingerprint.json",
+   "classification": "immutable-provenance",
+   "immutable": true,
+   "size": 1401693,
+   "sha256": "380b6f3a6b88507011b2ddcb2712ee76635784025dc92783dd4377a848ec0ab6"
+  },
+  {
+   "path": "03_raw",
+   "classification": "immutable-provenance",
+   "immutable": true,
+   "file_count": 3744,
+   "total_bytes": 62370005,
+   "sha256": null
+  },
+  {
+   "path": "04_recovered",
+   "classification": "immutable-provenance",
+   "immutable": true,
+   "file_count": 5058,
+   "total_bytes": 115309016,
+   "sha256": null
+  },
+  {
+   "path": "manifests/recovered_clean_manifest.json",
+   "classification": "immutable-provenance",
+   "immutable": true,
+   "size": 906465,
+   "sha256": "31a4c6efc8c577c0b8d4299c62d5340f3a8d46743fa593896b28ac52883152db"
+  },
+  {
+   "path": "manifests/raw_manifest.json",
+   "classification": "immutable-provenance",
+   "immutable": true,
+   "size": 668300,
+   "sha256": "c5004892b6406fe754ca36aa91373b7e5e3af24e9f9269a52426c27c473c5c56"
+  },
+  {
+   "path": "manifests/script_key.txt",
+   "classification": "local-secret",
+   "immutable": true,
+   "size": 64,
+   "sha256": "881efe4031cedd4a58ee9658f44e9410aebbfaf62f2c98099730be80fbce8db6"
+  },
+  {
+   "path": "tools.lock.json",
+   "classification": "source-of-truth",
+   "immutable": false,
+   "size": 1706,
+   "sha256": "ead9804d2dc058032deda0bd2e077623858c3b74cf62028f2619d324f45fee40"
+  },
+  {
+   "path": "status.json",
+   "classification": "source-of-truth",
+   "immutable": false,
+   "error": "MISSING"
+  },
+  {
+   "path": "10_logs/status.json",
+   "classification": "source-of-truth",
+   "immutable": false,
+   "size": 67995,
+   "sha256": "f3276c143d8a21d4b854fd2630c7aa153b5629aac395464e6e1660b797d6c96b"
+  },
+  {
+   "path": "09_output/Mutagenic_zhCN_MOD_Handoff_20260816.zip",
+   "classification": "accepted-release",
+   "immutable": true,
+   "size": 149147226,
+   "sha256": "4a9149aa6b060814556df400ccbc6313922939804f4d87496f1dab953e7f52e9"
+  },
+  {
+   "path": "09_output/zh_CN_Core_Playable_v81",
+   "classification": "accepted-release",
+   "immutable": true,
+   "file_count": 3,
+   "total_bytes": 144461506,
+   "sha256": null
+  },
+  {
+   "path": "Mutagenic.exe",
+   "classification": "root-runtime-copy",
+   "immutable": false,
+   "size": 103290320,
+   "sha256": "c7b5d5a529cd776609f72730662f1f6a8049fe5de20541f7eafe06d0f2451209"
+  },
+  {
+   "path": "steam_api64.dll",
+   "classification": "root-runtime-copy",
+   "immutable": false,
+   "size": 301928,
+   "sha256": "dcfaa13aa419a0641917205957dbe15aa472e7cf09a28cf8d3cf429598e67799"
+  }
+ ]
+}

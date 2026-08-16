@@ -1,0 +1,176 @@
+{
+  "tool": "scripts/analyze_exe.py",
+  "analyzed_at": "2026-08-13T11:36:00",
+  "file": {
+    "path": "F:\\SteamLibrary\\steamapps\\common\\Mutagenic\\00_original\\Mutagenic.exe",
+    "size": 103290320,
+    "sha256": "c7b5d5a529cd776609f72730662f1f6a8049fe5de20541f7eafe06d0f2451209"
+  },
+  "pe": {
+    "e_lfanew": 288,
+    "machine": "0x8664",
+    "machine_name": "x86-64",
+    "number_of_sections": 8,
+    "timestamp": 1700160829,
+    "timestamp_utc": "2023-11-16 18:53:49 UTC",
+    "optional_header_magic": "0x20b",
+    "pe32plus": true,
+    "subsystem": 2,
+    "subsystem_name": "GUI",
+    "sections": [
+      {
+        "name": ".text",
+        "virtual_size": 30808972,
+        "virtual_address": 4096,
+        "raw_size": 30809088,
+        "raw_ptr": 1024,
+        "characteristics": "0x60000020"
+      },
+      {
+        "name": ".rdata",
+        "virtual_size": 7659254,
+        "virtual_address": 30814208,
+        "raw_size": 7659520,
+        "raw_ptr": 30810112,
+        "characteristics": "0x40000040"
+      },
+      {
+        "name": ".data",
+        "virtual_size": 609416,
+        "virtual_address": 38473728,
+        "raw_size": 533504,
+        "raw_ptr": 38469632,
+        "characteristics": "0xc0000040"
+      },
+      {
+        "name": ".pdata",
+        "virtual_size": 979980,
+        "virtual_address": 39084032,
+        "raw_size": 980480,
+        "raw_ptr": 39003136,
+        "characteristics": "0x40000040"
+      },
+      {
+        "name": "_RDATA",
+        "virtual_size": 348,
+        "virtual_address": 40067072,
+        "raw_size": 512,
+        "raw_ptr": 39983616,
+        "characteristics": "0x40000040"
+      },
+      {
+        "name": "pck",
+        "virtual_size": 8,
+        "virtual_address": 40071168,
+        "raw_size": 62745040,
+        "raw_ptr": 40545280,
+        "characteristics": "0x40000040"
+      },
+      {
+        "name": ".rsrc",
+        "virtual_size": 360888,
+        "virtual_address": 40075264,
+        "raw_size": 360960,
+        "raw_ptr": 39984640,
+        "characteristics": "0x40000040"
+      },
+      {
+        "name": ".reloc",
+        "virtual_size": 199220,
+        "virtual_address": 40439808,
+        "raw_size": 199680,
+        "raw_ptr": 40345600,
+        "characteristics": "0x42000040"
+      }
+    ]
+  },
+  "godot": {
+    "engine_strings": [
+      {
+        "offset": 31960240,
+        "snippet": "Godot Engine\u0000\u0000\u0000\u0000 v\u0000\u0000 - \u0000https://godotengine.org\u0000Free and open source software under the terms of"
+      },
+      {
+        "offset": 31960377,
+        "snippet": "Godot Engine contributors.\n\u0000\u0000\u0000\u0000(c) 2007-2014 Juan Linietsky, Ariel Manzur.\n\u0000\u0000\u0000\u0000Usage: %s [option"
+      },
+      {
+        "offset": 32587276,
+        "snippet": "Godot Engine/1.0, UPnP/1.1, MiniUPnPc/2.2.4\r\n\r\n\u0000send\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000getsockname\u0000\u0000\u0000\u0000\u0000getnameinfo() failed"
+      },
+      {
+        "offset": 32621353,
+        "snippet": "Godot Engine/1.0, UPnP/1.1, MiniUPnPc/2.2.4\r\nContent-Length: %d\r\nContent-Type: text/xml\r\nSOAPAct"
+      },
+      {
+        "offset": 33322413,
+        "snippet": "Godot Engine 3.5.3.stable's SpatialMaterial.\n\n\u0000\u0000\u0000\u0000\u0000,depth_draw_always\u0000\u0000\u0000\u0000\u0000\u0000,depth_draw_opaque\u0000\u0000\u0000"
+      },
+      {
+        "offset": 31960240,
+        "snippet": "Godot Engine\u0000\u0000\u0000\u0000 v\u0000\u0000 - \u0000https://godotengine.org\u0000Free and open source software under the terms of"
+      },
+      {
+        "offset": 31960377,
+        "snippet": "Godot Engine contributors.\n\u0000\u0000\u0000\u0000(c) 2007-2014 Juan Linietsky, Ariel Manzur.\n\u0000\u0000\u0000\u0000Usage: %s [option"
+      },
+      {
+        "offset": 32290432,
+        "snippet": "GodotNavigationServer::_cmd_map_set_active\u0000\u0000\u0000\u0000\u0000\u0000GodotNavigationServer::_cmd_map_set_cell_size\u0000\u0000\u0000"
+      },
+      {
+        "offset": 32290480,
+        "snippet": "GodotNavigationServer::_cmd_map_set_cell_size\u0000\u0000\u0000GodotNavigationServer::map_get_up\u0000\u0000\u0000\u0000\u0000\u0000\u0000GodotNav"
+      },
+      {
+        "offset": 32290528,
+        "snippet": "GodotNavigationServer::map_get_up\u0000\u0000\u0000\u0000\u0000\u0000\u0000GodotNavigationServer::map_get_cell_size\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000Conditio"
+      }
+    ],
+    "version_strings": [
+      {
+        "offset": 31959896,
+        "snippet": "3.5.3.stable.custom_build\u0000\u0000\u0000\u0000\u0000\u0000\u0000physi"
+      }
+    ],
+    "gdpc_offsets": [
+      25936844,
+      25937005,
+      25937068,
+      25937153,
+      28242831,
+      40545280,
+      103290316
+    ],
+    "gpk_offsets": [
+      58417426,
+      72925628,
+      100959556
+    ],
+    "pck_at_tail": "gdpc",
+    "pck_size": 62745040,
+    "pck": {
+      "pck_start": 40545280,
+      "version": 1,
+      "format": "v1",
+      "godot_version": "3.5.3",
+      "pack_flags": "0x0",
+      "encrypted": false,
+      "file_base": 0,
+      "header_len": 84,
+      "file_count": 3744,
+      "first_entry": {
+        "path": "res://.import/AMBIENCE_TUNDRA_LOOP_01.ogg-3fce100e9c123a05d57f46263a92ac43.oggstr\u0000\u0000\u0000",
+        "offset": 55924896,
+        "size": 403355
+      },
+      "last_entry": {
+        "path": "res://world_map_data/map.json\u0000\u0000\u0000",
+        "offset": 102813136,
+        "size": 14391
+      },
+      "pck_data_end": 103290302
+    },
+    "tail_file_base": 62745028
+  }
+}
