@@ -22,7 +22,7 @@
       "path": "Scenes/Menu.tscn",
       "classification": "TEXT_PATCH",
       "old_text": "text = \"Item Mod Reference\"",
-      "new_text": "text = \"物品修饰参考\"",
+      "new_text": "text = \"物品词缀参考\"",
       "expected_occurrences": 1,
       "placeholders": [],
       "format_tokens": [],

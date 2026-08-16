@@ -325,7 +325,7 @@
       "classification": "TEXT_PATCH",
       "unit_id": "Globals/Skills.gd:222:1",
       "old_text": "\"description\": \"Tether yourself to nearby enemies, dealing damage to them. Enemies affected by Flame Tethers deal 25% Less Damage.\",",
-      "new_text": "\"description\": \"用锁链连接附近敌人并对其造成伤害。受火焰锁链影响的敌人造成的伤害降低 25%。\",",
+      "new_text": "\"description\": \"用锁链连接附近敌人并对其造成伤害。受火焰锁链影响的敌人造成的伤害更少 25%。\",",
       "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
       "expected_occurrences": 1,
       "source_text": "Tether yourself to nearby enemies, dealing damage to them. Enemies affected by Flame Tethers deal 25% Less Damage.",

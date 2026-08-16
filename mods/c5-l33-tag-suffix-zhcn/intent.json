@@ -1,0 +1,107 @@
+{
+  "id": "c5-l33-tag-suffix-zhcn",
+  "scope": "zh_CN fix round 2 (user-reported). (1) Word-order unification: render_tag_mods() tag_postfix changed from leading-space ' 的攻击技能' to gapless '的攻击技能' so new stat-first templates read naturally (e.g. '寒冷伤害的攻击技能提高 12%'). (2) Missing Reduced/Less translations in render_passive_stat_line (962/967) and render_item_stat_line (1021/1026) -> 减少/更少, matching the new stat-first word order. (3) Search box IME support: OS.set_ime_active/position on focus enter/exit in PassiveTreePopup.gd, enable context_menu in PassiveTreePopup.tscn, fix 2-char min length for CJK in PassiveNode.gd, strip spaces in Globals.gd update_search. (4) render_formatted_number FLAT positive sign '+' (976) for added-damage clarity.",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "c5-l32-zhcn-core-playable-v8-1"
+  ],
+  "patches": [
+    {
+      "path": "Globals/StatsInfo.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/StatsInfo.gd::render_tag_mods::suffix_template",
+      "old_text": "\t\t\t\tvar result = \" with \" + SkillTags.tags_to_string(tags) + \" Skills\"",
+      "new_text": "\t\t\t\tvar result = \"的\" + SkillTags.tags_to_string(tags) + \"技能\"",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/StatsInfo.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/StatsInfo.gd::render_passive_stat_line::reduced",
+      "old_text": "\t\t\t\t\t\t\t\t\t\t\t\treturn str(abs(round(amount * 100))) + \"% Reduced \" + stat_name[stat] + tag_postfix",
+      "new_text": "\t\t\t\t\t\t\t\t\t\t\t\treturn stat_name[stat] + tag_postfix + \"减少 \" + str(abs(round(amount * 100))) + \"%\"",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/StatsInfo.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/StatsInfo.gd::render_passive_stat_line::less",
+      "old_text": "\t\t\t\t\t\t\t\t\t\t\t\treturn str(abs(round(amount * 100))) + \"% Less \" + stat_name[stat] + tag_postfix",
+      "new_text": "\t\t\t\t\t\t\t\t\t\t\t\treturn stat_name[stat] + tag_postfix + \"更少 \" + str(abs(round(amount * 100))) + \"%\"",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/StatsInfo.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/StatsInfo.gd::render_item_stat_line::reduced",
+      "old_text": "\t\t\t\t\t\t\t\t\t\t\t\treturn str(abs(amount) * 100) + \"% Reduced \" + stat_name[stat] + tag_postfix",
+      "new_text": "\t\t\t\t\t\t\t\t\t\t\t\treturn stat_name[stat] + tag_postfix + \"减少 \" + str(abs(amount) * 100) + \"%\"",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/StatsInfo.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/StatsInfo.gd::render_item_stat_line::less",
+      "old_text": "\t\t\t\t\t\t\t\t\t\t\t\treturn str(abs(amount) * 100) + \"% Less \" + stat_name[stat] + tag_postfix",
+      "new_text": "\t\t\t\t\t\t\t\t\t\t\t\treturn stat_name[stat] + tag_postfix + \"更少 \" + str(abs(amount) * 100) + \"%\"",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/StatsInfo.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/StatsInfo.gd::render_formatted_number::flat_plus",
+      "old_text": "\t\t\t\t\t\t\t\telse:\n\t\t\t\t\t\t\t\t\t\t\t\treturn str(amount)",
+      "new_text": "\t\t\t\t\t\t\t\telse:\n\t\t\t\t\t\t\t\t\t\t\t\treturn (\"+\" if amount >= 0 else \"\") + str(amount)",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd::SearchInput::focus_entered_ime",
+      "old_text": "func _on_SearchInput_focus_entered() -> void :\n\t\t\t\tpassive_container.disable_zoom = true",
+      "new_text": "func _on_SearchInput_focus_entered() -> void :\n\t\t\t\tpassive_container.disable_zoom = true\n\t\t\t\tOS.set_ime_active(true)\n\t\t\t\tOS.set_ime_position(searcher.get_global_position())",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd::SearchInput::focus_exited_ime",
+      "old_text": "func _on_SearchInput_focus_exited() -> void :\n\t\t\t\tpassive_container.disable_zoom = false",
+      "new_text": "func _on_SearchInput_focus_exited() -> void :\n\t\t\t\tpassive_container.disable_zoom = false\n\t\t\t\tOS.set_ime_active(false)",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.tscn",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.tscn::SearchInput::context_menu",
+      "old_text": "context_menu_enabled = false",
+      "new_text": "context_menu_enabled = true",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd::search::min_length_cjk",
+      "old_text": "\t\t\t\tif len(text) > 2:",
+      "new_text": "\t\t\t\tif len(text.strip_edges()) > 0:",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/Globals.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/Globals.gd::update_search::strip",
+      "old_text": "\t\t\t\tsearch_string = text.to_lower()",
+      "new_text": "\t\t\t\tsearch_string = text.strip_edges().to_lower()",
+      "expected_occurrences": 1
+    }
+  ],
+  "tests": [
+    "preimage_exact_match",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "boot"
+  ],
+  "not_proven": "in-game visual confirmation of full affix lines and CJK IME input"
+}

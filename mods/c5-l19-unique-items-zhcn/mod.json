@@ -975,7 +975,7 @@
       "classification": "TEXT_PATCH",
       "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:325:2",
       "old_text": "\"flavor\": \"A feverish cold comes over your foes.\",",
-      "new_text": "\"flavor\": \"一阵狂热的寒冷席卷你的敌人。\",",
+      "new_text": "\"flavor\": \"一阵令人发热的寒冷席卷你的敌人。\",",
       "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
       "expected_occurrences": 1,
       "source_text": "A feverish cold comes over your foes.",
