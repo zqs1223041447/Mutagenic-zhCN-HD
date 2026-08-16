@@ -37,6 +37,7 @@ MODS_ROOT = ROOT / "mods"
 RAW = ROOT / "03_raw"
 RECOVERED = ROOT / "04_recovered"
 KEY_FILE = ROOT / "manifests/script_key.txt"
+ORIGINAL_SHA = "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209"
 
 
 def run(cmd: list[str], label: str, cwd: Path = ROOT) -> dict:
@@ -66,6 +67,23 @@ def main() -> int:
     mod_json = mod_dir / "mod.json"
     if not mod_json.exists():
         raise SystemExit(f"ERROR: manifest not found: {mod_json}")
+
+    # --- NL2MOD safety guards (AGENTS.md §6 / docs/ai/nl2mod-guide.md) ---
+    mod = json.loads(mod_json.read_text(encoding="utf-8"))
+    # 1. Game fingerprint guard: manifest must target the pristine original
+    declared_target = mod.get("target_original_sha256", ORIGINAL_SHA)
+    if declared_target != ORIGINAL_SHA:
+        raise SystemExit(f"ERROR: manifest targets {declared_target}, expected pristine {ORIGINAL_SHA}")
+    # 2. Immutable input guard: 03_raw / 04_recovered must be untouched (only read)
+    if not RAW.exists() or not RECOVERED.exists():
+        raise SystemExit("ERROR: immutable inputs 03_raw/04_recovered missing")
+    # 3. schema/toolchain present
+    if not KEY_FILE.exists():
+        raise SystemExit("ERROR: manifests/script_key.txt missing (local secret, never committed)")
+    if not GDRE.exists():
+        raise SystemExit(f"ERROR: GDRE not found: {GDRE}")
+    print(f"guards OK: target={ORIGINAL_SHA[:12]}..., mods={len(mod.get('patches', []))} patch(es)")
+
 
     out = args.out_dir or (ROOT / f"10_logs/nl2mod-{args.mod_id}-{datetime.now():%Y%m%d-%H%M%S}")
     out.mkdir(parents=True, exist_ok=False)
