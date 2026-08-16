@@ -1,0 +1,33 @@
+{
+  "id": "c5-l15-zhcn-core-playable-v2",
+  "version": "0.1.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "c5-l6-localization-static-ui",
+    "c5-l7-playable-classes-zhcn",
+    "c5-l10-skills-tree-zhcn",
+    "c5-l11-passive-tree-zhcn",
+    "c5-l12-stats-tags-zhcn",
+    "c5-l13-dynamic-ui-zhcn",
+    "c5-l14-static-scenes-zhcn"
+  ],
+  "conflicts": [],
+  "scope": "zh_CN Core Playable v2 aggregate: C5-L1..L5 (main menu, character select, class dialogs, settings, keybinds, CJK font) + C5-L6 (pause menu, death screen, passive tree popup, HUD static labels, skill select family, level loader, pickups, leaderboard) + C5-L7 (4 classes, 8 specializations) + C5-L10 (ALL 53 skills + ALL 60 supports, supersedes C5-L8 PoC subset) + C5-L11 (326 passive nodes + 88 keystones) + C5-L12 (149 stats + 24 skill tags + prefixes) + C5-L13 (dynamic UI strings across 26 scripts) + C5-L14 (remaining static .tscn text across 31 scenes)",
+  "entities": [],
+  "patches": [],
+  "asset_overlays": [],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "resource_contract",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_zhcn_core_playable_v2"
+  ],
+  "not_proven": "visual layout quality, persistence, gameplay, broad localization, or release readiness"
+}

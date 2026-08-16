@@ -1,0 +1,101 @@
+{
+  "id": "c5-l26-misc-ui-zhcn",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "Translate remaining misc UI text: GeneInfo tooltip, unlock notifications, and various gameplay UI labels.",
+  "entities": [],
+  "patches": [
+    {
+      "path": "Scenes/Tooltips/GeneTooltip/GeneInfo.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Gene Name\"",
+      "new_text": "text = \"基因名称\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "14C71661D8767DC2ABB898D81F0A3AA0D7BCA19C7A4D142A2B108BC5D0A8737C"
+    },
+    {
+      "path": "Scenes/Tooltips/GeneTooltip/GeneInfo.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Offensive Gene\"",
+      "new_text": "text = \"攻击型基因\"",
+      "expected_occurrences": 2,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "14C71661D8767DC2ABB898D81F0A3AA0D7BCA19C7A4D142A2B108BC5D0A8737C"
+    },
+    {
+      "path": "Scenes/Tooltips/GeneTooltip/GeneInfo.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Gene Level: 32\"",
+      "new_text": "text = \"基因等级：32\"",
+      "expected_occurrences": 2,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "14C71661D8767DC2ABB898D81F0A3AA0D7BCA19C7A4D142A2B108BC5D0A8737C"
+    },
+    {
+      "path": "Scenes/Tooltips/GeneTooltip/GeneInfo.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"flavor\"",
+      "new_text": "text = \"描述\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "14C71661D8767DC2ABB898D81F0A3AA0D7BCA19C7A4D142A2B108BC5D0A8737C"
+    },
+    {
+      "path": "Scenes/Popups/Unlocks/CharacterUnlockItem.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Vesta has been unlocked!\"",
+      "new_text": "text = \"已解锁！\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "F33093F2AEE8BC0884AA8FA6560CF9C35F63855961D979C49DF4ED7536045659"
+    },
+    {
+      "path": "Scenes/Popups/Unlocks/CharacterUnlockItem.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Requirements uncertain\"",
+      "new_text": "text = \"解锁条件未知\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "F33093F2AEE8BC0884AA8FA6560CF9C35F63855961D979C49DF4ED7536045659"
+    },
+    {
+      "path": "Scenes/Popups/Unlocks/LevelUnlockItem.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Vesta has been unlocked!\"",
+      "new_text": "text = \"已解锁！\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "8422392C7D9860B80207EB67CDB781CF4362D932FB3E0223931BA6DF3C9B89F1"
+    },
+    {
+      "path": "Scenes/Popups/Unlocks/LevelUnlockItem.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Requirements uncertain\"",
+      "new_text": "text = \"解锁条件未知\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "8422392C7D9860B80207EB67CDB781CF4362D932FB3E0223931BA6DF3C9B89F1"
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "resource_contract",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot"
+  ]
+}

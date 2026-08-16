@@ -1,0 +1,39 @@
+{
+  "id": "mm-monster-speed-skeleton-archer",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "NL2MOD validation: Skeleton Archer movement_speed 65.0 -> 78.0 (+20%) via MonsterStats.gd stat_overrides",
+  "entities": [
+    {
+      "kind": "monster_stat_override",
+      "id": "Globals/MonsterStats/MonsterStats.gd::SKELETON_ARCHER::stat_overrides::movement_speed",
+      "confidence": "FACT",
+      "expected_runtime_effect": "Skeleton Archer movement speed 65.0 -> 78.0 in the monster_stats registry"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd::SKELETON_ARCHER::movement_speed",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t\t\t\t\t\"name\": \"Skeleton Archer\", \n\t\t\t\t\t\t\t\t\"damage\": 5, \n\t\t\t\t\t\t\t\t\"damage_type\": SkillTags.Tags.PHYSICAL, \n\t\t\t\t\t\t\t\t\"attack_range\": 50, \n\t\t\t\t\t\t\t\t\"attack_time\": 0.6, \n\t\t\t\t\t\t\t\t\"attack_delay\": 0.7, \n\t\t\t\t\t\t\t\t\"xp\": 1, \n\t\t\t\t\t\t\t\t\"min_lifetime\": 60, \n\t\t\t\t\t\t\t\t\"stat_overrides\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\"health_max\": 5.0, \n\t\t\t\t\t\t\t\t\t\t\t\t\"movement_speed\": 65.0, ",
+      "new_text": "\t\t\t\t\t\t\t\t\"name\": \"Skeleton Archer\", \n\t\t\t\t\t\t\t\t\"damage\": 5, \n\t\t\t\t\t\t\t\t\"damage_type\": SkillTags.Tags.PHYSICAL, \n\t\t\t\t\t\t\t\t\"attack_range\": 50, \n\t\t\t\t\t\t\t\t\"attack_time\": 0.6, \n\t\t\t\t\t\t\t\t\"attack_delay\": 0.7, \n\t\t\t\t\t\t\t\t\"xp\": 1, \n\t\t\t\t\t\t\t\t\"min_lifetime\": 60, \n\t\t\t\t\t\t\t\t\"stat_overrides\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\"health_max\": 5.0, \n\t\t\t\t\t\t\t\t\t\t\t\t\"movement_speed\": 78.0, ",
+      "preimage_sha256": "208c41451eb949e5f8fc2170fd2b6c74c36d693b0f8204d61281d28ee76d300c",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "boot"
+  ],
+  "not_proven": "in-game observable speed change without human confirmation"
+}

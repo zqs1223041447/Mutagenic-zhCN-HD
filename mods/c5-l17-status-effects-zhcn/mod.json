@@ -1,0 +1,1477 @@
+{
+  "id": "c5-l17-status-effects-zhcn",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "C5-L17: status effect display names (description) and on_apply_tip texts across 48 StatusEffects .tscn scenes (Skills, DamageAilments, Boons, Pickups, Curses, Generic, Keystones); internal identifiers (node names, unique_group, stack_group, script paths) untouched",
+  "entities": [
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Skills/Webbed.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 蛛网缠身"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Skills/Plague.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 瘟疫"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Skills/Dread.tscn:9:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 恐惧"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Skills/EnergeticFlesh.tscn:9:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 活力之躯"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Skills/BondedElectrons.tscn:9:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 电子联结"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/DamageAilments/Burn.tscn:9:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 燃烧"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/DamageAilments/Electrocution.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 电击"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/DamageAilments/Freeze.tscn:9:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 冰冻"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/DamageAilments/Chill.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 寒冷"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/DamageAilments/Bleed.tscn:9:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 流血"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/DamageAilments/Charred.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 焦灼"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/DamageAilments/Infection.tscn:9:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 感染"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/DamageAilments/Jolt.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 电震"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/DamageAilments/Poison.tscn:9:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 中毒"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/DamageAilments/Rupture.tscn:9:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 撕裂"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Boons/PrecisionBoon.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 精准恩惠"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Boons/ToughnessBoon.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 坚韧恩惠"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Boons/SwiftnessBoon.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 迅捷恩惠"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Pickups/Magnifier.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 放大镜"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Pickups/Magnifier.tscn:9:17",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 投射物狂热"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Pickups/Frenzy.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 狂热"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Pickups/Frenzy.tscn:9:17",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 速度增益"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Curses/Bane.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 灾厄"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Curses/Brittle.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 脆弱"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Curses/Debilitate.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 虚弱"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Curses/Dread.tscn:14:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 恐惧"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Curses/Hinder.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 阻碍"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Curses/Hypothermia.tscn:7:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 低温症"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Curses/Polarize.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 极化"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Curses/Protract.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 延长"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Curses/Scorch.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 灼烧"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Generic/Echoing.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 回响"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Generic/Exposed.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 暴露"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Generic/Hamstrung.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 跛足"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Generic/RecentlyHit.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 最近受击"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Generic/Vulnerable.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 易伤"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/Adrenaline.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 肾上腺素"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/BloodBoil.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 热血沸腾"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/CycleOfDestructionEffect.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 毁灭循环"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/Endurance.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 耐力"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/GrowingPain.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 成长之痛"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/HardenedFlesh.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 硬化之躯"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/KillMomentum.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 狂暴势头"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/PhantomShield.tscn:9:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 幻影护盾"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/RegenerativeFleshEffect.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 再生之躯"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/SpikeArmor.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 尖刺护甲"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/ToxicRunner.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 瘟疫行者"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/Transfusion.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 输血"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/UnleashEffect.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 释放"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/StatusEffects/Keystones/VampiricSkin.tscn:8:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 吸血鬼之肤"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/StatusEffects/Skills/Webbed.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Skills/Webbed.tscn:8:16",
+      "old_text": "description = \"Webbed\"",
+      "new_text": "description = \"蛛网缠身\"",
+      "preimage_sha256": "A3238FA5CAE2220450D4071323D6C7A0FCA5AC5DC6C8B454156A14680D1707CF",
+      "expected_occurrences": 1,
+      "source_text": "Webbed",
+      "translation": "蛛网缠身",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Skills/Plague.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Skills/Plague.tscn:8:16",
+      "old_text": "description = \"Plague\"",
+      "new_text": "description = \"瘟疫\"",
+      "preimage_sha256": "6538074CA87DEE24BDED1059D1630A18437763DD0F07CD0FD46AA8B383916107",
+      "expected_occurrences": 1,
+      "source_text": "Plague",
+      "translation": "瘟疫",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Skills/Dread.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Skills/Dread.tscn:9:16",
+      "old_text": "description = \"Dread\"",
+      "new_text": "description = \"恐惧\"",
+      "preimage_sha256": "021B3283FA5CEAF8E989F2B048364ECE4B7FBBF65F1DA95A967FA3CCB8888ECA",
+      "expected_occurrences": 1,
+      "source_text": "Dread",
+      "translation": "恐惧",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Skills/EnergeticFlesh.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Skills/EnergeticFlesh.tscn:9:16",
+      "old_text": "description = \"Energized Flesh\"",
+      "new_text": "description = \"活力之躯\"",
+      "preimage_sha256": "7EAFFF3B716BDD19DCDFE44A1A0EC3CD61CE41595EA6F2D286FC753F49384FD7",
+      "expected_occurrences": 1,
+      "source_text": "Energized Flesh",
+      "translation": "活力之躯",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Skills/BondedElectrons.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Skills/BondedElectrons.tscn:9:16",
+      "old_text": "description = \"Bonded Electrons\"",
+      "new_text": "description = \"电子联结\"",
+      "preimage_sha256": "25588ED13CE65B9A6DBE927E2DC2654D427F8B5731D5E74A0F3BC4761D9F690A",
+      "expected_occurrences": 1,
+      "source_text": "Bonded Electrons",
+      "translation": "电子联结",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/DamageAilments/Burn.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/DamageAilments/Burn.tscn:9:16",
+      "old_text": "description = \"Burning\"",
+      "new_text": "description = \"燃烧\"",
+      "preimage_sha256": "1DF7050E87734C019838499829C542BEC75C6F43A1718567405109090B7BBFDF",
+      "expected_occurrences": 1,
+      "source_text": "Burning",
+      "translation": "燃烧",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/DamageAilments/Electrocution.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/DamageAilments/Electrocution.tscn:8:16",
+      "old_text": "description = \"Electrocuted\"",
+      "new_text": "description = \"电击\"",
+      "preimage_sha256": "9C9D52F976F97264F649BF05866107B5351AC70D8C1BB1ECAA536934BD0F2D19",
+      "expected_occurrences": 1,
+      "source_text": "Electrocuted",
+      "translation": "电击",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/DamageAilments/Freeze.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/DamageAilments/Freeze.tscn:9:16",
+      "old_text": "description = \"Frozen\"",
+      "new_text": "description = \"冰冻\"",
+      "preimage_sha256": "D494C6C6086BCFEFABFB1071BE3E15EE0B36689929014ADB79D0C28F4F94483B",
+      "expected_occurrences": 1,
+      "source_text": "Frozen",
+      "translation": "冰冻",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/DamageAilments/Chill.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/DamageAilments/Chill.tscn:8:16",
+      "old_text": "description = \"Chilled\"",
+      "new_text": "description = \"寒冷\"",
+      "preimage_sha256": "95A8A9F4038C47CD0EA6A1A0693355A25360EDCC6F0B03DECD92FE4D4F18DB95",
+      "expected_occurrences": 1,
+      "source_text": "Chilled",
+      "translation": "寒冷",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/DamageAilments/Bleed.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/DamageAilments/Bleed.tscn:9:16",
+      "old_text": "description = \"Bleeding\"",
+      "new_text": "description = \"流血\"",
+      "preimage_sha256": "0E264DF425048FB5BF589C9AB24E52843FFC18EF6C9CE4B6E48D1A99DAD2586C",
+      "expected_occurrences": 1,
+      "source_text": "Bleeding",
+      "translation": "流血",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/DamageAilments/Charred.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/DamageAilments/Charred.tscn:8:16",
+      "old_text": "description = \"Charred\"",
+      "new_text": "description = \"焦灼\"",
+      "preimage_sha256": "4A031C015F8C027305AE31D0EAFEB646C1476507AF9B1BC683E528EC481E20B3",
+      "expected_occurrences": 1,
+      "source_text": "Charred",
+      "translation": "焦灼",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/DamageAilments/Infection.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/DamageAilments/Infection.tscn:9:16",
+      "old_text": "description = \"Infected\"",
+      "new_text": "description = \"感染\"",
+      "preimage_sha256": "363FB9217AFAF7B70279E404D84D461F993EDA5F385C1FDAD91B5BD65F6C2568",
+      "expected_occurrences": 1,
+      "source_text": "Infected",
+      "translation": "感染",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/DamageAilments/Jolt.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/DamageAilments/Jolt.tscn:8:16",
+      "old_text": "description = \"Jolted\"",
+      "new_text": "description = \"电震\"",
+      "preimage_sha256": "6C5EB44859FD6A09C622A9DACCC6641E56A34282B7D3D3AC62F346D196AC3A4C",
+      "expected_occurrences": 1,
+      "source_text": "Jolted",
+      "translation": "电震",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/DamageAilments/Poison.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/DamageAilments/Poison.tscn:9:16",
+      "old_text": "description = \"Poisoned\"",
+      "new_text": "description = \"中毒\"",
+      "preimage_sha256": "42BCD30118CCB86262CBB2B75451886724B4043562EFA20FD641B1844B42816A",
+      "expected_occurrences": 1,
+      "source_text": "Poisoned",
+      "translation": "中毒",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/DamageAilments/Rupture.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/DamageAilments/Rupture.tscn:9:16",
+      "old_text": "description = \"Ruptured\"",
+      "new_text": "description = \"撕裂\"",
+      "preimage_sha256": "45C25CA4269B4B18C483A8A6F3B5C7A8682C18BB5E969AF2426A422BAA798930",
+      "expected_occurrences": 1,
+      "source_text": "Ruptured",
+      "translation": "撕裂",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Boons/PrecisionBoon.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Boons/PrecisionBoon.tscn:8:16",
+      "old_text": "description = \"Precision Boon\"",
+      "new_text": "description = \"精准恩惠\"",
+      "preimage_sha256": "8EEEB9A60464896250E30C8B0D706689A2EEDE52D0D294BED3C8FF5B0139A498",
+      "expected_occurrences": 1,
+      "source_text": "Precision Boon",
+      "translation": "精准恩惠",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Boons/ToughnessBoon.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Boons/ToughnessBoon.tscn:8:16",
+      "old_text": "description = \"Toughness Boon\"",
+      "new_text": "description = \"坚韧恩惠\"",
+      "preimage_sha256": "CBA8B2AC0F21B6A2A717626CF7BF0EF3AFA1511C16D80424FA0CB41595EF04D8",
+      "expected_occurrences": 1,
+      "source_text": "Toughness Boon",
+      "translation": "坚韧恩惠",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Boons/SwiftnessBoon.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Boons/SwiftnessBoon.tscn:8:16",
+      "old_text": "description = \"Swiftness Boon\"",
+      "new_text": "description = \"迅捷恩惠\"",
+      "preimage_sha256": "C7D64385D97D4AF5AEF9A599320950B2C073A956266733CEAEA4B438B37A20BC",
+      "expected_occurrences": 1,
+      "source_text": "Swiftness Boon",
+      "translation": "迅捷恩惠",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Pickups/Magnifier.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Pickups/Magnifier.tscn:8:16",
+      "old_text": "description = \"Magnifier\"",
+      "new_text": "description = \"放大镜\"",
+      "preimage_sha256": "E8FE369108D235D4CED04BDD0EB90730B0D5C00EDDA90281739F3155A40648EA",
+      "expected_occurrences": 1,
+      "source_text": "Magnifier",
+      "translation": "放大镜",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Pickups/Magnifier.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Pickups/Magnifier.tscn:9:17",
+      "old_text": "on_apply_tip = \"Projectile Frenzy\"",
+      "new_text": "on_apply_tip = \"投射物狂热\"",
+      "preimage_sha256": "E8FE369108D235D4CED04BDD0EB90730B0D5C00EDDA90281739F3155A40648EA",
+      "expected_occurrences": 1,
+      "source_text": "Projectile Frenzy",
+      "translation": "投射物狂热",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Pickups/Frenzy.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Pickups/Frenzy.tscn:8:16",
+      "old_text": "description = \"Frenzy\"",
+      "new_text": "description = \"狂热\"",
+      "preimage_sha256": "BF0843AD1E277BC1A23B49A963907FD34F088D3D3E407FF71E10781EDA9CFD11",
+      "expected_occurrences": 1,
+      "source_text": "Frenzy",
+      "translation": "狂热",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Pickups/Frenzy.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Pickups/Frenzy.tscn:9:17",
+      "old_text": "on_apply_tip = \"Speed Buff\"",
+      "new_text": "on_apply_tip = \"速度增益\"",
+      "preimage_sha256": "BF0843AD1E277BC1A23B49A963907FD34F088D3D3E407FF71E10781EDA9CFD11",
+      "expected_occurrences": 1,
+      "source_text": "Speed Buff",
+      "translation": "速度增益",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Curses/Bane.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Curses/Bane.tscn:8:16",
+      "old_text": "description = \"Bane\"",
+      "new_text": "description = \"灾厄\"",
+      "preimage_sha256": "F815CF9AA1E573223B61FF071C54B8C9B7210DE288CE71B6B7AE4D3CF0DDC9C6",
+      "expected_occurrences": 1,
+      "source_text": "Bane",
+      "translation": "灾厄",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Curses/Brittle.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Curses/Brittle.tscn:8:16",
+      "old_text": "description = \"Brittle\"",
+      "new_text": "description = \"脆弱\"",
+      "preimage_sha256": "7A17F4B54AA7EC26FE0A943571993807999676DAE2F501BD01BA60B45C9D2B40",
+      "expected_occurrences": 1,
+      "source_text": "Brittle",
+      "translation": "脆弱",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Curses/Debilitate.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Curses/Debilitate.tscn:8:16",
+      "old_text": "description = \"Debilitate\"",
+      "new_text": "description = \"虚弱\"",
+      "preimage_sha256": "A649C73A000753FF2CE519F501E17811967117D9540F08FD1DCB7A19A717FD84",
+      "expected_occurrences": 1,
+      "source_text": "Debilitate",
+      "translation": "虚弱",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Curses/Dread.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Curses/Dread.tscn:14:16",
+      "old_text": "description = \"Dread\"",
+      "new_text": "description = \"恐惧\"",
+      "preimage_sha256": "10575D21D5BC21FB0B315864F20DFB4327F27276E09C3EF030A4BDC8C8740BBB",
+      "expected_occurrences": 1,
+      "source_text": "Dread",
+      "translation": "恐惧",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Curses/Hinder.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Curses/Hinder.tscn:8:16",
+      "old_text": "description = \"Hinder\"",
+      "new_text": "description = \"阻碍\"",
+      "preimage_sha256": "E30DA4F4B6877A8E1D0B34AB8E6D52E543B68F46A4DD1BFBA2441199A929A7C1",
+      "expected_occurrences": 1,
+      "source_text": "Hinder",
+      "translation": "阻碍",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Curses/Hypothermia.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Curses/Hypothermia.tscn:7:16",
+      "old_text": "description = \"Hypothermia\"",
+      "new_text": "description = \"低温症\"",
+      "preimage_sha256": "36CC5224EAC24D391DF4EC665C9574D01067D50C893DFA6B082F8DDFF5046DB7",
+      "expected_occurrences": 1,
+      "source_text": "Hypothermia",
+      "translation": "低温症",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Curses/Polarize.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Curses/Polarize.tscn:8:16",
+      "old_text": "description = \"Polarize\"",
+      "new_text": "description = \"极化\"",
+      "preimage_sha256": "F6D1AD349C395F0BC07D2D336C142CDAD5119556173BF05A34A938CD5F867BE9",
+      "expected_occurrences": 1,
+      "source_text": "Polarize",
+      "translation": "极化",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Curses/Protract.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Curses/Protract.tscn:8:16",
+      "old_text": "description = \"Protract\"",
+      "new_text": "description = \"延长\"",
+      "preimage_sha256": "E98669E9128AD1799F41F16DA866272CCEC1FCADBC46689708FDAE287D2F3BBC",
+      "expected_occurrences": 1,
+      "source_text": "Protract",
+      "translation": "延长",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Curses/Scorch.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Curses/Scorch.tscn:8:16",
+      "old_text": "description = \"Scorch\"",
+      "new_text": "description = \"灼烧\"",
+      "preimage_sha256": "20B5272DA4C2C74118F432EE48FE79E18919DED4895DFA26CE3323D40E9A9AB8",
+      "expected_occurrences": 1,
+      "source_text": "Scorch",
+      "translation": "灼烧",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Generic/Echoing.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Generic/Echoing.tscn:8:16",
+      "old_text": "description = \"Echoing\"",
+      "new_text": "description = \"回响\"",
+      "preimage_sha256": "405A0ECECE49F9D5BEA0F15CFB11211436F79C4851A50123BE86D8357B04613A",
+      "expected_occurrences": 1,
+      "source_text": "Echoing",
+      "translation": "回响",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Generic/Exposed.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Generic/Exposed.tscn:8:16",
+      "old_text": "description = \"Exposure\"",
+      "new_text": "description = \"暴露\"",
+      "preimage_sha256": "572F810A6CC5B9BD43E6E927F53964527776956720F9DD98BDE135D02CB5E7F7",
+      "expected_occurrences": 1,
+      "source_text": "Exposure",
+      "translation": "暴露",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Generic/Hamstrung.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Generic/Hamstrung.tscn:8:16",
+      "old_text": "description = \"Hamstrung\"",
+      "new_text": "description = \"跛足\"",
+      "preimage_sha256": "1B7DE8D2B727C8E1F093221151DDC1744244D683F9207256F4FFAD2383E3D622",
+      "expected_occurrences": 1,
+      "source_text": "Hamstrung",
+      "translation": "跛足",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Generic/RecentlyHit.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Generic/RecentlyHit.tscn:8:16",
+      "old_text": "description = \"Recently Hit\"",
+      "new_text": "description = \"最近受击\"",
+      "preimage_sha256": "BEFF3C45C39B1A95C99ADB66AB2F9465860AA03CFA8F1504AC7A1C0CD030A3F5",
+      "expected_occurrences": 1,
+      "source_text": "Recently Hit",
+      "translation": "最近受击",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Generic/Vulnerable.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Generic/Vulnerable.tscn:8:16",
+      "old_text": "description = \"Vulnerable\"",
+      "new_text": "description = \"易伤\"",
+      "preimage_sha256": "51DEC2F7748A62E624F3CF6CCCF6F38C120CC9F3CA4481A7F7E67CDAA1C37247",
+      "expected_occurrences": 1,
+      "source_text": "Vulnerable",
+      "translation": "易伤",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/Adrenaline.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/Adrenaline.tscn:8:16",
+      "old_text": "description = \"Adrenaline\"",
+      "new_text": "description = \"肾上腺素\"",
+      "preimage_sha256": "A0F05E2CF5E3B7E11EB287750C9A66588EAA7A5FB8133772A95D198D53AFD4A0",
+      "expected_occurrences": 1,
+      "source_text": "Adrenaline",
+      "translation": "肾上腺素",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/BloodBoil.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/BloodBoil.tscn:8:16",
+      "old_text": "description = \"Blood Boil\"",
+      "new_text": "description = \"热血沸腾\"",
+      "preimage_sha256": "AA197E72427185578509BA6071FE29BC7A0DE0B4CDE77EAE2AF548587D09B21F",
+      "expected_occurrences": 1,
+      "source_text": "Blood Boil",
+      "translation": "热血沸腾",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/CycleOfDestructionEffect.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/CycleOfDestructionEffect.tscn:8:16",
+      "old_text": "description = \"Cycle of Destruction\"",
+      "new_text": "description = \"毁灭循环\"",
+      "preimage_sha256": "7F066A4ED34D5F5DD88D1D7DF4469F0E15B6E6C509F091F663B21CA52540C299",
+      "expected_occurrences": 1,
+      "source_text": "Cycle of Destruction",
+      "translation": "毁灭循环",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/Endurance.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/Endurance.tscn:8:16",
+      "old_text": "description = \"Endurance\"",
+      "new_text": "description = \"耐力\"",
+      "preimage_sha256": "0150768B3A39346B63BB2A7396BF0948F4AC7A7BD37D4A73F76E036A92F17EBE",
+      "expected_occurrences": 1,
+      "source_text": "Endurance",
+      "translation": "耐力",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/GrowingPain.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/GrowingPain.tscn:8:16",
+      "old_text": "description = \"Growing Pain\"",
+      "new_text": "description = \"成长之痛\"",
+      "preimage_sha256": "D0BA733FB7EAE6E3578387C2CE1F64233624D547C9889D3FAAA72DA786D67FB6",
+      "expected_occurrences": 1,
+      "source_text": "Growing Pain",
+      "translation": "成长之痛",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/HardenedFlesh.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/HardenedFlesh.tscn:8:16",
+      "old_text": "description = \"Hardened Flesh\"",
+      "new_text": "description = \"硬化之躯\"",
+      "preimage_sha256": "812A43C758FA1E73B93C3DC59B54FBB15A0A014C252F4ED80051CB985BFC12A5",
+      "expected_occurrences": 1,
+      "source_text": "Hardened Flesh",
+      "translation": "硬化之躯",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/KillMomentum.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/KillMomentum.tscn:8:16",
+      "old_text": "description = \"Raging Momentum\"",
+      "new_text": "description = \"狂暴势头\"",
+      "preimage_sha256": "8A3CBC335ABFEFA72CB50568DA4FE2609EC1EDF638F19C99767EB50E3C12D1F2",
+      "expected_occurrences": 1,
+      "source_text": "Raging Momentum",
+      "translation": "狂暴势头",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/PhantomShield.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/PhantomShield.tscn:9:16",
+      "old_text": "description = \"Phantom Shield\"",
+      "new_text": "description = \"幻影护盾\"",
+      "preimage_sha256": "120B2B1E96272EBBDA631D9EC0FCAFC829A6F3DA517E3A6C58666434B120FA41",
+      "expected_occurrences": 1,
+      "source_text": "Phantom Shield",
+      "translation": "幻影护盾",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/RegenerativeFleshEffect.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/RegenerativeFleshEffect.tscn:8:16",
+      "old_text": "description = \"Regenerative Flesh\"",
+      "new_text": "description = \"再生之躯\"",
+      "preimage_sha256": "21250E6B3B2A27797D1FDD1115B84FC7C3C9F5594DE36BAEB195A34E2A31DDA7",
+      "expected_occurrences": 1,
+      "source_text": "Regenerative Flesh",
+      "translation": "再生之躯",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/SpikeArmor.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/SpikeArmor.tscn:8:16",
+      "old_text": "description = \"Spike Armor\"",
+      "new_text": "description = \"尖刺护甲\"",
+      "preimage_sha256": "812E8DBF5DCCA82DE725DD7735CA268C4DF80375D5DBA5473D6679080345F5AB",
+      "expected_occurrences": 1,
+      "source_text": "Spike Armor",
+      "translation": "尖刺护甲",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/ToxicRunner.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/ToxicRunner.tscn:8:16",
+      "old_text": "description = \"Plague Runner\"",
+      "new_text": "description = \"瘟疫行者\"",
+      "preimage_sha256": "9805CB94AA2F6DF739A228D1D6ABD1A32B9FDAA1BE243F7AB1A4008BD87D516F",
+      "expected_occurrences": 1,
+      "source_text": "Plague Runner",
+      "translation": "瘟疫行者",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/Transfusion.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/Transfusion.tscn:8:16",
+      "old_text": "description = \"Transfusion\"",
+      "new_text": "description = \"输血\"",
+      "preimage_sha256": "7743679A3DFB691EEBBB3831D2F460628CBBA9487E4CC8096D18E0BBE1C20760",
+      "expected_occurrences": 1,
+      "source_text": "Transfusion",
+      "translation": "输血",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/UnleashEffect.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/UnleashEffect.tscn:8:16",
+      "old_text": "description = \"Unleash\"",
+      "new_text": "description = \"释放\"",
+      "preimage_sha256": "DA9C7F58E69C6FAEA5C9B282C9A57188FD58DB8E54E06474488A6774E496D31F",
+      "expected_occurrences": 1,
+      "source_text": "Unleash",
+      "translation": "释放",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/StatusEffects/Keystones/VampiricSkin.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/StatusEffects/Keystones/VampiricSkin.tscn:8:16",
+      "old_text": "description = \"Vampiric Skin\"",
+      "new_text": "description = \"吸血鬼之肤\"",
+      "preimage_sha256": "5EB7E23B262B01D373C992D1757904AB0EB5677DB1D26DECE11D898A47CC3271",
+      "expected_occurrences": 1,
+      "source_text": "Vampiric Skin",
+      "translation": "吸血鬼之肤",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "resource_contract",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_status_effects_zhcn"
+  ],
+  "not_proven": "visual layout quality, persistence, gameplay, broad localization, or release readiness"
+}

@@ -1,0 +1,4406 @@
+{
+  "id": "c5-l18-equipment-names-zhcn",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "C5-L18: equipment display names across 2 scripts - Genes.gd name_for_base_type (48 base types), name_for_gene_type (10 slots), craft_name (17 craft actions), ItemNameGenerator.gd prefix_words (43) + suffix_words (34); internal keys (BaseType/GeneSlot/CraftType enums, dict keys) untouched",
+  "entities": [
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:166:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 近战武器"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:167:26",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 法术武器"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:168:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 远程武器"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:170:27",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 闪避盾"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:171:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 护甲盾"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:172:26",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 混合盾"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:173:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 生命盾"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:174:26",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 进攻盾"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:176:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 闪避胸甲"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:177:23",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 护甲胸甲"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:178:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 混合胸甲"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:179:22",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 生命胸甲"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:180:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 进攻胸甲"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:182:27",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 闪避头盔"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:183:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 护甲头盔"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:184:26",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 混合头盔"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:185:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 生命头盔"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:186:26",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 进攻头盔"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:188:23",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 护甲腰带"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:189:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 闪避腰带"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:190:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 混合腰带"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:191:22",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 生命腰带"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:192:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 进攻腰带"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:194:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 护甲手套"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:195:27",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 闪避手套"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:196:26",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 混合手套"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:197:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 生命手套"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:198:26",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 进攻手套"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:200:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 护甲靴"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:201:26",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 闪避靴"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:202:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 混合靴"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:203:23",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 生命靴"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:204:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 进攻靴"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:206:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 护甲裤"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:207:26",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 闪避裤"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:208:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 混合裤"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:209:23",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 生命裤"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:210:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 进攻裤"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:212:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 攻击戒指"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:213:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 进攻戒指"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:214:27",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 抗性戒指"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:215:22",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 生命戒指"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:217:26",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 攻击护符"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:218:26",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 进攻护符"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:219:29",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 抗性护符"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:220:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 生命护符"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:222:23",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 辅助增益"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:540:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 武器/盾牌"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:541:17",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 胸甲"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:542:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 头盔"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:543:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 护符"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:544:17",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 戒指"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:545:17",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 腰带"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:546:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 手套"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:547:18",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 靴子"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:548:18",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 裤子"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:549:18",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 小型增益"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:573:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 清除"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:574:21",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 存入"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:575:20",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 恢复"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:578:22",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 重组"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:579:28",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 幸运重组"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:580:28",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 神赐重组"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:581:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 添加随机词缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:582:23",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 移除随机词缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:583:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 再组合"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:584:20",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 重掷词缀数值"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:585:22",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 永久锁定随机词缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:586:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 解锁随机词缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:587:31",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 重组前缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:588:31",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 重组后缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:589:26",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 升级随机词缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:590:31",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 锁定词缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes.gd:591:33",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 解锁词缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:5:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 凶煞"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:6:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 蓝"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:7:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 红"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:8:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 白"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:9:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 撕咬"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:10:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 编织"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:11:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 螺旋"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:12:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 欢快"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:13:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 弹跃"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:14:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 生化"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:15:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 丧尸"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:16:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 呜咽"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:17:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 长须"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:18:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 采样"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:19:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 病态"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:20:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 灼烧"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:21:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 炙烤"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:22:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 烈焰"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:23:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 冰封"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:24:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 寒冷"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:25:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 苦涩"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:26:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 咸涩"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:27:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 恐慌"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:28:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 愤怒"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:29:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 烙印"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:30:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 浸透"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:31:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 恶魔"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:32:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 微光"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:33:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 星光"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:34:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 憎恶"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:35:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 尖刺"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:36:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 奇美拉"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:37:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 吸血"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:38:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 污秽"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:39:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 温暖"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:40:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 凉爽"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:41:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 猫性"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:42:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 剧毒"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:43:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 破旧"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:44:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 环纹"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:45:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 渴望者"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:46:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 食人魔"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:47:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 哥布林"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:51:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 食尸鬼"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:52:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 雨"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:53:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 雪"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:54:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 土豆"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:55:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 细菌"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:56:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 岩石"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:57:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 鹰"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:58:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 猿"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:59:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 眼"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:60:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 心"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:61:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 肺"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:62:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 肝"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:63:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 脑"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:64:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 狼"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:65:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 狐"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:66:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 流浪者"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:67:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 荆棘"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:68:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 掠夺者"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:69:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 血肉"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:70:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 肉"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:71:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 风"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:72:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 恐惧"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:73:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 灾厄"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:74:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 食人魔"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:75:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 巨人"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:76:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 关键"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:77:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 冠冕"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:78:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 封印"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:79:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 杯"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:80:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 雕像"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:81:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 钥匙"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:82:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 王冠"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:83:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 面具"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/ItemNameGenerator.gd:84:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 罐"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:166:25",
+      "old_text": "BaseType.MELEE_WEAPON: \"Melee Weapon\",",
+      "new_text": "BaseType.MELEE_WEAPON: \"近战武器\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Melee Weapon",
+      "translation": "近战武器",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:167:26",
+      "old_text": "BaseType.CASTER_WEAPON: \"Caster Weapon\",",
+      "new_text": "BaseType.CASTER_WEAPON: \"法术武器\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Caster Weapon",
+      "translation": "法术武器",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:168:25",
+      "old_text": "BaseType.RANGE_WEAPON: \"Range Weapon\",",
+      "new_text": "BaseType.RANGE_WEAPON: \"远程武器\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Range Weapon",
+      "translation": "远程武器",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:170:27",
+      "old_text": "BaseType.EVASION_SHIELD: \"Evasion Shield\",",
+      "new_text": "BaseType.EVASION_SHIELD: \"闪避盾\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Evasion Shield",
+      "translation": "闪避盾",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:171:25",
+      "old_text": "BaseType.ARMOR_SHIELD: \"Armor Shield\",",
+      "new_text": "BaseType.ARMOR_SHIELD: \"护甲盾\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Armor Shield",
+      "translation": "护甲盾",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:172:26",
+      "old_text": "BaseType.HYBRID_SHIELD: \"Hybrid Shield\",",
+      "new_text": "BaseType.HYBRID_SHIELD: \"混合盾\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Hybrid Shield",
+      "translation": "混合盾",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:173:24",
+      "old_text": "BaseType.LIFE_SHIELD: \"Life Shield\",",
+      "new_text": "BaseType.LIFE_SHIELD: \"生命盾\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Life Shield",
+      "translation": "生命盾",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:174:26",
+      "old_text": "BaseType.CASTER_SHIELD: \"Offensive Shield\",",
+      "new_text": "BaseType.CASTER_SHIELD: \"进攻盾\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Offensive Shield",
+      "translation": "进攻盾",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:176:25",
+      "old_text": "BaseType.EVASION_BODY: \"Evasion Body\",",
+      "new_text": "BaseType.EVASION_BODY: \"闪避胸甲\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Evasion Body",
+      "translation": "闪避胸甲",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:177:23",
+      "old_text": "BaseType.ARMOR_BODY: \"Armor Body\",",
+      "new_text": "BaseType.ARMOR_BODY: \"护甲胸甲\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Armor Body",
+      "translation": "护甲胸甲",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:178:24",
+      "old_text": "BaseType.HYBRID_BODY: \"Hybrid Body\",",
+      "new_text": "BaseType.HYBRID_BODY: \"混合胸甲\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Hybrid Body",
+      "translation": "混合胸甲",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:179:22",
+      "old_text": "BaseType.LIFE_BODY: \"Life Body\",",
+      "new_text": "BaseType.LIFE_BODY: \"生命胸甲\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Life Body",
+      "translation": "生命胸甲",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:180:24",
+      "old_text": "BaseType.CASTER_BODY: \"Offensive Body\",",
+      "new_text": "BaseType.CASTER_BODY: \"进攻胸甲\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Offensive Body",
+      "translation": "进攻胸甲",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:182:27",
+      "old_text": "BaseType.EVASION_HELMET: \"Evasion Helmet\",",
+      "new_text": "BaseType.EVASION_HELMET: \"闪避头盔\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Evasion Helmet",
+      "translation": "闪避头盔",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:183:25",
+      "old_text": "BaseType.ARMOR_HELMET: \"Armor Helmet\",",
+      "new_text": "BaseType.ARMOR_HELMET: \"护甲头盔\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Armor Helmet",
+      "translation": "护甲头盔",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:184:26",
+      "old_text": "BaseType.HYBRID_HELMET: \"Hybrid Helmet\",",
+      "new_text": "BaseType.HYBRID_HELMET: \"混合头盔\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Hybrid Helmet",
+      "translation": "混合头盔",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:185:24",
+      "old_text": "BaseType.LIFE_HELMET: \"Life Helmet\",",
+      "new_text": "BaseType.LIFE_HELMET: \"生命头盔\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Life Helmet",
+      "translation": "生命头盔",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:186:26",
+      "old_text": "BaseType.CASTER_HELMET: \"Offensive Helmet\",",
+      "new_text": "BaseType.CASTER_HELMET: \"进攻头盔\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Offensive Helmet",
+      "translation": "进攻头盔",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:188:23",
+      "old_text": "BaseType.ARMOR_BELT: \"Armor Belt\",",
+      "new_text": "BaseType.ARMOR_BELT: \"护甲腰带\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Armor Belt",
+      "translation": "护甲腰带",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:189:25",
+      "old_text": "BaseType.EVASION_BELT: \"Evasion Belt\",",
+      "new_text": "BaseType.EVASION_BELT: \"闪避腰带\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Evasion Belt",
+      "translation": "闪避腰带",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:190:24",
+      "old_text": "BaseType.HYBRID_BELT: \"Hybrid Belt\",",
+      "new_text": "BaseType.HYBRID_BELT: \"混合腰带\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Hybrid Belt",
+      "translation": "混合腰带",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:191:22",
+      "old_text": "BaseType.LIFE_BELT: \"Life Belt\",",
+      "new_text": "BaseType.LIFE_BELT: \"生命腰带\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Life Belt",
+      "translation": "生命腰带",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:192:24",
+      "old_text": "BaseType.CASTER_BELT: \"Offensive Belt\",",
+      "new_text": "BaseType.CASTER_BELT: \"进攻腰带\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Offensive Belt",
+      "translation": "进攻腰带",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:194:25",
+      "old_text": "BaseType.ARMOR_GLOVES: \"Armor Gloves\",",
+      "new_text": "BaseType.ARMOR_GLOVES: \"护甲手套\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Armor Gloves",
+      "translation": "护甲手套",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:195:27",
+      "old_text": "BaseType.EVASION_GLOVES: \"Evasion Gloves\",",
+      "new_text": "BaseType.EVASION_GLOVES: \"闪避手套\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Evasion Gloves",
+      "translation": "闪避手套",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:196:26",
+      "old_text": "BaseType.HYBRID_GLOVES: \"Hybrid Gloves\",",
+      "new_text": "BaseType.HYBRID_GLOVES: \"混合手套\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Hybrid Gloves",
+      "translation": "混合手套",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:197:24",
+      "old_text": "BaseType.LIFE_GLOVES: \"Life Gloves\",",
+      "new_text": "BaseType.LIFE_GLOVES: \"生命手套\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Life Gloves",
+      "translation": "生命手套",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:198:26",
+      "old_text": "BaseType.CASTER_GLOVES: \"Offensive Gloves\",",
+      "new_text": "BaseType.CASTER_GLOVES: \"进攻手套\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Offensive Gloves",
+      "translation": "进攻手套",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:200:24",
+      "old_text": "BaseType.ARMOR_BOOTS: \"Armor Boots\",",
+      "new_text": "BaseType.ARMOR_BOOTS: \"护甲靴\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Armor Boots",
+      "translation": "护甲靴",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:201:26",
+      "old_text": "BaseType.EVASION_BOOTS: \"Evasion Boots\",",
+      "new_text": "BaseType.EVASION_BOOTS: \"闪避靴\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Evasion Boots",
+      "translation": "闪避靴",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:202:25",
+      "old_text": "BaseType.HYBRID_BOOTS: \"Hybrid Boots\",",
+      "new_text": "BaseType.HYBRID_BOOTS: \"混合靴\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Hybrid Boots",
+      "translation": "混合靴",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:203:23",
+      "old_text": "BaseType.LIFE_BOOTS: \"Life Boots\",",
+      "new_text": "BaseType.LIFE_BOOTS: \"生命靴\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Life Boots",
+      "translation": "生命靴",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:204:25",
+      "old_text": "BaseType.CASTER_BOOTS: \"Offensive Boots\",",
+      "new_text": "BaseType.CASTER_BOOTS: \"进攻靴\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Offensive Boots",
+      "translation": "进攻靴",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:206:24",
+      "old_text": "BaseType.ARMOR_PANTS: \"Armor Pants\",",
+      "new_text": "BaseType.ARMOR_PANTS: \"护甲裤\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Armor Pants",
+      "translation": "护甲裤",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:207:26",
+      "old_text": "BaseType.EVASION_PANTS: \"Evasion Pants\",",
+      "new_text": "BaseType.EVASION_PANTS: \"闪避裤\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Evasion Pants",
+      "translation": "闪避裤",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:208:25",
+      "old_text": "BaseType.HYBRID_PANTS: \"Hybrid Pants\",",
+      "new_text": "BaseType.HYBRID_PANTS: \"混合裤\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Hybrid Pants",
+      "translation": "混合裤",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:209:23",
+      "old_text": "BaseType.LIFE_PANTS: \"Life Pants\",",
+      "new_text": "BaseType.LIFE_PANTS: \"生命裤\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Life Pants",
+      "translation": "生命裤",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:210:25",
+      "old_text": "BaseType.CASTER_PANTS: \"Offensive Pants\",",
+      "new_text": "BaseType.CASTER_PANTS: \"进攻裤\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Offensive Pants",
+      "translation": "进攻裤",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:212:24",
+      "old_text": "BaseType.ATTACK_RING: \"Attack Ring\",",
+      "new_text": "BaseType.ATTACK_RING: \"攻击戒指\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Attack Ring",
+      "translation": "攻击戒指",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:213:24",
+      "old_text": "BaseType.CASTER_RING: \"Offensive Ring\",",
+      "new_text": "BaseType.CASTER_RING: \"进攻戒指\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Offensive Ring",
+      "translation": "进攻戒指",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:214:27",
+      "old_text": "BaseType.RESISTANT_RING: \"Resistant Ring\",",
+      "new_text": "BaseType.RESISTANT_RING: \"抗性戒指\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Resistant Ring",
+      "translation": "抗性戒指",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:215:22",
+      "old_text": "BaseType.LIFE_RING: \"Life Ring\",",
+      "new_text": "BaseType.LIFE_RING: \"生命戒指\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Life Ring",
+      "translation": "生命戒指",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:217:26",
+      "old_text": "BaseType.ATTACK_AMULET: \"Attack Amulet\",",
+      "new_text": "BaseType.ATTACK_AMULET: \"攻击护符\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Attack Amulet",
+      "translation": "攻击护符",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:218:26",
+      "old_text": "BaseType.CASTER_AMULET: \"Offensive Amulet\",",
+      "new_text": "BaseType.CASTER_AMULET: \"进攻护符\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Offensive Amulet",
+      "translation": "进攻护符",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:219:29",
+      "old_text": "BaseType.RESISTANT_AMULET: \"Resistant Amulet\",",
+      "new_text": "BaseType.RESISTANT_AMULET: \"抗性护符\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Resistant Amulet",
+      "translation": "抗性护符",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:220:24",
+      "old_text": "BaseType.LIFE_AMULET: \"Life Amulet\",",
+      "new_text": "BaseType.LIFE_AMULET: \"生命护符\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Life Amulet",
+      "translation": "生命护符",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:222:23",
+      "old_text": "BaseType.MINOR_BUFF: \"Utility Buff\"",
+      "new_text": "BaseType.MINOR_BUFF: \"辅助增益\"",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Utility Buff",
+      "translation": "辅助增益",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:540:19",
+      "old_text": "GeneSlot.WEAPON: \"Weapon/Shield\",",
+      "new_text": "GeneSlot.WEAPON: \"武器/盾牌\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Weapon/Shield",
+      "translation": "武器/盾牌",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:541:17",
+      "old_text": "GeneSlot.BODY: \"Chest Piece\",",
+      "new_text": "GeneSlot.BODY: \"胸甲\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Chest Piece",
+      "translation": "胸甲",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:542:19",
+      "old_text": "GeneSlot.HELMET: \"Helmet\",",
+      "new_text": "GeneSlot.HELMET: \"头盔\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Helmet",
+      "translation": "头盔",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:543:19",
+      "old_text": "GeneSlot.AMULET: \"Amulet\",",
+      "new_text": "GeneSlot.AMULET: \"护符\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Amulet",
+      "translation": "护符",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:544:17",
+      "old_text": "GeneSlot.RING: \"Ring\",",
+      "new_text": "GeneSlot.RING: \"戒指\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Ring",
+      "translation": "戒指",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:545:17",
+      "old_text": "GeneSlot.BELT: \"Belt\",",
+      "new_text": "GeneSlot.BELT: \"腰带\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Belt",
+      "translation": "腰带",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:546:19",
+      "old_text": "GeneSlot.GLOVES: \"Gloves\",",
+      "new_text": "GeneSlot.GLOVES: \"手套\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Gloves",
+      "translation": "手套",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:547:18",
+      "old_text": "GeneSlot.BOOTS: \"Boots\",",
+      "new_text": "GeneSlot.BOOTS: \"靴子\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Boots",
+      "translation": "靴子",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:548:18",
+      "old_text": "GeneSlot.PANTS: \"Pants\",",
+      "new_text": "GeneSlot.PANTS: \"裤子\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Pants",
+      "translation": "裤子",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:549:18",
+      "old_text": "GeneSlot.MINOR: \"Minor Buff\",",
+      "new_text": "GeneSlot.MINOR: \"小型增益\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Minor Buff",
+      "translation": "小型增益",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:573:19",
+      "old_text": "CraftType.CLEAR: \"Clear\",",
+      "new_text": "CraftType.CLEAR: \"清除\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Clear",
+      "translation": "清除",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:574:21",
+      "old_text": "CraftType.EXTRACT: \"Store\",",
+      "new_text": "CraftType.EXTRACT: \"存入\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Store",
+      "translation": "存入",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:575:20",
+      "old_text": "CraftType.SPLICE: \"Restore\",",
+      "new_text": "CraftType.SPLICE: \"恢复\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Restore",
+      "translation": "恢复",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:578:22",
+      "old_text": "CraftType.SCRAMBLE: \"Scramble\",",
+      "new_text": "CraftType.SCRAMBLE: \"重组\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Scramble",
+      "translation": "重组",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:579:28",
+      "old_text": "CraftType.SCRAMBLE_LUCKY: \"Lucky Scramble\",",
+      "new_text": "CraftType.SCRAMBLE_LUCKY: \"幸运重组\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Lucky Scramble",
+      "translation": "幸运重组",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:580:28",
+      "old_text": "CraftType.SCRAMBLE_ULTRA: \"Godly Scramble\",",
+      "new_text": "CraftType.SCRAMBLE_ULTRA: \"神赐重组\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Godly Scramble",
+      "translation": "神赐重组",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:581:19",
+      "old_text": "CraftType.GAMMA: \"Add Random Mod\",",
+      "new_text": "CraftType.GAMMA: \"添加随机词缀\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Add Random Mod",
+      "translation": "添加随机词缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:582:23",
+      "old_text": "CraftType.RECESSIVE: \"Remove Random Mod\",",
+      "new_text": "CraftType.RECESSIVE: \"移除随机词缀\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Remove Random Mod",
+      "translation": "移除随机词缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:583:25",
+      "old_text": "CraftType.RECOMBINATE: \"Recombinate\",",
+      "new_text": "CraftType.RECOMBINATE: \"再组合\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Recombinate",
+      "translation": "再组合",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:584:20",
+      "old_text": "CraftType.COSMIC: \"Reroll Mod Values\",",
+      "new_text": "CraftType.COSMIC: \"重掷词缀数值\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Reroll Mod Values",
+      "translation": "重掷词缀数值",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:585:22",
+      "old_text": "CraftType.LOCK_MOD: \"Permanently Lock Random Mod\",",
+      "new_text": "CraftType.LOCK_MOD: \"永久锁定随机词缀\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Permanently Lock Random Mod",
+      "translation": "永久锁定随机词缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:586:24",
+      "old_text": "CraftType.UNLOCK_MOD: \"Unlock Random Mod\",",
+      "new_text": "CraftType.UNLOCK_MOD: \"解锁随机词缀\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Unlock Random Mod",
+      "translation": "解锁随机词缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:587:31",
+      "old_text": "CraftType.SCRAMBLE_PREFIXES: \"Scramble Prefixes\",",
+      "new_text": "CraftType.SCRAMBLE_PREFIXES: \"重组前缀\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Scramble Prefixes",
+      "translation": "重组前缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:588:31",
+      "old_text": "CraftType.SCRAMBLE_SUFFIXES: \"Scramble Suffixes\",",
+      "new_text": "CraftType.SCRAMBLE_SUFFIXES: \"重组后缀\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Scramble Suffixes",
+      "translation": "重组后缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:589:26",
+      "old_text": "CraftType.UPGRADE_TIER: \"Upgrade Random Mod\",",
+      "new_text": "CraftType.UPGRADE_TIER: \"升级随机词缀\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Upgrade Random Mod",
+      "translation": "升级随机词缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:590:31",
+      "old_text": "CraftType.LOCK_SPECIFIC_MOD: \"Lock Mod\",",
+      "new_text": "CraftType.LOCK_SPECIFIC_MOD: \"锁定词缀\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Lock Mod",
+      "translation": "锁定词缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes.gd:591:33",
+      "old_text": "CraftType.UNLOCK_SPECIFIC_MOD: \"Unlock Mod\",",
+      "new_text": "CraftType.UNLOCK_SPECIFIC_MOD: \"解锁词缀\",",
+      "preimage_sha256": "55837F73DF6BF81BD855246CE7AA4EB64352D20B22E48D059ABAD1A44B8700B6",
+      "expected_occurrences": 1,
+      "source_text": "Unlock Mod",
+      "translation": "解锁词缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:5:2",
+      "old_text": "\"Dire\",",
+      "new_text": "\"凶煞\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Dire",
+      "translation": "凶煞",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:6:2",
+      "old_text": "\"Blue\",",
+      "new_text": "\"蓝\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Blue",
+      "translation": "蓝",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:7:2",
+      "old_text": "\"Red\",",
+      "new_text": "\"红\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Red",
+      "translation": "红",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:8:2",
+      "old_text": "\"White\",",
+      "new_text": "\"白\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "White",
+      "translation": "白",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:9:2",
+      "old_text": "\"Bitten\",",
+      "new_text": "\"撕咬\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Bitten",
+      "translation": "撕咬",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:10:2",
+      "old_text": "\"Woven\",",
+      "new_text": "\"编织\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Woven",
+      "translation": "编织",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:11:2",
+      "old_text": "\"Spiral\",",
+      "new_text": "\"螺旋\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Spiral",
+      "translation": "螺旋",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:12:2",
+      "old_text": "\"Jovial\",",
+      "new_text": "\"欢快\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Jovial",
+      "translation": "欢快",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:13:2",
+      "old_text": "\"Sprung\",",
+      "new_text": "\"弹跃\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Sprung",
+      "translation": "弹跃",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:14:2",
+      "old_text": "\"Bionic\",",
+      "new_text": "\"生化\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Bionic",
+      "translation": "生化",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:15:2",
+      "old_text": "\"Zomboid\",",
+      "new_text": "\"丧尸\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Zomboid",
+      "translation": "丧尸",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:16:2",
+      "old_text": "\"Wimpering\",",
+      "new_text": "\"呜咽\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Wimpering",
+      "translation": "呜咽",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:17:2",
+      "old_text": "\"Bearded\",",
+      "new_text": "\"长须\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Bearded",
+      "translation": "长须",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:18:2",
+      "old_text": "\"Sampled\",",
+      "new_text": "\"采样\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Sampled",
+      "translation": "采样",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:19:2",
+      "old_text": "\"Morbid\",",
+      "new_text": "\"病态\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Morbid",
+      "translation": "病态",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:20:2",
+      "old_text": "\"Scorched\",",
+      "new_text": "\"灼烧\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Scorched",
+      "translation": "灼烧",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:21:2",
+      "old_text": "\"Seared\",",
+      "new_text": "\"炙烤\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Seared",
+      "translation": "炙烤",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:22:2",
+      "old_text": "\"Flaming\",",
+      "new_text": "\"烈焰\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Flaming",
+      "translation": "烈焰",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:23:2",
+      "old_text": "\"Frozen\",",
+      "new_text": "\"冰封\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Frozen",
+      "translation": "冰封",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:24:2",
+      "old_text": "\"Chilled\",",
+      "new_text": "\"寒冷\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Chilled",
+      "translation": "寒冷",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:25:2",
+      "old_text": "\"Bitter\",",
+      "new_text": "\"苦涩\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Bitter",
+      "translation": "苦涩",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:26:2",
+      "old_text": "\"Salty\",",
+      "new_text": "\"咸涩\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Salty",
+      "translation": "咸涩",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:27:2",
+      "old_text": "\"Panicked\",",
+      "new_text": "\"恐慌\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Panicked",
+      "translation": "恐慌",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:28:2",
+      "old_text": "\"Angry\",",
+      "new_text": "\"愤怒\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Angry",
+      "translation": "愤怒",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:29:2",
+      "old_text": "\"Branded\",",
+      "new_text": "\"烙印\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Branded",
+      "translation": "烙印",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:30:2",
+      "old_text": "\"Doused\",",
+      "new_text": "\"浸透\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Doused",
+      "translation": "浸透",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:31:2",
+      "old_text": "\"Demonic\",",
+      "new_text": "\"恶魔\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Demonic",
+      "translation": "恶魔",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:32:2",
+      "old_text": "\"Glimmering\",",
+      "new_text": "\"微光\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Glimmering",
+      "translation": "微光",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:33:2",
+      "old_text": "\"Starry\",",
+      "new_text": "\"星光\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Starry",
+      "translation": "星光",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:34:2",
+      "old_text": "\"Loathe\",",
+      "new_text": "\"憎恶\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Loathe",
+      "translation": "憎恶",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:35:2",
+      "old_text": "\"Spiny\",",
+      "new_text": "\"尖刺\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Spiny",
+      "translation": "尖刺",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:36:2",
+      "old_text": "\"Chimeral\",",
+      "new_text": "\"奇美拉\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Chimeral",
+      "translation": "奇美拉",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:37:2",
+      "old_text": "\"Vampiric\",",
+      "new_text": "\"吸血\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Vampiric",
+      "translation": "吸血",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:38:2",
+      "old_text": "\"Defiled\",",
+      "new_text": "\"污秽\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Defiled",
+      "translation": "污秽",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:39:2",
+      "old_text": "\"Warm\",",
+      "new_text": "\"温暖\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Warm",
+      "translation": "温暖",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:40:2",
+      "old_text": "\"Cool\",",
+      "new_text": "\"凉爽\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Cool",
+      "translation": "凉爽",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:41:2",
+      "old_text": "\"Catlike\",",
+      "new_text": "\"猫性\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Catlike",
+      "translation": "猫性",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:42:2",
+      "old_text": "\"Venomous\",",
+      "new_text": "\"剧毒\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Venomous",
+      "translation": "剧毒",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:43:2",
+      "old_text": "\"Worn\",",
+      "new_text": "\"破旧\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Worn",
+      "translation": "破旧",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:44:2",
+      "old_text": "\"Ringed\",",
+      "new_text": "\"环纹\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Ringed",
+      "translation": "环纹",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:45:2",
+      "old_text": "\"Aspirant's\",",
+      "new_text": "\"渴望者\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Aspirant's",
+      "translation": "渴望者",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:46:2",
+      "old_text": "\"Ogre's\",",
+      "new_text": "\"食人魔\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Ogre's",
+      "translation": "食人魔",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:47:2",
+      "old_text": "\"Goblin's\",",
+      "new_text": "\"哥布林\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Goblin's",
+      "translation": "哥布林",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:51:2",
+      "old_text": "\"Ghoul\",",
+      "new_text": "\"食尸鬼\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Ghoul",
+      "translation": "食尸鬼",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:52:2",
+      "old_text": "\"Rain\",",
+      "new_text": "\"雨\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Rain",
+      "translation": "雨",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:53:2",
+      "old_text": "\"Snow\",",
+      "new_text": "\"雪\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Snow",
+      "translation": "雪",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:54:2",
+      "old_text": "\"Potato\",",
+      "new_text": "\"土豆\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Potato",
+      "translation": "土豆",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:55:2",
+      "old_text": "\"Germ\",",
+      "new_text": "\"细菌\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Germ",
+      "translation": "细菌",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:56:2",
+      "old_text": "\"Rock\",",
+      "new_text": "\"岩石\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Rock",
+      "translation": "岩石",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:57:2",
+      "old_text": "\"Eagle\",",
+      "new_text": "\"鹰\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Eagle",
+      "translation": "鹰",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:58:2",
+      "old_text": "\"Ape\",",
+      "new_text": "\"猿\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Ape",
+      "translation": "猿",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:59:2",
+      "old_text": "\"Eyes\",",
+      "new_text": "\"眼\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Eyes",
+      "translation": "眼",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:60:2",
+      "old_text": "\"Heart\",",
+      "new_text": "\"心\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Heart",
+      "translation": "心",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:61:2",
+      "old_text": "\"Lungs\",",
+      "new_text": "\"肺\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Lungs",
+      "translation": "肺",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:62:2",
+      "old_text": "\"Liver\",",
+      "new_text": "\"肝\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Liver",
+      "translation": "肝",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:63:2",
+      "old_text": "\"Brain\",",
+      "new_text": "\"脑\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Brain",
+      "translation": "脑",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:64:2",
+      "old_text": "\"Wolf\",",
+      "new_text": "\"狼\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Wolf",
+      "translation": "狼",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:65:2",
+      "old_text": "\"Fox\",",
+      "new_text": "\"狐\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Fox",
+      "translation": "狐",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:66:2",
+      "old_text": "\"Vagabond\",",
+      "new_text": "\"流浪者\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Vagabond",
+      "translation": "流浪者",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:67:2",
+      "old_text": "\"Thorn\",",
+      "new_text": "\"荆棘\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Thorn",
+      "translation": "荆棘",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:68:2",
+      "old_text": "\"Reaver\",",
+      "new_text": "\"掠夺者\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Reaver",
+      "translation": "掠夺者",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:69:2",
+      "old_text": "\"Flesh\",",
+      "new_text": "\"血肉\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Flesh",
+      "translation": "血肉",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:70:2",
+      "old_text": "\"Meat\",",
+      "new_text": "\"肉\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Meat",
+      "translation": "肉",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:71:2",
+      "old_text": "\"Wind\",",
+      "new_text": "\"风\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Wind",
+      "translation": "风",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:72:2",
+      "old_text": "\"Fear\",",
+      "new_text": "\"恐惧\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Fear",
+      "translation": "恐惧",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:73:2",
+      "old_text": "\"Bane\",",
+      "new_text": "\"灾厄\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Bane",
+      "translation": "灾厄",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:74:2",
+      "old_text": "\"Ogre\",",
+      "new_text": "\"食人魔\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Ogre",
+      "translation": "食人魔",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:75:2",
+      "old_text": "\"Giant\",",
+      "new_text": "\"巨人\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Giant",
+      "translation": "巨人",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:76:2",
+      "old_text": "\"Crux\",",
+      "new_text": "\"关键\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Crux",
+      "translation": "关键",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:77:2",
+      "old_text": "\"Tiara\",",
+      "new_text": "\"冠冕\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Tiara",
+      "translation": "冠冕",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:78:2",
+      "old_text": "\"Seal\",",
+      "new_text": "\"封印\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Seal",
+      "translation": "封印",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:79:2",
+      "old_text": "\"Cup\",",
+      "new_text": "\"杯\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Cup",
+      "translation": "杯",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:80:2",
+      "old_text": "\"Statue\",",
+      "new_text": "\"雕像\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Statue",
+      "translation": "雕像",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:81:2",
+      "old_text": "\"Key\",",
+      "new_text": "\"钥匙\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Key",
+      "translation": "钥匙",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:82:2",
+      "old_text": "\"Crown\",",
+      "new_text": "\"王冠\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Crown",
+      "translation": "王冠",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:83:2",
+      "old_text": "\"Mask\",",
+      "new_text": "\"面具\",",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Mask",
+      "translation": "面具",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/ItemNameGenerator.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/ItemNameGenerator.gd:84:2",
+      "old_text": "\"Jar\"",
+      "new_text": "\"罐\"",
+      "preimage_sha256": "AF1A0C684DEC2DF6924CA1D4EE6AB89DF05CD4A280D1F9934CB0C72B5846464E",
+      "expected_occurrences": 1,
+      "source_text": "Jar",
+      "translation": "罐",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "resource_contract",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_equipment_names_zhcn"
+  ],
+  "not_proven": "visual layout quality, persistence, gameplay, broad localization, or release readiness"
+}

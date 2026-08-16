@@ -1,0 +1,723 @@
+{
+  "id": "c5-l7-playable-classes-zhcn",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "class and specialization display names/descriptions for the four classes and eight specializations; internal keys and identifiers untouched; CODE_PATCH on Globals/PlayableClasses.gd (plaintext source in 04_recovered)",
+  "entities": [
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:62:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 游侠"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:63:27",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 战士"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:64:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 法师"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:65:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 坦克"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:69:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 游侠以速度作为主要防御手段，优先追求高额伤害。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:70:27",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 战士擅长以攻击斩杀敌人。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:71:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 法师以法术与奥术魔法优先造成高额伤害。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:72:24",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 坦克凭借纯粹的耐久与攻击耗死敌人。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:101:38",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 战斗法师"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:102:33",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 恶魔"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:103:36",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 神射手"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:104:37",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 雇佣兵"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:105:34",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 萨满"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:106:33",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 泰坦"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:107:35",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 吸血鬼"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:108:35",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 术士"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:112:38",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 战斗法师精通以攻击与法术造成伤害。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:113:33",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 恶魔与闪电高度契合。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:114:36",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 神射手擅长远距离斩杀敌人。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:115:37",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 雇佣兵为追求更强大的力量而甘冒风险。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:116:34",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 萨满驾驭自然之力消灭敌人。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:117:33",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 泰坦是战场上不可撼动的猛兽。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:118:35",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 吸血鬼凭借对血液的认知占据上风。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/PlayableClasses.gd:119:35",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 术士凭借对毒素的认知击败对手。"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:62:25",
+      "old_text": "\"Rogue\"",
+      "new_text": "\"游侠\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "Rogue",
+      "translation": "游侠",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:63:27",
+      "old_text": "\"Warrior\"",
+      "new_text": "\"战士\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "Warrior",
+      "translation": "战士",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:64:24",
+      "old_text": "\"Mage\"",
+      "new_text": "\"法师\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "Mage",
+      "translation": "法师",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:65:24",
+      "old_text": "\"Tank\"",
+      "new_text": "\"坦克\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "Tank",
+      "translation": "坦克",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:69:25",
+      "old_text": "\"The Rogue class prioritizes dealing high damage with speed as it's main source of defense.\"",
+      "new_text": "\"游侠以速度作为主要防御手段，优先追求高额伤害。\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "The Rogue class prioritizes dealing high damage with speed as it's main source of defense.",
+      "translation": "游侠以速度作为主要防御手段，优先追求高额伤害。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:70:27",
+      "old_text": "\"The Warrior class specializes in slaying enemies with attacks.\"",
+      "new_text": "\"战士擅长以攻击斩杀敌人。\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "The Warrior class specializes in slaying enemies with attacks.",
+      "translation": "战士擅长以攻击斩杀敌人。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:71:24",
+      "old_text": "\"The Mage class prioritizes dealing high damage with spells and arcane magic.\"",
+      "new_text": "\"法师以法术与奥术魔法优先造成高额伤害。\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "The Mage class prioritizes dealing high damage with spells and arcane magic.",
+      "translation": "法师以法术与奥术魔法优先造成高额伤害。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:72:24",
+      "old_text": "\"The Tank class outlasts enemies through sheer durability and offense. \"",
+      "new_text": "\"坦克凭借纯粹的耐久与攻击耗死敌人。\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "The Tank class outlasts enemies through sheer durability and offense. ",
+      "translation": "坦克凭借纯粹的耐久与攻击耗死敌人。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:101:38",
+      "old_text": "\"Battlemage\"",
+      "new_text": "\"战斗法师\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "Battlemage",
+      "translation": "战斗法师",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:102:33",
+      "old_text": "\"Fiend\"",
+      "new_text": "\"恶魔\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "Fiend",
+      "translation": "恶魔",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:103:36",
+      "old_text": "\"Marksman\"",
+      "new_text": "\"神射手\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "Marksman",
+      "translation": "神射手",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:104:37",
+      "old_text": "\"Mercenary\"",
+      "new_text": "\"雇佣兵\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "Mercenary",
+      "translation": "雇佣兵",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:105:34",
+      "old_text": "\"Shaman\"",
+      "new_text": "\"萨满\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "Shaman",
+      "translation": "萨满",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:106:33",
+      "old_text": "\"Titan\"",
+      "new_text": "\"泰坦\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "Titan",
+      "translation": "泰坦",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:107:35",
+      "old_text": "\"Vampire\"",
+      "new_text": "\"吸血鬼\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "Vampire",
+      "translation": "吸血鬼",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:108:35",
+      "old_text": "\"Warlock\"",
+      "new_text": "\"术士\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "Warlock",
+      "translation": "术士",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:112:38",
+      "old_text": "\"The Battlemage is adept at dealing damage with both Attacks and Spells.\"",
+      "new_text": "\"战斗法师精通以攻击与法术造成伤害。\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "The Battlemage is adept at dealing damage with both Attacks and Spells.",
+      "translation": "战斗法师精通以攻击与法术造成伤害。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:113:33",
+      "old_text": "\"The Fiend is highly attuned to Lightning.\"",
+      "new_text": "\"恶魔与闪电高度契合。\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "The Fiend is highly attuned to Lightning.",
+      "translation": "恶魔与闪电高度契合。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:114:36",
+      "old_text": "\"The Marksman excels at slaying enemies from afar.\"",
+      "new_text": "\"神射手擅长远距离斩杀敌人。\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "The Marksman excels at slaying enemies from afar.",
+      "translation": "神射手擅长远距离斩杀敌人。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:115:37",
+      "old_text": "\"The Mercenary is puts itself at risk for a greater power.\"",
+      "new_text": "\"雇佣兵为追求更强大的力量而甘冒风险。\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "The Mercenary is puts itself at risk for a greater power.",
+      "translation": "雇佣兵为追求更强大的力量而甘冒风险。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:116:34",
+      "old_text": "\"The Shaman commands the power of nature to slay it's foes.\"",
+      "new_text": "\"萨满驾驭自然之力消灭敌人。\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "The Shaman commands the power of nature to slay it's foes.",
+      "translation": "萨满驾驭自然之力消灭敌人。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:117:33",
+      "old_text": "\"The Titan is an unmovable beast on the battlefield.\"",
+      "new_text": "\"泰坦是战场上不可撼动的猛兽。\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "The Titan is an unmovable beast on the battlefield.",
+      "translation": "泰坦是战场上不可撼动的猛兽。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:118:35",
+      "old_text": "\"The Vampire uses it's knowledge of blood to gain the upperhand.\"",
+      "new_text": "\"吸血鬼凭借对血液的认知占据上风。\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "The Vampire uses it's knowledge of blood to gain the upperhand.",
+      "translation": "吸血鬼凭借对血液的认知占据上风。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/PlayableClasses.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/PlayableClasses.gd:119:35",
+      "old_text": "\"The Warlock defeats it's opponents with it's knowledge of Poison.\"",
+      "new_text": "\"术士凭借对毒素的认知击败对手。\"",
+      "preimage_sha256": "D3062F3E540243BF667C3714C95650230539FC8D9A31DC717A27BE97EDE2E928",
+      "expected_occurrences": 1,
+      "source_text": "The Warlock defeats it's opponents with it's knowledge of Poison.",
+      "translation": "术士凭借对毒素的认知击败对手。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "resource_contract",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_classes_zhcn"
+  ],
+  "not_proven": "visual layout quality, persistence, gameplay, broad localization, or release readiness"
+}

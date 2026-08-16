@@ -1,0 +1,14 @@
+{
+  "units": [
+    {
+      "unit_id": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn:40:9",
+      "translation": "键盘设置",
+      "expected_file_sha256": "0502CE0986B4E27C06CE10E61A6E560D0F7AA6F12D0D2AA5CFC1A0323107709D"
+    },
+    {
+      "unit_id": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn:53:9",
+      "translation": "完成",
+      "expected_file_sha256": "0502CE0986B4E27C06CE10E61A6E560D0F7AA6F12D0D2AA5CFC1A0323107709D"
+    }
+  ]
+}

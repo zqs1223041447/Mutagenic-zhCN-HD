@@ -1,0 +1,69 @@
+{
+  "id": "c5-l5-localization-keybinds-dialog",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": ["c5-l4-localization-settings-dialog"],
+  "conflicts": [],
+  "scope": "keybinds_dialog_static_navigation",
+  "entities": [
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn:40:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the keybind dialog title displays 键盘设置"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn:53:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the keybind dialog completion button displays 完成"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn:40:9",
+      "old_text": "text = \"Keyboard Settings\"",
+      "new_text": "text = \"键盘设置\"",
+      "preimage_sha256": "0502CE0986B4E27C06CE10E61A6E560D0F7AA6F12D0D2AA5CFC1A0323107709D",
+      "expected_occurrences": 1,
+      "source_text": "Keyboard Settings",
+      "translation": "键盘设置",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": ["unit_id_exact_match", "placeholder_conservation", "token_conservation", "resource_contract", "declared_delta"]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn:53:9",
+      "old_text": "text = \"Done\"",
+      "new_text": "text = \"完成\"",
+      "preimage_sha256": "0502CE0986B4E27C06CE10E61A6E560D0F7AA6F12D0D2AA5CFC1A0323107709D",
+      "expected_occurrences": 1,
+      "source_text": "Done",
+      "translation": "完成",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": ["unit_id_exact_match", "placeholder_conservation", "token_conservation", "resource_contract", "declared_delta"]
+    }
+  ],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "keybinds_resource_contract",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_keybinds_dialog"
+  ],
+  "not_proven": "dynamic keybind labels, input-action behavior, persistence, broad localization, or release readiness"
+}

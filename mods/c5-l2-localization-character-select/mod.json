@@ -1,0 +1,153 @@
+{
+  "id": "c5-l2-localization-character-select",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH_AND_ASSET_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "c5-l1-localization-menu-play-font"
+  ],
+  "conflicts": [],
+  "scope": "character_selection_dialog_slice",
+  "entities": [
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Menu.tscn:69:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the main-menu StartButton remains 开始游戏 as the trusted C5-L1 control"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.tscn:40:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the character-selection dialog title displays 选择你的角色"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.tscn:59:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the character-selection create button displays 创建新角色"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.tscn:71:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the character-selection close button displays 关闭"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Menu.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Menu.tscn:69:9",
+      "old_text": "text = \"Play\"",
+      "new_text": "text = \"开始游戏\"",
+      "preimage_sha256": "54337EED6778446F85D22A6C52EEC149AC557860613206853C769B791724A778",
+      "expected_occurrences": 1,
+      "source_text": "Play",
+      "translation": "开始游戏",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.tscn:40:9",
+      "old_text": "text = \"Choose your Character\"",
+      "new_text": "text = \"选择你的角色\"",
+      "preimage_sha256": "55D1F48E84F0F0AC4A1B0F127EA89DB9CEDEC2F6F87DC7088EA4A99A3417F9AD",
+      "expected_occurrences": 1,
+      "source_text": "Choose your Character",
+      "translation": "选择你的角色",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.tscn:59:9",
+      "old_text": "text = \"Create New Character\"",
+      "new_text": "text = \"创建新角色\"",
+      "preimage_sha256": "55D1F48E84F0F0AC4A1B0F127EA89DB9CEDEC2F6F87DC7088EA4A99A3417F9AD",
+      "expected_occurrences": 1,
+      "source_text": "Create New Character",
+      "translation": "创建新角色",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.tscn:71:9",
+      "old_text": "text = \"Close\"",
+      "new_text": "text = \"关闭\"",
+      "preimage_sha256": "55D1F48E84F0F0AC4A1B0F127EA89DB9CEDEC2F6F87DC7088EA4A99A3417F9AD",
+      "expected_occurrences": 1,
+      "source_text": "Close",
+      "translation": "关闭",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta"
+      ]
+    }
+  ],
+  "asset_overlays": [
+    {
+      "path": "Fonts/rsans.ttf",
+      "source_path": "02_tools/fonts_merged_hinted/rsans.ttf",
+      "classification": "ASSET_PATCH",
+      "preimage_sha256": "120180C034232D7142F71F7F049465D7B37722241B769F9C1C812354F8E07E82",
+      "replacement_sha256": "EFB56C48D936FF1776D2052D5DFABFB227CC415946A52F16CA0D99842345E80A",
+      "replacement_size": 15779700,
+      "_updated": true
+    }
+  ],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "character_select_resource_contract",
+    "font_cmap_coverage",
+    "font_license_evidence",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "core_smoke_character_selection",
+    "human_visual_character_selection_check"
+  ],
+  "not_proven": "translation quality beyond these four display-safe units, character-selection interaction, core gameplay, persistence, broad localization, or release readiness"
+}

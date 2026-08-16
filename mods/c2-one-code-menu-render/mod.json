@@ -1,0 +1,28 @@
+{
+  "id": "c2-one-code-menu-render",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "entities": [
+    {
+      "kind": "menu_render_code_path",
+      "id": "Scenes/Menu.gd::render::VersionLabel.text",
+      "confidence": "FACT",
+      "expected_runtime_effect": "the live main-menu Build label appends [C2-CODE] because the patched render() statement executes"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Menu.gd",
+      "field": "render.VersionLabel.text",
+      "classification": "CODE_PATCH",
+      "preimage_sha256": "58373B0009BDE1B15E5FC7B665B6E7B173399A33E95993BF363E21E75A6F0CCC",
+      "old_text": "VersionLabel.text = Constants.GAME_VERSION",
+      "new_text": "VersionLabel.text = Constants.GAME_VERSION + \" [C2-CODE]\"",
+      "expected_occurrences": 1,
+      "tests": ["structural_delta", "compiled_script_load", "boot", "menu_code_effect_visual_check"]
+    }
+  ]
+}

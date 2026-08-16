@@ -1,0 +1,28 @@
+{
+  "id": "c1-one-value-area-radius",
+  "version": "0.1.0",
+  "patch_type": "VALUE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "entities": [
+    {
+      "kind": "runtime_class_default",
+      "id": "AreaSkillEffect.radius",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "default AreaSkillEffect visual radius changes from 15.0 to 16.0 when no caller override is supplied"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/AreaSkillEffects/AreaSkillEffect.gd",
+      "field": "default_property.radius",
+      "classification": "VALUE_PATCH",
+      "preimage_sha256": "49E131C1E22AE40A3FAF5BE9C64D8794A46566E65AB50A57EC1D41A16164EC36",
+      "old_text": "var radius = 15.0",
+      "new_text": "var radius = 16.0",
+      "expected_occurrences": 1,
+      "tests": ["structural_delta", "compiled_script_load", "boot", "visual_or_interaction_radius_check"]
+    }
+  ]
+}

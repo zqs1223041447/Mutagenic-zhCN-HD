@@ -1,0 +1,2173 @@
+{
+  "id": "c5-l14-static-scenes-zhcn",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "remaining static player-visible text= lines in 31 runtime .tscn scenes (ladder/test-level HUD, gene editor family, gene selector, help/help-tip/crafting help, mod help + tier groups, MTX store, outfit selector, skill/tree loadout selectors, specialization/starter pickers, text input dialog, unique help, world map + leaderboard headers, item tab content, mod item lock button); runtime-overwritten placeholder/debug strings excluded (see SKIPPED in generator)",
+  "entities": [
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Levels/Ladder/Ladder.tscn:421:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 剩余时间："
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Levels/TestLevel/TestLevel.tscn:396:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 剩余时间："
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/CraftButton.tscn:23:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 消耗："
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.tscn:52:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 新"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn:57:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 基因名称"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn:78:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 制作帮助"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn:85:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 完成"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn:376:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 删除物品"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn:382:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 显示高级词缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn:54:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 装备仓库"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn:61:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 关闭"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn:85:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 隐藏低等级物品"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn:98:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 搜索"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn:64:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 已装备物品"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn:71:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 关闭"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn:336:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 装备属性"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn:77:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 新"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn:53:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 物品转移"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn:60:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 关闭"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn:76:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 你的仓库"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn:102:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 共享仓库"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn:127:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 隐藏低等级物品"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneSelector/GeneOption.tscn:20:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 新"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:45:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 卸下物品"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:51:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 取消"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:71:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 已装备物品"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:83:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 可用物品"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:106:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 物品属性"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:130:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 隐藏低等级物品"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:143:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 搜索： "
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/Help/Help.tscn:43:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 关闭"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/HelpTip/CraftingHelp/CraftingHelp.tscn:27:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 制作帮助"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/HelpTip/HelpTip.tscn:47:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 实用提示"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/HelpTip/HelpTip.tscn:70:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 关闭"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/ModHelp/ModHelp.tscn:33:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 关闭"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/ModHelp/ModHelp.tscn:47:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 词缀搜索 "
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/ModHelp/TierGroup.tscn:29:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 词缀权重： "
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/MTXStore/MTXItem.tscn:66:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 购买"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/MTXStore/MTXStore.tscn:46:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 关闭"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/MTXStore/MTXStore.tscn:70:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 外观不影响游戏玩法。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:51:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 关闭"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:57:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 选择外观"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:185:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 头盔"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:218:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 面部"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:250:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 手套"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:282:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 身体"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:314:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 靴子"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:346:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 背部"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/SkillLoadoutSelector/LoadOption.tscn:25:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 删除"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/SkillLoadoutSelector/LoadOption.tscn:32:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 选择"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/SkillLoadoutSelector/SkillLoadoutSelector.tscn:50:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 加载天赋树"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/SkillLoadoutSelector/SkillLoadoutSelector.tscn:57:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 未保存的天赋树"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/SkillLoadoutSelector/SkillLoadoutSelector.tscn:77:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 取消"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/SpecializationPicker/SpecializationPicker.tscn:59:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 职业专精在 30 级起可用。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/StarterPicker/StarterPicker.tscn:40:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 选择初始配置"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/StarterPicker/StarterPicker.tscn:59:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 你可以随时在藏身处中的技能与武器处免费更换技能。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/TextInputDialog.tscn:50:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 保存"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/TextInputDialog.tscn:66:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 名称："
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/TextInputDialog.tscn:86:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 取消"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/TreeSelector/LoadOption.tscn:25:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 删除"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/TreeSelector/LoadOption.tscn:32:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 选择"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/TreeSelector/TreeSelector.tscn:50:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 加载天赋树"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/TreeSelector/TreeSelector.tscn:57:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 未保存的天赋树"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/TreeSelector/TreeSelector.tscn:77:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 取消"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/UniqueHelp/UniqueHelp.tscn:33:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 关闭"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn:90:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 排名"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn:96:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 玩家"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn:104:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 等级"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn:112:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 专精"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn:120:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 分数"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/WorldMap/WorldMapPopup.tscn:64:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 选择区域"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/WorldMap/WorldMapPopup.tscn:71:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 关闭"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/ItemTabContent.tscn:58:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 基础伤害："
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/UI/ModItem.tscn:48:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 锁定"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Levels/Ladder/Ladder.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Levels/Ladder/Ladder.tscn:421:9",
+      "old_text": "text = \"Time Remaining:\"",
+      "new_text": "text = \"剩余时间：\"",
+      "preimage_sha256": "4253F564C1BB50596EE71187EB66374E59EA6969829087764DFE0E2B595BF390",
+      "expected_occurrences": 1,
+      "source_text": "Time Remaining:",
+      "translation": "剩余时间：",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Levels/TestLevel/TestLevel.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Levels/TestLevel/TestLevel.tscn:396:9",
+      "old_text": "text = \"Time Remaining:\"",
+      "new_text": "text = \"剩余时间：\"",
+      "preimage_sha256": "FFFA55A65462E577BC8D5E95EC136F95439138A50806DCC82135D0AE9E7B0E17",
+      "expected_occurrences": 1,
+      "source_text": "Time Remaining:",
+      "translation": "剩余时间：",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/CraftButton.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/CraftButton.tscn:23:9",
+      "old_text": "text = \"Cost:\"",
+      "new_text": "text = \"消耗：\"",
+      "preimage_sha256": "1B291F3192C1BEC3BAC0E2FB59E8012539CB258AA5A73547976F4986B2450F2E",
+      "expected_occurrences": 1,
+      "source_text": "Cost:",
+      "translation": "消耗：",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.tscn:52:9",
+      "old_text": "text = \"NEW\"",
+      "new_text": "text = \"新\"",
+      "preimage_sha256": "4D42ED4C8D2CD28F555A50822B5E514655B96C9B715B1A0334917565C7878461",
+      "expected_occurrences": 1,
+      "source_text": "NEW",
+      "translation": "新",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn:57:9",
+      "old_text": "text = \"Gene Name\"",
+      "new_text": "text = \"基因名称\"",
+      "preimage_sha256": "146B40EE2F9E470D2AEAF2C5C29259B1F2B1A440773F1FCE243B696122A9D32C",
+      "expected_occurrences": 1,
+      "source_text": "Gene Name",
+      "translation": "基因名称",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn:78:9",
+      "old_text": "text = \"Crafting Help\"",
+      "new_text": "text = \"制作帮助\"",
+      "preimage_sha256": "146B40EE2F9E470D2AEAF2C5C29259B1F2B1A440773F1FCE243B696122A9D32C",
+      "expected_occurrences": 1,
+      "source_text": "Crafting Help",
+      "translation": "制作帮助",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn:85:9",
+      "old_text": "text = \"Done\"",
+      "new_text": "text = \"完成\"",
+      "preimage_sha256": "146B40EE2F9E470D2AEAF2C5C29259B1F2B1A440773F1FCE243B696122A9D32C",
+      "expected_occurrences": 1,
+      "source_text": "Done",
+      "translation": "完成",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn:376:9",
+      "old_text": "text = \"Delete Item\"",
+      "new_text": "text = \"删除物品\"",
+      "preimage_sha256": "146B40EE2F9E470D2AEAF2C5C29259B1F2B1A440773F1FCE243B696122A9D32C",
+      "expected_occurrences": 1,
+      "source_text": "Delete Item",
+      "translation": "删除物品",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn:382:9",
+      "old_text": "text = \"Show Advanced Mods\"",
+      "new_text": "text = \"显示高级词缀\"",
+      "preimage_sha256": "146B40EE2F9E470D2AEAF2C5C29259B1F2B1A440773F1FCE243B696122A9D32C",
+      "expected_occurrences": 1,
+      "source_text": "Show Advanced Mods",
+      "translation": "显示高级词缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn:54:9",
+      "old_text": "text = \"Equipment Stash\"",
+      "new_text": "text = \"装备仓库\"",
+      "preimage_sha256": "75BC74BD2C7FDF9A4748A4D393782BC37ADC951A90FEAA55097EFF80957266B4",
+      "expected_occurrences": 1,
+      "source_text": "Equipment Stash",
+      "translation": "装备仓库",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn:61:9",
+      "old_text": "text = \"Close\"",
+      "new_text": "text = \"关闭\"",
+      "preimage_sha256": "75BC74BD2C7FDF9A4748A4D393782BC37ADC951A90FEAA55097EFF80957266B4",
+      "expected_occurrences": 1,
+      "source_text": "Close",
+      "translation": "关闭",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn:85:9",
+      "old_text": "text = \"Hide Low Level Items\"",
+      "new_text": "text = \"隐藏低等级物品\"",
+      "preimage_sha256": "75BC74BD2C7FDF9A4748A4D393782BC37ADC951A90FEAA55097EFF80957266B4",
+      "expected_occurrences": 1,
+      "source_text": "Hide Low Level Items",
+      "translation": "隐藏低等级物品",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn:98:9",
+      "old_text": "text = \"Search\"",
+      "new_text": "text = \"搜索\"",
+      "preimage_sha256": "75BC74BD2C7FDF9A4748A4D393782BC37ADC951A90FEAA55097EFF80957266B4",
+      "expected_occurrences": 1,
+      "source_text": "Search",
+      "translation": "搜索",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn:64:9",
+      "old_text": "text = \"Equipped Gear\"",
+      "new_text": "text = \"已装备物品\"",
+      "preimage_sha256": "787059C9505154BD0FB710EEC8CEF9E68455FB6FB02970C3ADDB89D3B23AFEF8",
+      "expected_occurrences": 1,
+      "source_text": "Equipped Gear",
+      "translation": "已装备物品",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn:71:9",
+      "old_text": "text = \"Close\"",
+      "new_text": "text = \"关闭\"",
+      "preimage_sha256": "787059C9505154BD0FB710EEC8CEF9E68455FB6FB02970C3ADDB89D3B23AFEF8",
+      "expected_occurrences": 1,
+      "source_text": "Close",
+      "translation": "关闭",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn:336:9",
+      "old_text": "text = \"Equipment Stats\"",
+      "new_text": "text = \"装备属性\"",
+      "preimage_sha256": "787059C9505154BD0FB710EEC8CEF9E68455FB6FB02970C3ADDB89D3B23AFEF8",
+      "expected_occurrences": 1,
+      "source_text": "Equipment Stats",
+      "translation": "装备属性",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn:77:9",
+      "old_text": "text = \"NEW\"",
+      "new_text": "text = \"新\"",
+      "preimage_sha256": "26B1EF44F7248C04ACA093003718D66B73C454BB46C59881274644F6F9B8DB2D",
+      "expected_occurrences": 1,
+      "source_text": "NEW",
+      "translation": "新",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn:53:9",
+      "old_text": "text = \"Item Transfer\"",
+      "new_text": "text = \"物品转移\"",
+      "preimage_sha256": "6103BD417E5AC13782C06B4DB77BA985909E022760A470ED18E33DFE59DA99D4",
+      "expected_occurrences": 1,
+      "source_text": "Item Transfer",
+      "translation": "物品转移",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn:60:9",
+      "old_text": "text = \"Close\"",
+      "new_text": "text = \"关闭\"",
+      "preimage_sha256": "6103BD417E5AC13782C06B4DB77BA985909E022760A470ED18E33DFE59DA99D4",
+      "expected_occurrences": 1,
+      "source_text": "Close",
+      "translation": "关闭",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn:76:9",
+      "old_text": "text = \"Your Stash\"",
+      "new_text": "text = \"你的仓库\"",
+      "preimage_sha256": "6103BD417E5AC13782C06B4DB77BA985909E022760A470ED18E33DFE59DA99D4",
+      "expected_occurrences": 1,
+      "source_text": "Your Stash",
+      "translation": "你的仓库",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn:102:9",
+      "old_text": "text = \"Shared Stash\"",
+      "new_text": "text = \"共享仓库\"",
+      "preimage_sha256": "6103BD417E5AC13782C06B4DB77BA985909E022760A470ED18E33DFE59DA99D4",
+      "expected_occurrences": 1,
+      "source_text": "Shared Stash",
+      "translation": "共享仓库",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn:127:9",
+      "old_text": "text = \"Hide Low Level Items\"",
+      "new_text": "text = \"隐藏低等级物品\"",
+      "preimage_sha256": "6103BD417E5AC13782C06B4DB77BA985909E022760A470ED18E33DFE59DA99D4",
+      "expected_occurrences": 1,
+      "source_text": "Hide Low Level Items",
+      "translation": "隐藏低等级物品",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneSelector/GeneOption.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneSelector/GeneOption.tscn:20:9",
+      "old_text": "text = \"NEW\"",
+      "new_text": "text = \"新\"",
+      "preimage_sha256": "79805A3CFB595DCB5805AFB91A0B7DA49098D3965C3F8BAE5185FBAD553143E6",
+      "expected_occurrences": 1,
+      "source_text": "NEW",
+      "translation": "新",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:45:9",
+      "old_text": "text = \"Unequip Item\"",
+      "new_text": "text = \"卸下物品\"",
+      "preimage_sha256": "3E1E1CD7652A689BB0CD01A5C18E3DD8140D6B3857535F3CD1ABAE6C12CC8F11",
+      "expected_occurrences": 1,
+      "source_text": "Unequip Item",
+      "translation": "卸下物品",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:51:9",
+      "old_text": "text = \"Cancel\"",
+      "new_text": "text = \"取消\"",
+      "preimage_sha256": "3E1E1CD7652A689BB0CD01A5C18E3DD8140D6B3857535F3CD1ABAE6C12CC8F11",
+      "expected_occurrences": 1,
+      "source_text": "Cancel",
+      "translation": "取消",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:71:9",
+      "old_text": "text = \"Equipped Item\"",
+      "new_text": "text = \"已装备物品\"",
+      "preimage_sha256": "3E1E1CD7652A689BB0CD01A5C18E3DD8140D6B3857535F3CD1ABAE6C12CC8F11",
+      "expected_occurrences": 1,
+      "source_text": "Equipped Item",
+      "translation": "已装备物品",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:83:9",
+      "old_text": "text = \"Available Items\"",
+      "new_text": "text = \"可用物品\"",
+      "preimage_sha256": "3E1E1CD7652A689BB0CD01A5C18E3DD8140D6B3857535F3CD1ABAE6C12CC8F11",
+      "expected_occurrences": 1,
+      "source_text": "Available Items",
+      "translation": "可用物品",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:106:9",
+      "old_text": "text = \"Item Stats\"",
+      "new_text": "text = \"物品属性\"",
+      "preimage_sha256": "3E1E1CD7652A689BB0CD01A5C18E3DD8140D6B3857535F3CD1ABAE6C12CC8F11",
+      "expected_occurrences": 1,
+      "source_text": "Item Stats",
+      "translation": "物品属性",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:130:9",
+      "old_text": "text = \"Hide Low Level Items\"",
+      "new_text": "text = \"隐藏低等级物品\"",
+      "preimage_sha256": "3E1E1CD7652A689BB0CD01A5C18E3DD8140D6B3857535F3CD1ABAE6C12CC8F11",
+      "expected_occurrences": 1,
+      "source_text": "Hide Low Level Items",
+      "translation": "隐藏低等级物品",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn:143:9",
+      "old_text": "text = \"Search: \"",
+      "new_text": "text = \"搜索： \"",
+      "preimage_sha256": "3E1E1CD7652A689BB0CD01A5C18E3DD8140D6B3857535F3CD1ABAE6C12CC8F11",
+      "expected_occurrences": 1,
+      "source_text": "Search: ",
+      "translation": "搜索： ",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Help/Help.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/Help/Help.tscn:43:9",
+      "old_text": "text = \"Close\"",
+      "new_text": "text = \"关闭\"",
+      "preimage_sha256": "4397BFFE4D1F309BE09FC4A31956DBA07EC9317811A78EA4108926E1842587AE",
+      "expected_occurrences": 1,
+      "source_text": "Close",
+      "translation": "关闭",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/CraftingHelp/CraftingHelp.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/HelpTip/CraftingHelp/CraftingHelp.tscn:27:9",
+      "old_text": "text = \"Crafting Help\"",
+      "new_text": "text = \"制作帮助\"",
+      "preimage_sha256": "5CB9AB870FFB8F119E2496D9E290E49C8332C1F76F64C886AE1E958E4EF951DF",
+      "expected_occurrences": 1,
+      "source_text": "Crafting Help",
+      "translation": "制作帮助",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/HelpTip.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/HelpTip/HelpTip.tscn:47:9",
+      "old_text": "text = \"Helpful Tip\"",
+      "new_text": "text = \"实用提示\"",
+      "preimage_sha256": "E32B199722E71039127D272043B9A66D5995AFB7D9520D17F21DF2FB00541D71",
+      "expected_occurrences": 1,
+      "source_text": "Helpful Tip",
+      "translation": "实用提示",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/HelpTip.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/HelpTip/HelpTip.tscn:70:9",
+      "old_text": "text = \"Close\"",
+      "new_text": "text = \"关闭\"",
+      "preimage_sha256": "E32B199722E71039127D272043B9A66D5995AFB7D9520D17F21DF2FB00541D71",
+      "expected_occurrences": 1,
+      "source_text": "Close",
+      "translation": "关闭",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/ModHelp/ModHelp.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/ModHelp/ModHelp.tscn:33:9",
+      "old_text": "text = \"Close\"",
+      "new_text": "text = \"关闭\"",
+      "preimage_sha256": "FC5F50EEA461CDA8B27CFB115AA4DDAEC438C7401F265750015ADE4F0FE7DE24",
+      "expected_occurrences": 1,
+      "source_text": "Close",
+      "translation": "关闭",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/ModHelp/ModHelp.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/ModHelp/ModHelp.tscn:47:9",
+      "old_text": "text = \"Mod Search \"",
+      "new_text": "text = \"词缀搜索 \"",
+      "preimage_sha256": "FC5F50EEA461CDA8B27CFB115AA4DDAEC438C7401F265750015ADE4F0FE7DE24",
+      "expected_occurrences": 1,
+      "source_text": "Mod Search ",
+      "translation": "词缀搜索 ",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/ModHelp/TierGroup.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/ModHelp/TierGroup.tscn:29:9",
+      "old_text": "text = \"Mod Weight: \"",
+      "new_text": "text = \"词缀权重： \"",
+      "preimage_sha256": "F9FE7C085BC794FF42CAA29400C5F69CA12184845306A125EB610EB0F641D94D",
+      "expected_occurrences": 1,
+      "source_text": "Mod Weight: ",
+      "translation": "词缀权重： ",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/MTXStore/MTXItem.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/MTXStore/MTXItem.tscn:66:9",
+      "old_text": "text = \"Purchase\"",
+      "new_text": "text = \"购买\"",
+      "preimage_sha256": "E1866AFA05799F422F7869352176E8053734EC3FDC564271C3C9663C8F88925D",
+      "expected_occurrences": 1,
+      "source_text": "Purchase",
+      "translation": "购买",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/MTXStore/MTXStore.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/MTXStore/MTXStore.tscn:46:9",
+      "old_text": "text = \"Close\"",
+      "new_text": "text = \"关闭\"",
+      "preimage_sha256": "DC523C6E16F6EF01B676E504B7E8BAEB5CDC60C601D40C7EB9B4333ABDE93A62",
+      "expected_occurrences": 1,
+      "source_text": "Close",
+      "translation": "关闭",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/MTXStore/MTXStore.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/MTXStore/MTXStore.tscn:70:9",
+      "old_text": "text = \"Cosmetics do not affect gameplay.\"",
+      "new_text": "text = \"外观不影响游戏玩法。\"",
+      "preimage_sha256": "DC523C6E16F6EF01B676E504B7E8BAEB5CDC60C601D40C7EB9B4333ABDE93A62",
+      "expected_occurrences": 1,
+      "source_text": "Cosmetics do not affect gameplay.",
+      "translation": "外观不影响游戏玩法。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:51:9",
+      "old_text": "text = \"Close\"",
+      "new_text": "text = \"关闭\"",
+      "preimage_sha256": "735DB6DDED948E75E22F54E052BCA6DFC13CEDD1222769821C3EB1C6E63358A1",
+      "expected_occurrences": 1,
+      "source_text": "Close",
+      "translation": "关闭",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:57:9",
+      "old_text": "text = \"Choose Outfit\"",
+      "new_text": "text = \"选择外观\"",
+      "preimage_sha256": "735DB6DDED948E75E22F54E052BCA6DFC13CEDD1222769821C3EB1C6E63358A1",
+      "expected_occurrences": 1,
+      "source_text": "Choose Outfit",
+      "translation": "选择外观",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:185:9",
+      "old_text": "text = \"Helmets\"",
+      "new_text": "text = \"头盔\"",
+      "preimage_sha256": "735DB6DDED948E75E22F54E052BCA6DFC13CEDD1222769821C3EB1C6E63358A1",
+      "expected_occurrences": 1,
+      "source_text": "Helmets",
+      "translation": "头盔",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:218:9",
+      "old_text": "text = \"Face\"",
+      "new_text": "text = \"面部\"",
+      "preimage_sha256": "735DB6DDED948E75E22F54E052BCA6DFC13CEDD1222769821C3EB1C6E63358A1",
+      "expected_occurrences": 1,
+      "source_text": "Face",
+      "translation": "面部",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:250:9",
+      "old_text": "text = \"Gloves\"",
+      "new_text": "text = \"手套\"",
+      "preimage_sha256": "735DB6DDED948E75E22F54E052BCA6DFC13CEDD1222769821C3EB1C6E63358A1",
+      "expected_occurrences": 1,
+      "source_text": "Gloves",
+      "translation": "手套",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:282:9",
+      "old_text": "text = \"Body\"",
+      "new_text": "text = \"身体\"",
+      "preimage_sha256": "735DB6DDED948E75E22F54E052BCA6DFC13CEDD1222769821C3EB1C6E63358A1",
+      "expected_occurrences": 1,
+      "source_text": "Body",
+      "translation": "身体",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:314:9",
+      "old_text": "text = \"Boots\"",
+      "new_text": "text = \"靴子\"",
+      "preimage_sha256": "735DB6DDED948E75E22F54E052BCA6DFC13CEDD1222769821C3EB1C6E63358A1",
+      "expected_occurrences": 1,
+      "source_text": "Boots",
+      "translation": "靴子",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:346:9",
+      "old_text": "text = \"Back\"",
+      "new_text": "text = \"背部\"",
+      "preimage_sha256": "735DB6DDED948E75E22F54E052BCA6DFC13CEDD1222769821C3EB1C6E63358A1",
+      "expected_occurrences": 1,
+      "source_text": "Back",
+      "translation": "背部",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SkillLoadoutSelector/LoadOption.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/SkillLoadoutSelector/LoadOption.tscn:25:9",
+      "old_text": "text = \"Delete\"",
+      "new_text": "text = \"删除\"",
+      "preimage_sha256": "24C8396367BC333995D607FF63C214C7E5FC0A5515C7AD759E84295D09530C1B",
+      "expected_occurrences": 1,
+      "source_text": "Delete",
+      "translation": "删除",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SkillLoadoutSelector/LoadOption.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/SkillLoadoutSelector/LoadOption.tscn:32:9",
+      "old_text": "text = \"Select\"",
+      "new_text": "text = \"选择\"",
+      "preimage_sha256": "24C8396367BC333995D607FF63C214C7E5FC0A5515C7AD759E84295D09530C1B",
+      "expected_occurrences": 1,
+      "source_text": "Select",
+      "translation": "选择",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SkillLoadoutSelector/SkillLoadoutSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/SkillLoadoutSelector/SkillLoadoutSelector.tscn:50:9",
+      "old_text": "text = \"Load Tree\"",
+      "new_text": "text = \"加载天赋树\"",
+      "preimage_sha256": "635E052EC6779B02CF31BD6EAFA1D0752EC7917D15D30500BDAFFDE6C58BC68C",
+      "expected_occurrences": 1,
+      "source_text": "Load Tree",
+      "translation": "加载天赋树",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SkillLoadoutSelector/SkillLoadoutSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/SkillLoadoutSelector/SkillLoadoutSelector.tscn:57:9",
+      "old_text": "text = \"No Trees Saved\"",
+      "new_text": "text = \"未保存的天赋树\"",
+      "preimage_sha256": "635E052EC6779B02CF31BD6EAFA1D0752EC7917D15D30500BDAFFDE6C58BC68C",
+      "expected_occurrences": 1,
+      "source_text": "No Trees Saved",
+      "translation": "未保存的天赋树",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SkillLoadoutSelector/SkillLoadoutSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/SkillLoadoutSelector/SkillLoadoutSelector.tscn:77:9",
+      "old_text": "text = \"Cancel\"",
+      "new_text": "text = \"取消\"",
+      "preimage_sha256": "635E052EC6779B02CF31BD6EAFA1D0752EC7917D15D30500BDAFFDE6C58BC68C",
+      "expected_occurrences": 1,
+      "source_text": "Cancel",
+      "translation": "取消",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SpecializationPicker/SpecializationPicker.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/SpecializationPicker/SpecializationPicker.tscn:59:9",
+      "old_text": "text = \"Class Specializations are available starting at Level 30.\"",
+      "new_text": "text = \"职业专精在 30 级起可用。\"",
+      "preimage_sha256": "AC2E44A4DF18B9A76BCA37599689339E92C606D764D4B6EAC904801118151903",
+      "expected_occurrences": 1,
+      "source_text": "Class Specializations are available starting at Level 30.",
+      "translation": "职业专精在 30 级起可用。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/StarterPicker/StarterPicker.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/StarterPicker/StarterPicker.tscn:40:9",
+      "old_text": "text = \"Choose a Starting Build\"",
+      "new_text": "text = \"选择初始配置\"",
+      "preimage_sha256": "8AAFE0E7CE1E50222EAB62E3A6F4A971968CF471DE45B1E4EE03DFCFBFE52977",
+      "expected_occurrences": 1,
+      "source_text": "Choose a Starting Build",
+      "translation": "选择初始配置",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/StarterPicker/StarterPicker.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/StarterPicker/StarterPicker.tscn:59:9",
+      "old_text": "text = \"You can change your skills at any time for free at the Skills and Weapons found in your hideout.\"",
+      "new_text": "text = \"你可以随时在藏身处中的技能与武器处免费更换技能。\"",
+      "preimage_sha256": "8AAFE0E7CE1E50222EAB62E3A6F4A971968CF471DE45B1E4EE03DFCFBFE52977",
+      "expected_occurrences": 1,
+      "source_text": "You can change your skills at any time for free at the Skills and Weapons found in your hideout.",
+      "translation": "你可以随时在藏身处中的技能与武器处免费更换技能。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/TextInputDialog.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/TextInputDialog.tscn:50:9",
+      "old_text": "text = \"Save\"",
+      "new_text": "text = \"保存\"",
+      "preimage_sha256": "F7607BC5823FD5B64075B71ED7D9AC63AAE107313A4E6039E296636F0EA9D0AE",
+      "expected_occurrences": 2,
+      "source_text": "Save",
+      "translation": "保存",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/TextInputDialog.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/TextInputDialog.tscn:66:9",
+      "old_text": "text = \"Name:\"",
+      "new_text": "text = \"名称：\"",
+      "preimage_sha256": "F7607BC5823FD5B64075B71ED7D9AC63AAE107313A4E6039E296636F0EA9D0AE",
+      "expected_occurrences": 1,
+      "source_text": "Name:",
+      "translation": "名称：",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/TextInputDialog.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/TextInputDialog.tscn:86:9",
+      "old_text": "text = \"Cancel\"",
+      "new_text": "text = \"取消\"",
+      "preimage_sha256": "F7607BC5823FD5B64075B71ED7D9AC63AAE107313A4E6039E296636F0EA9D0AE",
+      "expected_occurrences": 1,
+      "source_text": "Cancel",
+      "translation": "取消",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/TreeSelector/LoadOption.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/TreeSelector/LoadOption.tscn:25:9",
+      "old_text": "text = \"Delete\"",
+      "new_text": "text = \"删除\"",
+      "preimage_sha256": "759178B917ED7E2EEDFB45AE3F293D2EAE590919223295EA47C4AB34014A2670",
+      "expected_occurrences": 1,
+      "source_text": "Delete",
+      "translation": "删除",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/TreeSelector/LoadOption.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/TreeSelector/LoadOption.tscn:32:9",
+      "old_text": "text = \"Select\"",
+      "new_text": "text = \"选择\"",
+      "preimage_sha256": "759178B917ED7E2EEDFB45AE3F293D2EAE590919223295EA47C4AB34014A2670",
+      "expected_occurrences": 1,
+      "source_text": "Select",
+      "translation": "选择",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/TreeSelector/TreeSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/TreeSelector/TreeSelector.tscn:50:9",
+      "old_text": "text = \"Load Tree\"",
+      "new_text": "text = \"加载天赋树\"",
+      "preimage_sha256": "1045B9D2CCF4F58189DF51D9892F7F6D8C7ED8B712888E17F033C1E01B3181A4",
+      "expected_occurrences": 1,
+      "source_text": "Load Tree",
+      "translation": "加载天赋树",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/TreeSelector/TreeSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/TreeSelector/TreeSelector.tscn:57:9",
+      "old_text": "text = \"No Trees Saved\"",
+      "new_text": "text = \"未保存的天赋树\"",
+      "preimage_sha256": "1045B9D2CCF4F58189DF51D9892F7F6D8C7ED8B712888E17F033C1E01B3181A4",
+      "expected_occurrences": 1,
+      "source_text": "No Trees Saved",
+      "translation": "未保存的天赋树",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/TreeSelector/TreeSelector.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/TreeSelector/TreeSelector.tscn:77:9",
+      "old_text": "text = \"Cancel\"",
+      "new_text": "text = \"取消\"",
+      "preimage_sha256": "1045B9D2CCF4F58189DF51D9892F7F6D8C7ED8B712888E17F033C1E01B3181A4",
+      "expected_occurrences": 1,
+      "source_text": "Cancel",
+      "translation": "取消",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/UniqueHelp/UniqueHelp.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/UniqueHelp/UniqueHelp.tscn:33:9",
+      "old_text": "text = \"Close\"",
+      "new_text": "text = \"关闭\"",
+      "preimage_sha256": "AB54855900C9DDF9EE6D376CEED69A3AD3B0F63A655CAF5F108D9765095FEAB2",
+      "expected_occurrences": 1,
+      "source_text": "Close",
+      "translation": "关闭",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn:90:9",
+      "old_text": "text = \"Rank\"",
+      "new_text": "text = \"排名\"",
+      "preimage_sha256": "E81F782321814F4445816A80698B61C5AD4888B2A29E50B7F38F0563024A35ED",
+      "expected_occurrences": 1,
+      "source_text": "Rank",
+      "translation": "排名",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn:96:9",
+      "old_text": "text = \"Player\"",
+      "new_text": "text = \"玩家\"",
+      "preimage_sha256": "E81F782321814F4445816A80698B61C5AD4888B2A29E50B7F38F0563024A35ED",
+      "expected_occurrences": 1,
+      "source_text": "Player",
+      "translation": "玩家",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn:104:9",
+      "old_text": "text = \"Level\"",
+      "new_text": "text = \"等级\"",
+      "preimage_sha256": "E81F782321814F4445816A80698B61C5AD4888B2A29E50B7F38F0563024A35ED",
+      "expected_occurrences": 1,
+      "source_text": "Level",
+      "translation": "等级",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn:112:9",
+      "old_text": "text = \"Specialization\"",
+      "new_text": "text = \"专精\"",
+      "preimage_sha256": "E81F782321814F4445816A80698B61C5AD4888B2A29E50B7F38F0563024A35ED",
+      "expected_occurrences": 1,
+      "source_text": "Specialization",
+      "translation": "专精",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn:120:9",
+      "old_text": "text = \"Score\"",
+      "new_text": "text = \"分数\"",
+      "preimage_sha256": "E81F782321814F4445816A80698B61C5AD4888B2A29E50B7F38F0563024A35ED",
+      "expected_occurrences": 1,
+      "source_text": "Score",
+      "translation": "分数",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/WorldMap/WorldMapPopup.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/WorldMap/WorldMapPopup.tscn:64:9",
+      "old_text": "text = \"Choose a Zone\"",
+      "new_text": "text = \"选择区域\"",
+      "preimage_sha256": "55F962FAD3E2613DA15A01332FD855500FEA5D92E79ACE29336BC5D83AAE06AC",
+      "expected_occurrences": 1,
+      "source_text": "Choose a Zone",
+      "translation": "选择区域",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/WorldMap/WorldMapPopup.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/WorldMap/WorldMapPopup.tscn:71:9",
+      "old_text": "text = \"Close\"",
+      "new_text": "text = \"关闭\"",
+      "preimage_sha256": "55F962FAD3E2613DA15A01332FD855500FEA5D92E79ACE29336BC5D83AAE06AC",
+      "expected_occurrences": 1,
+      "source_text": "Close",
+      "translation": "关闭",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/ItemTabContent.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/ItemTabContent.tscn:58:9",
+      "old_text": "text = \"Base Damage:\"",
+      "new_text": "text = \"基础伤害：\"",
+      "preimage_sha256": "1DF75FCE1C722411C42FA368C35B19DED6A00189D9F52FF88A8A6A7A27417F77",
+      "expected_occurrences": 1,
+      "source_text": "Base Damage:",
+      "translation": "基础伤害：",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/UI/ModItem.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/UI/ModItem.tscn:48:9",
+      "old_text": "text = \"Lock\"",
+      "new_text": "text = \"锁定\"",
+      "preimage_sha256": "3A292CD82F8124A18E8339A1B9B0A4E2AE35DDA9E4AEAE4FB98716E61DD8166C",
+      "expected_occurrences": 1,
+      "source_text": "Lock",
+      "translation": "锁定",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "resource_contract",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_skills_tree_zhcn"
+  ],
+  "not_proven": "visual layout quality, persistence, gameplay, broad localization, or release readiness"
+}

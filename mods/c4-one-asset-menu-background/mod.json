@@ -1,0 +1,30 @@
+{
+  "id": "c4-one-asset-menu-background",
+  "version": "0.1.0",
+  "patch_type": "ASSET_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "entities": [
+    {
+      "kind": "runtime_texture_cache",
+      "id": "res://sprites/splash/background_blurred.png",
+      "confidence": "FACT",
+      "expected_runtime_effect": "the menu background uses the existing unblurred 960x536 texture cache while preserving the background_blurred resource path"
+    }
+  ],
+  "patches": [
+    {
+      "path": ".import/background_blurred.png-2b6b19973a497aee4145e7f6c132790d.stex",
+      "field": "runtime_texture_cache_bytes",
+      "classification": "ASSET_PATCH",
+      "source_path": ".import/background.png-ab8fc6039bebec7eb2aff3a2fa047edf.stex",
+      "preimage_sha256": "0A31F5CC023C3529BEF41BFDAACC27BE6CEE136E3B3E5130D4685815D6A3F5D8",
+      "replacement_sha256": "E2DB94E4597314067F7649BB716E8414764DFC44DDF60E246310EFEB850246B9",
+      "replacement_size": 423798,
+      "expected_dimensions": [960, 536],
+      "expected_format_marker": "WEBP",
+      "tests": ["asset_contract", "structural_delta", "import_path_preservation", "boot", "menu_background_visual_check"]
+    }
+  ]
+}

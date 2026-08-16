@@ -1,0 +1,30 @@
+{
+  "id": "c5-l29-zhcn-core-playable-v8",
+  "version": "0.1.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "c5-l25-zhcn-core-playable-v7",
+    "c5-l26-misc-ui-zhcn",
+    "c5-l27-help-tips-zhcn",
+    "c5-l28-ui-labels-zhcn"
+  ],
+  "conflicts": [],
+  "scope": "zh_CN Core Playable v8 aggregate: full v7 content (localization + hint-preserved CJK + use_filter=false + USE_STEAM=false + STRETCH_MODE_2D fullscreen fix) + new translation slices L26 (misc UI: gene tooltip, unlocks), L27 (help tip tutorials x7), L28 (UI labels: menu refs, keybinds, settings toggles, character select, escape menu, MTX).",
+  "entities": [],
+  "patches": [],
+  "asset_overlays": [],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "resource_contract",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_zhcn_core_playable_v8"
+  ],
+  "not_proven": "visual layout quality of long help text, gameplay, release readiness"
+}

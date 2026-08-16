@@ -1,0 +1,1912 @@
+{
+  "id": "c5-l16-zones-monsters-ui-zhcn",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "C5-L16: zone names (Levels.gd), monster names (MonsterStats.gd), map mod prefixes (MapMods.gd), minimap/world-map labels (Minimap.gd, MapNode.gd), unique help drop level, entity name (Stats.gd), gene editor edge strings (GeneLoadout/GeneButton/CraftButton), starter build names+descriptions (StarterBuilds.gd); 65 units across 11 scripts; internal keys/identifiers untouched",
+  "entities": [
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:76:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 寒霜洞窟"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:86:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 霉味巢穴"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:96:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 宝石洞穴"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:106:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 深坑"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:116:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 草原"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:126:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 血祭神殿"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:136:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 地下墓穴"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:146:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 绝望原野"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:156:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 沙暴"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:166:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 地牢"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:176:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 守门者"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:187:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 泥沼怪"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:198:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 变异蜘蛛"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:209:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 远古之灵"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:220:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 挑战天梯 1"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:231:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 挑战天梯 2"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:242:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 挑战天梯 3"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:253:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 挑战天梯 4"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:264:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 藏身处"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Levels.gd:274:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 测试区域"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:5:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 训练假人"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:19:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 骷髅弓箭手"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:35:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 暗影忍者"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:53:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 骷髅咒术师"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:70:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 寒冰魔像"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:85:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 攻击犬"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:103:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 闪电犬"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:121:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 骷髅刺客"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:137:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 寒骨"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:154:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 骷髅法师"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:170:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 火焰爆破者"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:186:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 骷髅电击者"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:202:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 僵尸"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:217:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 蜘蛛"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:233:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 骷髅王"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:249:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 守门者"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:269:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 泥沼怪"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:289:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 远古之灵"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MonsterStats/MonsterStats.gd:310:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 变异蜘蛛"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MapMods.gd:281:15",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"敌人拥有 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/MapMods.gd:283:11",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"玩家拥有 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Minimap/Minimap.gd:30:15",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 区域词缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Minimap/Minimap.gd:46:15",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 玩家拥有 25% 更多移动速度"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Minimap/Minimap.gd:52:60",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"% 物品掉落数量增加\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Minimap/Minimap.gd:59:60",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"% 物品掉落稀有度增加\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/WorldMap/MapNode.gd:22:68",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"区域等级：\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/WorldMap/MapNode.gd:42:106",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"% 物品掉落数量增加\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/WorldMap/MapNode.gd:45:105",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"% 物品掉落稀有度增加\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/UniqueHelp/UniqueItem.gd:21:20",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"最低掉落等级：\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Stats.gd:2194:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 你"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd:83:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 新名称"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd:138:23",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 永久删除该物品？"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/CraftButton.gd:15:30",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 免费"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/StarterBuilds.gd:6:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 闪电开局"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/StarterBuilds.gd:7:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 使用闪电技能造成大量伤害。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/StarterBuilds.gd:36:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 火焰开局"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/StarterBuilds.gd:37:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 使用火焰技能点燃敌人。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/StarterBuilds.gd:66:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 寒冰开局"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/StarterBuilds.gd:67:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 使用寒冰技能冻结敌人。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/StarterBuilds.gd:98:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 枪手"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/StarterBuilds.gd:99:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 用机枪扫射敌人。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/StarterBuilds.gd:129:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 毁灭者"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/StarterBuilds.gd:130:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 用强力霰弹枪轰杀敌人。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/StarterBuilds.gd:160:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 流血弓手"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/StarterBuilds.gd:161:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 用强力弓箭攻击伤害敌人。"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:76:2",
+      "old_text": "\"name\": \"Chilly Cavern\",",
+      "new_text": "\"name\": \"寒霜洞窟\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Chilly Cavern",
+      "translation": "寒霜洞窟",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:86:2",
+      "old_text": "\"name\": \"Musty Den\",",
+      "new_text": "\"name\": \"霉味巢穴\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Musty Den",
+      "translation": "霉味巢穴",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:96:2",
+      "old_text": "\"name\": \"Gemling Cave\",",
+      "new_text": "\"name\": \"宝石洞穴\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Gemling Cave",
+      "translation": "宝石洞穴",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:106:2",
+      "old_text": "\"name\": \"Pit\",",
+      "new_text": "\"name\": \"深坑\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Pit",
+      "translation": "深坑",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:116:2",
+      "old_text": "\"name\": \"Grasslands\",",
+      "new_text": "\"name\": \"草原\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Grasslands",
+      "translation": "草原",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:126:2",
+      "old_text": "\"name\": \"Blood Shrine\",",
+      "new_text": "\"name\": \"血祭神殿\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Blood Shrine",
+      "translation": "血祭神殿",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:136:2",
+      "old_text": "\"name\": \"Catacombs\",",
+      "new_text": "\"name\": \"地下墓穴\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Catacombs",
+      "translation": "地下墓穴",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:146:2",
+      "old_text": "\"name\": \"Field of Despair\",",
+      "new_text": "\"name\": \"绝望原野\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Field of Despair",
+      "translation": "绝望原野",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:156:2",
+      "old_text": "\"name\": \"Sandstorm\",",
+      "new_text": "\"name\": \"沙暴\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Sandstorm",
+      "translation": "沙暴",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:166:2",
+      "old_text": "\"name\": \"Dungeon\",",
+      "new_text": "\"name\": \"地牢\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Dungeon",
+      "translation": "地牢",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:176:2",
+      "old_text": "\"name\": \"The Gatekeeper\",",
+      "new_text": "\"name\": \"守门者\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "The Gatekeeper",
+      "translation": "守门者",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:187:2",
+      "old_text": "\"name\": \"Sludge\",",
+      "new_text": "\"name\": \"泥沼怪\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Sludge",
+      "translation": "泥沼怪",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:198:2",
+      "old_text": "\"name\": \"Mutated Spider\",",
+      "new_text": "\"name\": \"变异蜘蛛\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Mutated Spider",
+      "translation": "变异蜘蛛",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:209:2",
+      "old_text": "\"name\": \"Spirit of the Ancients\",",
+      "new_text": "\"name\": \"远古之灵\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Spirit of the Ancients",
+      "translation": "远古之灵",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:220:2",
+      "old_text": "\"name\": \"Challenge Ladder 1\",",
+      "new_text": "\"name\": \"挑战天梯 1\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Challenge Ladder 1",
+      "translation": "挑战天梯 1",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:231:2",
+      "old_text": "\"name\": \"Challenge Ladder 2\",",
+      "new_text": "\"name\": \"挑战天梯 2\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Challenge Ladder 2",
+      "translation": "挑战天梯 2",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:242:2",
+      "old_text": "\"name\": \"Challenge Ladder 3\",",
+      "new_text": "\"name\": \"挑战天梯 3\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Challenge Ladder 3",
+      "translation": "挑战天梯 3",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:253:2",
+      "old_text": "\"name\": \"Challenge Ladder 4\",",
+      "new_text": "\"name\": \"挑战天梯 4\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Challenge Ladder 4",
+      "translation": "挑战天梯 4",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:264:2",
+      "old_text": "\"name\": \"Hideout\",",
+      "new_text": "\"name\": \"藏身处\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Hideout",
+      "translation": "藏身处",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Levels.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Levels.gd:274:2",
+      "old_text": "\"name\": \"Testing Zone\",",
+      "new_text": "\"name\": \"测试区域\",",
+      "preimage_sha256": "0B982A60355F478DE859374BEBB6DF1E6A5EDA5C370552F12671B9AC29CEE749",
+      "expected_occurrences": 1,
+      "source_text": "Testing Zone",
+      "translation": "测试区域",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:5:2",
+      "old_text": "\"name\": \"Training Dummy\",",
+      "new_text": "\"name\": \"训练假人\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Training Dummy",
+      "translation": "训练假人",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:19:2",
+      "old_text": "\"name\": \"Skeleton Archer\",",
+      "new_text": "\"name\": \"骷髅弓箭手\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Skeleton Archer",
+      "translation": "骷髅弓箭手",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:35:2",
+      "old_text": "\"name\": \"Dark Ninja\",",
+      "new_text": "\"name\": \"暗影忍者\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Dark Ninja",
+      "translation": "暗影忍者",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:53:2",
+      "old_text": "\"name\": \"Skeleton Hexer\",",
+      "new_text": "\"name\": \"骷髅咒术师\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Skeleton Hexer",
+      "translation": "骷髅咒术师",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:70:2",
+      "old_text": "\"name\": \"Ice Golem\",",
+      "new_text": "\"name\": \"寒冰魔像\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Ice Golem",
+      "translation": "寒冰魔像",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:85:2",
+      "old_text": "\"name\": \"Attack Dog\",",
+      "new_text": "\"name\": \"攻击犬\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Attack Dog",
+      "translation": "攻击犬",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:103:2",
+      "old_text": "\"name\": \"Shock Dog\",",
+      "new_text": "\"name\": \"闪电犬\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Shock Dog",
+      "translation": "闪电犬",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:121:2",
+      "old_text": "\"name\": \"Skeleton Assassin\",",
+      "new_text": "\"name\": \"骷髅刺客\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Skeleton Assassin",
+      "translation": "骷髅刺客",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:137:2",
+      "old_text": "\"name\": \"Chilly Bones\",",
+      "new_text": "\"name\": \"寒骨\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Chilly Bones",
+      "translation": "寒骨",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:154:2",
+      "old_text": "\"name\": \"Skeleton Mage\",",
+      "new_text": "\"name\": \"骷髅法师\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Skeleton Mage",
+      "translation": "骷髅法师",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:170:2",
+      "old_text": "\"name\": \"Fire Bomber\",",
+      "new_text": "\"name\": \"火焰爆破者\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Fire Bomber",
+      "translation": "火焰爆破者",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:186:2",
+      "old_text": "\"name\": \"Skeleton Sparker\",",
+      "new_text": "\"name\": \"骷髅电击者\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Skeleton Sparker",
+      "translation": "骷髅电击者",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:202:2",
+      "old_text": "\"name\": \"Zombie\",",
+      "new_text": "\"name\": \"僵尸\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Zombie",
+      "translation": "僵尸",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:217:2",
+      "old_text": "\"name\": \"Spider\",",
+      "new_text": "\"name\": \"蜘蛛\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Spider",
+      "translation": "蜘蛛",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:233:2",
+      "old_text": "\"name\": \"Skeletor\",",
+      "new_text": "\"name\": \"骷髅王\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Skeletor",
+      "translation": "骷髅王",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:249:2",
+      "old_text": "\"name\": \"The Gatekeeper\",",
+      "new_text": "\"name\": \"守门者\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "The Gatekeeper",
+      "translation": "守门者",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:269:2",
+      "old_text": "\"name\": \"Sludge\",",
+      "new_text": "\"name\": \"泥沼怪\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Sludge",
+      "translation": "泥沼怪",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:289:2",
+      "old_text": "\"name\": \"Spirit of the Ancients\",",
+      "new_text": "\"name\": \"远古之灵\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Spirit of the Ancients",
+      "translation": "远古之灵",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd:310:2",
+      "old_text": "\"name\": \"Mutated Spider\",",
+      "new_text": "\"name\": \"变异蜘蛛\",",
+      "preimage_sha256": "208C41451EB949E5F8FC2170FD2B6C74C36D693B0F8204D61281D28EE76D300C",
+      "expected_occurrences": 1,
+      "source_text": "Mutated Spider",
+      "translation": "变异蜘蛛",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MapMods.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MapMods.gd:281:15",
+      "old_text": "var prefix = \"Enemies have \"",
+      "new_text": "var prefix = \"敌人拥有 \"",
+      "preimage_sha256": "4D826EA7618EC178DA6EABA0E9FD0F30C1F5A68C2397C92978E59D771D6B601C",
+      "expected_occurrences": 1,
+      "source_text": "\"Enemies have \"",
+      "translation": "\"敌人拥有 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/MapMods.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/MapMods.gd:283:11",
+      "old_text": "prefix = \"Players have \"",
+      "new_text": "prefix = \"玩家拥有 \"",
+      "preimage_sha256": "4D826EA7618EC178DA6EABA0E9FD0F30C1F5A68C2397C92978E59D771D6B601C",
+      "expected_occurrences": 1,
+      "source_text": "\"Players have \"",
+      "translation": "\"玩家拥有 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Minimap/Minimap.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Minimap/Minimap.gd:30:15",
+      "old_text": "label.text = \"Zone Mods\"",
+      "new_text": "label.text = \"区域词缀\"",
+      "preimage_sha256": "4E9DDAA42B9A53ADED815C291E8679654C01AD2A3F351CD75FFCFAC201B09ECF",
+      "expected_occurrences": 1,
+      "source_text": "Zone Mods",
+      "translation": "区域词缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Minimap/Minimap.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Minimap/Minimap.gd:46:15",
+      "old_text": "label.text = \"Players have 25% More Movement Speed\"",
+      "new_text": "label.text = \"玩家拥有 25% 更多移动速度\"",
+      "preimage_sha256": "4E9DDAA42B9A53ADED815C291E8679654C01AD2A3F351CD75FFCFAC201B09ECF",
+      "expected_occurrences": 1,
+      "source_text": "Players have 25% More Movement Speed",
+      "translation": "玩家拥有 25% 更多移动速度",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Minimap/Minimap.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Minimap/Minimap.gd:52:60",
+      "old_text": "label.text = str(stepify(Globals.stage_iiq * 100.0, 1)) + \"% Increased Quantity of Items Found\"",
+      "new_text": "label.text = str(stepify(Globals.stage_iiq * 100.0, 1)) + \"% 物品掉落数量增加\"",
+      "preimage_sha256": "4E9DDAA42B9A53ADED815C291E8679654C01AD2A3F351CD75FFCFAC201B09ECF",
+      "expected_occurrences": 1,
+      "source_text": "\"% Increased Quantity of Items Found\"",
+      "translation": "\"% 物品掉落数量增加\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Minimap/Minimap.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Minimap/Minimap.gd:59:60",
+      "old_text": "label.text = str(stepify(Globals.stage_iir * 100.0, 1)) + \"% Increased Rarity of Items Found\"",
+      "new_text": "label.text = str(stepify(Globals.stage_iir * 100.0, 1)) + \"% 物品掉落稀有度增加\"",
+      "preimage_sha256": "4E9DDAA42B9A53ADED815C291E8679654C01AD2A3F351CD75FFCFAC201B09ECF",
+      "expected_occurrences": 1,
+      "source_text": "\"% Increased Rarity of Items Found\"",
+      "translation": "\"% 物品掉落稀有度增加\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/WorldMap/MapNode.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/WorldMap/MapNode.gd:22:68",
+      "old_text": "$MapButton / StatInfoContainer / VBoxContainer / ZoneLabel.text = \"Zone Level: \" + str(zone_level)",
+      "new_text": "$MapButton / StatInfoContainer / VBoxContainer / ZoneLabel.text = \"区域等级：\" + str(zone_level)",
+      "preimage_sha256": "A18669004417CB626D25CCD888E0EB622EAE22B496A54A0473204F4E67BEA4E0",
+      "expected_occurrences": 1,
+      "source_text": "\"Zone Level: \"",
+      "translation": "\"区域等级：\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/WorldMap/MapNode.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/WorldMap/MapNode.gd:42:106",
+      "old_text": "$MapButton / StatInfoContainer / VBoxContainer / ItemQuanityLabel.text = str(stepify(iiq * 100.0, 1)) + \"% Increased Quantity of Items Found\"",
+      "new_text": "$MapButton / StatInfoContainer / VBoxContainer / ItemQuanityLabel.text = str(stepify(iiq * 100.0, 1)) + \"% 物品掉落数量增加\"",
+      "preimage_sha256": "A18669004417CB626D25CCD888E0EB622EAE22B496A54A0473204F4E67BEA4E0",
+      "expected_occurrences": 1,
+      "source_text": "\"% Increased Quantity of Items Found\"",
+      "translation": "\"% 物品掉落数量增加\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/WorldMap/MapNode.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/WorldMap/MapNode.gd:45:105",
+      "old_text": "$MapButton / StatInfoContainer / VBoxContainer / ItemRarityLabel.text = str(stepify(iir * 100.0, 1)) + \"% Increased Rarity of Items Found\"",
+      "new_text": "$MapButton / StatInfoContainer / VBoxContainer / ItemRarityLabel.text = str(stepify(iir * 100.0, 1)) + \"% 物品掉落稀有度增加\"",
+      "preimage_sha256": "A18669004417CB626D25CCD888E0EB622EAE22B496A54A0473204F4E67BEA4E0",
+      "expected_occurrences": 1,
+      "source_text": "\"% Increased Rarity of Items Found\"",
+      "translation": "\"% 物品掉落稀有度增加\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/UniqueHelp/UniqueItem.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/UniqueHelp/UniqueItem.gd:21:20",
+      "old_text": "$DropLevel.text = \"Minimum Drop Level: \" + str(data.min_level_requirement)",
+      "new_text": "$DropLevel.text = \"最低掉落等级：\" + str(data.min_level_requirement)",
+      "preimage_sha256": "477B07DA134D6B1439F47FB473F532BB9E6E939060E9DED4E0B2C4A8562E5C81",
+      "expected_occurrences": 1,
+      "source_text": "\"Minimum Drop Level: \"",
+      "translation": "\"最低掉落等级：\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Stats.gd:2194:9",
+      "old_text": "return \"You\"",
+      "new_text": "return \"你\"",
+      "preimage_sha256": "C187245E4F475E0928252610BB9D6D27FCB4A23C68754B4409DF5A6EB9997234",
+      "expected_occurrences": 1,
+      "source_text": "You",
+      "translation": "你",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd:83:16",
+      "old_text": "popup.label = \"New Name\"",
+      "new_text": "popup.label = \"新名称\"",
+      "preimage_sha256": "F0F7BE2A49D15B6E7B6996FA5CC0226971A60E27B2E73DFD7929C826259A1E39",
+      "expected_occurrences": 1,
+      "source_text": "New Name",
+      "translation": "新名称",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd:138:23",
+      "old_text": "popup.window_title = \"Permanently Delete this Item?\"",
+      "new_text": "popup.window_title = \"永久删除该物品？\"",
+      "preimage_sha256": "8A9DA1B7F9F20CAA20D30D1C1796353A2CD07DBB8AC2B0ED271CB1E9AC3B6F99",
+      "expected_occurrences": 1,
+      "source_text": "Permanently Delete this Item?",
+      "translation": "永久删除该物品？",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/CraftButton.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/CraftButton.gd:15:30",
+      "old_text": "$CostBox / CostLabel.text = \"Free\"",
+      "new_text": "$CostBox / CostLabel.text = \"免费\"",
+      "preimage_sha256": "9E2DB59272521124392187DD2816E4D1827F925D3D0BF46854E9BEC20BF450D1",
+      "expected_occurrences": 1,
+      "source_text": "Free",
+      "translation": "免费",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/StarterBuilds.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/StarterBuilds.gd:6:2",
+      "old_text": "\"name\": \"Lightning Starter\",",
+      "new_text": "\"name\": \"闪电开局\",",
+      "preimage_sha256": "998AFBFA0C5AECC624CB4DF7E4971427995AF2506B55C1FDC72FA01988461782",
+      "expected_occurrences": 1,
+      "source_text": "Lightning Starter",
+      "translation": "闪电开局",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/StarterBuilds.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/StarterBuilds.gd:7:2",
+      "old_text": "\"description\": \"Deal massive damage with Lightning Skills.\",",
+      "new_text": "\"description\": \"使用闪电技能造成大量伤害。\",",
+      "preimage_sha256": "998AFBFA0C5AECC624CB4DF7E4971427995AF2506B55C1FDC72FA01988461782",
+      "expected_occurrences": 1,
+      "source_text": "Deal massive damage with Lightning Skills.",
+      "translation": "使用闪电技能造成大量伤害。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/StarterBuilds.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/StarterBuilds.gd:36:2",
+      "old_text": "\"name\": \"Fire Starter\",",
+      "new_text": "\"name\": \"火焰开局\",",
+      "preimage_sha256": "998AFBFA0C5AECC624CB4DF7E4971427995AF2506B55C1FDC72FA01988461782",
+      "expected_occurrences": 1,
+      "source_text": "Fire Starter",
+      "translation": "火焰开局",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/StarterBuilds.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/StarterBuilds.gd:37:2",
+      "old_text": "\"description\": \"Set enemies on fire with Fire Skills\",",
+      "new_text": "\"description\": \"使用火焰技能点燃敌人。\",",
+      "preimage_sha256": "998AFBFA0C5AECC624CB4DF7E4971427995AF2506B55C1FDC72FA01988461782",
+      "expected_occurrences": 1,
+      "source_text": "Set enemies on fire with Fire Skills",
+      "translation": "使用火焰技能点燃敌人。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/StarterBuilds.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/StarterBuilds.gd:66:2",
+      "old_text": "\"name\": \"Cold Starter\",",
+      "new_text": "\"name\": \"寒冰开局\",",
+      "preimage_sha256": "998AFBFA0C5AECC624CB4DF7E4971427995AF2506B55C1FDC72FA01988461782",
+      "expected_occurrences": 1,
+      "source_text": "Cold Starter",
+      "translation": "寒冰开局",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/StarterBuilds.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/StarterBuilds.gd:67:2",
+      "old_text": "\"description\": \"Freeze your enemies with Cold Skills.\",",
+      "new_text": "\"description\": \"使用寒冰技能冻结敌人。\",",
+      "preimage_sha256": "998AFBFA0C5AECC624CB4DF7E4971427995AF2506B55C1FDC72FA01988461782",
+      "expected_occurrences": 1,
+      "source_text": "Freeze your enemies with Cold Skills.",
+      "translation": "使用寒冰技能冻结敌人。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/StarterBuilds.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/StarterBuilds.gd:98:2",
+      "old_text": "\"name\": \"Gunner\",",
+      "new_text": "\"name\": \"枪手\",",
+      "preimage_sha256": "998AFBFA0C5AECC624CB4DF7E4971427995AF2506B55C1FDC72FA01988461782",
+      "expected_occurrences": 1,
+      "source_text": "Gunner",
+      "translation": "枪手",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/StarterBuilds.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/StarterBuilds.gd:99:2",
+      "old_text": "\"description\": \"Mow down enemies with a machine gun.\",",
+      "new_text": "\"description\": \"用机枪扫射敌人。\",",
+      "preimage_sha256": "998AFBFA0C5AECC624CB4DF7E4971427995AF2506B55C1FDC72FA01988461782",
+      "expected_occurrences": 1,
+      "source_text": "Mow down enemies with a machine gun.",
+      "translation": "用机枪扫射敌人。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/StarterBuilds.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/StarterBuilds.gd:129:2",
+      "old_text": "\"name\": \"Destroyer\",",
+      "new_text": "\"name\": \"毁灭者\",",
+      "preimage_sha256": "998AFBFA0C5AECC624CB4DF7E4971427995AF2506B55C1FDC72FA01988461782",
+      "expected_occurrences": 1,
+      "source_text": "Destroyer",
+      "translation": "毁灭者",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/StarterBuilds.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/StarterBuilds.gd:130:2",
+      "old_text": "\"description\": \"Blast down enemies with a powerful shotgun.\",",
+      "new_text": "\"description\": \"用强力霰弹枪轰杀敌人。\",",
+      "preimage_sha256": "998AFBFA0C5AECC624CB4DF7E4971427995AF2506B55C1FDC72FA01988461782",
+      "expected_occurrences": 1,
+      "source_text": "Blast down enemies with a powerful shotgun.",
+      "translation": "用强力霰弹枪轰杀敌人。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/StarterBuilds.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/StarterBuilds.gd:160:2",
+      "old_text": "\"name\": \"Bleed Archer\",",
+      "new_text": "\"name\": \"流血弓手\",",
+      "preimage_sha256": "998AFBFA0C5AECC624CB4DF7E4971427995AF2506B55C1FDC72FA01988461782",
+      "expected_occurrences": 1,
+      "source_text": "Bleed Archer",
+      "translation": "流血弓手",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/StarterBuilds.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/StarterBuilds.gd:161:2",
+      "old_text": "\"description\": \"Damage enemies with a powerful bow attack.\",",
+      "new_text": "\"description\": \"用强力弓箭攻击伤害敌人。\",",
+      "preimage_sha256": "998AFBFA0C5AECC624CB4DF7E4971427995AF2506B55C1FDC72FA01988461782",
+      "expected_occurrences": 1,
+      "source_text": "Damage enemies with a powerful bow attack.",
+      "translation": "用强力弓箭攻击伤害敌人。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "resource_contract",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_zones_monsters_ui_zhcn"
+  ],
+  "not_proven": "visual layout quality, persistence, gameplay, broad localization, or release readiness"
+}

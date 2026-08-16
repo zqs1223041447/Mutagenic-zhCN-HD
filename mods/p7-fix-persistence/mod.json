@@ -1,0 +1,29 @@
+{
+  "id": "p7-fix-persistence",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "LOCAL_PLAY_ONLY self-study fix; Steam verification and Steam-release parity are explicitly NOT goals. Fixes persistence (save/load) and Quit for non-Steam launch by switching Constants.USE_STEAM to false so the existing local File branch (user://_0_6_0.dat) is used.",
+  "entities": [
+    {
+      "kind": "persistence_branch",
+      "id": "Globals/Constants.gd::USE_STEAM",
+      "confidence": "FACT",
+      "expected_runtime_effect": "with USE_STEAM=false, GameState get_save_name returns user://_0_6_0.dat, do_save_game writes the local file and calls _on_save(1) directly (so quit() can complete after the debounce without any Steam callback), load_game reads the local file, reset_game_state removes it locally; all Steam API call sites become unreachable (verified by static reachability over 04_recovered)"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/Constants.gd",
+      "field": "USE_STEAM",
+      "classification": "CODE_PATCH",
+      "preimage_sha256": "06C720820CEFED096921535D7394CD37018DA59D900D99927D95A6784CCDCF44",
+      "old_text": "var USE_STEAM = true",
+      "new_text": "var USE_STEAM = false",
+      "expected_occurrences": 1,
+      "tests": ["structural_delta", "compiled_script_load", "boot", "local_persistence_human_checkpoint"]
+    }
+  ]
+}

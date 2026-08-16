@@ -1,0 +1,113 @@
+{
+  "id": "c5-l3-localization-character-class-dialogs",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": ["c5-l2-localization-character-select"],
+  "conflicts": [],
+  "scope": "character_class_dialog_static_labels",
+  "entities": [
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterChanger.tscn:48:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the class-change dialog cancel button displays 取消"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterChanger.tscn:54:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the class-change dialog title displays 选择你的职业"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterCreator.tscn:48:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the character-creation dialog cancel button displays 取消"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterCreator.tscn:54:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the character-creation dialog title displays 选择你的职业"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Popups/Dialogs/CharacterSelect/CharacterChanger.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterChanger.tscn:48:9",
+      "old_text": "text = \"Cancel\"",
+      "new_text": "text = \"取消\"",
+      "preimage_sha256": "FF0CD043BA87B08620707F855D1586B638D8CFC5829AA0CDED98A8209F6070F0",
+      "expected_occurrences": 1,
+      "source_text": "Cancel",
+      "translation": "取消",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": ["unit_id_exact_match", "placeholder_conservation", "token_conservation", "resource_contract", "declared_delta"]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/CharacterSelect/CharacterChanger.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterChanger.tscn:54:9",
+      "old_text": "text = \"Choose your Class\"",
+      "new_text": "text = \"选择你的职业\"",
+      "preimage_sha256": "FF0CD043BA87B08620707F855D1586B638D8CFC5829AA0CDED98A8209F6070F0",
+      "expected_occurrences": 1,
+      "source_text": "Choose your Class",
+      "translation": "选择你的职业",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": ["unit_id_exact_match", "placeholder_conservation", "token_conservation", "resource_contract", "declared_delta"]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/CharacterSelect/CharacterCreator.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterCreator.tscn:48:9",
+      "old_text": "text = \"Cancel\"",
+      "new_text": "text = \"取消\"",
+      "preimage_sha256": "14E4DC40644C1B74B478910E5DA1DF3161F0BD49A2D2244AA0EDA5E160746E41",
+      "expected_occurrences": 1,
+      "source_text": "Cancel",
+      "translation": "取消",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": ["unit_id_exact_match", "placeholder_conservation", "token_conservation", "resource_contract", "declared_delta"]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/CharacterSelect/CharacterCreator.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterCreator.tscn:54:9",
+      "old_text": "text = \"Choose your Class\"",
+      "new_text": "text = \"选择你的职业\"",
+      "preimage_sha256": "14E4DC40644C1B74B478910E5DA1DF3161F0BD49A2D2244AA0EDA5E160746E41",
+      "expected_occurrences": 1,
+      "source_text": "Choose your Class",
+      "translation": "选择你的职业",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": ["unit_id_exact_match", "placeholder_conservation", "token_conservation", "resource_contract", "declared_delta"]
+    }
+  ],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "character_class_dialog_resource_contract",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_character_class_dialogs"
+  ],
+  "not_proven": "dynamic class names/descriptions, other screens, core gameplay, persistence, broad localization, or release readiness"
+}

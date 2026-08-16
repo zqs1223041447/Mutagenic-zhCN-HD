@@ -1,0 +1,8 @@
+{
+  "units": [
+    {"unit_id": "Scenes/Menu.tscn:69:9", "translation": "开始游戏", "expected_file_sha256": "54337EED6778446F85D22A6C52EEC149AC557860613206853C769B791724A778"},
+    {"unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.tscn:40:9", "translation": "选择你的角色", "expected_file_sha256": "55D1F48E84F0F0AC4A1B0F127EA89DB9CEDEC2F6F87DC7088EA4A99A3417F9AD"},
+    {"unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.tscn:59:9", "translation": "创建新角色", "expected_file_sha256": "55D1F48E84F0F0AC4A1B0F127EA89DB9CEDEC2F6F87DC7088EA4A99A3417F9AD"},
+    {"unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.tscn:71:9", "translation": "关闭", "expected_file_sha256": "55D1F48E84F0F0AC4A1B0F127EA89DB9CEDEC2F6F87DC7088EA4A99A3417F9AD"}
+  ]
+}

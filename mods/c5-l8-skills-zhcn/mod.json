@@ -1,0 +1,491 @@
+{
+  "id": "c5-l8-skills-zhcn",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "display names and descriptions of 8 representative playable skills (Orb, ChainLightning, IceOrb, LightningSpear, FlameTether, LavaSurge, Arc, DoomTether) including numeric-value and long-description units; internal skill IDs and other config fields untouched; CODE_PATCH on Globals/Skills.gd (plaintext source in 04_recovered)",
+  "entities": [
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:181:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 熔岩弹"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:182:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 向附近敌人掷出一枚熔岩球，有几率使其燃烧。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:201:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 连锁闪电"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:202:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 向敌人释放一道闪电冲击，可连锁命中多个敌人。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:251:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 冰霜弹"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:252:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 向附近敌人掷出一枚冰球，造成 25% 溅射伤害。冰霜弹无法穿透或连锁。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:211:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 闪电长矛"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:212:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 投掷一杆纯粹闪电构成的长矛，造成强力闪电异常状态。若闪电长矛命中受电击影响的敌人，将消耗其电击状态，以其 200% 的效果造成更多伤害。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:221:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 火焰锁链"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:222:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 用锁链连接附近敌人并对其造成伤害。受火焰锁链影响的敌人造成的伤害降低 25%。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:231:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 熔岩喷涌"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:232:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 向附近敌人引导一股熔岩流，在区域内造成大量火焰伤害。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:291:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 电弧"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:292:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 电弧电击附近敌人，对更近的敌人造成更多伤害。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:241:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 厄运锁链"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Skills.gd:242:1",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 用锁链连接附近敌人并周期性造成伤害。若敌人受到诅咒，厄运锁链将根据敌人身上的每个诅咒造成 50% 更多伤害，并在区域内造成伤害。"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:181:1",
+      "old_text": "\"name\": \"Lava Orb\",",
+      "new_text": "\"name\": \"熔岩弹\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Lava Orb",
+      "translation": "熔岩弹",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:182:1",
+      "old_text": "\"description\": \"Cast a ball of magma at a nearby enemy, with a chance to set them on fire.\",",
+      "new_text": "\"description\": \"向附近敌人掷出一枚熔岩球，有几率使其燃烧。\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Cast a ball of magma at a nearby enemy, with a chance to set them on fire.",
+      "translation": "向附近敌人掷出一枚熔岩球，有几率使其燃烧。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:201:1",
+      "old_text": "\"name\": \"Chain Lightning\",",
+      "new_text": "\"name\": \"连锁闪电\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Chain Lightning",
+      "translation": "连锁闪电",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:202:1",
+      "old_text": "\"description\": \"Cast a surge of lightning towards an enemy, chaining to multiple enemies.\",",
+      "new_text": "\"description\": \"向敌人释放一道闪电冲击，可连锁命中多个敌人。\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Cast a surge of lightning towards an enemy, chaining to multiple enemies.",
+      "translation": "向敌人释放一道闪电冲击，可连锁命中多个敌人。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:251:1",
+      "old_text": "\"name\": \"Frost Orb\",",
+      "new_text": "\"name\": \"冰霜弹\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Frost Orb",
+      "translation": "冰霜弹",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:252:1",
+      "old_text": "\"description\": \"Cast a ball of ice at a nearby enemy. Deals 25% splash damage. Frost Orb cannot pierce or chain.\",",
+      "new_text": "\"description\": \"向附近敌人掷出一枚冰球，造成 25% 溅射伤害。冰霜弹无法穿透或连锁。\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Cast a ball of ice at a nearby enemy. Deals 25% splash damage. Frost Orb cannot pierce or chain.",
+      "translation": "向附近敌人掷出一枚冰球，造成 25% 溅射伤害。冰霜弹无法穿透或连锁。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:211:1",
+      "old_text": "\"name\": \"Lightning Spear\",",
+      "new_text": "\"name\": \"闪电长矛\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Lightning Spear",
+      "translation": "闪电长矛",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:212:1",
+      "old_text": "\"description\": \"Throw a spear of pure lightning, inflicting powerful Lightning ailments. If Lightning Spear hits an enemy affected by Jolt, it will consume the Jolt to deal 200% of the Jolts effect as More Damage.\",",
+      "new_text": "\"description\": \"投掷一杆纯粹闪电构成的长矛，造成强力闪电异常状态。若闪电长矛命中受电击影响的敌人，将消耗其电击状态，以其 200% 的效果造成更多伤害。\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Throw a spear of pure lightning, inflicting powerful Lightning ailments. If Lightning Spear hits an enemy affected by Jolt, it will consume the Jolt to deal 200% of the Jolts effect as More Damage.",
+      "translation": "投掷一杆纯粹闪电构成的长矛，造成强力闪电异常状态。若闪电长矛命中受电击影响的敌人，将消耗其电击状态，以其 200% 的效果造成更多伤害。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:221:1",
+      "old_text": "\"name\": \"Flame Tether\",",
+      "new_text": "\"name\": \"火焰锁链\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Flame Tether",
+      "translation": "火焰锁链",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:222:1",
+      "old_text": "\"description\": \"Tether yourself to nearby enemies, dealing damage to them. Enemies affected by Flame Tethers deal 25% Less Damage.\",",
+      "new_text": "\"description\": \"用锁链连接附近敌人并对其造成伤害。受火焰锁链影响的敌人造成的伤害降低 25%。\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Tether yourself to nearby enemies, dealing damage to them. Enemies affected by Flame Tethers deal 25% Less Damage.",
+      "translation": "用锁链连接附近敌人并对其造成伤害。受火焰锁链影响的敌人造成的伤害降低 25%。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:231:1",
+      "old_text": "\"name\": \"Lava Surge\",",
+      "new_text": "\"name\": \"熔岩喷涌\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Lava Surge",
+      "translation": "熔岩喷涌",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:232:1",
+      "old_text": "\"description\": \"Channel a stream of Lava towards a nearby enemy, dealing massive Fire damage in an area.\",",
+      "new_text": "\"description\": \"向附近敌人引导一股熔岩流，在区域内造成大量火焰伤害。\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Channel a stream of Lava towards a nearby enemy, dealing massive Fire damage in an area.",
+      "translation": "向附近敌人引导一股熔岩流，在区域内造成大量火焰伤害。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:291:1",
+      "old_text": "\"name\": \"Arc\",",
+      "new_text": "\"name\": \"电弧\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Arc",
+      "translation": "电弧",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:292:1",
+      "old_text": "\"description\": \"Sparks shock nearby enemies, dealing more damage to closer enemies.\",",
+      "new_text": "\"description\": \"电弧电击附近敌人，对更近的敌人造成更多伤害。\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Sparks shock nearby enemies, dealing more damage to closer enemies.",
+      "translation": "电弧电击附近敌人，对更近的敌人造成更多伤害。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:241:1",
+      "old_text": "\"name\": \"Doom Tether\",",
+      "new_text": "\"name\": \"厄运锁链\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Doom Tether",
+      "translation": "厄运锁链",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Skills.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Skills.gd:242:1",
+      "old_text": "\"description\": \"Tether yourself to nearby enemies, periodically causing damage. If the enemy is cursed, then Doom Tether will deal 50% More Damage for each Curse on the enemy, and deal damage in an area.\",",
+      "new_text": "\"description\": \"用锁链连接附近敌人并周期性造成伤害。若敌人受到诅咒，厄运锁链将根据敌人身上的每个诅咒造成 50% 更多伤害，并在区域内造成伤害。\",",
+      "preimage_sha256": "3C6FDF0BBD189746ADD27CBFCD3D627B821D11241562CD313DC31034A8CF2817",
+      "expected_occurrences": 1,
+      "source_text": "Tether yourself to nearby enemies, periodically causing damage. If the enemy is cursed, then Doom Tether will deal 50% More Damage for each Curse on the enemy, and deal damage in an area.",
+      "translation": "用锁链连接附近敌人并周期性造成伤害。若敌人受到诅咒，厄运锁链将根据敌人身上的每个诅咒造成 50% 更多伤害，并在区域内造成伤害。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "resource_contract",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_skills_zhcn"
+  ],
+  "not_proven": "visual layout quality, persistence, gameplay, broad localization, or release readiness"
+}

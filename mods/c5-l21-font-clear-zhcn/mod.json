@@ -1,0 +1,48 @@
+{
+  "id": "c5-l21-font-clear-zhcn",
+  "version": "0.1.0",
+  "patch_type": "ASSET_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "Replace the pixel-art CJK font source (fusion-pixel-12px) with a clear vector CJK source (Noto Sans SC) for the remaining UI fonts (space.ttf used by GUI/notifications/minimap labels, ChivoMono used by health globes/buff display/stats). rsans.ttf was already upgraded inside c5-l1. Fixes blurred/pixelated Chinese text at normal UI sizes.",
+  "entities": [],
+  "patches": [
+    {
+      "path": "Themes/InGameText.tres",
+      "unit_id": "Themes/InGameText.tres:use_filter",
+      "classification": "TEXT_PATCH",
+      "old_text": "use_filter = true",
+      "new_text": "use_filter = false",
+      "preimage_sha256": "0C9E62B5645F4ACDEB2DF6BCC2C63320AF118185C0EB08E47BE20FA9E30BDA55",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [
+    {
+      "path": "Fonts/space.ttf",
+      "source_path": "02_tools/fonts_merged_hinted/space.ttf",
+      "preimage_sha256": "C269C20587E3E8BDD923F4C5877F49726A8C5EEB59D4694D0A8C860621D08740",
+      "replacement_sha256": "D783BD0FB73F0C006F00C4744ABF0CF33F14C783E685BFAB12EA97C1DCBC4C6B",
+      "replacement_size": 12773004
+    },
+    {
+      "path": "Fonts/ChivoMono-VariableFont_wght.ttf",
+      "source_path": "02_tools/fonts_merged_hinted/ChivoMono-VariableFont_wght.ttf",
+      "preimage_sha256": "ADCB60E048D19AD9D872BFC5A380EE6E398E5574B9563DDDE7B4C92392BDEEFB",
+      "replacement_sha256": "DA783A787AB7DB1C4651D95F8A78C879A70929285A066B17846459AB496E6191",
+      "replacement_size": 12752224
+    }
+  ],
+  "tests": [
+    "resource_contract",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot"
+  ],
+  "not_proven": "visual rendering quality at every font size, clipping, broad font coverage, or release readiness"
+}

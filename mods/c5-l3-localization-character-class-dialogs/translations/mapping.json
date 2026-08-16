@@ -1,0 +1,24 @@
+{
+  "units": [
+    {
+      "unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterChanger.tscn:48:9",
+      "translation": "取消",
+      "expected_file_sha256": "FF0CD043BA87B08620707F855D1586B638D8CFC5829AA0CDED98A8209F6070F0"
+    },
+    {
+      "unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterChanger.tscn:54:9",
+      "translation": "选择你的职业",
+      "expected_file_sha256": "FF0CD043BA87B08620707F855D1586B638D8CFC5829AA0CDED98A8209F6070F0"
+    },
+    {
+      "unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterCreator.tscn:48:9",
+      "translation": "取消",
+      "expected_file_sha256": "14E4DC40644C1B74B478910E5DA1DF3161F0BD49A2D2244AA0EDA5E160746E41"
+    },
+    {
+      "unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterCreator.tscn:54:9",
+      "translation": "选择你的职业",
+      "expected_file_sha256": "14E4DC40644C1B74B478910E5DA1DF3161F0BD49A2D2244AA0EDA5E160746E41"
+    }
+  ]
+}

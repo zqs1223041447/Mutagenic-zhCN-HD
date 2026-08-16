@@ -1,0 +1,461 @@
+{
+  "id": "c5-l28-ui-labels-zhcn",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "Translate remaining static UI labels: main menu references, keybind action labels, settings toggles, character select, escape menu stats, specialization picker, MTX store, item tab placeholders.",
+  "entities": [],
+  "patches": [
+    {
+      "path": "Scenes/Menu.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Help Reference\"",
+      "new_text": "text = \"帮助参考\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "54337EED6778446F85D22A6C52EEC149AC557860613206853C769B791724A778"
+    },
+    {
+      "path": "Scenes/Menu.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Item Mod Reference\"",
+      "new_text": "text = \"物品修饰参考\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "54337EED6778446F85D22A6C52EEC149AC557860613206853C769B791724A778"
+    },
+    {
+      "path": "Scenes/Menu.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Unique Item Reference\"",
+      "new_text": "text = \"独特物品参考\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "54337EED6778446F85D22A6C52EEC149AC557860613206853C769B791724A778"
+    },
+    {
+      "path": "Scenes/Menu.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Quit\"",
+      "new_text": "text = \"退出\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "54337EED6778446F85D22A6C52EEC149AC557860613206853C769B791724A778"
+    },
+    {
+      "path": "Scenes/Menu.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Build:\"",
+      "new_text": "text = \"版本：\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "54337EED6778446F85D22A6C52EEC149AC557860613206853C769B791724A778"
+    },
+    {
+      "path": "Scenes/Menu.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Official Discord\"",
+      "new_text": "text = \"官方 Discord\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "54337EED6778446F85D22A6C52EEC149AC557860613206853C769B791724A778"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "label_text = \"Dash\"",
+      "new_text": "label_text = \"闪避\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "0502CE0986B4E27C06CE10E61A6E560D0F7AA6F12D0D2AA5CFC1A0323107709D"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "label_text = \"Move Left\"",
+      "new_text": "label_text = \"向左移动\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "0502CE0986B4E27C06CE10E61A6E560D0F7AA6F12D0D2AA5CFC1A0323107709D"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "label_text = \"Move Right\"",
+      "new_text": "label_text = \"向右移动\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "0502CE0986B4E27C06CE10E61A6E560D0F7AA6F12D0D2AA5CFC1A0323107709D"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "label_text = \"Move Up\"",
+      "new_text": "label_text = \"向上移动\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "0502CE0986B4E27C06CE10E61A6E560D0F7AA6F12D0D2AA5CFC1A0323107709D"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "label_text = \"Move Down\"",
+      "new_text": "label_text = \"向下移动\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "0502CE0986B4E27C06CE10E61A6E560D0F7AA6F12D0D2AA5CFC1A0323107709D"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "label_text = \"Interact\"",
+      "new_text": "label_text = \"互动\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "0502CE0986B4E27C06CE10E61A6E560D0F7AA6F12D0D2AA5CFC1A0323107709D"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "label_text = \"Show Inventory\"",
+      "new_text": "label_text = \"打开背包\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "0502CE0986B4E27C06CE10E61A6E560D0F7AA6F12D0D2AA5CFC1A0323107709D"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Enable Music\"",
+      "new_text": "text = \"启用音乐\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Enable SFX\"",
+      "new_text": "text = \"启用音效\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Enable Drop Sounds\"",
+      "new_text": "text = \"启用掉落音效\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Enable Damage Numbers\"",
+      "new_text": "text = \"显示伤害数字\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Enable XP Numbers\"",
+      "new_text": "text = \"显示经验数字\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Fullscreen\"",
+      "new_text": "text = \"全屏\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Enable Vsync\"",
+      "new_text": "text = \"启用垂直同步\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Enable Effects\"",
+      "new_text": "text = \"启用特效\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Show Curses\"",
+      "new_text": "text = \"显示诅咒\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Enable Health Globe UI\"",
+      "new_text": "text = \"启用生命球界面\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Reset Progress\"",
+      "new_text": "text = \"重置进度\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Volume Controls\"",
+      "new_text": "text = \"音量控制\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Music Volume\"",
+      "new_text": "text = \"音乐音量\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"SFX Volume\"",
+      "new_text": "text = \"音效音量\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Drop Volume\"",
+      "new_text": "text = \"掉落音量\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Monster Label\"",
+      "new_text": "text = \"怪物名称\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "9F43DCA77D107ED5ED89D679C4035DB3262ACFC17B017C866F0A49EBFD3173B2"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/CharacterSelect/CharacterClass.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Choose Warrior\"",
+      "new_text": "text = \"选择战士\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "B0D4295F0373E5CE2E4210825EC41F0806DF056A9F867A2677B4324DA16AB154"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Character Name\"",
+      "new_text": "text = \"角色名\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "9D00C2AA8F20A74A3AD9C95B5DB90D4C2A64E5A9612838C82534DDC8AC2CED9D"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Level 100\"",
+      "new_text": "text = \"等级 100\"",
+      "expected_occurrences": 2,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "9D00C2AA8F20A74A3AD9C95B5DB90D4C2A64E5A9612838C82534DDC8AC2CED9D"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"UNIQUE NAME\"",
+      "new_text": "text = \"独特名称\"",
+      "expected_occurrences": 3,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "146B40EE2F9E470D2AEAF2C5C29259B1F2B1A440773F1FCE243B696122A9D32C"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneSelector/GeneOption.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Gene 1\"",
+      "new_text": "text = \"基因 1\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "79805A3CFB595DCB5805AFB91A0B7DA49098D3965C3F8BAE5185FBAD553143E6"
+    },
+    {
+      "path": "Scenes/Popups/EscapeMenu.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Character Name\"",
+      "new_text": "text = \"角色名\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "24DD209D6749F193F713858021FA454EA4695BA0C59492ED17129C0AA153CB74"
+    },
+    {
+      "path": "Scenes/Popups/EscapeMenu.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Level 50 Rogue\"",
+      "new_text": "text = \"等级 50 游侠\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "24DD209D6749F193F713858021FA454EA4695BA0C59492ED17129C0AA153CB74"
+    },
+    {
+      "path": "Scenes/Popups/EscapeMenuStat.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Stat\"",
+      "new_text": "text = \"属性\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "E1C931743477526E96F9F35FD19E1FE97D081F567B593E7911B3D7A190DA4A98"
+    },
+    {
+      "path": "Scenes/Popups/EscapeMenuStat.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Value\"",
+      "new_text": "text = \"数值\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "E1C931743477526E96F9F35FD19E1FE97D081F567B593E7911B3D7A190DA4A98"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SpecializationPicker/SpecializationPicker.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Choose your Class Specialization\r\nYou may change this at any time in your Hideout.\"",
+      "new_text": "text = \"选择你的职业专精\r\n你可以在藏身处随时更换。\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "AC2E44A4DF18B9A76BCA37599689339E92C606D764D4B6EAC904801118151903"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/MTXStore/MTXItem.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Cosmetic Name\"",
+      "new_text": "text = \"外观名称\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "E1866AFA05799F422F7869352176E8053734EC3FDC564271C3C9663C8F88925D"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/MTXStore/MTXItem.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Price Here\"",
+      "new_text": "text = \"此处为价格\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "E1866AFA05799F422F7869352176E8053734EC3FDC564271C3C9663C8F88925D"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/MTXStore/MTXStore.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Supporter Shop\r\n\"",
+      "new_text": "text = \"赞助商店\r\n\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "DC523C6E16F6EF01B676E504B7E8BAEB5CDC60C601D40C7EB9B4333ABDE93A62"
+    },
+    {
+      "path": "Scenes/Popups/ItemTabContent.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Item Supports go here.\"",
+      "new_text": "text = \"此处显示物品辅助。\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "1DF75FCE1C722411C42FA368C35B19DED6A00189D9F52FF88A8A6A7A27417F77"
+    },
+    {
+      "path": "Scenes/Popups/ItemTabContent.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Item Description goes here\"",
+      "new_text": "text = \"此处显示物品描述\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "1DF75FCE1C722411C42FA368C35B19DED6A00189D9F52FF88A8A6A7A27417F77"
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "resource_contract",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot"
+  ]
+}

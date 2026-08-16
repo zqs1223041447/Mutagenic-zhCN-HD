@@ -1,0 +1,19 @@
+{
+  "units": [
+    {
+      "unit_id": "Scenes/Popups/Dialogs/Settings/Settings.tscn:39:9",
+      "translation": "设置",
+      "expected_file_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "unit_id": "Scenes/Popups/Dialogs/Settings/Settings.tscn:57:9",
+      "translation": "关闭设置",
+      "expected_file_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    },
+    {
+      "unit_id": "Scenes/Popups/Dialogs/Settings/Settings.tscn:63:9",
+      "translation": "按键设置",
+      "expected_file_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE"
+    }
+  ]
+}

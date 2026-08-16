@@ -1,0 +1,2445 @@
+{
+  "id": "c5-l13-dynamic-ui-zhcn",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "C5-L13: runtime/dynamic player-visible UI strings across 26 scripts (GUI HUD messages, popup/dialog window titles, stat breakdown prefixes, tooltip headers, orb names, interactable context text, floating combat text); internal identifiers, signal names, node paths and code structure untouched; CODE_PATCH on plaintext sources in 04_recovered",
+  "entities": [
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Constants.gd:83:15",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 实验之珠"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Constants.gd:84:16",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 磨砺之珠"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Constants.gd:85:14",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 强化之珠"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Constants.gd:86:15",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 知识之珠"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Constants.gd:87:21",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 腐化碎片"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/GUI/GUI.gd:88:14",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 击败突变体"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/GUI/GUI.gd:90:14",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 击杀 250 名敌人以完成关卡"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/GUI/GUI.gd:92:14",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 你的藏身处"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/GUI/GUI.gd:94:14",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 抵御敌人的无尽波次"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/GUI/GUI.gd:101:17",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 已满级"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/GUI/GUI.gd:110:111",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"等级：\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/GUI/GUI.gd:183:14",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"已完成区域等级 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/GUI/GUI.gd:189:93",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 是"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/GUI/GUI.gd:192:93",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 否"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/GUI/GUI.gd:202:18",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"受到 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/GUI/GUI.gd:205:18",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"暴击 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/GUI/GUI.gd:215:18",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \" 命中伤害\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/GUI/GUI.gd:221:18",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"拾取了 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Interactables/ClassChanger/ClassStatue.gd:7:8",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 更换职业"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Interactables/CraftingBench/CraftingBench.gd:6:8",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 物品与词缀加工"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Interactables/GearBench/SkillBench.gd:13:8",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 武器与技能"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Interactables/LoadoutBench/LoadoutBench.gd:6:8",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 装备"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Interactables/MutationBench/MutationBench.gd:6:8",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 被动升级"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Interactables/OutfitBench/OutfitBench.gd:6:8",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 外观装扮"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Interactables/Portal/Portal.gd:7:8",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 出发传送门"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Interactables/SharedStash/SharedStash.gd:7:8",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 仓库转移"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Interactables/SpecializationStatue/SpecializationStatue.gd:13:8",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 职业专精"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Pickups/Portal/PortalPickup.gd:8:15",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 返回藏身处？"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/DeathScreen.gd:42:107",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"本次得分：\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/DeathScreen.gd:47:113",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 得分过低"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/DeathScreen.gd:51:113",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"排名 \" + \"，得分 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/DeathScreen.gd:53:113",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 排名未发生变化"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/DeathScreen.gd:55:113",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 存档文件已被修改"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/DeathScreen.gd:59:113",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 上传得分时出错"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.gd:15:36",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"等级：\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.gd:44:22",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 永久删除该角色？"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd:77:87",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"物品等级：\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd:82:89",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"+\" + \"词缀效果\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd:159:31",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 永久删除该物品？"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd:82:15",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"重命名 \\\"\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.gd:106:25",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"物品等级：\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/MTXStore/MTXItem.gd:17:20",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 已拥有"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/ModHelp/ModTab.gd:11:14",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 可用词缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/ModHelp/ModTab.gd:25:14",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 仅掉落词缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd:10:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 前缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd:12:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 后缀"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd:14:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 固有"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd:16:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 未知"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd:55:14",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"词缀等级 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd:284:15",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 保存天赋树"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/Settings/Settings.gd:24:31",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 确定吗？此操作无法撤销。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/SkillSelect/SkillButton.gd:31:49",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"等级 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/SkillSelect/SkillList.gd:62:18",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 技能属性"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/SkillSelect/SkillList.gd:87:18",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 光环效果"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/SkillSelect/SkillSelect.gd:24:15",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 创建新技能配置"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/SkillSelect/SkillSelect.gd:39:15",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"重命名 \\\"\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/SkillSelect/SupportButton.gd:29:35",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"需求等级：\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/SpecializationPicker/SpecializationOption.gd:10:22",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"专精为\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/StarterPicker/StarterOption.gd:10:15",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"选择 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/EscapeMenu.gd:68:113",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"等级 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/EscapeMenu.gd:125:31",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 确定吗？"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/EscapeMenu.gd:150:124",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 详情"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/EscapeMenu.gd:157:124",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 隐藏"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/EscapeMenu.gd:171:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"基础 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/EscapeMenu.gd:177:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"额外 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/EscapeMenu.gd:182:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"提高 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/EscapeMenu.gd:188:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"更多 \""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/ItemTabContent.gd:17:40",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"当前等级：\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/ItemTabContent.gd:121:18",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 光环效果"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Stats.gd:629:35",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 格挡"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Stats.gd:637:35",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 闪避"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Stats.gd:671:35",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 护盾"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Stats.gd:734:35",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 招架"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Stats.gd:2030:35",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"+\" + \" 生命\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Tooltips/GeneTooltip/GeneInfo.gd:13:42",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"+\" + \"词缀效果\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Tooltips/GeneTooltip/GeneInfo.gd:46:40",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"物品等级：\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Tooltips/SkillTooltip/SkillTooltip.gd:113:18",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 光环效果"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/UI/ModItem.gd:38:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"词缀等级 %s: (%s - %s)\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/UI/ModItem.gd:39:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"\\n无法升级\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/UI/ModItem.gd:42:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"词缀等级已达上限: (%s - %s)\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/UI/ModItem.gd:44:19",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays \"词缀等级 %d: (%s - %s)\""
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/UI/ModItem.gd:57:18",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 已锁定"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/UI/ModItem.gd:61:18",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 已解锁"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/Constants.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Constants.gd:83:15",
+      "old_text": "OrbType.BLUE: \"Orb of Experimentation\",",
+      "new_text": "OrbType.BLUE: \"实验之珠\",",
+      "preimage_sha256": "06C720820CEFED096921535D7394CD37018DA59D900D99927D95A6784CCDCF44",
+      "expected_occurrences": 1,
+      "source_text": "Orb of Experimentation",
+      "translation": "实验之珠",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Constants.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Constants.gd:84:16",
+      "old_text": "OrbType.GREEN: \"Orb of Honing\",",
+      "new_text": "OrbType.GREEN: \"磨砺之珠\",",
+      "preimage_sha256": "06C720820CEFED096921535D7394CD37018DA59D900D99927D95A6784CCDCF44",
+      "expected_occurrences": 1,
+      "source_text": "Orb of Honing",
+      "translation": "磨砺之珠",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Constants.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Constants.gd:85:14",
+      "old_text": "OrbType.RED: \"Orb of Enhancement\",",
+      "new_text": "OrbType.RED: \"强化之珠\",",
+      "preimage_sha256": "06C720820CEFED096921535D7394CD37018DA59D900D99927D95A6784CCDCF44",
+      "expected_occurrences": 1,
+      "source_text": "Orb of Enhancement",
+      "translation": "强化之珠",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Constants.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Constants.gd:86:15",
+      "old_text": "OrbType.GOLD: \"Orb of Knowledge\",",
+      "new_text": "OrbType.GOLD: \"知识之珠\",",
+      "preimage_sha256": "06C720820CEFED096921535D7394CD37018DA59D900D99927D95A6784CCDCF44",
+      "expected_occurrences": 1,
+      "source_text": "Orb of Knowledge",
+      "translation": "知识之珠",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Constants.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Constants.gd:87:21",
+      "old_text": "OrbType.CORRUPTION: \"Corruption Shard\",",
+      "new_text": "OrbType.CORRUPTION: \"腐化碎片\",",
+      "preimage_sha256": "06C720820CEFED096921535D7394CD37018DA59D900D99927D95A6784CCDCF44",
+      "expected_occurrences": 1,
+      "source_text": "Corruption Shard",
+      "translation": "腐化碎片",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/GUI/GUI.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/GUI/GUI.gd:88:14",
+      "old_text": "show_message(\"Defeat the Mutant\")",
+      "new_text": "show_message(\"击败突变体\")",
+      "preimage_sha256": "7EDC7004492D3A1755EABFB45AE24E41951161CA63E26328C1D0DC34237C3976",
+      "expected_occurrences": 1,
+      "source_text": "Defeat the Mutant",
+      "translation": "击败突变体",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/GUI/GUI.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/GUI/GUI.gd:90:14",
+      "old_text": "show_message(\"Slay 250 Enemies to Complete Stage\")",
+      "new_text": "show_message(\"击杀 250 名敌人以完成关卡\")",
+      "preimage_sha256": "7EDC7004492D3A1755EABFB45AE24E41951161CA63E26328C1D0DC34237C3976",
+      "expected_occurrences": 1,
+      "source_text": "Slay 250 Enemies to Complete Stage",
+      "translation": "击杀 250 名敌人以完成关卡",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/GUI/GUI.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/GUI/GUI.gd:92:14",
+      "old_text": "show_message(\"Your Hideout\")",
+      "new_text": "show_message(\"你的藏身处\")",
+      "preimage_sha256": "7EDC7004492D3A1755EABFB45AE24E41951161CA63E26328C1D0DC34237C3976",
+      "expected_occurrences": 1,
+      "source_text": "Your Hideout",
+      "translation": "你的藏身处",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/GUI/GUI.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/GUI/GUI.gd:94:14",
+      "old_text": "show_message(\"Survive Endless Waves of Enemies\")",
+      "new_text": "show_message(\"抵御敌人的无尽波次\")",
+      "preimage_sha256": "7EDC7004492D3A1755EABFB45AE24E41951161CA63E26328C1D0DC34237C3976",
+      "expected_occurrences": 1,
+      "source_text": "Survive Endless Waves of Enemies",
+      "translation": "抵御敌人的无尽波次",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/GUI/GUI.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/GUI/GUI.gd:101:17",
+      "old_text": "xp_label.text = \"Maxed\"",
+      "new_text": "xp_label.text = \"已满级\"",
+      "preimage_sha256": "7EDC7004492D3A1755EABFB45AE24E41951161CA63E26328C1D0DC34237C3976",
+      "expected_occurrences": 1,
+      "source_text": "Maxed",
+      "translation": "已满级",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/GUI/GUI.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/GUI/GUI.gd:110:111",
+      "old_text": "$SkillBar / PanelContainer / VBoxContainer / VBoxContainer / MutationInfoContainer / MutationTierLabel.text = \"Level: \" + str(st.account_level) + \"\\n\" + PlayableClasses.get_class_name(cn, spec)",
+      "new_text": "$SkillBar / PanelContainer / VBoxContainer / VBoxContainer / MutationInfoContainer / MutationTierLabel.text = \"等级：\" + str(st.account_level) + \"\\n\" + PlayableClasses.get_class_name(cn, spec)",
+      "preimage_sha256": "7EDC7004492D3A1755EABFB45AE24E41951161CA63E26328C1D0DC34237C3976",
+      "expected_occurrences": 1,
+      "source_text": "\"Level: \"",
+      "translation": "\"等级：\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/GUI/GUI.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/GUI/GUI.gd:183:14",
+      "old_text": "show_message(\"Completed Zone Level \" + str(stage_level) + \" \" + stage_name, Colors.buffed)",
+      "new_text": "show_message(\"已完成区域等级 \" + str(stage_level) + \" \" + stage_name, Colors.buffed)",
+      "preimage_sha256": "7EDC7004492D3A1755EABFB45AE24E41951161CA63E26328C1D0DC34237C3976",
+      "expected_occurrences": 1,
+      "source_text": "\"Completed Zone Level \"",
+      "translation": "\"已完成区域等级 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/GUI/GUI.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/GUI/GUI.gd:189:93",
+      "old_text": "$LevelInfoContainer / MarginContainer / LevelInfo / ZoneCompletion / CompletionLabel.text = \"Yes\"",
+      "new_text": "$LevelInfoContainer / MarginContainer / LevelInfo / ZoneCompletion / CompletionLabel.text = \"是\"",
+      "preimage_sha256": "7EDC7004492D3A1755EABFB45AE24E41951161CA63E26328C1D0DC34237C3976",
+      "expected_occurrences": 1,
+      "source_text": "Yes",
+      "translation": "是",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/GUI/GUI.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/GUI/GUI.gd:192:93",
+      "old_text": "$LevelInfoContainer / MarginContainer / LevelInfo / ZoneCompletion / CompletionLabel.text = \"No\"",
+      "new_text": "$LevelInfoContainer / MarginContainer / LevelInfo / ZoneCompletion / CompletionLabel.text = \"否\"",
+      "preimage_sha256": "7EDC7004492D3A1755EABFB45AE24E41951161CA63E26328C1D0DC34237C3976",
+      "expected_occurrences": 1,
+      "source_text": "No",
+      "translation": "否",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/GUI/GUI.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/GUI/GUI.gd:202:18",
+      "old_text": "content.add_text(\"Took \")",
+      "new_text": "content.add_text(\"受到 \")",
+      "preimage_sha256": "7EDC7004492D3A1755EABFB45AE24E41951161CA63E26328C1D0DC34237C3976",
+      "expected_occurrences": 1,
+      "source_text": "\"Took \"",
+      "translation": "\"受到 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/GUI/GUI.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/GUI/GUI.gd:205:18",
+      "old_text": "content.add_text(\"Critical \")",
+      "new_text": "content.add_text(\"暴击 \")",
+      "preimage_sha256": "7EDC7004492D3A1755EABFB45AE24E41951161CA63E26328C1D0DC34237C3976",
+      "expected_occurrences": 1,
+      "source_text": "\"Critical \"",
+      "translation": "\"暴击 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/GUI/GUI.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/GUI/GUI.gd:215:18",
+      "old_text": "content.add_text(\" Hit Damage\")",
+      "new_text": "content.add_text(\" 命中伤害\")",
+      "preimage_sha256": "7EDC7004492D3A1755EABFB45AE24E41951161CA63E26328C1D0DC34237C3976",
+      "expected_occurrences": 1,
+      "source_text": "\" Hit Damage\"",
+      "translation": "\" 命中伤害\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/GUI/GUI.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/GUI/GUI.gd:221:18",
+      "old_text": "content.add_text(\"Picked up \")",
+      "new_text": "content.add_text(\"拾取了 \")",
+      "preimage_sha256": "7EDC7004492D3A1755EABFB45AE24E41951161CA63E26328C1D0DC34237C3976",
+      "expected_occurrences": 1,
+      "source_text": "\"Picked up \"",
+      "translation": "\"拾取了 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Interactables/ClassChanger/ClassStatue.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Interactables/ClassChanger/ClassStatue.gd:7:8",
+      "old_text": "return \"Change Character Class\"",
+      "new_text": "return \"更换职业\"",
+      "preimage_sha256": "B436E3FC0F9D7C8269DFFA55EF1B79965B6B54813A5056F4C3E3748C6C8C92BC",
+      "expected_occurrences": 1,
+      "source_text": "Change Character Class",
+      "translation": "更换职业",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Interactables/CraftingBench/CraftingBench.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Interactables/CraftingBench/CraftingBench.gd:6:8",
+      "old_text": "return \"Items and Item Modding\"",
+      "new_text": "return \"物品与词缀加工\"",
+      "preimage_sha256": "2690CCCC959B877FC840CAD8E644A66CB8279AC9E855F1FD097AE5BFD90C2607",
+      "expected_occurrences": 1,
+      "source_text": "Items and Item Modding",
+      "translation": "物品与词缀加工",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Interactables/GearBench/SkillBench.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Interactables/GearBench/SkillBench.gd:13:8",
+      "old_text": "return \"Weapons and Abilities\"",
+      "new_text": "return \"武器与技能\"",
+      "preimage_sha256": "73E4EF09DAC3C310D0D4D2DF299AA8F31B8768CE74D22285D84771142D3CAEAD",
+      "expected_occurrences": 1,
+      "source_text": "Weapons and Abilities",
+      "translation": "武器与技能",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Interactables/LoadoutBench/LoadoutBench.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Interactables/LoadoutBench/LoadoutBench.gd:6:8",
+      "old_text": "return \"Equipment\"",
+      "new_text": "return \"装备\"",
+      "preimage_sha256": "D885A39E4BAE4C5EC432ECFA653D7D94D26A249E4CA2728B6FDACB7BA44CC800",
+      "expected_occurrences": 1,
+      "source_text": "Equipment",
+      "translation": "装备",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Interactables/MutationBench/MutationBench.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Interactables/MutationBench/MutationBench.gd:6:8",
+      "old_text": "return \"Passive Upgrades\"",
+      "new_text": "return \"被动升级\"",
+      "preimage_sha256": "44F0D586D1490A2FF58955BB8139B726EE8868EA769F3937062DC30231B66861",
+      "expected_occurrences": 1,
+      "source_text": "Passive Upgrades",
+      "translation": "被动升级",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Interactables/OutfitBench/OutfitBench.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Interactables/OutfitBench/OutfitBench.gd:6:8",
+      "old_text": "return \"Cosmetic Outfits\"",
+      "new_text": "return \"外观装扮\"",
+      "preimage_sha256": "C09DD0FB3BFAF69D39AA63E2C1B23A6C8D0E75BD56471E42FD77FAE795C7E9AF",
+      "expected_occurrences": 1,
+      "source_text": "Cosmetic Outfits",
+      "translation": "外观装扮",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Interactables/Portal/Portal.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Interactables/Portal/Portal.gd:7:8",
+      "old_text": "return \"Departure Portal\"",
+      "new_text": "return \"出发传送门\"",
+      "preimage_sha256": "1DBA16B30D07A784A5E784E5E61C708027A786729D9B3256C7992BCA70EE003C",
+      "expected_occurrences": 1,
+      "source_text": "Departure Portal",
+      "translation": "出发传送门",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Interactables/SharedStash/SharedStash.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Interactables/SharedStash/SharedStash.gd:7:8",
+      "old_text": "return \"Stash Transfer\"",
+      "new_text": "return \"仓库转移\"",
+      "preimage_sha256": "95B1FF811654ADD510FC10FEDA6E19CF44261FD46AEB77B8CC8D960E105BD02D",
+      "expected_occurrences": 1,
+      "source_text": "Stash Transfer",
+      "translation": "仓库转移",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Interactables/SpecializationStatue/SpecializationStatue.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Interactables/SpecializationStatue/SpecializationStatue.gd:13:8",
+      "old_text": "return \"Class Specializations\"",
+      "new_text": "return \"职业专精\"",
+      "preimage_sha256": "AD31C245DBDE3CBBC32022814823C40207CB60FF00EF577825C52206E6E6117C",
+      "expected_occurrences": 1,
+      "source_text": "Class Specializations",
+      "translation": "职业专精",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Pickups/Portal/PortalPickup.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Pickups/Portal/PortalPickup.gd:8:15",
+      "old_text": "popup.title = \"Return to Hideout?\"",
+      "new_text": "popup.title = \"返回藏身处？\"",
+      "preimage_sha256": "D92550F666DA6DADE6A74A240CE73462CB66586D672D207AD75F30D18F93DAEF",
+      "expected_occurrences": 1,
+      "source_text": "Return to Hideout?",
+      "translation": "返回藏身处？",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/DeathScreen.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/DeathScreen.gd:42:107",
+      "old_text": "$CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ThisRunLabel.text = \"This Run Score: \" + str(computed_score)",
+      "new_text": "$CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ThisRunLabel.text = \"本次得分：\" + str(computed_score)",
+      "preimage_sha256": "11B4B9119F6B8ACA0A6B4F75B934F5ED3490E4A6AEDE2B5D24B902DE7BBB7AE3",
+      "expected_occurrences": 1,
+      "source_text": "\"This Run Score: \"",
+      "translation": "\"本次得分：\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/DeathScreen.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/DeathScreen.gd:47:113",
+      "old_text": "$CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ChallengeRankLabel.text = \"Score too low\"",
+      "new_text": "$CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ChallengeRankLabel.text = \"得分过低\"",
+      "preimage_sha256": "11B4B9119F6B8ACA0A6B4F75B934F5ED3490E4A6AEDE2B5D24B902DE7BBB7AE3",
+      "expected_occurrences": 2,
+      "source_text": "Score too low",
+      "translation": "得分过低",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/DeathScreen.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/DeathScreen.gd:51:113",
+      "old_text": "$CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ChallengeRankLabel.text = \"Rank \" + str(new_rank) + \" with a score of \" + str(score)",
+      "new_text": "$CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ChallengeRankLabel.text = \"排名 \" + str(new_rank) + \"，得分 \" + str(score)",
+      "preimage_sha256": "11B4B9119F6B8ACA0A6B4F75B934F5ED3490E4A6AEDE2B5D24B902DE7BBB7AE3",
+      "expected_occurrences": 1,
+      "source_text": "\"Rank \" + \" with a score of \"",
+      "translation": "\"排名 \" + \"，得分 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/DeathScreen.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/DeathScreen.gd:53:113",
+      "old_text": "$CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ChallengeRankLabel.text = \"Rank did not change\"",
+      "new_text": "$CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ChallengeRankLabel.text = \"排名未发生变化\"",
+      "preimage_sha256": "11B4B9119F6B8ACA0A6B4F75B934F5ED3490E4A6AEDE2B5D24B902DE7BBB7AE3",
+      "expected_occurrences": 1,
+      "source_text": "Rank did not change",
+      "translation": "排名未发生变化",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/DeathScreen.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/DeathScreen.gd:55:113",
+      "old_text": "$CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ChallengeRankLabel.text = \"Edited Save File\"",
+      "new_text": "$CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ChallengeRankLabel.text = \"存档文件已被修改\"",
+      "preimage_sha256": "11B4B9119F6B8ACA0A6B4F75B934F5ED3490E4A6AEDE2B5D24B902DE7BBB7AE3",
+      "expected_occurrences": 1,
+      "source_text": "Edited Save File",
+      "translation": "存档文件已被修改",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/DeathScreen.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/DeathScreen.gd:59:113",
+      "old_text": "$CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ChallengeRankLabel.text = \"Error Uploading Score\"",
+      "new_text": "$CenterContainer / PanelContainer / CenterContainer / ChallengeInfo / VBoxContainer / ChallengeRankLabel.text = \"上传得分时出错\"",
+      "preimage_sha256": "11B4B9119F6B8ACA0A6B4F75B934F5ED3490E4A6AEDE2B5D24B902DE7BBB7AE3",
+      "expected_occurrences": 1,
+      "source_text": "Error Uploading Score",
+      "translation": "上传得分时出错",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.gd:15:36",
+      "old_text": "$VBoxContainer / LevelLabel.text = \"Level: \" + str(save_stats.account_level)",
+      "new_text": "$VBoxContainer / LevelLabel.text = \"等级：\" + str(save_stats.account_level)",
+      "preimage_sha256": "BCD38F3C7E658CF16BB6946CF638FD4C3372FF51170AE1260D43421C5326DBC3",
+      "expected_occurrences": 1,
+      "source_text": "\"Level: \"",
+      "translation": "\"等级：\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.gd:44:22",
+      "old_text": "popup.window_title = \"Permanently Delete this Character?\"",
+      "new_text": "popup.window_title = \"永久删除该角色？\"",
+      "preimage_sha256": "BCD38F3C7E658CF16BB6946CF638FD4C3372FF51170AE1260D43421C5326DBC3",
+      "expected_occurrences": 1,
+      "source_text": "Permanently Delete this Character?",
+      "translation": "永久删除该角色？",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd:77:87",
+      "old_text": "$GeneEditor / VBoxContainer / HBoxContainer2 / VBoxContainer2 / GeneLevelLabel.text = \"Item Level: \" + str(gene.level)",
+      "new_text": "$GeneEditor / VBoxContainer / HBoxContainer2 / VBoxContainer2 / GeneLevelLabel.text = \"物品等级：\" + str(gene.level)",
+      "preimage_sha256": "7709C51836CAC84F47EC1EA0937B2011CC0670093B40743676F5C32537D638C9",
+      "expected_occurrences": 1,
+      "source_text": "\"Item Level: \"",
+      "translation": "\"物品等级：\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd:82:89",
+      "old_text": "$GeneEditor / VBoxContainer / HBoxContainer2 / VBoxContainer2 / GeneQualityLabel.text = \"+\" + str(gene.quality) + \"% Affix Effectiveness\"",
+      "new_text": "$GeneEditor / VBoxContainer / HBoxContainer2 / VBoxContainer2 / GeneQualityLabel.text = \"+\" + str(gene.quality) + \"词缀效果\"",
+      "preimage_sha256": "7709C51836CAC84F47EC1EA0937B2011CC0670093B40743676F5C32537D638C9",
+      "expected_occurrences": 1,
+      "source_text": "\"+\" + \"% Affix Effectiveness\"",
+      "translation": "\"+\" + \"词缀效果\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd:159:31",
+      "old_text": "confirm_dialog.window_title = \"Permanently Delete this Item?\"",
+      "new_text": "confirm_dialog.window_title = \"永久删除该物品？\"",
+      "preimage_sha256": "7709C51836CAC84F47EC1EA0937B2011CC0670093B40743676F5C32537D638C9",
+      "expected_occurrences": 1,
+      "source_text": "Permanently Delete this Item?",
+      "translation": "永久删除该物品？",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd:82:15",
+      "old_text": "popup.title = \"Rename \\\"\" + GameState.get_active_stats().selected_gene_loadout + \"\\\"\"",
+      "new_text": "popup.title = \"重命名 \\\"\" + GameState.get_active_stats().selected_gene_loadout + \"\\\"\"",
+      "preimage_sha256": "F0F7BE2A49D15B6E7B6996FA5CC0226971A60E27B2E73DFD7929C826259A1E39",
+      "expected_occurrences": 1,
+      "source_text": "\"Rename \\\"\"",
+      "translation": "\"重命名 \\\"\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.gd:106:25",
+      "old_text": "item_level_label.text = \"Item Level: \" + str(gene.level)",
+      "new_text": "item_level_label.text = \"物品等级：\" + str(gene.level)",
+      "preimage_sha256": "22667B5BB75E0A7A0981DD42685144D857080A923242E3FD4CEBF69F2842CF90",
+      "expected_occurrences": 1,
+      "source_text": "\"Item Level: \"",
+      "translation": "\"物品等级：\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/MTXStore/MTXItem.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/MTXStore/MTXItem.gd:17:20",
+      "old_text": "$PriceLabel.text = \"Owned\"",
+      "new_text": "$PriceLabel.text = \"已拥有\"",
+      "preimage_sha256": "E9DB63773C7E400DBFD9A88F2ABCCBC6555CE1E367F5947962EAE0A714858FBD",
+      "expected_occurrences": 1,
+      "source_text": "Owned",
+      "translation": "已拥有",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/ModHelp/ModTab.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/ModHelp/ModTab.gd:11:14",
+      "old_text": "label.text = \"Available Affixes\"",
+      "new_text": "label.text = \"可用词缀\"",
+      "preimage_sha256": "2C57B7318AB48F717473DF36DD51D375BF1145DBFC937B579E8DA01DFA73D50C",
+      "expected_occurrences": 1,
+      "source_text": "Available Affixes",
+      "translation": "可用词缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/ModHelp/ModTab.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/ModHelp/ModTab.gd:25:14",
+      "old_text": "label.text = \"Drop Only Mods\"",
+      "new_text": "label.text = \"仅掉落词缀\"",
+      "preimage_sha256": "2C57B7318AB48F717473DF36DD51D375BF1145DBFC937B579E8DA01DFA73D50C",
+      "expected_occurrences": 1,
+      "source_text": "Drop Only Mods",
+      "translation": "仅掉落词缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd:10:19",
+      "old_text": "$AffixType.text = \"Prefix\"",
+      "new_text": "$AffixType.text = \"前缀\"",
+      "preimage_sha256": "9E53616A8F71D7B0500EA42EB6ABE34B08501901DBB34029B8CDF9FD2952E269",
+      "expected_occurrences": 1,
+      "source_text": "Prefix",
+      "translation": "前缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd:12:19",
+      "old_text": "$AffixType.text = \"Suffix\"",
+      "new_text": "$AffixType.text = \"后缀\"",
+      "preimage_sha256": "9E53616A8F71D7B0500EA42EB6ABE34B08501901DBB34029B8CDF9FD2952E269",
+      "expected_occurrences": 1,
+      "source_text": "Suffix",
+      "translation": "后缀",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd:14:19",
+      "old_text": "$AffixType.text = \"Implicit\"",
+      "new_text": "$AffixType.text = \"固有\"",
+      "preimage_sha256": "9E53616A8F71D7B0500EA42EB6ABE34B08501901DBB34029B8CDF9FD2952E269",
+      "expected_occurrences": 1,
+      "source_text": "Implicit",
+      "translation": "固有",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd:16:19",
+      "old_text": "$AffixType.text = \"Unknown\"",
+      "new_text": "$AffixType.text = \"未知\"",
+      "preimage_sha256": "9E53616A8F71D7B0500EA42EB6ABE34B08501901DBB34029B8CDF9FD2952E269",
+      "expected_occurrences": 1,
+      "source_text": "Unknown",
+      "translation": "未知",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gd:55:14",
+      "old_text": "label.text = \"Mod Level \" + str(tier.tier) + \" (\" + str(tier.chance) + \"%) (Minimum Drop Level: \" + \\",
+      "new_text": "label.text = \"词缀等级 \" + str(tier.tier) + \" (\" + str(tier.chance) + \"%) (Minimum Drop Level: \" + \\",
+      "preimage_sha256": "9E53616A8F71D7B0500EA42EB6ABE34B08501901DBB34029B8CDF9FD2952E269",
+      "expected_occurrences": 1,
+      "source_text": "\"Mod Level \"",
+      "translation": "\"词缀等级 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd:284:15",
+      "old_text": "popup.title = \"Save Tree\"",
+      "new_text": "popup.title = \"保存天赋树\"",
+      "preimage_sha256": "27F855EECA47A060F824CC0C3624A096754B9EB81CB8984E888AF3D9B2AFDF0E",
+      "expected_occurrences": 1,
+      "source_text": "Save Tree",
+      "translation": "保存天赋树",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/Settings/Settings.gd:24:31",
+      "old_text": "confirm_dialog.window_title = \"Are you sure? This cannot be undone.\"",
+      "new_text": "confirm_dialog.window_title = \"确定吗？此操作无法撤销。\"",
+      "preimage_sha256": "1805BD8D0E1F411C3C7F669DEC7F97107DA3DD48BDA91AE429E71EE52D7EA35C",
+      "expected_occurrences": 1,
+      "source_text": "Are you sure? This cannot be undone.",
+      "translation": "确定吗？此操作无法撤销。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SkillSelect/SkillButton.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/SkillSelect/SkillButton.gd:31:49",
+      "old_text": "$SkillButton / VBoxContainer / NameLabel.text = \"Unlocks at level \" + str(SlotRequirements.get_required_level_for_skill(slot))",
+      "new_text": "$SkillButton / VBoxContainer / NameLabel.text = \"等级 \" + str(SlotRequirements.get_required_level_for_skill(slot))",
+      "preimage_sha256": "2D4C2B3B7A81D1CADE1D0C98AD71DB7E29574502EAFFEE4234254D6D33D5520B",
+      "expected_occurrences": 1,
+      "source_text": "\"Unlocks at level \"",
+      "translation": "\"等级 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SkillSelect/SkillList.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/SkillSelect/SkillList.gd:62:18",
+      "old_text": "content.add_text(\"Skill Stats\")",
+      "new_text": "content.add_text(\"技能属性\")",
+      "preimage_sha256": "CBD8EC56807C4C2FDED6BCEBAF3090D8B0D544E6252C6935D76C09A9C644CE6F",
+      "expected_occurrences": 1,
+      "source_text": "Skill Stats",
+      "translation": "技能属性",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SkillSelect/SkillList.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/SkillSelect/SkillList.gd:87:18",
+      "old_text": "content.add_text(\"Aura Effects\")",
+      "new_text": "content.add_text(\"光环效果\")",
+      "preimage_sha256": "CBD8EC56807C4C2FDED6BCEBAF3090D8B0D544E6252C6935D76C09A9C644CE6F",
+      "expected_occurrences": 1,
+      "source_text": "Aura Effects",
+      "translation": "光环效果",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SkillSelect/SkillSelect.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/SkillSelect/SkillSelect.gd:24:15",
+      "old_text": "popup.title = \"Create New Skill Loadout\"",
+      "new_text": "popup.title = \"创建新技能配置\"",
+      "preimage_sha256": "75919DA9E32FD330917D3E17FB956D5FAE4F1FCF10526D2842FA7B723BB2C0E7",
+      "expected_occurrences": 1,
+      "source_text": "Create New Skill Loadout",
+      "translation": "创建新技能配置",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SkillSelect/SkillSelect.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/SkillSelect/SkillSelect.gd:39:15",
+      "old_text": "popup.title = \"Rename \\\"\" + GameState.get_active_stats().selected_skill_loadout + \"\\\"\"",
+      "new_text": "popup.title = \"重命名 \\\"\" + GameState.get_active_stats().selected_skill_loadout + \"\\\"\"",
+      "preimage_sha256": "75919DA9E32FD330917D3E17FB956D5FAE4F1FCF10526D2842FA7B723BB2C0E7",
+      "expected_occurrences": 1,
+      "source_text": "\"Rename \\\"\"",
+      "translation": "\"重命名 \\\"\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SkillSelect/SupportButton.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/SkillSelect/SupportButton.gd:29:35",
+      "old_text": "$VBoxContainer / NameLabel.text = \"Req Level: \" + str(SlotRequirements.get_required_level_for_support(slot, support_slot))",
+      "new_text": "$VBoxContainer / NameLabel.text = \"需求等级：\" + str(SlotRequirements.get_required_level_for_support(slot, support_slot))",
+      "preimage_sha256": "7603014E11448F8E796E239DEB9AEB041185E28792A2C12CCFDDACCD456EFBF9",
+      "expected_occurrences": 1,
+      "source_text": "\"Req Level: \"",
+      "translation": "\"需求等级：\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/SpecializationPicker/SpecializationOption.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/SpecializationPicker/SpecializationOption.gd:10:22",
+      "old_text": "$ChooseButton.text = \"Specialize as a \" + cn",
+      "new_text": "$ChooseButton.text = \"专精为\" + cn",
+      "preimage_sha256": "B69A99DA1F15848205CA63417464233CFD5FD90E2B6036DE8B2CF39BF6572E52",
+      "expected_occurrences": 1,
+      "source_text": "\"Specialize as a \"",
+      "translation": "\"专精为\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/StarterPicker/StarterOption.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/StarterPicker/StarterOption.gd:10:15",
+      "old_text": "button.text = \"Choose \" + info.name",
+      "new_text": "button.text = \"选择 \" + info.name",
+      "preimage_sha256": "7B882E301D51F9C8202F0553E1CA81A31B227521892C346C7A4AA24166D65B52",
+      "expected_occurrences": 1,
+      "source_text": "\"Choose \"",
+      "translation": "\"选择 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/EscapeMenu.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/EscapeMenu.gd:68:113",
+      "old_text": "$CenterContainer / PanelContainer / VBoxContainer / HBoxContainer / VBoxContainer2 / CharacterLevelLabel.text = \"Level \" + str(save_stats.account_level) + \" \" + active_class_name",
+      "new_text": "$CenterContainer / PanelContainer / VBoxContainer / HBoxContainer / VBoxContainer2 / CharacterLevelLabel.text = \"等级 \" + str(save_stats.account_level) + \" \" + active_class_name",
+      "preimage_sha256": "F63F522F09D47D8361D37408B45E71A050AB0C556F6C8FF7DF9F820C66D6A49F",
+      "expected_occurrences": 1,
+      "source_text": "\"Level \"",
+      "translation": "\"等级 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/EscapeMenu.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/EscapeMenu.gd:125:31",
+      "old_text": "confirm_dialog.window_title = \"Are you sure?\"",
+      "new_text": "confirm_dialog.window_title = \"确定吗？\"",
+      "preimage_sha256": "F63F522F09D47D8361D37408B45E71A050AB0C556F6C8FF7DF9F820C66D6A49F",
+      "expected_occurrences": 1,
+      "source_text": "Are you sure?",
+      "translation": "确定吗？",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/EscapeMenu.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/EscapeMenu.gd:150:124",
+      "old_text": "$CenterContainer / PanelContainer / VBoxContainer / HBoxContainer / VBoxContainer / HBoxContainer / BreakdownButton.text = \"Details\"",
+      "new_text": "$CenterContainer / PanelContainer / VBoxContainer / HBoxContainer / VBoxContainer / HBoxContainer / BreakdownButton.text = \"详情\"",
+      "preimage_sha256": "F63F522F09D47D8361D37408B45E71A050AB0C556F6C8FF7DF9F820C66D6A49F",
+      "expected_occurrences": 1,
+      "source_text": "Details",
+      "translation": "详情",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/EscapeMenu.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/EscapeMenu.gd:157:124",
+      "old_text": "$CenterContainer / PanelContainer / VBoxContainer / HBoxContainer / VBoxContainer / HBoxContainer / BreakdownButton.text = \"Hide\"",
+      "new_text": "$CenterContainer / PanelContainer / VBoxContainer / HBoxContainer / VBoxContainer / HBoxContainer / BreakdownButton.text = \"隐藏\"",
+      "preimage_sha256": "F63F522F09D47D8361D37408B45E71A050AB0C556F6C8FF7DF9F820C66D6A49F",
+      "expected_occurrences": 1,
+      "source_text": "Hide",
+      "translation": "隐藏",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/EscapeMenu.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/EscapeMenu.gd:171:19",
+      "old_text": "label.stat_name = \"Base \" + StatsInfo.stat_name[stat] + \":\"",
+      "new_text": "label.stat_name = \"基础 \" + StatsInfo.stat_name[stat] + \":\"",
+      "preimage_sha256": "F63F522F09D47D8361D37408B45E71A050AB0C556F6C8FF7DF9F820C66D6A49F",
+      "expected_occurrences": 2,
+      "source_text": "\"Base \"",
+      "translation": "\"基础 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/EscapeMenu.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/EscapeMenu.gd:177:19",
+      "old_text": "label.stat_name = \"Added \" + StatsInfo.stat_name[stat] + \":\"",
+      "new_text": "label.stat_name = \"额外 \" + StatsInfo.stat_name[stat] + \":\"",
+      "preimage_sha256": "F63F522F09D47D8361D37408B45E71A050AB0C556F6C8FF7DF9F820C66D6A49F",
+      "expected_occurrences": 2,
+      "source_text": "\"Added \"",
+      "translation": "\"额外 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/EscapeMenu.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/EscapeMenu.gd:182:19",
+      "old_text": "label.stat_name = \"Increased \" + StatsInfo.stat_name[stat] + \":\"",
+      "new_text": "label.stat_name = \"提高 \" + StatsInfo.stat_name[stat] + \":\"",
+      "preimage_sha256": "F63F522F09D47D8361D37408B45E71A050AB0C556F6C8FF7DF9F820C66D6A49F",
+      "expected_occurrences": 2,
+      "source_text": "\"Increased \"",
+      "translation": "\"提高 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/EscapeMenu.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/EscapeMenu.gd:188:19",
+      "old_text": "label.stat_name = \"More \" + StatsInfo.stat_name[stat] + \":\"",
+      "new_text": "label.stat_name = \"更多 \" + StatsInfo.stat_name[stat] + \":\"",
+      "preimage_sha256": "F63F522F09D47D8361D37408B45E71A050AB0C556F6C8FF7DF9F820C66D6A49F",
+      "expected_occurrences": 2,
+      "source_text": "\"More \"",
+      "translation": "\"更多 \"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/ItemTabContent.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/ItemTabContent.gd:17:40",
+      "old_text": "$ItemTabContent / ItemTierLabel.text = \"Current Tier: \" + str(current_tier + 1)",
+      "new_text": "$ItemTabContent / ItemTierLabel.text = \"当前等级：\" + str(current_tier + 1)",
+      "preimage_sha256": "6D564BBCEC6E56428477D9294D5F6884D9D107447D0796D9B6D42FA9DB890285",
+      "expected_occurrences": 1,
+      "source_text": "\"Current Tier: \"",
+      "translation": "\"当前等级：\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Popups/ItemTabContent.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/ItemTabContent.gd:121:18",
+      "old_text": "content.add_text(\"Aura Effects\")",
+      "new_text": "content.add_text(\"光环效果\")",
+      "preimage_sha256": "6D564BBCEC6E56428477D9294D5F6884D9D107447D0796D9B6D42FA9DB890285",
+      "expected_occurrences": 1,
+      "source_text": "Aura Effects",
+      "translation": "光环效果",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Stats.gd:629:35",
+      "old_text": "$FloatingDamageManager.show_value(\"Block\", color)",
+      "new_text": "$FloatingDamageManager.show_value(\"格挡\", color)",
+      "preimage_sha256": "C187245E4F475E0928252610BB9D6D27FCB4A23C68754B4409DF5A6EB9997234",
+      "expected_occurrences": 1,
+      "source_text": "Block",
+      "translation": "格挡",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Stats.gd:637:35",
+      "old_text": "$FloatingDamageManager.show_value(\"Evade\", color)",
+      "new_text": "$FloatingDamageManager.show_value(\"闪避\", color)",
+      "preimage_sha256": "C187245E4F475E0928252610BB9D6D27FCB4A23C68754B4409DF5A6EB9997234",
+      "expected_occurrences": 1,
+      "source_text": "Evade",
+      "translation": "闪避",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Stats.gd:671:35",
+      "old_text": "$FloatingDamageManager.show_value(\"Shielded\", Color.purple)",
+      "new_text": "$FloatingDamageManager.show_value(\"护盾\", Color.purple)",
+      "preimage_sha256": "C187245E4F475E0928252610BB9D6D27FCB4A23C68754B4409DF5A6EB9997234",
+      "expected_occurrences": 1,
+      "source_text": "Shielded",
+      "translation": "护盾",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Stats.gd:734:35",
+      "old_text": "$FloatingDamageManager.show_value(\"Deflect\", color)",
+      "new_text": "$FloatingDamageManager.show_value(\"招架\", color)",
+      "preimage_sha256": "C187245E4F475E0928252610BB9D6D27FCB4A23C68754B4409DF5A6EB9997234",
+      "expected_occurrences": 1,
+      "source_text": "Deflect",
+      "translation": "招架",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Stats.gd:2030:35",
+      "old_text": "$FloatingDamageManager.show_value(\"+\" + str(recovered) + \" hp\", Colors.healing)",
+      "new_text": "$FloatingDamageManager.show_value(\"+\" + str(recovered) + \" 生命\", Colors.healing)",
+      "preimage_sha256": "C187245E4F475E0928252610BB9D6D27FCB4A23C68754B4409DF5A6EB9997234",
+      "expected_occurrences": 1,
+      "source_text": "\"+\" + \" hp\"",
+      "translation": "\"+\" + \" 生命\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Tooltips/GeneTooltip/GeneInfo.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Tooltips/GeneTooltip/GeneInfo.gd:13:42",
+      "old_text": "$VBoxContainer / GeneQualityLabel.text = \"+\" + str(gene.quality) + \"% Affix Effectiveness\"",
+      "new_text": "$VBoxContainer / GeneQualityLabel.text = \"+\" + str(gene.quality) + \"词缀效果\"",
+      "preimage_sha256": "91F67E0A18EBA3F0993B5087C030423B2AD099A8B5AF7FE84D4B2ABA086D45FC",
+      "expected_occurrences": 1,
+      "source_text": "\"+\" + \"% Affix Effectiveness\"",
+      "translation": "\"+\" + \"词缀效果\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Tooltips/GeneTooltip/GeneInfo.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Tooltips/GeneTooltip/GeneInfo.gd:46:40",
+      "old_text": "$VBoxContainer / GeneLevelLabel.text = \"Item Level: \" + str(gene.level)",
+      "new_text": "$VBoxContainer / GeneLevelLabel.text = \"物品等级：\" + str(gene.level)",
+      "preimage_sha256": "91F67E0A18EBA3F0993B5087C030423B2AD099A8B5AF7FE84D4B2ABA086D45FC",
+      "expected_occurrences": 1,
+      "source_text": "\"Item Level: \"",
+      "translation": "\"物品等级：\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/Tooltips/SkillTooltip/SkillTooltip.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Tooltips/SkillTooltip/SkillTooltip.gd:113:18",
+      "old_text": "content.add_text(\"Aura Effects\")",
+      "new_text": "content.add_text(\"光环效果\")",
+      "preimage_sha256": "990BB7F27B4A6EDB87E644418B1B8C778E9ED60323926801891570C1F2688E37",
+      "expected_occurrences": 1,
+      "source_text": "Aura Effects",
+      "translation": "光环效果",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/UI/ModItem.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/UI/ModItem.gd:38:19",
+      "old_text": "mod_label.text += \"Mod Level %s: (%s - %s)\" % [mod.tier + 1, roll_range.min_formatted, roll_range.max_formatted]",
+      "new_text": "mod_label.text += \"词缀等级 %s: (%s - %s)\" % [mod.tier + 1, roll_range.min_formatted, roll_range.max_formatted]",
+      "preimage_sha256": "0A7720AC1C5CD0972456F1B0B3CAF23FAF3541635910D44E3F79786C0EC8E70C",
+      "expected_occurrences": 1,
+      "source_text": "\"Mod Level %s: (%s - %s)\"",
+      "translation": "\"词缀等级 %s: (%s - %s)\"",
+      "placeholders": [
+        "%s",
+        "%s",
+        "%s"
+      ],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/UI/ModItem.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/UI/ModItem.gd:39:19",
+      "old_text": "mod_label.text += \"\\nDrop Only: Cannot be upgraded\"",
+      "new_text": "mod_label.text += \"\\n无法升级\"",
+      "preimage_sha256": "0A7720AC1C5CD0972456F1B0B3CAF23FAF3541635910D44E3F79786C0EC8E70C",
+      "expected_occurrences": 1,
+      "source_text": "\"\\nDrop Only: Cannot be upgraded\"",
+      "translation": "\"\\n无法升级\"",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/UI/ModItem.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/UI/ModItem.gd:42:19",
+      "old_text": "mod_label.text += \"Mod Level Maxed: (%s - %s)\" % [roll_range.min_formatted, roll_range.max_formatted]",
+      "new_text": "mod_label.text += \"词缀等级已达上限: (%s - %s)\" % [roll_range.min_formatted, roll_range.max_formatted]",
+      "preimage_sha256": "0A7720AC1C5CD0972456F1B0B3CAF23FAF3541635910D44E3F79786C0EC8E70C",
+      "expected_occurrences": 1,
+      "source_text": "\"Mod Level Maxed: (%s - %s)\"",
+      "translation": "\"词缀等级已达上限: (%s - %s)\"",
+      "placeholders": [
+        "%s",
+        "%s"
+      ],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/UI/ModItem.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/UI/ModItem.gd:44:19",
+      "old_text": "mod_label.text += \"Mod Level %d: (%s - %s)\" % [mod.tier + 1, roll_range.min_formatted, roll_range.max_formatted]",
+      "new_text": "mod_label.text += \"词缀等级 %d: (%s - %s)\" % [mod.tier + 1, roll_range.min_formatted, roll_range.max_formatted]",
+      "preimage_sha256": "0A7720AC1C5CD0972456F1B0B3CAF23FAF3541635910D44E3F79786C0EC8E70C",
+      "expected_occurrences": 1,
+      "source_text": "\"Mod Level %d: (%s - %s)\"",
+      "translation": "\"词缀等级 %d: (%s - %s)\"",
+      "placeholders": [
+        "%d",
+        "%s",
+        "%s"
+      ],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/UI/ModItem.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/UI/ModItem.gd:57:18",
+      "old_text": "lock_icon.text = \"Locked\"",
+      "new_text": "lock_icon.text = \"已锁定\"",
+      "preimage_sha256": "0A7720AC1C5CD0972456F1B0B3CAF23FAF3541635910D44E3F79786C0EC8E70C",
+      "expected_occurrences": 1,
+      "source_text": "Locked",
+      "translation": "已锁定",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Scenes/UI/ModItem.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/UI/ModItem.gd:61:18",
+      "old_text": "lock_icon.text = \"Unlocked\"",
+      "new_text": "lock_icon.text = \"已解锁\"",
+      "preimage_sha256": "0A7720AC1C5CD0972456F1B0B3CAF23FAF3541635910D44E3F79786C0EC8E70C",
+      "expected_occurrences": 1,
+      "source_text": "Unlocked",
+      "translation": "已解锁",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "resource_contract",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_dynamic_ui_zhcn"
+  ],
+  "not_proven": "visual layout quality, persistence, gameplay, broad localization, or release readiness"
+}

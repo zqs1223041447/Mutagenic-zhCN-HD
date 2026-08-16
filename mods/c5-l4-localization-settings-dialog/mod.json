@@ -1,0 +1,91 @@
+{
+  "id": "c5-l4-localization-settings-dialog",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": ["c5-l3-localization-character-class-dialogs"],
+  "conflicts": [],
+  "scope": "settings_dialog_static_navigation",
+  "entities": [
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/Settings/Settings.tscn:39:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the settings dialog title displays 设置"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/Settings/Settings.tscn:57:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the settings dialog return button displays 关闭设置"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Popups/Dialogs/Settings/Settings.tscn:63:9",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the settings dialog keybinding button displays 按键设置"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/Settings/Settings.tscn:39:9",
+      "old_text": "text = \"Settings\"",
+      "new_text": "text = \"设置\"",
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE",
+      "expected_occurrences": 1,
+      "source_text": "Settings",
+      "translation": "设置",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": ["unit_id_exact_match", "placeholder_conservation", "token_conservation", "resource_contract", "declared_delta"]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/Settings/Settings.tscn:57:9",
+      "old_text": "text = \"Close Settings\"",
+      "new_text": "text = \"关闭设置\"",
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE",
+      "expected_occurrences": 1,
+      "source_text": "Close Settings",
+      "translation": "关闭设置",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": ["unit_id_exact_match", "placeholder_conservation", "token_conservation", "resource_contract", "declared_delta"]
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/Settings/Settings.tscn:63:9",
+      "old_text": "text = \"Keybindings\"",
+      "new_text": "text = \"按键设置\"",
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE",
+      "expected_occurrences": 1,
+      "source_text": "Keybindings",
+      "translation": "按键设置",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": ["unit_id_exact_match", "placeholder_conservation", "token_conservation", "resource_contract", "declared_delta"]
+    }
+  ],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "settings_resource_contract",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_settings_dialog"
+  ],
+  "not_proven": "other settings controls, keybinding interaction, persistence, broad localization, or release readiness"
+}

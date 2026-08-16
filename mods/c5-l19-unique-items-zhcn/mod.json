@@ -1,0 +1,1361 @@
+{
+  "id": "c5-l19-unique-items-zhcn",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "C5-L19: unique item display names and flavor texts across 2 UniquePools scripts (UniquePoolGeneric.gd 23 items, UniquePoolSOTA.gd 1 item); internal identifiers (pool keys, mod_id strings, texture vars) untouched",
+  "entities": [
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:32:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 扩张护符"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:33:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 扩大你的范围。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:48:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 酷寒"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:49:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 外面真冷……"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:70:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 平衡压迫"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:71:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 有人爱热，有人爱冷。为何不能兼得？"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:91:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 冰冠"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:92:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 寒冷孕育黑暗。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:109:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 罪恶回响"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:110:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 往日的火焰仍带着恶意持续燃烧。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:136:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 愈战愈强"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:137:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 最好的进攻就是出色的防守。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:155:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 角斗士的决心"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:156:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 有时必须挨上一击，才能坚持到最后。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:180:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 钓鱼竿"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:181:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 算不上什么好东西，但暂时够用了。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:199:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 水银剧毒"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:200:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 毒素泛着金属般的微光。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:227:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 碎颅锤"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:228:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 它很大。又大又重。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:248:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 蔓延之火"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:249:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 当风助长一点小火苗，就需要一片森林才能扑灭。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:272:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 食人魔护符"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:273:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 更大的心脏燃起更旺的火焰。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:290:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 猎豹之靴"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:291:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 脚步轻盈，活力十足。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:308:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 工匠的玩具"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:309:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 有时候，仅仅是有时候，捣鼓炸弹并不危险。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:324:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 冰冻泥沼"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:325:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 一阵狂热的寒冷席卷你的敌人。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:340:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 哥布林腰带"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:341:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 哥布林离不开部落。一个由增益小丑组成的部落。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:360:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 寒灼"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:361:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 灼烧感被麻木取代，痛楚不再明显。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:378:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 回响之怒"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:379:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 创伤的记忆在幸存者中萦绕不散。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:396:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 棱彩之弓"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:397:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 拉弦之间，元素之惧涌来。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:422:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 染血指节"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:423:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 你身怀绝技的证明。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:438:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 长者守护"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:439:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 在危急时刻成为坚定的守护者。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:462:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 力量平衡"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:463:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 源源不断的旋转之力。"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolSOTA.gd:10:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 古灵护符"
+    },
+    {
+      "kind": "localization_unit",
+      "id": "Globals/Genes/UniquePools/UniquePoolSOTA.gd:11:2",
+      "classification": "DISPLAY_SAFE",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "displays 远古之灵的凭证。"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:32:2",
+      "old_text": "\"name\": \"Expansion Charm\",",
+      "new_text": "\"name\": \"扩张护符\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Expansion Charm",
+      "translation": "扩张护符",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:33:2",
+      "old_text": "\"flavor\": \"Increase your reach.\",",
+      "new_text": "\"flavor\": \"扩大你的范围。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Increase your reach.",
+      "translation": "扩大你的范围。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:48:2",
+      "old_text": "\"name\": \"Harrowing Cold\",",
+      "new_text": "\"name\": \"酷寒\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Harrowing Cold",
+      "translation": "酷寒",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:49:2",
+      "old_text": "\"flavor\": \"It's cold outside...\",",
+      "new_text": "\"flavor\": \"外面真冷……\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "It's cold outside...",
+      "translation": "外面真冷……",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:70:2",
+      "old_text": "\"name\": \"Balanced Oppression\",",
+      "new_text": "\"name\": \"平衡压迫\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Balanced Oppression",
+      "translation": "平衡压迫",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:71:2",
+      "old_text": "\"flavor\": \"Some love the heat, some love the cold. Why not both?\",",
+      "new_text": "\"flavor\": \"有人爱热，有人爱冷。为何不能兼得？\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Some love the heat, some love the cold. Why not both?",
+      "translation": "有人爱热，有人爱冷。为何不能兼得？",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:91:2",
+      "old_text": "\"name\": \"Ice Crown\",",
+      "new_text": "\"name\": \"冰冠\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Ice Crown",
+      "translation": "冰冠",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:92:2",
+      "old_text": "\"flavor\": \"From the cold comes darkness.\",",
+      "new_text": "\"flavor\": \"寒冷孕育黑暗。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "From the cold comes darkness.",
+      "translation": "寒冷孕育黑暗。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:109:2",
+      "old_text": "\"name\": \"Echoes of Sin\",",
+      "new_text": "\"name\": \"罪恶回响\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Echoes of Sin",
+      "translation": "罪恶回响",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:110:2",
+      "old_text": "\"flavor\": \"Fires of the past continue to burn with a malignant taste.\",",
+      "new_text": "\"flavor\": \"往日的火焰仍带着恶意持续燃烧。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Fires of the past continue to burn with a malignant taste.",
+      "translation": "往日的火焰仍带着恶意持续燃烧。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:136:2",
+      "old_text": "\"name\": \"Strength from Strength\",",
+      "new_text": "\"name\": \"愈战愈强\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Strength from Strength",
+      "translation": "愈战愈强",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:137:2",
+      "old_text": "\"flavor\": \"The best offense is a good defense.\",",
+      "new_text": "\"flavor\": \"最好的进攻就是出色的防守。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "The best offense is a good defense.",
+      "translation": "最好的进攻就是出色的防守。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:155:2",
+      "old_text": "\"name\": \"Gladiators Resolve\",",
+      "new_text": "\"name\": \"角斗士的决心\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Gladiators Resolve",
+      "translation": "角斗士的决心",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:156:2",
+      "old_text": "\"flavor\": \"Sometimes one must take a hit to make it through to the end.\",",
+      "new_text": "\"flavor\": \"有时必须挨上一击，才能坚持到最后。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Sometimes one must take a hit to make it through to the end.",
+      "translation": "有时必须挨上一击，才能坚持到最后。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:180:2",
+      "old_text": "\"name\": \"Fishing Rod\",",
+      "new_text": "\"name\": \"钓鱼竿\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Fishing Rod",
+      "translation": "钓鱼竿",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:181:2",
+      "old_text": "\"flavor\": \"It's not much, but it'll do for now.\",",
+      "new_text": "\"flavor\": \"算不上什么好东西，但暂时够用了。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "It's not much, but it'll do for now.",
+      "translation": "算不上什么好东西，但暂时够用了。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:199:2",
+      "old_text": "\"name\": \"Mercurial Venom\",",
+      "new_text": "\"name\": \"水银剧毒\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Mercurial Venom",
+      "translation": "水银剧毒",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:200:2",
+      "old_text": "\"flavor\": \"The toxin had a metallic shimmer.\",",
+      "new_text": "\"flavor\": \"毒素泛着金属般的微光。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "The toxin had a metallic shimmer.",
+      "translation": "毒素泛着金属般的微光。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:227:2",
+      "old_text": "\"name\": \"Skull Crusher\",",
+      "new_text": "\"name\": \"碎颅锤\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Skull Crusher",
+      "translation": "碎颅锤",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:228:2",
+      "old_text": "\"flavor\": \"It's big. Big and heavy.\",",
+      "new_text": "\"flavor\": \"它很大。又大又重。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "It's big. Big and heavy.",
+      "translation": "它很大。又大又重。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:248:2",
+      "old_text": "\"name\": \"Spreading Flames\",",
+      "new_text": "\"name\": \"蔓延之火\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Spreading Flames",
+      "translation": "蔓延之火",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:249:2",
+      "old_text": "\"flavor\": \"When the wind catches a small flame, a forest is needed to put it out.\",",
+      "new_text": "\"flavor\": \"当风助长一点小火苗，就需要一片森林才能扑灭。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "When the wind catches a small flame, a forest is needed to put it out.",
+      "translation": "当风助长一点小火苗，就需要一片森林才能扑灭。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:272:2",
+      "old_text": "\"name\": \"Ogre Talisman\",",
+      "new_text": "\"name\": \"食人魔护符\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Ogre Talisman",
+      "translation": "食人魔护符",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:273:2",
+      "old_text": "\"flavor\": \"Fire burns hotter in a bigger heart.\",",
+      "new_text": "\"flavor\": \"更大的心脏燃起更旺的火焰。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Fire burns hotter in a bigger heart.",
+      "translation": "更大的心脏燃起更旺的火焰。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:290:2",
+      "old_text": "\"name\": \"Cheat-ahs\",",
+      "new_text": "\"name\": \"猎豹之靴\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Cheat-ahs",
+      "translation": "猎豹之靴",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:291:2",
+      "old_text": "\"flavor\": \"A little pep in your step.\",",
+      "new_text": "\"flavor\": \"脚步轻盈，活力十足。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "A little pep in your step.",
+      "translation": "脚步轻盈，活力十足。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:308:2",
+      "old_text": "\"name\": \"Tinkerer's Toy\",",
+      "new_text": "\"name\": \"工匠的玩具\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Tinkerer's Toy",
+      "translation": "工匠的玩具",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:309:2",
+      "old_text": "\"flavor\": \"Sometimes, just sometimes, tinkering with a bomb isn't dangerous.\",",
+      "new_text": "\"flavor\": \"有时候，仅仅是有时候，捣鼓炸弹并不危险。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Sometimes, just sometimes, tinkering with a bomb isn't dangerous.",
+      "translation": "有时候，仅仅是有时候，捣鼓炸弹并不危险。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:324:2",
+      "old_text": "\"name\": \"Frozen Sludge\",",
+      "new_text": "\"name\": \"冰冻泥沼\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Frozen Sludge",
+      "translation": "冰冻泥沼",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:325:2",
+      "old_text": "\"flavor\": \"A feverish cold comes over your foes.\",",
+      "new_text": "\"flavor\": \"一阵狂热的寒冷席卷你的敌人。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "A feverish cold comes over your foes.",
+      "translation": "一阵狂热的寒冷席卷你的敌人。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:340:2",
+      "old_text": "\"name\": \"Goblin's Girdle\",",
+      "new_text": "\"name\": \"哥布林腰带\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Goblin's Girdle",
+      "translation": "哥布林腰带",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:341:2",
+      "old_text": "\"flavor\": \"A goblin is alone without a tribe. A tribe of Buff-Boons.\",",
+      "new_text": "\"flavor\": \"哥布林离不开部落。一个由增益小丑组成的部落。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "A goblin is alone without a tribe. A tribe of Buff-Boons.",
+      "translation": "哥布林离不开部落。一个由增益小丑组成的部落。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:360:2",
+      "old_text": "\"name\": \"Chillburn\",",
+      "new_text": "\"name\": \"寒灼\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Chillburn",
+      "translation": "寒灼",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:361:2",
+      "old_text": "\"flavor\": \"Burning sensations are replaced by numbness to the pain.\",",
+      "new_text": "\"flavor\": \"灼烧感被麻木取代，痛楚不再明显。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Burning sensations are replaced by numbness to the pain.",
+      "translation": "灼烧感被麻木取代，痛楚不再明显。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:378:2",
+      "old_text": "\"name\": \"Echoing Fury\",",
+      "new_text": "\"name\": \"回响之怒\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Echoing Fury",
+      "translation": "回响之怒",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:379:2",
+      "old_text": "\"flavor\": \"Memories of trauma linger amongst the survivors.\",",
+      "new_text": "\"flavor\": \"创伤的记忆在幸存者中萦绕不散。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Memories of trauma linger amongst the survivors.",
+      "translation": "创伤的记忆在幸存者中萦绕不散。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:396:2",
+      "old_text": "\"name\": \"Prismatic Bow\",",
+      "new_text": "\"name\": \"棱彩之弓\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Prismatic Bow",
+      "translation": "棱彩之弓",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:397:2",
+      "old_text": "\"flavor\": \"Elemental dread at the pull of a string.\",",
+      "new_text": "\"flavor\": \"拉弦之间，元素之惧涌来。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Elemental dread at the pull of a string.",
+      "translation": "拉弦之间，元素之惧涌来。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:422:2",
+      "old_text": "\"name\": \"Bloody Knuckles\",",
+      "new_text": "\"name\": \"染血指节\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Bloody Knuckles",
+      "translation": "染血指节",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:423:2",
+      "old_text": "\"flavor\": \"Reminders of the skill you possess.\",",
+      "new_text": "\"flavor\": \"你身怀绝技的证明。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Reminders of the skill you possess.",
+      "translation": "你身怀绝技的证明。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:438:2",
+      "old_text": "\"name\": \"Elder Ward\",",
+      "new_text": "\"name\": \"长者守护\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Elder Ward",
+      "translation": "长者守护",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:439:2",
+      "old_text": "\"flavor\": \"Become a stalwart defender in critical times.\",",
+      "new_text": "\"flavor\": \"在危急时刻成为坚定的守护者。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Become a stalwart defender in critical times.",
+      "translation": "在危急时刻成为坚定的守护者。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:462:2",
+      "old_text": "\"name\": \"Balance of Power\",",
+      "new_text": "\"name\": \"力量平衡\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "Balance of Power",
+      "translation": "力量平衡",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolGeneric.gd:463:2",
+      "old_text": "\"flavor\": \"A steady stream of rotational power.\",",
+      "new_text": "\"flavor\": \"源源不断的旋转之力。\",",
+      "preimage_sha256": "D4D305C36EC7EA3B7D58645944AC7F94B19F3F47C6148C3E85349439138180F4",
+      "expected_occurrences": 1,
+      "source_text": "A steady stream of rotational power.",
+      "translation": "源源不断的旋转之力。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolSOTA.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolSOTA.gd:10:2",
+      "old_text": "\"name\": \"Ancient's Charm\",",
+      "new_text": "\"name\": \"古灵护符\",",
+      "preimage_sha256": "9A54F7C60E79B682E114061DFBB324BD0B559D5A79D0CA3F96336E63D49483EC",
+      "expected_occurrences": 1,
+      "source_text": "Ancient's Charm",
+      "translation": "古灵护符",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    },
+    {
+      "path": "Globals/Genes/UniquePools/UniquePoolSOTA.gd",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Globals/Genes/UniquePools/UniquePoolSOTA.gd:11:2",
+      "old_text": "\"flavor\": \"A token of the Ancient Spirit.\",",
+      "new_text": "\"flavor\": \"远古之灵的凭证。\",",
+      "preimage_sha256": "9A54F7C60E79B682E114061DFBB324BD0B559D5A79D0CA3F96336E63D49483EC",
+      "expected_occurrences": 1,
+      "source_text": "A token of the Ancient Spirit.",
+      "translation": "远古之灵的凭证。",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta",
+        "compiled_script_load"
+      ]
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "resource_contract",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_unique_items_zhcn"
+  ],
+  "not_proven": "visual layout quality, persistence, gameplay, broad localization, or release readiness"
+}

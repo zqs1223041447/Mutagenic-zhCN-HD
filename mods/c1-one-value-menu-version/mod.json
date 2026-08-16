@@ -1,0 +1,28 @@
+{
+  "id": "c1-one-value-menu-version",
+  "version": "0.1.0",
+  "patch_type": "VALUE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "entities": [
+    {
+      "kind": "menu_display_value",
+      "id": "Constants.GAME_VERSION",
+      "confidence": "FACT",
+      "expected_runtime_effect": "the main-menu Build label displays EA 0.6.2 [C1-VALUE]"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/Constants.gd",
+      "field": "GAME_VERSION",
+      "classification": "VALUE_PATCH",
+      "preimage_sha256": "06C720820CEFED096921535D7394CD37018DA59D900D99927D95A6784CCDCF44",
+      "old_text": "var GAME_VERSION = \"EA 0.6.2\"",
+      "new_text": "var GAME_VERSION = \"EA 0.6.2 [C1-VALUE]\"",
+      "expected_occurrences": 1,
+      "tests": ["structural_delta", "compiled_script_load", "boot", "menu_version_visual_check"]
+    }
+  ]
+}

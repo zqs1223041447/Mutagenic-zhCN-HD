@@ -1,0 +1,31 @@
+{
+  "id": "mm-monster-speed-skeleton-archer",
+  "scope": "NL2MOD validation: Skeleton Archer movement_speed 65.0 -> 78.0 (+20%) via MonsterStats.gd stat_overrides",
+  "patch_type": "CODE_PATCH",
+  "entities": [
+    {
+      "kind": "monster_stat_override",
+      "id": "Globals/MonsterStats/MonsterStats.gd::SKELETON_ARCHER::stat_overrides::movement_speed",
+      "confidence": "FACT",
+      "expected_runtime_effect": "Skeleton Archer movement speed 65.0 -> 78.0 in the monster_stats registry"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/MonsterStats/MonsterStats.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/MonsterStats/MonsterStats.gd::SKELETON_ARCHER::movement_speed",
+      "old_text": "\t\t\t\t\t\t\t\t\"name\": \"Skeleton Archer\", \n\t\t\t\t\t\t\t\t\"damage\": 5, \n\t\t\t\t\t\t\t\t\"damage_type\": SkillTags.Tags.PHYSICAL, \n\t\t\t\t\t\t\t\t\"attack_range\": 50, \n\t\t\t\t\t\t\t\t\"attack_time\": 0.6, \n\t\t\t\t\t\t\t\t\"attack_delay\": 0.7, \n\t\t\t\t\t\t\t\t\"xp\": 1, \n\t\t\t\t\t\t\t\t\"min_lifetime\": 60, \n\t\t\t\t\t\t\t\t\"stat_overrides\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\"health_max\": 5.0, \n\t\t\t\t\t\t\t\t\t\t\t\t\"movement_speed\": 65.0, ",
+      "new_text": "\t\t\t\t\t\t\t\t\"name\": \"Skeleton Archer\", \n\t\t\t\t\t\t\t\t\"damage\": 5, \n\t\t\t\t\t\t\t\t\"damage_type\": SkillTags.Tags.PHYSICAL, \n\t\t\t\t\t\t\t\t\"attack_range\": 50, \n\t\t\t\t\t\t\t\t\"attack_time\": 0.6, \n\t\t\t\t\t\t\t\t\"attack_delay\": 0.7, \n\t\t\t\t\t\t\t\t\"xp\": 1, \n\t\t\t\t\t\t\t\t\"min_lifetime\": 60, \n\t\t\t\t\t\t\t\t\"stat_overrides\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\"health_max\": 5.0, \n\t\t\t\t\t\t\t\t\t\t\t\t\"movement_speed\": 78.0, ",
+      "expected_occurrences": 1
+    }
+  ],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "boot"
+  ],
+  "not_proven": "in-game observable speed change without human confirmation"
+}

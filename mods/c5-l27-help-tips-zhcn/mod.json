@@ -1,0 +1,161 @@
+{
+  "id": "c5-l27-help-tips-zhcn",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "Translate tutorial/help tip popups: GeneTip, LevelupTip, LoadoutScreenTip, NoWeaponWarning, OrbTip, SpecializationTip, WeaponIntro. All have bbcode_text + plain text fallback.",
+  "entities": [],
+  "patches": [
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/LevelupTip/LevelupTip.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "bbcode_text = \"[center]Leveling Up[/center]\r\n\r\nAs you kill monsters, you will gain experience points. Collecting experience points will increase your characters power level, and allow you to spend Mutation Points in your Passive Tree by visiting your Hideout!\r\n\r\nEach level grants you +10 Maximum Health and a Mutation Point.\r\n\r\nBe sure to fight monsters in higher zone levels as you level up, as lower level monsters grant diminishing amounts of experience.\"",
+      "new_text": "bbcode_text = \"[center]升级[/center]\r\n\r\n击杀怪物可获得经验值。积累经验值将提升角色等级，并允许你在藏身处消耗天赋点数投入天赋树！\r\n\r\n每升一级获得 +10 最大生命值和 1 点天赋点数。\r\n\r\n随着等级提升，请在更高等级的区域战斗——低级怪物提供的经验值会递减。\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "41FFCDED30372BDAC44C1DF78F7440851C0DCA0C10DA2A5900B690C089124A91"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/LevelupTip/LevelupTip.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Leveling Up\r\n\r\nAs you kill monsters, you will gain experience points. Collecting experience points will increase your characters power level, and allow you to spend Mutation Points in your Passive Tree by visiting your Hideout!\r\n\r\nEach level grants you +10 Maximum Health and a Mutation Point.\r\n\r\nBe sure to fight monsters in higher zone levels as you level up, as lower level monsters grant diminishing amounts of experience.\"",
+      "new_text": "text = \"升级\r\n\r\n击杀怪物可获得经验值。积累经验值将提升角色等级，并允许你在藏身处消耗天赋点数投入天赋树！\r\n\r\n每升一级获得 +10 最大生命值和 1 点天赋点数。\r\n\r\n随着等级提升，请在更高等级的区域战斗——低级怪物提供的经验值会递减。\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "41FFCDED30372BDAC44C1DF78F7440851C0DCA0C10DA2A5900B690C089124A91"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/LoadoutScreenTip/LoadoutScreenTip.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "bbcode_text = \"[center]Equipment Loadout[/center]\r\n\r\nYour Equipment Loadout is your chosen set of Items which empower your character.\r\n\r\nBe sure to equip Items as you find them, and replace them with stronger ones as you make progress on the World Map.\r\n\r\nEquipped Item stats will always apply to your Character, providing significant offensive and defensive power.\r\n\"",
+      "new_text": "bbcode_text = \"[center]装备配置[/center]\r\n\r\nYour 装备配置 is your chosen set of Items which empower your character.\r\n\r\n找到物品后请及时装备，并在推进世界地图时替换为更强的装备。\r\n\r\n已装备的物品属性将始终作用于角色，提供强大的攻击和防御能力。\r\n\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "FA1817F82EDC9CAE8C3CFA0957DE9D715398F6C439F030762930B73A90427ED3"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/LoadoutScreenTip/LoadoutScreenTip.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Equipment Loadout\r\n\r\nYour Equipment Loadout is your chosen set of Items which empower your character.\r\n\r\nBe sure to equip Items as you find them, and replace them with stronger ones as you make progress on the World Map.\r\n\r\nEquipped Item stats will always apply to your Character, providing significant offensive and defensive power.\r\n\"",
+      "new_text": "text = \"装备配置\r\n\r\nYour 装备配置 is your chosen set of Items which empower your character.\r\n\r\n找到物品后请及时装备，并在推进世界地图时替换为更强的装备。\r\n\r\n已装备的物品属性将始终作用于角色，提供强大的攻击和防御能力。\r\n\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "FA1817F82EDC9CAE8C3CFA0957DE9D715398F6C439F030762930B73A90427ED3"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/NoWeaponWarning/NoWeaponWarning.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "bbcode_text = \"[center]World Map[/center]\r\n\r\nYou must have a primary skill equipped in order to travel the world of Mutagenic.\r\n\r\n[color=#53dfdf]\r\nPlease select a skill from the \\\"",
+      "new_text": "bbcode_text = \"[center]世界地图[/center]\r\n\r\n你必须装备一个主技能才能探索 Mutagenic 的世界。\r\n\r\n[color=#53dfdf]\r\n请从 \\\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "A6527CEBD68C4DBCAFC7FA118F146B77B4DBCB9CC7FCE96047BB343C76AC1FAE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/NoWeaponWarning/NoWeaponWarning.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"World Map\r\n\r\nYou must have a primary skill equipped in order to travel the world of Mutagenic.\r\n\r\n\r\nPlease select a skill from the \\\"",
+      "new_text": "text = \"世界地图\r\n\r\n你必须装备一个主技能才能探索 Mutagenic 的世界。\r\n\r\n\r\nPlease select a skill from the \\\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "A6527CEBD68C4DBCAFC7FA118F146B77B4DBCB9CC7FCE96047BB343C76AC1FAE"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/OrbHelp/OrbTip.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "bbcode_text = \"[center]Crafting Orbs[/center]\r\n\r\nYou can use the various Crafting Orbs in the Item Crafting bench in your hideout. These let you modify and upgrade Items you find in the wild!\r\n\r\nThere are many types of Orbs, including the following Common Orbs:\r\n\r\n[color=#53dfdf]\r\nOrb of Experimentation\r\nOrb of Honing\r\nOrb of Enhancement\r\nOrb of Knowledge\r\n[/color]\r\n\r\nSearch out more powerful orbs as you get stronger!\"",
+      "new_text": "bbcode_text = \"[center]工艺之球[/center]\r\n\r\nYou can use the various 工艺之球 in the Item Crafting bench in your hideout. These let you modify and upgrade Items you find in the wild!\r\n\r\n工艺之球有多种类型，包括以下常见之球：\r\n\r\n[color=#53dfdf]\r\n实验之球\r\n磨炼之球\r\n强化之球\r\n知识之球\r\n[/color]\r\n\r\n随着你变强，去寻找更强大的工艺之球吧！\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "DAB19A67D746DAA1A1A2FFA3EB7D433F8A2F0E1A50095DDD774340F617459F0C"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/OrbHelp/OrbTip.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Crafting Orbs\r\n\r\nYou can use the various Crafting Orbs in the Item Crafting bench in your hideout. These let you modify and upgrade Items you find in the wild!\r\n\r\nThere are many types of Orbs, including the following Common Orbs:\r\n\r\n\r\nOrb of Experimentation\r\nOrb of Honing\r\nOrb of Enhancement\r\nOrb of Knowledge\r\n\r\n\r\nSearch out more powerful orbs as you get stronger!\"",
+      "new_text": "text = \"工艺之球\r\n\r\nYou can use the various 工艺之球 in the Item Crafting bench in your hideout. These let you modify and upgrade Items you find in the wild!\r\n\r\n工艺之球有多种类型，包括以下常见之球：\r\n\r\n\r\n实验之球\r\n磨炼之球\r\n强化之球\r\n知识之球\r\n\r\n\r\n随着你变强，去寻找更强大的工艺之球吧！\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "DAB19A67D746DAA1A1A2FFA3EB7D433F8A2F0E1A50095DDD774340F617459F0C"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/SpecializationTip/SpecializationTip.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "bbcode_text = \"[center]Class Specializations[/center]\r\n\r\nEvery starting class can choose to change into a Specialization Class.\r\n\r\nYou gain a Specialization Point every 30 Levels, up to a maximum of 4.\r\n\r\nAllocate your Specialization Points in your Passive Tree.\r\n\r\nYou may change  Specialization Class at any point in your Hideout.\"",
+      "new_text": "bbcode_text = \"[center]职业专精[/center]\r\n\r\n每个初始职业都可以选择转职为专精职业。\r\n\r\n每 30 级获得 1 点专精点数，最多 4 点。\r\n\r\n在天赋树中分配你的专精点数。\r\n\r\n你可以在藏身处随时更换专精职业。\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "1538C18E586A2A302B469088622050D476CC226BC2D98194A0071BEF74682648"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/SpecializationTip/SpecializationTip.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Class Specializations\r\n\r\nEvery starting class can choose to change into a Specialization Class.\r\n\r\nYou gain a Specialization Point every 30 Levels, up to a maximum of 4.\r\n\r\nAllocate your Specialization Points in your Passive Tree.\r\n\r\nYou may change  Specialization Class at any point in your Hideout.\"",
+      "new_text": "text = \"职业专精\r\n\r\n每个初始职业都可以选择转职为专精职业。\r\n\r\n每 30 级获得 1 点专精点数，最多 4 点。\r\n\r\n在天赋树中分配你的专精点数。\r\n\r\n你可以在藏身处随时更换专精职业。\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "1538C18E586A2A302B469088622050D476CC226BC2D98194A0071BEF74682648"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/WeaponIntro/WeaponIntro.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "bbcode_text = \"[center]Skills[/center]\r\n\r\nIn Mutagenic, you can have up to 6 Active Skills at once, and each Active Skill can be modified with up to 6 Skill Support modifiers.\r\n\r\n[color=#53dfdf]\r\nChoose a starting skill, but remember, you are free to change these at any time!\r\n[/color]\"",
+      "new_text": "bbcode_text = \"[center]技能[/center]\r\n\r\nIn Mutagenic, you can have up to 6 Active 技能 at once, and each Active Skill can be modified with up to 6 Skill Support modifiers.\r\n\r\n[color=#53dfdf]\r\n选择一个起始技能吧——记住，你可以随时免费更换！\r\n[/color]\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "E9BA284336C5CCE59BA9F6B70C2A98AC71F57B481858D4667EB551AD2DA46813"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/WeaponIntro/WeaponIntro.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Skills\r\n\r\nIn Mutagenic, you can have up to 6 Active Skills at once, and each Active Skill can be modified with up to 6 Skill Support modifiers.\r\n\r\n\r\nChoose a starting skill, but remember, you are free to change these at any time!\r\n\"",
+      "new_text": "text = \"技能\r\n\r\nIn Mutagenic, you can have up to 6 Active 技能 at once, and each Active Skill can be modified with up to 6 Skill Support modifiers.\r\n\r\n\r\n选择一个起始技能吧——记住，你可以随时免费更换！\r\n\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "E9BA284336C5CCE59BA9F6B70C2A98AC71F57B481858D4667EB551AD2DA46813"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/GeneTip/GeneTip.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "bbcode_text = \"[center]Items[/center]\r\n\r\nAs you progress through the world map and kill monsters, you can find Items to improve your character!\r\n\r\nMonsters also have a chance to drop [color=#d38b1a]Unique Items[/color], which contain powerful and unique modifiers!\r\n\r\nAt higher zone levels (80+), Items can drop with powerful [color=#942ab6]Drop Only[/color] mods. Be on the search for powerful combinations!\r\n\r\nTo equip Items, either open your inventory with \\\"I\\\" or the Y Button, or change them at the bench in your hideout.\"",
+      "new_text": "bbcode_text = \"[center]物品[/center]\r\n\r\n在世界地图上击杀怪物，你可以找到物品来强化你的角色！\r\n\r\n怪物也有几率掉落[color=#d38b1a]独特物品[/color]，它们包含强大而独特的修饰属性！\r\n\r\n在高等级区域（80+），物品可能带有强大的[color=#942ab6]仅掉落[/color]修饰。寻找强力组合吧！\r\n\r\n装备物品：按 I 键或 Y 按钮打开背包，或在藏身处的工作台更换。\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "1FD5F305BEE539FE10CFCDE708325D14935CB714CA3477B199673CE7827A62E0"
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/HelpTip/GeneTip/GeneTip.tscn",
+      "classification": "TEXT_PATCH",
+      "old_text": "text = \"Items\r\n\r\nAs you progress through the world map and kill monsters, you can find Items to improve your character!\r\n\r\nMonsters also have a chance to drop Unique Items, which contain powerful and unique modifiers!\r\n\r\nAt higher zone levels (80+), Items can drop with powerful Drop Only mods. Be on the search for powerful combinations!\r\n\r\nTo equip Items, either open your inventory with \\\"I\\\" or the Y Button, or change them at the bench in your hideout.\"",
+      "new_text": "text = \"物品\r\n\r\n在世界地图上击杀怪物，你可以找到物品来强化你的角色！\r\n\r\n怪物也有几率掉落独特物品，它们包含强大而独特的修饰属性！\r\n\r\n在高等级区域（80+），物品可能带有强大的仅掉落修饰。寻找强力组合吧！\r\n\r\n装备物品：按 I 键或 Y 按钮打开背包，或在藏身处的工作台更换。\"",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": [],
+      "preimage_sha256": "1FD5F305BEE539FE10CFCDE708325D14935CB714CA3477B199673CE7827A62E0"
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "resource_contract",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot"
+  ]
+}

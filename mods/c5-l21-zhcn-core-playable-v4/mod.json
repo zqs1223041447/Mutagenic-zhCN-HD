@@ -1,0 +1,30 @@
+{
+  "id": "c5-l21-zhcn-core-playable-v4",
+  "version": "0.1.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "c5-l20-zhcn-core-playable-v3",
+    "c5-l21-font-clear-zhcn",
+    "p7-fix-persistence"
+  ],
+  "conflicts": [],
+  "scope": "zh_CN Core Playable v4 aggregate: full v3 localization chain (C5-L1..L7 + L10..L20) + clear vector CJK fonts (Noto Sans SC replacing pixel-art fusion-pixel for rsans/space/ChivoMono) + local persistence fix (USE_STEAM=false so save/load/quit use the local user://_0_6_0.dat File branch).",
+  "entities": [],
+  "patches": [],
+  "asset_overlays": [],
+  "tests": [
+    "locked_units_and_preimages",
+    "exact_unit_application",
+    "resource_contract",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "phase_checkpoint_zhcn_core_playable_v4",
+    "local_persistence_checkpoint"
+  ],
+  "not_proven": "visual rendering quality, gameplay, broad localization (help/lore long-form text), or release readiness"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "c5-l1-localization-menu-play-font",
+  "version": "0.1.0",
+  "patch_type": "TEXT_PATCH_AND_ASSET_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "entities": [
+    {
+      "kind": "localization_unit",
+      "id": "Scenes/Menu.tscn:69:9",
+      "confidence": "INFERENCE_HIGH",
+      "expected_runtime_effect": "the main-menu StartButton displays the Chinese label 开始游戏"
+    },
+    {
+      "kind": "font_family_overlay",
+      "id": "Fonts/rsans.ttf",
+      "confidence": "FACT",
+      "expected_runtime_effect": "the MainTheme font path retains its name and gains the glyphs required by the C5-L1 display unit"
+    }
+  ],
+  "font_source": {
+    "path": "02_tools/fusion_pixel/fusion-pixel-12px-proportional-zh_hans.ttf",
+    "license": "02_tools/fusion_pixel/OFL.txt",
+    "merge_script": "scripts/merge_fonts2.py",
+    "source_sha256": "5F43F090748D2EE00792D942A1257F44723B807B5CFEFA133A856A3A0C5FF702"
+  },
+  "patches": [
+    {
+      "path": "Scenes/Menu.tscn",
+      "field": "text",
+      "classification": "TEXT_PATCH",
+      "unit_id": "Scenes/Menu.tscn:69:9",
+      "old_text": "text = \"Play\"",
+      "new_text": "text = \"开始游戏\"",
+      "preimage_sha256": "54337EED6778446F85D22A6C52EEC149AC557860613206853C769B791724A778",
+      "source_text": "Play",
+      "translation": "开始游戏",
+      "placeholders": [],
+      "format_tokens": [],
+      "tests": [
+        "unit_id_exact_match",
+        "placeholder_conservation",
+        "token_conservation",
+        "resource_contract",
+        "declared_delta"
+      ]
+    }
+  ],
+  "asset_overlays": [
+    {
+      "path": "Fonts/rsans.ttf",
+      "source_path": "02_tools/fonts_merged_hinted/rsans.ttf",
+      "classification": "ASSET_PATCH",
+      "preimage_sha256": "120180C034232D7142F71F7F049465D7B37722241B769F9C1C812354F8E07E82",
+      "replacement_sha256": "EFB56C48D936FF1776D2052D5DFABFB227CC415946A52F16CA0D99842345E80A",
+      "replacement_size": 15779700,
+      "_updated": true
+    }
+  ],
+  "tests": [
+    "font_source_hashes",
+    "font_cmap_coverage",
+    "font_license_evidence",
+    "exact_unit_application",
+    "resource_contract",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "human_visual_glyph_and_layout_check"
+  ]
+}

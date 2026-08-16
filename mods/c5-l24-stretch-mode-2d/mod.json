@@ -1,0 +1,41 @@
+{
+  "id": "c5-l24-stretch-mode-2d",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "Fix fullscreen text blur (P0, user-reported: text blurry fullscreen, crisp windowed). Root cause: project.binary has no display/window/stretch/mode (defaults to disabled), game renders at 1280x800 and pixel-stretches to 2560x1440 fullscreen (non-integer 2.0x/1.8x) -> blur. Windowed 1:1 is crisp. Fix: at runtime in GameState._ready() call get_tree().set_screen_stretch(SceneTree.STRETCH_MODE_2D, SceneTree.STRETCH_ASPECT_KEEP, Vector2(1280,800), 1.0) so Godot 3.5 re-rasterizes DynamicFont text via font oversampling at the actual screen size (STRETCH_MODE_2D), keeping CJK and Latin crisp in fullscreen.",
+  "entities": [
+    {
+      "kind": "runtime_stretch",
+      "id": "Globals/GameState.gd::_ready",
+      "confidence": "FACT",
+      "expected_runtime_effect": "Godot 3.5 autoload _ready() runs after the engine's own set_screen_stretch (scene_tree.cpp _update_root_rect + font oversampling), so calling set_screen_stretch(STRETCH_MODE_2D=1, STRETCH_ASPECT_KEEP=1, Vector2(1280,800), 1.0) overrides the disabled default and re-rasterizes DynamicFont glyphs at fullscreen scale via _update_font_oversampling(screen/viewport)"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd:_ready:set_screen_stretch",
+      "classification": "CODE_PATCH",
+      "old_text": "func _ready():\n\t\t\t\tprint(\"GameState getting ready...\")\n\t\t\t\trandomize()",
+      "new_text": "func _ready():\n\t\t\t\tprint(\"GameState getting ready...\")\n\t\t\t\trandomize()\n\t\t\t\tget_tree().set_screen_stretch(SceneTree.STRETCH_MODE_2D, SceneTree.STRETCH_ASPECT_KEEP, Vector2(1280, 800), 1.0)",
+      "preimage_sha256": "0976E0F463D5E8844209705D545E89BE5DCC1EA53DE4E9BDCF0C7214E31FC6B0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot"
+  ],
+  "not_proven": "visual sharpness at every fullscreen resolution, DPI virtualization behavior, gameplay, release readiness"
+}
