@@ -61,6 +61,9 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--mod-id", type=str, required=True)
     ap.add_argument("--out-dir", type=Path, default=None)
+    ap.add_argument("--compile-cache", type=Path, default=None,
+                    help="persistent .gde cache dir (default: <out-dir>/compile_cache); "
+                         "unchanged sources are reused across builds for fast iteration")
     args = ap.parse_args()
 
     mod_dir = MODS_ROOT / args.mod_id
@@ -115,13 +118,17 @@ def main() -> int:
 
     # 4. Compile only declared scripts -> .gde + .gd.remap
     compiled = out / "compiled"
-    run([
+    compile_cmd = [
         "scripts/build/compile_declared_scripts.py",
         "--worktree", str(patched),
         "--manifest", str(resolved),
         "--out", str(compiled),
         "--report", str(out / "compile_report.json"),
-    ], "compile_declared_scripts")
+    ]
+    cache_dir = args.compile_cache or (out / "compile_cache")
+    if cache_dir:
+        compile_cmd += ["--cache", str(cache_dir)]
+    run(compile_cmd, "compile_declared_scripts")
 
     # 5. Build pack tree = 03_raw + declared deltas
     pack = out / "pack"
