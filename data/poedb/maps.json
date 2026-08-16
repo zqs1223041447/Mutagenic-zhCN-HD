@@ -1,0 +1,2958 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-08-16",
+  "source": [
+    "https://poedb.tw/us/Maps",
+    "https://www.poewiki.net/wiki/Map"
+  ],
+  "coverage": "完整=poedb 全部26张独特地图(含词缀); poewiki 当前地图清单 154 张普通地图(含 tier/monster_level/boss_names)。独特地图以 poedb 词缀为准,普通地图以 poewiki 为准。drop_location 未抓取(需要逐图页)。",
+  "items": [
+    {
+      "name": "Acton's Nightmare",
+      "url": "https://poedb.tw/us/Actons_Nightmare",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "Area has patches of Burning Ground",
+        "Area is inhabited by Skeletons",
+        "Restless Dead",
+        "Area is a large Maze",
+        "Area contains a Large Chest",
+        "(80—100)% increased Quantity of Items found in this Area",
+        "(220—250)% increased Rarity of Items found in this Area",
+        "display map two bosses \\[1\\]",
+        "map ground effect patches per 100 tiles \\[20\\]",
+        "map ground effect radius \\[14\\]",
+        "map undead monsters get up after X seconds \\[10\\]"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Beach Map",
+      "url": "https://www.poewiki.net/wiki/Map:Beach_Map",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [
+        "Glace"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Death and Taxes",
+      "url": "https://poedb.tw/us/Death_and_Taxes",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "Unique Boss deals (30—35)% increased Damage",
+        "Unique Boss has (25—30)% increased Attack and Cast Speed",
+        "Unique Boss gives 20000% increased Experience",
+        "Unique Boss drops (12—20) additional Currency Items",
+        "150% increased Quantity of Items found in this Area",
+        "map no exiles \\[1\\]"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Doryani's Machinarium",
+      "url": "https://poedb.tw/us/Doryanis_Machinarium",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "(20—50)% increased Experience gain",
+        "Unique Boss is augmented by Player choices",
+        "(40—60)% increased Quantity of Items found in this Area",
+        "(40—60)% increased Rarity of Items found in this Area",
+        "Found Items have 10% chance to drop Corrupted in Area"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Dungeon Map",
+      "url": "https://www.poewiki.net/wiki/Map:Dungeon_Map",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [
+        "Penitentiary Incarcerator"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Graveyard Map",
+      "url": "https://www.poewiki.net/wiki/Map:Graveyard_Map",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [
+        "Champion of Frost",
+        "Steelpoint the Avenger",
+        "Thunderskull"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Hall of Grandmasters",
+      "url": "https://poedb.tw/us/Hall_of_Grandmasters",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [
+        "PvP"
+      ],
+      "mods": [
+        "Contains the Immortalised Grandmasters",
+        "PvP damage scaling in effect"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Hallowed Ground",
+      "url": "https://poedb.tw/us/Hallowed_Ground",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "Unique Boss drops 3 additional Maps",
+        "Unique Boss gives 2000% increased Experience",
+        "0.5 Flask Charges recovered every 3 seconds",
+        "(-2—2) to Monster Level of Area",
+        "100% increased Quantity of Items found in this Area",
+        "100% increased Rarity of Items found in this Area"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Lookout Map",
+      "url": "https://www.poewiki.net/wiki/Map:Lookout_Map",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [
+        "The Grey Plague"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Maelström of Chaos",
+      "url": "https://poedb.tw/us/Maelstr%C3%B6m_of_Chaos",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "Area has patches of Chilled Ground",
+        "% of Monster Damage is Converted to Lightning",
+        "Monsters deal 50% extra Physical Damage as Lightning",
+        "Monsters are Immune to randomly chosen Elemental Ailments or Stun",
+        "Monsters' Melee Attacks apply random Hexes on Hit",
+        "Monsters Reflect Hexes",
+        "(40—60)% increased Quantity of Items found in this Area",
+        "(200—400)% increased Rarity of Items found in this Area",
+        "map ground effect patches per 100 tiles \\[20\\]",
+        "map ground effect radius \\[14\\]",
+        "(Elemental Ailments are Ignited, Scorched, Chilled, Frozen, Brittle, Shocked, and Sapped)",
+        "(You are Chilled while standing in Chilled Ground)"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Mao Kun",
+      "url": "https://poedb.tw/us/Mao_Kun",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "(60—100)% increased Experience gain",
+        "% of Monster Damage is Converted to Lightning",
+        "Monsters deal (175—190)% extra Physical Damage as Lightning",
+        "Monsters gain an Endurance Charge on Hit",
+        "Monsters gain a Power Charge on Hit",
+        "(100—120)% increased Quantity of Items found in this Area"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Oba's Cursed Trove",
+      "url": "https://poedb.tw/us/Obas_Cursed_Trove",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "Area has patches of desecrated ground",
+        "(40—50)% more Monster Life",
+        "(30—40)% increased Monster Damage",
+        "Area becomes fatal after some time",
+        "40% increased Quantity of Items found in this Area",
+        "map ground effect patches per 100 tiles \\[20\\]",
+        "map ground effect radius \\[10\\]"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Olmec's Sanctum",
+      "url": "https://poedb.tw/us/Olmecs_Sanctum",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "(40—50)% more Monster Life",
+        "(30—40)% increased Monster Damage",
+        "Final Boss drops higher Level Items",
+        "(120—200)% increased Quantity of Items found in this Area"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Pillars of Arun",
+      "url": "https://poedb.tw/us/Pillars_of_Arun",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "(60—100)% increased Experience gain",
+        "Area contains unbridged gaps to cross",
+        "Monsters have 50% chance to Avoid Ailments",
+        "(20—25)% increased Monster Movement Speed",
+        "(20—25)% increased Monster Attack Speed",
+        "(20—25)% increased Monster Cast Speed",
+        "Players have Level 20 Dash Skill",
+        "Players have 200% increased Cooldown Recovery Rate for Movement Skills",
+        "map item drop quantity +% \\[100,150\\]",
+        "map item drop rarity +% \\[200,300\\]",
+        "map pack size +% \\[0\\]",
+        "(Ailments are Bleeding, Ignited, Scorched, Chilled, Frozen, Brittle, Shocked, Sapped, and Poisoned)"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Poorjoy's Asylum",
+      "url": "https://poedb.tw/us/Poorjoys_Asylum",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "150% increased Experience gain",
+        "(140—160)% more Monster Life",
+        "(140—160)% increased Monster Damage",
+        "25% increased Monster Movement Speed",
+        "25% increased Monster Attack Speed",
+        "25% increased Monster Cast Speed",
+        "Area is a large Maze",
+        "Unique Boss drops (10—15) additional Rare (0—23)",
+        "100% increased Quantity of Items found in this Area",
+        "250% increased Rarity of Items found in this Area"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Replica Pillars of Arun",
+      "url": "https://poedb.tw/us/Replica_Pillars_of_Arun",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "(60—100)% increased Experience gain",
+        "Area contains unbridged gaps to cross",
+        "Monsters have 50% chance to Avoid Ailments",
+        "100% increased Monster Damage",
+        "(20—25)% increased Monster Movement Speed",
+        "(20—25)% increased Monster Attack Speed",
+        "(20—25)% increased Monster Cast Speed",
+        "Players have Level 20 Dash Skill",
+        "Players have 200% increased Cooldown Recovery Rate for Movement Skills",
+        "map item drop quantity +% \\[200,250\\]",
+        "map item drop rarity +% \\[200,300\\]",
+        "map pack size +% \\[30\\]",
+        "(Ailments are Bleeding, Ignited, Scorched, Chilled, Frozen, Brittle, Shocked, Sapped, and Poisoned)"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Replica Poorjoy's Asylum",
+      "url": "https://poedb.tw/us/Replica_Poorjoys_Asylum",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "200% increased Experience gain",
+        "(140—160)% more Monster Life",
+        "Monsters have (500—1000)% increased Critical Strike Chance",
+        "+(60—100)% to Monster Critical Strike Multiplier",
+        "(140—160)% increased Monster Damage",
+        "25% increased Monster Movement Speed",
+        "25% increased Monster Attack Speed",
+        "25% increased Monster Cast Speed",
+        "Area is a large Maze",
+        "Unique Boss drops (10—15) additional Rare (0—23)",
+        "100% increased Quantity of Items found in this Area",
+        "250% increased Rarity of Items found in this Area",
+        "50% increased Pack size"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "The Coward's Trial",
+      "url": "https://poedb.tw/us/The_Cowards_Trial",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "Contains waves of Monsters",
+        "Contains additional waves of Undead Monsters",
+        "Area contains additional waves of Ghosts",
+        "Area contains additional waves of Oriathan Zombies",
+        "Area contains additional waves of Phantasms",
+        "Area contains additional waves of Raging Spirits",
+        "Area contains additional waves of Bone Rhoas",
+        "Area contains additional waves of Ravager Maws",
+        "Area contains additional waves of Zombies"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "The Putrid Cloister",
+      "url": "https://poedb.tw/us/The_Putrid_Cloister",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "Players are Cursed with Vulnerability",
+        "Players are Cursed with Flammability",
+        "Players are Cursed with Frostbite",
+        "Players are Cursed with Conductivity",
+        "Players are Cursed with Despair",
+        "Unique Boss drops divination cards",
+        "90% increased Quantity of Items found in this Area",
+        "45% increased Rarity of Items found in this Area",
+        "map drop stacked deck on death permyriad \\[50\\]",
+        "(Vulnerability is a Hex which increases Physical Damage taken by 15% and causes Hits to have +25% chance to inflict Bleeding on the target. It lasts 8 seconds)",
+        "(Despair is a Hex which inflicts -15% to Chaos Resistance. It lasts 8 seconds)",
+        "(Conductivity is a Hex which inflicts -17% to Lightning Resistance and causes Hits to have +25% chance to Shock the target. It lasts 8 seconds)",
+        "(Flammability is a Hex which inflicts -17% to Fire Resistance and causes Hits to have +25% chance to Ignite the target. It lasts 8 seconds)",
+        "(Frostbite is a Hex which inflicts -17% to Cold Resistance and causes Hits to have +25% chance to Freeze the target. It lasts 8 seconds)"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "The Twilight Temple",
+      "url": "https://poedb.tw/us/The_Twilight_Temple",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "% increased Experience gain",
+        "Area has increased monster variety",
+        "Players are Cursed with Flammability",
+        "Players are Cursed with Frostbite",
+        "Area is inhabited by Lunaris fanatics",
+        "Area is inhabited by Solaris fanatics",
+        "(75—100)% increased Quantity of Items found in this Area",
+        "(125—175)% increased Rarity of Items found in this Area",
+        "(25—50)% increased Pack size",
+        "(Flammability is a Hex which inflicts -17% to Fire Resistance and causes Hits to have +25% chance to Ignite the target. It lasts 8 seconds)",
+        "(Frostbite is a Hex which inflicts -17% to Cold Resistance and causes Hits to have +25% chance to Freeze the target. It lasts 8 seconds)"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "The Vinktar Square",
+      "url": "https://poedb.tw/us/The_Vinktar_Square",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "20% more Monster Life",
+        "Monsters are Unaffected by Shock",
+        "20% increased Monster Damage",
+        "+35% Monster Lightning Resistance",
+        "Monsters deal 35% extra Physical Damage as Lightning",
+        "(100—150)% increased Quantity of Items found in this Area",
+        "(100—150)% increased Rarity of Items found in this Area",
+        "(30—50)% increased Pack size",
+        "(Debuffs you are Unaffected by can still be placed on you, but will not actually apply their effect)"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Vaults of Atziri",
+      "url": "https://poedb.tw/us/Vaults_of_Atziri",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [
+        "Area"
+      ],
+      "mods": [
+        "Chests have (2500—3500)% increased Item Rarity",
+        "Area contains no monsters",
+        "Found Items have (20—40)% chance to drop Corrupted in Area",
+        "map disable chest drop scaling \\[1\\]"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Whakawairua Tuahu",
+      "url": "https://poedb.tw/us/Whakawairua_Tuahu",
+      "tier": 1,
+      "monster_level": 68,
+      "area_level": 68,
+      "boss_names": [],
+      "mods": [
+        "Area contains many Totems",
+        "Curses have 50% reduced effect on Monsters",
+        "(40—60)% increased Quantity of Items found in this Area",
+        "(120—160)% increased Rarity of Items found in this Area",
+        "map extra content weighting \\[1\\]",
+        "map rare monsters have nemesis mod \\[1\\]"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Alleyways Map",
+      "url": "https://www.poewiki.net/wiki/Map:Alleyways_Map",
+      "tier": 2,
+      "monster_level": 69,
+      "area_level": 69,
+      "boss_names": [
+        "Calderus"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Arid Lake Map",
+      "url": "https://www.poewiki.net/wiki/Map:Arid_Lake_Map",
+      "tier": 2,
+      "monster_level": 69,
+      "area_level": 69,
+      "boss_names": [
+        "Drought Maddened Rhoa"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Desert Map",
+      "url": "https://www.poewiki.net/wiki/Map:Desert_Map",
+      "tier": 2,
+      "monster_level": 69,
+      "area_level": 69,
+      "boss_names": [
+        "Preethi, Eye-Pecker"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Flooded Mine Map",
+      "url": "https://www.poewiki.net/wiki/Map:Flooded_Mine_Map",
+      "tier": 2,
+      "monster_level": 69,
+      "area_level": 69,
+      "boss_names": [
+        "The Eroding One"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Frozen Cabins Map",
+      "url": "https://www.poewiki.net/wiki/Map:Frozen_Cabins_Map",
+      "tier": 2,
+      "monster_level": 69,
+      "area_level": 69,
+      "boss_names": [
+        "Captain Clayborne, The Accursed"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Map (Tier 1)",
+      "url": null,
+      "tier": 2,
+      "monster_level": null,
+      "area_level": null,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Marshes Map",
+      "url": "https://www.poewiki.net/wiki/Map:Marshes_Map",
+      "tier": 2,
+      "monster_level": 69,
+      "area_level": 69,
+      "boss_names": [
+        "Tore, Towering Ancient"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Pen Map",
+      "url": "https://www.poewiki.net/wiki/Map:Pen_Map",
+      "tier": 2,
+      "monster_level": 69,
+      "area_level": 69,
+      "boss_names": [
+        "Arwyn, the Houndmaster"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Arcade Map",
+      "url": "https://www.poewiki.net/wiki/Map:Arcade_Map",
+      "tier": 3,
+      "monster_level": 70,
+      "area_level": 70,
+      "boss_names": [
+        "Herald of Ashes",
+        "Herald of Thunder"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Burial Chambers Map",
+      "url": "https://www.poewiki.net/wiki/Map:Burial_Chambers_Map",
+      "tier": 3,
+      "monster_level": 70,
+      "area_level": 70,
+      "boss_names": [
+        "Witch of the Cauldron"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Cage Map",
+      "url": "https://www.poewiki.net/wiki/Map:Cage_Map",
+      "tier": 3,
+      "monster_level": 70,
+      "area_level": 70,
+      "boss_names": [
+        "Executioner Bloodwing"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Cells Map",
+      "url": "https://www.poewiki.net/wiki/Map:Cells_Map",
+      "tier": 3,
+      "monster_level": 70,
+      "area_level": 70,
+      "boss_names": [
+        "Shavronne the Sickening"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Excavation Map",
+      "url": "https://www.poewiki.net/wiki/Map:Excavation_Map",
+      "tier": 3,
+      "monster_level": 70,
+      "area_level": 70,
+      "boss_names": [
+        "Breaker Toruul",
+        "Shrieker Eihal"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Forking River Map",
+      "url": "https://www.poewiki.net/wiki/Map:Forking_River_Map",
+      "tier": 3,
+      "monster_level": 70,
+      "area_level": 70,
+      "boss_names": [
+        "Ormud, Fiend of the Flood"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Fungal Hollow Map",
+      "url": "https://www.poewiki.net/wiki/Map:Fungal_Hollow_Map",
+      "tier": 3,
+      "monster_level": 70,
+      "area_level": 70,
+      "boss_names": [
+        "Aulen Greychain"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Iceberg Map",
+      "url": "https://www.poewiki.net/wiki/Map:Iceberg_Map",
+      "tier": 3,
+      "monster_level": 70,
+      "area_level": 70,
+      "boss_names": [
+        "Yorishi, Aurora-Sage",
+        "Jeinei Yuushu",
+        "Otesha, the Giantslayer"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Leyline Map",
+      "url": "https://www.poewiki.net/wiki/Map:Leyline_Map",
+      "tier": 3,
+      "monster_level": 70,
+      "area_level": 70,
+      "boss_names": [
+        "Mirage of Bones"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Map (Tier 2)",
+      "url": null,
+      "tier": 3,
+      "monster_level": null,
+      "area_level": null,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Peninsula Map",
+      "url": "https://www.poewiki.net/wiki/Map:Peninsula_Map",
+      "tier": 3,
+      "monster_level": 70,
+      "area_level": 70,
+      "boss_names": [
+        "Titan of the Grove"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Port Map",
+      "url": "https://www.poewiki.net/wiki/Map:Port_Map",
+      "tier": 3,
+      "monster_level": 70,
+      "area_level": 70,
+      "boss_names": [
+        "Unraveling Horror"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Canyon Map",
+      "url": "https://www.poewiki.net/wiki/Map:Canyon_Map",
+      "tier": 4,
+      "monster_level": 71,
+      "area_level": 71,
+      "boss_names": [
+        "Gnar, Eater of Carrion",
+        "Stonebeak, Battle Fowl"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Chateau Map",
+      "url": "https://www.poewiki.net/wiki/Map:Chateau_Map",
+      "tier": 4,
+      "monster_level": 71,
+      "area_level": 71,
+      "boss_names": [
+        "Hephaeus, The Hammer"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "City Square Map",
+      "url": "https://www.poewiki.net/wiki/Map:City_Square_Map",
+      "tier": 4,
+      "monster_level": 71,
+      "area_level": 71,
+      "boss_names": [
+        "Carius, the Unnatural",
+        "Pileah, Corpse Burner",
+        "Pileah, Burning Corpse"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Courthouse Map",
+      "url": "https://www.poewiki.net/wiki/Map:Courthouse_Map",
+      "tier": 4,
+      "monster_level": 71,
+      "area_level": 71,
+      "boss_names": [
+        "Bolt Brownfur, Earth Churner",
+        "Ion Darkshroud, the Hungering Blade",
+        "Thena Moga, the Crimson Storm"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Glacier Map",
+      "url": "https://www.poewiki.net/wiki/Map:Glacier_Map",
+      "tier": 4,
+      "monster_level": 71,
+      "area_level": 71,
+      "boss_names": [
+        "Rek'tar, the Breaker",
+        "Gavuum Goldhoof",
+        "Mortimus the Other One",
+        "Mortimus the Second",
+        "Mortimus the Third",
+        "Venmur the Bloodgrin",
+        "Kul'gul Mortalbane"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Grotto Map",
+      "url": "https://www.poewiki.net/wiki/Map:Grotto_Map",
+      "tier": 4,
+      "monster_level": 71,
+      "area_level": 71,
+      "boss_names": [
+        "Void Anomaly"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Lighthouse Map",
+      "url": "https://www.poewiki.net/wiki/Map:Lighthouse_Map",
+      "tier": 4,
+      "monster_level": 71,
+      "area_level": 71,
+      "boss_names": [
+        "Uruk Baleh",
+        "El'Abin, Bloodeater",
+        "Leli Goya, Daughter of Ash",
+        "Bin'aia, Crimson Rain"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Map (Tier 3)",
+      "url": null,
+      "tier": 4,
+      "monster_level": null,
+      "area_level": null,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Relic Chambers Map",
+      "url": "https://www.poewiki.net/wiki/Map:Relic_Chambers_Map",
+      "tier": 4,
+      "monster_level": 71,
+      "area_level": 71,
+      "boss_names": [
+        "Litanius, the Black Prayer"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Strand Map",
+      "url": "https://www.poewiki.net/wiki/Map:Strand_Map",
+      "tier": 4,
+      "monster_level": 71,
+      "area_level": 71,
+      "boss_names": [
+        "Massier",
+        "Master of the Blade"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Volcano Map",
+      "url": "https://www.poewiki.net/wiki/Map:Volcano_Map",
+      "tier": 4,
+      "monster_level": 71,
+      "area_level": 71,
+      "boss_names": [
+        "Forest of Flames"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Ancient City Map",
+      "url": "https://www.poewiki.net/wiki/Map:Ancient_City_Map",
+      "tier": 5,
+      "monster_level": 72,
+      "area_level": 72,
+      "boss_names": [
+        "Legius Garhall"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Barrows Map",
+      "url": "https://www.poewiki.net/wiki/Map:Barrows_Map",
+      "tier": 5,
+      "monster_level": 72,
+      "area_level": 72,
+      "boss_names": [
+        "Beast of the Pits"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Caer Blaidd, Wolfpack's Den",
+      "url": "https://poedb.tw/us/Caer_Blaidd%2C_Wolfpacks_Den",
+      "tier": 5,
+      "monster_level": 72,
+      "area_level": 72,
+      "boss_names": [],
+      "mods": [
+        "Unique Boss drops 4 additional Maps",
+        "(20—50)% increased Magic Monsters",
+        "(20—50)% increased number of Rare Monsters",
+        "25% more Monster Life",
+        "30% increased Monster Damage",
+        "150% increased Quantity of Items found in this Area",
+        "150% increased Rarity of Items found in this Area"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Channel Map",
+      "url": "https://www.poewiki.net/wiki/Map:Channel_Map",
+      "tier": 5,
+      "monster_level": 72,
+      "area_level": 72,
+      "boss_names": [
+        "The Winged Death"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Conservatory Map",
+      "url": "https://www.poewiki.net/wiki/Map:Conservatory_Map",
+      "tier": 5,
+      "monster_level": 72,
+      "area_level": 72,
+      "boss_names": [
+        "The Forgotten Soldier"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Haunted Mansion Map",
+      "url": "https://www.poewiki.net/wiki/Map:Haunted_Mansion_Map",
+      "tier": 5,
+      "monster_level": 72,
+      "area_level": 72,
+      "boss_names": [
+        "Barthol, the Pure",
+        "Barthol, the Corruptor"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Ivory Temple Map",
+      "url": "https://www.poewiki.net/wiki/Map:Ivory_Temple_Map",
+      "tier": 5,
+      "monster_level": 72,
+      "area_level": 72,
+      "boss_names": [
+        "Sanctum Enforcer",
+        "Sanctum Guard"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Jungle Valley Map",
+      "url": "https://www.poewiki.net/wiki/Map:Jungle_Valley_Map",
+      "tier": 5,
+      "monster_level": 73,
+      "area_level": 73,
+      "boss_names": [
+        "Queen of the Great Tangle"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Map (Tier 4)",
+      "url": null,
+      "tier": 5,
+      "monster_level": null,
+      "area_level": null,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Maze Map",
+      "url": "https://www.poewiki.net/wiki/Map:Maze_Map",
+      "tier": 5,
+      "monster_level": 72,
+      "area_level": 72,
+      "boss_names": [
+        "Shadow of the Vaal"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Spider Lair Map",
+      "url": "https://www.poewiki.net/wiki/Map:Spider_Lair_Map",
+      "tier": 5,
+      "monster_level": 72,
+      "area_level": 72,
+      "boss_names": [
+        "Thraxia"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Sulphur Vents Map",
+      "url": "https://www.poewiki.net/wiki/Map:Sulphur_Vents_Map",
+      "tier": 5,
+      "monster_level": 72,
+      "area_level": 72,
+      "boss_names": [
+        "The Gorgon"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Toxic Sewer Map",
+      "url": "https://www.poewiki.net/wiki/Map:Toxic_Sewer_Map",
+      "tier": 5,
+      "monster_level": 72,
+      "area_level": 72,
+      "boss_names": [
+        "Arachnoxia"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Academy Map",
+      "url": "https://www.poewiki.net/wiki/Map:Academy_Map",
+      "tier": 6,
+      "monster_level": 73,
+      "area_level": 73,
+      "boss_names": [
+        "The Arbiter of Knowledge"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Ashen Wood Map",
+      "url": "https://www.poewiki.net/wiki/Map:Ashen_Wood_Map",
+      "tier": 6,
+      "monster_level": 73,
+      "area_level": 73,
+      "boss_names": [
+        "Lord of the Ashen Arrow"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Atoll Map",
+      "url": "https://www.poewiki.net/wiki/Map:Atoll_Map",
+      "tier": 6,
+      "monster_level": 73,
+      "area_level": 73,
+      "boss_names": [
+        "Puruna, the Challenger"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Cemetery Map",
+      "url": "https://www.poewiki.net/wiki/Map:Cemetery_Map",
+      "tier": 6,
+      "monster_level": 73,
+      "area_level": 73,
+      "boss_names": [
+        "Erebix, Light's Bane"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Fields Map",
+      "url": "https://www.poewiki.net/wiki/Map:Fields_Map",
+      "tier": 6,
+      "monster_level": 73,
+      "area_level": 73,
+      "boss_names": [
+        "Drek, Apex Hunter"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Map (Tier 10)",
+      "url": null,
+      "tier": 6,
+      "monster_level": null,
+      "area_level": null,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Mausoleum Map",
+      "url": "https://www.poewiki.net/wiki/Map:Mausoleum_Map",
+      "tier": 6,
+      "monster_level": 73,
+      "area_level": 73,
+      "boss_names": [
+        "Tolman, the Exhumer"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Phantasmagoria Map",
+      "url": "https://www.poewiki.net/wiki/Map:Phantasmagoria_Map",
+      "tier": 6,
+      "monster_level": 73,
+      "area_level": 73,
+      "boss_names": [
+        "Erythrophagia"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Silo Map",
+      "url": "https://www.poewiki.net/wiki/Map:Silo_Map",
+      "tier": 6,
+      "monster_level": 73,
+      "area_level": 73,
+      "boss_names": [
+        "Renkarr, The Kiln Keeper"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Thicket Map",
+      "url": "https://www.poewiki.net/wiki/Map:Thicket_Map",
+      "tier": 6,
+      "monster_level": 73,
+      "area_level": 73,
+      "boss_names": [
+        "The Primal One"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Underground Sea Map",
+      "url": "https://www.poewiki.net/wiki/Map:Underground_Sea_Map",
+      "tier": 6,
+      "monster_level": 73,
+      "area_level": 73,
+      "boss_names": [
+        "Merveil, the Reflection",
+        "Merveil, the Returned"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Wharf Map",
+      "url": "https://www.poewiki.net/wiki/Map:Wharf_Map",
+      "tier": 6,
+      "monster_level": 73,
+      "area_level": 73,
+      "boss_names": [
+        "Stone of the Currents"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Arachnid Nest Map",
+      "url": "https://www.poewiki.net/wiki/Map:Arachnid_Nest_Map",
+      "tier": 7,
+      "monster_level": 74,
+      "area_level": 74,
+      "boss_names": [
+        "Spinner of False Hope"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Bazaar Map",
+      "url": "https://www.poewiki.net/wiki/Map:Bazaar_Map",
+      "tier": 7,
+      "monster_level": 74,
+      "area_level": 74,
+      "boss_names": [
+        "Ancient Sculptor"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Bone Crypt Map",
+      "url": "https://www.poewiki.net/wiki/Map:Bone_Crypt_Map",
+      "tier": 7,
+      "monster_level": 74,
+      "area_level": 74,
+      "boss_names": [
+        "Xixic, High Necromancer"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Coral Ruins Map",
+      "url": "https://www.poewiki.net/wiki/Map:Coral_Ruins_Map",
+      "tier": 7,
+      "monster_level": 74,
+      "area_level": 74,
+      "boss_names": [
+        "Captain Tanner Lightfoot"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Crater Map",
+      "url": "https://www.poewiki.net/wiki/Map:Crater_Map",
+      "tier": 7,
+      "monster_level": 74,
+      "area_level": 74,
+      "boss_names": [
+        "Megaera"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Dunes Map",
+      "url": "https://www.poewiki.net/wiki/Map:Dunes_Map",
+      "tier": 7,
+      "monster_level": 74,
+      "area_level": 74,
+      "boss_names": [
+        "The Blacksmith"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Gardens Map",
+      "url": "https://www.poewiki.net/wiki/Map:Gardens_Map",
+      "tier": 7,
+      "monster_level": 74,
+      "area_level": 74,
+      "boss_names": [
+        "Sallazzang"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Lava Chamber Map",
+      "url": "https://www.poewiki.net/wiki/Map:Lava_Chamber_Map",
+      "tier": 7,
+      "monster_level": 74,
+      "area_level": 74,
+      "boss_names": [
+        "Fire and Fury"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Map (Tier 6)",
+      "url": null,
+      "tier": 7,
+      "monster_level": null,
+      "area_level": null,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Ramparts Map",
+      "url": "https://www.poewiki.net/wiki/Map:Ramparts_Map",
+      "tier": 7,
+      "monster_level": 74,
+      "area_level": 74,
+      "boss_names": [
+        "The Reaver"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Residence Map",
+      "url": "https://www.poewiki.net/wiki/Map:Residence_Map",
+      "tier": 7,
+      "monster_level": 74,
+      "area_level": 74,
+      "boss_names": [
+        "Excellis Aurafix"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Underground River Map",
+      "url": "https://www.poewiki.net/wiki/Map:Underground_River_Map",
+      "tier": 7,
+      "monster_level": 74,
+      "area_level": 74,
+      "boss_names": [
+        "It That Fell"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Armoury Map",
+      "url": "https://www.poewiki.net/wiki/Map:Armoury_Map",
+      "tier": 8,
+      "monster_level": 75,
+      "area_level": 75,
+      "boss_names": [
+        "Warmonger"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Courtyard Map",
+      "url": "https://www.poewiki.net/wiki/Map:Courtyard_Map",
+      "tier": 8,
+      "monster_level": 75,
+      "area_level": 75,
+      "boss_names": [
+        "Oriath's Vengeance",
+        "Oriath's Vigil",
+        "Oriath's Virtue"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Dry Sea Map",
+      "url": "https://www.poewiki.net/wiki/Map:Dry_Sea_Map",
+      "tier": 8,
+      "monster_level": 75,
+      "area_level": 75,
+      "boss_names": [
+        "Gazuul, Droughtspawn"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Geode Map",
+      "url": "https://www.poewiki.net/wiki/Map:Geode_Map",
+      "tier": 8,
+      "monster_level": 75,
+      "area_level": 75,
+      "boss_names": [
+        "Avatar of Undoing"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Infested Valley Map",
+      "url": "https://www.poewiki.net/wiki/Map:Infested_Valley_Map",
+      "tier": 8,
+      "monster_level": 75,
+      "area_level": 75,
+      "boss_names": [
+        "Gorulis, Will-Thief"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Laboratory Map",
+      "url": "https://www.poewiki.net/wiki/Map:Laboratory_Map",
+      "tier": 8,
+      "monster_level": 75,
+      "area_level": 75,
+      "boss_names": [
+        "Riftwalker"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Map (Tier 7)",
+      "url": null,
+      "tier": 8,
+      "monster_level": null,
+      "area_level": null,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Mineral Pools Map",
+      "url": "https://www.poewiki.net/wiki/Map:Mineral_Pools_Map",
+      "tier": 8,
+      "monster_level": 75,
+      "area_level": 75,
+      "boss_names": [
+        "Shock and Horror"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Mud Geyser Map",
+      "url": "https://www.poewiki.net/wiki/Map:Mud_Geyser_Map",
+      "tier": 8,
+      "monster_level": 75,
+      "area_level": 75,
+      "boss_names": [
+        "Tunneltrap"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Overgrown Ruin Map",
+      "url": "https://www.poewiki.net/wiki/Map:Overgrown_Ruin_Map",
+      "tier": 8,
+      "monster_level": 75,
+      "area_level": 75,
+      "boss_names": [
+        "Visceris"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Shore Map",
+      "url": "https://www.poewiki.net/wiki/Map:Shore_Map",
+      "tier": 8,
+      "monster_level": 75,
+      "area_level": 75,
+      "boss_names": [
+        "Belcer, the Pirate Lord"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Tropical Island Map",
+      "url": "https://www.poewiki.net/wiki/Map:Tropical_Island_Map",
+      "tier": 8,
+      "monster_level": 75,
+      "area_level": 75,
+      "boss_names": [
+        "Blood Progenitor",
+        "Spirit of Aidan",
+        "Spirit of Nadia"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Vaal Pyramid Map",
+      "url": "https://www.poewiki.net/wiki/Map:Vaal_Pyramid_Map",
+      "tier": 8,
+      "monster_level": 75,
+      "area_level": 75,
+      "boss_names": [
+        "The Fallen Queen",
+        "The Hollow Lady",
+        "The Broken Prince"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Arena Map",
+      "url": "https://www.poewiki.net/wiki/Map:Arena_Map",
+      "tier": 9,
+      "monster_level": 76,
+      "area_level": 76,
+      "boss_names": [
+        "Avatar of the Forge",
+        "Avatar of the Skies",
+        "Avatar of the Huntress"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Estuary Map",
+      "url": "https://www.poewiki.net/wiki/Map:Estuary_Map",
+      "tier": 9,
+      "monster_level": 76,
+      "area_level": 76,
+      "boss_names": [
+        "Sumter the Twisted"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Map (Tier 8)",
+      "url": null,
+      "tier": 9,
+      "monster_level": null,
+      "area_level": null,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Moon Temple Map",
+      "url": "https://www.poewiki.net/wiki/Map:Moon_Temple_Map",
+      "tier": 9,
+      "monster_level": 76,
+      "area_level": 76,
+      "boss_names": [
+        "Sebbert, Crescent's Point"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Museum Map",
+      "url": "https://www.poewiki.net/wiki/Map:Museum_Map",
+      "tier": 9,
+      "monster_level": 76,
+      "area_level": 76,
+      "boss_names": [
+        "He of Many Pieces"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Plateau Map",
+      "url": "https://www.poewiki.net/wiki/Map:Plateau_Map",
+      "tier": 9,
+      "monster_level": 76,
+      "area_level": 76,
+      "boss_names": [
+        "Poporo, the Highest Spire",
+        "Puruna, the Challenger"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Scriptorium Map",
+      "url": "https://www.poewiki.net/wiki/Map:Scriptorium_Map",
+      "tier": 9,
+      "monster_level": 76,
+      "area_level": 76,
+      "boss_names": [
+        "Gisale, Thought Thief"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Sepulchre Map",
+      "url": "https://www.poewiki.net/wiki/Map:Sepulchre_Map",
+      "tier": 9,
+      "monster_level": 76,
+      "area_level": 76,
+      "boss_names": [
+        "Doedre the Defiler"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Stagnation Map",
+      "url": "https://www.poewiki.net/wiki/Map:Stagnation_Map",
+      "tier": 9,
+      "monster_level": 76,
+      "area_level": 76,
+      "boss_names": [
+        "Murgeth Bogsong"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Temple Map",
+      "url": "https://www.poewiki.net/wiki/Map:Temple_Map",
+      "tier": 9,
+      "monster_level": 76,
+      "area_level": 76,
+      "boss_names": [
+        "Jorus, Sky's Edge"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Tower Map",
+      "url": "https://www.poewiki.net/wiki/Map:Tower_Map",
+      "tier": 9,
+      "monster_level": 76,
+      "area_level": 76,
+      "boss_names": [
+        "Bazur",
+        "Liantra"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Vault Map",
+      "url": "https://www.poewiki.net/wiki/Map:Vault_Map",
+      "tier": 9,
+      "monster_level": 76,
+      "area_level": 76,
+      "boss_names": [
+        "Guardian of the Vault"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Waste Pool Map",
+      "url": "https://www.poewiki.net/wiki/Map:Waste_Pool_Map",
+      "tier": 9,
+      "monster_level": 76,
+      "area_level": 76,
+      "boss_names": [
+        "Portentia, the Foul"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Arachnid Tomb Map",
+      "url": "https://www.poewiki.net/wiki/Map:Arachnid_Tomb_Map",
+      "tier": 10,
+      "monster_level": 77,
+      "area_level": 77,
+      "boss_names": [
+        "Hybrid Widow"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Belfry Map",
+      "url": "https://www.poewiki.net/wiki/Map:Belfry_Map",
+      "tier": 10,
+      "monster_level": 77,
+      "area_level": 77,
+      "boss_names": [
+        "Lord of the Grey"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Bog Map",
+      "url": "https://www.poewiki.net/wiki/Map:Bog_Map",
+      "tier": 10,
+      "monster_level": 77,
+      "area_level": 77,
+      "boss_names": [
+        "Skullbeak"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Cursed Crypt Map",
+      "url": "https://www.poewiki.net/wiki/Map:Cursed_Crypt_Map",
+      "tier": 10,
+      "monster_level": 77,
+      "area_level": 77,
+      "boss_names": [
+        "Pagan Bishop of Agony"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Forbidden Woods Map",
+      "url": "https://www.poewiki.net/wiki/Map:Forbidden_Woods_Map",
+      "tier": 10,
+      "monster_level": 77,
+      "area_level": 77,
+      "boss_names": [
+        "Skictis, Frostkeeper",
+        "Takatax Brittlethorn",
+        "Corruptor Eedaiak"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Orchard Map",
+      "url": "https://www.poewiki.net/wiki/Map:Orchard_Map",
+      "tier": 10,
+      "monster_level": 77,
+      "area_level": 77,
+      "boss_names": [
+        "Vision of Justice"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Pier Map",
+      "url": "https://www.poewiki.net/wiki/Map:Pier_Map",
+      "tier": 10,
+      "monster_level": 77,
+      "area_level": 77,
+      "boss_names": [
+        "Ancient Architect"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Precinct Map",
+      "url": "https://www.poewiki.net/wiki/Map:Precinct_Map",
+      "tier": 10,
+      "monster_level": 77,
+      "area_level": 77,
+      "boss_names": [
+        "Torr Olgosso",
+        "Damoi Tui",
+        "Orra Greengate",
+        "Augustina Solaria",
+        "Wilorin Demontamer",
+        "Eoin Greyfur",
+        "Igna Phoenix"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Shipyard Map",
+      "url": "https://www.poewiki.net/wiki/Map:Shipyard_Map",
+      "tier": 10,
+      "monster_level": 77,
+      "area_level": 77,
+      "boss_names": [
+        "Musky \"Two-Eyes\" Grenn",
+        "Susara, Siren of Pondium",
+        "Lussi \"Rotmother\" Roth"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Siege Map",
+      "url": "https://www.poewiki.net/wiki/Map:Siege_Map",
+      "tier": 10,
+      "monster_level": 77,
+      "area_level": 77,
+      "boss_names": [
+        "Tahsin, Warmaker"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Wasteland Map",
+      "url": "https://www.poewiki.net/wiki/Map:Wasteland_Map",
+      "tier": 10,
+      "monster_level": 77,
+      "area_level": 77,
+      "boss_names": [
+        "The Brittle Emperor"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Cold River Map",
+      "url": "https://www.poewiki.net/wiki/Map:Cold_River_Map",
+      "tier": 11,
+      "monster_level": 78,
+      "area_level": 78,
+      "boss_names": [
+        "Ara, Sister of Light",
+        "Khor, Sister of Shadows"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Colonnade Map",
+      "url": "https://www.poewiki.net/wiki/Map:Colonnade_Map",
+      "tier": 11,
+      "monster_level": 78,
+      "area_level": 78,
+      "boss_names": [
+        "Tyrant (unique monster)"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Coves Map",
+      "url": "https://www.poewiki.net/wiki/Map:Coves_Map",
+      "tier": 11,
+      "monster_level": 78,
+      "area_level": 78,
+      "boss_names": [
+        "Pirate Treasure",
+        "Telvar, the Inebriated"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Factory Map",
+      "url": "https://www.poewiki.net/wiki/Map:Factory_Map",
+      "tier": 11,
+      "monster_level": 78,
+      "area_level": 78,
+      "boss_names": [
+        "Pesquin, the Mad Baron"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Grave Trough Map",
+      "url": "https://www.poewiki.net/wiki/Map:Grave_Trough_Map",
+      "tier": 11,
+      "monster_level": 78,
+      "area_level": 78,
+      "boss_names": [
+        "The Restless Shade"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Lair Map",
+      "url": "https://www.poewiki.net/wiki/Map:Lair_Map",
+      "tier": 11,
+      "monster_level": 78,
+      "area_level": 78,
+      "boss_names": [
+        "Lycius, Midnight's Howl"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Mesa Map",
+      "url": "https://www.poewiki.net/wiki/Map:Mesa_Map",
+      "tier": 11,
+      "monster_level": 78,
+      "area_level": 78,
+      "boss_names": [
+        "Oak the Mighty"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Pit Map",
+      "url": "https://www.poewiki.net/wiki/Map:Pit_Map",
+      "tier": 11,
+      "monster_level": 78,
+      "area_level": 78,
+      "boss_names": [
+        "Olof, Son of the Headsman"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Primordial Pool Map",
+      "url": "https://www.poewiki.net/wiki/Map:Primordial_Pool_Map",
+      "tier": 11,
+      "monster_level": 78,
+      "area_level": 78,
+      "boss_names": [
+        "Nightmare's Omen"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Promenade Map",
+      "url": "https://www.poewiki.net/wiki/Map:Promenade_Map",
+      "tier": 11,
+      "monster_level": 78,
+      "area_level": 78,
+      "boss_names": [
+        "Blackguard Avenger",
+        "Blackguard Tempest"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Spider Forest Map",
+      "url": "https://www.poewiki.net/wiki/Map:Spider_Forest_Map",
+      "tier": 11,
+      "monster_level": 78,
+      "area_level": 78,
+      "boss_names": [
+        "Enticer of Rot",
+        "Avatar of Rot"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Waterways Map",
+      "url": "https://www.poewiki.net/wiki/Map:Waterways_Map",
+      "tier": 11,
+      "monster_level": 78,
+      "area_level": 78,
+      "boss_names": [
+        "Fragment of Winter"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Castle Ruins Map",
+      "url": "https://www.poewiki.net/wiki/Map:Castle_Ruins_Map",
+      "tier": 12,
+      "monster_level": 79,
+      "area_level": 79,
+      "boss_names": [
+        "Leif, the Swift-Handed"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Crimson Township Map",
+      "url": "https://www.poewiki.net/wiki/Map:Crimson_Township_Map",
+      "tier": 12,
+      "monster_level": 79,
+      "area_level": 79,
+      "boss_names": [
+        "Kadaris, Crimson Mayor"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Crystal Ore Map",
+      "url": "https://www.poewiki.net/wiki/Map:Crystal_Ore_Map",
+      "tier": 12,
+      "monster_level": 79,
+      "area_level": 79,
+      "boss_names": [
+        "Champion of the Hollows",
+        "Lord of the Hollows",
+        "Messenger of the Hollows"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Defiled Cathedral Map",
+      "url": "https://www.poewiki.net/wiki/Map:Defiled_Cathedral_Map",
+      "tier": 12,
+      "monster_level": 79,
+      "area_level": 79,
+      "boss_names": [
+        "Woad, Mockery of Man"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Map (Tier 11)",
+      "url": null,
+      "tier": 12,
+      "monster_level": null,
+      "area_level": null,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Necropolis Map",
+      "url": "https://www.poewiki.net/wiki/Map:Necropolis_Map",
+      "tier": 12,
+      "monster_level": 79,
+      "area_level": 79,
+      "boss_names": [
+        "Burtok, Conjurer of Bones"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Overgrown Shrine Map",
+      "url": "https://www.poewiki.net/wiki/Map:Overgrown_Shrine_Map",
+      "tier": 12,
+      "monster_level": 79,
+      "area_level": 79,
+      "boss_names": [
+        "Maligaro, the Mutilator"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Primordial Blocks Map",
+      "url": "https://www.poewiki.net/wiki/Map:Primordial_Blocks_Map",
+      "tier": 12,
+      "monster_level": 79,
+      "area_level": 79,
+      "boss_names": [
+        "High Lithomancer"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Racecourse Map",
+      "url": "https://www.poewiki.net/wiki/Map:Racecourse_Map",
+      "tier": 12,
+      "monster_level": 79,
+      "area_level": 79,
+      "boss_names": [
+        "Bringer of Blood",
+        "Crusher of Gladiators",
+        "Shredder of Gladiators"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Summit Map",
+      "url": "https://www.poewiki.net/wiki/Map:Summit_Map",
+      "tier": 12,
+      "monster_level": 79,
+      "area_level": 79,
+      "boss_names": [
+        "Mephod, the Earth Scorcher"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Villa Map",
+      "url": "https://www.poewiki.net/wiki/Map:Villa_Map",
+      "tier": 12,
+      "monster_level": 79,
+      "area_level": 79,
+      "boss_names": [
+        "The High Templar"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Arsenal Map",
+      "url": "https://www.poewiki.net/wiki/Map:Arsenal_Map",
+      "tier": 13,
+      "monster_level": 80,
+      "area_level": 80,
+      "boss_names": [
+        "The Steel Soul"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Caldera Map",
+      "url": "https://www.poewiki.net/wiki/Map:Caldera_Map",
+      "tier": 13,
+      "monster_level": 80,
+      "area_level": 80,
+      "boss_names": [
+        "The Infernal King"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Core Map",
+      "url": "https://www.poewiki.net/wiki/Map:Core_Map",
+      "tier": 13,
+      "monster_level": 80,
+      "area_level": 80,
+      "boss_names": [
+        "Eater of Souls",
+        "Prodigy of Darkness",
+        "Prodigy of Hexes",
+        "Prodigy of Pain"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Desert Spring Map",
+      "url": "https://www.poewiki.net/wiki/Map:Desert_Spring_Map",
+      "tier": 13,
+      "monster_level": 80,
+      "area_level": 80,
+      "boss_names": [
+        "Terror of the Infinite Drifts"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Ghetto Map",
+      "url": "https://www.poewiki.net/wiki/Map:Ghetto_Map",
+      "tier": 13,
+      "monster_level": 80,
+      "area_level": 80,
+      "boss_names": [
+        "Lady Stormflay"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Malformation Map",
+      "url": "https://www.poewiki.net/wiki/Map:Malformation_Map",
+      "tier": 13,
+      "monster_level": 80,
+      "area_level": 80,
+      "boss_names": [
+        "Nightmare Manifest"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Map (Tier 12)",
+      "url": null,
+      "tier": 13,
+      "monster_level": null,
+      "area_level": null,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Park Map",
+      "url": "https://www.poewiki.net/wiki/Map:Park_Map",
+      "tier": 13,
+      "monster_level": 80,
+      "area_level": 80,
+      "boss_names": [
+        "Suncaller Asha"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Shrine Map",
+      "url": "https://www.poewiki.net/wiki/Map:Shrine_Map",
+      "tier": 13,
+      "monster_level": 80,
+      "area_level": 80,
+      "boss_names": [
+        "Piety the Empyrean"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Terrace Map",
+      "url": "https://www.poewiki.net/wiki/Map:Terrace_Map",
+      "tier": 13,
+      "monster_level": 80,
+      "area_level": 80,
+      "boss_names": [
+        "Varhesh, Shimmering Aberration",
+        "The Beachhead",
+        "Harbinger"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Acid Caverns Map",
+      "url": "https://www.poewiki.net/wiki/Map:Acid_Caverns_Map",
+      "tier": 14,
+      "monster_level": 81,
+      "area_level": 81,
+      "boss_names": [
+        "Rama, The Kinslayer",
+        "Kalria, The Fallen",
+        "Invari, The Bloodshaper",
+        "Lokan, The Deceiver",
+        "Marchak, The Betrayer",
+        "Berrots, The Breaker",
+        "Vessider, The Unrivaled",
+        "Morgrants, The Deafening"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Bramble Valley Map",
+      "url": "https://www.poewiki.net/wiki/Map:Bramble_Valley_Map",
+      "tier": 14,
+      "monster_level": 81,
+      "area_level": 81,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Colosseum Map",
+      "url": "https://www.poewiki.net/wiki/Map:Colosseum_Map",
+      "tier": 14,
+      "monster_level": 81,
+      "area_level": 81,
+      "boss_names": [
+        "Ambrius, Legion Slayer"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Crimson Temple Map",
+      "url": "https://www.poewiki.net/wiki/Map:Crimson_Temple_Map",
+      "tier": 14,
+      "monster_level": 81,
+      "area_level": 81,
+      "boss_names": [
+        "The Sanguine Siren"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Dark Forest Map",
+      "url": "https://www.poewiki.net/wiki/Map:Dark_Forest_Map",
+      "tier": 14,
+      "monster_level": 81,
+      "area_level": 81,
+      "boss_names": [
+        "The Cursed King"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Dig Map",
+      "url": "https://www.poewiki.net/wiki/Map:Dig_Map",
+      "tier": 14,
+      "monster_level": 81,
+      "area_level": 81,
+      "boss_names": [
+        "Stalker of the Endless Dunes"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Map (Tier 13)",
+      "url": null,
+      "tier": 14,
+      "monster_level": null,
+      "area_level": null,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Palace Map",
+      "url": "https://www.poewiki.net/wiki/Map:Palace_Map",
+      "tier": 14,
+      "monster_level": 81,
+      "area_level": 81,
+      "boss_names": [
+        "God's Chosen",
+        "The Hallowed Husk"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Plaza Map",
+      "url": "https://www.poewiki.net/wiki/Map:Plaza_Map",
+      "tier": 14,
+      "monster_level": 81,
+      "area_level": 81,
+      "boss_names": [
+        "Vision of Justice"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Basilica Map",
+      "url": "https://www.poewiki.net/wiki/Map:Basilica_Map",
+      "tier": 15,
+      "monster_level": 82,
+      "area_level": 82,
+      "boss_names": [
+        "Konley, the Unrepentant"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Carcass Map",
+      "url": "https://www.poewiki.net/wiki/Map:Carcass_Map",
+      "tier": 15,
+      "monster_level": 82,
+      "area_level": 82,
+      "boss_names": [
+        "Amalgam of Nightmares"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Foundry Map",
+      "url": "https://www.poewiki.net/wiki/Map:Foundry_Map",
+      "tier": 15,
+      "monster_level": 82,
+      "area_level": 82,
+      "boss_names": [
+        "Ciergan, Shadow Alchemist"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Lava Lake Map",
+      "url": "https://www.poewiki.net/wiki/Map:Lava_Lake_Map",
+      "tier": 15,
+      "monster_level": 82,
+      "area_level": 82,
+      "boss_names": [
+        "Kitava, The Destroyer"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Map (Tier 14)",
+      "url": null,
+      "tier": 15,
+      "monster_level": null,
+      "area_level": null,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Reef Map",
+      "url": "https://www.poewiki.net/wiki/Map:Reef_Map",
+      "tier": 15,
+      "monster_level": 82,
+      "area_level": 82,
+      "boss_names": [
+        "Nassar, Lion of the Seas"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Sunken City Map",
+      "url": "https://www.poewiki.net/wiki/Map:Sunken_City_Map",
+      "tier": 15,
+      "monster_level": 82,
+      "area_level": 82,
+      "boss_names": [
+        "Armala, the Widow"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Altered Distant Memory",
+      "url": "https://poedb.tw/us/Altered_Distant_Memory",
+      "tier": 16,
+      "monster_level": 81,
+      "area_level": 81,
+      "boss_names": [],
+      "mods": [
+        "100% increased Experience gain",
+        "Monster Level: 81",
+        "Map has (3—5) additional random Modifiers",
+        "Map has (2—4) additional Synthesis Global Modifiers",
+        "map item drop quantity +% \\[100\\]",
+        "map item drop rarity +% \\[0\\]",
+        "map pack size +% \\[25\\]",
+        "Corrupted"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Augmented Distant Memory",
+      "url": "https://poedb.tw/us/Augmented_Distant_Memory",
+      "tier": 16,
+      "monster_level": 81,
+      "area_level": 81,
+      "boss_names": [],
+      "mods": [
+        "100% increased Experience gain",
+        "Monster Level: 81",
+        "Map has (3—5) additional random Modifiers",
+        "Map has (2—4) additional Synthesis Global Modifiers",
+        "map item drop quantity +% \\[100\\]",
+        "map item drop rarity +% \\[0\\]",
+        "map pack size +% \\[25\\]",
+        "Corrupted"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Cortex",
+      "url": "https://poedb.tw/us/Cortex",
+      "tier": 16,
+      "monster_level": 83,
+      "area_level": 83,
+      "boss_names": [],
+      "mods": [
+        "100% increased Experience gain",
+        "Monster Level: 83",
+        "Map has (3—5) additional random Modifiers",
+        "Map has (4—6) additional Synthesis Global Modifiers",
+        "map item drop quantity +% \\[100\\]",
+        "map item drop rarity +% \\[0\\]",
+        "map pack size +% \\[25\\]",
+        "Corrupted"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Forge of the Phoenix Map",
+      "url": "https://www.poewiki.net/wiki/Map:Forge_of_the_Phoenix_Map",
+      "tier": 16,
+      "monster_level": 83,
+      "area_level": 83,
+      "boss_names": [
+        "Guardian of the Phoenix"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Infused Beachhead",
+      "url": null,
+      "tier": 16,
+      "monster_level": 83,
+      "area_level": 83,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Lair of the Hydra Map",
+      "url": "https://www.poewiki.net/wiki/Map:Lair_of_the_Hydra_Map",
+      "tier": 16,
+      "monster_level": 83,
+      "area_level": 83,
+      "boss_names": [
+        "Guardian of the Hydra"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Map (Tier 15)",
+      "url": null,
+      "tier": 16,
+      "monster_level": null,
+      "area_level": null,
+      "boss_names": [],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Maze of the Minotaur Map",
+      "url": "https://www.poewiki.net/wiki/Map:Maze_of_the_Minotaur_Map",
+      "tier": 16,
+      "monster_level": 83,
+      "area_level": 83,
+      "boss_names": [
+        "Guardian of the Minotaur"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Pit of the Chimera Map",
+      "url": "https://www.poewiki.net/wiki/Map:Pit_of_the_Chimera_Map",
+      "tier": 16,
+      "monster_level": 83,
+      "area_level": 83,
+      "boss_names": [
+        "Guardian of the Chimera"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Replica Cortex",
+      "url": "https://poedb.tw/us/Replica_Cortex",
+      "tier": 16,
+      "monster_level": 84,
+      "area_level": 84,
+      "boss_names": [],
+      "mods": [
+        "200% increased Experience gain",
+        "Monster Level: 84",
+        "Map has (6—8) additional random Modifiers",
+        "Map has (4—6) additional Synthesis Global Modifiers",
+        "map item drop quantity +% \\[100\\]",
+        "map item drop rarity +% \\[0\\]",
+        "map pack size +% \\[25\\]",
+        "Corrupted"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Rewritten Distant Memory",
+      "url": "https://poedb.tw/us/Rewritten_Distant_Memory",
+      "tier": 16,
+      "monster_level": 81,
+      "area_level": 81,
+      "boss_names": [],
+      "mods": [
+        "100% increased Experience gain",
+        "Monster Level: 81",
+        "Map has (3—5) additional random Modifiers",
+        "Map has (2—4) additional Synthesis Global Modifiers",
+        "map item drop quantity +% \\[100\\]",
+        "map item drop rarity +% \\[0\\]",
+        "map pack size +% \\[25\\]",
+        "Corrupted"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Twisted Distant Memory",
+      "url": "https://poedb.tw/us/Twisted_Distant_Memory",
+      "tier": 16,
+      "monster_level": 81,
+      "area_level": 81,
+      "boss_names": [],
+      "mods": [
+        "100% increased Experience gain",
+        "Monster Level: 81",
+        "Map has (3—5) additional random Modifiers",
+        "Map has (2—4) additional Synthesis Global Modifiers",
+        "map item drop quantity +% \\[100\\]",
+        "map item drop rarity +% \\[0\\]",
+        "map pack size +% \\[25\\]",
+        "Corrupted"
+      ],
+      "requires_level": 58,
+      "drop_location": null,
+      "unique_flag": true
+    },
+    {
+      "name": "Abomination Map",
+      "url": "https://www.poewiki.net/wiki/Map:Abomination_Map",
+      "tier": 17,
+      "monster_level": 84,
+      "area_level": 84,
+      "boss_names": [
+        "Nightmare of Doedre",
+        "Nightmare of Maligaro",
+        "Nightmare of Shavronne",
+        "Nightmare of the Depraved Trinity"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Citadel Map",
+      "url": "https://www.poewiki.net/wiki/Map:Citadel_Map",
+      "tier": 17,
+      "monster_level": 84,
+      "area_level": 84,
+      "boss_names": [
+        "Nightmare of Uhtred"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Fortress Map",
+      "url": "https://www.poewiki.net/wiki/Map:Fortress_Map",
+      "tier": 17,
+      "monster_level": 84,
+      "area_level": 84,
+      "boss_names": [
+        "Nightmare of the Unbreakable"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Sanctuary Map",
+      "url": "https://www.poewiki.net/wiki/Map:Sanctuary_Map",
+      "tier": 17,
+      "monster_level": 84,
+      "area_level": 84,
+      "boss_names": [
+        "Nightmare of Lycia"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    },
+    {
+      "name": "Ziggurat Map",
+      "url": "https://www.poewiki.net/wiki/Map:Ziggurat_Map",
+      "tier": 17,
+      "monster_level": 84,
+      "area_level": 84,
+      "boss_names": [
+        "Nightmare of Catarina"
+      ],
+      "mods": [],
+      "requires_level": null,
+      "drop_location": null,
+      "unique_flag": false
+    }
+  ]
+}

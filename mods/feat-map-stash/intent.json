@@ -1,0 +1,173 @@
+{
+  "id": "feat-map-stash",
+  "scope": "Feat: 地图道具仓库（v1 最小可用）。新增账户级 saved_stats.map_stash（gene_id -> gene_dict，独立 id 空间，参照 shared_stash 模式）；StashTransferPopup 增加 'Map Stash' 切换按钮，复用现有双列控件：左=角色背包、右=Shared/Map 仓库（切换渲染），角色基因 <-> map_stash 双向转移。拾取行为不变（地图拾取仍进背包）。",
+  "patch_type": "CODE_PATCH",
+  "entities": [
+    {
+      "kind": "account_level_stash",
+      "id": "Globals/GameState.gd::map_stash",
+      "confidence": "FACT",
+      "expected_runtime_effect": "saved_stats.map_stash 存在（global_configuration 默认 + clean_saved_data 兜底），move_to_map_stash/move_to_local_from_map_stash/get_map_genes_of_slot 可用，与 shared_stash 并行互不干扰"
+    },
+    {
+      "kind": "ui_stash_mode",
+      "id": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.gd::map_stash_mode",
+      "confidence": "FACT",
+      "expected_runtime_effect": "StashTransferPopup 底部新增 Map Stash 切换按钮，右侧列在 Shared Stash / Map Stash 之间切换；双向转移复用现有按钮/回调模式（ItemList/GeneButton 参数化数据源与转移目标）"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/GameState.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/GameState.gd::global_configuration::map_stash",
+      "old_text": "\t\t\t\t\"shared_stash\": {}, \n\t\t\t\t\"keybind_overrides\": {}, ",
+      "new_text": "\t\t\t\t\"shared_stash\": {}, \n\t\t\t\t\"map_stash\": {}, \n\t\t\t\t\"keybind_overrides\": {}, ",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/GameState.gd::clean_saved_data::map_stash_default",
+      "old_text": "func clean_saved_data():\n\t\t\t\tGenes.verify()",
+      "new_text": "func clean_saved_data():\n\t\t\t\tif not saved_stats.has(\"map_stash\"):\n\t\t\t\t\t\t\t\tsaved_stats.map_stash = {}\n\t\t\t\tGenes.verify()",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/GameState.gd::stash_funcs::map_stash",
+      "old_text": "\t\t\t\t\t\t\t\tactive_stats.genes[next_id] = cloned_gene\n\t\t\t\t\t\t\t\temit_signal(\"genes_changed\")\n\nfunc get_highest_level_completed():",
+      "new_text": "\t\t\t\t\t\t\t\tactive_stats.genes[next_id] = cloned_gene\n\t\t\t\t\t\t\t\temit_signal(\"genes_changed\")\n\nfunc move_to_map_stash(gene_id):\n\t\t\t\t\n\t\t\t\tvar active_stats = get_active_stats()\n\t\t\t\tif active_stats.genes.has(gene_id):\n\t\t\t\t\t\t\t\tvar cloned_gene = active_stats.genes[gene_id]\n\t\t\t\t\t\t\t\tGenes.delete_gene(gene_id, false)\n\t\t\t\t\t\t\t\tvar all_ids = saved_stats.map_stash.keys()\n\t\t\t\t\t\t\t\tvar highest_id = - 1\n\t\t\t\t\t\t\t\tfor key in all_ids:\n\t\t\t\t\t\t\t\t\t\t\t\thighest_id = max(highest_id, float(key))\n\t\t\t\t\t\t\t\tvar new_map_id = highest_id + 1\n\t\t\t\t\t\t\t\tcloned_gene.id = new_map_id\n\t\t\t\t\t\t\t\tsaved_stats.map_stash[new_map_id] = cloned_gene\n\t\t\t\t\t\t\t\temit_signal(\"genes_changed\")\n\nfunc move_to_local_from_map_stash(gene_id):\n\t\t\t\t\n\t\t\t\tif saved_stats.map_stash.has(gene_id):\n\t\t\t\t\t\t\t\tvar cloned_gene = saved_stats.map_stash[gene_id]\n\t\t\t\t\t\t\t\tsaved_stats.map_stash.erase(gene_id)\n\t\t\t\t\t\t\t\tvar next_id = Genes.get_next_id()\n\t\t\t\t\t\t\t\tcloned_gene.id = next_id\n\t\t\t\t\t\t\t\tvar active_stats = get_active_stats()\n\t\t\t\t\t\t\t\tactive_stats.genes[next_id] = cloned_gene\n\t\t\t\t\t\t\t\temit_signal(\"genes_changed\")\n\nfunc get_map_genes_of_slot(slot_type):\n\t\t\t\tvar ids = []\n\t\t\t\tfor id in saved_stats.map_stash.keys():\n\t\t\t\t\t\t\t\tif Genes.slot_for_base(saved_stats.map_stash[id].type) == slot_type:\n\t\t\t\t\t\t\t\t\t\t\t\tids.append(id)\n\t\t\t\treturn ids\n\nfunc get_highest_level_completed():",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.gd::shared_label",
+      "old_text": "onready var shared_list = $GeneInventory / CenterContainer / PanelContainer / VBoxContainer / HBoxContainer / VBoxContainer2 / ScrollContainer2 / Items",
+      "new_text": "onready var shared_list = $GeneInventory / CenterContainer / PanelContainer / VBoxContainer / HBoxContainer / VBoxContainer2 / ScrollContainer2 / Items\nonready var shared_label = $GeneInventory / CenterContainer / PanelContainer / VBoxContainer / HBoxContainer / VBoxContainer2 / Label",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.gd::map_stash_mode",
+      "old_text": "func _ready():\n\t\t\t\trender_genes()\n\t\t\t\tGenes.connect(\"genes_changed\", self, \"render_genes\")\n\t\t\t\tGameState.connect(\"genes_changed\", self, \"render_genes\")\n\t\t\t\tbackbutton.grab_focus()\n\t\t\t\t$GeneInventory / CenterContainer / PanelContainer / VBoxContainer / HBoxContainer3 / HideLowLevelToggle.pressed = GameState.saved_stats.settings.hide_low_level\n\n\nfunc _process(delta: float) -> void :\n\t\t\t\tif Input.is_action_just_pressed(\"ui_cancel\"):\n\t\t\t\t\t\t\t\tPopupManager.pop_popup()\n\nfunc _on_BackButton_pressed() -> void :\n\t\t\t\tPopupManager.pop_popup()\n\nfunc render_genes():\n\t\t\t\tfor child in gene_list.get_children():\n\t\t\t\t\t\t\t\tchild.queue_free()\n\t\t\t\tfor child in shared_list.get_children():\n\t\t\t\t\t\t\t\tchild.queue_free()\n\n\t\t\t\tfor slot in Genes.GeneSlot.values():\n\t\t\t\t\t\t\t\tvar itemlist = item_list.instance()\n\t\t\t\t\t\t\t\titemlist.slot = slot\n\t\t\t\t\t\t\t\titemlist.is_shared = false\n\t\t\t\t\t\t\t\titemlist.action_transfer = true\n\t\t\t\t\t\t\t\tgene_list.add_child(itemlist)\n\n\t\t\t\tfor slot in Genes.GeneSlot.values():\n\t\t\t\t\t\t\t\tvar itemlist = item_list.instance()\n\t\t\t\t\t\t\t\titemlist.slot = slot\n\t\t\t\t\t\t\t\titemlist.is_shared = true\n\t\t\t\t\t\t\t\titemlist.action_transfer = true\n\t\t\t\t\t\t\t\tshared_list.add_child(itemlist)",
+      "new_text": "var map_mode = false\n\nfunc _ready():\n\t\t\t\trender_genes()\n\t\t\t\tGenes.connect(\"genes_changed\", self, \"render_genes\")\n\t\t\t\tGameState.connect(\"genes_changed\", self, \"render_genes\")\n\t\t\t\tbackbutton.grab_focus()\n\t\t\t\t$GeneInventory / CenterContainer / PanelContainer / VBoxContainer / HBoxContainer3 / HideLowLevelToggle.pressed = GameState.saved_stats.settings.hide_low_level\n\t\t\t\tvar map_toggle = Button.new()\n\t\t\t\tmap_toggle.name = \"MapStashToggle\"\n\t\t\t\tmap_toggle.text = \"Map Stash\"\n\t\t\t\tmap_toggle.connect(\"pressed\", self, \"_on_MapToggle_pressed\")\n\t\t\t\t$GeneInventory / CenterContainer / PanelContainer / VBoxContainer / HBoxContainer3.add_child(map_toggle)\n\n\nfunc _process(delta: float) -> void :\n\t\t\t\tif Input.is_action_just_pressed(\"ui_cancel\"):\n\t\t\t\t\t\t\t\tPopupManager.pop_popup()\n\nfunc _on_BackButton_pressed() -> void :\n\t\t\t\tPopupManager.pop_popup()\n\nfunc _on_MapToggle_pressed() -> void :\n\t\t\t\tmap_mode = not map_mode\n\t\t\t\tvar toggle = $GeneInventory / CenterContainer / PanelContainer / VBoxContainer / HBoxContainer3.get_node(\"MapStashToggle\")\n\t\t\t\tif map_mode:\n\t\t\t\t\t\t\t\ttoggle.text = \"Shared Stash\"\n\t\t\t\telse:\n\t\t\t\t\t\t\t\ttoggle.text = \"Map Stash\"\n\t\t\t\trender_genes()\n\nfunc render_genes():\n\t\t\t\tfor child in gene_list.get_children():\n\t\t\t\t\t\t\t\tchild.queue_free()\n\t\t\t\tfor child in shared_list.get_children():\n\t\t\t\t\t\t\t\tchild.queue_free()\n\n\t\t\t\tfor slot in Genes.GeneSlot.values():\n\t\t\t\t\t\t\t\tvar itemlist = item_list.instance()\n\t\t\t\t\t\t\t\titemlist.slot = slot\n\t\t\t\t\t\t\t\titemlist.is_shared = false\n\t\t\t\t\t\t\t\titemlist.action_transfer = true\n\t\t\t\t\t\t\t\titemlist.transfer_to_map = map_mode\n\t\t\t\t\t\t\t\tgene_list.add_child(itemlist)\n\n\t\t\t\tfor slot in Genes.GeneSlot.values():\n\t\t\t\t\t\t\t\tvar itemlist = item_list.instance()\n\t\t\t\t\t\t\t\titemlist.slot = slot\n\t\t\t\t\t\t\t\titemlist.is_shared = not map_mode\n\t\t\t\t\t\t\t\titemlist.is_map = map_mode\n\t\t\t\t\t\t\t\titemlist.action_transfer = true\n\t\t\t\t\t\t\t\tshared_list.add_child(itemlist)\n\t\t\t\tif map_mode:\n\t\t\t\t\t\t\t\tshared_label.text = \"Map Stash\"\n\t\t\t\telse:\n\t\t\t\t\t\t\t\tshared_label.text = \"Shared Stash\"",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/ItemList.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/ItemList.gd::is_map_flags",
+      "old_text": "var slot\nvar is_shared = false\nvar action_transfer = false",
+      "new_text": "var slot\nvar is_shared = false\nvar is_map = false\nvar action_transfer = false\nvar transfer_to_map = false",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/ItemList.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/ItemList.gd::map_gene_sorter",
+      "old_text": "func _ready():\n\t\t\t\tif is_shared:",
+      "new_text": "func map_gene_sorter(a, b):\n\t\t\t\tvar gene_a = GameState.saved_stats.map_stash[a]\n\t\t\t\tvar gene_b = GameState.saved_stats.map_stash[b]\n\t\t\t\tvar slot_a = Genes.slot_for_base(gene_a.type)\n\t\t\t\tvar slot_b = Genes.slot_for_base(gene_b.type)\n\t\t\t\tvar unique_a = gene_a.unique\n\t\t\t\tvar unique_b = gene_b.unique\n\n\t\t\t\tif slot_a == slot_b:\n\t\t\t\t\t\t\t\tif unique_a > unique_b:\n\t\t\t\t\t\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\t\t\tif unique_b > unique_a:\n\t\t\t\t\t\t\t\t\t\t\t\treturn false\n\t\t\t\t\t\t\t\treturn gene_a.level > gene_b.level\n\n\t\t\t\treturn slot_a < slot_b\n\n\nfunc _ready():\n\t\t\t\tif is_shared:",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/ItemList.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/ItemList.gd::_ready_three_way",
+      "old_text": "\t\t\t\tif is_shared:\n\t\t\t\t\t\t\t\t$Label.text = Genes.name_for_gene_type[slot]\n\t\t\t\t\t\t\t\tvar all_genes = GameState.get_shared_genes_of_slot(slot)\n\t\t\t\t\t\t\t\tall_genes.sort_custom(self, \"shared_gene_sorter\")\n\t\t\t\t\t\t\t\tfor id in all_genes:\n\t\t\t\t\t\t\t\t\t\t\t\tvar button = gene_button.instance()\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.gene_id = id\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.is_in_shared = true\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.action_transfer = action_transfer\n\t\t\t\t\t\t\t\t\t\t\t\t$Items.add_child(button)\n\n\t\t\t\t\t\t\t\tif len(all_genes) == 0:\n\t\t\t\t\t\t\t\t\t\t\t\tvisible = false\n\t\t\t\telse:\n\t\t\t\t\t\t\t\t$Label.text = Genes.name_for_gene_type[slot]\n\t\t\t\t\t\t\t\tvar all_genes = GameState.get_genes_of_slot(slot)\n\t\t\t\t\t\t\t\tall_genes.sort_custom(self, \"gene_sorter\")\n\t\t\t\t\t\t\t\tfor id in all_genes:\n\t\t\t\t\t\t\t\t\t\t\t\tvar button = gene_button.instance()\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.gene_id = id\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.is_in_shared = false\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.action_transfer = action_transfer\n\t\t\t\t\t\t\t\t\t\t\t\t$Items.add_child(button)\n\t\t\t\t\t\t\t\tif len(all_genes) == 0:\n\t\t\t\t\t\t\t\t\t\t\t\tvisible = false",
+      "new_text": "\t\t\t\tif is_shared or is_map:\n\t\t\t\t\t\t\t\t$Label.text = Genes.name_for_gene_type[slot]\n\t\t\t\t\t\t\t\tvar all_genes\n\t\t\t\t\t\t\t\tif is_map:\n\t\t\t\t\t\t\t\t\t\t\t\tall_genes = GameState.get_map_genes_of_slot(slot)\n\t\t\t\t\t\t\t\t\t\t\t\tall_genes.sort_custom(self, \"map_gene_sorter\")\n\t\t\t\t\t\t\t\telse:\n\t\t\t\t\t\t\t\t\t\t\t\tall_genes = GameState.get_shared_genes_of_slot(slot)\n\t\t\t\t\t\t\t\t\t\t\t\tall_genes.sort_custom(self, \"shared_gene_sorter\")\n\t\t\t\t\t\t\t\tfor id in all_genes:\n\t\t\t\t\t\t\t\t\t\t\t\tvar button = gene_button.instance()\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.gene_id = id\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.is_in_shared = not is_map\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.is_in_map = is_map\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.action_transfer = action_transfer\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.transfer_to_map = transfer_to_map\n\t\t\t\t\t\t\t\t\t\t\t\t$Items.add_child(button)\n\n\t\t\t\t\t\t\t\tif len(all_genes) == 0:\n\t\t\t\t\t\t\t\t\t\t\t\tvisible = false\n\t\t\t\telse:\n\t\t\t\t\t\t\t\t$Label.text = Genes.name_for_gene_type[slot]\n\t\t\t\t\t\t\t\tvar all_genes = GameState.get_genes_of_slot(slot)\n\t\t\t\t\t\t\t\tall_genes.sort_custom(self, \"gene_sorter\")\n\t\t\t\t\t\t\t\tfor id in all_genes:\n\t\t\t\t\t\t\t\t\t\t\t\tvar button = gene_button.instance()\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.gene_id = id\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.is_in_shared = false\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.is_in_map = false\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.action_transfer = action_transfer\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.transfer_to_map = transfer_to_map\n\t\t\t\t\t\t\t\t\t\t\t\t$Items.add_child(button)\n\t\t\t\t\t\t\t\tif len(all_genes) == 0:\n\t\t\t\t\t\t\t\t\t\t\t\tvisible = false",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd::is_in_map_flags",
+      "old_text": "var gene_id\nvar is_in_shared = false\nvar action_transfer = false",
+      "new_text": "var gene_id\nvar is_in_shared = false\nvar is_in_map = false\nvar action_transfer = false\nvar transfer_to_map = false",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd::_ready_equipped_check",
+      "old_text": "\t\t\t\tif not is_in_shared:\n\t\t\t\t\t\t\t\tif GameState.is_gene_equipped(gene_id):\n\t\t\t\t\t\t\t\t\t\t\t\t$GeneButton / EquippedIcon.visible = true",
+      "new_text": "\t\t\t\tif not is_in_shared and not is_in_map:\n\t\t\t\t\t\t\t\tif GameState.is_gene_equipped(gene_id):\n\t\t\t\t\t\t\t\t\t\t\t\t$GeneButton / EquippedIcon.visible = true",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd::update_seen_label",
+      "old_text": "func update_seen_label():\n\t\t\t\tif not is_in_shared:\n\t\t\t\t\t\t\t\tif GameState.is_gene_new(gene_id):",
+      "new_text": "func update_seen_label():\n\t\t\t\tif not is_in_shared and not is_in_map:\n\t\t\t\t\t\t\t\tif GameState.is_gene_new(gene_id):",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd::_check_visibility",
+      "old_text": "func _check_visibility():\n\t\t\t\tif is_in_shared:\n\t\t\t\t\t\t\t\tpass\n\t\t\t\telse:",
+      "new_text": "func _check_visibility():\n\t\t\t\tif is_in_shared or is_in_map:\n\t\t\t\t\t\t\t\tpass\n\t\t\t\telse:",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd::_update_name",
+      "old_text": "func _update_name():\n\t\t\t\tif is_in_shared:\n\t\t\t\t\t\t\t\tvar gene = GameState.saved_stats.shared_stash[gene_id]\n\t\t\t\t\t\t\t\tif gene:\n\t\t\t\t\t\t\t\t\t\t\t\tvar icon_tex = Genes.get_icon(gene_id, true)\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.icon = icon_tex\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.set(\"custom_colors/font_color\", Colors.unequipped)\n\t\t\t\telse:\n\t\t\t\t\t\t\t\tvar gene = GameState.get_active_stats().genes[gene_id]\n\t\t\t\t\t\t\t\tif gene:\n\t\t\t\t\t\t\t\t\t\t\t\tvar icon_tex = Genes.get_icon(gene_id)\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.icon = icon_tex\n\t\t\t\t\t\t\t\t\t\t\t\tif GameState.is_gene_equipped(gene_id):\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tbutton.set(\"custom_colors/font_color\", Colors.equipped)\n\t\t\t\t\t\t\t\t\t\t\t\telse:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tbutton.set(\"custom_colors/font_color\", Colors.unequipped)",
+      "new_text": "func _update_name():\n\t\t\t\tif is_in_map:\n\t\t\t\t\t\t\t\tvar gene = GameState.saved_stats.map_stash[gene_id]\n\t\t\t\t\t\t\t\tif gene:\n\t\t\t\t\t\t\t\t\t\t\t\tvar icon_tex = Genes.get_icon(gene_id, false, true)\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.icon = icon_tex\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.set(\"custom_colors/font_color\", Colors.unequipped)\n\t\t\t\telif is_in_shared:\n\t\t\t\t\t\t\t\tvar gene = GameState.saved_stats.shared_stash[gene_id]\n\t\t\t\t\t\t\t\tif gene:\n\t\t\t\t\t\t\t\t\t\t\t\tvar icon_tex = Genes.get_icon(gene_id, true)\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.icon = icon_tex\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.set(\"custom_colors/font_color\", Colors.unequipped)\n\t\t\t\telse:\n\t\t\t\t\t\t\t\tvar gene = GameState.get_active_stats().genes[gene_id]\n\t\t\t\t\t\t\t\tif gene:\n\t\t\t\t\t\t\t\t\t\t\t\tvar icon_tex = Genes.get_icon(gene_id)\n\t\t\t\t\t\t\t\t\t\t\t\tbutton.icon = icon_tex\n\t\t\t\t\t\t\t\t\t\t\t\tif GameState.is_gene_equipped(gene_id):\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tbutton.set(\"custom_colors/font_color\", Colors.equipped)\n\t\t\t\t\t\t\t\t\t\t\t\telse:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tbutton.set(\"custom_colors/font_color\", Colors.unequipped)",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd::_on_GeneButton_pressed",
+      "old_text": "\t\t\t\tif action_transfer:\n\t\t\t\t\t\t\t\tif is_in_shared:\n\t\t\t\t\t\t\t\t\t\t\t\tGameState.move_to_local_stash(gene_id)\n\t\t\t\t\t\t\t\telse:\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\tGameState.move_to_shared_stash(gene_id)",
+      "new_text": "\t\t\t\tif action_transfer:\n\t\t\t\t\t\t\t\tif is_in_map:\n\t\t\t\t\t\t\t\t\t\t\t\tGameState.move_to_local_from_map_stash(gene_id)\n\t\t\t\t\t\t\t\telif is_in_shared:\n\t\t\t\t\t\t\t\t\t\t\t\tGameState.move_to_local_stash(gene_id)\n\t\t\t\t\t\t\t\telse:\n\t\t\t\t\t\t\t\t\t\t\t\tif transfer_to_map:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tGameState.move_to_map_stash(gene_id)\n\t\t\t\t\t\t\t\t\t\t\t\telse:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tGameState.move_to_shared_stash(gene_id)",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd::_on_GeneButton_focus_entered",
+      "old_text": "\t\t\t\tif not is_in_shared:\n\t\t\t\t\t\t\t\tGameState.mark_gene_seen(gene_id)\n\t\t\t\ttooltip.render(gene_id, rect_global_position, rect_size, is_in_shared)",
+      "new_text": "\t\t\t\tif not is_in_shared and not is_in_map:\n\t\t\t\t\t\t\t\tGameState.mark_gene_seen(gene_id)\n\t\t\t\ttooltip.render(gene_id, rect_global_position, rect_size, is_in_shared, is_in_map)",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd::_on_GeneButton_gui_input",
+      "old_text": "\t\t\t\tif is_in_shared:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tif event is InputEventMouseButton and event.is_pressed():",
+      "new_text": "\t\t\t\tif is_in_shared or is_in_map:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tif event is InputEventMouseButton and event.is_pressed():",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Tooltips/GeneTooltip/GeneTooltip.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Tooltips/GeneTooltip/GeneTooltip.gd::map_stash",
+      "old_text": "func render(gene_id, position, position_offset, is_in_shared = false):\n\t\t\t\tif gene_id == null:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tvar gene\n\t\t\t\tif is_in_shared:\n\t\t\t\t\t\t\t\tgene = GameState.saved_stats.shared_stash[gene_id]\n\t\t\t\telse:\n\t\t\t\t\t\t\t\tgene = GameState.get_active_stats().genes[gene_id]",
+      "new_text": "func render(gene_id, position, position_offset, is_in_shared = false, is_in_map = false):\n\t\t\t\tif gene_id == null:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tvar gene\n\t\t\t\tif is_in_map:\n\t\t\t\t\t\t\t\tgene = GameState.saved_stats.map_stash[gene_id]\n\t\t\t\telif is_in_shared:\n\t\t\t\t\t\t\t\tgene = GameState.saved_stats.shared_stash[gene_id]\n\t\t\t\telse:\n\t\t\t\t\t\t\t\tgene = GameState.get_active_stats().genes[gene_id]",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/Genes.gd::get_icon::map_stash",
+      "old_text": "func get_icon(gene_id, is_shared = false):\n\t\t\t\tvar gene\n\t\t\t\tif is_shared:\n\t\t\t\t\t\t\t\tgene = GameState.saved_stats.shared_stash[gene_id]\n\t\t\t\telse:\n\t\t\t\t\t\t\t\tgene = GameState.get_active_stats().genes[gene_id]",
+      "new_text": "func get_icon(gene_id, is_shared = false, is_map = false):\n\t\t\t\tvar gene\n\t\t\t\tif is_map:\n\t\t\t\t\t\t\t\tgene = GameState.saved_stats.map_stash[gene_id]\n\t\t\t\telif is_shared:\n\t\t\t\t\t\t\t\tgene = GameState.saved_stats.shared_stash[gene_id]\n\t\t\t\telse:\n\t\t\t\t\t\t\t\tgene = GameState.get_active_stats().genes[gene_id]",
+      "expected_occurrences": 1
+    }
+  ],
+  "tests": [
+    "preimage_exact_match",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "boot"
+  ],
+  "not_proven": "地图仓库 UI 的视觉体验（动态按钮为默认主题）；map_stash 基因的过滤/搜索/排序与原背包完全一致；自动入仓开关（后续项）"
+}

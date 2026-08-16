@@ -1,0 +1,600 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-08-16",
+  "source": [
+    "https://poedb.tw/us/Maps (Map Corruption /12, Map Costs /16)",
+    "https://www.poewiki.net/wiki/Map"
+  ],
+  "coverage": "抽样结构=完整收录地图腐化词缀 12 条(含 weight)与地图合成成本 16 级;普通地图前缀/后缀完整词缀表(poewiki List of map mods)未抓取。tier_range 来自 poewiki Map 页。",
+  "items": {
+    "tier_ranges": [
+      {
+        "range": "1-5",
+        "band": "white",
+        "monster_level": "68-72"
+      },
+      {
+        "range": "6-10",
+        "band": "yellow",
+        "monster_level": "73-77"
+      },
+      {
+        "range": "11-16",
+        "band": "red",
+        "monster_level": "78-83"
+      },
+      {
+        "range": "17",
+        "band": "special",
+        "monster_level": "84"
+      }
+    ],
+    "map_corruption": [
+      {
+        "level": 1,
+        "description": "map implicit item drop quantity +% \\[10,20\\]",
+        "weights": {
+          "default": 75
+        }
+      },
+      {
+        "level": 1,
+        "description": "map implicit item drop rarity +% \\[8,12\\]",
+        "weights": {
+          "default": 75
+        }
+      },
+      {
+        "level": 1,
+        "description": "map implicit pack size +% \\[5,10\\]",
+        "weights": {
+          "default": 55
+        }
+      },
+      {
+        "level": 1,
+        "description": "local explicit mod effect +% \\[10,20\\]",
+        "weights": {
+          "default": 10
+        }
+      },
+      {
+        "level": 1,
+        "description": "Contains a Vaal Side Area _infected\\_map_ 0",
+        "weights": {
+          "default": 40
+        }
+      },
+      {
+        "level": 78,
+        "description": "Area contains 1 additional guarded Exquisite Vaal Vessels _infected\\_map_ 0",
+        "weights": {
+          "default": 10
+        }
+      },
+      {
+        "level": 1,
+        "description": "Unique Monsters drop Corrupted Items _infected\\_map_ 0",
+        "weights": {
+          "default": 40
+        }
+      },
+      {
+        "level": 1,
+        "description": "Players' Vaal Skills do not apply Soul Gain Prevention",
+        "weights": {
+          "default": 20
+        }
+      },
+      {
+        "level": 1,
+        "description": "Map Crafting options for this Map have no cost _infected\\_map_ 0",
+        "weights": {
+          "default": 0
+        }
+      },
+      {
+        "level": 1,
+        "description": "Atlas Passives have (10—15)% increased Effect on Area _infected\\_map_ 0",
+        "weights": {
+          "default": 10
+        }
+      },
+      {
+        "level": 1,
+        "description": "Area has (1—5) additional random Scarab effects _infected\\_map_ 0",
+        "weights": {
+          "default": 15
+        }
+      },
+      {
+        "level": 1,
+        "description": "Area is affected by (5—15) additional random Unallocated Notable Atlas Passives _infected\\_map_ 0",
+        "weights": {
+          "default": 15
+        }
+      }
+    ],
+    "map_costs": [
+      {
+        "tier": 1,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "magic": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 2,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "magic": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 3,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "magic": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 4,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "magic": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 5,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "magic": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 6,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "magic": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 1,
+            "items": [
+              "Orb_of_Chance"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 7,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Orb_of_Alchemy"
+            ]
+          },
+          "magic": {
+            "count": 2,
+            "items": [
+              "Orb_of_Alchemy",
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 1,
+            "items": [
+              "Orb_of_Alchemy"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 8,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Orb_of_Alchemy"
+            ]
+          },
+          "magic": {
+            "count": 2,
+            "items": [
+              "Orb_of_Alchemy",
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 1,
+            "items": [
+              "Orb_of_Alchemy"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 9,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Orb_of_Alchemy"
+            ]
+          },
+          "magic": {
+            "count": 2,
+            "items": [
+              "Orb_of_Alchemy",
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 1,
+            "items": [
+              "Orb_of_Alchemy"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 10,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Orb_of_Alchemy"
+            ]
+          },
+          "magic": {
+            "count": 2,
+            "items": [
+              "Orb_of_Alchemy",
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 1,
+            "items": [
+              "Orb_of_Alchemy"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 11,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Orb_of_Alchemy"
+            ]
+          },
+          "magic": {
+            "count": 2,
+            "items": [
+              "Orb_of_Alchemy",
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 1,
+            "items": [
+              "Orb_of_Alchemy"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 12,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          },
+          "magic": {
+            "count": 2,
+            "items": [
+              "Chaos_Orb",
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 2,
+            "items": [
+              "Chaos_Orb",
+              "Orb_of_Alchemy"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 13,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          },
+          "magic": {
+            "count": 2,
+            "items": [
+              "Chaos_Orb",
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 2,
+            "items": [
+              "Chaos_Orb",
+              "Orb_of_Alchemy"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 14,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          },
+          "magic": {
+            "count": 2,
+            "items": [
+              "Chaos_Orb",
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 2,
+            "items": [
+              "Chaos_Orb",
+              "Orb_of_Alchemy"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 15,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          },
+          "magic": {
+            "count": 2,
+            "items": [
+              "Chaos_Orb",
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 2,
+            "items": [
+              "Chaos_Orb",
+              "Orb_of_Alchemy"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      },
+      {
+        "tier": 16,
+        "costs": {
+          "normal": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          },
+          "magic": {
+            "count": 2,
+            "items": [
+              "Chaos_Orb",
+              "Orb_of_Chance"
+            ]
+          },
+          "rare": {
+            "count": 2,
+            "items": [
+              "Chaos_Orb",
+              "Orb_of_Alchemy"
+            ]
+          },
+          "unique": {
+            "count": 1,
+            "items": [
+              "Chaos_Orb"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

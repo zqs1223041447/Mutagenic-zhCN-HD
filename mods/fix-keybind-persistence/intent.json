@@ -1,0 +1,27 @@
+{
+  "id": "fix-keybind-persistence",
+  "scope": "Fix keybind persistence: ui_open_inventory (Show Inventory) and ui_open_menu (Show Menu) are missing from Keybindings.configurable_actions, so GameState.load_keybinds() never replays their saved keybind_overrides after restart and the game falls back to defaults (I/Tab, C/ESC). Adding both actions to configurable_actions makes load_keybinds() replay the stored override for them while preserving the default keys when no override exists.",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "entities": [
+    {
+      "kind": "configurable_action_set",
+      "id": "Globals/Keybindings.gd::configurable_actions",
+      "confidence": "FACT",
+      "expected_runtime_effect": "GameState.load_keybinds() (called unconditionally from load_game() local branch and from _on_load()/reset_game_state()) will now iterate ui_open_inventory and ui_open_menu as well: when a keybind override exists in saved_stats.keybind_overrides it erases the default InputMap key events and adds the stored physical_scancode (custom key persists after restart); when no override exists it snapshots the first InputMap key event into keybind_overrides without touching InputMap, so the defaults I/Tab (ui_open_inventory) and C/ESC (ui_open_menu) remain effective."
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/Keybindings.gd",
+      "classification": "CODE_PATCH",
+      "anchor": "configurable_actions",
+      "old_text": "\t\t\t\t\"move_down\", \n",
+      "new_text": "\t\t\t\t\"move_down\", \n\t\t\t\t\"ui_open_inventory\", \n\t\t\t\t\"ui_open_menu\", \n",
+      "expected_occurrences": 1
+    }
+  ],
+  "tests": ["preimage_exact_match", "declared_delta", "pck_checksum", "boot"]
+}

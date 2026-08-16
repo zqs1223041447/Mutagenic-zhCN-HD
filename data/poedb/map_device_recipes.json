@@ -1,0 +1,794 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-08-16",
+  "source": [
+    "https://poedb.tw/us/Maps (Map Device Recipes /88)"
+  ],
+  "coverage": "完整=poedb 地图装置配方表 88 条(输入消耗品/结果图/等级)。NULL 结果图表示献祭类(如女神贡品)。",
+  "items": [
+    {
+      "result_map": null,
+      "map_url": "https://poedb.tw/us/NULL",
+      "level": 0,
+      "inputs": [
+        "Offering_to_the_Goddess",
+        "Tribute_to_the_Goddess",
+        "Gift_to_the_Goddess",
+        "Dedication_to_the_Goddess"
+      ]
+    },
+    {
+      "result_map": "The Apex of Sacrifice",
+      "map_url": "https://poedb.tw/us/The_Apex_of_Sacrifice",
+      "level": 70,
+      "inputs": [
+        "Sacrifice_at_Midnight",
+        "Sacrifice_at_Dawn",
+        "Sacrifice_at_Noon",
+        "Sacrifice_at_Dusk"
+      ]
+    },
+    {
+      "result_map": "The Alluring Abyss",
+      "map_url": "https://poedb.tw/us/The_Alluring_Abyss",
+      "level": 80,
+      "inputs": [
+        "Mortal_Rage",
+        "Mortal_Hope",
+        "Mortal_Ignorance",
+        "Mortal_Grief"
+      ]
+    },
+    {
+      "result_map": "AnyCorruptedSideArea",
+      "map_url": null,
+      "level": 72,
+      "inputs": [
+        "Sacrifice_at_Midnight"
+      ]
+    },
+    {
+      "result_map": "AnyCorruptedSideArea",
+      "map_url": null,
+      "level": 70,
+      "inputs": [
+        "Sacrifice_at_Dawn"
+      ]
+    },
+    {
+      "result_map": "AnyCorruptedSideArea",
+      "map_url": null,
+      "level": 71,
+      "inputs": [
+        "Sacrifice_at_Noon"
+      ]
+    },
+    {
+      "result_map": "AnyCorruptedSideArea",
+      "map_url": null,
+      "level": 69,
+      "inputs": [
+        "Sacrifice_at_Dusk"
+      ]
+    },
+    {
+      "result_map": "AnyCorruptedSideArea",
+      "map_url": null,
+      "level": 74,
+      "inputs": [
+        "Mortal_Rage"
+      ]
+    },
+    {
+      "result_map": "AnyCorruptedSideArea",
+      "map_url": null,
+      "level": 76,
+      "inputs": [
+        "Mortal_Hope"
+      ]
+    },
+    {
+      "result_map": "AnyCorruptedSideArea",
+      "map_url": null,
+      "level": 75,
+      "inputs": [
+        "Mortal_Ignorance"
+      ]
+    },
+    {
+      "result_map": "AnyCorruptedSideArea",
+      "map_url": null,
+      "level": 73,
+      "inputs": [
+        "Mortal_Grief"
+      ]
+    },
+    {
+      "result_map": null,
+      "map_url": "https://poedb.tw/us/NULL",
+      "level": 0,
+      "inputs": [
+        "Ebers_Key",
+        "Yriels_Key",
+        "Inyas_Key",
+        "Volkuurs_Key"
+      ]
+    },
+    {
+      "result_map": "The Shaper's Realm",
+      "map_url": "https://poedb.tw/us/The_Shapers_Realm",
+      "level": 84,
+      "inputs": [
+        "Fragment_of_the_Phoenix",
+        "Fragment_of_the_Minotaur",
+        "Fragment_of_the_Chimera",
+        "Fragment_of_the_Hydra"
+      ]
+    },
+    {
+      "result_map": "Absence of Value and Meaning",
+      "map_url": "https://poedb.tw/us/Absence_of_Value_and_Meaning",
+      "level": 83,
+      "inputs": [
+        "Fragment_of_Enslavement",
+        "Fragment_of_Eradication",
+        "Fragment_of_Constriction",
+        "Fragment_of_Purification"
+      ]
+    },
+    {
+      "result_map": "The Shaper's Realm",
+      "map_url": "https://poedb.tw/us/The_Shapers_Realm",
+      "level": 84,
+      "inputs": [
+        "Fragment_of_Terror",
+        "Fragment_of_Emptiness",
+        "Fragment_of_Shape",
+        "Fragment_of_Knowledge"
+      ]
+    },
+    {
+      "result_map": "Ancient Reliquary",
+      "map_url": "https://poedb.tw/us/Ancient_Reliquary",
+      "level": 75,
+      "inputs": [
+        "Ancient_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Maligaro's Sanctum",
+      "map_url": "https://poedb.tw/us/Maligaros_Sanctum",
+      "level": 52,
+      "inputs": [
+        "Maligaros_Map"
+      ]
+    },
+    {
+      "result_map": "Timeworn Reliquary",
+      "map_url": "https://poedb.tw/us/Timeworn_Reliquary",
+      "level": 75,
+      "inputs": [
+        "Timeworn_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Forgotten Reliquary",
+      "map_url": "https://poedb.tw/us/Forgotten_Reliquary",
+      "level": 87,
+      "inputs": [
+        "Forgotten_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Visceral Reliquary",
+      "map_url": "https://poedb.tw/us/Visceral_Reliquary",
+      "level": 87,
+      "inputs": [
+        "Visceral_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Shiny Reliquary",
+      "map_url": "https://poedb.tw/us/Shiny_Reliquary",
+      "level": 87,
+      "inputs": [
+        "Shiny_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Archive Reliquary",
+      "map_url": "https://poedb.tw/us/Archive_Reliquary",
+      "level": 87,
+      "inputs": [
+        "Archive_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Oubliette Reliquary",
+      "map_url": "https://poedb.tw/us/Oubliette_Reliquary",
+      "level": 87,
+      "inputs": [
+        "Oubliette_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Cosmic Reliquary",
+      "map_url": "https://poedb.tw/us/Cosmic_Reliquary",
+      "level": 87,
+      "inputs": [
+        "Cosmic_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Decaying Reliquary",
+      "map_url": "https://poedb.tw/us/Decaying_Reliquary",
+      "level": 87,
+      "inputs": [
+        "Decaying_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Lonely Reliquary",
+      "map_url": "https://poedb.tw/us/Lonely_Reliquary",
+      "level": 87,
+      "inputs": [
+        "Lonely_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Reverent Reliquary",
+      "map_url": "https://poedb.tw/us/Reverent_Reliquary",
+      "level": 87,
+      "inputs": [
+        "Reverent_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Traumatic Reliquary",
+      "map_url": "https://poedb.tw/us/Traumatic_Reliquary",
+      "level": 87,
+      "inputs": [
+        "Traumatic_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Voidborn Reliquary",
+      "map_url": "https://poedb.tw/us/Voidborn_Reliquary",
+      "level": 75,
+      "inputs": [
+        "Voidborn_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Voidborn Reliquary",
+      "map_url": "https://poedb.tw/us/Voidborn_Reliquary",
+      "level": 75,
+      "inputs": [
+        "Voidborn_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "Domain of Timeless Conflict",
+      "map_url": "https://poedb.tw/us/Domain_of_Timeless_Conflict",
+      "level": 80,
+      "inputs": [
+        "Timeless_Karui_Emblem",
+        "Timeless_Eternal_Emblem",
+        "Timeless_Templar_Emblem",
+        "Timeless_Vaal_Emblem",
+        "Timeless_Maraketh_Emblem"
+      ]
+    },
+    {
+      "result_map": "Domain of Timeless Conflict",
+      "map_url": "https://poedb.tw/us/Domain_of_Timeless_Conflict",
+      "level": 80,
+      "inputs": [
+        "Timeless_Karui_Emblem",
+        "Timeless_Eternal_Emblem",
+        "Timeless_Templar_Emblem",
+        "Timeless_Vaal_Emblem",
+        "Timeless_Maraketh_Emblem"
+      ]
+    },
+    {
+      "result_map": "Domain of Timeless Conflict",
+      "map_url": "https://poedb.tw/us/Domain_of_Timeless_Conflict",
+      "level": 80,
+      "inputs": [
+        "Timeless_Karui_Emblem",
+        "Timeless_Eternal_Emblem",
+        "Timeless_Templar_Emblem",
+        "Timeless_Vaal_Emblem",
+        "Timeless_Maraketh_Emblem"
+      ]
+    },
+    {
+      "result_map": "Domain of Timeless Conflict",
+      "map_url": "https://poedb.tw/us/Domain_of_Timeless_Conflict",
+      "level": 80,
+      "inputs": [
+        "Timeless_Karui_Emblem",
+        "Timeless_Eternal_Emblem",
+        "Timeless_Templar_Emblem",
+        "Timeless_Vaal_Emblem",
+        "Timeless_Maraketh_Emblem"
+      ]
+    },
+    {
+      "result_map": "Simulacrum",
+      "map_url": "https://poedb.tw/us/Simulacrum",
+      "level": 0,
+      "inputs": [
+        "Simulacrum"
+      ]
+    },
+    {
+      "result_map": "The Maven's Crucible",
+      "map_url": "https://poedb.tw/us/The_Mavens_Crucible",
+      "level": 68,
+      "inputs": [
+        "Mavens_Invitation%3A_The_Formed",
+        "Mavens_Invitation%3A_The_Twisted",
+        "Mavens_Invitation%3A_The_Forgotten",
+        "Mavens_Invitation%3A_The_Remembered",
+        "Mavens_Invitation%3A_The_Feared",
+        "Mavens_Invitation%3A_The_Elderslayers",
+        "Mavens_Invitation%3A_The_Atlas",
+        "Mavens_Invitation%3A_The_Atlas",
+        "Mavens_Invitation%3A_The_Atlas",
+        "Mavens_Invitation%3A_The_Atlas",
+        "Mavens_Invitation%3A_The_Atlas"
+      ]
+    },
+    {
+      "result_map": "Absence of Mercy and Empathy",
+      "map_url": "https://poedb.tw/us/Absence_of_Mercy_and_Empathy",
+      "level": 84,
+      "inputs": [
+        "The_Mavens_Writ"
+      ]
+    },
+    {
+      "result_map": "Vaal Reliquary",
+      "map_url": "https://poedb.tw/us/Vaal_Reliquary",
+      "level": 75,
+      "inputs": [
+        "Vaal_Reliquary_Key"
+      ]
+    },
+    {
+      "result_map": "The Temple of Atzoatl",
+      "map_url": "https://poedb.tw/us/The_Temple_of_Atzoatl",
+      "level": 1,
+      "inputs": [
+        "Chronicle_of_Atzoatl"
+      ]
+    },
+    {
+      "result_map": "The Utzaal Arena",
+      "map_url": "https://poedb.tw/us/The_Utzaal_Arena",
+      "level": 1,
+      "inputs": [
+        "Inscribed_Ultimatum"
+      ]
+    },
+    {
+      "result_map": "The Black Barya",
+      "map_url": "https://poedb.tw/us/The_Black_Barya",
+      "level": 83,
+      "inputs": [
+        "The_Black_Barya"
+      ]
+    },
+    {
+      "result_map": "The Sacred Grove",
+      "map_url": "https://poedb.tw/us/The_Sacred_Grove",
+      "level": 83,
+      "inputs": [
+        "Sacred_Blossom"
+      ]
+    },
+    {
+      "result_map": "Eye of the Storm",
+      "map_url": "https://poedb.tw/us/Eye_of_the_Storm",
+      "level": 84,
+      "inputs": [
+        "Al-Hezmins_Crest",
+        "Barans_Crest",
+        "Droxs_Crest",
+        "Veritanias_Crest"
+      ]
+    },
+    {
+      "result_map": "Seething Chyme",
+      "map_url": "https://poedb.tw/us/Seething_Chyme",
+      "level": 79,
+      "inputs": [
+        "Writhing_Invitation"
+      ]
+    },
+    {
+      "result_map": "Seething Chyme",
+      "map_url": "https://poedb.tw/us/Seething_Chyme",
+      "level": 83,
+      "inputs": [
+        "Writhing_Invitation"
+      ]
+    },
+    {
+      "result_map": "Absence of Symmetry and Harmony",
+      "map_url": "https://poedb.tw/us/Absence_of_Symmetry_and_Harmony",
+      "level": 83,
+      "inputs": [
+        "Screaming_Invitation"
+      ]
+    },
+    {
+      "result_map": "Absence of Symmetry and Harmony",
+      "map_url": "https://poedb.tw/us/Absence_of_Symmetry_and_Harmony",
+      "level": 84,
+      "inputs": [
+        "Screaming_Invitation"
+      ]
+    },
+    {
+      "result_map": "Polaric Void",
+      "map_url": "https://poedb.tw/us/Polaric_Void",
+      "level": 79,
+      "inputs": [
+        "Polaric_Invitation"
+      ]
+    },
+    {
+      "result_map": "Polaric Void",
+      "map_url": "https://poedb.tw/us/Polaric_Void",
+      "level": 83,
+      "inputs": [
+        "Polaric_Invitation"
+      ]
+    },
+    {
+      "result_map": "Absence of Patience and Wisdom",
+      "map_url": "https://poedb.tw/us/Absence_of_Patience_and_Wisdom",
+      "level": 83,
+      "inputs": [
+        "Incandescent_Invitation"
+      ]
+    },
+    {
+      "result_map": "Absence of Patience and Wisdom",
+      "map_url": "https://poedb.tw/us/Absence_of_Patience_and_Wisdom",
+      "level": 84,
+      "inputs": [
+        "Incandescent_Invitation"
+      ]
+    },
+    {
+      "result_map": "The Lake of Kalandra",
+      "map_url": "https://poedb.tw/us/The_Lake_of_Kalandra",
+      "level": 1,
+      "inputs": [
+        "Mirrored_Tablet"
+      ]
+    },
+    {
+      "result_map": "Forge of the Titans",
+      "map_url": "https://poedb.tw/us/Forge_of_the_Titans",
+      "level": 80,
+      "inputs": [
+        "Primeval_Remnant"
+      ]
+    },
+    {
+      "result_map": "Forge of the Titans",
+      "map_url": "https://poedb.tw/us/Forge_of_the_Titans",
+      "level": 84,
+      "inputs": [
+        "Primordial_Remnant"
+      ]
+    },
+    {
+      "result_map": "The Shaper's Realm",
+      "map_url": "https://poedb.tw/us/The_Shapers_Realm",
+      "level": 85,
+      "inputs": [
+        "Cosmic_Fragment",
+        "Cosmic_Fragment",
+        "Cosmic_Fragment",
+        "Cosmic_Fragment"
+      ]
+    },
+    {
+      "result_map": "The Shaper's Realm",
+      "map_url": "https://poedb.tw/us/The_Shapers_Realm",
+      "level": 85,
+      "inputs": [
+        "Decaying_Fragment",
+        "Decaying_Fragment",
+        "Decaying_Fragment",
+        "Decaying_Fragment"
+      ]
+    },
+    {
+      "result_map": "Eye of the Storm",
+      "map_url": "https://poedb.tw/us/Eye_of_the_Storm",
+      "level": 85,
+      "inputs": [
+        "Awakening_Fragment",
+        "Awakening_Fragment",
+        "Awakening_Fragment",
+        "Awakening_Fragment"
+      ]
+    },
+    {
+      "result_map": "Cortex",
+      "map_url": "https://poedb.tw/us/Cortex",
+      "level": 85,
+      "inputs": [
+        "Synthesising_Fragment",
+        "Synthesising_Fragment",
+        "Synthesising_Fragment",
+        "Synthesising_Fragment"
+      ]
+    },
+    {
+      "result_map": "Absence of Mercy and Empathy",
+      "map_url": "https://poedb.tw/us/Absence_of_Mercy_and_Empathy",
+      "level": 85,
+      "inputs": [
+        "Reality_Fragment",
+        "Reality_Fragment",
+        "Reality_Fragment",
+        "Reality_Fragment"
+      ]
+    },
+    {
+      "result_map": "Absence of Symmetry and Harmony",
+      "map_url": "https://poedb.tw/us/Absence_of_Symmetry_and_Harmony",
+      "level": 85,
+      "inputs": [
+        "Devouring_Fragment",
+        "Devouring_Fragment",
+        "Devouring_Fragment",
+        "Devouring_Fragment"
+      ]
+    },
+    {
+      "result_map": "Absence of Patience and Wisdom",
+      "map_url": "https://poedb.tw/us/Absence_of_Patience_and_Wisdom",
+      "level": 85,
+      "inputs": [
+        "Blazing_Fragment",
+        "Blazing_Fragment",
+        "Blazing_Fragment",
+        "Blazing_Fragment"
+      ]
+    },
+    {
+      "result_map": "Moment of Trauma",
+      "map_url": "https://poedb.tw/us/Moment_of_Trauma",
+      "level": 85,
+      "inputs": [
+        "Traumatic_Fragment",
+        "Traumatic_Fragment",
+        "Traumatic_Fragment",
+        "Traumatic_Fragment"
+      ]
+    },
+    {
+      "result_map": "Moment of Reverence",
+      "map_url": "https://poedb.tw/us/Moment_of_Reverence",
+      "level": 85,
+      "inputs": [
+        "Reverent_Fragment",
+        "Reverent_Fragment",
+        "Reverent_Fragment",
+        "Reverent_Fragment"
+      ]
+    },
+    {
+      "result_map": "Moment of Loneliness",
+      "map_url": "https://poedb.tw/us/Moment_of_Loneliness",
+      "level": 85,
+      "inputs": [
+        "Lonely_Fragment",
+        "Lonely_Fragment",
+        "Lonely_Fragment",
+        "Lonely_Fragment"
+      ]
+    },
+    {
+      "result_map": "Crux of Nothingness",
+      "map_url": "https://poedb.tw/us/Crux_of_Nothingness",
+      "level": 83,
+      "inputs": [
+        "An_Audience_With_The_King"
+      ]
+    },
+    {
+      "result_map": "Mastermind's Lair",
+      "map_url": "https://poedb.tw/us/Masterminds_Lair",
+      "level": 83,
+      "inputs": [
+        "Syndicate_Medallion"
+      ]
+    },
+    {
+      "result_map": "Moment of Trauma",
+      "map_url": "https://poedb.tw/us/Moment_of_Trauma",
+      "level": 83,
+      "inputs": [
+        "Echo_of_Trauma"
+      ]
+    },
+    {
+      "result_map": "Moment of Trauma",
+      "map_url": "https://poedb.tw/us/Moment_of_Trauma",
+      "level": 84,
+      "inputs": [
+        "Echo_of_Trauma"
+      ]
+    },
+    {
+      "result_map": "Moment of Reverence",
+      "map_url": "https://poedb.tw/us/Moment_of_Reverence",
+      "level": 83,
+      "inputs": [
+        "Echo_of_Reverence"
+      ]
+    },
+    {
+      "result_map": "Moment of Reverence",
+      "map_url": "https://poedb.tw/us/Moment_of_Reverence",
+      "level": 84,
+      "inputs": [
+        "Echo_of_Reverence"
+      ]
+    },
+    {
+      "result_map": "Moment of Loneliness",
+      "map_url": "https://poedb.tw/us/Moment_of_Loneliness",
+      "level": 83,
+      "inputs": [
+        "Echo_of_Loneliness"
+      ]
+    },
+    {
+      "result_map": "Moment of Loneliness",
+      "map_url": "https://poedb.tw/us/Moment_of_Loneliness",
+      "level": 84,
+      "inputs": [
+        "Echo_of_Loneliness"
+      ]
+    },
+    {
+      "result_map": "Hive Colony",
+      "map_url": "https://poedb.tw/us/Hive_Colony",
+      "level": 83,
+      "inputs": [
+        "Hivebrain_Gland"
+      ]
+    },
+    {
+      "result_map": "The Lightless Hollow",
+      "map_url": "https://poedb.tw/us/The_Lightless_Hollow",
+      "level": 84,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "River's End",
+      "map_url": "https://poedb.tw/us/Rivers_End",
+      "level": 83,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "The Manor Foyer",
+      "map_url": "https://poedb.tw/us/The_Manor_Foyer",
+      "level": 83,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "Lake Islet",
+      "map_url": "https://poedb.tw/us/Lake_Islet",
+      "level": 83,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "The Court of Chaos",
+      "map_url": "https://poedb.tw/us/The_Court_of_Chaos",
+      "level": 83,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "Gambling District",
+      "map_url": "https://poedb.tw/us/Gambling_District",
+      "level": 83,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "Forgotten Shrine",
+      "map_url": "https://poedb.tw/us/Forgotten_Shrine",
+      "level": 83,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "Syndicate Hideout",
+      "map_url": "https://poedb.tw/us/Syndicate_Hideout",
+      "level": 73,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "Syndicate Hideout",
+      "map_url": "https://poedb.tw/us/Syndicate_Hideout",
+      "level": 73,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "Syndicate Hideout",
+      "map_url": "https://poedb.tw/us/Syndicate_Hideout",
+      "level": 73,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "Syndicate Hideout",
+      "map_url": "https://poedb.tw/us/Syndicate_Hideout",
+      "level": 73,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "Mansion",
+      "map_url": "https://poedb.tw/us/Mansion",
+      "level": 68,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "Bluffs",
+      "map_url": "https://poedb.tw/us/Bluffs",
+      "level": 1,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "Untainted Paradise",
+      "map_url": "https://poedb.tw/us/Untainted_Paradise",
+      "level": 83,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    },
+    {
+      "result_map": "Overgrown Grove",
+      "map_url": "https://poedb.tw/us/Overgrown_Grove",
+      "level": 83,
+      "inputs": [
+        "Ethereal_Blade"
+      ]
+    }
+  ]
+}

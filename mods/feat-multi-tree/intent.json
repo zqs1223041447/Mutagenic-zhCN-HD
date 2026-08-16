@@ -1,0 +1,93 @@
+{
+  "id": "feat-multi-tree",
+  "scope": "Feat: 多套天赋树。存档结构 mutation_tree_loadout 从 v1 单套 {class, passives} 升级为 v2 {class, active, trees:[{name, passives}]}（N 套用户命名 + 当前激活套），旧档加载时自动迁移为单套 'Tree 1'；补齐前端 TreeSelector/LoadOption/PassiveTreePopup 缺失的后端函数 has_saved_trees/get_saved_trees/save_tree/load_tree/delete_tree；verify_current_trees 遍历全部套；specialization_loadout 维持现状。",
+  "patch_type": "CODE_PATCH",
+  "entities": [
+    {
+      "kind": "save_structure_migration",
+      "id": "Globals/GameState.gd::mutation_tree_loadout::v2",
+      "confidence": "FACT",
+      "expected_runtime_effect": "mutation_tree_loadout 支持多套天赋树与切换/保存/删除；旧档自动迁移为单套 'Tree 1'；get_current_tree 返回当前激活树条目（引用），所有现有加点/洗点/连通性校验保持行为不变"
+    },
+    {
+      "kind": "ui_callback_gap",
+      "id": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd::_create_tree",
+      "confidence": "FACT",
+      "expected_runtime_effect": "NewButton 弹出 TextInputDialog 输入名字后 text_entered 回调 _create_tree(name) 保存当前天赋树（原前端仅 connect 该回调但函数未定义，属功能必需的最小接线）"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/GameState.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/GameState.gd::initial_configuration::mutation_tree_loadout_v2",
+      "old_text": "\t\t\t\t\"mutation_tree_loadout\": {\"class\": null, \"passives\": []}, ",
+      "new_text": "\t\t\t\t\"mutation_tree_loadout\": {\"class\": null, \"active\": null, \"trees\": []}, ",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/GameState.gd::create_new_tree::v2",
+      "old_text": "func create_new_tree(chosen_class):\n\t\t\t\tvar stats = get_active_stats()\n\t\t\t\tvar class_root = PlayableClasses.get_root_node(chosen_class)\n\t\t\t\tstats.mutation_tree_loadout = {\"class\": chosen_class, \"passives\": [class_root]}\n\t\t\t\temit_signal(\"tree_changed\")",
+      "new_text": "func create_new_tree(chosen_class):\n\t\t\t\tvar stats = get_active_stats()\n\t\t\t\tvar class_root = PlayableClasses.get_root_node(chosen_class)\n\t\t\t\tstats.mutation_tree_loadout = {\"class\": chosen_class, \"active\": \"Tree 1\", \"trees\": [{\"name\": \"Tree 1\", \"passives\": [class_root]}]}\n\t\t\t\temit_signal(\"tree_changed\")",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/GameState.gd::migrate::tree_migration_hook",
+      "old_text": "\t\t\t\t\t\t\t\tmerge_in_saved_data(current.characters[c], initial_configuration)\n\t\t\t\t\t\t\t\tif current.characters[c].mutation_tree_loadout.has(\"class\"):",
+      "new_text": "\t\t\t\t\t\t\t\tmerge_in_saved_data(current.characters[c], initial_configuration)\n\t\t\t\t\t\t\t\t_migrate_mutation_tree_loadout(current.characters[c])\n\t\t\t\t\t\t\t\tif current.characters[c].mutation_tree_loadout.has(\"class\"):",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/GameState.gd::get_current_tree::v2",
+      "old_text": "func get_current_tree():\n\t\t\t\tvar stats = get_active_stats()\n\t\t\t\treturn stats.mutation_tree_loadout\n\nfunc get_current_specialization_tree():",
+      "new_text": "func get_current_tree():\n\t\t\t\treturn get_active_tree_entry()\n\nfunc get_active_tree_entry():\n\t\t\t\tvar loadout = get_active_stats().mutation_tree_loadout\n\t\t\t\tif not loadout or not loadout.has(\"trees\"):\n\t\t\t\t\t\t\t\treturn null\n\t\t\t\tvar active_name = loadout.active\n\t\t\t\tif active_name != null:\n\t\t\t\t\t\t\t\tfor tree in loadout.trees:\n\t\t\t\t\t\t\t\t\t\t\t\tif tree.name == active_name:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\treturn tree\n\t\t\t\tif len(loadout.trees) > 0:\n\t\t\t\t\t\t\t\tloadout.active = loadout.trees[0].name\n\t\t\t\t\t\t\t\treturn loadout.trees[0]\n\t\t\t\treturn null\n\nfunc has_saved_trees():\n\t\t\t\treturn get_saved_trees().size() > 0\n\nfunc get_saved_trees():\n\t\t\t\tvar trees = []\n\t\t\t\tvar loadout = get_active_stats().mutation_tree_loadout\n\t\t\t\tif loadout and loadout.has(\"trees\"):\n\t\t\t\t\t\t\t\tfor tree in loadout.trees:\n\t\t\t\t\t\t\t\t\t\t\t\ttrees.append(tree.name)\n\t\t\t\treturn trees\n\nfunc save_tree(name):\n\t\t\t\tvar loadout = get_active_stats().mutation_tree_loadout\n\t\t\t\tif not loadout or not loadout.has(\"trees\"):\n\t\t\t\t\t\t\t\treturn false\n\t\t\t\tvar current = get_current_tree()\n\t\t\t\tif not current:\n\t\t\t\t\t\t\t\treturn false\n\t\t\t\tfor tree in loadout.trees:\n\t\t\t\t\t\t\t\tif tree.name == name:\n\t\t\t\t\t\t\t\t\t\t\t\ttree.passives = current.passives.duplicate(true)\n\t\t\t\t\t\t\t\t\t\t\t\temit_signal(\"passives_changed\")\n\t\t\t\t\t\t\t\t\t\t\t\treturn true\n\t\t\t\tloadout.trees.append({\"name\": name, \"passives\": current.passives.duplicate(true)})\n\t\t\t\temit_signal(\"passives_changed\")\n\t\t\t\treturn true\n\nfunc load_tree(name):\n\t\t\t\tvar loadout = get_active_stats().mutation_tree_loadout\n\t\t\t\tif not loadout or not loadout.has(\"trees\"):\n\t\t\t\t\t\t\t\treturn false\n\t\t\t\tfor tree in loadout.trees:\n\t\t\t\t\t\t\t\tif tree.name == name:\n\t\t\t\t\t\t\t\t\t\t\t\tloadout.active = name\n\t\t\t\t\t\t\t\t\t\t\t\temit_signal(\"tree_changed\")\n\t\t\t\t\t\t\t\t\t\t\t\temit_signal(\"passives_changed\")\n\t\t\t\t\t\t\t\t\t\t\t\treturn true\n\t\t\t\treturn false\n\nfunc delete_tree(name):\n\t\t\t\tvar loadout = get_active_stats().mutation_tree_loadout\n\t\t\t\tif not loadout or not loadout.has(\"trees\"):\n\t\t\t\t\t\t\t\treturn false\n\t\t\t\tfor tree in loadout.trees:\n\t\t\t\t\t\t\t\tif tree.name == name:\n\t\t\t\t\t\t\t\t\t\t\t\tloadout.trees.erase(tree)\n\t\t\t\t\t\t\t\t\t\t\t\tif loadout.active == name:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif len(loadout.trees) > 0:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tloadout.active = loadout.trees[0].name\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tloadout.active = null\n\t\t\t\t\t\t\t\t\t\t\t\temit_signal(\"tree_changed\")\n\t\t\t\t\t\t\t\t\t\t\t\temit_signal(\"passives_changed\")\n\t\t\t\t\t\t\t\t\t\t\t\treturn true\n\t\t\t\treturn false\n\nfunc get_current_specialization_tree():",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/GameState.gd::reset_passives::v2",
+      "old_text": "func reset_passives():\n\t\t\t\tvar tree = get_current_tree()\n\t\t\t\tif tree:\n\t\t\t\t\t\t\t\ttree.passives = [PlayableClasses.get_root_node(tree. class )]\n\t\t\t\tvar s_tree = get_current_specialization_tree()\n\t\t\t\tif s_tree:\n\t\t\t\t\t\t\t\ts_tree.passives = [\"root\"]\n\n\t\t\t\temit_signal(\"passives_changed\")",
+      "new_text": "func reset_passives():\n\t\t\t\tvar loadout = get_active_stats().mutation_tree_loadout\n\t\t\t\tvar tree = get_current_tree()\n\t\t\t\tif tree and loadout and loadout.has(\"trees\"):\n\t\t\t\t\t\t\t\ttree.passives = [PlayableClasses.get_root_node(loadout. class )]\n\t\t\t\tvar s_tree = get_current_specialization_tree()\n\t\t\t\tif s_tree:\n\t\t\t\t\t\t\t\ts_tree.passives = [\"root\"]\n\n\t\t\t\temit_signal(\"passives_changed\")",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/GameState.gd::verify_current_trees::v2",
+      "old_text": "func verify_current_trees():\n\t\t\t\tfor character in saved_stats.characters:\n\t\t\t\t\t\t\t\tprint(\"Verifying trees for character:\", character)\n\t\t\t\t\t\t\t\tGlobals.selected_character_name = character\n\t\t\t\t\t\t\t\tvar stats = get_active_stats()\n\t\t\t\t\t\t\t\tvar tree = stats.mutation_tree_loadout\n\t\t\t\t\t\t\t\ttree.passives = get_connected_nodes()\n\t\t\t\t\t\t\t\ttree = stats.specialization_loadout\n\t\t\t\t\t\t\t\ttree.passives = get_connected_specialization_nodes()\n\t\t\t\t\t\t\t\tprint(\"DONE Verify\")",
+      "new_text": "func verify_current_trees():\n\t\t\t\tfor character in saved_stats.characters:\n\t\t\t\t\t\t\t\tprint(\"Verifying trees for character:\", character)\n\t\t\t\t\t\t\t\tGlobals.selected_character_name = character\n\t\t\t\t\t\t\t\tvar stats = get_active_stats()\n\t\t\t\t\t\t\t\t_migrate_mutation_tree_loadout(stats)\n\t\t\t\t\t\t\t\tvar loadout = stats.mutation_tree_loadout\n\t\t\t\t\t\t\t\tvar prev_active = loadout.active\n\t\t\t\t\t\t\t\tfor tree in loadout.trees:\n\t\t\t\t\t\t\t\t\t\t\t\tloadout.active = tree.name\n\t\t\t\t\t\t\t\t\t\t\t\ttree.passives = get_connected_nodes()\n\t\t\t\t\t\t\t\tloadout.active = prev_active\n\t\t\t\t\t\t\t\tvar s_tree = stats.specialization_loadout\n\t\t\t\t\t\t\t\ts_tree.passives = get_connected_specialization_nodes()\n\t\t\t\t\t\t\t\tprint(\"DONE Verify\")",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Globals/GameState.gd::_migrate_mutation_tree_loadout::new",
+      "old_text": "\t\t\t\t\t\t\t\tprint(\"DONE Verify\")\n\nfunc verify_current_skills():",
+      "new_text": "\t\t\t\t\t\t\t\tprint(\"DONE Verify\")\n\nfunc _migrate_mutation_tree_loadout(stats):\n\t\t\t\tvar loadout = stats.mutation_tree_loadout\n\t\t\t\tif typeof(loadout) != TYPE_DICTIONARY:\n\t\t\t\t\t\t\t\tstats.mutation_tree_loadout = {\"class\": null, \"active\": null, \"trees\": []}\n\t\t\t\t\t\t\t\tloadout = stats.mutation_tree_loadout\n\t\t\t\tif not loadout.has(\"trees\"):\n\t\t\t\t\t\t\t\tvar passives = loadout.get(\"passives\", [])\n\t\t\t\t\t\t\t\tloadout[\"trees\"] = [{\"name\": \"Tree 1\", \"passives\": passives}]\n\t\t\t\telif len(loadout.trees) == 0 and loadout.has(\"passives\"):\n\t\t\t\t\t\t\t\tloadout.trees.append({\"name\": \"Tree 1\", \"passives\": loadout.passives})\n\t\t\t\tif loadout.has(\"passives\"):\n\t\t\t\t\t\t\t\tloadout.erase(\"passives\")\n\t\t\t\tfor tree in loadout.trees:\n\t\t\t\t\t\t\t\tif not tree.has(\"name\"):\n\t\t\t\t\t\t\t\t\t\t\t\ttree[\"name\"] = \"Tree 1\"\n\t\t\t\t\t\t\t\tif not tree.has(\"passives\"):\n\t\t\t\t\t\t\t\t\t\t\t\ttree[\"passives\"] = []\n\t\t\t\tif not loadout.has(\"active\") or loadout.active == null or loadout.active == \"\":\n\t\t\t\t\t\t\t\tif len(loadout.trees) > 0:\n\t\t\t\t\t\t\t\t\t\t\t\tloadout.active = loadout.trees[0].name\n\t\t\t\t\t\t\t\telse:\n\t\t\t\t\t\t\t\t\t\t\t\tloadout.active = null\n\nfunc verify_current_skills():",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+      "classification": "CODE_PATCH",
+      "unit_id": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd::_create_tree_callback",
+      "old_text": "\t\t\t\tpopup.connect(\"text_entered\", self, \"_create_tree\")\n\t\t\t\tpopup.connect(\"destroy\", self, \"_refocus_new\")\n\t\t\t\tPopupManager.show_popup(popup, self)\n\nfunc _refocus_back():",
+      "new_text": "\t\t\t\tpopup.connect(\"text_entered\", self, \"_create_tree\")\n\t\t\t\tpopup.connect(\"destroy\", self, \"_refocus_new\")\n\t\t\t\tPopupManager.show_popup(popup, self)\n\nfunc _create_tree(name):\n\t\t\t\tGameState.save_tree(name)\n\nfunc _refocus_back():",
+      "expected_occurrences": 1
+    }
+  ],
+  "tests": [
+    "preimage_exact_match",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "boot"
+  ],
+  "not_proven": "实际游戏内多套天赋树的保存/加载/删除交互体验；旧档迁移后的数值正确性（需人工验证）；删除最后一棵树后的空树兜底行为"
+}

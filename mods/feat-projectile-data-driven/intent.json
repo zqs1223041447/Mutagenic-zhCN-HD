@@ -1,0 +1,52 @@
+{
+  "id": "feat-projectile-data-driven",
+  "scope": "Data-driven projectile range/lifetime mechanism: GenericSkill gains get_projectile_lifetime() / get_projectile_max_range() getters that read optional per-tier skill JSON fields (projectile_lifetime / projectile_max_range) via get_stat(); Projectile._ready() overrides its instance lifetime / max_distance_travelled from skill_parent when those methods exist. v1 behavior-zero-change: with no JSON field present, getters return the existing defaults (2.0 s lifetime / 300 px max range), so every projectile behaves exactly as before. Future per-skill tuning = adding JSON fields (subsequent VALUE_PATCHes).",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "entities": [
+    {
+      "kind": "data_driven_override",
+      "id": "Scenes/Skills/GenericSkill.gd::get_projectile_lifetime/get_projectile_max_range",
+      "confidence": "FACT",
+      "expected_runtime_effect": "Getters read optional per-tier skill dict fields (same source as get_force's projectile_speed). With no fields declared they return 2.0 / 300, preserving current behavior exactly."
+    },
+    {
+      "kind": "runtime_read",
+      "id": "Scenes/Projectiles/Projectile.gd::_ready_override",
+      "confidence": "FACT",
+      "expected_runtime_effect": "In _ready, after skill_parent_weakref is set, Projectile reads skill_parent.get_projectile_lifetime()/get_projectile_max_range() when those methods exist and assigns them to lifetime/max_distance_travelled. skill_parent lacking the methods (or default getters) leaves original defaults untouched -> zero behavior change in v1."
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Skills/GenericSkill.gd",
+      "classification": "CODE_PATCH",
+      "anchor": "func get_projectiles(apply_rand_keystones = true):",
+      "old_text": "\t\t\t\tcss[\"projectile_speed\"] = compiled\n\t\t\t\treturn compiled\n\nfunc get_projectiles(apply_rand_keystones = true):",
+      "new_text": "\t\t\t\tcss[\"projectile_speed\"] = compiled\n\t\t\t\treturn compiled\n\nfunc get_projectile_lifetime():\n\t\t\t\tif css.has(\"projectile_lifetime\"):\n\t\t\t\t\t\t\t\treturn css[\"projectile_lifetime\"]\n\t\t\t\tvar base = get_stat(\"projectile_lifetime\", 2.0)\n\t\t\t\tcss[\"projectile_lifetime\"] = base\n\t\t\t\treturn base\n\nfunc get_projectile_max_range():\n\t\t\t\tif css.has(\"projectile_max_range\"):\n\t\t\t\t\t\t\t\treturn css[\"projectile_max_range\"]\n\t\t\t\tvar base = get_stat(\"projectile_max_range\", 300)\n\t\t\t\tcss[\"projectile_max_range\"] = base\n\t\t\t\treturn base\n\nfunc get_projectiles(apply_rand_keystones = true):",
+      "expected_occurrences": 1,
+      "tests": [
+        "preimage_exact_match",
+        "declared_delta",
+        "compiled_script_load",
+        "boot"
+      ]
+    },
+    {
+      "path": "Scenes/Projectiles/Projectile.gd",
+      "classification": "CODE_PATCH",
+      "anchor": "skill_parent_weakref = weakref(skill_parent)",
+      "old_text": "\t\t\t\tskill_parent_weakref = weakref(skill_parent)\n\n\t\t\t\tif not does_hit:",
+      "new_text": "\t\t\t\tskill_parent_weakref = weakref(skill_parent)\n\n\t\t\t\tif skill_parent and skill_parent.has_method(\"get_projectile_lifetime\"):\n\t\t\t\t\t\t\t\tlifetime = skill_parent.get_projectile_lifetime()\n\t\t\t\tif skill_parent and skill_parent.has_method(\"get_projectile_max_range\"):\n\t\t\t\t\t\t\t\tmax_distance_travelled = skill_parent.get_projectile_max_range()\n\n\t\t\t\tif not does_hit:",
+      "expected_occurrences": 1,
+      "tests": [
+        "preimage_exact_match",
+        "declared_delta",
+        "compiled_script_load",
+        "boot"
+      ]
+    }
+  ]
+}

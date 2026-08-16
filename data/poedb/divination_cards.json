@@ -1,0 +1,4193 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-08-16",
+  "source": [
+    "https://poedb.tw/us/Divination_Cards"
+  ],
+  "coverage": "完整=poedb 列出的全部 464 张卡(名称/堆叠/奖励)。dropped_by/drop_level 仅抽样 4 张(Doctor/Apothecary/Nurse/House of Mirrors);其余卡片的掉落点需逐卡页抓取,未收录。",
+  "items": [
+    {
+      "name": "Three Faces in the Dark",
+      "slug": "Three_Faces_in_the_Dark",
+      "url": "https://poedb.tw/us/Three_Faces_in_the_Dark",
+      "stack_size": 7,
+      "reward": "3x Chaos Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Doctor",
+      "slug": "The_Doctor",
+      "url": "https://poedb.tw/us/The_Doctor",
+      "stack_size": 8,
+      "reward": "Headhunter",
+      "drop_level": 75,
+      "dropped_by": [
+        "Burial Chambers Map"
+      ]
+    },
+    {
+      "name": "The Hermit",
+      "slug": "The_Hermit",
+      "url": "https://poedb.tw/us/The_Hermit",
+      "stack_size": 9,
+      "reward": "Lifesprig",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Lantador's Lost Love",
+      "slug": "Lantadors_Lost_Love",
+      "url": "https://poedb.tw/us/Lantadors_Lost_Love",
+      "stack_size": 7,
+      "reward": "Two-Stone Ring",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Metalsmith's Gift",
+      "slug": "The_Metalsmiths_Gift",
+      "url": "https://poedb.tw/us/The_Metalsmiths_Gift",
+      "stack_size": 6,
+      "reward": "Prismatic Ring",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Battle Born",
+      "slug": "The_Battle_Born",
+      "url": "https://poedb.tw/us/The_Battle_Born",
+      "stack_size": 5,
+      "reward": "Axe",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Gladiator",
+      "slug": "The_Gladiator",
+      "url": "https://poedb.tw/us/The_Gladiator",
+      "stack_size": 5,
+      "reward": "Nightmare Bascinet",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Scholar",
+      "slug": "The_Scholar",
+      "url": "https://poedb.tw/us/The_Scholar",
+      "stack_size": 3,
+      "reward": "40x Scroll of Wisdom",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Brittle Emperor",
+      "slug": "The_Brittle_Emperor",
+      "url": "https://poedb.tw/us/The_Brittle_Emperor",
+      "stack_size": 8,
+      "reward": "Voll's Devotion Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Poet",
+      "slug": "The_Poet",
+      "url": "https://poedb.tw/us/The_Poet",
+      "stack_size": 9,
+      "reward": "Blood of Corruption Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Carrion Crow",
+      "slug": "The_Carrion_Crow",
+      "url": "https://poedb.tw/us/The_Carrion_Crow",
+      "stack_size": 4,
+      "reward": "Life Armour",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Hope",
+      "slug": "Hope",
+      "url": "https://poedb.tw/us/Hope",
+      "stack_size": 5,
+      "reward": "Prismatic Ring Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Fiend",
+      "slug": "The_Fiend",
+      "url": "https://poedb.tw/us/The_Fiend",
+      "stack_size": 11,
+      "reward": "Headhunter Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Vinia's Token",
+      "slug": "Vinias_Token",
+      "url": "https://poedb.tw/us/Vinias_Token",
+      "stack_size": 5,
+      "reward": "10x Orb of Regret",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Summoner",
+      "slug": "The_Summoner",
+      "url": "https://poedb.tw/us/The_Summoner",
+      "stack_size": 6,
+      "reward": "Minion Gem Quality: +20%",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Cataclysm",
+      "slug": "The_Cataclysm",
+      "url": "https://poedb.tw/us/The_Cataclysm",
+      "stack_size": 13,
+      "reward": "Level 21 Spell Gem Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Hunger",
+      "slug": "The_Hunger",
+      "url": "https://poedb.tw/us/The_Hunger",
+      "stack_size": 9,
+      "reward": "Taste of Hate",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Hoarder",
+      "slug": "The_Hoarder",
+      "url": "https://poedb.tw/us/The_Hoarder",
+      "stack_size": 12,
+      "reward": "Exalted Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Drunken Aristocrat",
+      "slug": "The_Drunken_Aristocrat",
+      "url": "https://poedb.tw/us/The_Drunken_Aristocrat",
+      "stack_size": 8,
+      "reward": "Divination Distillate",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Sun",
+      "slug": "The_Sun",
+      "url": "https://poedb.tw/us/The_Sun",
+      "stack_size": 7,
+      "reward": "Rise of the Phoenix",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Warden",
+      "slug": "The_Warden",
+      "url": "https://poedb.tw/us/The_Warden",
+      "stack_size": 4,
+      "reward": "Amulet Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Scarred Meadow",
+      "slug": "The_Scarred_Meadow",
+      "url": "https://poedb.tw/us/The_Scarred_Meadow",
+      "stack_size": 9,
+      "reward": "Wake of Destruction",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Dark Mage",
+      "slug": "The_Dark_Mage",
+      "url": "https://poedb.tw/us/The_Dark_Mage",
+      "stack_size": 6,
+      "reward": "Six-Link Staff Item Level: 55",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Gemcutter",
+      "slug": "The_Gemcutter",
+      "url": "https://poedb.tw/us/The_Gemcutter",
+      "stack_size": 3,
+      "reward": "Gemcutter's Prism",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Gambler",
+      "slug": "The_Gambler",
+      "url": "https://poedb.tw/us/The_Gambler",
+      "stack_size": 5,
+      "reward": "Divination Card",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Lover",
+      "slug": "The_Lover",
+      "url": "https://poedb.tw/us/The_Lover",
+      "stack_size": 2,
+      "reward": "Jewellery Item Level: 79",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Chaotic Disposition",
+      "slug": "Chaotic_Disposition",
+      "url": "https://poedb.tw/us/Chaotic_Disposition",
+      "stack_size": null,
+      "reward": "5x Chaos Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Road to Power",
+      "slug": "The_Road_to_Power",
+      "url": "https://poedb.tw/us/The_Road_to_Power",
+      "stack_size": 7,
+      "reward": "Runic One-Hand Weapon Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Avenger",
+      "slug": "The_Avenger",
+      "url": "https://poedb.tw/us/The_Avenger",
+      "stack_size": 12,
+      "reward": "Mjölner Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Emperor's Luck",
+      "slug": "Emperors_Luck",
+      "url": "https://poedb.tw/us/Emperors_Luck",
+      "stack_size": 5,
+      "reward": "5x Currency",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Time-Lost Relic",
+      "slug": "Time-Lost_Relic",
+      "url": "https://poedb.tw/us/Time-Lost_Relic",
+      "stack_size": 10,
+      "reward": "League-Specific Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Lucky Connections",
+      "slug": "Lucky_Connections",
+      "url": "https://poedb.tw/us/Lucky_Connections",
+      "stack_size": 7,
+      "reward": "20x Orb of Fusing",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Feast",
+      "slug": "The_Feast",
+      "url": "https://poedb.tw/us/The_Feast",
+      "stack_size": 5,
+      "reward": "Romira's Banquet Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Rain of Chaos",
+      "slug": "Rain_of_Chaos",
+      "url": "https://poedb.tw/us/Rain_of_Chaos",
+      "stack_size": 8,
+      "reward": "Chaos Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Watcher",
+      "slug": "The_Watcher",
+      "url": "https://poedb.tw/us/The_Watcher",
+      "stack_size": 12,
+      "reward": "Crown of Eyes",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Incantation",
+      "slug": "The_Incantation",
+      "url": "https://poedb.tw/us/The_Incantation",
+      "stack_size": 4,
+      "reward": "The Whispering Ice",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Coveted Possession",
+      "slug": "Coveted_Possession",
+      "url": "https://poedb.tw/us/Coveted_Possession",
+      "stack_size": 9,
+      "reward": "5x Regal Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The King's Heart",
+      "slug": "The_Kings_Heart",
+      "url": "https://poedb.tw/us/The_Kings_Heart",
+      "stack_size": 8,
+      "reward": "Kaom's Heart",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Abandoned Wealth",
+      "slug": "Abandoned_Wealth",
+      "url": "https://poedb.tw/us/Abandoned_Wealth",
+      "stack_size": 5,
+      "reward": "3x Exalted Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Wind",
+      "slug": "The_Wind",
+      "url": "https://poedb.tw/us/The_Wind",
+      "stack_size": 7,
+      "reward": "Windripper",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Pact",
+      "slug": "The_Pact",
+      "url": "https://poedb.tw/us/The_Pact",
+      "stack_size": 9,
+      "reward": "Pledge of Hands",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Gemcutter's Promise",
+      "slug": "Gemcutters_Promise",
+      "url": "https://poedb.tw/us/Gemcutters_Promise",
+      "stack_size": 3,
+      "reward": "Gem Quality: +20%",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Celestial Justicar",
+      "slug": "The_Celestial_Justicar",
+      "url": "https://poedb.tw/us/The_Celestial_Justicar",
+      "stack_size": 6,
+      "reward": "Six-Link Astral Plate",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Chains that Bind",
+      "slug": "The_Chains_that_Bind",
+      "url": "https://poedb.tw/us/The_Chains_that_Bind",
+      "stack_size": 11,
+      "reward": "Six-Link Body Armour",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Artist",
+      "slug": "The_Artist",
+      "url": "https://poedb.tw/us/The_Artist",
+      "stack_size": 11,
+      "reward": "Level 4 Enhance Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Inventor",
+      "slug": "The_Inventor",
+      "url": "https://poedb.tw/us/The_Inventor",
+      "stack_size": 6,
+      "reward": "10x Vaal Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Pack Leader",
+      "slug": "The_Pack_Leader",
+      "url": "https://poedb.tw/us/The_Pack_Leader",
+      "stack_size": 6,
+      "reward": "Alpha's Howl",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Jack in the Box",
+      "slug": "Jack_in_the_Box",
+      "url": "https://poedb.tw/us/Jack_in_the_Box",
+      "stack_size": 4,
+      "reward": "Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Union",
+      "slug": "The_Union",
+      "url": "https://poedb.tw/us/The_Union",
+      "stack_size": 7,
+      "reward": "10x Gemcutter's Prism",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Queen",
+      "slug": "The_Queen",
+      "url": "https://poedb.tw/us/The_Queen",
+      "stack_size": 16,
+      "reward": "Atziri's Acuity",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Humility",
+      "slug": "Humility",
+      "url": "https://poedb.tw/us/Humility",
+      "stack_size": 9,
+      "reward": "Tabula Rasa",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Explorer",
+      "slug": "The_Explorer",
+      "url": "https://poedb.tw/us/The_Explorer",
+      "stack_size": 6,
+      "reward": "Map Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Spoiled Prince",
+      "slug": "The_Spoiled_Prince",
+      "url": "https://poedb.tw/us/The_Spoiled_Prince",
+      "stack_size": 4,
+      "reward": "Dictator's Prophecy Wand Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Betrayal",
+      "slug": "The_Betrayal",
+      "url": "https://poedb.tw/us/The_Betrayal",
+      "stack_size": 9,
+      "reward": "Maligaro's Virtuosity",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Flora's Gift",
+      "slug": "The_Floras_Gift",
+      "url": "https://poedb.tw/us/The_Floras_Gift",
+      "stack_size": 5,
+      "reward": "Five-Link Staff Item Level: 66",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Siren",
+      "slug": "The_Siren",
+      "url": "https://poedb.tw/us/The_Siren",
+      "stack_size": 7,
+      "reward": "The Whispering Ice Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The One With All",
+      "slug": "The_One_With_All",
+      "url": "https://poedb.tw/us/The_One_With_All",
+      "stack_size": 6,
+      "reward": "Le Heup of All Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Last One Standing",
+      "slug": "The_Last_One_Standing",
+      "url": "https://poedb.tw/us/The_Last_One_Standing",
+      "stack_size": 10,
+      "reward": "Atziri's Disfavour",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Doedre's Madness",
+      "slug": "Doedres_Madness",
+      "url": "https://poedb.tw/us/Doedres_Madness",
+      "stack_size": 9,
+      "reward": "Doedre Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Encroaching Darkness",
+      "slug": "The_Encroaching_Darkness",
+      "url": "https://poedb.tw/us/The_Encroaching_Darkness",
+      "stack_size": 8,
+      "reward": "Map Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Wrath",
+      "slug": "The_Wrath",
+      "url": "https://poedb.tw/us/The_Wrath",
+      "stack_size": 8,
+      "reward": "10x Chaos Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The King's Blade",
+      "slug": "The_Kings_Blade",
+      "url": "https://poedb.tw/us/The_Kings_Blade",
+      "stack_size": 5,
+      "reward": "Bloodthirsty Eternal Sword Item Level: 66",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Trial",
+      "slug": "The_Trial",
+      "url": "https://poedb.tw/us/The_Trial",
+      "stack_size": 7,
+      "reward": "Map Map Tier: 15 Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Gentleman",
+      "slug": "The_Gentleman",
+      "url": "https://poedb.tw/us/The_Gentleman",
+      "stack_size": 4,
+      "reward": "Sword Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "House of Mirrors",
+      "slug": "House_of_Mirrors",
+      "url": "https://poedb.tw/us/House_of_Mirrors",
+      "stack_size": 9,
+      "reward": "Mirror of Kalandra",
+      "drop_level": 80,
+      "dropped_by": []
+    },
+    {
+      "name": "Wealth and Power",
+      "slug": "Wealth_and_Power",
+      "url": "https://poedb.tw/us/Wealth_and_Power",
+      "stack_size": 11,
+      "reward": "Level 4 Enlighten Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Catalyst",
+      "slug": "The_Catalyst",
+      "url": "https://poedb.tw/us/The_Catalyst",
+      "stack_size": 3,
+      "reward": "Vaal Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Vast",
+      "slug": "The_Vast",
+      "url": "https://poedb.tw/us/The_Vast",
+      "stack_size": 7,
+      "reward": "Song of the Sirens",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Gift of the Gemling Queen",
+      "slug": "Gift_of_the_Gemling_Queen",
+      "url": "https://poedb.tw/us/Gift_of_the_Gemling_Queen",
+      "stack_size": 9,
+      "reward": "Level 20 Support Gem",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Dragon's Heart",
+      "slug": "The_Dragons_Heart",
+      "url": "https://poedb.tw/us/The_Dragons_Heart",
+      "stack_size": 11,
+      "reward": "Level 4 Empower Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Fox",
+      "slug": "The_Fox",
+      "url": "https://poedb.tw/us/The_Fox",
+      "stack_size": 6,
+      "reward": "Level 20 Gem",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Doppelganger",
+      "slug": "The_Doppelganger",
+      "url": "https://poedb.tw/us/The_Doppelganger",
+      "stack_size": 2,
+      "reward": "Mirror Arrow Quality: +20%",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Survivalist",
+      "slug": "The_Survivalist",
+      "url": "https://poedb.tw/us/The_Survivalist",
+      "stack_size": 3,
+      "reward": "7x Orb of Alchemy",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Death",
+      "slug": "Death",
+      "url": "https://poedb.tw/us/Death",
+      "stack_size": 4,
+      "reward": "Mon'tregul's Grasp",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Grave Knowledge",
+      "slug": "Grave_Knowledge",
+      "url": "https://poedb.tw/us/Grave_Knowledge",
+      "stack_size": 6,
+      "reward": "Summon Raging Spirit Quality: +20%",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Jester",
+      "slug": "The_Jester",
+      "url": "https://poedb.tw/us/The_Jester",
+      "stack_size": 9,
+      "reward": "Merciless One-Hand Weapon Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Mercenary",
+      "slug": "The_Mercenary",
+      "url": "https://poedb.tw/us/The_Mercenary",
+      "stack_size": 5,
+      "reward": "Shield Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Inoculated",
+      "slug": "The_Inoculated",
+      "url": "https://poedb.tw/us/The_Inoculated",
+      "stack_size": 4,
+      "reward": "Seraphim's Armour",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Loyalty",
+      "slug": "Loyalty",
+      "url": "https://poedb.tw/us/Loyalty",
+      "stack_size": 5,
+      "reward": "3x Orb of Fusing",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Pride Before the Fall",
+      "slug": "Pride_Before_the_Fall",
+      "url": "https://poedb.tw/us/Pride_Before_the_Fall",
+      "stack_size": 8,
+      "reward": "Kaom's Heart Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Audacity",
+      "slug": "Audacity",
+      "url": "https://poedb.tw/us/Audacity",
+      "stack_size": 5,
+      "reward": "Doryani's Fist Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Assassin's Favour",
+      "slug": "Assassins_Favour",
+      "url": "https://poedb.tw/us/Assassins_Favour",
+      "stack_size": 9,
+      "reward": "Dagger",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Hunter's Resolve",
+      "slug": "Hunters_Resolve",
+      "url": "https://poedb.tw/us/Hunters_Resolve",
+      "stack_size": 8,
+      "reward": "Bow",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Scholar of the Seas",
+      "slug": "Scholar_of_the_Seas",
+      "url": "https://poedb.tw/us/Scholar_of_the_Seas",
+      "stack_size": 7,
+      "reward": "Mao Kun",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Conduit",
+      "slug": "The_Conduit",
+      "url": "https://poedb.tw/us/The_Conduit",
+      "stack_size": 9,
+      "reward": "Doryani's Fist",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Tower",
+      "slug": "The_Tower",
+      "url": "https://poedb.tw/us/The_Tower",
+      "stack_size": 6,
+      "reward": "Staff",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Twins",
+      "slug": "The_Twins",
+      "url": "https://poedb.tw/us/The_Twins",
+      "stack_size": 8,
+      "reward": "Gemini Claw of Celebration Item Level: 83",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Anarchy's Price",
+      "slug": "Anarchys_Price",
+      "url": "https://poedb.tw/us/Anarchys_Price",
+      "stack_size": 13,
+      "reward": "Voltaxic Rift Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Lich",
+      "slug": "The_Lich",
+      "url": "https://poedb.tw/us/The_Lich",
+      "stack_size": 12,
+      "reward": "Midnight Bargain Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Thaumaturgist",
+      "slug": "The_Thaumaturgist",
+      "url": "https://poedb.tw/us/The_Thaumaturgist",
+      "stack_size": 8,
+      "reward": "Shavronne's Revelation Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Aesthete",
+      "slug": "The_Aesthete",
+      "url": "https://poedb.tw/us/The_Aesthete",
+      "stack_size": 8,
+      "reward": "Shavronne Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Enlightened",
+      "slug": "The_Enlightened",
+      "url": "https://poedb.tw/us/The_Enlightened",
+      "stack_size": 6,
+      "reward": "Level 3 Enlighten",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Hunter's Reward",
+      "slug": "Hunters_Reward",
+      "url": "https://poedb.tw/us/Hunters_Reward",
+      "stack_size": 3,
+      "reward": "The Taming",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Fletcher",
+      "slug": "The_Fletcher",
+      "url": "https://poedb.tw/us/The_Fletcher",
+      "stack_size": 5,
+      "reward": "Drillneck Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Surveyor",
+      "slug": "The_Surveyor",
+      "url": "https://poedb.tw/us/The_Surveyor",
+      "stack_size": 4,
+      "reward": "Map Map Tier: 14",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Bowyer's Dream",
+      "slug": "Bowyers_Dream",
+      "url": "https://poedb.tw/us/Bowyers_Dream",
+      "stack_size": 6,
+      "reward": "Six-Link Harbinger Bow Item Level: 91",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Surgeon",
+      "slug": "The_Surgeon",
+      "url": "https://poedb.tw/us/The_Surgeon",
+      "stack_size": 4,
+      "reward": "Surgeon's Flask",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Volatile Power",
+      "slug": "Volatile_Power",
+      "url": "https://poedb.tw/us/Volatile_Power",
+      "stack_size": 9,
+      "reward": "Vaal Gem Quality: +20% Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Last Hope",
+      "slug": "Last_Hope",
+      "url": "https://poedb.tw/us/Last_Hope",
+      "stack_size": 3,
+      "reward": "Mortal Hope",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Hubris",
+      "slug": "Hubris",
+      "url": "https://poedb.tw/us/Hubris",
+      "stack_size": 5,
+      "reward": "Ring",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Blind Venture",
+      "slug": "Blind_Venture",
+      "url": "https://poedb.tw/us/Blind_Venture",
+      "stack_size": 7,
+      "reward": "Ring Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Merciless Armament",
+      "slug": "Merciless_Armament",
+      "url": "https://poedb.tw/us/Merciless_Armament",
+      "stack_size": 4,
+      "reward": "Merciless Two-Hand Weapon Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Cartographer",
+      "slug": "The_Cartographer",
+      "url": "https://poedb.tw/us/The_Cartographer",
+      "stack_size": null,
+      "reward": null,
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Warlord",
+      "slug": "The_Warlord",
+      "url": "https://poedb.tw/us/The_Warlord",
+      "stack_size": 6,
+      "reward": "Six-Link Coronal Maul Item Level: 83",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Demoness",
+      "slug": "The_Demoness",
+      "url": "https://poedb.tw/us/The_Demoness",
+      "stack_size": 5,
+      "reward": "Death's Hand",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Traitor",
+      "slug": "The_Traitor",
+      "url": "https://poedb.tw/us/The_Traitor",
+      "stack_size": 4,
+      "reward": "Wand Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Offering",
+      "slug": "The_Offering",
+      "url": "https://poedb.tw/us/The_Offering",
+      "stack_size": 8,
+      "reward": "Shavronne's Wrappings",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Lost Worlds",
+      "slug": "Lost_Worlds",
+      "url": "https://poedb.tw/us/Lost_Worlds",
+      "stack_size": 8,
+      "reward": "Map Map Tier: 15",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Lord in Black",
+      "slug": "The_Lord_in_Black",
+      "url": "https://poedb.tw/us/The_Lord_in_Black",
+      "stack_size": 6,
+      "reward": "Ring of Bameth Item Level: 83",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "A Mother's Parting Gift",
+      "slug": "A_Mothers_Parting_Gift",
+      "url": "https://poedb.tw/us/A_Mothers_Parting_Gift",
+      "stack_size": 6,
+      "reward": "Fertile Mind Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Body",
+      "slug": "The_Body",
+      "url": "https://poedb.tw/us/The_Body",
+      "stack_size": 4,
+      "reward": "Body Armour",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Turn the Other Cheek",
+      "slug": "Turn_the_Other_Cheek",
+      "url": "https://poedb.tw/us/Turn_the_Other_Cheek",
+      "stack_size": 3,
+      "reward": "Pacifism Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Glimmer of Hope",
+      "slug": "Glimmer_of_Hope",
+      "url": "https://poedb.tw/us/Glimmer_of_Hope",
+      "stack_size": 8,
+      "reward": "Gold Ring",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Ethereal",
+      "slug": "The_Ethereal",
+      "url": "https://poedb.tw/us/The_Ethereal",
+      "stack_size": 7,
+      "reward": "Six-Link Vaal Regalia",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Prosperity",
+      "slug": "Prosperity",
+      "url": "https://poedb.tw/us/Prosperity",
+      "stack_size": 10,
+      "reward": "Perandus' Gold Ring",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Sigil",
+      "slug": "The_Sigil",
+      "url": "https://poedb.tw/us/The_Sigil",
+      "stack_size": 3,
+      "reward": "Unassailable Amulet",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Dapper Prodigy",
+      "slug": "The_Dapper_Prodigy",
+      "url": "https://poedb.tw/us/The_Dapper_Prodigy",
+      "stack_size": 6,
+      "reward": "Six-Link Body Armour Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Rabid Rhoa",
+      "slug": "The_Rabid_Rhoa",
+      "url": "https://poedb.tw/us/The_Rabid_Rhoa",
+      "stack_size": 4,
+      "reward": "Malicious Gemini Claw Item Level: 83",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Soul",
+      "slug": "The_Soul",
+      "url": "https://poedb.tw/us/The_Soul",
+      "stack_size": 9,
+      "reward": "Soul Taker",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Lion",
+      "slug": "The_Lion",
+      "url": "https://poedb.tw/us/The_Lion",
+      "stack_size": 5,
+      "reward": "Lioneye Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Dragon",
+      "slug": "The_Dragon",
+      "url": "https://poedb.tw/us/The_Dragon",
+      "stack_size": 4,
+      "reward": "Coruscating Elixir",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Rats",
+      "slug": "Rats",
+      "url": "https://poedb.tw/us/Rats",
+      "stack_size": 8,
+      "reward": "Rat's Nest",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Risk",
+      "slug": "The_Risk",
+      "url": "https://poedb.tw/us/The_Risk",
+      "stack_size": 3,
+      "reward": "Ventor's Gamble",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Tranquillity",
+      "slug": "Tranquillity",
+      "url": "https://poedb.tw/us/Tranquillity",
+      "stack_size": 7,
+      "reward": "Voltaxic Rift",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Her Mask",
+      "slug": "Her_Mask",
+      "url": "https://poedb.tw/us/Her_Mask",
+      "stack_size": 4,
+      "reward": "Sacrifice Fragment",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Treasure Hunter",
+      "slug": "Treasure_Hunter",
+      "url": "https://poedb.tw/us/Treasure_Hunter",
+      "stack_size": 7,
+      "reward": "Vaults of Atziri Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Earth Drinker",
+      "slug": "Earth_Drinker",
+      "url": "https://poedb.tw/us/Earth_Drinker",
+      "stack_size": 5,
+      "reward": "Granite Flask",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Wolf's Shadow",
+      "slug": "The_Wolfs_Shadow",
+      "url": "https://poedb.tw/us/The_Wolfs_Shadow",
+      "stack_size": 3,
+      "reward": "Hyaon's Fury",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Arena Champion",
+      "slug": "The_Arena_Champion",
+      "url": "https://poedb.tw/us/The_Arena_Champion",
+      "stack_size": 10,
+      "reward": "Map Map Tier: 12",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Sephirot",
+      "slug": "The_Sephirot",
+      "url": "https://poedb.tw/us/The_Sephirot",
+      "stack_size": 11,
+      "reward": "10x Divine Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Visionary",
+      "slug": "The_Visionary",
+      "url": "https://poedb.tw/us/The_Visionary",
+      "stack_size": 6,
+      "reward": "Lioneye's Vision",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Thunderous Skies",
+      "slug": "Thunderous_Skies",
+      "url": "https://poedb.tw/us/Thunderous_Skies",
+      "stack_size": 5,
+      "reward": "Storm Cloud",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Dying Anguish",
+      "slug": "Dying_Anguish",
+      "url": "https://poedb.tw/us/Dying_Anguish",
+      "stack_size": 8,
+      "reward": "Level 19 Transfigured Gem Quality: +19%",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Immortal",
+      "slug": "The_Immortal",
+      "url": "https://poedb.tw/us/The_Immortal",
+      "stack_size": 10,
+      "reward": "House of Mirrors",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Throne",
+      "slug": "The_Throne",
+      "url": "https://poedb.tw/us/The_Throne",
+      "stack_size": 2,
+      "reward": "Kaom's Roots Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Boundless Realms",
+      "slug": "Boundless_Realms",
+      "url": "https://poedb.tw/us/Boundless_Realms",
+      "stack_size": 4,
+      "reward": "Map",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Devastator",
+      "slug": "The_Devastator",
+      "url": "https://poedb.tw/us/The_Devastator",
+      "stack_size": 8,
+      "reward": "Atziri's Disfavour Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Destined to Crumble",
+      "slug": "Destined_to_Crumble",
+      "url": "https://poedb.tw/us/Destined_to_Crumble",
+      "stack_size": 5,
+      "reward": "Body Armour Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Shard of Fate",
+      "slug": "Shard_of_Fate",
+      "url": "https://poedb.tw/us/Shard_of_Fate",
+      "stack_size": 4,
+      "reward": "Vivid Jewel",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Heterochromia",
+      "slug": "Heterochromia",
+      "url": "https://poedb.tw/us/Heterochromia",
+      "stack_size": 2,
+      "reward": "Two-Stone Ring",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Rain Tempter",
+      "slug": "Rain_Tempter",
+      "url": "https://poedb.tw/us/Rain_Tempter",
+      "stack_size": 9,
+      "reward": "Map Map Tier: 6",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Void",
+      "slug": "The_Void",
+      "url": "https://poedb.tw/us/The_Void",
+      "stack_size": null,
+      "reward": null,
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Tyrant",
+      "slug": "The_Tyrant",
+      "url": "https://poedb.tw/us/The_Tyrant",
+      "stack_size": 9,
+      "reward": "Merciless Weapon Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Web",
+      "slug": "The_Web",
+      "url": "https://poedb.tw/us/The_Web",
+      "stack_size": 8,
+      "reward": "Weapon of Crafting",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Harvester",
+      "slug": "The_Harvester",
+      "url": "https://poedb.tw/us/The_Harvester",
+      "stack_size": 11,
+      "reward": "The Harvest",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Lunaris Priestess",
+      "slug": "The_Lunaris_Priestess",
+      "url": "https://poedb.tw/us/The_Lunaris_Priestess",
+      "stack_size": 5,
+      "reward": "Sire of Shards",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Emperor of Purity",
+      "slug": "Emperor_of_Purity",
+      "url": "https://poedb.tw/us/Emperor_of_Purity",
+      "stack_size": 7,
+      "reward": "Six-Link Holy Chainmail Item Level: 60",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Cursed King",
+      "slug": "The_Cursed_King",
+      "url": "https://poedb.tw/us/The_Cursed_King",
+      "stack_size": 8,
+      "reward": "Rigwald's Curse",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Stormcaller",
+      "slug": "The_Stormcaller",
+      "url": "https://poedb.tw/us/The_Stormcaller",
+      "stack_size": 4,
+      "reward": "Agnerod Staff",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Lysah's Respite",
+      "slug": "Lysahs_Respite",
+      "url": "https://poedb.tw/us/Lysahs_Respite",
+      "stack_size": 6,
+      "reward": "Agate Amulet Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Cartographer's Delight",
+      "slug": "Cartographers_Delight",
+      "url": "https://poedb.tw/us/Cartographers_Delight",
+      "stack_size": 3,
+      "reward": "Map Map Tier: 5",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Lucky Deck",
+      "slug": "Lucky_Deck",
+      "url": "https://poedb.tw/us/Lucky_Deck",
+      "stack_size": 9,
+      "reward": "10x Stacked Deck",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Light and Truth",
+      "slug": "Light_and_Truth",
+      "url": "https://poedb.tw/us/Light_and_Truth",
+      "stack_size": 2,
+      "reward": "Crystal Sceptre",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Luck of the Vaal",
+      "slug": "Luck_of_the_Vaal",
+      "url": "https://poedb.tw/us/Luck_of_the_Vaal",
+      "stack_size": null,
+      "reward": "Vaal Gauntlets Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Endurance",
+      "slug": "The_Endurance",
+      "url": "https://poedb.tw/us/The_Endurance",
+      "stack_size": 4,
+      "reward": "Vivid Crimson Jewel",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Penitent",
+      "slug": "The_Penitent",
+      "url": "https://poedb.tw/us/The_Penitent",
+      "stack_size": 5,
+      "reward": "Unset Ring",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Wolf",
+      "slug": "The_Wolf",
+      "url": "https://poedb.tw/us/The_Wolf",
+      "stack_size": 5,
+      "reward": "Rigwald Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Dialla's Subjugation",
+      "slug": "Diallas_Subjugation",
+      "url": "https://poedb.tw/us/Diallas_Subjugation",
+      "stack_size": 7,
+      "reward": "Support Gem Quality: +23% Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Calling",
+      "slug": "The_Calling",
+      "url": "https://poedb.tw/us/The_Calling",
+      "stack_size": 6,
+      "reward": "Beyond Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Valkyrie",
+      "slug": "The_Valkyrie",
+      "url": "https://poedb.tw/us/The_Valkyrie",
+      "stack_size": 8,
+      "reward": "Nemesis Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Formless Sea",
+      "slug": "The_Formless_Sea",
+      "url": "https://poedb.tw/us/The_Formless_Sea",
+      "stack_size": 7,
+      "reward": "Varunastra",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Oath",
+      "slug": "The_Oath",
+      "url": "https://poedb.tw/us/The_Oath",
+      "stack_size": 6,
+      "reward": "Death's Oath",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Scavenger",
+      "slug": "The_Scavenger",
+      "url": "https://poedb.tw/us/The_Scavenger",
+      "stack_size": 8,
+      "reward": "Carcass Jack",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Mawr Blaidd",
+      "slug": "Mawr_Blaidd",
+      "url": "https://poedb.tw/us/Mawr_Blaidd",
+      "stack_size": 16,
+      "reward": "Eyes of the Greatwolf",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Porcupine",
+      "slug": "The_Porcupine",
+      "url": "https://poedb.tw/us/The_Porcupine",
+      "stack_size": 6,
+      "reward": "Six-Link Short Bow Item Level: 50",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Coming Storm",
+      "slug": "The_Coming_Storm",
+      "url": "https://poedb.tw/us/The_Coming_Storm",
+      "stack_size": 8,
+      "reward": "Lightning Coil",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Polymath",
+      "slug": "The_Polymath",
+      "url": "https://poedb.tw/us/The_Polymath",
+      "stack_size": 3,
+      "reward": "Astramentis",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Wolverine",
+      "slug": "The_Wolverine",
+      "url": "https://poedb.tw/us/The_Wolverine",
+      "stack_size": 4,
+      "reward": "Claw Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Mitts",
+      "slug": "Mitts",
+      "url": "https://poedb.tw/us/Mitts",
+      "stack_size": 5,
+      "reward": "Gloves",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Wretched",
+      "slug": "The_Wretched",
+      "url": "https://poedb.tw/us/The_Wretched",
+      "stack_size": 6,
+      "reward": "Belt",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Wolven King's Bite",
+      "slug": "The_Wolven_Kings_Bite",
+      "url": "https://poedb.tw/us/The_Wolven_Kings_Bite",
+      "stack_size": 8,
+      "reward": "Rigwald's Quills",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Standoff",
+      "slug": "The_Standoff",
+      "url": "https://poedb.tw/us/The_Standoff",
+      "stack_size": 3,
+      "reward": "Rustic Sash",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Forsaken",
+      "slug": "The_Forsaken",
+      "url": "https://poedb.tw/us/The_Forsaken",
+      "stack_size": 7,
+      "reward": "Umbilicus Immortalis",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Garish Power",
+      "slug": "The_Garish_Power",
+      "url": "https://poedb.tw/us/The_Garish_Power",
+      "stack_size": 4,
+      "reward": "Jewel",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Lingering Remnants",
+      "slug": "Lingering_Remnants",
+      "url": "https://poedb.tw/us/Lingering_Remnants",
+      "stack_size": 16,
+      "reward": "Vaal Temple Map Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Spark and the Flame",
+      "slug": "The_Spark_and_the_Flame",
+      "url": "https://poedb.tw/us/The_Spark_and_the_Flame",
+      "stack_size": 2,
+      "reward": "Berek's Respite",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Saint's Treasure",
+      "slug": "The_Saints_Treasure",
+      "url": "https://poedb.tw/us/The_Saints_Treasure",
+      "stack_size": 10,
+      "reward": "2x Exalted Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Call to the First Ones",
+      "slug": "Call_to_the_First_Ones",
+      "url": "https://poedb.tw/us/Call_to_the_First_Ones",
+      "stack_size": 5,
+      "reward": "Talisman",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Might is Right",
+      "slug": "Might_is_Right",
+      "url": "https://poedb.tw/us/Might_is_Right",
+      "stack_size": 9,
+      "reward": "Trypanon",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Opulent",
+      "slug": "The_Opulent",
+      "url": "https://poedb.tw/us/The_Opulent",
+      "stack_size": 5,
+      "reward": "Ring Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Struck by Lightning",
+      "slug": "Struck_by_Lightning",
+      "url": "https://poedb.tw/us/Struck_by_Lightning",
+      "stack_size": 3,
+      "reward": "Electrocuting Jewellery Item Level: 76",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Atziri's Arsenal",
+      "slug": "Atziris_Arsenal",
+      "url": "https://poedb.tw/us/Atziris_Arsenal",
+      "stack_size": 4,
+      "reward": "Weapon Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Ruthless Ceinture",
+      "slug": "The_Ruthless_Ceinture",
+      "url": "https://poedb.tw/us/The_Ruthless_Ceinture",
+      "stack_size": 7,
+      "reward": "Meginord's Girdle Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "No Traces",
+      "slug": "No_Traces",
+      "url": "https://poedb.tw/us/No_Traces",
+      "stack_size": 9,
+      "reward": "30x Orb of Scouring",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Realm",
+      "slug": "The_Realm",
+      "url": "https://poedb.tw/us/The_Realm",
+      "stack_size": 5,
+      "reward": "Portal Quality: +1-20%",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Eye of the Dragon",
+      "slug": "The_Eye_of_the_Dragon",
+      "url": "https://poedb.tw/us/The_Eye_of_the_Dragon",
+      "stack_size": 10,
+      "reward": "Jewel Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Blazing Fire",
+      "slug": "The_Blazing_Fire",
+      "url": "https://poedb.tw/us/The_Blazing_Fire",
+      "stack_size": 6,
+      "reward": "Chin Sol",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Left to Fate",
+      "slug": "Left_to_Fate",
+      "url": "https://poedb.tw/us/Left_to_Fate",
+      "stack_size": 4,
+      "reward": "Map Map Tier: 16 Unidentified Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Rebirth",
+      "slug": "Rebirth",
+      "url": "https://poedb.tw/us/Rebirth",
+      "stack_size": 27,
+      "reward": "Charan's Sword",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Insatiable",
+      "slug": "The_Insatiable",
+      "url": "https://poedb.tw/us/The_Insatiable",
+      "stack_size": 3,
+      "reward": "The Harvest Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Obscured",
+      "slug": "The_Obscured",
+      "url": "https://poedb.tw/us/The_Obscured",
+      "stack_size": 7,
+      "reward": null,
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Rusted Bard",
+      "slug": "The_Rusted_Bard",
+      "url": "https://poedb.tw/us/The_Rusted_Bard",
+      "stack_size": 9,
+      "reward": "4x Tainted Mythic Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Forbidden Power",
+      "slug": "Forbidden_Power",
+      "url": "https://poedb.tw/us/Forbidden_Power",
+      "stack_size": 4,
+      "reward": "Balefire Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Breach",
+      "slug": "The_Breach",
+      "url": "https://poedb.tw/us/The_Breach",
+      "stack_size": 4,
+      "reward": "Breach Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Dreamer",
+      "slug": "The_Dreamer",
+      "url": "https://poedb.tw/us/The_Dreamer",
+      "stack_size": 6,
+      "reward": "Chayula Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The World Eater",
+      "slug": "The_World_Eater",
+      "url": "https://poedb.tw/us/The_World_Eater",
+      "stack_size": 8,
+      "reward": "Starforge",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Deceiver",
+      "slug": "The_Deceiver",
+      "url": "https://poedb.tw/us/The_Deceiver",
+      "stack_size": 4,
+      "reward": "Belt of the Deceiver Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Puzzle",
+      "slug": "The_Puzzle",
+      "url": "https://poedb.tw/us/The_Puzzle",
+      "stack_size": 5,
+      "reward": null,
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Witch",
+      "slug": "The_Witch",
+      "url": "https://poedb.tw/us/The_Witch",
+      "stack_size": 8,
+      "reward": "Kiara's Determination",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Immortal Resolve",
+      "slug": "Immortal_Resolve",
+      "url": "https://poedb.tw/us/Immortal_Resolve",
+      "stack_size": 6,
+      "reward": "Six-Linked Body Armour Influenced Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Jeweller's Boon",
+      "slug": "The_Jewellers_Boon",
+      "url": "https://poedb.tw/us/The_Jewellers_Boon",
+      "stack_size": 5,
+      "reward": "Five-Linked Body Armour Influenced Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Darkest Dream",
+      "slug": "The_Darkest_Dream",
+      "url": "https://poedb.tw/us/The_Darkest_Dream",
+      "stack_size": 6,
+      "reward": "Severed in Sleep Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Fathomless Depths",
+      "slug": "The_Fathomless_Depths",
+      "url": "https://poedb.tw/us/The_Fathomless_Depths",
+      "stack_size": 8,
+      "reward": "Lightpoacher",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Undaunted",
+      "slug": "The_Undaunted",
+      "url": "https://poedb.tw/us/The_Undaunted",
+      "stack_size": 5,
+      "reward": "Nemesis Item Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Admirer",
+      "slug": "The_Admirer",
+      "url": "https://poedb.tw/us/The_Admirer",
+      "stack_size": 9,
+      "reward": "Atziri Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Sword King's Salute",
+      "slug": "The_Sword_Kings_Salute",
+      "url": "https://poedb.tw/us/The_Sword_Kings_Salute",
+      "stack_size": 7,
+      "reward": "Daresso's Salute",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Army of Blood",
+      "slug": "The_Army_of_Blood",
+      "url": "https://poedb.tw/us/The_Army_of_Blood",
+      "stack_size": 6,
+      "reward": "Bloodbond",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Celestial Stone",
+      "slug": "The_Celestial_Stone",
+      "url": "https://poedb.tw/us/The_Celestial_Stone",
+      "stack_size": 10,
+      "reward": "Opal Ring Item Level: 100 Shaper Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Perfection",
+      "slug": "Perfection",
+      "url": "https://poedb.tw/us/Perfection",
+      "stack_size": 5,
+      "reward": "Jewellery Item Level: 100 Shaper Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Dreamland",
+      "slug": "The_Dreamland",
+      "url": "https://poedb.tw/us/The_Dreamland",
+      "stack_size": 8,
+      "reward": "Poorjoy's Asylum",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Harmony of Souls",
+      "slug": "Harmony_of_Souls",
+      "url": "https://poedb.tw/us/Harmony_of_Souls",
+      "stack_size": 9,
+      "reward": "9x Shrieking Essence",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Samurai's Eye",
+      "slug": "The_Samurais_Eye",
+      "url": "https://poedb.tw/us/The_Samurais_Eye",
+      "stack_size": 3,
+      "reward": "Watcher's Eye",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Hale Heart",
+      "slug": "The_Hale_Heart",
+      "url": "https://poedb.tw/us/The_Hale_Heart",
+      "stack_size": 4,
+      "reward": "Item Item Level: 100 Elder Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Mayor",
+      "slug": "The_Mayor",
+      "url": "https://poedb.tw/us/The_Mayor",
+      "stack_size": 5,
+      "reward": "The Light of Meaning",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Undisputed",
+      "slug": "The_Undisputed",
+      "url": "https://poedb.tw/us/The_Undisputed",
+      "stack_size": 8,
+      "reward": "Merciless Vaal Axe Item Level: 100 Elder Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Rite of Elements",
+      "slug": "The_Rite_of_Elements",
+      "url": "https://poedb.tw/us/The_Rite_of_Elements",
+      "stack_size": 5,
+      "reward": "Level 21 Golem Gem Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Three Voices",
+      "slug": "Three_Voices",
+      "url": "https://poedb.tw/us/Three_Voices",
+      "stack_size": 3,
+      "reward": "3x Essence",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Professor",
+      "slug": "The_Professor",
+      "url": "https://poedb.tw/us/The_Professor",
+      "stack_size": 4,
+      "reward": "The Putrid Cloister",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Beast",
+      "slug": "The_Beast",
+      "url": "https://poedb.tw/us/The_Beast",
+      "stack_size": 6,
+      "reward": "Belly of the Beast",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Innocent",
+      "slug": "The_Innocent",
+      "url": "https://poedb.tw/us/The_Innocent",
+      "stack_size": 10,
+      "reward": "40x Orb of Regret",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Wilted Rose",
+      "slug": "The_Wilted_Rose",
+      "url": "https://poedb.tw/us/The_Wilted_Rose",
+      "stack_size": 7,
+      "reward": "Level 21 Aura Gem Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Endless Darkness",
+      "slug": "The_Endless_Darkness",
+      "url": "https://poedb.tw/us/The_Endless_Darkness",
+      "stack_size": 9,
+      "reward": "Voidforge",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Beauty Through Death",
+      "slug": "Beauty_Through_Death",
+      "url": "https://poedb.tw/us/Beauty_Through_Death",
+      "stack_size": 5,
+      "reward": "Atziri's Reflection",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Price of Protection",
+      "slug": "The_Price_of_Protection",
+      "url": "https://poedb.tw/us/The_Price_of_Protection",
+      "stack_size": 5,
+      "reward": "Elder Guardian Occupied Map Modifiers: 8 Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Boon of the First Ones",
+      "slug": "Boon_of_the_First_Ones",
+      "url": "https://poedb.tw/us/Boon_of_the_First_Ones",
+      "stack_size": 6,
+      "reward": "Bestiary Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Twilight Moon",
+      "slug": "The_Twilight_Moon",
+      "url": "https://poedb.tw/us/The_Twilight_Moon",
+      "stack_size": 6,
+      "reward": "The Twilight Temple",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Cacophony",
+      "slug": "The_Cacophony",
+      "url": "https://poedb.tw/us/The_Cacophony",
+      "stack_size": 8,
+      "reward": "3x Deafening Essence",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Sacrifice",
+      "slug": "The_Sacrifice",
+      "url": "https://poedb.tw/us/The_Sacrifice",
+      "stack_size": 4,
+      "reward": "Six-Link Sacrificial Garb Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "A Dab of Ink",
+      "slug": "A_Dab_of_Ink",
+      "url": "https://poedb.tw/us/A_Dab_of_Ink",
+      "stack_size": 9,
+      "reward": "The Poet's Pen",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Nurse",
+      "slug": "The_Nurse",
+      "url": "https://poedb.tw/us/The_Nurse",
+      "stack_size": 8,
+      "reward": "The Doctor",
+      "drop_level": 75,
+      "dropped_by": [
+        "Core Map",
+        "Abomination Map"
+      ]
+    },
+    {
+      "name": "The Master Artisan",
+      "slug": "The_Master_Artisan",
+      "url": "https://poedb.tw/us/The_Master_Artisan",
+      "stack_size": 5,
+      "reward": "20x Quality Currency",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Life Thief",
+      "slug": "The_Life_Thief",
+      "url": "https://poedb.tw/us/The_Life_Thief",
+      "stack_size": 6,
+      "reward": "Zerphi's Heart",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Seeker",
+      "slug": "The_Seeker",
+      "url": "https://poedb.tw/us/The_Seeker",
+      "stack_size": 9,
+      "reward": "3x Orb of Annulment",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Messenger",
+      "slug": "The_Messenger",
+      "url": "https://poedb.tw/us/The_Messenger",
+      "stack_size": 4,
+      "reward": "Harbinger Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Mad King",
+      "slug": "The_Mad_King",
+      "url": "https://poedb.tw/us/The_Mad_King",
+      "stack_size": 7,
+      "reward": "Vaal Aspect",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Boon of Justice",
+      "slug": "Boon_of_Justice",
+      "url": "https://poedb.tw/us/Boon_of_Justice",
+      "stack_size": 6,
+      "reward": "Offering to the Goddess",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Journey",
+      "slug": "The_Journey",
+      "url": "https://poedb.tw/us/The_Journey",
+      "stack_size": 4,
+      "reward": "Journey Tattoo",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Arrogance of the Vaal",
+      "slug": "Arrogance_of_the_Vaal",
+      "url": "https://poedb.tw/us/Arrogance_of_the_Vaal",
+      "stack_size": 8,
+      "reward": "Item Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Landing",
+      "slug": "The_Landing",
+      "url": "https://poedb.tw/us/The_Landing",
+      "stack_size": 5,
+      "reward": null,
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Mountain",
+      "slug": "The_Mountain",
+      "url": "https://poedb.tw/us/The_Mountain",
+      "stack_size": 6,
+      "reward": "Jewel of Potency",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Seven Years Bad Luck",
+      "slug": "Seven_Years_Bad_Luck",
+      "url": "https://poedb.tw/us/Seven_Years_Bad_Luck",
+      "stack_size": 13,
+      "reward": "Mirror Shard",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Golden Era",
+      "slug": "The_Golden_Era",
+      "url": "https://poedb.tw/us/The_Golden_Era",
+      "stack_size": 7,
+      "reward": "Flaring Eclipse Staff Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Monochrome",
+      "slug": "Monochrome",
+      "url": "https://poedb.tw/us/Monochrome",
+      "stack_size": 3,
+      "reward": "Valdo's Puzzle Box",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Dark Temptation",
+      "slug": "Dark_Temptation",
+      "url": "https://poedb.tw/us/Dark_Temptation",
+      "stack_size": 5,
+      "reward": "Obliteration",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Alone in the Darkness",
+      "slug": "Alone_in_the_Darkness",
+      "url": "https://poedb.tw/us/Alone_in_the_Darkness",
+      "stack_size": 5,
+      "reward": "Delve Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Sambodhi's Vow",
+      "slug": "Sambodhis_Vow",
+      "url": "https://poedb.tw/us/Sambodhis_Vow",
+      "stack_size": 3,
+      "reward": "Mortal Fragment",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Lord of Celebration",
+      "slug": "The_Lord_of_Celebration",
+      "url": "https://poedb.tw/us/The_Lord_of_Celebration",
+      "stack_size": 4,
+      "reward": "Sceptre of Celebration Shaper Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Vanity",
+      "slug": "Vanity",
+      "url": "https://poedb.tw/us/Vanity",
+      "stack_size": 9,
+      "reward": "Tabula Rasa Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Imperial Legacy",
+      "slug": "Imperial_Legacy",
+      "url": "https://poedb.tw/us/Imperial_Legacy",
+      "stack_size": 22,
+      "reward": "Six-Link Imperial Bow Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Burning Blood",
+      "slug": "Burning_Blood",
+      "url": "https://poedb.tw/us/Burning_Blood",
+      "stack_size": 6,
+      "reward": "Xoph's Blood Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Primordial",
+      "slug": "The_Primordial",
+      "url": "https://poedb.tw/us/The_Primordial",
+      "stack_size": 5,
+      "reward": "Jewel Primordial",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Echoes of Love",
+      "slug": "Echoes_of_Love",
+      "url": "https://poedb.tw/us/Echoes_of_Love",
+      "stack_size": 3,
+      "reward": "Fidelitas' Spike Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Thirst for Knowledge",
+      "slug": "Thirst_for_Knowledge",
+      "url": "https://poedb.tw/us/Thirst_for_Knowledge",
+      "stack_size": 5,
+      "reward": "Gluttony",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Alluring Bounty",
+      "slug": "Alluring_Bounty",
+      "url": "https://poedb.tw/us/Alluring_Bounty",
+      "stack_size": 7,
+      "reward": "10x Exalted Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Fool",
+      "slug": "The_Fool",
+      "url": "https://poedb.tw/us/The_Fool",
+      "stack_size": 4,
+      "reward": "20x Orb of Chance",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Pride of the First Ones",
+      "slug": "Pride_of_the_First_Ones",
+      "url": "https://poedb.tw/us/Pride_of_the_First_Ones",
+      "stack_size": 7,
+      "reward": "Farrul's Fur",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Deep Ones",
+      "slug": "The_Deep_Ones",
+      "url": "https://poedb.tw/us/The_Deep_Ones",
+      "stack_size": 5,
+      "reward": "Tidebreaker",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Archmage's Right Hand",
+      "slug": "The_Archmages_Right_Hand",
+      "url": "https://poedb.tw/us/The_Archmages_Right_Hand",
+      "stack_size": 7,
+      "reward": "Glyphic Prophecy Wand Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Dark Dreams",
+      "slug": "Dark_Dreams",
+      "url": "https://poedb.tw/us/Dark_Dreams",
+      "stack_size": 4,
+      "reward": "Bone Helmet Elder Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Buried Treasure",
+      "slug": "Buried_Treasure",
+      "url": "https://poedb.tw/us/Buried_Treasure",
+      "stack_size": 3,
+      "reward": "Sulphite Scarab",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Demigod's Wager",
+      "slug": "Demigods_Wager",
+      "url": "https://poedb.tw/us/Demigods_Wager",
+      "stack_size": 7,
+      "reward": "Orb of Annulment",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Old Man",
+      "slug": "The_Old_Man",
+      "url": "https://poedb.tw/us/The_Old_Man",
+      "stack_size": 12,
+      "reward": "Fishing Rod Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Nook's Crown",
+      "slug": "Nooks_Crown",
+      "url": "https://poedb.tw/us/Nooks_Crown",
+      "stack_size": 4,
+      "reward": "Bone Helmet Item Level: 100 Elder Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Side Quest",
+      "slug": "The_Side_Quest",
+      "url": "https://poedb.tw/us/The_Side_Quest",
+      "stack_size": 5,
+      "reward": "Incarnation Echo",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Price of Loyalty",
+      "slug": "The_Price_of_Loyalty",
+      "url": "https://poedb.tw/us/The_Price_of_Loyalty",
+      "stack_size": 4,
+      "reward": "Skin of the Loyal Item Level: 25 Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Heroic Shot",
+      "slug": "The_Heroic_Shot",
+      "url": "https://poedb.tw/us/The_Heroic_Shot",
+      "stack_size": null,
+      "reward": "17x Chromatic Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Remembrance",
+      "slug": "Remembrance",
+      "url": "https://poedb.tw/us/Remembrance",
+      "stack_size": 8,
+      "reward": "Precursor's Emblem Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "More is Never Enough",
+      "slug": "More_is_Never_Enough",
+      "url": "https://poedb.tw/us/More_is_Never_Enough",
+      "stack_size": 7,
+      "reward": "4x Scarab",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Vile Power",
+      "slug": "Vile_Power",
+      "url": "https://poedb.tw/us/Vile_Power",
+      "stack_size": 5,
+      "reward": "Doomfletch",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Bargain",
+      "slug": "The_Bargain",
+      "url": "https://poedb.tw/us/The_Bargain",
+      "stack_size": 5,
+      "reward": null,
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Azyran's Reward",
+      "slug": "Azyrans_Reward",
+      "url": "https://poedb.tw/us/Azyrans_Reward",
+      "stack_size": 9,
+      "reward": "Prismatic Jewel Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Skeleton",
+      "slug": "The_Skeleton",
+      "url": "https://poedb.tw/us/The_Skeleton",
+      "stack_size": 6,
+      "reward": "Level 1 Summon Skeletons Quality: +23% Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Eye of Terror",
+      "slug": "The_Eye_of_Terror",
+      "url": "https://poedb.tw/us/The_Eye_of_Terror",
+      "stack_size": 8,
+      "reward": "Mageblood {Foulborn}",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Demon",
+      "slug": "The_Demon",
+      "url": "https://poedb.tw/us/The_Demon",
+      "stack_size": 10,
+      "reward": "Headhunter Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Akil's Prophecy",
+      "slug": "Akils_Prophecy",
+      "url": "https://poedb.tw/us/Akils_Prophecy",
+      "stack_size": 3,
+      "reward": "Elegant Round Shield Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Damned",
+      "slug": "The_Damned",
+      "url": "https://poedb.tw/us/The_Damned",
+      "stack_size": 6,
+      "reward": "Soul Ripper",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Void of the Elements",
+      "slug": "Void_of_the_Elements",
+      "url": "https://poedb.tw/us/Void_of_the_Elements",
+      "stack_size": 3,
+      "reward": "Overpowering Opal Ring Item Level: 100 Elder Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Deal",
+      "slug": "The_Deal",
+      "url": "https://poedb.tw/us/The_Deal",
+      "stack_size": 5,
+      "reward": "Cartography Scarab",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Wolf's Legacy",
+      "slug": "The_Wolfs_Legacy",
+      "url": "https://poedb.tw/us/The_Wolfs_Legacy",
+      "stack_size": 4,
+      "reward": "Vaults of Atziri",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Baited Expectations",
+      "slug": "Baited_Expectations",
+      "url": "https://poedb.tw/us/Baited_Expectations",
+      "stack_size": 8,
+      "reward": "Fishing Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Succor of the Sinless",
+      "slug": "Succor_of_the_Sinless",
+      "url": "https://poedb.tw/us/Succor_of_the_Sinless",
+      "stack_size": 6,
+      "reward": "Bottled Faith",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Underground Forest",
+      "slug": "Underground_Forest",
+      "url": "https://poedb.tw/us/Underground_Forest",
+      "stack_size": 4,
+      "reward": "10x Grand Eldritch Ichor",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Escape",
+      "slug": "The_Escape",
+      "url": "https://poedb.tw/us/The_Escape",
+      "stack_size": 5,
+      "reward": "Seven-League Step",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Deathly Designs",
+      "slug": "Deathly_Designs",
+      "url": "https://poedb.tw/us/Deathly_Designs",
+      "stack_size": 7,
+      "reward": "Level 21 Trap Gem Quality: +23% Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Chosen",
+      "slug": "The_Chosen",
+      "url": "https://poedb.tw/us/The_Chosen",
+      "stack_size": 5,
+      "reward": "Skin of the Lords Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Cameria's Cut",
+      "slug": "Camerias_Cut",
+      "url": "https://poedb.tw/us/Camerias_Cut",
+      "stack_size": 2,
+      "reward": "Scarab",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Divine Justice",
+      "slug": "Divine_Justice",
+      "url": "https://poedb.tw/us/Divine_Justice",
+      "stack_size": null,
+      "reward": "Grand Spectrum Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Fishmonger",
+      "slug": "The_Fishmonger",
+      "url": "https://poedb.tw/us/The_Fishmonger",
+      "stack_size": 4,
+      "reward": "Albino Rhoa Feather",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Bones",
+      "slug": "The_Bones",
+      "url": "https://poedb.tw/us/The_Bones",
+      "stack_size": 6,
+      "reward": "Level 21 Vaal Summon Skeletons Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Friendship",
+      "slug": "Friendship",
+      "url": "https://poedb.tw/us/Friendship",
+      "stack_size": 3,
+      "reward": "Aul's Uprising",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Craving",
+      "slug": "The_Craving",
+      "url": "https://poedb.tw/us/The_Craving",
+      "stack_size": 4,
+      "reward": "Unending Hunger",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Etched in Blood",
+      "slug": "Etched_in_Blood",
+      "url": "https://poedb.tw/us/Etched_in_Blood",
+      "stack_size": 9,
+      "reward": "Rigwald's Quills Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Squandered Prosperity",
+      "slug": "Squandered_Prosperity",
+      "url": "https://poedb.tw/us/Squandered_Prosperity",
+      "stack_size": 5,
+      "reward": "The Light of Meaning Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Strategist",
+      "slug": "The_Strategist",
+      "url": "https://poedb.tw/us/The_Strategist",
+      "stack_size": 6,
+      "reward": "Inspired Learning Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Cheater",
+      "slug": "The_Cheater",
+      "url": "https://poedb.tw/us/The_Cheater",
+      "stack_size": 3,
+      "reward": null,
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Tinkerer's Table",
+      "slug": "The_Tinkerers_Table",
+      "url": "https://poedb.tw/us/The_Tinkerers_Table",
+      "stack_size": 5,
+      "reward": "5x Fossil",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Easy Stroll",
+      "slug": "The_Easy_Stroll",
+      "url": "https://poedb.tw/us/The_Easy_Stroll",
+      "stack_size": 2,
+      "reward": "Map Map Tier: 15 Modifiers: 8 Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Progeny of Lunaris",
+      "slug": "The_Progeny_of_Lunaris",
+      "url": "https://poedb.tw/us/The_Progeny_of_Lunaris",
+      "stack_size": 2,
+      "reward": "Dying Sun",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Eldritch Decay",
+      "slug": "The_Eldritch_Decay",
+      "url": "https://poedb.tw/us/The_Eldritch_Decay",
+      "stack_size": 4,
+      "reward": "Uber Elder Fragment",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Council of Cats",
+      "slug": "Council_of_Cats",
+      "url": "https://poedb.tw/us/Council_of_Cats",
+      "stack_size": 4,
+      "reward": "Farrul Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Tumbleweed",
+      "slug": "The_Tumbleweed",
+      "url": "https://poedb.tw/us/The_Tumbleweed",
+      "stack_size": 2,
+      "reward": "Diamond Ring of Redemption Item Level: 100 Redeemer Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Hive of Knowledge",
+      "slug": "The_Hive_of_Knowledge",
+      "url": "https://poedb.tw/us/The_Hive_of_Knowledge",
+      "stack_size": 6,
+      "reward": "Machina Mitts Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Gift of Asenath",
+      "slug": "Gift_of_Asenath",
+      "url": "https://poedb.tw/us/Gift_of_Asenath",
+      "stack_size": 5,
+      "reward": "Asenath's Gentle Touch Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "A Note in the Wind",
+      "slug": "A_Note_in_the_Wind",
+      "url": "https://poedb.tw/us/A_Note_in_the_Wind",
+      "stack_size": 4,
+      "reward": "Asenath's Mark",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Greatest Intentions",
+      "slug": "The_Greatest_Intentions",
+      "url": "https://poedb.tw/us/The_Greatest_Intentions",
+      "stack_size": 10,
+      "reward": "The Saviour Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The White Knight",
+      "slug": "The_White_Knight",
+      "url": "https://poedb.tw/us/The_White_Knight",
+      "stack_size": 8,
+      "reward": "Six-Link Astral Plate Item Level: 100 Crusader Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Prometheus' Armoury",
+      "slug": "Prometheus_Armoury",
+      "url": "https://poedb.tw/us/Prometheus_Armoury",
+      "stack_size": 6,
+      "reward": "One-Hand Weapon Item Level: 100 Double-Influenced Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Peaceful Moments",
+      "slug": "Peaceful_Moments",
+      "url": "https://poedb.tw/us/Peaceful_Moments",
+      "stack_size": 5,
+      "reward": "Timeless Jewel",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Awakened",
+      "slug": "The_Awakened",
+      "url": "https://poedb.tw/us/The_Awakened",
+      "stack_size": 6,
+      "reward": "Jewellery Item Level: 86 Double-Influenced Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "A Familiar Call",
+      "slug": "A_Familiar_Call",
+      "url": "https://poedb.tw/us/A_Familiar_Call",
+      "stack_size": 3,
+      "reward": "Jewellery of Farrul Item Level: 100 Shaper + Hunter Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Long Con",
+      "slug": "The_Long_Con",
+      "url": "https://poedb.tw/us/The_Long_Con",
+      "stack_size": 4,
+      "reward": "Elderslayer's Exalted Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Gulf",
+      "slug": "The_Gulf",
+      "url": "https://poedb.tw/us/The_Gulf",
+      "stack_size": 5,
+      "reward": "Thread of Hope Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Bitter Blossom",
+      "slug": "The_Bitter_Blossom",
+      "url": "https://poedb.tw/us/The_Bitter_Blossom",
+      "stack_size": 3,
+      "reward": "Level 21 Chaos Gem Quality: +23% Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Triskaidekaphobia",
+      "slug": "Triskaidekaphobia",
+      "url": "https://poedb.tw/us/Triskaidekaphobia",
+      "stack_size": 13,
+      "reward": "Map Map Tier: 13 Delirium: 100% Modifiers: 8 Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Unrequited Love",
+      "slug": "Unrequited_Love",
+      "url": "https://poedb.tw/us/Unrequited_Love",
+      "stack_size": 16,
+      "reward": "19x Mirror Shard",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Cache",
+      "slug": "The_Cache",
+      "url": "https://poedb.tw/us/The_Cache",
+      "stack_size": 6,
+      "reward": "Jewellery",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Academic",
+      "slug": "The_Academic",
+      "url": "https://poedb.tw/us/The_Academic",
+      "stack_size": 8,
+      "reward": "Inspired Learning",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Desecrated Virtue",
+      "slug": "Desecrated_Virtue",
+      "url": "https://poedb.tw/us/Desecrated_Virtue",
+      "stack_size": 9,
+      "reward": "Level 4 Exceptional Support Gem Quality: +23% Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Brother's Stash",
+      "slug": "Brothers_Stash",
+      "url": "https://poedb.tw/us/Brothers_Stash",
+      "stack_size": null,
+      "reward": "5x Exalted Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Unchained",
+      "slug": "Unchained",
+      "url": "https://poedb.tw/us/Unchained",
+      "stack_size": 4,
+      "reward": "Facebreaker Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Unexpected Prize",
+      "slug": "The_Unexpected_Prize",
+      "url": "https://poedb.tw/us/The_Unexpected_Prize",
+      "stack_size": 2,
+      "reward": "Attribute Transforming Jewel Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Cursed Words",
+      "slug": "Cursed_Words",
+      "url": "https://poedb.tw/us/Cursed_Words",
+      "stack_size": 13,
+      "reward": "Maw of Mischief",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Journalist",
+      "slug": "The_Journalist",
+      "url": "https://poedb.tw/us/The_Journalist",
+      "stack_size": 10,
+      "reward": "Helmet Double-Veiled Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Haunting Shadows",
+      "slug": "Haunting_Shadows",
+      "url": "https://poedb.tw/us/Haunting_Shadows",
+      "stack_size": 4,
+      "reward": "Metamorph Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Acclimatisation",
+      "slug": "Acclimatisation",
+      "url": "https://poedb.tw/us/Acclimatisation",
+      "stack_size": 2,
+      "reward": "20x Orb of Alteration",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Whiteout",
+      "slug": "The_Whiteout",
+      "url": "https://poedb.tw/us/The_Whiteout",
+      "stack_size": 8,
+      "reward": "Cospri's Malice",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Society's Remorse",
+      "slug": "Societys_Remorse",
+      "url": "https://poedb.tw/us/Societys_Remorse",
+      "stack_size": null,
+      "reward": "10x Orb of Alteration",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Dying Light",
+      "slug": "Dying_Light",
+      "url": "https://poedb.tw/us/Dying_Light",
+      "stack_size": 10,
+      "reward": "Diamond Ring Item Level: 100 Shaper + Elder Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Fateful Meeting",
+      "slug": "Fateful_Meeting",
+      "url": "https://poedb.tw/us/Fateful_Meeting",
+      "stack_size": 9,
+      "reward": "League-Specific Item Double-Influenced Item Item Level: 97 Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Astromancer",
+      "slug": "The_Astromancer",
+      "url": "https://poedb.tw/us/The_Astromancer",
+      "stack_size": 7,
+      "reward": "The Eternity Shroud Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Keeper's Corruption",
+      "slug": "Keepers_Corruption",
+      "url": "https://poedb.tw/us/Keepers_Corruption",
+      "stack_size": 7,
+      "reward": "Eldritch Bone Helmet (Concentrated Effect) Item Level: 89 Elder Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Reckless Ambition",
+      "slug": "Reckless_Ambition",
+      "url": "https://poedb.tw/us/Reckless_Ambition",
+      "stack_size": 6,
+      "reward": "Omeyocan",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Love Through Ice",
+      "slug": "Love_Through_Ice",
+      "url": "https://poedb.tw/us/Love_Through_Ice",
+      "stack_size": 4,
+      "reward": "Unnatural Instinct Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Draped in Dreams",
+      "slug": "Draped_in_Dreams",
+      "url": "https://poedb.tw/us/Draped_in_Dreams",
+      "stack_size": 5,
+      "reward": "Six-Link Astral Plate Item Level: 100 Influenced Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Patient",
+      "slug": "The_Patient",
+      "url": "https://poedb.tw/us/The_Patient",
+      "stack_size": 8,
+      "reward": "The Nurse",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Long Watch",
+      "slug": "The_Long_Watch",
+      "url": "https://poedb.tw/us/The_Long_Watch",
+      "stack_size": 3,
+      "reward": "The Fourth Vow",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Bear Woman",
+      "slug": "The_Bear_Woman",
+      "url": "https://poedb.tw/us/The_Bear_Woman",
+      "stack_size": 6,
+      "reward": "Fecund Ursine Pelt Warlord Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Brotherhood in Exile",
+      "slug": "Brotherhood_in_Exile",
+      "url": "https://poedb.tw/us/Brotherhood_in_Exile",
+      "stack_size": 5,
+      "reward": "One With Nothing Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Winter's Embrace",
+      "slug": "Winters_Embrace",
+      "url": "https://poedb.tw/us/Winters_Embrace",
+      "stack_size": 2,
+      "reward": "Circle of Fear Three-Implicit Synthesised",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Sambodhi's Wisdom",
+      "slug": "Sambodhis_Wisdom",
+      "url": "https://poedb.tw/us/Sambodhis_Wisdom",
+      "stack_size": 3,
+      "reward": "Tabula Rasa Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Enthusiasts",
+      "slug": "The_Enthusiasts",
+      "url": "https://poedb.tw/us/The_Enthusiasts",
+      "stack_size": 3,
+      "reward": "Victario's Influence Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Broken Promises",
+      "slug": "Broken_Promises",
+      "url": "https://poedb.tw/us/Broken_Promises",
+      "stack_size": 2,
+      "reward": null,
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Brush, Paint and Palette",
+      "slug": "Brush%2C_Paint_and_Palette",
+      "url": "https://poedb.tw/us/Brush%2C_Paint_and_Palette",
+      "stack_size": 5,
+      "reward": "The Artist",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Deadly Joy",
+      "slug": "Deadly_Joy",
+      "url": "https://poedb.tw/us/Deadly_Joy",
+      "stack_size": 6,
+      "reward": "Torrent's Reclamation Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Adventuring Spirit",
+      "slug": "The_Adventuring_Spirit",
+      "url": "https://poedb.tw/us/The_Adventuring_Spirit",
+      "stack_size": 6,
+      "reward": "Victario's Influence",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Eternal War",
+      "slug": "The_Eternal_War",
+      "url": "https://poedb.tw/us/The_Eternal_War",
+      "stack_size": 4,
+      "reward": "Timeless Jewel Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Prejudice",
+      "slug": "Prejudice",
+      "url": "https://poedb.tw/us/Prejudice",
+      "stack_size": 7,
+      "reward": "Item Influenced Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Shortcut",
+      "slug": "The_Shortcut",
+      "url": "https://poedb.tw/us/The_Shortcut",
+      "stack_size": null,
+      "reward": "Quicksilver Flask of the Cheetah Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Card Sharp",
+      "slug": "The_Card_Sharp",
+      "url": "https://poedb.tw/us/The_Card_Sharp",
+      "stack_size": 4,
+      "reward": "Divination Scarab",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "A Modest Request",
+      "slug": "A_Modest_Request",
+      "url": "https://poedb.tw/us/A_Modest_Request",
+      "stack_size": 3,
+      "reward": "Megalomaniac Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Luminous Trove",
+      "slug": "Luminous_Trove",
+      "url": "https://poedb.tw/us/Luminous_Trove",
+      "stack_size": 7,
+      "reward": "Voices Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Hook",
+      "slug": "The_Hook",
+      "url": "https://poedb.tw/us/The_Hook",
+      "stack_size": 8,
+      "reward": "Level 21 Transfigured Gem Quality: +23% Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Last Supper",
+      "slug": "The_Last_Supper",
+      "url": "https://poedb.tw/us/The_Last_Supper",
+      "stack_size": 6,
+      "reward": "Bino's Kitchen Knife",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Emptiness",
+      "slug": "The_Emptiness",
+      "url": "https://poedb.tw/us/The_Emptiness",
+      "stack_size": 6,
+      "reward": null,
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "A Sea of Blue",
+      "slug": "A_Sea_of_Blue",
+      "url": "https://poedb.tw/us/A_Sea_of_Blue",
+      "stack_size": 3,
+      "reward": "13x Orb of Alteration",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Offspring",
+      "slug": "The_Offspring",
+      "url": "https://poedb.tw/us/The_Offspring",
+      "stack_size": 9,
+      "reward": "Ryslatha's Coil",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Price of Prescience",
+      "slug": "The_Price_of_Prescience",
+      "url": "https://poedb.tw/us/The_Price_of_Prescience",
+      "stack_size": 5,
+      "reward": "Vaal Temple Map Delirium: 100% Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Mind's Eyes",
+      "slug": "The_Minds_Eyes",
+      "url": "https://poedb.tw/us/The_Minds_Eyes",
+      "stack_size": 7,
+      "reward": "Astral Projector",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Terrible Secret of Space",
+      "slug": "Terrible_Secret_of_Space",
+      "url": "https://poedb.tw/us/Terrible_Secret_of_Space",
+      "stack_size": 8,
+      "reward": "Level 21 Transfigured Golem Gem Quality: +23% Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Blessing of Moosh",
+      "slug": "The_Blessing_of_Moosh",
+      "url": "https://poedb.tw/us/The_Blessing_of_Moosh",
+      "stack_size": 4,
+      "reward": "Level 21 Transfigured Gem Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Costly Curio",
+      "slug": "Costly_Curio",
+      "url": "https://poedb.tw/us/Costly_Curio",
+      "stack_size": 6,
+      "reward": "Item Double-Influenced Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Lachrymal Necrosis",
+      "slug": "Lachrymal_Necrosis",
+      "url": "https://poedb.tw/us/Lachrymal_Necrosis",
+      "stack_size": 3,
+      "reward": "Jewel Implicit Modifier: Corrupted Blood cannot be inflicted on you Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Dementophobia",
+      "slug": "Dementophobia",
+      "url": "https://poedb.tw/us/Dementophobia",
+      "stack_size": 11,
+      "reward": "10x Delirium Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Ambitious Obsession",
+      "slug": "Ambitious_Obsession",
+      "url": "https://poedb.tw/us/Ambitious_Obsession",
+      "stack_size": 4,
+      "reward": "Skittering Delirium Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Desperate Crusade",
+      "slug": "Desperate_Crusade",
+      "url": "https://poedb.tw/us/Desperate_Crusade",
+      "stack_size": 3,
+      "reward": "Prism Guardian",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "A Stone Perfected",
+      "slug": "A_Stone_Perfected",
+      "url": "https://poedb.tw/us/A_Stone_Perfected",
+      "stack_size": 5,
+      "reward": "Jewel Primordial 1-2 Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Treasures of the Vaal",
+      "slug": "Treasures_of_the_Vaal",
+      "url": "https://poedb.tw/us/Treasures_of_the_Vaal",
+      "stack_size": 12,
+      "reward": "Vaal Jewel Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Rabbit's Foot",
+      "slug": "The_Rabbits_Foot",
+      "url": "https://poedb.tw/us/The_Rabbits_Foot",
+      "stack_size": 8,
+      "reward": "10x Incursion Vial",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Chasing Risk",
+      "slug": "Chasing_Risk",
+      "url": "https://poedb.tw/us/Chasing_Risk",
+      "stack_size": 4,
+      "reward": "Synthesis Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Prince of Darkness",
+      "slug": "The_Prince_of_Darkness",
+      "url": "https://poedb.tw/us/The_Prince_of_Darkness",
+      "stack_size": 6,
+      "reward": "Elegant Hubris",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Catch",
+      "slug": "The_Catch",
+      "url": "https://poedb.tw/us/The_Catch",
+      "stack_size": 18,
+      "reward": "Fishing Rod Item Level: 99",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Eternal Bonds",
+      "slug": "Eternal_Bonds",
+      "url": "https://poedb.tw/us/Eternal_Bonds",
+      "stack_size": 4,
+      "reward": "Replica Cortex",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Disdain",
+      "slug": "Disdain",
+      "url": "https://poedb.tw/us/Disdain",
+      "stack_size": 5,
+      "reward": "Delirium Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Scout",
+      "slug": "The_Scout",
+      "url": "https://poedb.tw/us/The_Scout",
+      "stack_size": 8,
+      "reward": "7x Exalted Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Guardian's Challenge",
+      "slug": "Guardians_Challenge",
+      "url": "https://poedb.tw/us/Guardians_Challenge",
+      "stack_size": 4,
+      "reward": "Shaper Guardian Map",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Forgotten Treasure",
+      "slug": "The_Forgotten_Treasure",
+      "url": "https://poedb.tw/us/The_Forgotten_Treasure",
+      "stack_size": 6,
+      "reward": "Leather Belt Double-Influenced Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Fox in the Brambles",
+      "slug": "The_Fox_in_the_Brambles",
+      "url": "https://poedb.tw/us/The_Fox_in_the_Brambles",
+      "stack_size": 7,
+      "reward": "Bramblejack Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Aspirant",
+      "slug": "The_Aspirant",
+      "url": "https://poedb.tw/us/The_Aspirant",
+      "stack_size": 5,
+      "reward": "Item Elevated Item Influenced Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Judging Voices",
+      "slug": "Judging_Voices",
+      "url": "https://poedb.tw/us/Judging_Voices",
+      "stack_size": 9,
+      "reward": "Forbidden Shako",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Bijoux",
+      "slug": "Bijoux",
+      "url": "https://poedb.tw/us/Bijoux",
+      "stack_size": 3,
+      "reward": "Cluster Jewel Item Level: 84",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Silence and Frost",
+      "slug": "Silence_and_Frost",
+      "url": "https://poedb.tw/us/Silence_and_Frost",
+      "stack_size": 7,
+      "reward": "The Pandemonius",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Misery in Darkness",
+      "slug": "Misery_in_Darkness",
+      "url": "https://poedb.tw/us/Misery_in_Darkness",
+      "stack_size": 6,
+      "reward": "Shroud of the Lightless",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Tireless Extractor",
+      "slug": "The_Tireless_Extractor",
+      "url": "https://poedb.tw/us/The_Tireless_Extractor",
+      "stack_size": 8,
+      "reward": "10x Oil",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Justified Ambition",
+      "slug": "Justified_Ambition",
+      "url": "https://poedb.tw/us/Justified_Ambition",
+      "stack_size": 5,
+      "reward": "Synthesis Map",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Parasitic Passengers",
+      "slug": "Parasitic_Passengers",
+      "url": "https://poedb.tw/us/Parasitic_Passengers",
+      "stack_size": 8,
+      "reward": null,
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Duality",
+      "slug": "Duality",
+      "url": "https://poedb.tw/us/Duality",
+      "stack_size": 2,
+      "reward": "Body Armour Item Level: 100 Double-Influenced Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The One That Got Away",
+      "slug": "The_One_That_Got_Away",
+      "url": "https://poedb.tw/us/The_One_That_Got_Away",
+      "stack_size": 7,
+      "reward": "Replica Bated Breath",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Transformation",
+      "slug": "The_Transformation",
+      "url": "https://poedb.tw/us/The_Transformation",
+      "stack_size": 5,
+      "reward": "Tainted Mythic Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Magnum Opus",
+      "slug": "Magnum_Opus",
+      "url": "https://poedb.tw/us/Magnum_Opus",
+      "stack_size": 5,
+      "reward": null,
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Imperfect Memories",
+      "slug": "Imperfect_Memories",
+      "url": "https://poedb.tw/us/Imperfect_Memories",
+      "stack_size": 5,
+      "reward": "Astrolabe",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Magma Crab",
+      "slug": "The_Magma_Crab",
+      "url": "https://poedb.tw/us/The_Magma_Crab",
+      "stack_size": 6,
+      "reward": "Level 21 Vaal Molten Shell Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Altered Perception",
+      "slug": "Altered_Perception",
+      "url": "https://poedb.tw/us/Altered_Perception",
+      "stack_size": 3,
+      "reward": "Simulacrum",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Further Invention",
+      "slug": "Further_Invention",
+      "url": "https://poedb.tw/us/Further_Invention",
+      "stack_size": 4,
+      "reward": "Helmet Double-Influenced Item Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Brawny Battle Mage",
+      "slug": "The_Brawny_Battle_Mage",
+      "url": "https://poedb.tw/us/The_Brawny_Battle_Mage",
+      "stack_size": 5,
+      "reward": "Merciless Tornado Wand Item Level: 100",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "A Fate Worse Than Death",
+      "slug": "A_Fate_Worse_Than_Death",
+      "url": "https://poedb.tw/us/A_Fate_Worse_Than_Death",
+      "stack_size": 4,
+      "reward": "Cortex Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Destination",
+      "slug": "The_Destination",
+      "url": "https://poedb.tw/us/The_Destination",
+      "stack_size": 9,
+      "reward": "Watcher's Eye Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Rebirth and Renewal",
+      "slug": "Rebirth_and_Renewal",
+      "url": "https://poedb.tw/us/Rebirth_and_Renewal",
+      "stack_size": 4,
+      "reward": "Horned Scarab",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Forward Gaze",
+      "slug": "The_Forward_Gaze",
+      "url": "https://poedb.tw/us/The_Forward_Gaze",
+      "stack_size": 6,
+      "reward": "Replica Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Apothecary",
+      "slug": "The_Apothecary",
+      "url": "https://poedb.tw/us/The_Apothecary",
+      "stack_size": 5,
+      "reward": "Mageblood",
+      "drop_level": 75,
+      "dropped_by": [
+        "Cage Map"
+      ]
+    },
+    {
+      "name": "Home",
+      "slug": "Home",
+      "url": "https://poedb.tw/us/Home",
+      "stack_size": 3,
+      "reward": "Exceptional Support Gem Quality: +1-20%",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Dungeon Master",
+      "slug": "The_Dungeon_Master",
+      "url": "https://poedb.tw/us/The_Dungeon_Master",
+      "stack_size": 7,
+      "reward": "Belt Double-Influenced Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "From Bone to Ashes",
+      "slug": "From_Bone_to_Ashes",
+      "url": "https://poedb.tw/us/From_Bone_to_Ashes",
+      "stack_size": 8,
+      "reward": "Ngamahu's Flame Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Darker Half",
+      "slug": "Darker_Half",
+      "url": "https://poedb.tw/us/Darker_Half",
+      "stack_size": 3,
+      "reward": "5x Eldritch Chaos Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Broken Truce",
+      "slug": "Broken_Truce",
+      "url": "https://poedb.tw/us/Broken_Truce",
+      "stack_size": 5,
+      "reward": "Cold Iron Point",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Doryani's Epiphany",
+      "slug": "Doryanis_Epiphany",
+      "url": "https://poedb.tw/us/Doryanis_Epiphany",
+      "stack_size": 3,
+      "reward": "Level 21 Transfigured Gem Quality: +20% Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Endless Night",
+      "slug": "Endless_Night",
+      "url": "https://poedb.tw/us/Endless_Night",
+      "stack_size": 7,
+      "reward": "Maloney's Mechanism",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Shieldbearer",
+      "slug": "The_Shieldbearer",
+      "url": "https://poedb.tw/us/The_Shieldbearer",
+      "stack_size": 8,
+      "reward": "The Squire",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Choking Guilt",
+      "slug": "Choking_Guilt",
+      "url": "https://poedb.tw/us/Choking_Guilt",
+      "stack_size": 6,
+      "reward": "Stranglegasp",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Enforcer",
+      "slug": "The_Enforcer",
+      "url": "https://poedb.tw/us/The_Enforcer",
+      "stack_size": 4,
+      "reward": "Spiked Gloves of the Conquest (Culling Strike) Item Level: 86 Warlord Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Shepherd's Sandals",
+      "slug": "The_Shepherds_Sandals",
+      "url": "https://poedb.tw/us/The_Shepherds_Sandals",
+      "stack_size": 3,
+      "reward": "Boots Item Level: 100 Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Azure Rage",
+      "slug": "Azure_Rage",
+      "url": "https://poedb.tw/us/Azure_Rage",
+      "stack_size": 4,
+      "reward": "Punishing Map Map Tier: 16",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Leviathan",
+      "slug": "The_Leviathan",
+      "url": "https://poedb.tw/us/The_Leviathan",
+      "stack_size": 7,
+      "reward": "Maven Item Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Price of Devotion",
+      "slug": "The_Price_of_Devotion",
+      "url": "https://poedb.tw/us/The_Price_of_Devotion",
+      "stack_size": 7,
+      "reward": "Mageblood Quality: +20% Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Astral Protection",
+      "slug": "Astral_Protection",
+      "url": "https://poedb.tw/us/Astral_Protection",
+      "stack_size": 5,
+      "reward": "Shield Shaper Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Gemcutter's Mercy",
+      "slug": "Gemcutters_Mercy",
+      "url": "https://poedb.tw/us/Gemcutters_Mercy",
+      "stack_size": 3,
+      "reward": "Empower, Enhance or Enlighten",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Checkmate",
+      "slug": "Checkmate",
+      "url": "https://poedb.tw/us/Checkmate",
+      "stack_size": 8,
+      "reward": "76x Simulacrum Splinter",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Lethean Temptation",
+      "slug": "Lethean_Temptation",
+      "url": "https://poedb.tw/us/Lethean_Temptation",
+      "stack_size": 6,
+      "reward": "Nebulis",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Something Dark",
+      "slug": "Something_Dark",
+      "url": "https://poedb.tw/us/Something_Dark",
+      "stack_size": 5,
+      "reward": "Blueprint Area Level: 83 Fully Revealed",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Man With Bear",
+      "slug": "Man_With_Bear",
+      "url": "https://poedb.tw/us/Man_With_Bear",
+      "stack_size": 3,
+      "reward": "Bestiary Scarab",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Alivia's Grace",
+      "slug": "Alivias_Grace",
+      "url": "https://poedb.tw/us/Alivias_Grace",
+      "stack_size": 6,
+      "reward": "Queen of the Forest",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Auspicious Ambitions",
+      "slug": "Auspicious_Ambitions",
+      "url": "https://poedb.tw/us/Auspicious_Ambitions",
+      "stack_size": 4,
+      "reward": "Experimented Item Item Level: 100 Double-Influenced Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Divine Beauty",
+      "slug": "Divine_Beauty",
+      "url": "https://poedb.tw/us/Divine_Beauty",
+      "stack_size": 12,
+      "reward": "7x Divine Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Wedding Gift",
+      "slug": "The_Wedding_Gift",
+      "url": "https://poedb.tw/us/The_Wedding_Gift",
+      "stack_size": 2,
+      "reward": "Arakaali's Fang",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Insane Cat",
+      "slug": "The_Insane_Cat",
+      "url": "https://poedb.tw/us/The_Insane_Cat",
+      "stack_size": 9,
+      "reward": "Mageblood Item Level: 84 Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Ever-Changing",
+      "slug": "Ever-Changing",
+      "url": "https://poedb.tw/us/Ever-Changing",
+      "stack_size": 3,
+      "reward": "10x Orb of Unmaking",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "A Dusty Memory",
+      "slug": "A_Dusty_Memory",
+      "url": "https://poedb.tw/us/A_Dusty_Memory",
+      "stack_size": 5,
+      "reward": "Item Item Level: 100 Fractured",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Return of the Rat",
+      "slug": "The_Return_of_the_Rat",
+      "url": "https://poedb.tw/us/The_Return_of_the_Rat",
+      "stack_size": 3,
+      "reward": "Tavukai",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Finishing Touch",
+      "slug": "The_Finishing_Touch",
+      "url": "https://poedb.tw/us/The_Finishing_Touch",
+      "stack_size": 2,
+      "reward": "1x Fertile Catalyst",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Brother's Gift",
+      "slug": "Brothers_Gift",
+      "url": "https://poedb.tw/us/Brothers_Gift",
+      "stack_size": null,
+      "reward": "5x Divine Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Poisoned Faith",
+      "slug": "Poisoned_Faith",
+      "url": "https://poedb.tw/us/Poisoned_Faith",
+      "stack_size": 8,
+      "reward": "Arakaali's Fang Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "A Chilling Wind",
+      "slug": "A_Chilling_Wind",
+      "url": "https://poedb.tw/us/A_Chilling_Wind",
+      "stack_size": 4,
+      "reward": "Level 21 Vaal Cold Snap Quality: +20% Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Matryoshka",
+      "slug": "Matryoshka",
+      "url": "https://poedb.tw/us/Matryoshka",
+      "stack_size": 8,
+      "reward": "Item Vestigial Item Level: 86",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Fortunate",
+      "slug": "The_Fortunate",
+      "url": "https://poedb.tw/us/The_Fortunate",
+      "stack_size": 12,
+      "reward": "2x Divine Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Fire Of Unknown Origin",
+      "slug": "Fire_Of_Unknown_Origin",
+      "url": "https://poedb.tw/us/Fire_Of_Unknown_Origin",
+      "stack_size": 7,
+      "reward": "Nimis",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Father's Love",
+      "slug": "Fathers_Love",
+      "url": "https://poedb.tw/us/Fathers_Love",
+      "stack_size": 2,
+      "reward": "Sublime Vision",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Who Asked",
+      "slug": "Who_Asked",
+      "url": "https://poedb.tw/us/Who_Asked",
+      "stack_size": 9,
+      "reward": "Dictator's Weapon Item Level: 83 Fractured",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Eldritch Perfection",
+      "slug": "Eldritch_Perfection",
+      "url": "https://poedb.tw/us/Eldritch_Perfection",
+      "stack_size": 4,
+      "reward": "Item Item Level: 100 Perfect Eldritch Implicit Modifier",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Assassin's Gift",
+      "slug": "Assassins_Gift",
+      "url": "https://poedb.tw/us/Assassins_Gift",
+      "stack_size": 9,
+      "reward": "Divinarius Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "I See Brothers",
+      "slug": "I_See_Brothers",
+      "url": "https://poedb.tw/us/I_See_Brothers",
+      "stack_size": 2,
+      "reward": "2x Fracturing Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Avian Pursuit",
+      "slug": "Avian_Pursuit",
+      "url": "https://poedb.tw/us/Avian_Pursuit",
+      "stack_size": 3,
+      "reward": "1,500x Vivid Crystallised Lifeforce",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Temperance",
+      "slug": "Temperance",
+      "url": "https://poedb.tw/us/Temperance",
+      "stack_size": 4,
+      "reward": "Relic Item Level: 83",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Lonely Warrior",
+      "slug": "Lonely_Warrior",
+      "url": "https://poedb.tw/us/Lonely_Warrior",
+      "stack_size": 10,
+      "reward": "Defiance of Destiny",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Toxic Tidings",
+      "slug": "Toxic_Tidings",
+      "url": "https://poedb.tw/us/Toxic_Tidings",
+      "stack_size": 5,
+      "reward": "Dendrobate Two-Implicit Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Runic Luck",
+      "slug": "Runic_Luck",
+      "url": "https://poedb.tw/us/Runic_Luck",
+      "stack_size": 4,
+      "reward": "10x Vendor Refresh Currency",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Last Stand",
+      "slug": "Last_Stand",
+      "url": "https://poedb.tw/us/Last_Stand",
+      "stack_size": 3,
+      "reward": "The Surrender",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Damnation",
+      "slug": "Damnation",
+      "url": "https://poedb.tw/us/Damnation",
+      "stack_size": 16,
+      "reward": "The Original Scripture Item Level: 83",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "When Currents Blaze",
+      "slug": "When_Currents_Blaze",
+      "url": "https://poedb.tw/us/When_Currents_Blaze",
+      "stack_size": 2,
+      "reward": "Stormfire Quality: +20% Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "History",
+      "slug": "History",
+      "url": "https://poedb.tw/us/History",
+      "stack_size": 5,
+      "reward": "2x Hinekora's Lock",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Last Laugh",
+      "slug": "The_Last_Laugh",
+      "url": "https://poedb.tw/us/The_Last_Laugh",
+      "stack_size": 5,
+      "reward": "Replica Dragonfang's Flight Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Lake",
+      "slug": "The_Lake",
+      "url": "https://poedb.tw/us/The_Lake",
+      "stack_size": 8,
+      "reward": "Reflecting Mist",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "One Last Score",
+      "slug": "One_Last_Score",
+      "url": "https://poedb.tw/us/One_Last_Score",
+      "stack_size": 5,
+      "reward": "Experimented Jewellery Item Level: 86",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Bound by Flame",
+      "slug": "Bound_by_Flame",
+      "url": "https://poedb.tw/us/Bound_by_Flame",
+      "stack_size": 2,
+      "reward": "Level 21 Flame Link Quality: +20%",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Outfoxed",
+      "slug": "Outfoxed",
+      "url": "https://poedb.tw/us/Outfoxed",
+      "stack_size": 2,
+      "reward": "Veiled Exalted Orb",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Everlasting",
+      "slug": "The_Everlasting",
+      "url": "https://poedb.tw/us/The_Everlasting",
+      "stack_size": 3,
+      "reward": "Originator Incarnation Item",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Lucky Bastion",
+      "slug": "Lucky_Bastion",
+      "url": "https://poedb.tw/us/Lucky_Bastion",
+      "stack_size": 6,
+      "reward": "Svalinn",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Miracle",
+      "slug": "The_Miracle",
+      "url": "https://poedb.tw/us/The_Miracle",
+      "stack_size": 3,
+      "reward": "Awakened Exceptional Gem",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Apocalypse",
+      "slug": "Apocalypse",
+      "url": "https://poedb.tw/us/Apocalypse",
+      "stack_size": 2,
+      "reward": "Eyes of the Greatwolf Item Level: 82 Corrupted",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Slumbering Beast",
+      "slug": "The_Slumbering_Beast",
+      "url": "https://poedb.tw/us/The_Slumbering_Beast",
+      "stack_size": 5,
+      "reward": "Hinekora's Lock",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Forbidden Fruit",
+      "slug": "The_Forbidden_Fruit",
+      "url": "https://poedb.tw/us/The_Forbidden_Fruit",
+      "stack_size": null,
+      "reward": "Uber Pinnacle Fragment",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "The Silly Boy",
+      "slug": "The_Silly_Boy",
+      "url": "https://poedb.tw/us/The_Silly_Boy",
+      "stack_size": 9,
+      "reward": "6x Horned Scarab",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Reflection of the Heart",
+      "slug": "Reflection_of_the_Heart",
+      "url": "https://poedb.tw/us/Reflection_of_the_Heart",
+      "stack_size": 2,
+      "reward": "Kalandra's Touch",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Pearls Before Swine",
+      "slug": "Pearls_Before_Swine",
+      "url": "https://poedb.tw/us/Pearls_Before_Swine",
+      "stack_size": 3,
+      "reward": "Progenesis",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Energy Sword",
+      "slug": "Energy_Sword",
+      "url": "https://poedb.tw/us/Energy_Sword",
+      "stack_size": 3,
+      "reward": "Ephemeral Edge",
+      "drop_level": null,
+      "dropped_by": null
+    },
+    {
+      "name": "Divine Shard",
+      "slug": "Divine_Shard",
+      "url": "https://poedb.tw/us/Divine_Shard",
+      "stack_size": 2,
+      "reward": "Divine Vessel",
+      "drop_level": null,
+      "dropped_by": null
+    }
+  ]
+}

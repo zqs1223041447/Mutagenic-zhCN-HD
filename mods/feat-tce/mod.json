@@ -1,0 +1,183 @@
+{
+  "id": "feat-tce",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "Feat: 通用 Trigger/Condition/Effect（TCE）系统 v1（POE 传奇物品特殊机制的本地通用能力）。4 个玩家侧事件（on_kill/on_crit/on_hit/on_take_damage）在 Stats.gd 事件函数顶部统一分发 trigger_effects；5 个效果（apply_status_effect/cast_skill/self_damage/recover_health/gain_boon）switch 实现不建注册表；2 个条件（chance/has_status_flag）；装备 mod 新通道 trigger（与 keystone 通道并行，keystone 纯展示）；管线 3 点小补丁（GeneMods.calculate_effective_stat / GameState.collect_gene_loadout_buffs / Stats.load_from_genes）；演示机制 UNIQUE_HEARTBOUND_RECOIL（on_kill 失去 5% 最大生命保命守卫生效时跳过 + 获得一层坚韧恩惠，无召唤物版 Heartbound 精神）。",
+  "entities": [
+    {
+      "kind": "tce_event_dispatch",
+      "id": "Scenes/Stats.gd::trigger_effects",
+      "confidence": "FACT",
+      "expected_runtime_effect": "玩家侧 on_kill/on_crit/on_hit/on_take_damage 事件顶部无条件分发 trigger_effects(event_name, context)，快照迭代 stats.triggers 配置，入口 is_dead 早退；原辅助宝石守卫逻辑（is_player and has_triggered_skill）保留不变"
+    },
+    {
+      "kind": "tce_pipeline",
+      "id": "Globals/GameState.gd::collect_gene_loadout_buffs::triggers",
+      "confidence": "FACT",
+      "expected_runtime_effect": "collect_gene_loadout_buffs 收集 keystone 和 trigger（仅两者皆无才 continue），trigger 深拷贝并注入 mod_id（per-trigger cooldown 键唯一），返回 dict 增加 \"triggers\" 数组；GeneMods.calculate_effective_stat 增加 trigger 返回分支；Stats.load_from_genes 填充 stats.triggers（event_name -> [configs]）"
+    },
+    {
+      "kind": "tce_demo",
+      "id": "Globals/Genes/BaseTypes/Body/LifeBodyMods.gd::heartbound_recoil_keystone",
+      "confidence": "FACT",
+      "expected_runtime_effect": "LifeBodyMods 池新增 UNIQUE_HEARTBOUND_RECOIL 演示 trigger mod（on_kill：失去 5% 最大生命，health<=amount 时跳过；获得一层坚韧恩惠；cooldown 0.1s），UniqueKeystones.gd 同步纯展示 keystone 条目"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::vars::triggers",
+      "classification": "CODE_PATCH",
+      "old_text": "var keystones = {}\nvar status_flags = {}",
+      "new_text": "var keystones = {}\nvar triggers = {}\nvar _trigger_last_fired = {}\nvar status_flags = {}",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::tce_core::new",
+      "classification": "CODE_PATCH",
+      "old_text": "func reduce_health(amount):\n\t\t\t\thealth -= amount\n\t\t\t\thealth = max(0, health)\n\nfunc on_kill(target, is_dot_damage = false):",
+      "new_text": "func reduce_health(amount):\n\t\t\t\thealth -= amount\n\t\t\t\thealth = max(0, health)\n\nfunc inflict_self_damage(amount):\n\t\t\t\tif health <= amount:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\treduce_health(amount)\n\nfunc trigger_effects(event_name, context = {}):\n\t\t\t\tif is_dead:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tif not triggers.has(event_name):\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tvar configs = triggers[event_name].duplicate(true)\n\t\t\t\tfor config in configs:\n\t\t\t\t\t\t\t\tif _evaluate_condition(config.get(\"condition\", {}), context):\n\t\t\t\t\t\t\t\t\t\t\t\t_fire_trigger(config, context)\n\nfunc _evaluate_condition(condition, context):\n\t\t\t\tif condition.has(\"type\") and condition.type == \"chance\":\n\t\t\t\t\t\t\t\treturn randf() <= condition.get(\"chance\", 1.0)\n\t\t\t\tif condition.has(\"type\") and condition.type == \"has_status_flag\":\n\t\t\t\t\t\t\t\treturn status_flags.has(condition.get(\"flag\", \"\"))\n\t\t\t\treturn true\n\nfunc _fire_trigger(config, context):\n\t\t\t\tvar trigger_id = config.get(\"mod_id\", \"\")\n\t\t\t\tvar cooldown = config.get(\"cooldown\", 0.1)\n\t\t\t\tif cooldown > 0.0:\n\t\t\t\t\t\t\t\tvar now = OS.get_ticks_msec()\n\t\t\t\t\t\t\t\tif _trigger_last_fired.has(trigger_id) and now - _trigger_last_fired[trigger_id] < cooldown * 1000.0:\n\t\t\t\t\t\t\t\t\t\t\t\treturn\n\t\t\t\t\t\t\t\t_trigger_last_fired[trigger_id] = now\n\t\t\t\tif config.has(\"effect\"):\n\t\t\t\t\t\t\t\t_apply_effect(config.effect, context)\n\nfunc _apply_effect(effect, context):\n\t\t\t\tif typeof(effect) == TYPE_ARRAY:\n\t\t\t\t\t\t\t\tfor sub_effect in effect:\n\t\t\t\t\t\t\t\t\t\t\t\t_apply_effect(sub_effect, context)\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tvar effect_type = effect.get(\"type\", \"\")\n\t\t\t\tvar params = effect.get(\"params\", {})\n\t\t\t\tif effect_type == \"self_damage\":\n\t\t\t\t\t\t\t\tvar amount = _resolve_effect_amount(params)\n\t\t\t\t\t\t\t\tinflict_self_damage(amount)\n\t\t\t\telif effect_type == \"recover_health\":\n\t\t\t\t\t\t\t\tvar amount = _resolve_effect_amount(params)\n\t\t\t\t\t\t\t\trecover_health(amount)\n\t\t\t\telif effect_type == \"gain_boon\":\n\t\t\t\t\t\t\t\tvar boon_type = params.get(\"boon\", \"toughness\")\n\t\t\t\t\t\t\t\tvar count = int(params.get(\"count\", 1))\n\t\t\t\t\t\t\t\tif boon_type == \"precision\":\n\t\t\t\t\t\t\t\t\t\t\t\tadd_precision_boon(count)\n\t\t\t\t\t\t\t\telif boon_type == \"swiftness\":\n\t\t\t\t\t\t\t\t\t\t\t\tadd_swiftness_boon(count)\n\t\t\t\t\t\t\t\telse:\n\t\t\t\t\t\t\t\t\t\t\t\tadd_toughness_boon(count)\n\t\t\t\telif effect_type == \"apply_status_effect\":\n\t\t\t\t\t\t\t\tvar scene_path = params.get(\"scene\", \"\")\n\t\t\t\t\t\t\t\tif scene_path != \"\":\n\t\t\t\t\t\t\t\t\t\t\t\tvar scene = load(scene_path)\n\t\t\t\t\t\t\t\t\t\t\t\tif scene:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvar effect_inst = scene.instance()\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tapply_status_effect(effect_inst)\n\t\t\t\telif effect_type == \"cast_skill\":\n\t\t\t\t\t\t\t\tvar skill_name = params.get(\"skill\", \"\")\n\t\t\t\t\t\t\t\tif skill_name != \"\":\n\t\t\t\t\t\t\t\t\t\t\t\t_cast_skill_by_name(skill_name)\n\nfunc _resolve_effect_amount(params):\n\t\t\t\tvar amount_type = params.get(\"amount_type\", \"flat\")\n\t\t\t\tvar value = params.get(\"value\", 0.0)\n\t\t\t\tif amount_type == \"percent_of_max_life\":\n\t\t\t\t\t\t\t\treturn gs(\"health_max\") * value\n\t\t\t\treturn value\n\nfunc _cast_skill_by_name(skill_name):\n\t\t\t\tif not is_player:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tvar gear_skills = get_parent().gear.get_children()\n\t\t\t\tfor skill in gear_skills:\n\t\t\t\t\t\t\t\tif is_instance_valid(skill) and skill.name == skill_name:\n\t\t\t\t\t\t\t\t\t\t\t\tif skill.has_method(\"_cast\"):\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tskill._cast()\n\t\t\t\t\t\t\t\t\t\t\t\treturn\n\nfunc on_kill(target, is_dot_damage = false):",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::on_kill::dispatch",
+      "classification": "CODE_PATCH",
+      "old_text": "func on_kill(target, is_dot_damage = false):\n\t\t\t\tif keystones.has(\"TREE_RAGING_MOMENTUM\"):",
+      "new_text": "func on_kill(target, is_dot_damage = false):\n\t\t\t\ttrigger_effects(\"on_kill\", {\"event\": \"on_kill\", \"source\": self, \"target\": target, \"is_dot\": is_dot_damage, \"cause\": \"external\"})\n\t\t\t\tif keystones.has(\"TREE_RAGING_MOMENTUM\"):",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::trigger_on_crit::dispatch",
+      "classification": "CODE_PATCH",
+      "old_text": "func trigger_on_crit():\n\t\t\t\tif is_player and has_triggered_skill:",
+      "new_text": "func trigger_on_crit():\n\t\t\t\ttrigger_effects(\"on_crit\", {\"event\": \"on_crit\", \"source\": self, \"cause\": \"external\"})\n\t\t\t\tif is_player and has_triggered_skill:",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::trigger_on_hit::dispatch",
+      "classification": "CODE_PATCH",
+      "old_text": "func trigger_on_hit():\n\t\t\t\tif is_player and has_triggered_skill:",
+      "new_text": "func trigger_on_hit():\n\t\t\t\ttrigger_effects(\"on_hit\", {\"event\": \"on_hit\", \"source\": self, \"cause\": \"external\"})\n\t\t\t\tif is_player and has_triggered_skill:",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::on_take_damage::dispatch",
+      "classification": "CODE_PATCH",
+      "old_text": "func on_take_damage(attacker_stats, unmitigated_damage_bundle, effective_damage_bundle, is_dot, did_crit = false, skill_parent = null):\n\t\t\t\t\n\t\t\t\tif is_dot:",
+      "new_text": "func on_take_damage(attacker_stats, unmitigated_damage_bundle, effective_damage_bundle, is_dot, did_crit = false, skill_parent = null):\n\t\t\t\ttrigger_effects(\"on_take_damage\", {\"event\": \"on_take_damage\", \"source\": self, \"attacker_stats\": attacker_stats, \"is_dot\": is_dot, \"did_crit\": did_crit, \"skill_parent\": skill_parent, \"cause\": \"external\"})\n\t\t\t\t\n\t\t\t\tif is_dot:",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::load_from_genes::triggers",
+      "classification": "CODE_PATCH",
+      "old_text": "func load_from_genes():\n\t\t\t\tif is_player:\n\t\t\t\t\t\t\t\tfor keystone in cached_gene_buffs.keystones:\n\t\t\t\t\t\t\t\t\t\t\t\tkeystones[keystone] = true\n\t\t\t\t\t\t\t\tvar buffs = cached_gene_buffs.stats",
+      "new_text": "func load_from_genes():\n\t\t\t\tif is_player:\n\t\t\t\t\t\t\t\tfor keystone in cached_gene_buffs.keystones:\n\t\t\t\t\t\t\t\t\t\t\t\tkeystones[keystone] = true\n\t\t\t\t\t\t\t\ttriggers = {}\n\t\t\t\t\t\t\t\tif cached_gene_buffs.has(\"triggers\"):\n\t\t\t\t\t\t\t\t\t\t\t\tfor trigger_config in cached_gene_buffs.triggers:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif not trigger_config.has(\"event\"):\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcontinue\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvar event_name = trigger_config.event\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif not triggers.has(event_name):\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\ttriggers[event_name] = []\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\ttriggers[event_name].append(trigger_config)\n\t\t\t\t\t\t\t\tvar buffs = cached_gene_buffs.stats",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/Genes/GeneMods.gd",
+      "unit_id": "Globals/Genes/GeneMods.gd::calculate_effective_stat::trigger",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tif mod_config.has(\"keystone\"):\n\t\t\t\t\t\t\t\treturn {\n\t\t\t\t\t\t\t\t\t\t\t\t\"keystone\": mod_config.keystone\n\t\t\t\t\t\t\t\t}\n\n\t\t\t\tvar bounds = get_tier_bounds(mod.mod_id, mod.tier, quality)",
+      "new_text": "\t\t\t\tif mod_config.has(\"keystone\"):\n\t\t\t\t\t\t\t\treturn {\n\t\t\t\t\t\t\t\t\t\t\t\t\"keystone\": mod_config.keystone\n\t\t\t\t\t\t\t\t}\n\n\t\t\t\tif mod_config.has(\"trigger\"):\n\t\t\t\t\t\t\t\treturn {\n\t\t\t\t\t\t\t\t\t\t\t\t\"trigger\": mod_config.trigger\n\t\t\t\t\t\t\t\t}\n\n\t\t\t\tvar bounds = get_tier_bounds(mod.mod_id, mod.tier, quality)",
+      "preimage_sha256": "74716aa081e55f14dabcdb3aa7c138ba2689b8eb610cf0a69679372dbdf33a74",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::collect_gene_loadout_buffs::triggers",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tvar result = {}\n\t\t\t\tvar conditionals = {}\n\t\t\t\tvar keystones = []\n\t\t\t\tvar stats = get_active_stats()\n\t\t\t\tvar loadout = stats.gene_loadout",
+      "new_text": "\t\t\t\tvar result = {}\n\t\t\t\tvar conditionals = {}\n\t\t\t\tvar keystones = []\n\t\t\t\tvar triggers = []\n\t\t\t\tvar stats = get_active_stats()\n\t\t\t\tvar loadout = stats.gene_loadout",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::collect_gene_loadout_buffs::keystone_trigger",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif mod.has(\"keystone\"):\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tkeystones.append(mod.keystone)\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcontinue\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvar stat = mod.stat",
+      "new_text": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif mod.has(\"keystone\"):\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tkeystones.append(mod.keystone)\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif mod.has(\"trigger\"):\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvar trigger_config = mod.trigger.duplicate(true)\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\ttrigger_config[\"mod_id\"] = mod.mod_id\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\ttriggers.append(trigger_config)\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif mod.has(\"keystone\") or mod.has(\"trigger\"):\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcontinue\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvar stat = mod.stat",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::collect_gene_loadout_buffs::return_triggers",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tvar gene_result = {\n\t\t\t\t\t\t\t\t\"stats\": result, \n\t\t\t\t\t\t\t\t\"conditional_stats\": conditionals, \n\t\t\t\t\t\t\t\t\"keystones\": key_hash.keys()\n\t\t\t\t}",
+      "new_text": "\t\t\t\tvar gene_result = {\n\t\t\t\t\t\t\t\t\"stats\": result, \n\t\t\t\t\t\t\t\t\"conditional_stats\": conditionals, \n\t\t\t\t\t\t\t\t\"keystones\": key_hash.keys(), \n\t\t\t\t\t\t\t\t\"triggers\": triggers\n\t\t\t\t}",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/Keystones/UniqueKeystones.gd",
+      "unit_id": "Globals/Keystones/UniqueKeystones.gd::heartbound_recoil::display",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t\"UNIQUE_BALANCE_OF_POWER\": {\n\t\t\t\t\t\t\t\t\"name\": \"Balance of Power\", \n\t\t\t\t\t\t\t\t\"description\": \"Gain a Swiftness Boon when you lose a Precision Boon.\"\n\t\t\t\t}\n}",
+      "new_text": "\t\t\t\t\"UNIQUE_BALANCE_OF_POWER\": {\n\t\t\t\t\t\t\t\t\"name\": \"Balance of Power\", \n\t\t\t\t\t\t\t\t\"description\": \"Gain a Swiftness Boon when you lose a Precision Boon.\"\n\t\t\t\t}, \n\t\t\t\t\"UNIQUE_HEARTBOUND_RECOIL\": {\n\t\t\t\t\t\t\t\t\"name\": \"Heartbound Recoil\", \n\t\t\t\t\t\t\t\t\"description\": \"On kill: lose 5% of Maximum Life, then gain a Toughness Boon.\"\n\t\t\t\t}\n}",
+      "preimage_sha256": "cd92d05e5f84b3fee07be97fbbf419aeec387cb41be65011b0fc8134b2257132",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/Genes/BaseTypes/Body/LifeBodyMods.gd",
+      "unit_id": "Globals/Genes/BaseTypes/Body/LifeBodyMods.gd::heartbound_recoil::mod",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"id\": \"echoing_fury_resistance\", \n\t\t\t\t\t\t\t\t\t\t\t\t\"stat\": \"toxic_resistance\", \n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": Constants.ScalingType.FLAT, \n\t\t\t\t\t\t\t\t\t\t\t\t\"min_value\": 1.0, \n\t\t\t\t\t\t\t\t\t\t\t\t\"step\": 1, \n\t\t\t\t\t\t\t\t\t\t\t\t\"stepified\": 0.01, \n\t\t\t\t\t\t\t\t\t\t\t\t\"tiers\": 1, \n\t\t\t\t\t\t\t\t\t\t\t\t\"weight\": 0, \n\t\t\t\t\t\t\t\t\t\t\t\t\"unique\": true, \n\t\t\t\t\t\t\t\t}, \n\t\t\t\t]",
+      "new_text": "\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\"id\": \"echoing_fury_resistance\", \n\t\t\t\t\t\t\t\t\t\t\"stat\": \"toxic_resistance\", \n\t\t\t\t\t\t\t\t\t\t\"type\": Constants.ScalingType.FLAT, \n\t\t\t\t\t\t\t\t\t\t\"min_value\": 1.0, \n\t\t\t\t\t\t\t\t\t\t\"step\": 1, \n\t\t\t\t\t\t\t\t\t\t\"stepified\": 0.01, \n\t\t\t\t\t\t\t\t\t\t\"tiers\": 1, \n\t\t\t\t\t\t\t\t\t\t\"weight\": 0, \n\t\t\t\t\t\t\t\t\t\t\"unique\": true, \n\t\t\t\t\t\t\t\t}, \n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\"id\": \"heartbound_recoil_keystone\", \n\t\t\t\t\t\t\t\t\t\t\"keystone\": \"UNIQUE_HEARTBOUND_RECOIL\", \n\t\t\t\t\t\t\t\t\t\t\"trigger\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"event\": \"on_kill\", \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"condition\": {\"type\": \"chance\", \"chance\": 1.0}, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"effect\": [\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{\"type\": \"self_damage\", \"params\": {\"amount_type\": \"percent_of_max_life\", \"value\": 0.05, \"mitigated\": false}}, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{\"type\": \"gain_boon\", \"params\": {\"boon\": \"toughness\", \"count\": 1}}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t], \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"cooldown\": 0.1\n\t\t\t\t\t\t\t\t\t\t\t\t}, \n\t\t\t\t\t\t\t\t\t\t\"weight\": 0, \n\t\t\t\t\t\t\t\t\t\t\"unique\": true, \n\t\t\t\t\t\t\t\t}, \n\t\t\t\t\t\t\t\t]",
+      "preimage_sha256": "1430d191c6e39534f2a0f5181bf1db65abd00af031ae1c47d481e76ac545937e",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "boot"
+  ],
+  "not_proven": "实际游戏内 TCE 触发链路端到端表现（需 VM boot + 人工/自动化验证）；trigger 配置在 tooltip 中的可视化（keystone 通道零代码渲染 name/description，trigger 通道暂无 UI）；cast_skill/apply_status_effect 效果未被 v1 演示覆盖"
+}

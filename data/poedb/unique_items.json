@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-08-16",
+  "source": [
+    "https://poedb.tw/us/Unique_item",
+    "https://poedb.tw/us/<item> 逐件页面"
+  ],
+  "coverage": "抽样=13 件代表性传奇,重点覆盖 trigger/condition 机制(Mjölner/Poet's Pen/Cospri's Malice/Null's Inclination 等)。mod_type 为人工标注,非游戏内字段。完整传奇物品库未全量收录。",
+  "items": [
+    {
+      "name": "Mjölner",
+      "base_type": "Gavel",
+      "class": "One Hand Maces",
+      "level_req": "Level 60, 412 Str, 300 Int",
+      "mods": [
+        "15% reduced Enemy Stun Threshold",
+        "Trigger a Socketed Lightning Spell on Hit, with a 0.25 second Cooldown",
+        "Socketed Lightning Spells have no Cost if Triggered",
+        "+300 Intelligence Requirement",
+        "+200 Strength Requirement",
+        "(80—120)% increased Physical Damage",
+        "(80—100)% increased Lightning Damage",
+        "Skills Chain +1 times"
+      ],
+      "mod_type": {
+        "trigger": "trigger_on_hit",
+        "condition": null,
+        "cost": "no_cost_when_triggered"
+      },
+      "url": "https://poedb.tw/us/Mj%C3%B6lner"
+    },
+    {
+      "name": "The Poet's Pen",
+      "base_type": "Somatic Wand",
+      "class": "Wand",
+      "level_req": "Level 12, 47 Int",
+      "mods": [
+        "Cannot roll Caster Modifiers",
+        "+1 to Level of Socketed Skill Gems per 25 Player Levels",
+        "Trigger a Socketed Spell when you Attack with this Weapon, with a 0.25 second Cooldown",
+        "Adds 3 to 5 Physical Damage to Attacks with this Weapon per 3 Player Levels",
+        "(8—12)% increased Attack Speed"
+      ],
+      "mod_type": {
+        "trigger": "trigger_on_attack",
+        "condition": null,
+        "cost": null
+      },
+      "url": "https://poedb.tw/us/The_Poet's_Pen"
+    },
+    {
+      "name": "Cospri's Malice",
+      "base_type": "Jewelled Foil",
+      "class": "Thrusting One Hand Swords",
+      "level_req": "Level 68, 212 Dex, 257 Int",
+      "mods": [
+        "+25% to Global Critical Strike Multiplier",
+        "Trigger a Socketed Cold Spell on Melee Critical Strike, with a 0.25 second Cooldown",
+        "+257 Intelligence Requirement",
+        "No Physical Damage",
+        "Adds (80—100) to (160—200) Cold Damage",
+        "Adds (40—60) to (90—110) Cold Damage to Spells",
+        "(8—14)% increased Attack Speed",
+        "60% increased Critical Strike Chance against Chilled Enemies"
+      ],
+      "mod_type": {
+        "trigger": "trigger_on_crit",
+        "condition": "melee_critical_strike",
+        "cost": null
+      },
+      "url": "https://poedb.tw/us/Cospri's_Malice"
+    },
+    {
+      "name": "The Covenant",
+      "base_type": "Spidersilk Robe",
+      "class": "Body Armours",
+      "level_req": "Level 49, 134 Int",
+      "mods": [
+        "Socketed Gems are Supported by Level 29 Added Chaos Damage",
+        "+(20—30) to Intelligence",
+        "(210—250)% increased Energy Shield",
+        "10% increased maximum Life",
+        "Skills gain a Base Life Cost equal to 100% of Base Mana Cost"
+      ],
+      "mod_type": {
+        "trigger": null,
+        "condition": null,
+        "cost": "life_cost"
+      },
+      "url": "https://poedb.tw/us/The_Covenant"
+    },
+    {
+      "name": "Asenath's Mark",
+      "base_type": "Iron Circlet",
+      "class": "Helmets",
+      "level_req": "Level 8, 23 Int",
+      "mods": [
+        "Trigger a Socketed Spell when you Attack with a Bow, with a 0.3 second Cooldown",
+        "(30—60)% increased Spell Damage",
+        "(10—15)% increased Attack Speed",
+        "+(30—50) to maximum Energy Shield",
+        "30% increased Mana Regeneration Rate"
+      ],
+      "mod_type": {
+        "trigger": "trigger_on_bow_attack",
+        "condition": null,
+        "cost": null
+      },
+      "url": "https://poedb.tw/us/Asenath's_Mark"
+    },
+    {
+      "name": "The Whispering Ice",
+      "base_type": "Vile Staff",
+      "class": "Warstaves",
+      "level_req": "Level 33, 59 Str, 59 Int",
+      "mods": [
+        "+20% Chance to Block Attack Damage",
+        "+1 to Level of Socketed Support Gems",
+        "Grants Level 1 Icestorm Skill",
+        "(14—18)% increased Intelligence",
+        "(8—12)% increased Cast Speed",
+        "1% increased Spell Damage per 10 Intelligence"
+      ],
+      "mod_type": {
+        "trigger": "grant_skill",
+        "condition": null,
+        "cost": null
+      },
+      "url": "https://poedb.tw/us/The_Whispering_Ice"
+    },
+    {
+      "name": "Heartbound Loop",
+      "base_type": "Moonstone Ring",
+      "class": "Rings",
+      "level_req": "Level 20",
+      "mods": [
+        "(7—10)% increased Cast Speed",
+        "Regenerate (10—15) Life per second",
+        "(20—40)% increased Mana Regeneration Rate",
+        "Minions have 15% increased maximum Life",
+        "Minions have 10% increased Area of Effect",
+        "350 Physical Damage taken on Minion Death"
+      ],
+      "mod_type": {
+        "trigger": null,
+        "condition": "on_minion_death",
+        "cost": "self_damage"
+      },
+      "url": "https://poedb.tw/us/Heartbound_Loop"
+    },
+    {
+      "name": "Voll's Protector",
+      "base_type": "Holy Chainmail",
+      "class": "Body Armours",
+      "level_req": "Level 35, 53 Str, 53 Int",
+      "mods": [
+        "(100—150)% increased Armour and Energy Shield",
+        "50% reduced maximum Mana",
+        "Gain a Power Charge for each Enemy you hit with a Critical Strike",
+        "Inner Conviction"
+      ],
+      "mod_type": {
+        "trigger": "on_crit",
+        "condition": null,
+        "cost": null
+      },
+      "url": "https://poedb.tw/us/Voll's_Protector"
+    },
+    {
+      "name": "Bloodbond",
+      "base_type": "Bone Armour",
+      "class": "Body Armours",
+      "level_req": "Level 35, 53 Dex, 53 Int",
+      "mods": [
+        "Grants Level 15 Blood Offering Skill",
+        "(100—120)% increased Evasion and Energy Shield",
+        "(15—25)% increased maximum Life",
+        "Minions have (20—30)% increased maximum Life",
+        "Regenerate 1% of Life per second",
+        "Minions have +(12—15)% chance to Suppress Spell Damage"
+      ],
+      "mod_type": {
+        "trigger": "grant_skill",
+        "condition": null,
+        "cost": "life_sacrifice_via_skill"
+      },
+      "url": "https://poedb.tw/us/Bloodbond"
+    },
+    {
+      "name": "Null's Inclination",
+      "base_type": "Ranger Bow",
+      "class": "Bows",
+      "level_req": "Level 60, 212 Dex, 212 Int",
+      "mods": [
+        "Trigger Socketed Minion Spells on Kill with this Weapon",
+        "Minion Spells Triggered by this Item have a 0.25 second Cooldown with 5 Uses",
+        "+212 Intelligence Requirement",
+        "Adds (50—80) to (130—180) Chaos Damage",
+        "(7—12)% increased Attack Speed",
+        "+(7—11)% to Chaos Resistance",
+        "Minions deal 2% increased Damage per 5 Dexterity"
+      ],
+      "mod_type": {
+        "trigger": "trigger_on_kill",
+        "condition": "minion_spells",
+        "cost": null
+      },
+      "url": "https://poedb.tw/us/Null's_Inclination"
+    },
+    {
+      "name": "The Baron",
+      "base_type": "Close Helmet",
+      "class": "Helmets",
+      "level_req": "Level 26, 58 Str",
+      "mods": [
+        "+2 to Level of Socketed Minion Gems",
+        "Minions have (10—20)% increased maximum Life",
+        "Half of your Strength is added to your Minions",
+        "+1 to maximum number of Raised Zombies per 500 Strength",
+        "With at least 1000 Strength, (1.5—2)% of Damage dealt by your Raised Zombies is Leeched to you as Life"
+      ],
+      "mod_type": {
+        "trigger": null,
+        "condition": "stat_threshold",
+        "cost": null
+      },
+      "url": "https://poedb.tw/us/The_Baron"
+    },
+    {
+      "name": "Carcass Jack",
+      "base_type": "Varnished Coat",
+      "class": "Body Armours",
+      "level_req": "Level 62, 96 Dex, 96 Int",
+      "mods": [
+        "(120—150)% increased Evasion and Energy Shield",
+        "+(50—70) to maximum Life",
+        "+(9—12)% to all Elemental Resistances",
+        "(40—50)% increased Area of Effect",
+        "(40—50)% increased Area Damage",
+        "Extra gore"
+      ],
+      "mod_type": {
+        "trigger": null,
+        "condition": null,
+        "cost": null
+      },
+      "url": "https://poedb.tw/us/Carcass_Jack"
+    },
+    {
+      "name": "Atziri's Acuity",
+      "base_type": "Vaal Gauntlets",
+      "class": "Gloves",
+      "level_req": "Level 75, 100 Str",
+      "mods": [
+        "+(60—80) to Intelligence",
+        "(40—60)% increased Global Critical Strike Chance",
+        "(200—220)% increased Armour",
+        "+(60—75) to maximum Life",
+        "You have Vaal Pact if you've dealt a Critical Strike Recently"
+      ],
+      "mod_type": {
+        "trigger": null,
+        "condition": "if_crit_recently",
+        "cost": null
+      },
+      "url": "https://poedb.tw/us/Atziri's_Acuity"
+    }
+  ]
+}

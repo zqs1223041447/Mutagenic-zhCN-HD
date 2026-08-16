@@ -1,0 +1,736 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-08-16",
+  "source": [
+    "https://www.poewiki.net/wiki/Beastcrafting"
+  ],
+  "coverage": "完整=poewiki Beastcrafting 当前全部配方 79 条(category/description/main_beasts/filler_count/notes)。配方随版本变动(见 poewiki 版本史),按 3.29.0 状态记录。",
+  "items": [
+    {
+      "category": "Add a Mod to a Life or Mana Flask",
+      "description": "Adds \"of Convection\"",
+      "main_beasts": [
+        "level 20+ Rare Any Creature"
+      ],
+      "filler_count": 0,
+      "notes": "Requires Flask to have no existing Suffix"
+    },
+    {
+      "category": "Add a Mod to a Life or Mana Flask",
+      "description": "Adds \"of Damping\"",
+      "main_beasts": [
+        "level 20+ Rare Any Creature"
+      ],
+      "filler_count": 0,
+      "notes": "Requires Flask to have no existing Suffix"
+    },
+    {
+      "category": "Add a Mod to a Life or Mana Flask",
+      "description": "Adds \"of Earthing\"",
+      "main_beasts": [
+        "level 20+ Rare Any Creature"
+      ],
+      "filler_count": 0,
+      "notes": "Requires Flask to have no existing Suffix"
+    },
+    {
+      "category": "Add a Mod to a Life or Mana Flask",
+      "description": "Adds \"of Sealing\"",
+      "main_beasts": [
+        "level 20+ Rare Any Creature"
+      ],
+      "filler_count": 0,
+      "notes": "Requires Flask to have no existing Suffix"
+    },
+    {
+      "category": "Add a Mod to a Life or Mana Flask",
+      "description": "Adds \"of the Antitoxin\"",
+      "main_beasts": [
+        "level 20+ Rare Any Creature"
+      ],
+      "filler_count": 0,
+      "notes": "Requires Flask to have no existing Suffix"
+    },
+    {
+      "category": "Add a Mod to a Life or Mana Flask",
+      "description": "Adds \"of Warding\"",
+      "main_beasts": [
+        "level 20+ Rare Any Creature"
+      ],
+      "filler_count": 0,
+      "notes": "Requires Flask to have no existing Suffix"
+    },
+    {
+      "category": "Add a Mod to a Utility Flask",
+      "description": "Adds \"of the Conger\"",
+      "main_beasts": [
+        "level 20+ Rare Any Creature"
+      ],
+      "filler_count": 0,
+      "notes": "Requires Flask to have no existing Suffix"
+    },
+    {
+      "category": "Add a Mod to a Utility Flask",
+      "description": "Adds \"of the Deer\"",
+      "main_beasts": [
+        "level 20+ Rare Any Creature"
+      ],
+      "filler_count": 0,
+      "notes": "Requires Flask to have no existing Suffix"
+    },
+    {
+      "category": "Add a Mod to a Utility Flask",
+      "description": "Adds \"of the Lizard\"",
+      "main_beasts": [
+        "level 20+ Rare Any Creature"
+      ],
+      "filler_count": 0,
+      "notes": "Requires Flask to have no existing Suffix"
+    },
+    {
+      "category": "Add a Mod to a Utility Flask",
+      "description": "Adds \"of the Skunk\"",
+      "main_beasts": [
+        "level 20+ Rare Any Creature"
+      ],
+      "filler_count": 0,
+      "notes": "Requires Flask to have no existing Suffix"
+    },
+    {
+      "category": "Add a Mod to a Utility Flask",
+      "description": "Adds \"of the Urchin\"",
+      "main_beasts": [
+        "level 20+ Rare Any Creature"
+      ],
+      "filler_count": 0,
+      "notes": "Requires Flask to have no existing Suffix"
+    },
+    {
+      "category": "Apply a Hinekora's Lock",
+      "description": "To a Magic Item",
+      "main_beasts": [
+        "Craicic Croaker"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Convert this Unique Item",
+      "description": "Into Another Random Unique Item",
+      "main_beasts": [
+        "Fenumal Scorpion"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Corrupt a Map",
+      "description": "To have an Implicit Modifier",
+      "main_beasts": [
+        "Craicic Vassal"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Corrupt a Map",
+      "description": "Twice",
+      "main_beasts": [
+        "Craicic Vassal",
+        "Fenumal Scorpion"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Craft an Aspect Skill onto an Item",
+      "description": "Aspect of the Avian skill",
+      "main_beasts": [
+        "Saqawal, First of the Sky"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Craft an Aspect Skill onto an Item",
+      "description": "Aspect of the Cat skill",
+      "main_beasts": [
+        "Farrul, First of the Plains"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Craft an Aspect Skill onto an Item",
+      "description": "Aspect of the Crab skill",
+      "main_beasts": [
+        "Craiceann, First of the Deep"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Craft an Aspect Skill onto an Item",
+      "description": "Aspect of the Spider skill",
+      "main_beasts": [
+        "Fenumus, First of the Night"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Craft an Aspect Skill onto an Item",
+      "description": "Level 30 Aspect of the Avian skill",
+      "main_beasts": [
+        "Saqawal, First of the Sky",
+        "The Black Mórrigan"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Craft an Aspect Skill onto an Item",
+      "description": "Level 30 Aspect of the Cat skill",
+      "main_beasts": [
+        "Farrul, First of the Plains",
+        "The Black Mórrigan"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Craft an Aspect Skill onto an Item",
+      "description": "Level 30 Aspect of the Crab skill",
+      "main_beasts": [
+        "Craiceann, First of the Deep",
+        "The Black Mórrigan"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Craft an Aspect Skill onto an Item",
+      "description": "Level 30 Aspect of the Spider skill",
+      "main_beasts": [
+        "Fenumus, First of the Night",
+        "The Black Mórrigan"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Create a Rare",
+      "description": "Four-Linked Helmet",
+      "main_beasts": [
+        "Saqawine Rhoa"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Amulet",
+      "main_beasts": [
+        "Farric Chieftain"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Belt",
+      "main_beasts": [
+        "Farric Ape"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Body Armour",
+      "main_beasts": [
+        "Farric Ursa"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Boots",
+      "main_beasts": [
+        "Saqawine Retch"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Bow",
+      "main_beasts": [
+        "Farric Goliath"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Claw or Dagger",
+      "main_beasts": [
+        "Craicic Watcher"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Flask",
+      "main_beasts": [
+        "Farric Goatman"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Gloves",
+      "main_beasts": [
+        "Fenumal Widow"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Helmet",
+      "main_beasts": [
+        "Farric Gargantuan"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Item",
+      "main_beasts": [
+        "Craicic Savage Crab"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Mace or Sceptre",
+      "main_beasts": [
+        "Saqawine Cobra"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Map",
+      "main_beasts": [
+        "Farric Taurus"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Ring",
+      "main_beasts": [
+        "Farric Flame Hellion Alpha"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Shield or Quiver",
+      "main_beasts": [
+        "Fenumal Devourer"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Staff",
+      "main_beasts": [
+        "Fenumal Queen"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Sword or Axe",
+      "main_beasts": [
+        "Saqawine Blood Viper"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Talisman",
+      "main_beasts": [
+        "The Black Mórrigan"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create a Unique",
+      "description": "Wand",
+      "main_beasts": [
+        "Fenumal Scrabbler"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create an Imprint",
+      "description": "Of a Magic Item",
+      "main_beasts": [
+        "Craicic Croaker"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create an Imprint",
+      "description": "Of a Rare Talisman",
+      "main_beasts": [
+        "Fenumal Plagued Arachnid"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create an Item",
+      "description": "23% Quality Corrupted Gem",
+      "main_beasts": [
+        "Farric Magma Hound"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create an Item",
+      "description": "A valuable Scarab",
+      "main_beasts": [
+        "Primal Crushclaw"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create an Item",
+      "description": "Fully-linked Six-socket Rare",
+      "main_beasts": [
+        "Saqawine Vulture"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create an Item",
+      "description": "Level 21 Corrupted Gem",
+      "main_beasts": [
+        "Farric Pit Hound"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create an Item",
+      "description": "Nightmare Map",
+      "main_beasts": [
+        "Primal Cystcaller"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create an Item",
+      "description": "Shaper Guardian, Elder Guardian or Conqueror Map",
+      "main_beasts": [
+        "Vivid Abberarach"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create an Item",
+      "description": "Synthesis Unique Map",
+      "main_beasts": [
+        "Primal Rhex Matriarch"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create Currency Items",
+      "description": "A Stack of 10 Random Currency",
+      "main_beasts": [
+        "Saqawine Chimeral"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create Currency Items",
+      "description": "A Stack of 2 Orbs of Binding",
+      "main_beasts": [
+        "Craicic Sand Spitter",
+        "Craicic Shield Crab"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Create Currency Items",
+      "description": "A Stack of 3 Orbs of Unmaking",
+      "main_beasts": [
+        "Farric Frost Hellion Alpha",
+        "Farric Gargantuan"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Create Currency Items",
+      "description": "A Stack of 4 Jeweller's Orbs",
+      "main_beasts": [
+        "Craicic Shield Crab"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Create Currency Items",
+      "description": "Orb of Fusing",
+      "main_beasts": [
+        "Craicic Sand Spitter"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Fracture a Modifer",
+      "description": "On a Rare Talisman with at least 4 modifiers",
+      "main_beasts": [
+        "Farric Frost Hellion Alpha"
+      ],
+      "filler_count": 3,
+      "notes": "Does not work on Influenced or Fractured items"
+    },
+    {
+      "category": "Fracture two Modifers",
+      "description": "On a Rare Talisman with at least 6 modifiers",
+      "main_beasts": [
+        "Fenumal Plagued Arachnid",
+        "The Black Mórrigan"
+      ],
+      "filler_count": 2,
+      "notes": "Does not work on Influenced or Fractured items"
+    },
+    {
+      "category": "Modify an Item",
+      "description": "to Have Maximum Possible Links",
+      "main_beasts": [
+        "Craicic Sand Spitter"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Modify an Item",
+      "description": "to Have Maximum Possible Number of Sockets",
+      "main_beasts": [
+        "Craicic Shield Crab"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Modify Mods on an Item",
+      "description": "Add a crafted Meta-modifier to a non-Unique Item",
+      "main_beasts": [
+        "Wild Bristle Matron"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Modify Mods on an Item",
+      "description": "Add a Mod to a Crusader Item",
+      "main_beasts": [
+        "Farric Goliath",
+        "Craicic Maw"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Modify Mods on an Item",
+      "description": "Add a Mod to a Hunter Item",
+      "main_beasts": [
+        "Craicic Watcher",
+        "Craicic Maw"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Modify Mods on an Item",
+      "description": "Add a Mod to a Rare Map",
+      "main_beasts": [
+        "Craicic Savage Crab",
+        "Saqawine Cobra"
+      ],
+      "filler_count": 2,
+      "notes": "Only works on rare maps"
+    },
+    {
+      "category": "Modify Mods on an Item",
+      "description": "Add a Mod to a Redeemer Item",
+      "main_beasts": [
+        "Fenumal Queen",
+        "Craicic Maw"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Modify Mods on an Item",
+      "description": "Add a Mod to a Shaper Item",
+      "main_beasts": [
+        "Fenumal Devourer",
+        "Craicic Maw"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Modify Mods on an Item",
+      "description": "Add a Mod to a Warlord Item",
+      "main_beasts": [
+        "Fenumal Scrabbler",
+        "Craicic Maw"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Modify Mods on an Item",
+      "description": "Add a Mod to an Elder Item",
+      "main_beasts": [
+        "Saqawine Blood Viper",
+        "Craicic Maw"
+      ],
+      "filler_count": 2,
+      "notes": null
+    },
+    {
+      "category": "Modify Mods on an Item",
+      "description": "Add a Prefix, Remove a Random Suffix",
+      "main_beasts": [
+        "Farric Wolf Alpha"
+      ],
+      "filler_count": 3,
+      "notes": "Only works on rare items"
+    },
+    {
+      "category": "Modify Mods on an Item",
+      "description": "Add a Suffix, Remove a Random Prefix",
+      "main_beasts": [
+        "Farric Lynx Alpha"
+      ],
+      "filler_count": 3,
+      "notes": "Only works on rare items"
+    },
+    {
+      "category": "Modify Mods on an Item",
+      "description": "Reroll a Watcher's Eye Modifier",
+      "main_beasts": [
+        "Wild Hellion Alpha"
+      ],
+      "filler_count": 3,
+      "notes": "Cannot reroll Maximum Life, Mana or Energy Shield modifiers"
+    },
+    {
+      "category": "Open a Portal",
+      "description": "to Craiceann's Cove",
+      "main_beasts": [
+        "Craicic Spider Crab"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Open a Portal",
+      "description": "to Farrul's Den",
+      "main_beasts": [
+        "Farric Tiger Alpha"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Open a Portal",
+      "description": "to Fenumus' Lair",
+      "main_beasts": [
+        "Fenumal Hybrid Arachnid"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Open a Portal",
+      "description": "to Saqawal's Roost",
+      "main_beasts": [
+        "Saqawine Rhex"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Sacrifice an Exceptional Support Gem",
+      "description": "for 3 high Level, high Quality Support Gems",
+      "main_beasts": [
+        "Vivid Watcher"
+      ],
+      "filler_count": 3,
+      "notes": "Resultant gems are not Exceptional"
+    },
+    {
+      "category": "Transform an Item",
+      "description": "Adds 500m Experience to an Exceptional Support Gem",
+      "main_beasts": [
+        "Wild Brambleback"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Transform an Item",
+      "description": "Reroll a Synthesis Implicit Modifier on a Unique Item",
+      "main_beasts": [
+        "Vivid Vulture"
+      ],
+      "filler_count": 3,
+      "notes": null
+    },
+    {
+      "category": "Transform an Item",
+      "description": "Reroll a Talisman Base Type",
+      "main_beasts": [
+        "Craicic Squid"
+      ],
+      "filler_count": 3,
+      "notes": "Retains Implicit and Explicit Modifiers"
+    }
+  ]
+}

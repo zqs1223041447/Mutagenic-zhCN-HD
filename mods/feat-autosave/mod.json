@@ -1,0 +1,114 @@
+{
+  "id": "feat-autosave",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "p7-fix-persistence"
+  ],
+  "conflicts": [],
+  "scope": "Feat: 实时保存三合一（中途拾取/强退不丢进度）。1) 拾取基因：Genes.pickup_gene 写内存后调用 GameState.save_game(true)（防抖，5s 落盘由现有 do_save_game 执行）；2) 拾取货币球：Stats.add_orb 内把 本次 run 的 metrics.orbs 即时并入角色持久 orbs 并清零 metrics（防抖保存），从而与 DeathScreen 结算（持久 orbs += metrics.orbs 后 save_game(false)）不重复累加；3) 关窗/ALT+F4：Globals._notification WM_QUIT_REQUEST 中 get_tree().quit() 之前调 GameState.save_game(false) 立即落盘，_quit_saved 一次性守卫防止 _on_save(quitting) 重入递归；4) 定时防抖：GameState._physics_process 新增 AUTOSAVE_INTERVAL=30.0s 周期，_autosave_timer 归零且 saved_stats.characters.has(selected_character_name)（与 get_active_stats 一致的角色加载判据）时 save_game(true)。依赖 p7-fix-persistence（USE_STEAM=false，本地 user://_0_6_0.dat 分支生效）。",
+  "entities": [
+    {
+      "kind": "pickup_autosave",
+      "id": "Globals/Genes.gd::pickup_gene::autosave",
+      "confidence": "FACT",
+      "expected_runtime_effect": "拾取基因后 GameState.save_game(true) 触发防抖存档（5s 内由 _physics_process 落盘）；pickup_gene 仅在 GenePickup.on_pickup 调用（游戏进行中，get_active_stats 已有角色），无加载期调用风险"
+    },
+    {
+      "kind": "orb_autosave",
+      "id": "Scenes/Stats.gd::add_orb::autosave",
+      "confidence": "FACT",
+      "expected_runtime_effect": "玩家拾取货币球时把 metrics.orbs 全量并入 GameState.get_active_stats().orbs 并清零 metrics、save_game(true)；DeathScreen._ready 结算（持久 orbs += metrics.orbs）时 metrics 已为 0，不重复累加；GUI 显示（metrics + 持久 orbs）总和不变"
+    },
+    {
+      "kind": "quit_autosave",
+      "id": "Globals/Globals.gd::_notification::quit_save",
+      "confidence": "FACT",
+      "expected_runtime_effect": "WM_QUIT_REQUEST 在 get_tree().quit() 前立即 save_game(false)（同步 File 写盘），带角色加载守卫；_quit_saved 一次性标志防止 save_game->_on_save(quitting)->NOTIFICATION 重入递归"
+    },
+    {
+      "kind": "periodic_autosave",
+      "id": "Globals/GameState.gd::_physics_process::periodic",
+      "confidence": "FACT",
+      "expected_runtime_effect": "AUTOSAVE_INTERVAL=30.0s 周期；_autosave_timer 归零且有角色加载（saved_stats.characters.has(Globals.selected_character_name)）时 save_game(true)，作为拾取/关窗之外的中场安全网（真正落盘仍由 5s debounce 决定）"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::autosave::vars",
+      "classification": "CODE_PATCH",
+      "old_text": "var needs_save = false\nvar last_save = 0.0",
+      "new_text": "var needs_save = false\nvar last_save = 0.0\nconst AUTOSAVE_INTERVAL = 30.0\nvar _autosave_timer = AUTOSAVE_INTERVAL",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::autosave::periodic",
+      "classification": "CODE_PATCH",
+      "old_text": "func _physics_process(delta: float) -> void :\n\t\t\t\tlast_save -= delta\n\t\t\t\tif needs_save and last_save <= 0.0:\n\t\t\t\t\t\t\t\tlast_save = 5.0\n\t\t\t\t\t\t\t\tneeds_save = false\n\t\t\t\t\t\t\t\tprint(\"Doing actual save from debounce\")\n\t\t\t\t\t\t\t\tdo_save_game()",
+      "new_text": "func _physics_process(delta: float) -> void :\n\t\t\t\tlast_save -= delta\n\t\t\t\tif needs_save and last_save <= 0.0:\n\t\t\t\t\t\t\t\tlast_save = 5.0\n\t\t\t\t\t\t\t\tneeds_save = false\n\t\t\t\t\t\t\t\tprint(\"Doing actual save from debounce\")\n\t\t\t\t\t\t\t\tdo_save_game()\n\t\t\t\t_autosave_timer -= delta\n\t\t\t\tif _autosave_timer <= 0.0:\n\t\t\t\t\t\t\t\t_autosave_timer = AUTOSAVE_INTERVAL\n\t\t\t\t\t\t\t\tif saved_stats.characters.has(Globals.selected_character_name):\n\t\t\t\t\t\t\t\t\t\t\t\tsave_game(true)",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/Genes.gd",
+      "unit_id": "Globals/Genes.gd::pickup_gene::autosave",
+      "classification": "CODE_PATCH",
+      "old_text": "func pickup_gene(gene):\n\t\t\t\tif gene != null:\n\t\t\t\t\t\t\t\tvar slot = Genes.slot_for_base(gene.type)\n\t\t\t\t\t\t\t\tGameState.get_active_stats().genes[gene.id] = gene\n\t\t\t\t\t\t\t\tGameState.get_active_stats().new_item_types[slot] = true\n\t\t\t\t\t\t\t\tGameState.get_active_stats().new_item_ids[gene.id] = true\n\t\t\t\t\t\t\t\temit_signal(\"genes_changed\")",
+      "new_text": "func pickup_gene(gene):\n\t\t\t\tif gene != null:\n\t\t\t\t\t\t\t\tvar slot = Genes.slot_for_base(gene.type)\n\t\t\t\t\t\t\t\tGameState.get_active_stats().genes[gene.id] = gene\n\t\t\t\t\t\t\t\tGameState.get_active_stats().new_item_types[slot] = true\n\t\t\t\t\t\t\t\tGameState.get_active_stats().new_item_ids[gene.id] = true\n\t\t\t\t\t\t\t\temit_signal(\"genes_changed\")\n\t\t\t\t\t\t\t\tGameState.save_game(true)",
+      "preimage_sha256": "55837f73df6bf81bd855246ce7aa4eb64352d20b22e48d059abad1a44b8700b6",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::add_orb::autosave",
+      "classification": "CODE_PATCH",
+      "old_text": "func add_orb(orb_type, amount = 1):\n\t\t\t\tmatch orb_type:\n\t\t\t\t\t\t\t\tConstants.OrbType.BLUE:\n\t\t\t\t\t\t\t\t\t\t\t\tadd_blue(amount)\n\t\t\t\t\t\t\t\tConstants.OrbType.GREEN:\n\t\t\t\t\t\t\t\t\t\t\t\tadd_green(amount)\n\t\t\t\t\t\t\t\tConstants.OrbType.RED:\n\t\t\t\t\t\t\t\t\t\t\t\tadd_red(amount)\n\t\t\t\t\t\t\t\tConstants.OrbType.GOLD:\n\t\t\t\t\t\t\t\t\t\t\t\tadd_gold(amount)\n\t\t\t\t\t\t\t\tConstants.OrbType.CORRUPTION:\n\t\t\t\t\t\t\t\t\t\t\t\tadd_corruption(amount)",
+      "new_text": "func add_orb(orb_type, amount = 1):\n\t\t\t\tmatch orb_type:\n\t\t\t\t\t\t\t\tConstants.OrbType.BLUE:\n\t\t\t\t\t\t\t\t\t\t\t\tadd_blue(amount)\n\t\t\t\t\t\t\t\tConstants.OrbType.GREEN:\n\t\t\t\t\t\t\t\t\t\t\t\tadd_green(amount)\n\t\t\t\t\t\t\t\tConstants.OrbType.RED:\n\t\t\t\t\t\t\t\t\t\t\t\tadd_red(amount)\n\t\t\t\t\t\t\t\tConstants.OrbType.GOLD:\n\t\t\t\t\t\t\t\t\t\t\t\tadd_gold(amount)\n\t\t\t\t\t\t\t\tConstants.OrbType.CORRUPTION:\n\t\t\t\t\t\t\t\t\t\t\t\tadd_corruption(amount)\n\t\t\t\tif is_player:\n\t\t\t\t\t\t\t\tvar persistent_orbs = GameState.get_active_stats().orbs\n\t\t\t\t\t\t\t\tpersistent_orbs.blue += metrics.orbs.blue\n\t\t\t\t\t\t\t\tpersistent_orbs.red += metrics.orbs.red\n\t\t\t\t\t\t\t\tpersistent_orbs.green += metrics.orbs.green\n\t\t\t\t\t\t\t\tpersistent_orbs.gold += metrics.orbs.gold\n\t\t\t\t\t\t\t\tpersistent_orbs.corruption += metrics.orbs.corruption\n\t\t\t\t\t\t\t\tmetrics.orbs.blue = 0\n\t\t\t\t\t\t\t\tmetrics.orbs.red = 0\n\t\t\t\t\t\t\t\tmetrics.orbs.green = 0\n\t\t\t\t\t\t\t\tmetrics.orbs.gold = 0\n\t\t\t\t\t\t\t\tmetrics.orbs.corruption = 0\n\t\t\t\t\t\t\t\tGameState.save_game(true)",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/Globals.gd",
+      "unit_id": "Globals/Globals.gd::autosave::quit_guard_var",
+      "classification": "CODE_PATCH",
+      "old_text": "var STEAM_USERNAME",
+      "new_text": "var STEAM_USERNAME\nvar _quit_saved = false",
+      "preimage_sha256": "c1778cb8549b2a0ec15f50c010aff294d6a3df94b1a2954ebc7f2190f65942dd",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/Globals.gd",
+      "unit_id": "Globals/Globals.gd::autosave::quit_save",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tif what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:\n\t\t\t\t\t\t\t\tif Constants.USE_STEAM:\n\t\t\t\t\t\t\t\t\t\t\t\tprint(\"Shutting down Steam\")\n\t\t\t\t\t\t\t\t\t\t\t\tif use_controllers:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSteam.inputShutdown()\n\t\t\t\t\t\t\t\tprint(\"Quit received\")\n\t\t\t\t\t\t\t\tget_tree().quit()",
+      "new_text": "\t\t\t\tif what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:\n\t\t\t\t\t\t\t\tif Constants.USE_STEAM:\n\t\t\t\t\t\t\t\t\t\t\t\tprint(\"Shutting down Steam\")\n\t\t\t\t\t\t\t\t\t\t\t\tif use_controllers:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSteam.inputShutdown()\n\t\t\t\t\t\t\t\tprint(\"Quit received\")\n\t\t\t\t\t\t\t\tif not _quit_saved:\n\t\t\t\t\t\t\t\t\t\t\t\t_quit_saved = true\n\t\t\t\t\t\t\t\t\t\t\t\tif GameState.saved_stats.characters.has(Globals.selected_character_name):\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tGameState.save_game(false)\n\t\t\t\t\t\t\t\tget_tree().quit()",
+      "preimage_sha256": "c1778cb8549b2a0ec15f50c010aff294d6a3df94b1a2954ebc7f2190f65942dd",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "boot"
+  ],
+  "not_proven": "游戏内端到端行为（VM boot + 人工/自动化验证：拾取即存、ALT+F4 保存、30s 周期存档、死亡结算不重复）；p7-fix-persistence 已验证的 save/load/quit 行为在叠加本 mod 后需在 VM 复测；主菜单定时保存仅刷新 timestamp 无害"
+}

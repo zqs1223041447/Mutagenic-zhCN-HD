@@ -1,0 +1,655 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-08-16",
+  "source": [
+    "https://poedb.tw/us/Beast (1025 行统计表)",
+    "https://www.poewiki.net/wiki/Beastcrafting"
+  ],
+  "coverage": "抽样=收录 51 只配方红兽/传奇兽/首领(含 family + damage/life%/spectre 数值与 recipe_roles)。poedb 完整 1025 行统计表已解析但未全量入库(见 issues);普通野兽的 tame_beast/spectre 标志未逐条收录。",
+  "items": [
+    {
+      "name": "Craicic Croaker",
+      "family": "Craicic",
+      "damage_pct": "90",
+      "life_pct": "600",
+      "spectre": "36.6%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Craicic_Croaker",
+      "recipe_roles": [
+        "To a Magic Item",
+        "Of a Magic Item"
+      ]
+    },
+    {
+      "name": "Craicic Maw",
+      "family": "Craicic",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Craicic_Maw",
+      "recipe_roles": [
+        "Add a Mod to a Crusader Item",
+        "Add a Mod to a Hunter Item",
+        "Add a Mod to a Redeemer Item",
+        "Add a Mod to a Shaper Item",
+        "Add a Mod to a Warlord Item",
+        "Add a Mod to an Elder Item"
+      ]
+    },
+    {
+      "name": "Craicic Sand Spitter",
+      "family": "Craicic",
+      "damage_pct": "225",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Craicic_Sand_Spitter",
+      "recipe_roles": [
+        "A Stack of 2 Orbs of Binding",
+        "Orb of Fusing",
+        "to Have Maximum Possible Links"
+      ]
+    },
+    {
+      "name": "Craicic Savage Crab",
+      "family": "Craicic",
+      "damage_pct": "225",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Craicic_Savage_Crab",
+      "recipe_roles": [
+        "Item",
+        "Add a Mod to a Rare Map"
+      ]
+    },
+    {
+      "name": "Craicic Shield Crab",
+      "family": "Craicic",
+      "damage_pct": "225",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Craicic_Shield_Crab",
+      "recipe_roles": [
+        "A Stack of 2 Orbs of Binding",
+        "A Stack of 4 Jeweller's Orbs",
+        "to Have Maximum Possible Number of Sockets"
+      ]
+    },
+    {
+      "name": "Craicic Squid",
+      "family": "Craicic",
+      "damage_pct": null,
+      "life_pct": null,
+      "spectre": null,
+      "tame_beast": null,
+      "url": null,
+      "recipe_roles": [
+        "Reroll a Talisman Base Type"
+      ]
+    },
+    {
+      "name": "Craicic Vassal",
+      "family": "Craicic",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Craicic_Vassal",
+      "recipe_roles": [
+        "To have an Implicit Modifier",
+        "Twice"
+      ]
+    },
+    {
+      "name": "Craicic Watcher",
+      "family": "Craicic",
+      "damage_pct": "225",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Craicic_Watcher",
+      "recipe_roles": [
+        "Claw or Dagger",
+        "Add a Mod to a Hunter Item"
+      ]
+    },
+    {
+      "name": "Craicic Spider Crab",
+      "family": "Craicic",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Craicic_Spider_Crab",
+      "recipe_roles": [
+        "to Craiceann's Cove"
+      ]
+    },
+    {
+      "name": "Farric Ape",
+      "family": "Farric",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Farric_Ape",
+      "recipe_roles": [
+        "Belt"
+      ]
+    },
+    {
+      "name": "Farric Chieftain",
+      "family": "Farric",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Farric_Chieftain",
+      "recipe_roles": [
+        "Amulet"
+      ]
+    },
+    {
+      "name": "Farric Flame Hellion Alpha",
+      "family": "Farric",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Farric_Flame_Hellion_Alpha",
+      "recipe_roles": [
+        "Ring"
+      ]
+    },
+    {
+      "name": "Farric Frost Hellion Alpha",
+      "family": "Farric",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Farric_Frost_Hellion_Alpha",
+      "recipe_roles": [
+        "A Stack of 3 Orbs of Unmaking",
+        "On a Rare Talisman with at least 4 modifiers"
+      ]
+    },
+    {
+      "name": "Farric Gargantuan",
+      "family": "Farric",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Farric_Gargantuan",
+      "recipe_roles": [
+        "Helmet",
+        "A Stack of 3 Orbs of Unmaking"
+      ]
+    },
+    {
+      "name": "Farric Goatman",
+      "family": "Farric",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Farric_Goatman",
+      "recipe_roles": [
+        "Flask"
+      ]
+    },
+    {
+      "name": "Farric Goliath",
+      "family": "Farric",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Farric_Goliath",
+      "recipe_roles": [
+        "Bow",
+        "Add a Mod to a Crusader Item"
+      ]
+    },
+    {
+      "name": "Farric Lynx Alpha",
+      "family": "Farric",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Farric_Lynx_Alpha",
+      "recipe_roles": [
+        "Add a Suffix, Remove a Random Prefix"
+      ]
+    },
+    {
+      "name": "Farric Magma Hound",
+      "family": "Farric",
+      "damage_pct": null,
+      "life_pct": null,
+      "spectre": null,
+      "tame_beast": null,
+      "url": null,
+      "recipe_roles": [
+        "23% Quality Corrupted Gem"
+      ]
+    },
+    {
+      "name": "Farric Pit Hound",
+      "family": "Farric",
+      "damage_pct": null,
+      "life_pct": null,
+      "spectre": null,
+      "tame_beast": null,
+      "url": null,
+      "recipe_roles": [
+        "Level 21 Corrupted Gem"
+      ]
+    },
+    {
+      "name": "Farric Taurus",
+      "family": "Farric",
+      "damage_pct": null,
+      "life_pct": null,
+      "spectre": null,
+      "tame_beast": null,
+      "url": null,
+      "recipe_roles": [
+        "Map"
+      ]
+    },
+    {
+      "name": "Farric Ursa",
+      "family": "Farric",
+      "damage_pct": "248",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Farric_Ursa",
+      "recipe_roles": [
+        "Body Armour"
+      ]
+    },
+    {
+      "name": "Farric Wolf Alpha",
+      "family": "Farric",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Farric_Wolf_Alpha",
+      "recipe_roles": [
+        "Add a Prefix, Remove a Random Suffix"
+      ]
+    },
+    {
+      "name": "Farric Tiger Alpha",
+      "family": "Farric",
+      "damage_pct": "160",
+      "life_pct": "360",
+      "spectre": "42.3%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Farric_Tiger_Alpha",
+      "recipe_roles": [
+        "to Farrul's Den"
+      ]
+    },
+    {
+      "name": "Fenumal Devourer",
+      "family": "Fenumal",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Fenumal_Devourer",
+      "recipe_roles": [
+        "Shield or Quiver",
+        "Add a Mod to a Shaper Item"
+      ]
+    },
+    {
+      "name": "Fenumal Queen",
+      "family": "Fenumal",
+      "damage_pct": "225",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Fenumal_Queen",
+      "recipe_roles": [
+        "Staff",
+        "Add a Mod to a Redeemer Item"
+      ]
+    },
+    {
+      "name": "Fenumal Plagued Arachnid",
+      "family": "Fenumal",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Fenumal_Plagued_Arachnid",
+      "recipe_roles": [
+        "Of a Rare Talisman",
+        "On a Rare Talisman with at least 6 modifiers"
+      ]
+    },
+    {
+      "name": "Fenumal Scrabbler",
+      "family": "Fenumal",
+      "damage_pct": "225",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Fenumal_Scrabbler",
+      "recipe_roles": [
+        "Wand",
+        "Add a Mod to a Warlord Item"
+      ]
+    },
+    {
+      "name": "Fenumal Scorpion",
+      "family": "Fenumal",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Fenumal_Scorpion",
+      "recipe_roles": [
+        "Into Another Random Unique Item",
+        "Twice"
+      ]
+    },
+    {
+      "name": "Fenumal Widow",
+      "family": "Fenumal",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Fenumal_Widow",
+      "recipe_roles": [
+        "Gloves"
+      ]
+    },
+    {
+      "name": "Fenumal Hybrid Arachnid",
+      "family": "Fenumal",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Fenumal_Hybrid_Arachnid",
+      "recipe_roles": [
+        "to Fenumus' Lair"
+      ]
+    },
+    {
+      "name": "Saqawine Blood Viper",
+      "family": "Saqawine",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Saqawine_Blood_Viper",
+      "recipe_roles": [
+        "Sword or Axe",
+        "Add a Mod to an Elder Item"
+      ]
+    },
+    {
+      "name": "Saqawine Chimeral",
+      "family": "Saqawine",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Saqawine_Chimeral",
+      "recipe_roles": [
+        "A Stack of 10 Random Currency"
+      ]
+    },
+    {
+      "name": "Saqawine Cobra",
+      "family": "Saqawine",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Saqawine_Cobra",
+      "recipe_roles": [
+        "Mace or Sceptre",
+        "Add a Mod to a Rare Map"
+      ]
+    },
+    {
+      "name": "Saqawine Retch",
+      "family": "Saqawine",
+      "damage_pct": null,
+      "life_pct": null,
+      "spectre": null,
+      "tame_beast": null,
+      "url": null,
+      "recipe_roles": [
+        "Boots"
+      ]
+    },
+    {
+      "name": "Saqawine Rhoa",
+      "family": "Saqawine",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Saqawine_Rhoa",
+      "recipe_roles": [
+        "Four-Linked Helmet"
+      ]
+    },
+    {
+      "name": "Saqawine Vulture",
+      "family": "Saqawine",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Saqawine_Vulture",
+      "recipe_roles": [
+        "Fully-linked Six-socket Rare"
+      ]
+    },
+    {
+      "name": "Saqawine Rhex",
+      "family": "Saqawine",
+      "damage_pct": "150",
+      "life_pct": "450",
+      "spectre": "51.9%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Saqawine_Rhex",
+      "recipe_roles": [
+        "to Saqawal's Roost"
+      ]
+    },
+    {
+      "name": "Primal Crushclaw",
+      "family": "Primal",
+      "damage_pct": "119",
+      "life_pct": "510",
+      "spectre": "39%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Primal_Crushclaw",
+      "recipe_roles": [
+        "A valuable Scarab"
+      ]
+    },
+    {
+      "name": "Primal Cystcaller",
+      "family": "Primal",
+      "damage_pct": "100",
+      "life_pct": "300",
+      "spectre": "30%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Primal_Cystcaller",
+      "recipe_roles": [
+        "Nightmare Map"
+      ]
+    },
+    {
+      "name": "Primal Rhex Matriarch",
+      "family": "Primal",
+      "damage_pct": "126",
+      "life_pct": "420",
+      "spectre": "35.4%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Primal_Rhex_Matriarch",
+      "recipe_roles": [
+        "Synthesis Unique Map"
+      ]
+    },
+    {
+      "name": "Vivid Abberarach",
+      "family": "Vivid",
+      "damage_pct": "130",
+      "life_pct": "390",
+      "spectre": "34.2%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Vivid_Abberarach",
+      "recipe_roles": [
+        "Shaper Guardian, Elder Guardian or Conqueror Map"
+      ]
+    },
+    {
+      "name": "Vivid Vulture",
+      "family": "Vivid",
+      "damage_pct": "143",
+      "life_pct": "363",
+      "spectre": "31.2%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Vivid_Vulture",
+      "recipe_roles": [
+        "Reroll a Synthesis Implicit Modifier on a Unique Item"
+      ]
+    },
+    {
+      "name": "Vivid Watcher",
+      "family": "Vivid",
+      "damage_pct": "150",
+      "life_pct": "300",
+      "spectre": "30%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Vivid_Watcher",
+      "recipe_roles": [
+        "for 3 high Level, high Quality Support Gems"
+      ]
+    },
+    {
+      "name": "Wild Brambleback",
+      "family": "Wild",
+      "damage_pct": null,
+      "life_pct": null,
+      "spectre": null,
+      "tame_beast": null,
+      "url": null,
+      "recipe_roles": [
+        "Adds 500m Experience to an Exceptional Support Gem"
+      ]
+    },
+    {
+      "name": "Wild Bristle Matron",
+      "family": "Wild",
+      "damage_pct": "150",
+      "life_pct": "495",
+      "spectre": "36.6%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Wild_Bristle_Matron",
+      "recipe_roles": [
+        "Add a crafted Meta-modifier to a non-Unique Item"
+      ]
+    },
+    {
+      "name": "Wild Hellion Alpha",
+      "family": "Wild",
+      "damage_pct": "120",
+      "life_pct": "300",
+      "spectre": "30%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Wild_Hellion_Alpha",
+      "recipe_roles": [
+        "Reroll a Watcher's Eye Modifier"
+      ]
+    },
+    {
+      "name": "Craiceann, First of the Deep",
+      "family": "boss",
+      "damage_pct": "200",
+      "life_pct": "3500",
+      "spectre": "47.4%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Craiceann%2C_First_of_the_Deep",
+      "recipe_roles": [
+        "Aspect of the Crab skill",
+        "Level 30 Aspect of the Crab skill"
+      ]
+    },
+    {
+      "name": "Farrul, First of the Plains",
+      "family": "boss",
+      "damage_pct": "175",
+      "life_pct": "3250",
+      "spectre": "47.4%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Farrul%2C_First_of_the_Plains",
+      "recipe_roles": [
+        "Aspect of the Cat skill",
+        "Level 30 Aspect of the Cat skill"
+      ]
+    },
+    {
+      "name": "Fenumus, First of the Night",
+      "family": "boss",
+      "damage_pct": "125",
+      "life_pct": "3125",
+      "spectre": "47.4%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Fenumus%2C_First_of_the_Night",
+      "recipe_roles": [
+        "Aspect of the Spider skill",
+        "Level 30 Aspect of the Spider skill"
+      ]
+    },
+    {
+      "name": "Saqawal, First of the Sky",
+      "family": "boss",
+      "damage_pct": "175",
+      "life_pct": "3125",
+      "spectre": "47.4%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/Saqawal%2C_First_of_the_Sky",
+      "recipe_roles": [
+        "Aspect of the Avian skill",
+        "Level 30 Aspect of the Avian skill"
+      ]
+    },
+    {
+      "name": "The Black Mórrigan",
+      "family": "boss",
+      "damage_pct": "160",
+      "life_pct": "400",
+      "spectre": "42.3%",
+      "tame_beast": null,
+      "url": "https://poedb.tw/us/The_Black_M%C3%B3rrigan",
+      "recipe_roles": [
+        "Level 30 Aspect of the Avian skill",
+        "Level 30 Aspect of the Cat skill",
+        "Level 30 Aspect of the Crab skill",
+        "Level 30 Aspect of the Spider skill",
+        "Talisman",
+        "On a Rare Talisman with at least 6 modifiers"
+      ]
+    }
+  ]
+}
