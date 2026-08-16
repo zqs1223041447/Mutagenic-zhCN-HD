@@ -1,0 +1,40 @@
+{
+  "locked_at": "2026-08-13T23:25:00+08:00",
+  "platform": "Windows 10.0.19045",
+  "project_root": "F:/SteamLibrary/steamapps/common/Mutagenic",
+  "tools": {
+    "python": {
+      "path": "02_tools/venv/Scripts/python.exe",
+      "version_command": "02_tools/venv/Scripts/python.exe --version",
+      "version": "Python 3.11.15",
+      "sha256": "eca0e031860ab595a01989831cd7c35ba47ea2b93574103fd1fa68dde3a984b8"
+    },
+    "gdre": {
+      "path": "02_tools/gdre/gdre_tools.exe",
+      "version_command": "02_tools/gdre/gdre_tools.exe --version",
+      "version": "Godot RE Tools v2.6.4",
+      "sha256": "88d6fbccfb7e5bacca7d248c5171fe66bbef15d78e0d7f6287c2f44e78aa9eaf",
+      "bytecode_target": "3.5.3.stable",
+      "detected_bytecode_revision": "a7aad78 (3.5.0-stable)"
+    },
+    "git": {
+      "version_command": "git --version",
+      "version": "git version 2.55.0.windows.3"
+    },
+    "uv": {
+      "version_command": "uv --version",
+      "version": "uv 0.12.3 (507230998 2026-08-07 x86_64-pc-windows-msvc)"
+    }
+  },
+  "cli_contract_evidence": {
+    "environment_report": "10_logs/environment.json",
+    "gdre_help_command": "02_tools/gdre/gdre_tools.exe --help",
+    "gdre_recovery_command": "02_tools/venv/Scripts/python.exe scripts/recover/recover_reference.py --out <new-dir> --log-dir <new-dir>",
+    "gdre_pck_contract": "--pck-create=<PCK_DIR> --pck-version=<VERSION> --pck-engine-version=<ENGINE_VERSION> --output=<OUTPUT_PCK/EXE> --embed=<EXE_TO_EMBED>",
+    "known_generator_compatibility_stage": "scripts/build/normalize_pck_md5.py: patch only all-zero stored MD5 for zero-byte entries"
+  },
+  "secrets": {
+    "script_key": "manifests/script_key.txt",
+    "printed": false
+  }
+}

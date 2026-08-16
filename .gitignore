@@ -1,0 +1,111 @@
+# ============================================================
+# Mutageni - local / proprietary / immutable source material
+# ============================================================
+/00_original/
+/01_baseline/
+/02_tools/
+/03_raw/
+/03_raw_gdre/
+/04_recovered/
+# Original/runtime binaries at repository root
+/Mutagenic.exe
+/steam_api64.dll
+# ============================================================
+# Generated pipeline stages
+# ============================================================
+/06_worktree/
+/07_compiled/
+/08_pack/
+/09_output/
+/10_logs/
+/build/
+/artifacts/
+/archive/
+# ============================================================
+# Runtime state
+# ============================================================
+/SavesDir/
+/local/
+/tmp/
+/temp/
+# ============================================================
+# Generated Game Schema - track only curated contracts
+# ============================================================
+/05_schema/*
+!/05_schema/README.md
+!/05_schema/contracts/
+!/05_schema/contracts/**
+!/05_schema/overrides/
+!/05_schema/overrides/**
+# ============================================================
+# Secrets
+# ============================================================
+.env
+.env.*
+!.env.example
+/secrets/
+/.secrets/
+*.pem
+*.pfx
+*.p12
+script_encryption_key*
+encryption_key*
+godot_script_key*
+manifests/script_key.txt
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+# ============================================================
+# Node / OpenCode
+# ============================================================
+node_modules/
+.opencode/node_modules/
+.opencode/.cache/
+# ============================================================
+# Windows / editors
+# ============================================================
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+*.bak
+# ============================================================
+# VM artifacts
+# ============================================================
+*.vhd
+*.vhdx
+*.avhdx
+*.vmcx
+*.vmrs
+*.vmgs
+# ============================================================
+# Build/package binaries that never enter normal Git
+# ============================================================
+*.exe
+*.dll
+*.pck
+*.zip
+*.7z
+*.rar
+
+# Local tool state (never track)
+/.omo/
+/.visionkit-mcp/
+/.codegraph/
+/.cortexkit/
+AGENTS-bak.mdbak
+
