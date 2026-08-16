@@ -15,6 +15,7 @@
 | 汉化更多内容 | `mods/localization/`（38 切片）+ `translation/glossary` | canonical build |
 | 自定义 MOD（数值/技能/怪物等） | 手工 `mods/custom/<id>/mod.json` **或** NL2MOD（`scripts/nlmod/`） | canonical build |
 | "用自然语言改 X" | NL2MOD 前端（`docs/ai/nl2mod-guide.md`） | canonical build |
+| 自然语言 MOD 需求/疑问/未确定参数 | **按需**加载 `nl2mod-requirement-analysis` skill → 规则 `docs/ai/nl2mod-requirement-analysis.md`（不进 Preflight） | 确认后 canonical build |
 | Runtime bug（游戏运行异常） | canonical candidate → VM 验证（Hyper-V skill） | deploy+verify |
 | 管线 bug | `scripts/pipeline/` | 修管线，不动输入 |
 | VM/工具链 bug | `scripts/vm/` + Hyper-V skill | VM 运维 |
@@ -33,6 +34,7 @@
 | 哪些 MOD 构成版本？ | `modset.lock.json` |
 | 如何构建？ | `docs/architecture/PIPELINE.md` + `scripts/pipeline/` |
 | 自然语言怎么变 MOD？ | `docs/ai/nl2mod-guide.md` |
+| 自然语言需求怎么分析？（按需） | `nl2mod-requirement-analysis` skill → `docs/ai/nl2mod-requirement-analysis.md` |
 | 如何跑游戏/验证？ | `docs/dev-environment/VM_DEVELOPMENT.md` + Hyper-V skill |
 | 哪个是 baseline？ | `status.json` trusted_baselines + `releases/*.json` |
 | 历史大文件在哪？ | `G:\Mutageni-Archive\`（archive index） |

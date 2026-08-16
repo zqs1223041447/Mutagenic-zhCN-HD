@@ -128,6 +128,7 @@ pristine game → fingerprint → raw extraction → recovered source → schema
 任务路由（详情见 AI_ENTRYPOINT）：
 - 汉化请求 → `mods/localization` → canonical build
 - 自定义 MOD → 手工 mod.json 或 NL2MOD → canonical build
+- 自然语言需求/疑问（非明确命令）→ **按需**加载 `nl2mod-requirement-analysis` skill（规则 `docs/ai/nl2mod-requirement-analysis.md`，不进固定 Preflight）
 - Runtime bug → canonical candidate → VM verification
 - 管线 bug → scripts/pipeline；VM/工具链 bug → scripts/vm
 
