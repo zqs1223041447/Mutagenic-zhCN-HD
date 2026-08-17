@@ -1,0 +1,178 @@
+{
+  "id": "w2a-2-world-objects",
+  "version": "0.1.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "v1-hd-cleanup"
+  ],
+  "conflicts": [],
+  "scope": "PHASE 2a object batch (docs/requirements/PHASE2_DESIGN_SPEC.md): §3 world name labels (Interactable.tscn Node2D label scale 0.5 -> 1.0 restoring 18px text; InGameText.tres outline_size 1->2 + outline_color pure black -> Background Deep #090C10 @0.9; three-state label control Normal text alpha 0.85 no backer / Nearby backer alpha 0.45 + text 1.0 / Hover backer alpha 0.62 + Arcane underline, implemented programmatically in Interactable.gd _draw per spec §3.3 fallback because Godot 3.x HBoxContainer does not render custom_styles/panel) + §4 five-state object display (Interactable.gd _draw: procedural ground shadow rx18/ry6 only when no Shadow node; Nearby halo draw_circle r26 Arcane 0.08; Hover selection ring draw_arc r22 w2 Highlight Border 0.75 + halo 0.14; Interactable ring Arcane 0.85 + halo 0.10 + marker (0,-20) r2.5 Arcane 0.85; Disabled modulate Disabled Text 0.55 reserve flag; update() only on state change) + §5 Arcane Waypoint (Portal.gd _process 0.2Hz breath + _draw three halos + two rings: r34 0.035/0.06, r28 0.055/0.09, outer ring r26 w2 pts48 0.40/0.65 breathing 26+-1.5 radius +-0.04 alpha, inner ring r19 w1 pts40 0.22/0.35, active=nearby, no new signals). No new file paths (roundtrip 3744), no new assets/shader, no gameplay/collision/input changes.",
+  "entities": [
+    {
+      "kind": "visual_world_label_scale",
+      "id": "Scenes/Interactables/Interactable.tscn::Node2D::scale_restore",
+      "confidence": "FACT",
+      "expected_runtime_effect": "the world-label parent Node2D scale returns from 0.5 to 1.0 so the 18px InGameText renders at full 18px on screen (was ~9px) for all 8+ Interactable subclasses"
+    },
+    {
+      "kind": "visual_label_outline",
+      "id": "Themes/InGameText.tres::DynamicFont::outline",
+      "confidence": "FACT",
+      "expected_runtime_effect": "InGameText font outline size 1->2 and color pure black -> Background Deep #090C10 at 0.9 alpha (cold family, no harsh black edge); load_steps=3 unchanged; the only referencing scene is Interactable.tscn"
+    },
+    {
+      "kind": "visual_label_three_state",
+      "id": "Scenes/Interactables/Interactable.gd::label_states",
+      "confidence": "FACT",
+      "expected_runtime_effect": "world label three states driven by existing booleans: Normal text alpha 0.85 no backer / Nearby (area_entered) backer #0C1015 alpha 0.45 + text 1.0 / Hover (mouse_entered) backer alpha 0.62 + Arcane underline border_width_bottom 2 Color(0.47451,0.85098,0.545098,0.85); backer rounded 4 with content margin 8/4 drawn programmatically (spec §3.3 fallback)"
+    },
+    {
+      "kind": "visual_object_five_state",
+      "id": "Scenes/Interactables/Interactable.gd::_draw::five_states",
+      "confidence": "FACT",
+      "expected_runtime_effect": "objects draw: Normal procedural shadow ellipse rx18/ry6 Color(0.0352941,0.0470588,0.0627451,0.35) only when no Shadow node; Nearby halo r26 Arcane 0.08; Hover selection ring r22 w2 AA Highlight Border 0.75 + halo 0.14; Interactable ring Arcane 0.85 + halo 0.10 + marker (0,-20) r2.5 Arcane 0.85; Disabled modulate Color(0.384314,0.427451,0.470588,0.55) (reserved); update() only on state transitions"
+    },
+    {
+      "kind": "visual_arcane_waypoint",
+      "id": "Scenes/Interactables/Portal/Portal.gd::_process::_draw",
+      "confidence": "FACT",
+      "expected_runtime_effect": "Portal breathes at 0.2Hz (sin(t*TAU*0.2)): outer ring radius 26+-1.5, alpha 0.40<->0.48 idle / 0.65<->0.73 active (amplitude <=14%); draws three halos + two rings all AA: r34 Arcane 0.035/0.06, r28 0.055/0.09, outer r26 w2 pts48 0.40/0.65, inner r19 w1 pts40 0.22/0.35; active = player inside Area2D (nearby, reuses _on_Area2D_area_entered); parent _draw called first so waypoint renders beneath the sprite; sprite modulate untouched"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Interactables/Interactable.tscn",
+      "unit_id": "Scenes/Interactables/Interactable.tscn::Node2D::scale_restore",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "scale = Vector2( 0.5, 0.5 )",
+      "new_text": "scale = Vector2( 1, 1 )",
+      "preimage_sha256": "53df90461f1d334dc6ce8ce9ec3b75adfa687ac3865fda70ad648c480ab92c77",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/InGameText.tres",
+      "unit_id": "Themes/InGameText.tres::DynamicFont::outline_size",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "outline_size = 1",
+      "new_text": "outline_size = 2",
+      "preimage_sha256": "0c9e62b5645f4acdeb2df6bcc2c63320af118185c0eb08e47be20fa9e30bda55",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/InGameText.tres",
+      "unit_id": "Themes/InGameText.tres::DynamicFont::outline_color",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "outline_color = Color( 0, 0, 0, 1 )",
+      "new_text": "outline_color = Color( 0.0352941, 0.0470588, 0.0627451, 0.9 )",
+      "preimage_sha256": "0c9e62b5645f4acdeb2df6bcc2c63320af118185c0eb08e47be20fa9e30bda55",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Interactables/Interactable.gd",
+      "unit_id": "Scenes/Interactables/Interactable.gd::state_vars",
+      "classification": "CODE_PATCH",
+      "old_text": "var mouse_hover = false",
+      "new_text": "var mouse_hover = false\nvar nearby = false\nvar disabled = false\nvar label_text_alpha = 0.85\nvar label_backer_alpha = 0.0\nvar label_accent_alpha = 0.0\nvar backer_style = null",
+      "preimage_sha256": "b6e644b6770dbcdfd254d7df548d4e2f503e0bf1048470d82df30bb7a50c486a",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Interactables/Interactable.gd",
+      "unit_id": "Scenes/Interactables/Interactable.gd::_ready::init_visual_state",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t$Node2D / VBoxContainer / HBoxContainer / Label.text = get_context_text()",
+      "new_text": "\t\t\t\t$Node2D / VBoxContainer / HBoxContainer / Label.text = get_context_text()\n\t\t\t\t_ensure_backer_style()\n\t\t\t\t_update_visual_state()",
+      "preimage_sha256": "b6e644b6770dbcdfd254d7df548d4e2f503e0bf1048470d82df30bb7a50c486a",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Interactables/Interactable.gd",
+      "unit_id": "Scenes/Interactables/Interactable.gd::_on_mouse_entered::refresh",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tmouse_hover = true\n\t\t\t\tset_context()",
+      "new_text": "\t\t\t\tmouse_hover = true\n\t\t\t\tset_context()\n\t\t\t\t_update_visual_state()",
+      "preimage_sha256": "b6e644b6770dbcdfd254d7df548d4e2f503e0bf1048470d82df30bb7a50c486a",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Interactables/Interactable.gd",
+      "unit_id": "Scenes/Interactables/Interactable.gd::_on_mouse_exited::refresh",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tmouse_hover = false\n\t\t\t\tremove_context()",
+      "new_text": "\t\t\t\tmouse_hover = false\n\t\t\t\tremove_context()\n\t\t\t\t_update_visual_state()",
+      "preimage_sha256": "b6e644b6770dbcdfd254d7df548d4e2f503e0bf1048470d82df30bb7a50c486a",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Interactables/Interactable.gd",
+      "unit_id": "Scenes/Interactables/Interactable.gd::_on_Area2D_area_entered::nearby",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tif area.get_parent().is_in_group(\"player\"):\n\t\t\t\t\t\t\t\tprint(\"PLAYER FOUND\")\n\t\t\t\t\t\t\t\tset_context()",
+      "new_text": "\t\t\t\tif area.get_parent().is_in_group(\"player\"):\n\t\t\t\t\t\t\t\tprint(\"PLAYER FOUND\")\n\t\t\t\t\t\t\t\tnearby = true\n\t\t\t\t\t\t\t\tset_context()\n\t\t\t\t\t\t\t\t_update_visual_state()",
+      "preimage_sha256": "b6e644b6770dbcdfd254d7df548d4e2f503e0bf1048470d82df30bb7a50c486a",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Interactables/Interactable.gd",
+      "unit_id": "Scenes/Interactables/Interactable.gd::_on_Area2D_area_exited::nearby",
+      "classification": "CODE_PATCH",
+      "old_text": "func _on_Area2D_area_exited(area: Area2D) -> void :\n\t\t\t\tif area.get_parent().is_in_group(\"player\"):\n\t\t\t\t\t\t\t\tprint(\"PLAYER FOUND\")\n\t\t\t\t\t\t\t\tif not mouse_hover:\n\t\t\t\t\t\t\t\t\t\t\t\tremove_context()",
+      "new_text": "func _on_Area2D_area_exited(area: Area2D) -> void :\n\t\t\t\tif area.get_parent().is_in_group(\"player\"):\n\t\t\t\t\t\t\t\tprint(\"PLAYER FOUND\")\n\t\t\t\t\t\t\t\tnearby = false\n\t\t\t\t\t\t\t\tif not mouse_hover:\n\t\t\t\t\t\t\t\t\t\t\t\tremove_context()\n\t\t\t\t_update_visual_state()\n\nfunc _ensure_backer_style() -> void :\n\t\t\t\tif backer_style != null:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tbacker_style = StyleBoxFlat.new()\n\t\t\t\tbacker_style.corner_radius_top_left = 4\n\t\t\t\tbacker_style.corner_radius_top_right = 4\n\t\t\t\tbacker_style.corner_radius_bottom_right = 4\n\t\t\t\tbacker_style.corner_radius_bottom_left = 4\n\t\t\t\tbacker_style.content_margin_left = 8.0\n\t\t\t\tbacker_style.content_margin_top = 4.0\n\t\t\t\tbacker_style.content_margin_right = 8.0\n\t\t\t\tbacker_style.content_margin_bottom = 4.0\n\nfunc _update_visual_state() -> void :\n\t\t\t\t_ensure_backer_style()\n\t\t\t\tvar label = $Node2D / VBoxContainer / HBoxContainer / Label\n\t\t\t\tif disabled:\n\t\t\t\t\t\t\t\tlabel_text_alpha = 0.85\n\t\t\t\t\t\t\t\tlabel_backer_alpha = 0.0\n\t\t\t\t\t\t\t\tlabel_accent_alpha = 0.0\n\t\t\t\telif mouse_hover:\n\t\t\t\t\t\t\t\tlabel_text_alpha = 1.0\n\t\t\t\t\t\t\t\tlabel_backer_alpha = 0.62\n\t\t\t\t\t\t\t\tlabel_accent_alpha = 0.85\n\t\t\t\telif nearby:\n\t\t\t\t\t\t\t\tlabel_text_alpha = 1.0\n\t\t\t\t\t\t\t\tlabel_backer_alpha = 0.45\n\t\t\t\t\t\t\t\tlabel_accent_alpha = 0.0\n\t\t\t\telse:\n\t\t\t\t\t\t\t\tlabel_text_alpha = 0.85\n\t\t\t\t\t\t\t\tlabel_backer_alpha = 0.0\n\t\t\t\t\t\t\t\tlabel_accent_alpha = 0.0\n\t\t\t\tlabel.modulate = Color(1, 1, 1, label_text_alpha)\n\t\t\t\tif disabled:\n\t\t\t\t\t\t\t\tmodulate = Color(0.384314, 0.427451, 0.470588, 0.55)\n\t\t\t\telse:\n\t\t\t\t\t\t\t\tmodulate = Color(1, 1, 1, 1)\n\t\t\t\tupdate()\n\nfunc _draw() -> void :\n\t\t\t\t_draw_label_backer()\n\t\t\t\tif disabled:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\t_draw_ground_shadow()\n\t\t\t\tif mouse_hover:\n\t\t\t\t\t\t\t\tif can_interact():\n\t\t\t\t\t\t\t\t\t\t\t\tdraw_circle(Vector2.ZERO, 26.0, Color(0.47451, 0.85098, 0.545098, 0.10))\n\t\t\t\t\t\t\t\t\t\t\t\tdraw_arc(Vector2.ZERO, 22.0, 0.0, TAU, 32, Color(0.47451, 0.85098, 0.545098, 0.85), 2.0, true)\n\t\t\t\t\t\t\t\t\t\t\t\tdraw_circle(Vector2(0, -20), 2.5, Color(0.47451, 0.85098, 0.545098, 0.85))\n\t\t\t\t\t\t\t\telse:\n\t\t\t\t\t\t\t\t\t\t\t\tdraw_circle(Vector2.ZERO, 26.0, Color(0.47451, 0.85098, 0.545098, 0.14))\n\t\t\t\t\t\t\t\t\t\t\t\tdraw_arc(Vector2.ZERO, 22.0, 0.0, TAU, 32, Color(0.25098, 0.32549, 0.396078, 0.75), 2.0, true)\n\t\t\t\telif nearby:\n\t\t\t\t\t\t\t\tdraw_circle(Vector2.ZERO, 26.0, Color(0.47451, 0.85098, 0.545098, 0.08))\n\nfunc can_interact() -> bool:\n\t\t\t\treturn not disabled\n\nfunc _draw_ground_shadow() -> void :\n\t\t\t\tif has_node(\"Shadow\"):\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tdraw_set_transform(Vector2(0, 16), 0.0, Vector2(1, 6.0 / 18.0))\n\t\t\t\tdraw_circle(Vector2(0, 0), 18.0, Color(0.0352941, 0.0470588, 0.0627451, 0.35))\n\t\t\t\tdraw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)\n\nfunc _draw_label_backer() -> void :\n\t\t\t\tif label_backer_alpha <= 0.0 and label_accent_alpha <= 0.0:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\t_ensure_backer_style()\n\t\t\t\tvar label = $Node2D / VBoxContainer / HBoxContainer / Label\n\t\t\t\tvar font = label.get_font(\"font\")\n\t\t\t\tvar tsize = font.get_string_size(label.text)\n\t\t\t\tvar w = tsize.x + 16.0\n\t\t\t\tvar h = tsize.y + 8.0\n\t\t\t\tvar rect_center = label.get_global_rect().position + label.get_global_rect().size * 0.5\n\t\t\t\tvar local_pos = to_local(rect_center) - Vector2(w, h) * 0.5\n\t\t\t\tbacker_style.bg_color = Color(0.0470588, 0.0627451, 0.0823529, label_backer_alpha)\n\t\t\t\tbacker_style.border_color = Color(0.47451, 0.85098, 0.545098, label_accent_alpha)\n\t\t\t\tif label_accent_alpha > 0.0:\n\t\t\t\t\t\t\t\tbacker_style.border_width_bottom = 2\n\t\t\t\telse:\n\t\t\t\t\t\t\t\tbacker_style.border_width_bottom = 0\n\t\t\t\tdraw_style_box(backer_style, Rect2(local_pos, Vector2(w, h)))",
+      "preimage_sha256": "b6e644b6770dbcdfd254d7df548d4e2f503e0bf1048470d82df30bb7a50c486a",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Interactables/Portal/Portal.gd",
+      "unit_id": "Scenes/Interactables/Portal/Portal.gd::breathe_var",
+      "classification": "CODE_PATCH",
+      "old_text": "extends Interactable",
+      "new_text": "extends Interactable\n\nvar breathe_time = 0.0",
+      "preimage_sha256": "1dba16b30d07a784a5e784e5e61c708027a786729d9b3256c7992bca70ee003c",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Interactables/Portal/Portal.gd",
+      "unit_id": "Scenes/Interactables/Portal/Portal.gd::_process::_draw",
+      "classification": "CODE_PATCH",
+      "old_text": "func show_map():\n\t\t\t\tvar popup = map_select.instance()\n\t\t\t\tPopupManager.show_popup(popup, self)",
+      "new_text": "func show_map():\n\t\t\t\tvar popup = map_select.instance()\n\t\t\t\tPopupManager.show_popup(popup, self)\n\nfunc _process(delta: float) -> void :\n\t\t\t\tbreathe_time += delta\n\t\t\t\tupdate()\n\nfunc _draw() -> void :\n\t\t\t\t._draw()\n\t\t\t\tvar phase = sin(breathe_time * TAU * 0.2)\n\t\t\t\tvar active = nearby\n\t\t\t\tvar outer_radius = 26.0 + 1.5 * phase\n\t\t\t\tvar ring_alpha = 0.40 if not active else 0.65\n\t\t\t\tring_alpha = ring_alpha + 0.04 * (1.0 + phase)\n\t\t\t\tvar halo1_alpha = 0.035 if not active else 0.06\n\t\t\t\tvar halo2_alpha = 0.055 if not active else 0.09\n\t\t\t\tvar inner_alpha = 0.22 if not active else 0.35\n\t\t\t\tdraw_circle(Vector2.ZERO, 34.0, Color(0.47451, 0.85098, 0.545098, halo1_alpha))\n\t\t\t\tdraw_circle(Vector2.ZERO, 28.0, Color(0.47451, 0.85098, 0.545098, halo2_alpha))\n\t\t\t\tdraw_arc(Vector2.ZERO, outer_radius, 0.0, TAU, 48, Color(0.47451, 0.85098, 0.545098, ring_alpha), 2.0, true)\n\t\t\t\tdraw_arc(Vector2.ZERO, 19.0, 0.0, TAU, 40, Color(0.47451, 0.85098, 0.545098, inner_alpha), 1.0, true)",
+      "preimage_sha256": "1dba16b30d07a784a5e784e5e61c708027a786729d9b3256c7992bca70ee003c",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "gdre_semantic_recovery"
+  ],
+  "not_proven": "in-game visual layering/rendering of label backer (S5 world-layer human checkpoint required), label text size rendering at full 18px, waypoint breath cadence feel, inner ring r19 occlusion by 64x64 sprite, gameplay, release readiness; candidate is NOT promoted to baseline"
+}

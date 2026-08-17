@@ -173,7 +173,8 @@
     "localization_c5_l23_core_playable_v6": "PASS",
     "localization_c5_l25_core_playable_v7": "PASS",
     "localization_c5_l29_core_playable_v8": "PASS",
-    "localization_c5_l32_core_playable_v81": "PASS"
+    "localization_c5_l32_core_playable_v81": "PASS",
+    "visual_ui_remaster": "IN_PROGRESS"
   },
   "gate_scope": {
     "localization": "IN_PROGRESS: C5-L1 through C5-L20 machine Gates PASS (main menu, character select, dialogs, settings, keybinds, pause/death, HUD, skills 53+60, passives 326+88, stats/tags, dynamic UI, static scenes, zones/monsters, status effects, equipment, unique items); human checkpoints are SHA-bound phase records with active_blocker=false; broad localization continues",
@@ -335,7 +336,7 @@
     "The SHA-bound ORIGINAL human checkpoint reports Quit unusable; this is a candidate observation pending CLEAN NOOP and C5-L2 comparison, not yet a proven localization regression."
   ],
   "active_blockers": [],
-  "next_program_objective": "zh_CN Core Playable v8.1 machine-PASS (full Help reference translated); next: continue remaining low-frequency/edge text (help tip leftovers, editor placeholders are intentional), then human checkpoint on SHA-bound candidate 033A34F76E8ED42E2F75E996F2DEBCDA283682EC95E1C55527131271118CAD84",
+  "next_program_objective": "zh_CN Core Playable v8.1 machine-PASS (full Help reference translated); next: continue remaining low-frequency/edge text (help tip leftovers, editor placeholders are intentional), then human checkpoint on SHA-bound candidate 033A34F76E8ED42E2F75E996F2DEBCDA283682EC95E1C55527131271118CAD84. Parallel program started 2026-08-16: HD UI Remaster (docs/requirements/HD_UI_REMASTER.md, gate visual_ui_remaster=IN_PROGRESS) - PHASE 0 Visual Audit lanes dispatched; follow-ups per deepwork progress .slim/deepwork/hd-ui-remaster.md",
   "last_evidence_bundle": "10_logs/C5-L32-core-playable-v81-20260815/build.json",
   "session_handoff": {
     "current_phase": "PHASE_6_INCREMENTAL_MOD_LOCALIZATION_INTEGRATION",

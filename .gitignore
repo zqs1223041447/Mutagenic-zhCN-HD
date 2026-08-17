@@ -102,6 +102,9 @@ $RECYCLE.BIN/
 *.7z
 *.rar
 
+# Deepwork orchestration state (git-local, keep out of repo)
+/.slim/
+
 # Local tool state (never track)
 /.omo/
 /.visionkit-mcp/

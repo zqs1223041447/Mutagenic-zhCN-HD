@@ -1,0 +1,95 @@
+{
+  "id": "w2a-1-world-base",
+  "version": "0.1.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "v1-hd-cleanup"
+  ],
+  "conflicts": [],
+  "scope": "PHASE 2a base batch (docs/requirements/PHASE2_DESIGN_SPEC.md): §1.1 runtime grid cover (path A, CODE_PATCH on BaseLevel.gd root _draw; assigned by precheck 10_logs/v2-tileset-precheck-20260817-011959 -> ASSET_PATCH/reimport infeasible, route A) + §2 world background (BaseLevel.tscn ColorRect pure black -> World Background #0C1015, World.gd runtime default_clear_color via VisualServer, World.tscn remove empty ScreenSpaceGI shader material reference; ScreenSpaceGI.tres file itself kept for roundtrip 3744). Grid only in hideout via Levels.is_current_level_hideout() (verified exists at Globals/Levels.gd:287-288). Draw range = player center +- (1280,800) world + 32 outer cell, aligned floor((p-range)/32)*32; minor Color(0.160784,0.211765,0.258824,0.10) width 2 AA, major Color(0.25098,0.32549,0.396078,0.20) every 4th cell (128px), AA on; no distance falloff (default). No collider/tile_data/cell_size changes; no new files/paths/assets.",
+  "entities": [
+    {
+      "kind": "visual_grid_overlay",
+      "id": "Scenes/Levels/BaseLevel.gd::_draw::grid_cover",
+      "confidence": "FACT",
+      "expected_runtime_effect": "in hideout levels only (Levels.is_current_level_hideout), a 32px-world grid of minor lines (Normal Border #293642 at 0.10 alpha, 2 world px, AA) plus major lines every 4th cell (Highlight Border #405365 at 0.20 alpha, 2 world px, AA) is drawn on the BaseLevel root, aligned to world-origin 32px multiples, centered on the player within +-(1280,800)+32 world px; grid renders above the TileMap texture (TileMap relative z=-4096 sits below root z=0) and below objects/player (Level YSort z=512); non-hideout levels render nothing"
+    },
+    {
+      "kind": "visual_world_background",
+      "id": "Scenes/Levels/BaseLevel.tscn::ParallaxBackground/ParallaxLayer/ColorRect::color",
+      "confidence": "FACT",
+      "expected_runtime_effect": "the world backdrop ColorRect changes from pure black Color( 0, 0, 0, 1 ) to World Background #0C1015 Color( 0.0470588, 0.0627451, 0.0823529, 1 ) on all levels; mouse_filter/rect_min_size untouched"
+    },
+    {
+      "kind": "visual_clear_color",
+      "id": "Scenes/World.gd::_ready::set_default_clear_color",
+      "confidence": "FACT",
+      "expected_runtime_effect": "after connections in _ready, VisualServer.set_default_clear_color(Color(0.0470588,0.0627451,0.0823529,1)) unifies the engine clear color with the world background so no mid-grey #404040 flash can appear at any un-covered edge"
+    },
+    {
+      "kind": "dead_code_cleanup_ssgi",
+      "id": "Scenes/World.tscn::World::material",
+      "confidence": "FACT",
+      "expected_runtime_effect": "the root World node no longer references the empty ShaderMaterial SubResource 1 (ScreenSpaceGI.tres); the ScreenSpaceGI.tres file stays in the pack (roundtrip 3744 path set unchanged) and is simply no longer referenced"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Levels/BaseLevel.gd",
+      "unit_id": "Scenes/Levels/BaseLevel.gd::_draw::grid_cover",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tmobs_out_of_tree = mobs_to_keep_disabled",
+      "new_text": "\t\t\t\tmobs_out_of_tree = mobs_to_keep_disabled\n\nfunc _draw() -> void :\n\t\t\t\tif not Levels.is_current_level_hideout():\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tdraw_grid_cover()\n\nfunc draw_grid_cover() -> void :\n\t\t\t\tvar cam_pos = GameState.get_global(\"player\").global_position\n\t\t\t\tvar range_v := Vector2(1280.0, 800.0)\n\t\t\t\tvar start_x = floor((cam_pos.x - range_v.x - 32.0) / 32.0) * 32.0\n\t\t\t\tvar start_y = floor((cam_pos.y - range_v.y - 32.0) / 32.0) * 32.0\n\t\t\t\tvar end_x = cam_pos.x + range_v.x + 32.0\n\t\t\t\tvar end_y = cam_pos.y + range_v.y + 32.0\n\t\t\t\tvar minor_color := Color(0.160784, 0.211765, 0.258824, 0.10)\n\t\t\t\tvar major_color := Color(0.25098, 0.32549, 0.396078, 0.20)\n\t\t\t\tvar x = start_x\n\t\t\t\twhile x <= end_x:\n\t\t\t\t\t\t\t\tvar is_major_x = int(x / 32.0) % 4 == 0\n\t\t\t\t\t\t\t\tvar line_color_x = major_color if is_major_x else minor_color\n\t\t\t\t\t\t\t\tdraw_line(Vector2(x, start_y), Vector2(x, end_y), line_color_x, 2.0, true)\n\t\t\t\t\t\t\t\tx += 32.0\n\t\t\t\tvar y = start_y\n\t\t\t\twhile y <= end_y:\n\t\t\t\t\t\t\t\tvar is_major_y = int(y / 32.0) % 4 == 0\n\t\t\t\t\t\t\t\tvar line_color_y = major_color if is_major_y else minor_color\n\t\t\t\t\t\t\t\tdraw_line(Vector2(start_x, y), Vector2(end_x, y), line_color_y, 2.0, true)\n\t\t\t\t\t\t\t\ty += 32.0",
+      "preimage_sha256": "2bd12bb2895143fa8d147e2e8b8c977cbedc82249772bca1db0f6af2f4025784",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Levels/BaseLevel.tscn",
+      "unit_id": "Scenes/Levels/BaseLevel.tscn::ColorRect::world_background",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "color = Color( 0, 0, 0, 1 )",
+      "new_text": "color = Color( 0.0470588, 0.0627451, 0.0823529, 1 )",
+      "preimage_sha256": "57d47e2202e7b5e47ea7fb6cefb6d6aa009b804dfd81fe2aaa5ea01d82405e86",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/World.gd",
+      "unit_id": "Scenes/World.gd::_ready::set_default_clear_color",
+      "classification": "CODE_PATCH",
+      "old_text": "func _ready() -> void :\n\t\t\t\tInput.connect(\"joy_connection_changed\", self, \"_on_unplug\")\n\t\t\t\t$GUI.connect(\"show_info\", self, \"_on_show_info\")",
+      "new_text": "func _ready() -> void :\n\t\t\t\tInput.connect(\"joy_connection_changed\", self, \"_on_unplug\")\n\t\t\t\t$GUI.connect(\"show_info\", self, \"_on_show_info\")\n\t\t\t\tVisualServer.set_default_clear_color(Color(0.0470588, 0.0627451, 0.0823529, 1))",
+      "preimage_sha256": "07ae3a41f42317208c88434ea3fec6bd3b43176e7fe9a451941d6c671f147ad0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/World.tscn",
+      "unit_id": "Scenes/World.tscn::World::release_empty_material",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"World\" type=\"Node2D\"]\nmaterial = SubResource( 1 )\nscript = ExtResource( 6 )",
+      "new_text": "[node name=\"World\" type=\"Node2D\"]\nscript = ExtResource( 6 )",
+      "preimage_sha256": "180f8df0f1054b443d593205dc771dc8a2bab44de9568510b038c9ce42c69552",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "gdre_semantic_recovery"
+  ],
+  "not_proven": "in-game visual layering/z-order of the grid (S5 world-layer human checkpoint required), absence of double-grid lines against the baked tileset grid, release readiness; candidate is NOT promoted to baseline"
+}

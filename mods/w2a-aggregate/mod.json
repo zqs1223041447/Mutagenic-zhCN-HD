@@ -1,0 +1,26 @@
+{
+  "id": "w2a-aggregate",
+  "version": "0.1.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "w2a-1-world-base",
+    "w2a-2-world-objects"
+  ],
+  "conflicts": [],
+  "scope": "PHASE 2a aggregate candidate for world-layer S5: superimposes w2a-1-world-base (runtime grid cover on hideout + cool-blue-black world background #0C1015 + World.gd default_clear_color + World.tscn SSGI material release) and w2a-2-world-objects (18px world labels with three-state backer/underline + five-state object rings/halo/shadow + Arcane Waypoint 0.2Hz breath) into a single EXE. This mod declares no patches itself; the resolved chain re-applies all patches from both batches on top of v1-hd-cleanup + the full zhcn v8.1 chain.",
+  "entities": [],
+  "patches": [],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "gdre_semantic_recovery"
+  ],
+  "not_proven": "in-game visual result of the combined world layer (grid vs label backer vs five-state rings vs waypoint breath interplay), gameplay, release readiness; candidate is NOT promoted to baseline"
+}

@@ -175,12 +175,12 @@ Remove-PSSession $s
 6. 关键步骤 `-ErrorAction Stop` + try/catch，失败日志落盘到 `G:\VMs\Mutageni-Dev\`。
 7. **`-RunAsAdministrator` 不适用于 VM 连接**（那是容器参数集），凭证必须显式传。
 8. 口令**不写进项目文档/脚本明文入库**；需要落盘用 `Export-Clixml`（DPAPI，仅本机本用户可解）或宿主侧环境变量/凭据管理器。
-9. **宿主侧需要管理员权限的脚本（Hyper-V 模块等）一律最小化提权**：禁止裸 `Start-Process powershell -Verb RunAs`——它会弹 UAC 全屏安全桌面 + 置顶一个"管理员: Windows PowerShell"窗口，阻塞用户其他操作。必须提权时用 `-WindowStyle Minimized`（UAC 确认框是 Windows 安全设计无法后台化，但提权窗口最小化到任务栏、不抢前台）：
+9. **VM/Hyper-V 操作一律无需提权，禁止 `-Verb RunAs`/UAC**：宿主账户 `zqs` 已加入本地 **"Hyper-V Administrators" 组（S-1-5-32-578）**，官方权限模型要求的就是该组成员身份（PowerShell Direct 官方要求："You must be logged into the host computer as a Hyper-V administrator"），普通令牌下 Get-VM/Start-VM/Copy-VMFile/Checkpoint-VM/New-PSSession -VMName 全部可用 → 直接执行，不弹任何窗口。若遇确需**系统级管理员权限**的非 Hyper-V 操作（改系统目录/服务等），用本目录 `Run-ElevatedSilent.ps1`（优先一次性计划任务静默提权【无 UAC、无窗口、输出写日志】；本机策略禁止非提权注册 Highest 任务时自动回退最小化 RunAs 并弹一次 UAC）：
    ```powershell
-   Start-Process powershell -Verb RunAs -WindowStyle Minimized -Wait `
-     -ArgumentList '-NoProfile','-ExecutionPolicy','Bypass','-File','G:\VMs\Mutageni-Dev\a1_step2.ps1'
+   & 'G:\opencode-Mutageni\.opencode\skills\hyperv-mutageni-vm\Run-ElevatedSilent.ps1' `
+     -File 'G:\VMs\Mutageni-Dev\<需提权的脚本>.ps1'
+   Get-Content 'G:\VMs\Mutageni-Dev\<需提权的脚本>.elev.log'   # 查看结果
    ```
-   需要看进度就把脚本输出重定向到文件（脚本内 `Add-Content`/`Out-File`），不用打开最小化窗口。
 
 ## 7. 常见故障排查
 
@@ -206,10 +206,15 @@ Invoke-Command -Session $s -ScriptBlock {
 Remove-PSSession $s
 ```
 
-宿主侧提权执行模板（最小化，不抢前台）：
+宿主侧 VM/Hyper-V 命令直接运行（无需提权、禁止 `-Verb RunAs`）：
 ```powershell
-Start-Process powershell -Verb RunAs -WindowStyle Minimized -Wait `
-  -ArgumentList '-NoProfile','-ExecutionPolicy','Bypass','-File','G:\VMs\Mutageni-Dev\<脚本>.ps1'
+Get-VM -Name "Mutageni-Dev" | Select-Object Name,State
+```
+
+仅确需系统级管理员权限的非 Hyper-V 任务，用静默提权 helper（见铁律 9）：
+```powershell
+& 'G:\opencode-Mutageni\.opencode\skills\hyperv-mutageni-vm\Run-ElevatedSilent.ps1' `
+  -File 'G:\VMs\Mutageni-Dev\<脚本>.ps1'
 ```
 
 ---

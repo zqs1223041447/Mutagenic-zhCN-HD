@@ -1,0 +1,156 @@
+{
+  "id": "v1-hd-cleanup",
+  "version": "0.1.0",
+  "patch_type": "RESOURCE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "c5-l32-zhcn-core-playable-v8-1"
+  ],
+  "conflicts": [],
+  "scope": "PHASE 1 HD Cleanup (docs/requirements/PHASE1_DESIGN_SPEC.md): P1 TooltipBase horizontal placement bug (L17 else branch polluted .x with position_offset.y -> .x); P2 MutationTierXP inline StyleBoxFlat refinement (fg Arcane Accent #79D98B + Surface 1 border + radius 4, bg Surface 2 + Normal Border + radius 4, GUI.tscn); P3 ProgressBar global fg #FF0000 -> Secondary Text #9DA9B5 (MainTheme.tres, affects StatusBar monster healthbars); P4 Button pressed/disabled StyleBoxFlat variants (insert id=40 pressed Elevated Surface + Highlight Border + content margin 11/9, id=41 disabled Background Deep + Normal Border, rewire Button/styles/disabled=41 pressed=40, load_steps 30->32); P5 ContextLabel DynamicFont outline_size 2 -> 1 (GUI.tscn). No layout/font-size/asset changes; layout values (rect_min_size, margins) untouched. Depends on c5-l32 (full zh_CN chain) so the candidate retains the complete Chinese chain.",
+  "entities": [
+    {
+      "kind": "code_bugfix_tooltip_placement",
+      "id": "Scenes/Tooltips/TooltipBase.gd::confine_to_window::else_horizontal",
+      "confidence": "FACT",
+      "expected_runtime_effect": "tooltips keep horizontal position_offset.x (not vertical offset) when the cursor is in the bottom half of the viewport; affects all SkillTooltip/GeneTooltip subclasses"
+    },
+    {
+      "kind": "style_xp_bar",
+      "id": "Scenes/GUI/GUI.tscn::MutationTierXP::fg/bg StyleBoxFlat",
+      "confidence": "FACT",
+      "expected_runtime_effect": "XP bar fill uses Arcane Accent green #79D98B with 1px Surface 1 border and radius 4; the background slot uses Surface 2 with Normal Border and radius 4; height stays 12"
+    },
+    {
+      "kind": "style_progressbar_global_fg",
+      "id": "Themes/MainTheme.tres::ProgressBar::fg",
+      "confidence": "FACT",
+      "expected_runtime_effect": "global ProgressBar fg changes from bright red #FF0000 to neutral grey-blue #9DA9B5; only StatusBar (monster/boss healthbars) inherits it (GUI/Player healthbars override inline)"
+    },
+    {
+      "kind": "style_button_pressed_disabled",
+      "id": "Themes/MainTheme.tres::Button::pressed/disabled",
+      "confidence": "FACT",
+      "expected_runtime_effect": "pressed buttons darken (Elevated Surface #1D2731) with a brighter Highlight Border and 1px content down-shift; disabled buttons get a low-contrast Background Deep fill with Normal Border"
+    },
+    {
+      "kind": "style_outline_unify",
+      "id": "Scenes/GUI/GUI.tscn::ContextLabel::outline_size",
+      "confidence": "FACT",
+      "expected_runtime_effect": "28px ContextLabel outline goes 2px -> 1px to match the global 1px outline convention"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Tooltips/TooltipBase.gd",
+      "unit_id": "Scenes/Tooltips/TooltipBase.gd::confine_to_window::else_horizontal",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t\t\t\t\t\t\t\t\tcentered_position.x += position_offset.y",
+      "new_text": "\t\t\t\t\t\t\t\t\t\t\t\tcentered_position.x += position_offset.x",
+      "preimage_sha256": "3b499d1d512d82960dfd9b2f24cbc374a0536522505fb5bb14d38d7155b8d032",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::MutationTierXP::fg_stylebox",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[sub_resource type=\"StyleBoxFlat\" id=1]\nbg_color = Color( 1, 1, 1, 1 )\nborder_width_left = 1\nborder_width_top = 1\nborder_width_right = 1\nborder_width_bottom = 1\nborder_color = Color( 0.8, 0.8, 0.8, 0 )",
+      "new_text": "[sub_resource type=\"StyleBoxFlat\" id=1]\nbg_color = Color( 0.47451, 0.85098, 0.545098, 1 )\nborder_width_left = 1\nborder_width_top = 1\nborder_width_right = 1\nborder_width_bottom = 1\nborder_color = Color( 0.0705882, 0.0941176, 0.12549, 1 )\ncorner_radius_top_left = 4\ncorner_radius_top_right = 4\ncorner_radius_bottom_right = 4\ncorner_radius_bottom_left = 4",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::MutationTierXP::bg_stylebox",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[sub_resource type=\"StyleBoxFlat\" id=2]\nbg_color = Color( 0.282353, 0.282353, 0.282353, 1 )\nborder_width_left = 1\nborder_width_top = 1\nborder_width_right = 1\nborder_width_bottom = 1\nborder_color = Color( 0, 0, 0, 1 )",
+      "new_text": "[sub_resource type=\"StyleBoxFlat\" id=2]\nbg_color = Color( 0.0941176, 0.129412, 0.164706, 1 )\nborder_width_left = 1\nborder_width_top = 1\nborder_width_right = 1\nborder_width_bottom = 1\nborder_color = Color( 0.160784, 0.211765, 0.258824, 1 )\ncorner_radius_top_left = 4\ncorner_radius_top_right = 4\ncorner_radius_bottom_right = 4\ncorner_radius_bottom_left = 4",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::ContextLabel::outline_size",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "outline_size = 2",
+      "new_text": "outline_size = 1",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::ProgressBar::fg_neutral",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[sub_resource type=\"StyleBoxFlat\" id=2]\nbg_color = Color( 1, 0, 0, 1 )",
+      "new_text": "[sub_resource type=\"StyleBoxFlat\" id=2]\nbg_color = Color( 0.615686, 0.662745, 0.709804, 1 )",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::insert_button_pressed_disabled_styleboxes",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[resource]",
+      "new_text": "[sub_resource type=\"StyleBoxFlat\" id=40]\ncontent_margin_left = 10.0\ncontent_margin_top = 11.0\ncontent_margin_right = 10.0\ncontent_margin_bottom = 9.0\nbg_color = Color( 0.113725, 0.152941, 0.192157, 1 )\nborder_width_left = 1\nborder_width_top = 1\nborder_width_right = 1\nborder_width_bottom = 1\nborder_color = Color( 0.25098, 0.32549, 0.396078, 1 )\ncorner_radius_top_left = 4\ncorner_radius_top_right = 4\ncorner_radius_bottom_right = 4\ncorner_radius_bottom_left = 4\n\n[sub_resource type=\"StyleBoxFlat\" id=41]\ncontent_margin_left = 10.0\ncontent_margin_top = 10.0\ncontent_margin_right = 10.0\ncontent_margin_bottom = 10.0\nbg_color = Color( 0.0352941, 0.0470588, 0.0627451, 1 )\nborder_width_left = 1\nborder_width_top = 1\nborder_width_right = 1\nborder_width_bottom = 1\nborder_color = Color( 0.160784, 0.211765, 0.258824, 1 )\ncorner_radius_top_left = 4\ncorner_radius_top_right = 4\ncorner_radius_bottom_right = 4\ncorner_radius_bottom_left = 4\n\n[resource]",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::Button::disabled_ref",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "Button/styles/disabled = SubResource( 34 )",
+      "new_text": "Button/styles/disabled = SubResource( 41 )",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::Button::pressed_ref",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "Button/styles/pressed = SubResource( 34 )",
+      "new_text": "Button/styles/pressed = SubResource( 40 )",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::load_steps_sync",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[gd_resource type=\"Theme\" load_steps=30 format=2]",
+      "new_text": "[gd_resource type=\"Theme\" load_steps=32 format=2]",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "gdre_semantic_recovery"
+  ],
+  "not_proven": "in-game visual layout (S5 human checkpoint required), monster healthbar red-semantics acceptance, tooltip behavior in live UI, release readiness; candidate is NOT promoted to baseline"
+}

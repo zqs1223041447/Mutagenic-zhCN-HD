@@ -63,7 +63,7 @@ pristine game → fingerprint → raw extraction → recovered source → schema
 
 ## 5. 硬性禁止（违反即污染）
 
-1. **禁止访问宿主 F: 盘**（永久；代码层所有路径解析对 `F:` hard-fail）。
+1. **禁止访问宿主 F: 盘**（永久；代码层所有路径解析对 `F:` hard-fail）。**唯一例外**：`F:\program\` 前缀（工具安装目录，gemini CLI / npm prefix）；其余 F: 路径一律 hard-fail。
 2. **禁止修改** `00_original/`、`03_raw/`、`04_recovered/`。
 3. **禁止**全局文本替换 `.gd/.tscn/.tres/.json`（必须结构化 patcher，精确字段定位 + preimage 守卫）。
 4. **禁止**批量重编译所有恢复脚本（只编译 manifest 声明的）。
@@ -112,7 +112,8 @@ pristine game → fingerprint → raw extraction → recovered source → schema
 ## 9. 路径与可移植性
 
 - 所有脚本路径**相对 repo root**（用 `git rev-parse --show-toplevel` 或脚本位置定位），**禁止硬编码 `G:\`**。
-- F: 禁令在代码层实现（路径解析 hard-fail），并有静态扫描检查。
+- F: 禁令在代码层实现（路径解析 hard-fail），并有静态扫描检查；**唯一放行前缀 `F:\program\`**。
+- **工具链安装权威**：`F:\program`（npm prefix = `F:\program`）。gemini CLI 唯一权威安装在 `F:\program\gemini.cmd`（PATH 优先、标「默认」）；`C:\Users\ZQS\AppData\Roaming\npm` 下同名副本是陈旧残留、**非权威**。升级 gemini 必须确认落在 `F:\program`（检测到多处安装时以标「默认」的 F 盘那处为准），升级后以 `gemini --version` 验证版本一致。
 - 行尾：`.md/.json/.yaml/.py/.gd` 用 LF，`.ps1/.bat/.cmd` 用 CRLF（`.gitattributes` 约束）。
 
 ---
