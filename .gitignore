@@ -1,12 +1,14 @@
 # ============================================================
 # Mutageni - local / proprietary / immutable source material
 # ============================================================
+# 00_original = pristine commercial game EXE, never tracked (copyright)
+# 03_raw / 04_recovered ARE tracked since 2026-08-18 (user decision:
+#   repo must be cloneable and fully deployable without the original EXE;
+#   see .gitattributes for byte-preserving -text handling)
 /00_original/
 /01_baseline/
 /02_tools/
-/03_raw/
 /03_raw_gdre/
-/04_recovered/
 # Original/runtime binaries at repository root
 /Mutagenic.exe
 /steam_api64.dll

@@ -27,7 +27,8 @@ pristine game → fingerprint → raw extraction → recovered source → schema
 | 类别 | 含义 | 进 Git | 可删除性 |
 |---|---|---|---|
 | Source of Truth | 规则、脚本、MOD 声明、人工数据 | ✅ | 只能经 Git 变更 |
-| Immutable Provenance | 原版、提取物、恢复源码 | ❌ | 永不删除 |
+| Immutable Provenance | 原版（00_original） | ❌ 版权资产永不入库 | 永不删除 |
+| Recovered Provenance | 提取物（03_raw）、恢复源码（04_recovered） | ✅ 2026-08-18 决策入库（byte-preserving，.gitattributes `-text`） | 永不删除 |
 | Generated | worktree/compiled/pack/candidate | ❌ | 可重新生成，可清理 |
 | Evidence | manifest/验证报告/日志/截图 | manifest✅ 大证据❌ | 按等级归档 |
 | Local Environment | venv/GDRE/密钥/VM/node_modules | ❌ | 可重建 |
@@ -101,7 +102,7 @@ pristine game → fingerprint → raw extraction → recovered source → schema
 
 ## 8. Git 规则
 
-- **仓库只含**：规则、脚本、MOD 声明、manifest、人工数据、schema contracts。**不含**：游戏二进制（00_original/03_raw/04_recovered/EXE/DLL/PCK）、venv、node_modules、10_logs、build 产物、archive。
+- **仓库只含**：规则、脚本、MOD 声明、manifest、人工数据、schema contracts、**Recovered Provenance**（03_raw/04_recovered，2026-08-18 起入库，byte-preserving `-text`）。**不含**：原版游戏二进制（00_original/EXE/DLL/PCK）、venv、node_modules、10_logs、build 产物、archive。
 - `.gitignore` 必须覆盖上述排除项；提交前跑 secret scan（key/credential/.env 检测）。
 - **分支策略：trunk-based**。长期只有 `main`；工作分支按任务 `mod/xxx`、`feat/xxx`、`fix/xxx`，合完即删。
 - **里程碑用 git tag**（`zhcn-v8.1`、`pipeline-v1`、`nl2mod-v1`），不用长期分支。

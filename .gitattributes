@@ -20,3 +20,11 @@
 *.gd.remap binary
 *.tscn text eol=lf
 *.tres text eol=lf
+
+# Byte-preserving immutable provenance: 03_raw / 04_recovered contain mixed
+# CRLF/LF files (936/1554 CRLF files respectively). Any line-ending
+# normalization would break preimage_sha256 bindings in every mod patch.
+# -text -eol forces byte-exact storage (eol=lf rules above would otherwise
+# still normalize); must stay AFTER all text rules above.
+/03_raw/** -text -eol
+/04_recovered/** -text -eol
