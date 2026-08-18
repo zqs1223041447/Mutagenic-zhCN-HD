@@ -1,0 +1,852 @@
+[
+    {
+        "skill": {
+            "radius": 60
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.15,
+                    "type": "more"
+                },
+                {
+                    "amount": 1.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.15,
+                    "type": "more"
+                },
+                {
+                    "amount": 1.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.15,
+                    "type": "more"
+                },
+                {
+                    "amount": 1.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 62
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.15,
+                    "type": "more"
+                },
+                {
+                    "amount": 1.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.16,
+                    "type": "more"
+                },
+                {
+                    "amount": 2.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.16,
+                    "type": "more"
+                },
+                {
+                    "amount": 2.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 64
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.16,
+                    "type": "more"
+                },
+                {
+                    "amount": 2.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.16,
+                    "type": "more"
+                },
+                {
+                    "amount": 2.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.16,
+                    "type": "more"
+                },
+                {
+                    "amount": 3.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 66
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.16,
+                    "type": "more"
+                },
+                {
+                    "amount": 3.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.17,
+                    "type": "more"
+                },
+                {
+                    "amount": 3.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.17,
+                    "type": "more"
+                },
+                {
+                    "amount": 4.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 68
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.17,
+                    "type": "more"
+                },
+                {
+                    "amount": 4.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.17,
+                    "type": "more"
+                },
+                {
+                    "amount": 5.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.17,
+                    "type": "more"
+                },
+                {
+                    "amount": 5.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 70
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.18,
+                    "type": "more"
+                },
+                {
+                    "amount": 6.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 71
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.18,
+                    "type": "more"
+                },
+                {
+                    "amount": 7.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.18,
+                    "type": "more"
+                },
+                {
+                    "amount": 8.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.18,
+                    "type": "more"
+                },
+                {
+                    "amount": 9.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 73
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.18,
+                    "type": "more"
+                },
+                {
+                    "amount": 10.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 74
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.18,
+                    "type": "more"
+                },
+                {
+                    "amount": 11.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.19,
+                    "type": "more"
+                },
+                {
+                    "amount": 12.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.19,
+                    "type": "more"
+                },
+                {
+                    "amount": 14.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 76
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.19,
+                    "type": "more"
+                },
+                {
+                    "amount": 16.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 77
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.19,
+                    "type": "more"
+                },
+                {
+                    "amount": 18.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 78
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.19,
+                    "type": "more"
+                },
+                {
+                    "amount": 20.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 79
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.2,
+                    "type": "more"
+                },
+                {
+                    "amount": 22.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.2,
+                    "type": "more"
+                },
+                {
+                    "amount": 25.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.2,
+                    "type": "more"
+                },
+                {
+                    "amount": 28.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 81
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.2,
+                    "type": "more"
+                },
+                {
+                    "amount": 32.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 82
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.21,
+                    "type": "more"
+                },
+                {
+                    "amount": 36.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 83
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.21,
+                    "type": "more"
+                },
+                {
+                    "amount": 41.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 84
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.21,
+                    "type": "more"
+                },
+                {
+                    "amount": 46.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 85
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.21,
+                    "type": "more"
+                },
+                {
+                    "amount": 52.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.21,
+                    "type": "more"
+                },
+                {
+                    "amount": 58.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.22,
+                    "type": "more"
+                },
+                {
+                    "amount": 66.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 87
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.22,
+                    "type": "more"
+                },
+                {
+                    "amount": 74.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 88
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.22,
+                    "type": "more"
+                },
+                {
+                    "amount": 83.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 89
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.22,
+                    "type": "more"
+                },
+                {
+                    "amount": 94.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 90
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.23,
+                    "type": "more"
+                },
+                {
+                    "amount": 106.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 91
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.23,
+                    "type": "more"
+                },
+                {
+                    "amount": 119.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 92
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.23,
+                    "type": "more"
+                },
+                {
+                    "amount": 134.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 93
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.23,
+                    "type": "more"
+                },
+                {
+                    "amount": 152.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 94
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.23,
+                    "type": "more"
+                },
+                {
+                    "amount": 171.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 95
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.24,
+                    "type": "more"
+                },
+                {
+                    "amount": 193.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 96
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.24,
+                    "type": "more"
+                },
+                {
+                    "amount": 217.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 97
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.24,
+                    "type": "more"
+                },
+                {
+                    "amount": 245.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 98
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.24,
+                    "type": "more"
+                },
+                {
+                    "amount": 276.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 99
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.25,
+                    "type": "more"
+                },
+                {
+                    "amount": 311.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 100
+        },
+        "aura": {
+            "fire_damage": [
+                {
+                    "amount": 0.25,
+                    "type": "more"
+                },
+                {
+                    "amount": 350.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    }
+]

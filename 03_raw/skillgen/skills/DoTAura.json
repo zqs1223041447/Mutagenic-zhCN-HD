@@ -1,0 +1,952 @@
+[
+    {
+        "skill": {
+            "radius": 60
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.1,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.15,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.1,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.15,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.1,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 62
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 64
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.17,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.12,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.17,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.12,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.17,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 66
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.12,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 68
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.19,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.14,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.19,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 70
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.14,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.19,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 71
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.14,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.2,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.15,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.2,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.15,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.2,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 73
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.15,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.21,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 74
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.21,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.22,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.22,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 76
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.17,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.22,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 77
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.17,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.23,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 78
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.23,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 79
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.24,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.24,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.19,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.24,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 81
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.19,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.25,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 82
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.2,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.25,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 83
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.2,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.26,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 84
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.2,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.26,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 85
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.21,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.27,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.21,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.27,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.22,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.27,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 87
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.22,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.28,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 88
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.23,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.28,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 89
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.23,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.29,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 90
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.24,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.29,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 91
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.25,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.3,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 92
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.25,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.3,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 93
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.26,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.31,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 94
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.26,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.32,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 95
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.27,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.32,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 96
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.27,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.33,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 97
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.28,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.33,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 98
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.29,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.34,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 99
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.29,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.34,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 100
+        },
+        "aura": {
+            "dot_damage": [
+                {
+                    "amount": 0.3,
+                    "type": "percent"
+                }
+            ],
+            "ailment_duration": [
+                {
+                    "amount": 0.35,
+                    "type": "percent"
+                }
+            ]
+        }
+    }
+]

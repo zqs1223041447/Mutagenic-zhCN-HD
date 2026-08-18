@@ -1,0 +1,32 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+
+uniform float amt : hint_range(0.0, 1.0);
+uniform float speed = 1.0;
+uniform vec4 color : hint_color;
+uniform sampler2D noise_img;
+
+void fragment() 
+{
+    float dist = distance(UV, vec2(0.5,0.5));
+	if (dist > amt/2.0) 
+	{
+		COLOR = vec4(0.0);
+	}
+	else 
+	{
+		COLOR = vec4(color);
+        
+        vec2 uv1 = vec2(UV.x + TIME * speed, UV.y);
+        vec2 uv2 = vec2(UV.x - TIME * speed, UV.y);
+        vec2 uv3 = vec2(UV.x, UV.y + TIME * speed);
+        
+        float noise_r = texture(noise_img, uv1).r;
+        float noise_g = texture(noise_img, uv2).g;
+        float noise_b = texture(noise_img, uv3).b;
+        float alpha = 0.5 + noise_r * noise_g * noise_b;
+        COLOR.a = clamp(alpha-dist/5.0, 0.0, 1.0);
+	}
+}"

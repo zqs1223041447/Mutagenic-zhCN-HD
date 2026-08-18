@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/skills/steak.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/StatusEffects/Keystones/HardenedFlesh.gd" type="Script" id=2]
+
+[node name="HardenedFlesh" type="Node"]
+script = ExtResource( 2 )
+description = "Hardened Flesh"
+texture = ExtResource( 1 )
+base_lifetime = 5.0
+unique_group = "HardenedFlesh"

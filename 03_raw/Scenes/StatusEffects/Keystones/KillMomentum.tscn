@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/buff_icons/kill_momentum.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/StatusEffects/Keystones/KillMomentum.gd" type="Script" id=2]
+
+[node name="KillMomentum" type="Node"]
+script = ExtResource( 2 )
+description = "Raging Momentum"
+texture = ExtResource( 1 )
+base_lifetime = 5.0
+unique_group = "KillMomentum"

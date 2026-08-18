@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/StatusEffects/Curses/Hypothermia.gd" type="Script" id=1]
+
+[node name="Hypothermia" type="Node"]
+script = ExtResource( 1 )
+description = "Hypothermia"
+only_apply_strongest = true
+unique_group = "Hypothermia"

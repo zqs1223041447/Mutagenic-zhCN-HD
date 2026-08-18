@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Projectiles/Skills/ShockOrbProjectile.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Projectiles/Projectile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/projectiles/shock_orb.aseprite" type="SpriteFrames" id=3]
+
+[node name="ShockOrbProjectile" instance=ExtResource( 2 )]
+z_index = -6
+script = ExtResource( 1 )
+can_bounce = true
+
+[node name="Sprite" parent="." index="1"]
+frames = ExtResource( 3 )
+frame = 3
+playing = true

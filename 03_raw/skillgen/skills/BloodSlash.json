@@ -1,0 +1,652 @@
+[
+    {
+        "skill": {
+            "damage": 21,
+            "radius": 40,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 23,
+            "radius": 40,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 25,
+            "radius": 41,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 27,
+            "radius": 41,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 30,
+            "radius": 42,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 32,
+            "radius": 42,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 35,
+            "radius": 43,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 38,
+            "radius": 43,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 41,
+            "radius": 44,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 45,
+            "radius": 44,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 49,
+            "radius": 45,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 53,
+            "radius": 45,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 58,
+            "radius": 46,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 63,
+            "radius": 46,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 68,
+            "radius": 47,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 74,
+            "radius": 47,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 81,
+            "radius": 48,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 88,
+            "radius": 49,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 96,
+            "radius": 49,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 104,
+            "radius": 50,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 113,
+            "radius": 50,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 123,
+            "radius": 51,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 134,
+            "radius": 51,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 145,
+            "radius": 52,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 158,
+            "radius": 53,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 172,
+            "radius": 53,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 187,
+            "radius": 54,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 203,
+            "radius": 54,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 221,
+            "radius": 55,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 240,
+            "radius": 56,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 261,
+            "radius": 56,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 283,
+            "radius": 57,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 308,
+            "radius": 58,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 335,
+            "radius": 58,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 364,
+            "radius": 59,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 396,
+            "radius": 60,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 430,
+            "radius": 60,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 468,
+            "radius": 61,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 509,
+            "radius": 62,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 553,
+            "radius": 62,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 601,
+            "radius": 63,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 653,
+            "radius": 64,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 710,
+            "radius": 65,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 772,
+            "radius": 65,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 840,
+            "radius": 66,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 913,
+            "radius": 67,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 992,
+            "radius": 68,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 1079,
+            "radius": 68,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 1173,
+            "radius": 69,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    },
+    {
+        "skill": {
+            "damage": 1275,
+            "radius": 70,
+            "projectile_speed": 150,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "physical_ailment_chance": 0.25,
+            "physical_ailment_effect": 0.25,
+            "damage_effectiveness": 8.5,
+            "cooldown": 1.25
+        }
+    }
+]

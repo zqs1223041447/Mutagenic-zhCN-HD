@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/StatusEffects/DamageAilments/Charred.gd" type="Script" id=1]
+[ext_resource path="res://sprites/status_effects/charred.png" type="Texture" id=2]
+
+[node name="Charred" type="Node"]
+script = ExtResource( 1 )
+description = "Charred"
+texture = ExtResource( 2 )
+is_ailment = true
+only_apply_strongest = true
+base_lifetime = 4.0
+unique_group = "Char"
+does_tick = false

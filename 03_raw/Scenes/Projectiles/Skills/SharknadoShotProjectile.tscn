@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Projectiles/Skills/SharknadoShotProjectile.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Projectiles/Projectile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/projectiles/shark.aseprite" type="SpriteFrames" id=3]
+
+[node name="SharknadoShotProjectile" instance=ExtResource( 2 )]
+z_index = -4
+script = ExtResource( 1 )
+does_rotate = true
+
+[node name="Sprite" parent="." index="1"]
+frames = ExtResource( 3 )
+playing = true

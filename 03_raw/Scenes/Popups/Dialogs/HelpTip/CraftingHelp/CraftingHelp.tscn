@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Popups/Dialogs/HelpTip/HelpTip.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Popups/Dialogs/HelpTip/CraftingHelp/CraftingHelp.gd" type="Script" id=2]
+
+[node name="CraftingHelp" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="PanelContainer" parent="MarginContainer/CenterContainer" index="0"]
+margin_left = 160.0
+margin_top = 80.0
+margin_right = 1120.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 960, 640 )
+
+[node name="VBoxContainer" parent="MarginContainer/CenterContainer/PanelContainer" index="0"]
+margin_right = 944.0
+margin_bottom = 624.0
+
+[node name="HBoxContainer" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer" index="0"]
+margin_right = 928.0
+
+[node name="Label" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer/HBoxContainer" index="0"]
+margin_left = 399.0
+margin_right = 529.0
+custom_colors/font_color = Color( 0.827451, 0.545098, 0.101961, 1 )
+text = "Crafting Help"
+
+[node name="RichTextLabel" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer" index="1"]
+margin_right = 928.0
+margin_bottom = 536.0
+bbcode_text = "[center]Crafting Options[/center]
+
+[color=#53dfdf]Scramble[/color]: Reroll all non-locked mods on the Item.
+
+[color=#53dfdf]Lucky Scramble[/color]: Reroll all non-locked mods on the Item, and rolls for tiers 2 times, taking the best outcome.
+
+[color=#53dfdf]Godly Scramble[/color]: Reroll all non-locked mods on the Item, and rolls for tiers 10 times, taking the best outcome.
+
+[color=#53dfdf]Store[/color]: Moves the mods from the Item to be stored for Recombination
+
+[color=#53dfdf]Restore[/color]: Moves stored mods back to the Item, overwriting the Item.
+
+[color=#53dfdf]Recombinate[/color]: Randomly combines the stored mods onto the Item. This resulting Item mods will be a mix of the stored mods and Item mods. Removes the stored mods. Both stored and Item mods must have at least 2 prefixes and 2 suffixes each.
+
+[color=#53dfdf]Reroll Mod Values[/color]: Reroll the numeric values of the mods within their respective Mod Level
+
+[color=#53dfdf]Upgrade Random Mod[/color]: Increase the Mod Level for a random non-locked, non-maxed mod.
+"
+text = "Crafting Options
+
+Scramble: Reroll all non-locked mods on the Item.
+
+Lucky Scramble: Reroll all non-locked mods on the Item, and rolls for tiers 2 times, taking the best outcome.
+
+Godly Scramble: Reroll all non-locked mods on the Item, and rolls for tiers 10 times, taking the best outcome.
+
+Store: Moves the mods from the Item to be stored for Recombination
+
+Restore: Moves stored mods back to the Item, overwriting the Item.
+
+Recombinate: Randomly combines the stored mods onto the Item. This resulting Item mods will be a mix of the stored mods and Item mods. Removes the stored mods. Both stored and Item mods must have at least 2 prefixes and 2 suffixes each.
+
+Reroll Mod Values: Reroll the numeric values of the mods within their respective Mod Level
+
+Upgrade Random Mod: Increase the Mod Level for a random non-locked, non-maxed mod.
+"
+
+[node name="HBoxContainer2" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer" index="2"]
+margin_top = 568.0
+margin_right = 928.0
+margin_bottom = 608.0
+
+[node name="Button" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="0"]
+margin_left = 858.0
+margin_right = 928.0

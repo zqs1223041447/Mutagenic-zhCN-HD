@@ -1,0 +1,14 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+const float PI = 3.14159265;
+uniform float distance : hint_range(1.0, 100.);
+
+
+void fragment() {
+    vec2 tuv = UV;
+    float x_amount = abs(tuv.x - 0.5) + 0.5;
+    tuv.y *= x_amount;
+    COLOR = texture(TEXTURE, tuv);    
+}"

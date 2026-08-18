@@ -1,0 +1,502 @@
+[
+    {
+        "skill": {
+            "damage": 10,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 11,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 12,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 13,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 14,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 15,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 17,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 18,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 20,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 21,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 23,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 25,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 27,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 30,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 32,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 35,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 38,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 41,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 45,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 49,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 53,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 58,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 63,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 68,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 74,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 81,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 88,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 95,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 104,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 113,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 123,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 133,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 145,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 158,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 171,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 186,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 202,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 220,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 239,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 260,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 283,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 307,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 334,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 363,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 395,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 430,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 467,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 508,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 552,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 600,
+            "crit_chance": 0.05,
+            "skill_chain": 1,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 1.1,
+            "cooldown": 1
+        }
+    }
+]

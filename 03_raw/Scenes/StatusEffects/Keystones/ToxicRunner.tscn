@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/buff_icons/plague_runner.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/StatusEffects/Keystones/ToxicRunner.gd" type="Script" id=2]
+
+[node name="ToxicRunner" type="Node"]
+script = ExtResource( 2 )
+description = "Plague Runner"
+texture = ExtResource( 1 )
+base_lifetime = 2.0
+unique_group = "ToxicRunner"

@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Skills/Playable/LavaSurge/LavaSurge.gd" type="Script" id=1]
+[ext_resource path="res://Sounds/Skills/Shots/axe.wav" type="AudioStream" id=2]
+[ext_resource path="res://Scenes/GroundDegens/Skills/LavaSurge/LavaSurge.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/skills/flame_surge.png" type="Texture" id=4]
+
+[node name="LavaSurge" type="Node2D"]
+script = ExtResource( 1 )
+texture = ExtResource( 4 )
+is_castable = false
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+bus = "SFX"
+
+[node name="LavaSurge" parent="." instance=ExtResource( 3 )]
+input_pickable = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Mobs/Mob.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/monsters/skeleton_warrior.aseprite" type="SpriteFrames" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 4.0
+
+[node name="SkeletonWarrior" instance=ExtResource( 2 )]
+type = "SKELETON_WARRIOR"
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D" parent="MobCollider" index="0"]
+shape = SubResource( 2 )
+
+[node name="Sprite" parent="SpriteContainer" index="0"]
+frames = ExtResource( 3 )
+
+[node name="StatusBar" parent="." index="6"]
+margin_top = -29.0
+margin_bottom = 5.0

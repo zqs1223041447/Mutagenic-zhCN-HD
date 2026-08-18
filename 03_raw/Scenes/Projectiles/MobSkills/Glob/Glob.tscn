@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Projectiles/Projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/projectiles/MobProjectiles/glob.aseprite" type="SpriteFrames" id=2]
+[ext_resource path="res://Scenes/Projectiles/MobSkills/Glob/Glob.gd" type="Script" id=3]
+
+[node name="Glob" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="1"]
+frames = ExtResource( 2 )
+
+[node name="Glow" parent="." index="2"]
+visible = true

@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://sprites/effects/curse.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Projectiles/Projectile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Projectiles/Skills/ScorchProjectile.gd" type="Script" id=3]
+
+[sub_resource type="Gradient" id=10]
+offsets = PoolRealArray( 0.643087, 1 )
+colors = PoolColorArray( 0.0980392, 0.72549, 0.709804, 0.392157, 1, 1, 1, 0.211765 )
+
+[sub_resource type="GradientTexture" id=11]
+gradient = SubResource( 10 )
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0.0143369, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=5]
+width = 128
+curve = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=9]
+emission_shape = 1
+emission_sphere_radius = 30.0
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 5.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 11 )
+
+[node name="ScorchProjectile" instance=ExtResource( 2 )]
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+monitorable = false
+script = ExtResource( 3 )
+does_hit = false
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="." index="3"]
+bus = "SFX"
+
+[node name="Particles2D" type="Particles2D" parent="." index="4"]
+visible = false
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 9 )
+texture = ExtResource( 1 )

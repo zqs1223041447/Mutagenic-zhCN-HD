@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/StatusEffects/DamageAilments/Burn.gd" type="Script" id=1]
+[ext_resource path="res://sprites/status_effects/burning.png" type="Texture" id=2]
+
+[node name="Burn" type="Node"]
+script = ExtResource( 1 )
+recompute_stats = false
+description = "Burning"
+texture = ExtResource( 2 )
+is_ailment = true
+only_apply_strongest = true
+damage_combine_group = "Burn"
+is_damaging_ailment = true
+base_lifetime = 4.0
+unique_group = "Burn"
+is_unique_status_flag = true

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Interactables/Interactable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Interactables/LoadoutBench/LoadoutBench.gd" type="Script" id=2]
+[ext_resource path="res://sprites/effects/shadow.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14, 12.5 )
+
+[node name="LoadoutBench" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Shadow" type="Sprite" parent="." index="0"]
+position = Vector2( 0, 3 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="1"]
+frame = 4
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
+collision_layer = 256
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2( 0, 2.5 )
+shape = SubResource( 1 )

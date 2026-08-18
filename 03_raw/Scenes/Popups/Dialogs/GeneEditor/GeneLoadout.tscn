@@ -1,0 +1,370 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd" type="Script" id=1]
+[ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn" type="PackedScene" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 16.0
+content_margin_right = 16.0
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+expand_margin_left = 16.0
+
+[node name="GeneLoadout" type="CanvasLayer"]
+pause_mode = 2
+layer = 10
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.815686 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+margin_left = 100.0
+margin_top = 129.0
+margin_right = 1180.0
+margin_bottom = 670.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 1064.0
+margin_bottom = 525.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer"]
+margin_right = 1048.0
+
+[node name="Controls" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer"]
+margin_top = 4.0
+margin_right = 1048.0
+margin_bottom = 49.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/Controls"]
+margin_right = 1048.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/Controls/VBoxContainer"]
+margin_right = 1048.0
+margin_bottom = 45.0
+custom_constants/separation = 16
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/Controls/VBoxContainer/HBoxContainer"]
+margin_top = 10.0
+margin_right = 122.0
+margin_bottom = 35.0
+text = "Equipped Gear"
+
+[node name="BackButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/Controls/VBoxContainer/HBoxContainer"]
+margin_left = 984.0
+margin_right = 1048.0
+margin_bottom = 45.0
+size_flags_horizontal = 10
+text = "Close"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer"]
+margin_top = 53.0
+margin_right = 1048.0
+margin_bottom = 509.0
+size_flags_vertical = 3
+custom_constants/separation = 32
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+margin_right = 656.0
+margin_bottom = 456.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 640.0
+margin_bottom = 440.0
+custom_constants/separation = 32
+
+[node name="LoadoutConfiguration2" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 424.0
+size_flags_horizontal = 3
+custom_constants/separation = 24
+alignment = 1
+
+[node name="Lesser1" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration2" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 48.0
+margin_right = 64.0
+margin_bottom = 112.0
+gene_type = "MIN"
+slot_id = "slot_1"
+
+[node name="Lesser2" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration2" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 200.0
+gene_type = "MIN"
+slot_id = "slot_2"
+
+[node name="Lesser3" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration2" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 224.0
+margin_right = 64.0
+margin_bottom = 288.0
+gene_type = "MIN"
+slot_id = "slot_3"
+
+[node name="Lesser4" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration2" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 312.0
+margin_right = 64.0
+margin_bottom = 376.0
+gene_type = "MIN"
+slot_id = "slot_4"
+
+[node name="LoadoutConfiguration" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 96.0
+margin_right = 528.0
+margin_bottom = 424.0
+size_flags_horizontal = 3
+custom_constants/separation = 24
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration"]
+margin_right = 432.0
+margin_bottom = 96.0
+custom_constants/separation = 32
+alignment = 1
+
+[node name="Helmet" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 168.0
+margin_right = 264.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+gene_type = "HEL"
+slot_id = "slot_1"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration"]
+margin_top = 120.0
+margin_right = 432.0
+margin_bottom = 184.0
+custom_constants/separation = 32
+alignment = 1
+
+[node name="Defensive1" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration/HBoxContainer2" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 88.0
+margin_right = 152.0
+margin_bottom = 64.0
+gene_type = "RIN"
+slot_id = "slot_1"
+
+[node name="Defensive3" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration/HBoxContainer2" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 184.0
+margin_right = 248.0
+margin_bottom = 64.0
+gene_type = "AMU"
+slot_id = "slot_1"
+
+[node name="Defensive4" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration/HBoxContainer2" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 280.0
+margin_right = 344.0
+margin_bottom = 64.0
+gene_type = "RIN"
+slot_id = "slot_2"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration"]
+margin_top = 208.0
+margin_right = 432.0
+margin_bottom = 304.0
+custom_constants/separation = 16
+alignment = 1
+
+[node name="Utility1" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration/HBoxContainer3" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+gene_type = "WEP"
+slot_id = "slot_1"
+
+[node name="Utility2" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration/HBoxContainer3" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 112.0
+margin_right = 208.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+gene_type = "BOD"
+slot_id = "slot_1"
+
+[node name="Utility4" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration/HBoxContainer3" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 224.0
+margin_right = 320.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+gene_type = "PAN"
+slot_id = "slot_1"
+
+[node name="Utility3" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration/HBoxContainer3" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 336.0
+margin_right = 432.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+gene_type = "WEP"
+slot_id = "slot_2"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration"]
+margin_top = 328.0
+margin_right = 432.0
+margin_bottom = 424.0
+custom_constants/separation = 72
+alignment = 1
+
+[node name="Utility1" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration/HBoxContainer6" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+gene_type = "GLO"
+slot_id = "slot_1"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration/HBoxContainer6"]
+margin_left = 168.0
+margin_right = 264.0
+margin_bottom = 96.0
+alignment = 1
+
+[node name="Utility2" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration/HBoxContainer6/VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+gene_type = "BEL"
+slot_id = "slot_1"
+
+[node name="Utility3" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration/HBoxContainer6" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 336.0
+margin_right = 432.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+gene_type = "BOO"
+slot_id = "slot_1"
+
+[node name="LoadoutConfiguration3" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 560.0
+margin_right = 624.0
+margin_bottom = 424.0
+size_flags_horizontal = 3
+custom_constants/separation = 24
+alignment = 1
+
+[node name="Lesser1" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration3" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 48.0
+margin_right = 64.0
+margin_bottom = 112.0
+gene_type = "MIN"
+slot_id = "slot_5"
+
+[node name="Lesser2" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration3" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 200.0
+gene_type = "MIN"
+slot_id = "slot_6"
+
+[node name="Lesser3" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration3" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 224.0
+margin_right = 64.0
+margin_bottom = 288.0
+gene_type = "MIN"
+slot_id = "slot_7"
+
+[node name="Lesser4" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/LoadoutConfiguration3" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 312.0
+margin_right = 64.0
+margin_bottom = 376.0
+gene_type = "MIN"
+slot_id = "slot_8"
+
+[node name="LoadoutStatsContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+margin_left = 688.0
+margin_right = 1048.0
+margin_bottom = 456.0
+rect_min_size = Vector2( 360, 0 )
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/LoadoutStatsContainer"]
+margin_right = 360.0
+margin_bottom = 25.0
+text = "Equipment Stats"
+align = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/LoadoutStatsContainer"]
+margin_top = 29.0
+margin_right = 360.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/LoadoutStatsContainer"]
+margin_top = 49.0
+margin_right = 360.0
+margin_bottom = 53.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/LoadoutStatsContainer"]
+margin_top = 57.0
+margin_right = 360.0
+margin_bottom = 73.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/LoadoutStatsContainer"]
+margin_top = 77.0
+margin_right = 360.0
+margin_bottom = 456.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LoadoutStats" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/LoadoutStatsContainer/ScrollContainer"]
+margin_right = 360.0
+margin_bottom = 379.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 4
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Controls/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]

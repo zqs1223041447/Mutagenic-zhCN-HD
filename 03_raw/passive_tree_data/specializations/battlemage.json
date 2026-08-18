@@ -1,0 +1,110 @@
+{
+    "nodes": [
+        {
+            "id": "root",
+            "passive_tag": "root",
+            "position": [
+                0,
+                0
+            ]
+        },
+        {
+            "id": "a2109",
+            "passive_tag": "strengthened_wisdom",
+            "position": [
+                160,
+                0
+            ]
+        },
+        {
+            "id": "5ee00",
+            "passive_tag": "weapon_dexterity",
+            "position": [
+                0,
+                -160
+            ]
+        },
+        {
+            "id": "f058e",
+            "passive_tag": "flame_resonance",
+            "position": [
+                0,
+                160
+            ]
+        },
+        {
+            "id": "17039",
+            "passive_tag": "critical_thinking",
+            "position": [
+                -160,
+                0
+            ]
+        },
+        {
+            "id": "3745f",
+            "passive_tag": "elemental_piercing",
+            "position": [
+                -160,
+                -160
+            ]
+        },
+        {
+            "id": "0e568",
+            "passive_tag": "elemental_shelling",
+            "position": [
+                160,
+                -160
+            ]
+        },
+        {
+            "id": "48d23",
+            "passive_tag": "heated_resonance",
+            "position": [
+                160,
+                160
+            ]
+        },
+        {
+            "id": "43737",
+            "passive_tag": "overcooked",
+            "position": [
+                -160,
+                160
+            ]
+        }
+    ],
+    "edges": [
+        [
+            "a2109",
+            "root"
+        ],
+        [
+            "5ee00",
+            "root"
+        ],
+        [
+            "f058e",
+            "root"
+        ],
+        [
+            "17039",
+            "root"
+        ],
+        [
+            "3745f",
+            "root"
+        ],
+        [
+            "0e568",
+            "root"
+        ],
+        [
+            "48d23",
+            "root"
+        ],
+        [
+            "43737",
+            "root"
+        ]
+    ]
+}

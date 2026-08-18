@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/StatusEffects/Generic/RecentlyHit.gd" type="Script" id=1]
+
+[node name="RecentlyHit" type="Node"]
+script = ExtResource( 1 )
+recompute_stats = false
+description = "Recently Hit"
+base_lifetime = 5.0
+unique_group = "RecentlyHit"
+does_tick = false

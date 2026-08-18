@@ -1,0 +1,602 @@
+[
+    {
+        "skill": {
+            "damage": 14,
+            "radius": 35,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 16,
+            "radius": 35,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 17,
+            "radius": 36,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 19,
+            "radius": 36,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 20,
+            "radius": 36,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 22,
+            "radius": 36,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 24,
+            "radius": 37,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 26,
+            "radius": 37,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 28,
+            "radius": 37,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 31,
+            "radius": 37,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 33,
+            "radius": 38,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 36,
+            "radius": 38,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 39,
+            "radius": 38,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 43,
+            "radius": 38,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 46,
+            "radius": 39,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 50,
+            "radius": 39,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 55,
+            "radius": 39,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 60,
+            "radius": 40,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 65,
+            "radius": 40,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 70,
+            "radius": 40,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 77,
+            "radius": 40,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 83,
+            "radius": 41,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 91,
+            "radius": 41,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 98,
+            "radius": 41,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 107,
+            "radius": 42,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 116,
+            "radius": 42,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 126,
+            "radius": 42,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 137,
+            "radius": 43,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 149,
+            "radius": 43,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 162,
+            "radius": 43,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 177,
+            "radius": 44,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 192,
+            "radius": 44,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 209,
+            "radius": 44,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 227,
+            "radius": 45,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 247,
+            "radius": 45,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 268,
+            "radius": 45,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 292,
+            "radius": 45,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 317,
+            "radius": 46,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 345,
+            "radius": 46,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 375,
+            "radius": 46,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 407,
+            "radius": 47,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 443,
+            "radius": 47,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 481,
+            "radius": 48,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 523,
+            "radius": 48,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 569,
+            "radius": 48,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 619,
+            "radius": 49,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 672,
+            "radius": 49,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 731,
+            "radius": 49,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 795,
+            "radius": 50,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    },
+    {
+        "skill": {
+            "damage": 864,
+            "radius": 50,
+            "projectile_speed": 125,
+            "crit_chance": 0.07,
+            "crit_multi": 0.0,
+            "lightning_penetration": 0.5,
+            "damage_effectiveness": 8.4,
+            "cooldown": 0.9
+        }
+    }
+]

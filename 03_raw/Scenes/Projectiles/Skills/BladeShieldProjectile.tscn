@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Projectiles/Skills/BladeShieldProjectile.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Projectiles/Projectile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/skills/blade_shield.aseprite" type="SpriteFrames" id=3]
+[ext_resource path="res://Scenes/Shaders/RotateMaterial.tres" type="Material" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 6.0
+
+[node name="BladeShieldProjectile" instance=ExtResource( 2 )]
+z_index = -2
+script = ExtResource( 1 )
+has_limited_hits = false
+expire_on_distance = false
+manual_movement = true
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource( 1 )
+
+[node name="Sprite" parent="." index="1"]
+material = ExtResource( 4 )
+frames = ExtResource( 3 )
+playing = true

@@ -1,0 +1,110 @@
+{
+    "nodes": [
+        {
+            "id": "root",
+            "passive_tag": "root",
+            "position": [
+                0,
+                0
+            ]
+        },
+        {
+            "id": "a2109",
+            "passive_tag": "capable_combatant",
+            "position": [
+                160,
+                0
+            ]
+        },
+        {
+            "id": "5ee00",
+            "passive_tag": "titanic_resilience",
+            "position": [
+                0,
+                -160
+            ]
+        },
+        {
+            "id": "f058e",
+            "passive_tag": "coated_blades",
+            "position": [
+                0,
+                160
+            ]
+        },
+        {
+            "id": "17039",
+            "passive_tag": "ailment_reaver",
+            "position": [
+                -160,
+                0
+            ]
+        },
+        {
+            "id": "b6998",
+            "passive_tag": "serrated_blades",
+            "position": [
+                -160,
+                160
+            ]
+        },
+        {
+            "id": "cf86a",
+            "passive_tag": "sabotank",
+            "position": [
+                -160,
+                -160
+            ]
+        },
+        {
+            "id": "a186a",
+            "passive_tag": "slippery_titan",
+            "position": [
+                160,
+                -160
+            ]
+        },
+        {
+            "id": "d1f8b",
+            "passive_tag": "vitality_surge",
+            "position": [
+                160,
+                160
+            ]
+        }
+    ],
+    "edges": [
+        [
+            "a2109",
+            "root"
+        ],
+        [
+            "5ee00",
+            "root"
+        ],
+        [
+            "f058e",
+            "root"
+        ],
+        [
+            "17039",
+            "root"
+        ],
+        [
+            "b6998",
+            "root"
+        ],
+        [
+            "cf86a",
+            "root"
+        ],
+        [
+            "a186a",
+            "root"
+        ],
+        [
+            "d1f8b",
+            "root"
+        ]
+    ]
+}

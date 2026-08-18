@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Popups/Dialogs/GeneEditor/CraftButton.gd" type="Script" id=1]
+
+[node name="CraftButton" type="VBoxContainer"]
+margin_right = 12.0
+margin_bottom = 20.0
+script = ExtResource( 1 )
+
+[node name="Crafter" type="Button" parent="."]
+margin_right = 32.0
+margin_bottom = 20.0
+
+[node name="CostBox" type="HBoxContainer" parent="."]
+margin_top = 24.0
+margin_right = 32.0
+margin_bottom = 38.0
+alignment = 1
+
+[node name="CostLabel" type="Label" parent="CostBox"]
+margin_right = 32.0
+margin_bottom = 14.0
+text = "Cost:"
+
+[connection signal="pressed" from="Crafter" to="." method="_on_Crafter_pressed"]

@@ -1,0 +1,122 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Scenes/Popups/Dialogs/Keybinds/Keybinds.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Popups/Dialogs/Keybinds/KeybindOption.tscn" type="PackedScene" id=3]
+
+[node name="Keybinds" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.815686 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+margin_right = 1280.0
+margin_bottom = 800.0
+theme = ExtResource( 1 )
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/CenterContainer"]
+margin_left = 464.0
+margin_top = 198.0
+margin_right = 816.0
+margin_bottom = 602.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/CenterContainer/PanelContainer"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 336.0
+margin_bottom = 388.0
+
+[node name="Label" type="Label" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer2"]
+margin_right = 320.0
+margin_bottom = 20.0
+text = "Keyboard Settings"
+align = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer2"]
+margin_top = 24.0
+margin_right = 320.0
+margin_bottom = 372.0
+rect_min_size = Vector2( 320, 0 )
+size_flags_horizontal = 0
+
+[node name="DoneButton" type="Button" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/VBoxContainer"]
+margin_right = 320.0
+margin_bottom = 40.0
+text = "Done"
+
+[node name="KeybindList" type="VBoxContainer" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/VBoxContainer"]
+margin_top = 44.0
+margin_right = 320.0
+margin_bottom = 348.0
+
+[node name="KeybindOption" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/VBoxContainer/KeybindList" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 320.0
+margin_bottom = 40.0
+label_text = "Dash"
+action_name = "dash"
+
+[node name="KeybindOption2" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/VBoxContainer/KeybindList" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 44.0
+margin_right = 320.0
+margin_bottom = 84.0
+label_text = "Move Left"
+action_name = "move_left"
+
+[node name="KeybindOption3" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/VBoxContainer/KeybindList" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 88.0
+margin_right = 320.0
+margin_bottom = 128.0
+label_text = "Move Right"
+action_name = "move_right"
+
+[node name="KeybindOption4" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/VBoxContainer/KeybindList" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 132.0
+margin_right = 320.0
+margin_bottom = 172.0
+label_text = "Move Up"
+action_name = "move_up"
+
+[node name="KeybindOption5" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/VBoxContainer/KeybindList" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 176.0
+margin_right = 320.0
+margin_bottom = 216.0
+label_text = "Move Down"
+action_name = "move_down"
+
+[node name="KeybindOption6" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/VBoxContainer/KeybindList" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 220.0
+margin_right = 320.0
+margin_bottom = 260.0
+label_text = "Interact"
+action_name = "interact"
+
+[node name="KeybindOption7" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/VBoxContainer/KeybindList" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 264.0
+margin_right = 320.0
+margin_bottom = 304.0
+label_text = "Show Inventory"
+action_name = "ui_open_inventory"
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/VBoxContainer/DoneButton" to="." method="_on_DoneButton_pressed"]
