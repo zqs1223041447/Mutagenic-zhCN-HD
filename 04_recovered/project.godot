@@ -1,0 +1,617 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "GenericAura",
+"class": "AcquiredAura",
+"language": "GDScript",
+"path": "res://Scenes/Skills/AcquiredSkills/AcquiredAura.gd"
+}, {
+"base": "GenericSkill",
+"class": "AcquiredSkill",
+"language": "GDScript",
+"path": "res://Scenes/Skills/AcquiredSkills/AcquiredSkill.gd"
+}, {
+"base": "Node2D",
+"class": "AreaSkillEffect",
+"language": "GDScript",
+"path": "res://Scenes/AreaSkillEffects/AreaSkillEffect.gd"
+}, {
+"base": "Node",
+"class": "BaseEffect",
+"language": "GDScript",
+"path": "res://Scenes/StatusEffects/BaseEffect.gd"
+}, {
+"base": "Node2D",
+"class": "BaseLevel",
+"language": "GDScript",
+"path": "res://Scenes/Levels/BaseLevel.gd"
+}, {
+"base": "Node2D",
+"class": "DelayedSkill",
+"language": "GDScript",
+"path": "res://Scenes/DelayedSkill/DelayedSkill.gd"
+}, {
+"base": "Particles2D",
+"class": "FlipbookExplosion",
+"language": "GDScript",
+"path": "res://Scenes/Explosions/FlipbookExplosion.gd"
+}, {
+"base": "Reference",
+"class": "FrameTimer",
+"language": "GDScript",
+"path": "res://Scenes/IdleFrame.gd"
+}, {
+"base": "Node",
+"class": "GeneMods",
+"language": "GDScript",
+"path": "res://Globals/Genes/GeneMods.gd"
+}, {
+"base": "GenericSkill",
+"class": "GenericAura",
+"language": "GDScript",
+"path": "res://Scenes/Skills/Auras/GenericAura.gd"
+}, {
+"base": "Node2D",
+"class": "GenericSkill",
+"language": "GDScript",
+"path": "res://Scenes/Skills/GenericSkill.gd"
+}, {
+"base": "Area2D",
+"class": "GroundDegen",
+"language": "GDScript",
+"path": "res://Scenes/GroundDegens/GroundDegen.gd"
+}, {
+"base": "PopupBase",
+"class": "HelpTip",
+"language": "GDScript",
+"path": "res://Scenes/Popups/Dialogs/HelpTip/HelpTip.gd"
+}, {
+"base": "Node2D",
+"class": "Interactable",
+"language": "GDScript",
+"path": "res://Scenes/Interactables/Interactable.gd"
+}, {
+"base": "Node",
+"class": "LayoutGenerator",
+"language": "GDScript",
+"path": "res://Globals/LayoutGenerators/Layout.gd"
+}, {
+"base": "RigidBody2D",
+"class": "Mob",
+"language": "GDScript",
+"path": "res://Scenes/Mobs/Mob.gd"
+}, {
+"base": "GenericSkill",
+"class": "MobSkill",
+"language": "GDScript",
+"path": "res://Scenes/Skills/MobSkills/MobSkill.gd"
+}, {
+"base": "Node",
+"class": "MonsterTypes",
+"language": "GDScript",
+"path": "res://Globals/MonsterTypes.gd"
+}, {
+"base": "Node2D",
+"class": "NavMesh",
+"language": "GDScript",
+"path": "res://Scenes/Levels/NavMesh.gd"
+}, {
+"base": "Node2D",
+"class": "PathingController",
+"language": "GDScript",
+"path": "res://Scenes/Mobs/PathingController.gd"
+}, {
+"base": "Area2D",
+"class": "Pickup",
+"language": "GDScript",
+"path": "res://Scenes/Pickups/Pickup.gd"
+}, {
+"base": "RigidBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Scenes/Player/Player.gd"
+}, {
+"base": "CanvasLayer",
+"class": "PopupBase",
+"language": "GDScript",
+"path": "res://Scenes/Popups/PopupBase.gd"
+}, {
+"base": "Area2D",
+"class": "Projectile",
+"language": "GDScript",
+"path": "res://Scenes/Projectiles/Projectile.gd"
+}, {
+"base": "Node2D",
+"class": "ShaderExplosion",
+"language": "GDScript",
+"path": "res://Scenes/ShaderExplosions/ShaderExplosion.gd"
+}, {
+"base": "Node",
+"class": "TierLoader",
+"language": "GDScript",
+"path": "res://Globals/SkillTiers/TierLoader.gd"
+}, {
+"base": "CanvasLayer",
+"class": "TooltipBase",
+"language": "GDScript",
+"path": "res://Scenes/Tooltips/TooltipBase.gd"
+} ]
+_global_script_class_icons={
+"AcquiredAura": "",
+"AcquiredSkill": "",
+"AreaSkillEffect": "",
+"BaseEffect": "",
+"BaseLevel": "",
+"DelayedSkill": "",
+"FlipbookExplosion": "",
+"FrameTimer": "",
+"GeneMods": "",
+"GenericAura": "",
+"GenericSkill": "",
+"GroundDegen": "",
+"HelpTip": "",
+"Interactable": "",
+"LayoutGenerator": "",
+"Mob": "",
+"MobSkill": "",
+"MonsterTypes": "",
+"NavMesh": "",
+"PathingController": "",
+"Pickup": "",
+"Player": "",
+"PopupBase": "",
+"Projectile": "",
+"ShaderExplosion": "",
+"TierLoader": "",
+"TooltipBase": ""
+}
+
+[application]
+
+config/name="Mutagenic"
+run/main_scene="res://Scenes/LoadGame.tscn"
+boot_splash/image="res://sprites/splash/background_blurred.png"
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://sprites/community_icon.png"
+config/windows_native_icon="res://sprites/icon_32.ico"
+
+[autoload]
+
+Utils="*res://Globals/Utils.gd"
+Leaderboard="*res://Globals/Leaderboard.gd"
+Constants="*res://Globals/Constants.gd"
+Globals="*res://Globals/Globals.gd"
+PassiveTypes="*res://Globals/PassiveTypes.gd"
+SkillTags="*res://Globals/SkillTags.gd"
+LayoutFixed="*res://Globals/LayoutGenerators/LayoutFixed.gd"
+LayoutField="*res://Globals/LayoutGenerators/LayoutField.gd"
+LayoutCells="*res://Globals/LayoutGenerators/LayoutCells.gd"
+LayoutCircle="*res://Globals/LayoutGenerators/LayoutCircle.gd"
+Levels="*res://Globals/Levels.gd"
+PlayableClasses="*res://Globals/PlayableClasses.gd"
+ArcTiers="*res://Globals/SkillTiers/ArcTiers.gd"
+OrbTiers="*res://Globals/SkillTiers/OrbTiers.gd"
+ShotgunTiers="*res://Globals/SkillTiers/ShotgunTiers.gd"
+PoisonDartTiers="*res://Globals/SkillTiers/PoisonDartTiers.gd"
+ShurikenTiers="*res://Globals/SkillTiers/ShurikenTiers.gd"
+BlizzardTiers="*res://Globals/SkillTiers/BlizzardTiers.gd"
+BrittleTiers="*res://Globals/SkillTiers/BrittleTiers.gd"
+ScorchTiers="*res://Globals/SkillTiers/ScorchTiers.gd"
+DebilitateTiers="*res://Globals/SkillTiers/DebilitateTiers.gd"
+ProtractionTiers="*res://Globals/SkillTiers/ProtractionTiers.gd"
+PolarizeTiers="*res://Globals/SkillTiers/PolarizeTiers.gd"
+HinderTiers="*res://Globals/SkillTiers/HinderTiers.gd"
+HypothermiaTiers="*res://Globals/SkillTiers/HypothermiaTiers.gd"
+IceOrbTiers="*res://Globals/SkillTiers/IceOrbTiers.gd"
+RegenerationTiers="*res://Globals/SkillTiers/RegenerationTiers.gd"
+ShrapnelBombTiers="*res://Globals/SkillTiers/ShrapnelBombTiers.gd"
+BaneTiers="*res://Globals/SkillTiers/BaneTiers.gd"
+PlagueCloudsTiers="*res://Globals/SkillTiers/PlagueCloudsTiers.gd"
+AxeTiers="*res://Globals/SkillTiers/AxeTiers.gd"
+ShockOrbTiers="*res://Globals/SkillTiers/ShockOrbTiers.gd"
+VolcanoTiers="*res://Globals/SkillTiers/VolcanoTiers.gd"
+RushTiers="*res://Globals/SkillTiers/RushTiers.gd"
+ArrowTiers="*res://Globals/SkillTiers/ArrowTiers.gd"
+ResilienceTiers="*res://Globals/SkillTiers/ResilienceTiers.gd"
+ShardOrbTiers="*res://Globals/SkillTiers/ShardOrbTiers.gd"
+MinigunTiers="*res://Globals/SkillTiers/MinigunTiers.gd"
+ChainLightningTiers="*res://Globals/SkillTiers/ChainLightningTiers.gd"
+FlameTetherTiers="*res://Globals/SkillTiers/FlameTetherTiers.gd"
+DoomTetherTiers="*res://Globals/SkillTiers/DoomTetherTiers.gd"
+SturdinessTiers="*res://Globals/SkillTiers/SturdinessTiers.gd"
+ElusivenessTiers="*res://Globals/SkillTiers/ElusivenessTiers.gd"
+PrismaticSlashTiers="*res://Globals/SkillTiers/PrismaticSlashTiers.gd"
+LavaSurgeTiers="*res://Globals/SkillTiers/LavaSurgeTiers.gd"
+LightningSpearTiers="*res://Globals/SkillTiers/LightningSpearTiers.gd"
+ClusterBombsTiers="*res://Globals/SkillTiers/ClusterBombsTiers.gd"
+AmplificationAuraTiers="*res://Globals/SkillTiers/AmplificationAuraTiers.gd"
+HoningTiers="*res://Globals/SkillTiers/HoningTiers.gd"
+PhysicalAuraTiers="*res://Globals/SkillTiers/PhysicalAuraTiers.gd"
+LightningAuraTiers="*res://Globals/SkillTiers/LightningAuraTiers.gd"
+ColdAuraTiers="*res://Globals/SkillTiers/ColdAuraTiers.gd"
+FireAuraTiers="*res://Globals/SkillTiers/FireAuraTiers.gd"
+ToxicAuraTiers="*res://Globals/SkillTiers/ToxicAuraTiers.gd"
+DoTAuraTiers="*res://Globals/SkillTiers/DoTAuraTiers.gd"
+ShockwaveTiers="*res://Globals/SkillTiers/ShockwaveTiers.gd"
+BladeShieldTiers="*res://Globals/SkillTiers/BladeShieldTiers.gd"
+EnergizedAxeTiers="*res://Globals/SkillTiers/EnergizedAxeTiers.gd"
+SharknadoShotTiers="*res://Globals/SkillTiers/SharknadoShotTiers.gd"
+BloodSlashTiers="*res://Globals/SkillTiers/BloodSlashTiers.gd"
+PlasmaOrbTiers="*res://Globals/SkillTiers/PlasmaOrbTiers.gd"
+Skills="*res://Globals/Skills.gd"
+GameState="*res://Globals/GameState.gd"
+StatsInfo="*res://Globals/StatsInfo.gd"
+Powerups="*res://Globals/Powerups.gd"
+MonsterStats="*res://Globals/MonsterStats/MonsterStats.gd"
+MonsterLevels="*res://Globals/MonsterLevels.gd"
+Achievements="*res://Globals/Achievements.gd"
+ItemNameGenerator="*res://Globals/ItemNameGenerator.gd"
+Colors="*res://Globals/Colors.gd"
+Uuid="*res://Globals/UUID.gd"
+TreeKeystones="*res://Globals/Keystones/TreeKeystones.gd"
+UniqueKeystones="*res://Globals/Keystones/UniqueKeystones.gd"
+SupportKeystones="*res://Globals/Keystones/SupportKeystones.gd"
+Keystones="*res://Globals/Keystones.gd"
+PopupManager="*res://Globals/PopupManager.gd"
+Mitigation="*res://Globals/Mitigation.gd"
+PassiveTreeData="*res://Globals/PassiveTreeData.gd"
+SpecializationData="*res://Globals/SpecializationData.gd"
+PassiveTagStats="*res://Globals/PassiveTagStats.gd"
+StageProgress="*res://Globals/StageProgress.gd"
+Genes="*res://Globals/Genes.gd"
+MapMods="*res://Globals/MapMods.gd"
+PassiveTreeUtils="*res://Globals/PassiveTreeUtils.gd"
+SpecializationTreeUtils="*res://Globals/SpecializationTreeUtils.gd"
+OrbTypes="*res://Globals/OrbTypes.gd"
+UniquePoolGeneric="*res://Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+UniquePoolSota="*res://Globals/Genes/UniquePools/UniquePoolSOTA.gd"
+UniqueGenes="*res://Globals/Genes/UniqueGenes.gd"
+ZoneScaling="*res://Globals/ZoneScaling.gd"
+SlotScaling="*res://Globals/SlotScaling.gd"
+GeneGenerator="*res://Globals/GeneGenerator.gd"
+WorldMapData="*res://Globals/WorldMapData.gd"
+WorldMapUtils="*res://Globals/WorldMapUtils.gd"
+SkillSupports="*res://Globals/SkillSupports.gd"
+SlotRequirements="*res://Globals/SlotRequirements.gd"
+Outfits="*res://Globals/Outfits.gd"
+MonsterMods="*res://Globals/MonsterMods.gd"
+Keybindings="*res://Globals/Keybindings.gd"
+MtxManager="*res://Globals/MTXManager.gd"
+StarterBuilds="*res://Globals/StarterBuilds.gd"
+StatusEffects="*res://Globals/StatusEffects.gd"
+CommonAmuletMods="*res://Globals/Genes/CommonMods/CommonAmuletMods.gd"
+CommonBeltMods="*res://Globals/Genes/CommonMods/CommonBeltMods.gd"
+CommonBodyMods="*res://Globals/Genes/CommonMods/CommonBodyMods.gd"
+CommonBootsMods="*res://Globals/Genes/CommonMods/CommonBootsMods.gd"
+CommonGlovesMods="*res://Globals/Genes/CommonMods/CommonGlovesMods.gd"
+CommonHelmetMods="*res://Globals/Genes/CommonMods/CommonHelmetMods.gd"
+CommonMinorMods="*res://Globals/Genes/CommonMods/CommonMinorMods.gd"
+CommonPantsMods="*res://Globals/Genes/CommonMods/CommonPantsMods.gd"
+CommonRingMods="*res://Globals/Genes/CommonMods/CommonRingMods.gd"
+CommonShieldMods="*res://Globals/Genes/CommonMods/CommonShieldMods.gd"
+CommonWeaponMods="*res://Globals/Genes/CommonMods/CommonWeaponMods.gd"
+CasterWeaponMods="*res://Globals/Genes/BaseTypes/Weapons/CasterWeaponMods.gd"
+MeleeWeaponMods="*res://Globals/Genes/BaseTypes/Weapons/MeleeWeaponMods.gd"
+RangeWeaponMods="*res://Globals/Genes/BaseTypes/Weapons/RangeWeaponMods.gd"
+ArmorShieldMods="*res://Globals/Genes/BaseTypes/Shields/ArmorShieldMods.gd"
+CasterShieldMods="*res://Globals/Genes/BaseTypes/Shields/CasterShieldMods.gd"
+EvasionShieldMods="*res://Globals/Genes/BaseTypes/Shields/EvasionShieldMods.gd"
+HybridShieldMods="*res://Globals/Genes/BaseTypes/Shields/HybridShieldMods.gd"
+LifeShieldMods="*res://Globals/Genes/BaseTypes/Shields/LifeShieldMods.gd"
+ArmorBodyMods="*res://Globals/Genes/BaseTypes/Body/ArmorBodyMods.gd"
+CasterBodyMods="*res://Globals/Genes/BaseTypes/Body/CasterBodyMods.gd"
+EvasionBodyMods="*res://Globals/Genes/BaseTypes/Body/EvasionBodyMods.gd"
+HybridBodyMods="*res://Globals/Genes/BaseTypes/Body/HybridBodyMods.gd"
+LifeBodyMods="*res://Globals/Genes/BaseTypes/Body/LifeBodyMods.gd"
+ArmorHelmetMods="*res://Globals/Genes/BaseTypes/Helmets/ArmorHelmetMods.gd"
+CasterHelmetMods="*res://Globals/Genes/BaseTypes/Helmets/CasterHelmetMods.gd"
+EvasionHelmetMods="*res://Globals/Genes/BaseTypes/Helmets/EvasionHelmetMods.gd"
+HybridHelmetMods="*res://Globals/Genes/BaseTypes/Helmets/HybridHelmetMods.gd"
+LifeHelmetMods="*res://Globals/Genes/BaseTypes/Helmets/LifeHelmetMods.gd"
+ArmorBeltMods="*res://Globals/Genes/BaseTypes/Belts/ArmorBeltMods.gd"
+CasterBeltMods="*res://Globals/Genes/BaseTypes/Belts/CasterBeltMods.gd"
+EvasionBeltMods="*res://Globals/Genes/BaseTypes/Belts/EvasionBeltMods.gd"
+HybridBeltMods="*res://Globals/Genes/BaseTypes/Belts/HybridBeltMods.gd"
+LifeBeltMods="*res://Globals/Genes/BaseTypes/Belts/LifeBeltMods.gd"
+ArmorGlovesMods="*res://Globals/Genes/BaseTypes/Gloves/ArmorGlovesMods.gd"
+CasterGlovesMods="*res://Globals/Genes/BaseTypes/Gloves/CasterGlovesMods.gd"
+EvasionGlovesMods="*res://Globals/Genes/BaseTypes/Gloves/EvasionGlovesMods.gd"
+HybridGlovesMods="*res://Globals/Genes/BaseTypes/Gloves/HybridGlovesMods.gd"
+LifeGlovesMods="*res://Globals/Genes/BaseTypes/Gloves/LifeGlovesMods.gd"
+ArmorPantsMods="*res://Globals/Genes/BaseTypes/Pants/ArmorPantsMods.gd"
+CasterPantsMods="*res://Globals/Genes/BaseTypes/Pants/CasterPantsMods.gd"
+EvasionPantsMods="*res://Globals/Genes/BaseTypes/Pants/EvasionPantsMods.gd"
+HybridPantsMods="*res://Globals/Genes/BaseTypes/Pants/HybridPantsMods.gd"
+LifePantsMods="*res://Globals/Genes/BaseTypes/Pants/LifePantsMods.gd"
+ArmorBootsMods="*res://Globals/Genes/BaseTypes/Boots/ArmorBootsMods.gd"
+CasterBootsMods="*res://Globals/Genes/BaseTypes/Boots/CasterBootsMods.gd"
+EvasionBootsMods="*res://Globals/Genes/BaseTypes/Boots/EvasionBootsMods.gd"
+HybridBootsMods="*res://Globals/Genes/BaseTypes/Boots/HybridBootsMods.gd"
+LifeBootsMods="*res://Globals/Genes/BaseTypes/Boots/LifeBootsMods.gd"
+AttackRingMods="*res://Globals/Genes/BaseTypes/Rings/AttackRingMods.gd"
+CasterRingMods="*res://Globals/Genes/BaseTypes/Rings/CasterRingMods.gd"
+LifeRingMods="*res://Globals/Genes/BaseTypes/Rings/LifeRingMods.gd"
+ResistantRingMods="*res://Globals/Genes/BaseTypes/Rings/ResistantRingMods.gd"
+AttackAmuletMods="*res://Globals/Genes/BaseTypes/Amulets/AttackAmuletMods.gd"
+CasterAmuletMods="*res://Globals/Genes/BaseTypes/Amulets/CasterAmuletMods.gd"
+LifeAmuletMods="*res://Globals/Genes/BaseTypes/Amulets/LifeAmuletMods.gd"
+ResistantAmuletMods="*res://Globals/Genes/BaseTypes/Amulets/ResistantAmuletMods.gd"
+MinorMods="*res://Globals/Genes/BaseTypes/Minors/MinorMods.gd"
+DropCommonArmorMods="*res://Globals/Genes/DropOnlyMods/Common/DropCommonArmorMods.gd"
+DropCommonJewelleryMods="*res://Globals/Genes/DropOnlyMods/Common/DropCommonJewelleryMods.gd"
+DropCommonWeaponMods="*res://Globals/Genes/DropOnlyMods/Common/DropCommonWeaponMods.gd"
+DropAmuletMods="*res://Globals/Genes/DropOnlyMods/DropAmuletMods.gd"
+DropBeltMods="*res://Globals/Genes/DropOnlyMods/DropBeltMods.gd"
+DropBodyMods="*res://Globals/Genes/DropOnlyMods/DropBodyMods.gd"
+DropBootsMods="*res://Globals/Genes/DropOnlyMods/DropBootsMods.gd"
+DropGlovesMods="*res://Globals/Genes/DropOnlyMods/DropGlovesMods.gd"
+DropHelmetMods="*res://Globals/Genes/DropOnlyMods/DropHelmetMods.gd"
+DropMinorMods="*res://Globals/Genes/DropOnlyMods/DropMinorMods.gd"
+DropPantsMods="*res://Globals/Genes/DropOnlyMods/DropPantsMods.gd"
+DropRingMods="*res://Globals/Genes/DropOnlyMods/DropRingMods.gd"
+DropShieldMods="*res://Globals/Genes/DropOnlyMods/DropShieldMods.gd"
+DropWeaponMods="*res://Globals/Genes/DropOnlyMods/DropWeaponMods.gd"
+DropCasterWeaponMods="*res://Globals/Genes/DropOnlyMods/BaseTypes/DropCasterWeaponMods.gd"
+DropMeleeWeaponMods="*res://Globals/Genes/DropOnlyMods/BaseTypes/DropMeleeWeaponMods.gd"
+DropRangeWeaponMods="*res://Globals/Genes/DropOnlyMods/BaseTypes/DropRangeWeaponMods.gd"
+SearchUtils="*res://Globals/SearchUtils.gd"
+Filters="*res://Globals/Filters.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=800
+window/size/fullscreen=true
+mouse_cursor/custom_image="res://sprites/gui/cursor.png"
+mouse_cursor/custom_image_hotspot=Vector2( 32, 32 )
+window/stretch/aspect="keep_height"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg" )
+
+[gdnative]
+
+singletons=[  ]
+
+[global]
+
+output=false
+verbose=false
+
+[gui]
+
+timers/tooltip_delay_sec=0.0
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/normal_map_invert_y": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+ogg_vorbis={
+"loop": true,
+"loop_offset": 0
+}
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777221,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777222,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_focus_next={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777218,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":5,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_focus_prev={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":true,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777218,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":4,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_left={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_right={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_up={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_down={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_page_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777235,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_page_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777236,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_home={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777229,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_end={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777230,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_screenshot={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777255,"unicode":0,"echo":false,"script":null)
+ ]
+}
+zoom_in={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":4,"canceled":false,"pressed":false,"doubleclick":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":5,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":123,"unicode":0,"echo":false,"script":null)
+ ]
+}
+zoom_out={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":5,"canceled":false,"pressed":false,"doubleclick":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":4,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":125,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_open_menu={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":11,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":67,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777217,"unicode":0,"echo":false,"script":null)
+ ]
+}
+gamepad_scroll_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":1.0,"script":null)
+ ]
+}
+gamepad_scroll_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":-1.0,"script":null)
+ ]
+}
+ui_enter={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777221,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777222,"unicode":0,"echo":false,"script":null)
+ ]
+}
+click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+ui_open_inventory={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":73,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777218,"unicode":0,"echo":false,"script":null)
+ ]
+}
+dash={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777237,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+interact={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":32,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+move_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":65,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":-1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+move_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":68,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":15,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+move_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":87,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":-1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+move_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":83,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+goto_test_level={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777253,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_1="Player Collider"
+2d_physics/layer_2="Enemy Collider"
+2d_physics/layer_3="Projectiles"
+2d_physics/layer_5="Mob Ground Bodyblocking"
+2d_physics/layer_6="Mob Flying Bodyblocking"
+2d_physics/layer_9="Environment"
+2d_physics/layer_10="Interactables"
+
+[logging]
+
+file_logging/max_log_files=25
+
+[memory]
+
+limits/command_queue/multithreading_queue_size_kb=1024
+
+[network]
+
+limits/debugger_stdout/max_chars_per_second=64000
+
+[physics]
+
+2d/bp_hash_table_size=32000
+2d/cell_size=8
+2d/default_gravity=0
+2d/default_gravity_vector=Vector2( 0, 0 )
+2d/default_linear_damp=0.0
+
+[rendering]
+
+2d/options/use_nvidia_rect_flicker_workaround=true
+2d/snapping/use_gpu_pixel_snap=true
+environment/default_clear_color=Color( 0.254902, 0.254902, 0.254902, 1 )
+environment/default_environment="res://default_env.tres"
+environment/stretch/aspect="keep"

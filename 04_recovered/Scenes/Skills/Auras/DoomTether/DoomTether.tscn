@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Skills/Auras/GenericAura.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Skills/Auras/DoomTether/DoomTether.gd" type="Script" id=2]
+[ext_resource path="res://sprites/skills/doom_tether.png" type="Texture" id=4]
+
+[sub_resource type="CircleShape2D" id=7]
+resource_local_to_scene = true
+
+[node name="DoomTether" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+texture = ExtResource( 4 )
+is_castable = false
+
+[node name="Area2D" parent="." index="0"]
+collision_mask = 3
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource( 7 )

@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Projectiles/Skills/ShurikenProjectile.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Projectiles/Projectile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/projectiles/shuriken.aseprite" type="SpriteFrames" id=3]
+[ext_resource path="res://Scenes/Shaders/RotateProjectile.tres" type="Shader" id=4]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 4 )
+shader_param/speed = 8.0
+
+[node name="ShurikenProjectile" instance=ExtResource( 2 )]
+z_index = 1
+script = ExtResource( 1 )
+
+[node name="Sprite" parent="." index="1"]
+material = SubResource( 1 )
+frames = ExtResource( 3 )

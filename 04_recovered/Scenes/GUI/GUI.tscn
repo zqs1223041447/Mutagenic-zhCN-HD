@@ -1,0 +1,471 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Fonts/space.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/GUI/GUI.gd" type="Script" id=2]
+[ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Scenes/GUI/Globes/Globe.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sprites/drops/blue_orb.png" type="Texture" id=20]
+[ext_resource path="res://sprites/drops/red_orb.png" type="Texture" id=21]
+[ext_resource path="res://sprites/drops/gold_orb.png" type="Texture" id=22]
+[ext_resource path="res://sprites/drops/green_orb.png" type="Texture" id=23]
+[ext_resource path="res://sprites/drops/corruption.png" type="Texture" id=24]
+
+[sub_resource type="DynamicFont" id=3]
+size = 28
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.282353, 0.282353, 0.282353, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 64
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = ExtResource( 3 )
+custom_constants/margin_right = 16
+custom_constants/margin_top = 16
+custom_constants/margin_left = 16
+custom_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 1264.0
+margin_bottom = 784.0
+mouse_filter = 2
+
+[node name="ContextDisplay" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_right = 1248.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 0, 64 )
+alignment = 1
+
+[node name="ContextContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/ContextDisplay"]
+margin_left = 511.0
+margin_right = 737.0
+margin_bottom = 69.0
+
+[node name="ContextLabel" type="Label" parent="MarginContainer/VBoxContainer/ContextDisplay/ContextContainer"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 210.0
+margin_bottom = 53.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "Monster Label"
+align = 1
+
+[node name="MonsterMods" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 73.0
+margin_right = 1248.0
+margin_bottom = 73.0
+alignment = 1
+
+[node name="StatusContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 77.0
+margin_right = 1248.0
+margin_bottom = 85.0
+alignment = 1
+
+[node name="StatusEffectsList" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatusContainer"]
+modulate = Color( 1, 1, 1, 0.54902 )
+margin_left = 624.0
+margin_right = 624.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 0, 8 )
+mouse_filter = 2
+custom_constants/separation = 16
+alignment = 1
+
+[node name="BuffContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BuffContainer"]
+margin_right = 1280.0
+margin_bottom = 800.0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BuffContainer/VBoxContainer"]
+margin_right = 1280.0
+margin_bottom = 112.0
+mouse_filter = 2
+custom_constants/margin_right = 32
+custom_constants/margin_top = 32
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 32
+
+[node name="BuffBar" type="HBoxContainer" parent="BuffContainer/VBoxContainer/MarginContainer"]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 1248.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 48 )
+mouse_filter = 2
+size_flags_horizontal = 3
+custom_constants/separation = 16
+
+[node name="SkillBar" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -23.0
+grow_vertical = 0
+mouse_filter = 2
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="SkillBar"]
+margin_left = 340.0
+margin_right = 940.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 600, 0 )
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SkillBar/PanelContainer"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 584.0
+margin_bottom = 134.0
+custom_constants/separation = 8
+
+[node name="SkillContainer" type="HBoxContainer" parent="SkillBar/PanelContainer/VBoxContainer"]
+margin_right = 568.0
+margin_bottom = 45.0
+grow_vertical = 0
+custom_constants/separation = 16
+
+[node name="CosmeticButton" type="Button" parent="SkillBar/PanelContainer/VBoxContainer/SkillContainer"]
+margin_right = 61.0
+margin_bottom = 45.0
+custom_colors/font_color = Color( 0.827451, 0.545098, 0.101961, 1 )
+text = "Shop"
+
+[node name="WeaponContainer" type="HBoxContainer" parent="SkillBar/PanelContainer/VBoxContainer/SkillContainer"]
+margin_left = 77.0
+margin_right = 314.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="GenesButton" type="Button" parent="SkillBar/PanelContainer/VBoxContainer/SkillContainer"]
+margin_left = 330.0
+margin_right = 438.0
+margin_bottom = 45.0
+text = "Equipment"
+
+[node name="MenuButton" type="Button" parent="SkillBar/PanelContainer/VBoxContainer/SkillContainer"]
+margin_left = 454.0
+margin_right = 568.0
+margin_bottom = 45.0
+text = "Menu/Stats"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SkillBar/PanelContainer/VBoxContainer"]
+margin_top = 53.0
+margin_right = 568.0
+margin_bottom = 78.0
+
+[node name="MutationInfoContainer" type="HBoxContainer" parent="SkillBar/PanelContainer/VBoxContainer/VBoxContainer"]
+margin_right = 568.0
+margin_bottom = 25.0
+grow_vertical = 0
+
+[node name="MutationTierLabel" type="Label" parent="SkillBar/PanelContainer/VBoxContainer/VBoxContainer/MutationInfoContainer"]
+margin_right = 96.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 96, 0 )
+align = 1
+
+[node name="MutationTierXP" type="ProgressBar" parent="SkillBar/PanelContainer/VBoxContainer/VBoxContainer/MutationInfoContainer"]
+margin_left = 100.0
+margin_top = 6.0
+margin_right = 404.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 0, 12 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+value = 50.0
+percent_visible = false
+
+[node name="MutationXP" type="Label" parent="SkillBar/PanelContainer/VBoxContainer/VBoxContainer/MutationInfoContainer"]
+margin_left = 408.0
+margin_right = 568.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 160, 0 )
+align = 1
+
+[node name="LootContainer" type="HBoxContainer" parent="SkillBar/PanelContainer/VBoxContainer"]
+margin_top = 86.0
+margin_right = 568.0
+margin_bottom = 118.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer"]
+margin_left = 156.0
+margin_right = 204.0
+margin_bottom = 32.0
+
+[node name="TextureRect" type="TextureRect" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 20 )
+expand = true
+stretch_mode = 4
+
+[node name="BlueOrbs" type="Label" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer"]
+margin_left = 36.0
+margin_top = 3.0
+margin_right = 48.0
+margin_bottom = 28.0
+text = "0"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer"]
+margin_left = 208.0
+margin_right = 256.0
+margin_bottom = 32.0
+
+[node name="TextureRect" type="TextureRect" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer2"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 21 )
+expand = true
+stretch_mode = 4
+
+[node name="RedOrbs" type="Label" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer2"]
+margin_left = 36.0
+margin_top = 3.0
+margin_right = 48.0
+margin_bottom = 28.0
+text = "0"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer"]
+margin_left = 260.0
+margin_right = 308.0
+margin_bottom = 32.0
+
+[node name="TextureRect" type="TextureRect" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer3"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 23 )
+expand = true
+stretch_mode = 4
+
+[node name="GreenOrbs" type="Label" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer3"]
+margin_left = 36.0
+margin_top = 3.0
+margin_right = 48.0
+margin_bottom = 28.0
+text = "0"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer"]
+margin_left = 312.0
+margin_right = 360.0
+margin_bottom = 32.0
+
+[node name="TextureRect" type="TextureRect" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer4"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 22 )
+expand = true
+stretch_mode = 4
+
+[node name="GoldOrbs" type="Label" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer4"]
+margin_left = 36.0
+margin_top = 3.0
+margin_right = 48.0
+margin_bottom = 28.0
+text = "0"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer"]
+margin_left = 364.0
+margin_right = 412.0
+margin_bottom = 32.0
+
+[node name="TextureRect" type="TextureRect" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer5"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 24 )
+expand = true
+stretch_mode = 4
+
+[node name="CorruptionShards" type="Label" parent="SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer5"]
+margin_left = 36.0
+margin_top = 3.0
+margin_right = 48.0
+margin_bottom = 28.0
+text = "0"
+
+[node name="Globe" parent="." instance=ExtResource( 4 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="LevelInfoContainer" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -74.0
+margin_bottom = 40.0
+grow_horizontal = 0
+theme = ExtResource( 3 )
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="LevelInfoContainer"]
+margin_right = 137.0
+margin_bottom = 128.0
+custom_constants/margin_right = 16
+custom_constants/margin_top = 16
+
+[node name="LevelInfo" type="VBoxContainer" parent="LevelInfoContainer/MarginContainer"]
+margin_top = 16.0
+margin_right = 121.0
+margin_bottom = 128.0
+
+[node name="ZoneName" type="HBoxContainer" parent="LevelInfoContainer/MarginContainer/LevelInfo"]
+margin_right = 121.0
+margin_bottom = 25.0
+alignment = 2
+
+[node name="NameLabel" type="Label" parent="LevelInfoContainer/MarginContainer/LevelInfo/ZoneName"]
+margin_left = 114.0
+margin_right = 121.0
+margin_bottom = 25.0
+text = "1"
+
+[node name="ZoneLevel" type="HBoxContainer" parent="LevelInfoContainer/MarginContainer/LevelInfo"]
+margin_top = 29.0
+margin_right = 121.0
+margin_bottom = 54.0
+alignment = 2
+
+[node name="Label" type="Label" parent="LevelInfoContainer/MarginContainer/LevelInfo/ZoneLevel"]
+margin_left = 18.0
+margin_right = 110.0
+margin_bottom = 25.0
+text = "Zone Level:"
+
+[node name="LevelLabel" type="Label" parent="LevelInfoContainer/MarginContainer/LevelInfo/ZoneLevel"]
+margin_left = 114.0
+margin_right = 121.0
+margin_bottom = 25.0
+text = "1"
+
+[node name="ZoneCompletion" type="HBoxContainer" parent="LevelInfoContainer/MarginContainer/LevelInfo"]
+margin_top = 58.0
+margin_right = 121.0
+margin_bottom = 83.0
+alignment = 2
+
+[node name="Label" type="Label" parent="LevelInfoContainer/MarginContainer/LevelInfo/ZoneCompletion"]
+margin_right = 94.0
+margin_bottom = 25.0
+text = "Completed:"
+
+[node name="CompletionLabel" type="Label" parent="LevelInfoContainer/MarginContainer/LevelInfo/ZoneCompletion"]
+margin_left = 98.0
+margin_right = 121.0
+margin_bottom = 25.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "No"
+
+[node name="ZoneKills" type="HBoxContainer" parent="LevelInfoContainer/MarginContainer/LevelInfo"]
+margin_top = 87.0
+margin_right = 121.0
+margin_bottom = 112.0
+alignment = 2
+
+[node name="Label" type="Label" parent="LevelInfoContainer/MarginContainer/LevelInfo/ZoneKills"]
+margin_left = 19.0
+margin_right = 54.0
+margin_bottom = 25.0
+text = "Kills:"
+
+[node name="KillLabel" type="Label" parent="LevelInfoContainer/MarginContainer/LevelInfo/ZoneKills"]
+margin_left = 58.0
+margin_right = 70.0
+margin_bottom = 25.0
+text = "0"
+
+[node name="KillLabel2" type="Label" parent="LevelInfoContainer/MarginContainer/LevelInfo/ZoneKills"]
+margin_left = 74.0
+margin_right = 121.0
+margin_bottom = 25.0
+text = " / 250"
+
+[node name="NotificationContainer" type="PanelContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -256.0
+margin_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 330, 0 )
+theme = ExtResource( 3 )
+
+[node name="NotificationList" type="VBoxContainer" parent="NotificationContainer"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 314.0
+margin_bottom = 16.0
+grow_horizontal = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="MessageList" type="VBoxContainer" parent="CanvasLayer/CenterContainer"]
+margin_left = 320.0
+margin_top = 80.0
+margin_right = 960.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 640, 640 )
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="MessageLabel" type="Label" parent="CanvasLayer/CenterContainer/MessageList"]
+margin_right = 640.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+
+[connection signal="pressed" from="SkillBar/PanelContainer/VBoxContainer/SkillContainer/CosmeticButton" to="." method="_on_CosmeticButton_pressed"]
+[connection signal="pressed" from="SkillBar/PanelContainer/VBoxContainer/SkillContainer/GenesButton" to="." method="_on_GenesButton_pressed"]
+[connection signal="pressed" from="SkillBar/PanelContainer/VBoxContainer/SkillContainer/MenuButton" to="." method="_on_MenuButton_pressed"]

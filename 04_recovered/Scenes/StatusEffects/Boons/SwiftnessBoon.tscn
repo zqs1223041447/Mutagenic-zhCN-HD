@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/StatusEffects/Boons/SwiftnessBoon.gd" type="Script" id=1]
+[ext_resource path="res://sprites/status_effects/swiftness_boon.png" type="Texture" id=2]
+
+[node name="SwiftnessBoon" type="Node"]
+script = ExtResource( 1 )
+description = "Swiftness Boon"
+texture = ExtResource( 2 )
+stack_group = "SwiftnessBoon"
+fast_flags = true
+lifetime = 4.0
+base_lifetime = 4.0

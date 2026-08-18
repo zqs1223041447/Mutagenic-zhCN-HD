@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/WHOOSH_ARM_SWING_HEAVY_WIDE.wav-f556c1f0646d3cf417fbaf92d786b2f1.sample"
+
+[deps]
+
+source_file="res://Sounds/MovementWhoosh/WHOOSH_ARM_SWING_HEAVY_WIDE.wav"
+dest_files=[ "res://.import/WHOOSH_ARM_SWING_HEAVY_WIDE.wav-f556c1f0646d3cf417fbaf92d786b2f1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float alpha = 0.0;
+uniform vec3 color = vec3(1.0);
+uniform float percent_done = 0.0;
+
+float circle(vec2 position, float radius, float feather)
+{
+	return smoothstep(radius, radius + feather, length(position - vec2(0.5)));
+}
+
+void fragment() {
+   COLOR.rgba = vec4(color, alpha - alpha*circle(UV, 0.5* percent_done, 0.01)); 
+}"
+
+[resource]
+resource_local_to_scene = true
+shader = SubResource( 1 )
+shader_param/alpha = 0.1
+shader_param/color = Vector3( 1, 0, 0 )
+shader_param/percent_done = 1.0

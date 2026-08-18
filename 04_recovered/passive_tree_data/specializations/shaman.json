@@ -1,0 +1,110 @@
+{
+    "nodes": [
+        {
+            "id": "root",
+            "passive_tag": "root",
+            "position": [
+                0,
+                0
+            ]
+        },
+        {
+            "id": "a2109",
+            "passive_tag": "arctic_breath",
+            "position": [
+                160,
+                0
+            ]
+        },
+        {
+            "id": "5ee00",
+            "passive_tag": "forest_bathing",
+            "position": [
+                0,
+                -160
+            ]
+        },
+        {
+            "id": "f058e",
+            "passive_tag": "impactful_strikes",
+            "position": [
+                0,
+                160
+            ]
+        },
+        {
+            "id": "17039",
+            "passive_tag": "frozen_domain",
+            "position": [
+                -160,
+                0
+            ]
+        },
+        {
+            "id": "d3005",
+            "passive_tag": "viridian_sage",
+            "position": [
+                160,
+                -160
+            ]
+        },
+        {
+            "id": "1af5f",
+            "passive_tag": "oak_aegis",
+            "position": [
+                -160,
+                160
+            ]
+        },
+        {
+            "id": "6a95f",
+            "passive_tag": "stifled_cursing",
+            "position": [
+                -160,
+                -160
+            ]
+        },
+        {
+            "id": "c7cc7",
+            "passive_tag": "mountain_born",
+            "position": [
+                160,
+                160
+            ]
+        }
+    ],
+    "edges": [
+        [
+            "a2109",
+            "root"
+        ],
+        [
+            "5ee00",
+            "root"
+        ],
+        [
+            "f058e",
+            "root"
+        ],
+        [
+            "17039",
+            "root"
+        ],
+        [
+            "d3005",
+            "root"
+        ],
+        [
+            "1af5f",
+            "root"
+        ],
+        [
+            "6a95f",
+            "root"
+        ],
+        [
+            "c7cc7",
+            "root"
+        ]
+    ]
+}

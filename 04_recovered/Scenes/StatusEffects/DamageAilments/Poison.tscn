@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/StatusEffects/DamageAilments/Poison.gd" type="Script" id=1]
+[ext_resource path="res://sprites/status_effects/poison.png" type="Texture" id=2]
+
+[node name="Poison" type="Node"]
+script = ExtResource( 1 )
+recompute_stats = false
+description = "Poisoned"
+texture = ExtResource( 2 )
+is_ailment = true
+does_ramp = true
+damage_combine_group = "Poison"
+is_damaging_ailment = true
+base_lifetime = 4.0
+unique_group = "Poison"

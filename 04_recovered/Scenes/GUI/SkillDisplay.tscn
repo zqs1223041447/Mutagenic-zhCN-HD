@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/GUI/SkillDisplay.gd" type="Script" id=1]
+[ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=2]
+[ext_resource path="res://Scenes/Tooltips/SkillTooltip/SkillTooltip.tscn" type="PackedScene" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.541176 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.827451, 0.545098, 0.101961, 1 )
+
+[node name="SkillDisplay" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 80, 0 )
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="SkillContainer" type="HBoxContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 34.0
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="SkillContainer"]
+margin_left = 623.0
+margin_right = 657.0
+margin_bottom = 34.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="SkillContainer/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 33.0
+margin_bottom = 33.0
+rect_min_size = Vector2( 32, 32 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="."]
+margin_top = 38.0
+margin_right = 1280.0
+margin_bottom = 58.0
+align = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="SkillTooltip" parent="." instance=ExtResource( 3 )]
+
+[connection signal="mouse_entered" from="SkillContainer/PanelContainer/TextureRect" to="." method="_on_TextureRect_mouse_entered"]
+[connection signal="mouse_exited" from="SkillContainer/PanelContainer/TextureRect" to="." method="_on_TextureRect_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

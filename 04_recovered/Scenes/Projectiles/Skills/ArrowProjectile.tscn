@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Projectiles/Skills/ArrowProjectile.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Projectiles/Projectile.tscn" type="PackedScene" id=2]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/arrow.png-1d15507c595a5a38dd9c02bebf3df3ea.stex"
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = SubResource( 1 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="ArrowProjectile" instance=ExtResource( 2 )]
+z_index = -1
+script = ExtResource( 1 )
+does_rotate = true
+
+[node name="Sprite" parent="." index="1"]
+frames = SubResource( 3 )
+playing = true
+__meta__ = {
+"_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpzb3VyY2V8PXJlczovL3Nwcml0ZXMvcHJvamVjdGlsZXMvYXJyb3cuYXNlcHJpdGUKbGF5ZXJ8PQpvcF9leHB8PUZhbHNlCm9fZm9sZGVyfD0Kb19uYW1lfD0Kb25seV92aXNpYmxlfD1GYWxzZQpvX2V4X3B8PQo="
+}

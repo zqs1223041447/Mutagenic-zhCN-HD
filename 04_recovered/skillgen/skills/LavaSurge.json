@@ -1,0 +1,402 @@
+[
+    {
+        "skill": {
+            "damage": 10,
+            "radius": 20,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 11,
+            "radius": 20,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 12,
+            "radius": 20,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 13,
+            "radius": 21,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 14,
+            "radius": 21,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 15,
+            "radius": 21,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 17,
+            "radius": 21,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 18,
+            "radius": 21,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 20,
+            "radius": 21,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 21,
+            "radius": 22,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 23,
+            "radius": 22,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 25,
+            "radius": 22,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 27,
+            "radius": 22,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 30,
+            "radius": 22,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 32,
+            "radius": 22,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 35,
+            "radius": 23,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 38,
+            "radius": 23,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 41,
+            "radius": 23,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 45,
+            "radius": 23,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 49,
+            "radius": 23,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 53,
+            "radius": 24,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 58,
+            "radius": 24,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 63,
+            "radius": 24,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 68,
+            "radius": 24,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 74,
+            "radius": 24,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 81,
+            "radius": 25,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 88,
+            "radius": 25,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 95,
+            "radius": 25,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 104,
+            "radius": 25,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 113,
+            "radius": 25,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 123,
+            "radius": 26,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 133,
+            "radius": 26,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 145,
+            "radius": 26,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 158,
+            "radius": 26,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 171,
+            "radius": 26,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 186,
+            "radius": 27,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 202,
+            "radius": 27,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 220,
+            "radius": 27,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 239,
+            "radius": 27,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 260,
+            "radius": 28,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 283,
+            "radius": 28,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 307,
+            "radius": 28,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 334,
+            "radius": 28,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 363,
+            "radius": 29,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 395,
+            "radius": 29,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 430,
+            "radius": 29,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 467,
+            "radius": 29,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 508,
+            "radius": 30,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 552,
+            "radius": 30,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 600,
+            "radius": 30,
+            "damage_effectiveness": 3.2,
+            "cooldown": 1
+        }
+    }
+]

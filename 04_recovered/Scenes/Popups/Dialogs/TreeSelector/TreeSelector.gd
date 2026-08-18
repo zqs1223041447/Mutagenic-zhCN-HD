@@ -1,0 +1,22 @@
+extends PopupBase
+
+var option = preload("res://Scenes/Popups/Dialogs/TreeSelector/LoadOption.tscn")
+onready var loadoptions = $MarginContainer / CenterContainer / PanelContainer / VBoxContainer / LoadOptions
+
+export var delete_enabled = true
+
+func _ready() -> void :
+				if not GameState.has_saved_trees():
+								$MarginContainer / CenterContainer / PanelContainer / VBoxContainer / NoneLabel.visible = true
+				else:
+								for tree in GameState.get_saved_trees():
+												var o = option.instance()
+												o.tree_name = tree
+												o.delete_enabled = delete_enabled
+												o.connect("loaded", self, "queue_free")
+												loadoptions.add_child(o)
+
+				$MarginContainer / CenterContainer / PanelContainer / VBoxContainer / HBoxContainer3 / CloseButton.grab_focus()
+
+func _on_CloseButton_pressed() -> void :
+				PopupManager.pop_popup()

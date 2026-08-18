@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/StatusEffects/DamageAilments/Freeze.gd" type="Script" id=1]
+[ext_resource path="res://sprites/status_effects/frozen.png" type="Texture" id=2]
+
+[node name="Freeze" type="Node"]
+script = ExtResource( 1 )
+recompute_stats = false
+description = "Frozen"
+texture = ExtResource( 2 )
+is_ailment = true
+only_apply_strongest = true
+base_lifetime = 0.25
+unique_group = "Freeze"
+does_tick = false

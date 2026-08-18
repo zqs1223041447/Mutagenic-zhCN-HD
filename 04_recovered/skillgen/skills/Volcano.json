@@ -1,0 +1,652 @@
+[
+    {
+        "skill": {
+            "damage": 18,
+            "projectile_count": 1,
+            "radius": 25,
+            "base_duration": 2.0,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 20,
+            "projectile_count": 1,
+            "radius": 25,
+            "base_duration": 2.01,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 21,
+            "projectile_count": 1,
+            "radius": 25,
+            "base_duration": 2.02,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 23,
+            "projectile_count": 1,
+            "radius": 26,
+            "base_duration": 2.03,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 25,
+            "projectile_count": 1,
+            "radius": 26,
+            "base_duration": 2.04,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 27,
+            "projectile_count": 1,
+            "radius": 26,
+            "base_duration": 2.05,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 30,
+            "projectile_count": 1,
+            "radius": 26,
+            "base_duration": 2.06,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 32,
+            "projectile_count": 1,
+            "radius": 26,
+            "base_duration": 2.06,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 35,
+            "projectile_count": 1,
+            "radius": 26,
+            "base_duration": 2.07,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 38,
+            "projectile_count": 1,
+            "radius": 27,
+            "base_duration": 2.08,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 42,
+            "projectile_count": 1,
+            "radius": 27,
+            "base_duration": 2.09,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 45,
+            "projectile_count": 1,
+            "radius": 27,
+            "base_duration": 2.1,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 49,
+            "projectile_count": 1,
+            "radius": 27,
+            "base_duration": 2.11,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 53,
+            "projectile_count": 1,
+            "radius": 27,
+            "base_duration": 2.12,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 58,
+            "projectile_count": 1,
+            "radius": 28,
+            "base_duration": 2.13,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 63,
+            "projectile_count": 1,
+            "radius": 28,
+            "base_duration": 2.14,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 69,
+            "projectile_count": 1,
+            "radius": 28,
+            "base_duration": 2.15,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 75,
+            "projectile_count": 1,
+            "radius": 28,
+            "base_duration": 2.16,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 81,
+            "projectile_count": 1,
+            "radius": 28,
+            "base_duration": 2.17,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 88,
+            "projectile_count": 1,
+            "radius": 28,
+            "base_duration": 2.18,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 96,
+            "projectile_count": 1,
+            "radius": 29,
+            "base_duration": 2.19,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 104,
+            "projectile_count": 1,
+            "radius": 29,
+            "base_duration": 2.2,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 113,
+            "projectile_count": 1,
+            "radius": 29,
+            "base_duration": 2.21,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 123,
+            "projectile_count": 1,
+            "radius": 29,
+            "base_duration": 2.22,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 134,
+            "projectile_count": 1,
+            "radius": 29,
+            "base_duration": 2.23,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 145,
+            "projectile_count": 1,
+            "radius": 30,
+            "base_duration": 2.24,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 158,
+            "projectile_count": 1,
+            "radius": 30,
+            "base_duration": 2.25,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 172,
+            "projectile_count": 1,
+            "radius": 30,
+            "base_duration": 2.26,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 187,
+            "projectile_count": 1,
+            "radius": 30,
+            "base_duration": 2.27,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 203,
+            "projectile_count": 1,
+            "radius": 31,
+            "base_duration": 2.28,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 221,
+            "projectile_count": 1,
+            "radius": 31,
+            "base_duration": 2.29,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 240,
+            "projectile_count": 1,
+            "radius": 31,
+            "base_duration": 2.3,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 261,
+            "projectile_count": 1,
+            "radius": 31,
+            "base_duration": 2.31,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 284,
+            "projectile_count": 1,
+            "radius": 31,
+            "base_duration": 2.32,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 308,
+            "projectile_count": 1,
+            "radius": 32,
+            "base_duration": 2.33,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 335,
+            "projectile_count": 1,
+            "radius": 32,
+            "base_duration": 2.35,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 364,
+            "projectile_count": 1,
+            "radius": 32,
+            "base_duration": 2.36,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 396,
+            "projectile_count": 1,
+            "radius": 32,
+            "base_duration": 2.37,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 431,
+            "projectile_count": 1,
+            "radius": 32,
+            "base_duration": 2.38,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 468,
+            "projectile_count": 1,
+            "radius": 33,
+            "base_duration": 2.39,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 509,
+            "projectile_count": 1,
+            "radius": 33,
+            "base_duration": 2.4,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 553,
+            "projectile_count": 1,
+            "radius": 33,
+            "base_duration": 2.41,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 602,
+            "projectile_count": 1,
+            "radius": 33,
+            "base_duration": 2.42,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 654,
+            "projectile_count": 1,
+            "radius": 34,
+            "base_duration": 2.43,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 711,
+            "projectile_count": 1,
+            "radius": 34,
+            "base_duration": 2.44,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 773,
+            "projectile_count": 1,
+            "radius": 34,
+            "base_duration": 2.45,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 841,
+            "projectile_count": 1,
+            "radius": 34,
+            "base_duration": 2.47,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 914,
+            "projectile_count": 1,
+            "radius": 35,
+            "base_duration": 2.48,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 993,
+            "projectile_count": 1,
+            "radius": 35,
+            "base_duration": 2.49,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    },
+    {
+        "skill": {
+            "damage": 1080,
+            "projectile_count": 1,
+            "radius": 35,
+            "base_duration": 2.5,
+            "projectile_speed": 80,
+            "crit_chance": 0.04,
+            "crit_multi": 0.0,
+            "damage_effectiveness": 0.6,
+            "cooldown": 1.5
+        }
+    }
+]

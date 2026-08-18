@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Skills/Auras/GenericAura.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Skills/Auras/FireAura/FireAura.gd" type="Script" id=2]
+[ext_resource path="res://sprites/aura_effects/fire_aura.aseprite" type="SpriteFrames" id=3]
+[ext_resource path="res://sprites/aura_effects/fire_aura.png" type="Texture" id=4]
+[ext_resource path="res://sprites/status_effects/fire_aura.png" type="Texture" id=5]
+
+[sub_resource type="CircleShape2D" id=7]
+resource_local_to_scene = true
+
+[node name="FireAura" instance=ExtResource( 1 )]
+modulate = Color( 1, 1, 1, 0.392157 )
+script = ExtResource( 2 )
+texture = ExtResource( 4 )
+is_castable = false
+is_ally_buff = true
+status_effect_description = "Flame Aura"
+status_effect_texture = ExtResource( 5 )
+
+[node name="Area2D" parent="." index="0"]
+collision_mask = 3
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource( 7 )
+
+[node name="AnimatedSprite" parent="." index="1"]
+frames = ExtResource( 3 )

@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Tooltips/GeneTooltip/GeneTooltip.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/gui/radio_checked.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/rsans.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+outline_size = 1
+outline_color = Color( 0.0103451, 0.0103451, 0.0117188, 1 )
+font_data = ExtResource( 4 )
+
+[node name="GeneButtonContainer" type="HBoxContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+script = ExtResource( 1 )
+
+[node name="GeneButton" type="Button" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+size_flags_horizontal = 3
+custom_constants/hseparation = 4
+expand_icon = true
+
+[node name="GeneTooltip" parent="GeneButton" instance=ExtResource( 2 )]
+visible = false
+
+[node name="EquippedIcon" type="TextureRect" parent="GeneButton"]
+visible = false
+modulate = Color( 0.294118, 0.65098, 0.27451, 1 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -16.0
+margin_top = -16.0
+texture = ExtResource( 3 )
+
+[node name="NewLabel" type="Label" parent="GeneButton"]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -26.0
+margin_top = -7.0
+margin_right = 14.0
+margin_bottom = 10.0
+custom_colors/font_color = Color( 0.294118, 0.65098, 0.27451, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "NEW"
+align = 1
+
+[connection signal="focus_entered" from="GeneButton" to="." method="_on_GeneButton_focus_entered"]
+[connection signal="focus_exited" from="GeneButton" to="." method="_on_GeneButton_focus_exited"]
+[connection signal="gui_input" from="GeneButton" to="." method="_on_GeneButton_gui_input"]
+[connection signal="mouse_entered" from="GeneButton" to="." method="_on_GeneButton_mouse_entered"]
+[connection signal="mouse_exited" from="GeneButton" to="." method="_on_GeneButton_mouse_exited"]
+[connection signal="pressed" from="GeneButton" to="." method="_on_GeneButton_pressed"]

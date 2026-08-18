@@ -1,0 +1,852 @@
+[
+    {
+        "skill": {
+            "radius": 60
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 15.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.08,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 15.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.08,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 16.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.08,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 62
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 16.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.08,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 16.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.09,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 16.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.09,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 64
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 17.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.09,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 17.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.09,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 17.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.09,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 66
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 18.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.09,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 18.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.1,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 18.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.1,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 68
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 18.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.1,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 19.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.1,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 19.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.1,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 70
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 19.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 71
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 20.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 20.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 20.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 73
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 21.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 74
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 21.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.12,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 22.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.12,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 22.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.12,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 76
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 22.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.12,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 77
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 23.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 78
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 23.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 79
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 24.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 24.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 24.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.14,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 81
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 25.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.14,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 82
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 25.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.14,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 83
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 26.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.14,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 84
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 26.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.15,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 85
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 27.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.15,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 27.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.15,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 27.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.15,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 87
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 28.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 88
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 28.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 89
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 29.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 90
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 29.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.17,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 91
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 30.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.17,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 92
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 30.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.17,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 93
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 31.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 94
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 32.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 95
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 32.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 96
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 33.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.19,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 97
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 33.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.19,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 98
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 34.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.19,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 99
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 34.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.2,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 100
+        },
+        "aura": {
+            "movement_speed": [
+                {
+                    "amount": 35.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.2,
+                    "type": "percent"
+                }
+            ]
+        }
+    }
+]

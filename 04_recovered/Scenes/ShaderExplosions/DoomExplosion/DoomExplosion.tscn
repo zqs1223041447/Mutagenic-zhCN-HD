@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/ShaderExplosions/ShaderExplosion.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/ShaderExplosions/DoomExplosion/DoomExplosion.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/ShaderExplosions/RippleShader.tres" type="Shader" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 3 )
+shader_param/color = Color( 0.180392, 0.0784314, 0.360784, 1 )
+shader_param/pct_done = 0.0
+shader_param/burst_width = 0.21
+shader_param/start_amount = 0.5
+
+[node name="DoomExplosion" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="ColorRect" parent="." index="0"]
+material = SubResource( 1 )
+color = Color( 1, 1, 1, 0 )

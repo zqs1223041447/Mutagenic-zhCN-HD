@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Particles/VolcanoOrbExplosion.gd" type="Script" id=1]
+[ext_resource path="res://sprites/effects/blood.png" type="Texture" id=2]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.932115 )
+colors = PoolColorArray( 0.980392, 0.317647, 0.027451, 0.478431, 0.12549, 0.121569, 0.0980392, 0.258824 )
+
+[sub_resource type="GradientTexture" id=7]
+gradient = SubResource( 2 )
+
+[sub_resource type="Curve" id=8]
+_data = [ Vector2( 0, 0.382955 ), 0.0, 0.0, 0, 0, Vector2( 0.120141, 0.973864 ), 0.0, 0.0, 0, 0, Vector2( 0.575972, 0.101136 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=9]
+curve = SubResource( 8 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 30.0
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 25.0
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 180.0
+angle_random = 1.0
+scale = 8.0
+scale_curve = SubResource( 9 )
+color_ramp = SubResource( 7 )
+hue_variation = 0.07
+hue_variation_random = 0.18
+
+[node name="VolcanoOrbExplosion" type="Particles2D"]
+amount = 1
+lifetime = 0.8
+explosiveness = 1.0
+process_material = SubResource( 6 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

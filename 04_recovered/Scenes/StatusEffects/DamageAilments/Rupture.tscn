@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/StatusEffects/DamageAilments/Rupture.gd" type="Script" id=1]
+[ext_resource path="res://sprites/status_effects/ruptured.png" type="Texture" id=2]
+
+[node name="Rupture" type="Node"]
+script = ExtResource( 1 )
+recompute_stats = false
+description = "Ruptured"
+texture = ExtResource( 2 )
+is_ailment = true
+does_ramp = true
+damage_combine_group = "Rupture"
+is_damaging_ailment = true
+base_lifetime = 2.0
+unique_group = "Rupture"

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/StatusEffects/Skills/BondedElectrons.gd" type="Script" id=1]
+[ext_resource path="res://sprites/status_effects_new/bonded_electrons.png" type="Texture" id=2]
+
+[node name="BondedElectrons" type="Node"]
+script = ExtResource( 1 )
+permanent = true
+description = "Bonded Electrons"
+texture = ExtResource( 2 )
+unique_group = "BondedElectrons"
+is_unique_status_flag = true

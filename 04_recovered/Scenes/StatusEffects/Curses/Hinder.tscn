@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/skills/hinder.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/StatusEffects/Curses/Hinder.gd" type="Script" id=2]
+
+[node name="Hinder" type="Node"]
+script = ExtResource( 2 )
+description = "Hinder"
+texture = ExtResource( 1 )
+only_apply_strongest = true
+unique_group = "Hinder"

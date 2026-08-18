@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Levels/BaseLevel.gd" type="Script" id=1]
+[ext_resource path="res://Sounds/BackgroundMusic/AMBIENCE_UNDERGROUND_TUNNEL_LOOP.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Scenes/Levels/NavMesh.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Minimap/Minimap.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Levels/GenericTileset.tres" type="TileSet" id=5]
+
+[node name="BaseLevel" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 2 )
+bus = "Music"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 160, 160 )
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground/ParallaxLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 3840, 2160 )
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+margin_right = 960.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 3840, 2160 )
+mouse_filter = 2
+expand = true
+stretch_mode = 2
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = -4096
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 32
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+collision_layer = 256
+collision_mask = 0
+format = 1
+
+[node name="NavMesh" parent="." instance=ExtResource( 3 )]
+
+[node name="Minimap" parent="." instance=ExtResource( 4 )]
+
+[node name="MobDisabler" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="MobDisabler" to="." method="_on_MobDisabler_timeout"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/StatusEffects/Curses/Scorch.gd" type="Script" id=1]
+[ext_resource path="res://sprites/skills/scorch.png" type="Texture" id=2]
+
+[node name="Scorch" type="Node"]
+script = ExtResource( 1 )
+description = "Scorch"
+texture = ExtResource( 2 )
+only_apply_strongest = true
+unique_group = "Scorch"

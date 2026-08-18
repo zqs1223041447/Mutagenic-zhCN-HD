@@ -1,0 +1,516 @@
+GDRE Tools v2.6.4
+Windows 10.0.19045, headless
+Opening file: F:/SteamLibrary/steamapps/common/Mutagenic/00_original/Mutagenic.exe
+Forcing bytecode revision: a7aad78
+Loaded 1643 imported files
+Detected Engine Version: 3.5.3
+Detected Bytecode Revision: 3.5.0-stable (a7aad78)
+Successfully loaded PCK!
+Version: 3.5.3
+Verified 3744 files, no errors detected!
+Extracted 3744 files, no errors detected!
+Recreating plugin configs...
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     524
+Scripts not decompiled:                 0
+Imported resources for export session:  1643
+Successfully converted:                 1181
+Lossy:                                  0
+Rewrote metadata:                       0
+Non-importable conversions:             0
+Not converted:                          462
+Failed conversions:                     0
+-------------
+
+------
+
+The following files were not converted because support has not been implemented yet:
+res://.import/tileset_pit.aseprite-42c6569b25c16e64a4bd9c21c45962b3.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to tileset_pit.aseprite
+res://.import/base_achievement.aseprite-e261e8b4b4e1f96061d940dacf536cfb.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to base_achievement.aseprite
+res://.import/base_achievement_achieved.aseprite-a9f51818acfd6d35a93348677e53ed4e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to base_achievement_achieved.aseprite
+res://.import/base_achievement_unachieved.aseprite-eb7e0c6410ccce0ad35474fefd97d141.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to base_achievement_unachieved.aseprite
+res://.import/becoming_heroic.aseprite-9a0ddbe6c73f5561686fa8524ea4c295.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to becoming_heroic.aseprite
+res://.import/becoming_possibilities.aseprite-7ec8700fb306c5f864fd36c983970bdf.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to becoming_possibilities.aseprite
+res://.import/becoming_unique.aseprite-cd133087b86469c72bcfa5d6349a685b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to becoming_unique.aseprite
+res://.import/capable_learner.aseprite-839656c2f430a22a9dc58885c7cdff3a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to capable_learner.aseprite
+res://.import/down_to_basics.aseprite-82e99cfcfdba22022b0166000e82b27c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to down_to_basics.aseprite
+res://.import/gameplay_mechanic.aseprite-004506a437e3e76c869dd9bbaf4910da.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gameplay_mechanic.aseprite
+res://.import/gamer_one.aseprite-eececdcb706ac562f0653d0eff7c80be.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gamer_one.aseprite
+res://.import/gamer_three.aseprite-a9e16c2d2e98c964f6ce12f9677bf76a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gamer_three.aseprite
+res://.import/gamer_two.aseprite-3d290d86b475d61993faa44dcf398f0e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gamer_two.aseprite
+res://.import/growing_stronger.aseprite-bbf16069cccbe8cd1c5b9de04d0874cf.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to growing_stronger.aseprite
+res://.import/knowledge_is_power.aseprite-b55ee0c2edaaf81435b5c5eeca1fba16.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to knowledge_is_power.aseprite
+res://.import/masochist_one.aseprite-de11b931c67deb3d7a6902f4d4f96800.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to masochist_one.aseprite
+res://.import/masochist_three.aseprite-51538747633b277c060673a8e2281f4a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to masochist_three.aseprite
+res://.import/masochist_two.aseprite-6b2507f9005f816f599b519a40ac26a5.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to masochist_two.aseprite
+res://.import/theory_one.aseprite-062227fcb82250642b5725427761c1f2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to theory_one.aseprite
+res://.import/theory_three.aseprite-a444fdb78d3391a608f9fafaf180493d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to theory_three.aseprite
+res://.import/theory_two.aseprite-54ab7e407c0457a080525a8cea113e74.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to theory_two.aseprite
+res://.import/amplification.aseprite-8daea1899a24bf781100d4d0575c2975.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to amplification.aseprite
+res://.import/cold_aura.aseprite-a20ce997aacc33114aa8189ac494a81b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to cold_aura.aseprite
+res://.import/dot_aura.aseprite-92c2dd24caa239f5147df7360af927c9.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to dot_aura.aseprite
+res://.import/fire_aura.aseprite-c03ee11ef65a8379e2563181bce97071.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to fire_aura.aseprite
+res://.import/honing.aseprite-61b793b79724f98b09cf5d3dc3c2f36b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to honing.aseprite
+res://.import/lightning_aura.aseprite-de641fc39bf92363a047c20b568a65a3.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to lightning_aura.aseprite
+res://.import/physical_aura.aseprite-aea6998bb72f1e7fa06793b575d2eb03.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to physical_aura.aseprite
+res://.import/regeneration.aseprite-d63821e4a96df4e605a727078c7773ab.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to regeneration.aseprite
+res://.import/resilience.aseprite-d897c219f542c05397f4c78799642208.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to resilience.aseprite
+res://.import/rush.aseprite-6b472939ea96e8dbeb8931f226edb48e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to rush.aseprite
+res://.import/sturdiness.aseprite-f86809e179130dbe3c72aea4564a16c7.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to sturdiness.aseprite
+res://.import/toxic_aura.aseprite-f15708509e29494d021bc6103ab22d16.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to toxic_aura.aseprite
+res://.import/vile_domain.aseprite-2fe7c54ff10b8a7e5435f9151d457c2a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to vile_domain.aseprite
+res://.import/background_tile.aseprite-876ae96a3c993e746087bb733fcc77a2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to background_tile.aseprite
+res://.import/cave.aseprite-5307333e50c333b0ad33796c8915d5a6.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to cave.aseprite
+res://.import/base_canvas.aseprite-3220f974d665936625a3b52d6ab1976a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to base_canvas.aseprite
+res://.import/armor_belt.aseprite-264fa64f0152b295ec162098b802a5f3.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to armor_belt.aseprite
+res://.import/armor_body.aseprite-1bc98136e04945270a1040417b1ab4f0.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to armor_body.aseprite
+res://.import/armor_boots.aseprite-4844f503d047818e62eb03ab597d8828.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to armor_boots.aseprite
+res://.import/armor_gloves.aseprite-9417797e385cb0add307bc7e8293897c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to armor_gloves.aseprite
+res://.import/armor_helmet.aseprite-d311bc060fc411c61ebc138682fd147f.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to armor_helmet.aseprite
+res://.import/armor_pants.aseprite-71322b9ffdc4259735c67ab21a2070f0.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to armor_pants.aseprite
+res://.import/armor_shield.aseprite-8cfe466d78de0d1b4c37bdcb91d4bc0b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to armor_shield.aseprite
+res://.import/attack_amulet.aseprite-e3e19ba0537ae8b1e333f24925d5d59f.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to attack_amulet.aseprite
+res://.import/attack_ring.aseprite-934653c2bc59938b1c03f06aee1d013d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to attack_ring.aseprite
+res://.import/caster_amulet.aseprite-96ad48f7aa50912edd4768a5562625db.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to caster_amulet.aseprite
+res://.import/caster_belt.aseprite-1e62338072b35cfb3f61265bbd5978a1.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to caster_belt.aseprite
+res://.import/caster_body.aseprite-648124232de1a98d724236af221ca8c3.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to caster_body.aseprite
+res://.import/caster_boots.aseprite-27e6475468ba7c5c673c28e8030ff846.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to caster_boots.aseprite
+res://.import/caster_gloves.aseprite-1f92c7955ce7d9fc12664bc1a862d269.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to caster_gloves.aseprite
+res://.import/caster_helmet.aseprite-352100f2c15378bae8a36d710dcd5775.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to caster_helmet.aseprite
+res://.import/caster_pants.aseprite-8f17bb9dcc5ed739b1e57cc54c297ecb.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to caster_pants.aseprite
+res://.import/caster_ring.aseprite-50f3ec4ab42d1a8cdf9e60961a507889.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to caster_ring.aseprite
+res://.import/caster_shield.aseprite-5ab5f5527233e194e0533e270dacb4a6.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to caster_shield.aseprite
+res://.import/caster_weapon.aseprite-be238fd13ca184b3863eed2ade0ce5e2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to caster_weapon.aseprite
+res://.import/evasion_belt.aseprite-f7ec79d68707d22a951c8f034a79287c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to evasion_belt.aseprite
+res://.import/evasion_body.aseprite-97ea65367c00c8e8f9fc90aee9aea522.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to evasion_body.aseprite
+res://.import/evasion_boots.aseprite-9c8f6e049dadb6f5c5ae81663071a31c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to evasion_boots.aseprite
+res://.import/evasion_gloves.aseprite-42736f93c6d81716d1d7b95b6de65ae8.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to evasion_gloves.aseprite
+res://.import/evasion_helmet.aseprite-e3a804702730bfd7eae8d32a03c004be.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to evasion_helmet.aseprite
+res://.import/evasion_pants.aseprite-8da0b2a59f4e888a5e9d2beb141239a2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to evasion_pants.aseprite
+res://.import/evasion_shield.aseprite-ea5f05acc054176ea3b2a8f318b5893f.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to evasion_shield.aseprite
+res://.import/hybrid_belt.aseprite-3bfbb2bba9b6e7edb4b6d1cc9f47ed29.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to hybrid_belt.aseprite
+res://.import/hybrid_body.aseprite-9c95963b3f2ed5b41ffb95809d778ca3.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to hybrid_body.aseprite
+res://.import/hybrid_boots.aseprite-a6a7401a2f6ad7e4a856471e9a0f2e7d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to hybrid_boots.aseprite
+res://.import/hybrid_gloves.aseprite-ae94be815afc950193054450de4bd03b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to hybrid_gloves.aseprite
+res://.import/hybrid_helmet.aseprite-031bef80f3027ed70a4f9277d5351a33.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to hybrid_helmet.aseprite
+res://.import/hybrid_pants.aseprite-e43d908a48266f4581188d96135d85d4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to hybrid_pants.aseprite
+res://.import/hybrid_shield.aseprite-06432dcacdbf31e7cd9fd7106cd71fb0.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to hybrid_shield.aseprite
+res://.import/life_amulet.aseprite-562d831a1ca0f77080a4fd64b85b27f5.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to life_amulet.aseprite
+res://.import/life_belt.aseprite-cd465f8778f89c5de9b515d7b26f8e45.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to life_belt.aseprite
+res://.import/life_body.aseprite-66ca9ba05eb013a0b2fc63f2150cb4f4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to life_body.aseprite
+res://.import/life_boots.aseprite-9d3e1b80dbbb3e834faab5ce4da6dfc1.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to life_boots.aseprite
+res://.import/life_gloves.aseprite-8c95ef6c81d8ac04e12a4235439a891b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to life_gloves.aseprite
+res://.import/life_helmet.aseprite-0c21b0d33ef8627449c55551768bf43d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to life_helmet.aseprite
+res://.import/life_pants.aseprite-b9be6594d89f9db94d2358f002dab5b8.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to life_pants.aseprite
+res://.import/life_ring.aseprite-b2c417ce655dc4269c1b40634f2f2ca6.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to life_ring.aseprite
+res://.import/life_shield.aseprite-004067cc7a408b4ff3be42a8a68ac039.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to life_shield.aseprite
+res://.import/melee_weapon.aseprite-ab1b17ec7dc9ae9e166faaf188e5c00d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to melee_weapon.aseprite
+res://.import/minor_buff.aseprite-b5ee8892b050fe8724a1c06e04266e08.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to minor_buff.aseprite
+res://.import/ranged_weapon.aseprite-aee2e371e2c960f91a8ecb64f757ae22.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ranged_weapon.aseprite
+res://.import/resistant_amulet.aseprite-29ad703149f575623cb6a7afc28285ec.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to resistant_amulet.aseprite
+res://.import/resistant_ring.aseprite-4dff38c30f5f1a8b84091124b1be19ed.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to resistant_ring.aseprite
+res://.import/adrenaline.aseprite-aa8e7712a2f5b91c9e49288bfd738113.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to adrenaline.aseprite
+res://.import/bleed.aseprite-3cb923d09dec63bccb0286b8bab82eb4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to bleed.aseprite
+res://.import/burnt.aseprite-73c701137f75fa218935e9e8b777796e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to burnt.aseprite
+res://.import/chill.aseprite-cdcf87f41d63157c6de7b3bfb11805b3.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to chill.aseprite
+res://.import/conductive.aseprite-f5b4ee2aa3adebcd362d1eb1002e5b07.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to conductive.aseprite
+res://.import/cycle_of_destruction.aseprite-eb5f69c9a820416156258cf444713a42.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to cycle_of_destruction.aseprite
+res://.import/endurance.aseprite-6d4287336ad2ff66fe7fccdff986b275.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to endurance.aseprite
+res://.import/exposed.aseprite-1216d264e7d1f7b052517ecb6061ee96.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to exposed.aseprite
+res://.import/growing_pain.aseprite-c67be4e0e93ebf336b8057e8a1c2d26b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to growing_pain.aseprite
+res://.import/jolt.aseprite-42a99f33459c42fae9612193f3ef5697.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to jolt.aseprite
+res://.import/kill_momentum.aseprite-42719a1ca28eed70155187638162dd83.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to kill_momentum.aseprite
+res://.import/phantom_shield.aseprite-a9621e5482b95c2ef91e702227f078f4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to phantom_shield.aseprite
+res://.import/plague_runner.aseprite-9aa344e26720a657c7b361e8bf082d0c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to plague_runner.aseprite
+res://.import/plagued.aseprite-bf54bdd6bb7b5886903b1678d3efd4ae.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to plagued.aseprite
+res://.import/poison.aseprite-09a94b3a73cc5c2647c01493ea799e1c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to poison.aseprite
+res://.import/regenerative_flesh.aseprite-7e1afcf83940adc5426740daddc6ee62.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to regenerative_flesh.aseprite
+res://.import/spike_armor.aseprite-65f9840e55b95b4115dcc6594470ac43.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to spike_armor.aseprite
+res://.import/unleash.aseprite-8295ca6b27a7b197ae7d186bbf0a91ed.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to unleash.aseprite
+res://.import/vampiric_skin.aseprite-1d5bfeeb9b093bc3aba896fb1023c741.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to vampiric_skin.aseprite
+res://.import/vulnerable.aseprite-30b48c75956fc6cc4a6cd441ed42f912.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to vulnerable.aseprite
+res://.import/executioner.aseprite-324bcbdd58d1fea39107bb52743060b8.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to executioner.aseprite
+res://.import/fire_mage.aseprite-1314313304527df45d2f485011a28fbf.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to fire_mage.aseprite
+res://.import/gila.aseprite-77682ff60c0596c0c08d593c4e24653e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gila.aseprite
+res://.import/ice_mage.aseprite-933f4748d4a99ce6175529aa052dc036.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ice_mage.aseprite
+res://.import/lightning_mage.aseprite-2f54659dfa5b099b4dfbe77c0b118157.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to lightning_mage.aseprite
+res://.import/moonton.aseprite-e8d53eb46ab8b2eae17fd7d7ed03f0e8.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to moonton.aseprite
+res://.import/pixie.aseprite-2163f3c8c0092bc1f6ec9f6756d3c69f.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to pixie.aseprite
+res://.import/poison_mage.aseprite-caa933c203dd7f7b78ae807bc3f4f6d6.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to poison_mage.aseprite
+res://.import/sabo.aseprite-32fa0533acd83f150bcef660d2860dc5.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to sabo.aseprite
+res://.import/soldier.aseprite-58f8741b4df7d44e444599862f76bc94.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to soldier.aseprite
+res://.import/vassa.aseprite-c04a2ec756d628f9d99dc430c6ef120c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to vassa.aseprite
+res://.import/zora.aseprite-c5e111cc746b1688d7aec311cd444d34.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to zora.aseprite
+res://.import/absorb.aseprite-4cba353e03fc400e662daa3b5b2d05a5.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to absorb.aseprite
+res://.import/blue_orb.aseprite-ebf8c5a5e66da55f40cb0ab823048c0f.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to blue_orb.aseprite
+res://.import/corruption.aseprite-b2c63e95c8e36e0a4afd61f4261dd515.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to corruption.aseprite
+res://.import/damage_up.aseprite-ae92c45c68b42758047d4bb6f8b84fb2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to damage_up.aseprite
+res://.import/frenzy_pickup.aseprite-7de05c84b877d1cd5aec8fb121eccf3a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to frenzy_pickup.aseprite
+res://.import/gold_orb.aseprite-ef050d197995f716b021966e8a36caff.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gold_orb.aseprite
+res://.import/green_orb.aseprite-5e3d6e4743877acb04cc0a7a6b9862f0.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to green_orb.aseprite
+res://.import/health.aseprite-40ca2eb5617583d22436f0b7942422a5.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to health.aseprite
+res://.import/implant_drop.aseprite-276c01ea8b4d6c42c6a0bf954173a8da.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to implant_drop.aseprite
+res://.import/locked_treasure.aseprite-88de485ec5e7676f5c071577b6301a39.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to locked_treasure.aseprite
+res://.import/magnifier.aseprite-deca22631883415307f01e5d34902b26.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to magnifier.aseprite
+res://.import/red_orb.aseprite-a7ab315f00b6159c96ce15295871f1a4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to red_orb.aseprite
+res://.import/regenerative_flesh.aseprite-26d6d1c678746ff300e467d713a56008.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to regenerative_flesh.aseprite
+res://.import/teardrop.aseprite-6d08602435dfc4285c2f4484d184b26f.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to teardrop.aseprite
+res://.import/treasure.aseprite-9e6bbd4e10e6a501c1755d3c09464212.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to treasure.aseprite
+res://.import/unique_glow.aseprite-d19a132b1c7210881a2a36dba020e937.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to unique_glow.aseprite
+res://.import/blood.aseprite-00ae7c821d61c37d5e4fea069cedb6ab.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to blood.aseprite
+res://.import/blood_slash.aseprite-4ba37a68e80b53d4ab50074f99140ec7.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to blood_slash.aseprite
+res://.import/curse.aseprite-29e1c151310bcae400755e99fd2e901e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to curse.aseprite
+res://.import/earth_spike.aseprite-9275cad90508327dec68d80adcd42f1e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to earth_spike.aseprite
+res://.import/glow.aseprite-ea1c8268767a4f5d8be34a3e1f0ddf99.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to glow.aseprite
+res://.import/lightning_sparks.aseprite-221302ec03a873fb41ebe5186c02a279.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to lightning_sparks.aseprite
+res://.import/orb.aseprite-5cd251b57b9c8a2d0c9998e4ca35c5d8.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to orb.aseprite
+res://.import/shadow.aseprite-31b8e6f2d4a0829bbc02c208ed94f55c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shadow.aseprite
+res://.import/shatter.aseprite-8a4ef02025b3c175d8a922d6742f41c8.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shatter.aseprite
+res://.import/shielded.aseprite-7f9e583cc32395ccc828783ec567e314.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shielded.aseprite
+res://.import/shotgun_bullet.aseprite-26c615001b45400ee128896b3b6506cf.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shotgun_bullet.aseprite
+res://.import/slash.aseprite-399f047910d7f9278b45c90c7604a8c9.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to slash.aseprite
+res://.import/smoke.aseprite-62a6d4e240df2c6ba207850e454b42d6.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to smoke.aseprite
+res://.import/brazier.aseprite-97a53f72c19be7377cf99b3307867d53.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to brazier.aseprite
+res://.import/portal.aseprite-12e3f2ec8cd22f07bd34a6fa6e4ef7d9.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to portal.aseprite
+res://.import/eyes.aseprite-37e9c3aa21e5fd26b66a5bec82ccb1c1.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to eyes.aseprite
+res://.import/active.aseprite-83d8a9125cba7616452d7e32fab08d73.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to active.aseprite
+res://.import/arrow_down.aseprite-54f13ffd04f9a3f4ae4d5f5b7de350c1.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to arrow_down.aseprite
+res://.import/arrow_left.aseprite-9a045dcd9f242f7f726c6f125e311ae8.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to arrow_left.aseprite
+res://.import/arrow_right.aseprite-9350487b156f1d6ea6f343de893ee6bf.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to arrow_right.aseprite
+res://.import/arrow_to_portal.aseprite-3362cb31b867d063a2e53a4746f74338.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to arrow_to_portal.aseprite
+res://.import/arrow_up.aseprite-16f5d656ec963efd37e691d127e9d369.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to arrow_up.aseprite
+res://.import/buff_background.aseprite-a719afda192ff23620b1d07103cdceba.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to buff_background.aseprite
+res://.import/mage_icon.aseprite-e83ebd0af3fff173d99f2f6655da405a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to mage_icon.aseprite
+res://.import/rogue_icon.aseprite-b25a531bea8092623cd838c3b4aee413.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to rogue_icon.aseprite
+res://.import/tank_icon.aseprite-035ab62fb03c035b20625f937fcaad9c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to tank_icon.aseprite
+res://.import/warrior_icon.aseprite-97558f03fb0562e32c5b19cb8d112b73.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to warrior_icon.aseprite
+res://.import/cursor.aseprite-60c70b954ad7bec8fb85a6b731732ac3.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to cursor.aseprite
+res://.import/amulet_slot.aseprite-01b2a46d6f6e4e39385bf1a8f4b51ecd.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to amulet_slot.aseprite
+res://.import/belt_slot.aseprite-9d5af60b5599fdb9dccc2d406b36a086.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to belt_slot.aseprite
+res://.import/body_slot.aseprite-18840af4968addd4fc2cd2bcf7b41f64.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to body_slot.aseprite
+res://.import/boots_slot.aseprite-2b2f9e1cbd28f4b122ecc074ba2dbaf4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to boots_slot.aseprite
+res://.import/glove_slot.aseprite-680d52c6ba1dc5363864273e7d422623.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to glove_slot.aseprite
+res://.import/helmet_slot.aseprite-8e73572059e5a20a1a84ac43bed62ac2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to helmet_slot.aseprite
+res://.import/minor_buff.aseprite-3311f16dbbf8b89c1f0142a25b2a9c9a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to minor_buff.aseprite
+res://.import/minor_buff_slot.aseprite-2c215dd4ecd071e8d893660ac0f3b4ba.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to minor_buff_slot.aseprite
+res://.import/pants_slot.aseprite-bfc69810d17d213b3b3bb1c1c61a6637.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to pants_slot.aseprite
+res://.import/ring_slot.aseprite-f8d2e26b31fafc1fb40a394591cabc28.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ring_slot.aseprite
+res://.import/weapon_slot.aseprite-806072727a1842d7b443757702b665c2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to weapon_slot.aseprite
+res://.import/gene.aseprite-2b853ed94e7d678f27a939e89636816a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gene.aseprite
+res://.import/gene_defensive.aseprite-37ccbd5959a0528206e637f3d4a363fc.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gene_defensive.aseprite
+res://.import/gene_lesser.aseprite-06bd87462b3ac0ed49645483b3aaf84a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gene_lesser.aseprite
+res://.import/gene_offensive.aseprite-041ec51af87e25524d3a0b1e9078835d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gene_offensive.aseprite
+res://.import/gene_unique.aseprite-0aa6d7469efba5a52cc88b11e3dcfe54.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gene_unique.aseprite
+res://.import/gene_utility.aseprite-5ab66731811ee22a42586e466b169e64.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gene_utility.aseprite
+res://.import/gargoyle.aseprite-7aab0a89ab30d53fe3f710b0c84a9e6e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gargoyle.aseprite
+res://.import/globe_inner.aseprite-8cff6dde8f6180b754531ea69a37ff1a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to globe_inner.aseprite
+res://.import/globe_inner_dark.aseprite-617c3fde86e9da18b426761fd24d4a9a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to globe_inner_dark.aseprite
+res://.import/globe_overlay.aseprite-903cb864535705d94d301ba75a1c6fd7.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to globe_overlay.aseprite
+res://.import/globe_ring.aseprite-ae4bb9e0c54742835210548e466b5c58.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to globe_ring.aseprite
+res://.import/ring_overlay_merged.aseprite-9b41dcd50e628aa3a4531963f4bda3f0.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ring_overlay_merged.aseprite
+res://.import/healthbar.aseprite-ee725662e6b069c3873e4aca71e03e20.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to healthbar.aseprite
+res://.import/important.aseprite-3a213465df9da175e8e2e96775000375.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to important.aseprite
+res://.import/info_button.aseprite-adaff154720b1a3426e5eeb4c045154a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to info_button.aseprite
+res://.import/keystone_passive.aseprite-45d460aad433d0926b0e3313215965ab.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to keystone_passive.aseprite
+res://.import/large_passive.aseprite-55432d79c7bce0079afdf670f72883ad.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to large_passive.aseprite
+res://.import/locked.aseprite-0e60334696df68145fff38baf31d4912.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to locked.aseprite
+res://.import/mod_tier.aseprite-17985c441831859765453e02ced5c6b2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to mod_tier.aseprite
+res://.import/ninepatch_58.aseprite-71aaba863752ef3f1097479a3b6d4181.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ninepatch_58.aseprite
+res://.import/ninepatch_58_focus.aseprite-5dd998e8d5e7c43eec8c2ffc9ac11097.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ninepatch_58_focus.aseprite
+res://.import/ninepatch_panel.aseprite-c2b00c16defddcd1be46f391a3d64d89.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ninepatch_panel.aseprite
+res://.import/ninepatch_simple.aseprite-0bc79756669584f398d26525c8cf1251.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ninepatch_simple.aseprite
+res://.import/ninepatcher.aseprite-4483f7cd732728b709b69152b9352071.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ninepatcher.aseprite
+res://.import/notice.aseprite-91a0b0e75075899ffa87f997d4ab1199.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to notice.aseprite
+res://.import/offensive_gene.aseprite-901723ae612548841aafaddbf4eef7c6.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to offensive_gene.aseprite
+res://.import/panel_9patch.aseprite-ac76fc35a681c940f69f9dc91d3d6602.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to panel_9patch.aseprite
+res://.import/agility.aseprite-ae7501be47b45aba62c4849f711651a1.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to agility.aseprite
+res://.import/ailment.aseprite-cbfe3abb0d2e47cbb28fed1cf4762198.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ailment.aseprite
+res://.import/ailment_mastery.aseprite-f1d0620c379ca810f0ee42ae30f3f662.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ailment_mastery.aseprite
+res://.import/aoe.aseprite-f5790cba0f9301d9f2ff30c8d699426e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to aoe.aseprite
+res://.import/armor.aseprite-20a7e7b10d262b9ceba1eff04268dcfb.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to armor.aseprite
+res://.import/block.aseprite-402fa2d21ba12436eeab3cb22ffa48e6.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to block.aseprite
+res://.import/bomb.aseprite-43c55572c680dbf4df1bee50d0e7281b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to bomb.aseprite
+res://.import/burning.aseprite-7fd65954a4be10ba94afe2679af5b530.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to burning.aseprite
+res://.import/chain.aseprite-0f26398417058fdf94490c1fba4f9849.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to chain.aseprite
+res://.import/cold_damage.aseprite-f982f5c2ba97afc181f646f0b8fae74a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to cold_damage.aseprite
+res://.import/curse.aseprite-691d01c798d48b896fcc5e4bd822d0e9.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to curse.aseprite
+res://.import/damage.aseprite-df6aa9eb35fc26962ca2076d6a373936.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to damage.aseprite
+res://.import/dot.aseprite-0ed1ded9ff5954530e80af184b4abea1.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to dot.aseprite
+res://.import/duration.aseprite-cb3cee1b3552cec60188a3054616167a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to duration.aseprite
+res://.import/evasion.aseprite-3016fdf602e0d3a9b4e2580269b9ad77.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to evasion.aseprite
+res://.import/fire_damage.aseprite-235c17200762f3ba280b5db282b5dd46.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to fire_damage.aseprite
+res://.import/goliath.aseprite-84051d9fa019bda9303da0264d3a4328.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to goliath.aseprite
+res://.import/haste.aseprite-9aa3a3d374e30b21dfb7f8fb45a99fa0.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to haste.aseprite
+res://.import/hit_attunement.aseprite-1e4fc41467260f2e470a74cfa6cd4883.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to hit_attunement.aseprite
+res://.import/life.aseprite-926398c9e4c1cca18e99ed449a537eef.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to life.aseprite
+res://.import/lightning_damage.aseprite-fed7fcd380e62ae0612216f10f56f4fc.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to lightning_damage.aseprite
+res://.import/movement.aseprite-8646862f054ac4cb2e8d8d97835e355b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to movement.aseprite
+res://.import/penetration.aseprite-9d3c99c8ff433d3d0c68fe1933a0e6e1.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to penetration.aseprite
+res://.import/physical_damage.aseprite-7c6c1ecd72871d245a4d58244ee8533b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to physical_damage.aseprite
+res://.import/pierce.aseprite-d8f5128e75a2bc0c10b365ec15850b66.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to pierce.aseprite
+res://.import/projectile_speed.aseprite-49596c572b5981d01ca46743c0512d70.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to projectile_speed.aseprite
+res://.import/resistance.aseprite-b5ebe3d06b20d27b9590461c24b49117.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to resistance.aseprite
+res://.import/thunderstorm.aseprite-5011fb3ff356ab2e1f3f5180df18c22a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to thunderstorm.aseprite
+res://.import/toxic_damage.aseprite-5d5f0f70be241cbe3b9c57624ab4a351.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to toxic_damage.aseprite
+res://.import/quit.aseprite-0b02a9f885dfebc579c4fd2931c9b1fa.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to quit.aseprite
+res://.import/radio_checked.aseprite-1fa7246f7134e413027d0abaefd12b38.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to radio_checked.aseprite
+res://.import/radio_unchecked.aseprite-bc7e155cc85d414d4f3fdc4ccb8a2f93.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to radio_unchecked.aseprite
+res://.import/selector.aseprite-ae0787454a53762a753e682d0888f30b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to selector.aseprite
+res://.import/extra_munitions.aseprite-dde85c969343a8d8d56d8526614522d9.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to extra_munitions.aseprite
+res://.import/sacrifice.aseprite-51d77f4607047a0bea0f9973e1e150a4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to sacrifice.aseprite
+res://.import/support_ailment.aseprite-73a8315731b62c54c615b01b477c8fb3.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_ailment.aseprite
+res://.import/support_aoe.aseprite-e89338fcc94bb2b6affe8fff32a9c3e5.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_aoe.aseprite
+res://.import/support_background.aseprite-4ddba62ec620efb03fd6d507c1b38113.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_background.aseprite
+res://.import/support_cast_on_crit.aseprite-1f5ec3c0a93edcdaa034bd5c69cb5ba5.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_cast_on_crit.aseprite
+res://.import/support_cast_on_kill.aseprite-bd68c890536347be92926650d62f264e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_cast_on_kill.aseprite
+res://.import/support_cast_speed.aseprite-f5fbd716d80a0a1ce52e2bd1bfeb36b6.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_cast_speed.aseprite
+res://.import/support_chain.aseprite-7234bdd9e9cb44311dfe02ab347ed235.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_chain.aseprite
+res://.import/support_cold.aseprite-e079008ae3024438223f8a56462cfc15.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_cold.aseprite
+res://.import/support_crit.aseprite-d86b5ce19de41cb54d16d0c4afe6a6f1.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_crit.aseprite
+res://.import/support_doom.aseprite-b1873c970b6a3f273372b0a859f64f9d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_doom.aseprite
+res://.import/support_duration.aseprite-509f624c3d43c2b92f1a1d41750bc1b7.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_duration.aseprite
+res://.import/support_fire.aseprite-5fe58a347f4434d69d30e2c332fb0b41.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_fire.aseprite
+res://.import/support_focus.aseprite-2a80526b8644291fa30dbd7edd1fd3fb.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_focus.aseprite
+res://.import/support_lightning.aseprite-10bb70ec392fd15002c2532982c8c48b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_lightning.aseprite
+res://.import/support_physical.aseprite-9cb4867fe6a968d10b95408936a427c3.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_physical.aseprite
+res://.import/support_pierce.aseprite-51d916e106c2dc17f9dce8a4a7f3e068.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_pierce.aseprite
+res://.import/support_projectile_speed.aseprite-dc330a3874684a271fe0812a8b4323bd.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_projectile_speed.aseprite
+res://.import/support_proliferate.aseprite-2a024e33627e69489ace50dd067d21c1.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_proliferate.aseprite
+res://.import/support_sacrifice.aseprite-997e0ab434f55edab0bf7d53aaac76f2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_sacrifice.aseprite
+res://.import/support_sniper.aseprite-5576cf8ab29ab04ab31cee16443abf7b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_sniper.aseprite
+res://.import/support_toxic.aseprite-9fb68dfe8d3d39a1624b059837004777.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_toxic.aseprite
+res://.import/support_volatility.aseprite-0f2d9acdb6f2d44eecb4c3c49c97907d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to support_volatility.aseprite
+res://.import/small_passive.aseprite-3bf6814ded5719da574adf67ae706447.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to small_passive.aseprite
+res://.import/tile.aseprite-be814c0c1fbb7377be6fa505b4e9ba09.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to tile.aseprite
+res://.import/bench.aseprite-f08d052471d12402c6d2a0c886ab07b4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to bench.aseprite
+res://.import/chest.aseprite-8c44bcc13a6ccb215ef418efabc1b4e7.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to chest.aseprite
+res://.import/portal.aseprite-e470947e76692547a9770cac64a0b41a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to portal.aseprite
+res://.import/statue.aseprite-88ae9eb67196524ddccfe1f75cf6dd35.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to statue.aseprite
+res://.import/attack_dog.aseprite-04424e5123a75320ed769d5e5b6cffeb.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to attack_dog.aseprite
+res://.import/chilled_bones.aseprite-17b966d46b99e1d1defabba7c61affe0.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to chilled_bones.aseprite
+res://.import/fire_bomber.aseprite-cfeb8026644d0bab25f9d3d4dd39ba18.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to fire_bomber.aseprite
+res://.import/ice_golem.aseprite-b5a1959892e4436234beea810063308d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ice_golem.aseprite
+res://.import/lightning_dog.aseprite-4f8775490d8e3d3487767eda0540b772.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to lightning_dog.aseprite
+res://.import/mutated_spider.aseprite-19e00cab6b810e2fe74049e12b8f795b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to mutated_spider.aseprite
+res://.import/ninja.aseprite-5b644748647e89a105d7fa8dcc83d0d1.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ninja.aseprite
+res://.import/skeleton_archer.aseprite-881106f9ff3a6ee1189fd5ba0b2bde40.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to skeleton_archer.aseprite
+res://.import/skeleton_curser.aseprite-073b1ceca174dd2f0d8e01d952b091a4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to skeleton_curser.aseprite
+res://.import/skeleton_mage.aseprite-1b6619b5f3852415c9ba7a5d915aa92c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to skeleton_mage.aseprite
+res://.import/skeleton_sparker.aseprite-b04b85b441ee1c74b946c908b32e0f43.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to skeleton_sparker.aseprite
+res://.import/skeleton_warrior.aseprite-cec0cf624dd954ff073f4fd26246710b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to skeleton_warrior.aseprite
+res://.import/skeletor.aseprite-985773c09a741f1f5517cd384e69a0a2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to skeletor.aseprite
+res://.import/sludge.aseprite-ff1483cd3026f4c674a71d5c1e1bb4ad.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to sludge.aseprite
+res://.import/spider.aseprite-2c20725b2344c9349e1fb4d055892fdf.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to spider.aseprite
+res://.import/spirit_of_the_ancient.aseprite-eed6708bc564edb2e1e5156190bcf901.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to spirit_of_the_ancient.aseprite
+res://.import/zombie.aseprite-62f5211f983004f0a95471584b4182e7.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to zombie.aseprite
+res://.import/simple.aseprite-b7a69d5dcf3f02b33b579739ce13137d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to simple.aseprite
+res://.import/stone_vines.aseprite-d09242c99e0423720d9abd2c10e87405.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to stone_vines.aseprite
+res://.import/panel_ninepatch.aseprite-c494714fec570d8ba72c68d269336b7e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to panel_ninepatch.aseprite
+res://.import/placeholder.aseprite-67355e87d347251d73f4802c6b7c3356.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to placeholder.aseprite
+res://.import/bloody.aseprite-f8304a8dbebf3b9e4ba03ae46812463c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to bloody.aseprite
+res://.import/demon_wings.aseprite-35dfbaf1e6644cd62a901fa92535e25d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to demon_wings.aseprite
+res://.import/dragon_wings.aseprite-b3f602c082d5ee6300fbb620e55a64ba.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to dragon_wings.aseprite
+res://.import/ninja_cap.aseprite-7368a4acaf1d4e126a47c8e5f5251b7f.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ninja_cap.aseprite
+res://.import/ninja_cape.aseprite-1630a1ff8a247bc9390ad2cb275cd35e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ninja_cape.aseprite
+res://.import/pixie_wings.aseprite-326ae15b980aecc490c30f6e9926e0ee.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to pixie_wings.aseprite
+res://.import/poison.aseprite-131676d8fa16bbc0a70f20304293382a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to poison.aseprite
+res://.import/tail.aseprite-089f1813f8e9c918155bae115deb1088.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to tail.aseprite
+res://.import/thrusters.aseprite-f1ae84b1fbdaba13313a5b659e3fe813.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to thrusters.aseprite
+res://.import/claws.aseprite-385c17e661019419f798ac95c69c4036.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to claws.aseprite
+res://.import/default.aseprite-e04395525790d03dee2b255c6016f50b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to default.aseprite
+res://.import/flame_boots.aseprite-8568f98c8cca0ef0ce8911e83be2543b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to flame_boots.aseprite
+res://.import/frozen_boots.aseprite-605f09bcdd4e801697cd9d6fdacf1a24.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to frozen_boots.aseprite
+res://.import/glow.aseprite-d4bcc83c89654d077984c859fbfabb26.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to glow.aseprite
+res://.import/golden.aseprite-16d66fd1b3c6c3943e87859bbe4d4895.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to golden.aseprite
+res://.import/hoof.aseprite-979bb045e07b9d6551f576f6f94d5572.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to hoof.aseprite
+res://.import/mutant.aseprite-897357bc069f0e25a469c1e6732af9a2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to mutant.aseprite
+res://.import/blades.aseprite-ae6677b05cd384895ccd9a57169bb4b9.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to blades.aseprite
+res://.import/boxing.aseprite-2a2460ce503db9c5eff2511afe338fab.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to boxing.aseprite
+res://.import/chains.aseprite-c7f08dbad3e092113607d320d73771be.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to chains.aseprite
+res://.import/default.aseprite-7466b98ae71f87b14343848bf1822e04.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to default.aseprite
+res://.import/guns.aseprite-a7f5d44404afd63f5afee818fbe481d8.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to guns.aseprite
+res://.import/icicles.aseprite-e056c57b93e6af55290f227d2f0d1ea6.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to icicles.aseprite
+res://.import/knife.aseprite-6f70f4a32c0e4c948403be43f1c6420e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to knife.aseprite
+res://.import/orbs.aseprite-a1a679845bf5b261b0607a8a4da3255e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to orbs.aseprite
+res://.import/shield.aseprite-83c09f31f3905c60b4053d6bf99b7be5.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shield.aseprite
+res://.import/spear.aseprite-64a07639a0a4c9b0f1e8f701052c3478.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to spear.aseprite
+res://.import/swords.aseprite-91c03fc49cad2a45e78f4d3a09919aa4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to swords.aseprite
+res://.import/wands.aseprite-ef614adc14e08b9cf926fc1c2b9af80d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to wands.aseprite
+res://.import/chiller.aseprite-4d0e90ecc03b3105ebd3810c9a058c7b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to chiller.aseprite
+res://.import/default.aseprite-9311f7669f45a9017e219f21fdf34133.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to default.aseprite
+res://.import/dragon.aseprite-69bbceae99e6e3d5fbeabb5806b24413.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to dragon.aseprite
+res://.import/fire.aseprite-68d0eeb7ab6ac3ecce9dac0eab40a50a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to fire.aseprite
+res://.import/helmet.aseprite-b541b98dbce009a2f0a5273e28e562a5.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to helmet.aseprite
+res://.import/mutant.aseprite-794ef9c27d5c9dd024fa84b9767330db.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to mutant.aseprite
+res://.import/robot.aseprite-b1baa41de3336963d55001b22c8e618f.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to robot.aseprite
+res://.import/skull.aseprite-49f479d9fe0c1f00d0d1797f3e9962f4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to skull.aseprite
+res://.import/vampire.aseprite-361a315787428dbecaf789ada975aa88.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to vampire.aseprite
+res://.import/zombie.aseprite-69c2bfa6ae5b4868b1ebc37fc6563985.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to zombie.aseprite
+res://.import/crown.aseprite-d7ff3d0395154cb66da0a9dfdf131689.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to crown.aseprite
+res://.import/fire.aseprite-f0db116b16d92536af6dd5c57aee212d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to fire.aseprite
+res://.import/flame_helmet.aseprite-4725611f9e2caf2d3a8aa1792e3cc8ca.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to flame_helmet.aseprite
+res://.import/horned.aseprite-a3395c5a34d260996cd86b5b2974c399.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to horned.aseprite
+res://.import/iron.aseprite-2764d2bfc8ed8568d01e399e5d514ae4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to iron.aseprite
+res://.import/ninja.aseprite-bce686c25f28e5ff6cf6bc003066599e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ninja.aseprite
+res://.import/top_hat.aseprite-041a679f9bd01e880d31fa568f3d4a90.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to top_hat.aseprite
+res://.import/wings.aseprite-a6818f25a3a41d81b81653ac6e9ab86c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to wings.aseprite
+res://.import/coal.aseprite-dd3eeca481dc128a1d892b92c29b5cc2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to coal.aseprite
+res://.import/default.aseprite-afc4bc3b6f80fd60a75ad424a38e96a7.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to default.aseprite
+res://.import/dragon.aseprite-839cf4d2b3b4c7b1256c44df9e3c81ee.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to dragon.aseprite
+res://.import/emerald.aseprite-8263452b5edb9206b84c79b940c319f7.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to emerald.aseprite
+res://.import/fire.aseprite-a140ababd6b67a03bfaf5f267aea3958.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to fire.aseprite
+res://.import/golden.aseprite-dd61599ccedfb3b0ad570eea7d81a1b8.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to golden.aseprite
+res://.import/ninja.aseprite-75da056cb723f1dfb225c0cac031aa84.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ninja.aseprite
+res://.import/sash.aseprite-997923faeafd12d1a31964844895635f.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to sash.aseprite
+res://.import/wings.aseprite-4943faf0fcf9aea1e20c429836b7f148.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to wings.aseprite
+res://.import/zombie.aseprite-1de1229e181319fc2564c18057fd7468.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to zombie.aseprite
+res://.import/glob.aseprite-0282648574e7c0d3a5cfdf11dd01cfeb.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to glob.aseprite
+res://.import/acid_attack.aseprite-ebc24cea8d04347901304b6c3476ff24.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to acid_attack.aseprite
+res://.import/arrow.aseprite-0a08046eba3a2d63bdb43d9c1d292c63.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to arrow.aseprite
+res://.import/axe.aseprite-f4f62e194ccacf5724f00e7dfee3daf0.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to axe.aseprite
+res://.import/blizzard_projectile.aseprite-64b67c2d0f9fd007da098227118199e9.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to blizzard_projectile.aseprite
+res://.import/blizzard_skill.aseprite-baae67b57140ee6def9a3567a20c4420.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to blizzard_skill.aseprite
+res://.import/bomb.aseprite-74e39e0a0ba2b0810a0672ec7856c8cf.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to bomb.aseprite
+res://.import/cluster_bomb.aseprite-78f6ca8f878ebbc54f757b4cb6693fb7.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to cluster_bomb.aseprite
+res://.import/ice_orb.aseprite-22022c56648d7a64ecedb5adb45488a5.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ice_orb.aseprite
+res://.import/lightning_spear.aseprite-9e17f37e10b62cf6ef7f067aa4cedd99.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to lightning_spear.aseprite
+res://.import/magic_missile_projectile.aseprite-2e14196095e631dcf0da20552c4ca156.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to magic_missile_projectile.aseprite
+res://.import/orb_projectile.aseprite-46c732f64f2bf31fd258bfb92e22c580.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to orb_projectile.aseprite
+res://.import/plasma_orb.aseprite-b2c3f998466723591ec70c50e9947681.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to plasma_orb.aseprite
+res://.import/poison_dart_projectile.aseprite-031f219f1a046335dbeb3e96960419d5.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to poison_dart_projectile.aseprite
+res://.import/shard_orb.aseprite-28ac4baba2b089a48e7a847d36954a2c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shard_orb.aseprite
+res://.import/shard_orb_main.aseprite-01f85c8c414dd2c936ac9aa0fe452e8c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shard_orb_main.aseprite
+res://.import/shark.aseprite-b8318588f3723b0cd7a99b1b89b1fb17.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shark.aseprite
+res://.import/sharknado_shard.aseprite-11b10bbfc4bb8d3d9da90c213010726b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to sharknado_shard.aseprite
+res://.import/shock_orb.aseprite-43e634abca4f991426e0f5bfd028e463.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shock_orb.aseprite
+res://.import/shotgun_bullet.aseprite-d2681805b86a21cd9fcf11216aedf7b3.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shotgun_bullet.aseprite
+res://.import/shrapnelbomb.aseprite-4b4c9c684e22c2ef5f227e12a10c8de2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shrapnelbomb.aseprite
+res://.import/shuriken.aseprite-29397398fb9aeb057f7eea639fe0fd12.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shuriken.aseprite
+res://.import/sota_spear.aseprite-63cd5c65365e80fc9f4ab3664a516bec.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to sota_spear.aseprite
+res://.import/spider_web.aseprite-aea9006e0bcb952ecf9194d53efc5e72.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to spider_web.aseprite
+res://.import/volcano_projectile.aseprite-908149993872e0e53e2f3590cfacf24e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to volcano_projectile.aseprite
+res://.import/bane.aseprite-1617b03febd4d32fb0800dfd3eb3bbd7.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to bane.aseprite
+res://.import/blade_shield.aseprite-9be990ad1b20faf9f6a3babaddc1c883.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to blade_shield.aseprite
+res://.import/blood_slash.aseprite-fc8631b53f675f0949a688e7320f44bf.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to blood_slash.aseprite
+res://.import/bow.aseprite-fd279d8f72067208f8722db9b3bc502d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to bow.aseprite
+res://.import/brittle.aseprite-a719bc1b80b5d1d56f591ea89def3046.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to brittle.aseprite
+res://.import/chain_lightning.aseprite-519af9fed7bb0229a349cd970f4b50f2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to chain_lightning.aseprite
+res://.import/cluster_bombs.aseprite-f9ae9afbe6e66e62f20fbfb58c57aea5.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to cluster_bombs.aseprite
+res://.import/cold_essence.aseprite-a9d8c6326ddce401988e7744277f1a7e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to cold_essence.aseprite
+res://.import/debilitate.aseprite-7fc4a165203ea5e10c94bf501904136b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to debilitate.aseprite
+res://.import/energized_axe.aseprite-3d4c4c472272e4569a85f2b203093a9b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to energized_axe.aseprite
+res://.import/energized_hammer.aseprite-493bbefdd1833489bd755a4dd78cbec9.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to energized_hammer.aseprite
+res://.import/fire_essence.aseprite-320989d40af3df4647916c3b35d71c73.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to fire_essence.aseprite
+res://.import/hinder.aseprite-653de58240e71305f267f607ddea647c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to hinder.aseprite
+res://.import/hypothermia.aseprite-c105581a122e29f24c2cc6ad2238a063.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to hypothermia.aseprite
+res://.import/ice_orb.aseprite-cbbeee38bbc0e54daa46609662184872.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ice_orb.aseprite
+res://.import/implant.aseprite-12ad49412d992734f08f46c03732538b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to implant.aseprite
+res://.import/lightning_essence.aseprite-285667d7a1a85f4f387a3854ba6effb3.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to lightning_essence.aseprite
+res://.import/lightning_spear.aseprite-bf3680ae55be0a6cc031ab843f9608a4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to lightning_spear.aseprite
+res://.import/lucky_charm.aseprite-b1ad6502cb0f0f464629c648f5570d3d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to lucky_charm.aseprite
+res://.import/magic_missile.aseprite-e7a339e27735a376ff107a3f748f49f4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to magic_missile.aseprite
+res://.import/minigun.aseprite-8855d42fef0405eafe9a1b693cbccce0.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to minigun.aseprite
+res://.import/physical_essence.aseprite-5a86c646332f63e71dac074a441b72d7.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to physical_essence.aseprite
+res://.import/plague_clouds_skill.aseprite-14a3f79270fc41a1f0437099cca78dc4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to plague_clouds_skill.aseprite
+res://.import/plasma_orb_skill.aseprite-c9e6ed4dc8d66a67b2bd560f7a762d0d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to plasma_orb_skill.aseprite
+res://.import/polarize.aseprite-c0cbb2704156c3abb56f6245b808b640.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to polarize.aseprite
+res://.import/protraction.aseprite-2379a1568c79d1b15275c4e7e771c0fd.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to protraction.aseprite
+res://.import/scorch.aseprite-a97140e8c64ff45d7a881cf3e37a9c79.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to scorch.aseprite
+res://.import/shard_orb.aseprite-4ab4c3784e07ced8f2da477664008b83.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shard_orb.aseprite
+res://.import/sharknado_shot.aseprite-2c61a02fbc8eae12671b1d01ce696232.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to sharknado_shot.aseprite
+res://.import/shockwave.aseprite-68d43acc7e0b386a4c881583e865acff.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to shockwave.aseprite
+res://.import/target.aseprite-11d4b6ea03d86535771010e1723d9bba.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to target.aseprite
+res://.import/thrusting_strike.aseprite-f70dd68ae20f5186cd59a29e3261872e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to thrusting_strike.aseprite
+res://.import/toxic_essence.aseprite-6875cdfb1d829613c309b31db0083218.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to toxic_essence.aseprite
+res://.import/volcano.aseprite-6cbc88cd7d5ed39c6211fc35b0a02876.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to volcano.aseprite
+res://.import/bleeding.aseprite-785b213a4087f5753ad36d8d04d5194b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to bleeding.aseprite
+res://.import/burning.aseprite-dc1cbfdad7183f9d3d2166803482c098.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to burning.aseprite
+res://.import/charred.aseprite-ea7f5d478c5c1ef891a3ac5f1a9f007d.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to charred.aseprite
+res://.import/chilled.aseprite-e0e75459e91f9ba0e700ad6734b06f3e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to chilled.aseprite
+res://.import/electrocuted.aseprite-5ed977beeb9fb6563e15e9c090541167.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to electrocuted.aseprite
+res://.import/elusiveness.aseprite-4453680d0c2beb4d31fdb77101302fba.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to elusiveness.aseprite
+res://.import/frozen.aseprite-1e7179a2af1370ddae47ff6244e3bb3a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to frozen.aseprite
+res://.import/infection.aseprite-ea3140688873b94eac61d435fadb1a3b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to infection.aseprite
+res://.import/jolt.aseprite-ad38366ad447aea129d6d1e459ed1919.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to jolt.aseprite
+res://.import/poison.aseprite-5e835c72d687735dbbbdade4ae137621.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to poison.aseprite
+res://.import/regeneration.aseprite-88803f8ba094d7fb07402c9c92f6dde9.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to regeneration.aseprite
+res://.import/resilience.aseprite-d7ddd9e584aa09ce9cdf7751ce0a26ac.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to resilience.aseprite
+res://.import/ruptured.aseprite-6d2f292c75c4c3b525ac1a243613d64e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ruptured.aseprite
+res://.import/rush.aseprite-f4a6091a5dc7a015855865cde16155a2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to rush.aseprite
+res://.import/sturdiness.aseprite-ad80656a1464fd1483832d1efd5f5911.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to sturdiness.aseprite
+res://.import/blood_boil.aseprite-4f754132106a1efb239124f1f553bf8e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to blood_boil.aseprite
+res://.import/bonded_electrons.aseprite-a092d0ac64146143d7411851b4aa036b.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to bonded_electrons.aseprite
+res://.import/burning.aseprite-cb82aeac9954ef827387fd4f566aa939.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to burning.aseprite
+res://.import/char.aseprite-2b8799251ac94870b00d2e5e85fcef17.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to char.aseprite
+res://.import/chilled.aseprite-248eb97f03e30a12761b615e2ce1ffcb.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to chilled.aseprite
+res://.import/dread.aseprite-3c0bf12e54138ffc9241454e4a180b95.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to dread.aseprite
+res://.import/electrocuted.aseprite-fe7a08f9ad4722f5b69d73c0416e6508.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to electrocuted.aseprite
+res://.import/energetic_flesh.aseprite-bbe60bbfa13700dc1f51314f0df2c739.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to energetic_flesh.aseprite
+res://.import/frozen.aseprite-19d6d83258f7dc1f9e19c6a7013c9f40.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to frozen.aseprite
+res://.import/hamstrung.aseprite-d20ab2f8c6a154e71d6898fee7f2227a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to hamstrung.aseprite
+res://.import/jolt.aseprite-6d714bb7a245df7aaf9bad3e1ec96090.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to jolt.aseprite
+res://.import/transfusion.aseprite-d30492dad33ad7797cf0dc9b33e5be58.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to transfusion.aseprite
+res://.import/vile_domain.aseprite-b90de9f3a024066555a5a9228dbee0c2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to vile_domain.aseprite
+res://.import/ancients_charm.aseprite-17c65166b308e8c0c55d1e423f569a81.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ancients_charm.aseprite
+res://.import/balance_of_power.aseprite-bc126ddd5636f4334a63609175e50213.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to balance_of_power.aseprite
+res://.import/balanced_oppression.aseprite-a3258b278eec95d0c5633a56c7626baf.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to balanced_oppression.aseprite
+res://.import/bloody_knuckle.aseprite-03f83509a5d5eae29257fe672df965a0.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to bloody_knuckle.aseprite
+res://.import/cheetahs.aseprite-310ee8d01e2bb6f67ba3ef445ef82232.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to cheetahs.aseprite
+res://.import/chill_burn.aseprite-5b864ebae28786aed67a31029907e94e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to chill_burn.aseprite
+res://.import/crown_of_ice.aseprite-084f251868a2a9e1a31f552f926b8758.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to crown_of_ice.aseprite
+res://.import/echoes_of_sin.aseprite-bb00a5ff661e43a2c47200cf8d2bb505.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to echoes_of_sin.aseprite
+res://.import/echoing_fury.aseprite-6e069c6fc44f34577320912a93219298.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to echoing_fury.aseprite
+res://.import/elder_ward.aseprite-af20e8f9c95b5d57ee926faa6af621a1.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to elder_ward.aseprite
+res://.import/expansion_charm.aseprite-03894ddcd2a629225b021bb0c9855556.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to expansion_charm.aseprite
+res://.import/fishing_rod.aseprite-d4e43e6e77e3863d8fb18b415fb58594.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to fishing_rod.aseprite
+res://.import/frozen_sludge.aseprite-165bfb98ff8a035017c1a3e2fbcdd55c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to frozen_sludge.aseprite
+res://.import/gladiators_resolve.aseprite-1821201b144c2d242044708fe3672328.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to gladiators_resolve.aseprite
+res://.import/goblins_girdle.aseprite-7204945a118cd11c54b5dba262011e81.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to goblins_girdle.aseprite
+res://.import/harrowing_cold.aseprite-dd766f10be3f5b6229530f01ea9bedb1.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to harrowing_cold.aseprite
+res://.import/mercurial_venom.aseprite-5fea66eee6ebabfc90623352721e4b98.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to mercurial_venom.aseprite
+res://.import/ogre_talisman.aseprite-b22fdcfc9e4bbb5351149752b069bc8f.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ogre_talisman.aseprite
+res://.import/plasma_orb.aseprite-edc12104048a1cd8eaa16f417b94b407.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to plasma_orb.aseprite
+res://.import/prismatic_bow.aseprite-49bbcc7708e81f99612acd211cfdd88c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to prismatic_bow.aseprite
+res://.import/skull_crusher.aseprite-53ad3f244de503387dafa7890e393052.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to skull_crusher.aseprite
+res://.import/spreading_flames.aseprite-958d87aad46f4430d75b4e3dc5fafb1c.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to spreading_flames.aseprite
+res://.import/strength_from_strength.aseprite-17ef53de11227ede1fd83e0fe327e27e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to strength_from_strength.aseprite
+res://.import/tinkerers_toys.aseprite-6a7c43cb509befbfab4bf2ab96a617c7.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to tinkerers_toys.aseprite
+res://.import/blood_church.aseprite-c68927db8cded9ca2c33b70e36099736.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to blood_church.aseprite
+res://.import/boss.aseprite-3fc9b49d8215dbcc46e38c999ce61c37.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to boss.aseprite
+res://.import/catacombs.aseprite-565d090fc0d2ee8b7a3f416ae5beecfb.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to catacombs.aseprite
+res://.import/dungeon.aseprite-51d9e68f922261836dc30eccf8d9dc9e.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to dungeon.aseprite
+res://.import/field_of_despair.aseprite-995f79b816095e17a792f759cbe594c4.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to field_of_despair.aseprite
+res://.import/grasslands.aseprite-2dc8a363319298f3fa79a184274b17b2.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to grasslands.aseprite
+res://.import/ladder.aseprite-6a54ac8a62a385d5b9003e8a6ad6b749.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to ladder.aseprite
+res://.import/map.aseprite-2ad5ad440967acbede28db93511c8591.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to map.aseprite
+res://.import/map_highlighted.aseprite-fabbdfc085019708f940a2f39cfa464a.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to map_highlighted.aseprite
+res://.import/mountain.aseprite-1397f34d323a9ebef043f8ee2b01b2ae.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to mountain.aseprite
+res://.import/musty_den.aseprite-f1f756ef0a97772a3238fcb555b77452.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to musty_den.aseprite
+res://.import/sandstorm.aseprite-69d6f8574e23fb985717d8d938a9a4d6.res ( importer: aseprite.wizard.plugin, type: SpriteFrames, format: aseprite) to sandstorm.aseprite
+
+
+
+---------------------------------IMPORTANT NOTES----------------------------------
+
+
+Unsupported Resources Detected:
+The following resource types were detected in the project that conversion is not implemented for yet.
+See Export Report to see which resources were not exported.
+You will still be able to edit the project in the editor regardless.
+ - Resource Type: SpriteFrames Format: aseprite Importer: aseprite.wizard.plugin
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 3.5.3 (Steam edition) to edit the project.
+GodotSteam can be found here: https://codeberg.org/GodotSteam/GodotSteam/releases 
+
+*******************************************************************************
+
+Recovery finished in 00m03s

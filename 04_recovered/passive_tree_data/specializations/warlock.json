@@ -1,0 +1,110 @@
+{
+    "nodes": [
+        {
+            "id": "root",
+            "passive_tag": "root",
+            "position": [
+                0,
+                0
+            ]
+        },
+        {
+            "id": "a2109",
+            "passive_tag": "hysteria",
+            "position": [
+                160,
+                0
+            ]
+        },
+        {
+            "id": "5ee00",
+            "passive_tag": "attuned_decay",
+            "position": [
+                0,
+                -160
+            ]
+        },
+        {
+            "id": "f058e",
+            "passive_tag": "paranoia",
+            "position": [
+                0,
+                160
+            ]
+        },
+        {
+            "id": "17039",
+            "passive_tag": "dread",
+            "position": [
+                -160,
+                0
+            ]
+        },
+        {
+            "id": "5fdec",
+            "passive_tag": "bewitching_whispers",
+            "position": [
+                160,
+                -160
+            ]
+        },
+        {
+            "id": "5b86a",
+            "passive_tag": "transmogrify",
+            "position": [
+                -160,
+                -160
+            ]
+        },
+        {
+            "id": "7f420",
+            "passive_tag": "monster_study",
+            "position": [
+                -160,
+                160
+            ]
+        },
+        {
+            "id": "536af",
+            "passive_tag": "affliction_study",
+            "position": [
+                160,
+                160
+            ]
+        }
+    ],
+    "edges": [
+        [
+            "a2109",
+            "root"
+        ],
+        [
+            "5ee00",
+            "root"
+        ],
+        [
+            "f058e",
+            "root"
+        ],
+        [
+            "17039",
+            "root"
+        ],
+        [
+            "5fdec",
+            "root"
+        ],
+        [
+            "5b86a",
+            "root"
+        ],
+        [
+            "7f420",
+            "root"
+        ],
+        [
+            "536af",
+            "root"
+        ]
+    ]
+}

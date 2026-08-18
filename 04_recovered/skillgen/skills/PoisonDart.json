@@ -1,0 +1,752 @@
+[
+    {
+        "skill": {
+            "damage": 10,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 10,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 11,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 12,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 13,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 14,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 16,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 17,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 19,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 20,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 22,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 24,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 26,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 28,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 31,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 33,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 36,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 39,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 43,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 46,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 51,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 55,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 60,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 65,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 71,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 77,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 83,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 91,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 99,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 107,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 117,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 127,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 138,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 150,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 163,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 177,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 192,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 209,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 227,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 247,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 269,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 292,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 318,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 345,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 375,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 408,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 444,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 482,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 524,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    },
+    {
+        "skill": {
+            "damage": 570,
+            "projectile_count": 1,
+            "projectile_speed": 80,
+            "crit_chance": 0.05,
+            "toxic_ailment_chance": 0.5,
+            "toxic_ailment_effect": 1.0,
+            "amplify_ailment_chance": 0.5,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "damage_effectiveness": 0.85,
+            "cooldown": 0.95
+        }
+    }
+]

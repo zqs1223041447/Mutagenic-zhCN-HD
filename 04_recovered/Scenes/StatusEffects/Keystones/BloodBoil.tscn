@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/StatusEffects/Keystones/BloodBoil.gd" type="Script" id=1]
+[ext_resource path="res://sprites/status_effects_new/blood_boil.png" type="Texture" id=2]
+
+[node name="BloodBoil" type="Node"]
+script = ExtResource( 1 )
+description = "Blood Boil"
+texture = ExtResource( 2 )
+stack_group = "BloodBoil"
+base_lifetime = 8.0

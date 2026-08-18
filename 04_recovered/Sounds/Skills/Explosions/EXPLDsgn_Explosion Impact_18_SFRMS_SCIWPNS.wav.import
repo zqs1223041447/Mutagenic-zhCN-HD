@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/EXPLDsgn_Explosion Impact_18_SFRMS_SCIWPNS.wav-7e724d7e564fd23d98727d4fdcb93f2c.sample"
+
+[deps]
+
+source_file="res://Sounds/Skills/Explosions/EXPLDsgn_Explosion Impact_18_SFRMS_SCIWPNS.wav"
+dest_files=[ "res://.import/EXPLDsgn_Explosion Impact_18_SFRMS_SCIWPNS.wav-7e724d7e564fd23d98727d4fdcb93f2c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

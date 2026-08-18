@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/StatusEffects/Boons/PrecisionBoon.gd" type="Script" id=1]
+[ext_resource path="res://sprites/status_effects/precision_boon.png" type="Texture" id=2]
+
+[node name="PrecisionBoon" type="Node"]
+script = ExtResource( 1 )
+description = "Precision Boon"
+texture = ExtResource( 2 )
+stack_group = "PrecisionBoon"
+fast_flags = true
+lifetime = 4.0
+base_lifetime = 4.0

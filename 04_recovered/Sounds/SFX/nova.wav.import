@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/nova.wav-922c9b5410c3b6bb4ff4bdc1d0bddc57.sample"
+
+[deps]
+
+source_file="res://Sounds/SFX/nova.wav"
+dest_files=[ "res://.import/nova.wav-922c9b5410c3b6bb4ff4bdc1d0bddc57.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

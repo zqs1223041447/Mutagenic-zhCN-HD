@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Particles/SparkExplosion.gd" type="Script" id=1]
+[ext_resource path="res://Shaders/LightningShader.tres" type="Shader" id=2]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.7, 1 )
+colors = PoolColorArray( 1, 0.843137, 0, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=1]
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 0.5
+orbit_velocity = 0.2
+orbit_velocity_random = 1.0
+linear_accel = 32.73
+radial_accel = 15.0
+radial_accel_random = 0.68
+damping = 75.0
+color = Color( 1, 0.913725, 0, 1 )
+color_ramp = SubResource( 3 )
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 2 )
+shader_param/lightning_color = Color( 0.941176, 0.92549, 0.0431373, 1 )
+shader_param/size = 0.009
+shader_param/width = 0.208
+shader_param/speed = 0.1
+shader_param/cycle = 7.0
+shader_param/ratio = 0.0
+shader_param/time_shift = 0.0
+
+[sub_resource type="ImageTexture" id=5]
+size = Vector2( 1, 1 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 2 )
+shader_param/lightning_color = Color( 0.815686, 0.788235, 0.105882, 1 )
+shader_param/size = 0.009
+shader_param/width = 0.208
+shader_param/speed = 0.2
+shader_param/cycle = 16.0
+shader_param/ratio = 0.0
+shader_param/time_shift = 0.2
+
+[node name="SparkExplosion" type="Particles2D"]
+amount = 16
+lifetime = 0.2
+explosiveness = 0.8
+process_material = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+autostart = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource( 6 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -360.0
+margin_right = 20.0
+rect_min_size = Vector2( 0, 360 )
+texture = SubResource( 5 )
+expand = true
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+material = SubResource( 4 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -360.0
+margin_right = 20.0
+rect_min_size = Vector2( 0, 360 )
+texture = SubResource( 5 )
+expand = true
+stretch_mode = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

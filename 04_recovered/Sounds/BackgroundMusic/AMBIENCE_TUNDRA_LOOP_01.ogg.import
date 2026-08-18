@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/AMBIENCE_TUNDRA_LOOP_01.ogg-3fce100e9c123a05d57f46263a92ac43.oggstr"
+
+[deps]
+
+source_file="res://Sounds/BackgroundMusic/AMBIENCE_TUNDRA_LOOP_01.ogg"
+dest_files=[ "res://.import/AMBIENCE_TUNDRA_LOOP_01.ogg-3fce100e9c123a05d57f46263a92ac43.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

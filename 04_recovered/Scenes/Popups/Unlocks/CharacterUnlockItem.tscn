@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Popups/Unlocks/CharacterUnlockItem.gd" type="Script" id=1]
+
+[node name="CharacterUnlockContainer" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 16.0
+alignment = 1
+
+[node name="UnlockTexture" type="TextureRect" parent="HBoxContainer"]
+margin_left = 868.0
+margin_right = 884.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+expand = true
+stretch_mode = 4
+
+[node name="UnlockDescription" type="Label" parent="HBoxContainer"]
+margin_left = 888.0
+margin_top = 1.0
+margin_right = 1051.0
+margin_bottom = 15.0
+custom_colors/font_color = Color( 0.294118, 0.65098, 0.27451, 1 )
+text = "Vesta has been unlocked!"
+
+[node name="UnlockRequirement" type="Label" parent="."]
+margin_top = 20.0
+margin_right = 1920.0
+margin_bottom = 34.0
+text = "Requirements uncertain"
+align = 1
