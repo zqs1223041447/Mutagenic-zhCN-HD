@@ -1,0 +1,243 @@
+{
+  "id": "w2b-2-zone-minimap",
+  "version": "0.1.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "w2b-1-buttons"
+  ],
+  "conflicts": [],
+  "scope": "PHASE 2b B2 (docs/requirements/PHASE2B_DESIGN_SPEC.md §3): unify the three scattered zone/minimap surfaces into one container language (Surface 1 #121820 alpha 0.85 + Normal Border #293642 1px + radius 4) and align the right edge at x=1280. (A) GUI.tscn (LF): LevelInfoContainer HBoxContainer->PanelContainer (node name unchanged so GUI.gd $ paths are unaffected), theme kept + alignment=2 line replaced by custom_styles/panel = SubResource(5); new StyleBoxFlat id=5 (no content margin - MarginContainer owns padding); MarginContainer gains margin_left/margin_bottom 16 (symmetric); text hierarchy via per-node custom_colors/font_color: NameLabel/LevelLabel/KillLabel Primary, ZoneLevel/ZoneCompletion captions + KillLabel2 Secondary, CompletionLabel static pure red -> nerfed #9B1C1C (runtime Colors.buffed/nerfed override untouched). (B) Minimap.tscn (CRLF): sub id=1 rewritten to container language keeping expand_margin 4/4 (zero layout change); affix panel right edge margin_right -22.0 -> 0.0 (1258->1280 alignment); new sub id=2 thin frame; MinimapContainer custom_styles/panel = SubResource(2) (overrides MainTheme ninepatch default); inner ColorRect #000000 alpha 0.196 -> Surface 1 alpha 0.85; load_steps 5->6. (C) TextureRect.gd (LF, CODE_PATCH): player dot Color.green -> Arcane #79D98B. DEVIATIONS (mechanism-forced, base-anchored preimage applier): GUI.tscn load_steps NOT bumped 14->15 here (B4 does 14->16 in one patch because 15 does not exist in the 04_recovered base); sub id=5 inserted at canonical position before the first [node] block (GUI.tscn has no [resource] section; spec §7 #4 fixer-selected minimal-diff insertion point, semantically equivalent). No new file paths (roundtrip 3744), no gameplay/collision/input changes, no baseline promotion.",
+  "entities": [
+    {
+      "kind": "visual_zone_panel",
+      "id": "Scenes/GUI/GUI.tscn::LevelInfoContainer::container_language",
+      "confidence": "FACT",
+      "expected_runtime_effect": "zone column gets a Surface 1 alpha 0.85 panel with Normal Border 1px + radius 4; node name and GUI.gd $ path chain unchanged; labels gain three-tier text hierarchy Primary/Secondary with no layout change"
+    },
+    {
+      "kind": "visual_minimap_panel",
+      "id": "Scenes/Minimap/Minimap.tscn::affix+frame::container_language",
+      "confidence": "FACT",
+      "expected_runtime_effect": "affix panel (sub id=1) and minimap frame (sub id=2) share the same Surface 1/Normal Border/radius 4 language; affix right edge moves to x=1280 aligned with minimap frame and zone column; inner minimap floor is Surface 1 alpha 0.85 instead of near-black"
+    },
+    {
+      "kind": "visual_player_dot",
+      "id": "Scenes/Minimap/TextureRect.gd::player_dot_color",
+      "confidence": "FACT",
+      "expected_runtime_effect": "player dot on the minimap renders Arcane #79D98B instead of Color.green"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::LevelInfoContainer::type_to_panel",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"LevelInfoContainer\" type=\"HBoxContainer\" parent=\".\"]",
+      "new_text": "[node name=\"LevelInfoContainer\" type=\"PanelContainer\" parent=\".\"]",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::LevelInfoContainer::alignment_to_custom_styles",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "theme = ExtResource( 3 )\nalignment = 2",
+      "new_text": "theme = ExtResource( 3 )\ncustom_styles/panel = SubResource( 5 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::insert_sub5",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"GUI\" type=\"CanvasLayer\"]\nscript = ExtResource( 2 )",
+      "new_text": "[sub_resource type=\"StyleBoxFlat\" id=5]\nbg_color = Color( 0.0705882, 0.0941176, 0.12549, 0.85 )\nborder_width_left = 1\nborder_width_top = 1\nborder_width_right = 1\nborder_width_bottom = 1\nborder_color = Color( 0.160784, 0.211765, 0.258824, 1 )\ncorner_radius_top_left = 4\ncorner_radius_top_right = 4\ncorner_radius_bottom_right = 4\ncorner_radius_bottom_left = 4\n\n[node name=\"GUI\" type=\"CanvasLayer\"]\nscript = ExtResource( 2 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::MarginContainer::symmetric_margins",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "custom_constants/margin_right = 16\ncustom_constants/margin_top = 16\n\n[node name=\"LevelInfo\"",
+      "new_text": "custom_constants/margin_right = 16\ncustom_constants/margin_top = 16\ncustom_constants/margin_left = 16\ncustom_constants/margin_bottom = 16\n\n[node name=\"LevelInfo\"",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::NameLabel::Primary",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"NameLabel\" type=\"Label\" parent=\"LevelInfoContainer/MarginContainer/LevelInfo/ZoneName\"]\nmargin_left = 114.0\nmargin_right = 121.0\nmargin_bottom = 25.0",
+      "new_text": "[node name=\"NameLabel\" type=\"Label\" parent=\"LevelInfoContainer/MarginContainer/LevelInfo/ZoneName\"]\nmargin_left = 114.0\nmargin_right = 121.0\nmargin_bottom = 25.0\ncustom_colors/font_color = Color( 0.894118, 0.913725, 0.937255, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::ZoneLevelCaption::Secondary",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"Label\" type=\"Label\" parent=\"LevelInfoContainer/MarginContainer/LevelInfo/ZoneLevel\"]\nmargin_left = 18.0\nmargin_right = 110.0\nmargin_bottom = 25.0",
+      "new_text": "[node name=\"Label\" type=\"Label\" parent=\"LevelInfoContainer/MarginContainer/LevelInfo/ZoneLevel\"]\nmargin_left = 18.0\nmargin_right = 110.0\nmargin_bottom = 25.0\ncustom_colors/font_color = Color( 0.615686, 0.662745, 0.709804, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::LevelLabel::Primary",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"LevelLabel\" type=\"Label\" parent=\"LevelInfoContainer/MarginContainer/LevelInfo/ZoneLevel\"]\nmargin_left = 114.0\nmargin_right = 121.0\nmargin_bottom = 25.0",
+      "new_text": "[node name=\"LevelLabel\" type=\"Label\" parent=\"LevelInfoContainer/MarginContainer/LevelInfo/ZoneLevel\"]\nmargin_left = 114.0\nmargin_right = 121.0\nmargin_bottom = 25.0\ncustom_colors/font_color = Color( 0.894118, 0.913725, 0.937255, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::ZoneCompletionCaption::Secondary",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"Label\" type=\"Label\" parent=\"LevelInfoContainer/MarginContainer/LevelInfo/ZoneCompletion\"]\nmargin_right = 94.0\nmargin_bottom = 25.0",
+      "new_text": "[node name=\"Label\" type=\"Label\" parent=\"LevelInfoContainer/MarginContainer/LevelInfo/ZoneCompletion\"]\nmargin_right = 94.0\nmargin_bottom = 25.0\ncustom_colors/font_color = Color( 0.615686, 0.662745, 0.709804, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::CompletionLabel::nerfed",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "custom_colors/font_color = Color( 1, 0, 0, 1 )",
+      "new_text": "custom_colors/font_color = Color( 0.605469, 0.108795, 0.108795, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::KillLabel::Primary",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"KillLabel\" type=\"Label\" parent=\"LevelInfoContainer/MarginContainer/LevelInfo/ZoneKills\"]\nmargin_left = 58.0\nmargin_right = 70.0\nmargin_bottom = 25.0",
+      "new_text": "[node name=\"KillLabel\" type=\"Label\" parent=\"LevelInfoContainer/MarginContainer/LevelInfo/ZoneKills\"]\nmargin_left = 58.0\nmargin_right = 70.0\nmargin_bottom = 25.0\ncustom_colors/font_color = Color( 0.894118, 0.913725, 0.937255, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::KillLabel2::Secondary",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"KillLabel2\" type=\"Label\" parent=\"LevelInfoContainer/MarginContainer/LevelInfo/ZoneKills\"]\nmargin_left = 74.0\nmargin_right = 121.0\nmargin_bottom = 25.0",
+      "new_text": "[node name=\"KillLabel2\" type=\"Label\" parent=\"LevelInfoContainer/MarginContainer/LevelInfo/ZoneKills\"]\nmargin_left = 74.0\nmargin_right = 121.0\nmargin_bottom = 25.0\ncustom_colors/font_color = Color( 0.615686, 0.662745, 0.709804, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Minimap/Minimap.tscn",
+      "unit_id": "Scenes/Minimap/Minimap.tscn::sub1_rewrite",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[sub_resource type=\"StyleBoxFlat\" id=1]\r\nbg_color = Color( 0, 0, 0, 0.705882 )\r\nexpand_margin_left = 4.0\r\nexpand_margin_right = 4.0",
+      "new_text": "[sub_resource type=\"StyleBoxFlat\" id=1]\r\nbg_color = Color( 0.0705882, 0.0941176, 0.12549, 0.85 )\r\nborder_width_left = 1\r\nborder_width_top = 1\r\nborder_width_right = 1\r\nborder_width_bottom = 1\r\nborder_color = Color( 0.160784, 0.211765, 0.258824, 1 )\r\ncorner_radius_top_left = 4\r\ncorner_radius_top_right = 4\r\ncorner_radius_bottom_right = 4\r\ncorner_radius_bottom_left = 4\r\nexpand_margin_left = 4.0\r\nexpand_margin_right = 4.0",
+      "preimage_sha256": "4da2a392372748c6ce8ad2331184a90ddad1192e398e9ffb4bd5aa1fddb125cd",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Minimap/Minimap.tscn",
+      "unit_id": "Scenes/Minimap/Minimap.tscn::sub2_at_top",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"Minimap\" type=\"CanvasLayer\"]\r\nlayer = 2",
+      "new_text": "[sub_resource type=\"StyleBoxFlat\" id=2]\r\nbg_color = Color( 0.0705882, 0.0941176, 0.12549, 0.85 )\r\nborder_width_left = 1\r\nborder_width_top = 1\r\nborder_width_right = 1\r\nborder_width_bottom = 1\r\nborder_color = Color( 0.160784, 0.211765, 0.258824, 1 )\r\ncorner_radius_top_left = 4\r\ncorner_radius_top_right = 4\r\ncorner_radius_bottom_right = 4\r\ncorner_radius_bottom_left = 4\r\n\r\n[node name=\"Minimap\" type=\"CanvasLayer\"]\r\nlayer = 2",
+      "preimage_sha256": "4da2a392372748c6ce8ad2331184a90ddad1192e398e9ffb4bd5aa1fddb125cd",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Minimap/Minimap.tscn",
+      "unit_id": "Scenes/Minimap/Minimap.tscn::affix_right_edge_align",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "margin_right = -22.0",
+      "new_text": "margin_right = 0.0",
+      "preimage_sha256": "4da2a392372748c6ce8ad2331184a90ddad1192e398e9ffb4bd5aa1fddb125cd",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Minimap/Minimap.tscn",
+      "unit_id": "Scenes/Minimap/Minimap.tscn::sub2_frame_and_panel_style",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"MinimapContainer\" type=\"PanelContainer\" parent=\".\"]\r\nanchor_left = 1.0\r\nanchor_right = 1.0\r\nmargin_left = -212.0\r\nmargin_top = 133.0\r\nmargin_right = -198.0\r\nmargin_bottom = 147.0\r\nrect_min_size = Vector2( 206, 206 )\r\nrect_clip_content = true",
+      "new_text": "[node name=\"MinimapContainer\" type=\"PanelContainer\" parent=\".\"]\r\nanchor_left = 1.0\r\nanchor_right = 1.0\r\nmargin_left = -212.0\r\nmargin_top = 133.0\r\nmargin_right = -198.0\r\nmargin_bottom = 147.0\r\nrect_min_size = Vector2( 206, 206 )\r\nrect_clip_content = true\r\ncustom_styles/panel = SubResource( 2 )",
+      "preimage_sha256": "4da2a392372748c6ce8ad2331184a90ddad1192e398e9ffb4bd5aa1fddb125cd",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Minimap/Minimap.tscn",
+      "unit_id": "Scenes/Minimap/Minimap.tscn::inner_color_rect",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "color = Color( 0, 0, 0, 0.196078 )",
+      "new_text": "color = Color( 0.0705882, 0.0941176, 0.12549, 0.85 )",
+      "preimage_sha256": "4da2a392372748c6ce8ad2331184a90ddad1192e398e9ffb4bd5aa1fddb125cd",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Minimap/Minimap.tscn",
+      "unit_id": "Scenes/Minimap/Minimap.tscn::load_steps",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[gd_scene load_steps=5 format=2]",
+      "new_text": "[gd_scene load_steps=6 format=2]",
+      "preimage_sha256": "4da2a392372748c6ce8ad2331184a90ddad1192e398e9ffb4bd5aa1fddb125cd",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Minimap/TextureRect.gd",
+      "unit_id": "Scenes/Minimap/TextureRect.gd::player_dot_color",
+      "classification": "CODE_PATCH",
+      "old_text": "draw_circle(rect_size / 2.0, 1, Color.green)",
+      "new_text": "draw_circle(rect_size / 2.0, 1, Color(0.47451, 0.85098, 0.545098, 1))",
+      "preimage_sha256": "b62965df1ce85b16b7d982c3c86f26dc58857c8126109df28d4323005968fad6",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "gdre_semantic_recovery"
+  ],
+  "not_proven": "actual visual rendering of the three unified containers and right-edge alignment at x=1280, CompletionLabel Yes/No runtime semantic colors, affix text readability on alpha 0.85 surface, map white-cell contrast, player dot visibility (S5 human checkpoint required), gameplay, release readiness; candidate is NOT promoted to baseline"
+}

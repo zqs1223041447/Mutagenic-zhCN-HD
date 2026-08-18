@@ -1,0 +1,75 @@
+{
+  "id": "w2b-pixel-icons-pilot",
+  "version": "0.1.0",
+  "patch_type": "ASSET_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "w2b-aggregate"
+  ],
+  "conflicts": [],
+  "scope": "Pixel track B-p2 pilot (PHASE6_PIXEL_ASSET_SPEC B-p2a / D1 option A): replace 3 recognizable concrete skill icons (arc / axe / bow) with pipeline-outside 32x32 STEX replacements (2x LANCZOS + UnsharpMask, pure VP8L, GDST W/H=32, flags/b16-19/format preserved) via asset_overlays (c5-l21 precedent: source_path repo-relative). Target paths are the existing .import sidecar stex remaps; no new pack paths (roundtrip 3744 safe). Skills.gd preload paths unchanged (only stex bytes replaced). Pilot scope: close the runtime-identification gap for up-resolution STEX + validate the extended asset_contract gate (ora-E A1+C2).",
+  "entities": [
+    {
+      "kind": "runtime_texture_cache",
+      "id": "res://.import/arc.png-b6f2699e96953d22a518bc2f45c3f192.stex",
+      "confidence": "FACT",
+      "expected_runtime_effect": "SkillDisplay shows the 32x32 arc icon at 1:1 (was 16x16 2x nearest)"
+    },
+    {
+      "kind": "runtime_texture_cache",
+      "id": "res://.import/axe.png-247607e85b5dc2b00b271549bd5655cf.stex",
+      "confidence": "FACT",
+      "expected_runtime_effect": "SkillDisplay shows the 32x32 axe icon at 1:1 (was 16x16 2x nearest)"
+    },
+    {
+      "kind": "runtime_texture_cache",
+      "id": "res://.import/bow.png-fd28168a1de29ae820f4af5be606b37d.stex",
+      "confidence": "FACT",
+      "expected_runtime_effect": "SkillDisplay shows the 32x32 bow icon at 1:1 (was 16x16 2x nearest)"
+    }
+  ],
+  "patches": [],
+  "asset_overlays": [
+    {
+      "path": ".import/arc.png-b6f2699e96953d22a518bc2f45c3f192.stex",
+      "source_path": "mods/w2b-pixel-icons-pilot/assets/arc_32x32.stex",
+      "preimage_sha256": "000A4439F1FF36E2D51F2B35C6D1D6AF202514DAA88292167525EBF87F860574",
+      "replacement_sha256": "554269E555E66A1B69F39BF9D851A10E841E09D57DE919A5DAB73B25B30284C9",
+      "replacement_size": 806,
+      "expected_dimensions": [32, 32],
+      "expected_format_marker": "WEBP",
+      "tests": ["asset_contract", "structural_delta", "import_path_preservation", "boot", "gdre_semantic_recovery"]
+    },
+    {
+      "path": ".import/axe.png-247607e85b5dc2b00b271549bd5655cf.stex",
+      "source_path": "mods/w2b-pixel-icons-pilot/assets/axe_32x32.stex",
+      "preimage_sha256": "55E7872C0A6361A312CA329C1C4B04413D4F130830AD0A722AD1F206AA2E169C",
+      "replacement_sha256": "714136B3E54939FFFD612E49E90D6538180959B22AD6C796E71809900BF0B5A5",
+      "replacement_size": 954,
+      "expected_dimensions": [32, 32],
+      "expected_format_marker": "WEBP",
+      "tests": ["asset_contract", "structural_delta", "import_path_preservation", "boot", "gdre_semantic_recovery"]
+    },
+    {
+      "path": ".import/bow.png-fd28168a1de29ae820f4af5be606b37d.stex",
+      "source_path": "mods/w2b-pixel-icons-pilot/assets/bow_32x32.stex",
+      "preimage_sha256": "895177FE111A5F9A7AD3AFDDFA1FC714A95CBD1ED6695E51A0CEB796507A871D",
+      "replacement_sha256": "38412DB6ADD63F28B52E482DA88609835E03C02048E3B338946D9A5BA37AC14F",
+      "replacement_size": 1078,
+      "expected_dimensions": [32, 32],
+      "expected_format_marker": "WEBP",
+      "tests": ["asset_contract", "structural_delta", "import_path_preservation", "boot", "gdre_semantic_recovery"]
+    }
+  ],
+  "tests": [
+    "preimage_exact_match",
+    "asset_contract",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "gdre_semantic_recovery"
+  ],
+  "not_proven": "in-game visual quality of the 32x32 icons (S5 human checkpoint required), full 220-icon rollout, release readiness; candidate is NOT promoted to baseline"
+}

@@ -1,0 +1,172 @@
+{
+  "id": "w2b-1-buttons",
+  "version": "0.1.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "w2a-aggregate"
+  ],
+  "conflicts": [],
+  "scope": "PHASE 2b B1 (docs/requirements/PHASE2B_DESIGN_SPEC.md §2): complete the Button theme family in Themes/MainTheme.tres (LF, 53-scene shared). Replaces the three pixel ninepatch styleboxes for normal/hover/focus with StyleBoxFlat matching the PHASE 1 pressed/disabled flat language: normal id=42 Surface 2 bg + Normal Border 1px + radius 4 + content margin 10 (static, one step above container); hover id=43 Elevated Surface bg + Highlight Border 1px (one step up, same margins -> no layout jump); focus id=44 transparent bg + Highlight Border (keyboard focus ring drawn over normal). Text colors: normal #E0E0E0 -> Primary Text #E4E9EF, focus green -> Primary, hover green -> Arcane #79D98B (green = interactive). Dead-reference cleanup (M3): remove ext id=8/9 ninepatch_58*.png + sub id=34/38/37 blocks; nothing else references them. DEVATION (mechanism-forced): load_steps stays 32 (v1-hd-cleanup owns the line earlier in the chain; the base-anchored preimage applier cannot express 32->30 because load_steps=32 does not exist in the 04_recovered base; actual sub_resource count after B1 is 30, value is informational only and boot-verified). pressed/disabled (id=40/41) NOT reopened. No new file paths (roundtrip 3744), no gameplay/collision/input changes, no baseline promotion.",
+  "entities": [
+    {
+      "kind": "visual_button_normal",
+      "id": "Themes/MainTheme.tres::Button::styles::normal",
+      "confidence": "FACT",
+      "expected_runtime_effect": "every Button's normal state renders as StyleBoxFlat id=42: bg Surface 2 #121820, border 1px Normal Border #293642, corner radius 4, content margin 10/10/10/10 (identical margins to pressed 10/11/10/9 -> no layout jump between states)"
+    },
+    {
+      "kind": "visual_button_hover",
+      "id": "Themes/MainTheme.tres::Button::styles::hover",
+      "confidence": "FACT",
+      "expected_runtime_effect": "hover state renders as StyleBoxFlat id=43: bg Elevated #1D2731, border Highlight #405365, radius 4, content margin 10/10/10/10; text turns Arcane #79D98B"
+    },
+    {
+      "kind": "visual_button_focus",
+      "id": "Themes/MainTheme.tres::Button::styles::focus",
+      "confidence": "FACT",
+      "expected_runtime_effect": "keyboard focus draws StyleBoxFlat id=44: transparent bg (does not obscure hover), Highlight Border #405365, radius 4; text stays Primary"
+    },
+    {
+      "kind": "visual_button_text_colors",
+      "id": "Themes/MainTheme.tres::Button::colors::font_color*",
+      "confidence": "FACT",
+      "expected_runtime_effect": "normal/focus text #E0E0E0/green -> Primary #E4E9EF; hover text green -> Arcane #79D98B; disabled/pressed text untouched"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::ext_ninepatch_removal",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[ext_resource path=\"res://sprites/gui/ninepatch_58.png\" type=\"Texture\" id=8]\n[ext_resource path=\"res://sprites/gui/ninepatch_58_focus.png\" type=\"Texture\" id=9]\n\n[sub_resource type=\"StyleBoxTexture\" id=34]",
+      "new_text": "[sub_resource type=\"StyleBoxTexture\" id=34]",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::sub_34_removal",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[sub_resource type=\"StyleBoxTexture\" id=34]\ntexture = ExtResource( 8 )\nregion_rect = Rect2( 0, 0, 32, 32 )\nmargin_left = 10.0\nmargin_right = 10.0\nmargin_top = 10.0\nmargin_bottom = 10.0\naxis_stretch_horizontal = 2\naxis_stretch_vertical = 2\n\n[sub_resource type=\"StyleBoxTexture\" id=38]",
+      "new_text": "[sub_resource type=\"StyleBoxTexture\" id=38]",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::sub_38_removal",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[sub_resource type=\"StyleBoxTexture\" id=38]\ntexture = ExtResource( 9 )\nregion_rect = Rect2( 0, 0, 32, 32 )\nmargin_left = 10.0\nmargin_right = 10.0\nmargin_top = 10.0\nmargin_bottom = 10.0\naxis_stretch_horizontal = 2\naxis_stretch_vertical = 2\n\n[sub_resource type=\"StyleBoxTexture\" id=37]",
+      "new_text": "[sub_resource type=\"StyleBoxTexture\" id=37]",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::sub_37_removal",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[sub_resource type=\"StyleBoxTexture\" id=37]\ntexture = ExtResource( 9 )\nregion_rect = Rect2( 0, 0, 32, 32 )\nmargin_left = 10.0\nmargin_right = 10.0\nmargin_top = 10.0\nmargin_bottom = 10.0\naxis_stretch_horizontal = 2\naxis_stretch_vertical = 2\n\n[sub_resource type=\"StyleBoxFlat\" id=31]",
+      "new_text": "[sub_resource type=\"StyleBoxFlat\" id=31]",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::insert_subs_42_43_44",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[resource]",
+      "new_text": "[sub_resource type=\"StyleBoxFlat\" id=42]\nbg_color = Color( 0.0941176, 0.129412, 0.164706, 1 )\nborder_width_left = 1\nborder_width_top = 1\nborder_width_right = 1\nborder_width_bottom = 1\nborder_color = Color( 0.160784, 0.211765, 0.258824, 1 )\ncorner_radius_top_left = 4\ncorner_radius_top_right = 4\ncorner_radius_bottom_right = 4\ncorner_radius_bottom_left = 4\ncontent_margin_left = 10.0\ncontent_margin_top = 10.0\ncontent_margin_right = 10.0\ncontent_margin_bottom = 10.0\n\n[sub_resource type=\"StyleBoxFlat\" id=43]\nbg_color = Color( 0.113725, 0.152941, 0.192157, 1 )\nborder_width_left = 1\nborder_width_top = 1\nborder_width_right = 1\nborder_width_bottom = 1\nborder_color = Color( 0.25098, 0.32549, 0.396078, 1 )\ncorner_radius_top_left = 4\ncorner_radius_top_right = 4\ncorner_radius_bottom_right = 4\ncorner_radius_bottom_left = 4\ncontent_margin_left = 10.0\ncontent_margin_top = 10.0\ncontent_margin_right = 10.0\ncontent_margin_bottom = 10.0\n\n[sub_resource type=\"StyleBoxFlat\" id=44]\nbg_color = Color( 1, 1, 1, 0 )\nborder_width_left = 1\nborder_width_top = 1\nborder_width_right = 1\nborder_width_bottom = 1\nborder_color = Color( 0.25098, 0.32549, 0.396078, 1 )\ncorner_radius_top_left = 4\ncorner_radius_top_right = 4\ncorner_radius_bottom_right = 4\ncorner_radius_bottom_left = 4\ncontent_margin_left = 10.0\ncontent_margin_top = 10.0\ncontent_margin_right = 10.0\ncontent_margin_bottom = 10.0\n\n[resource]",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::Button::styles::normal_slot",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "Button/styles/normal = SubResource( 34 )",
+      "new_text": "Button/styles/normal = SubResource( 42 )",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::Button::styles::hover_slot",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "Button/styles/hover = SubResource( 37 )",
+      "new_text": "Button/styles/hover = SubResource( 43 )",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::Button::styles::focus_slot",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "Button/styles/focus = SubResource( 38 )",
+      "new_text": "Button/styles/focus = SubResource( 44 )",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::Button::colors::font_color",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "Button/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )",
+      "new_text": "Button/colors/font_color = Color( 0.894118, 0.913725, 0.937255, 1 )",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::Button::colors::font_color_focus",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "Button/colors/font_color_focus = Color( 0.294118, 0.65098, 0.27451, 1 )",
+      "new_text": "Button/colors/font_color_focus = Color( 0.894118, 0.913725, 0.937255, 1 )",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Themes/MainTheme.tres",
+      "unit_id": "Themes/MainTheme.tres::Button::colors::font_color_hover",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "Button/colors/font_color_hover = Color( 0.294118, 0.65098, 0.27451, 1 )",
+      "new_text": "Button/colors/font_color_hover = Color( 0.47451, 0.85098, 0.545098, 1 )",
+      "preimage_sha256": "1e6df91f6ef0997b31e86531b3060c4fa7928fe0f6a0dc0df3c968ba5b576289",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "gdre_semantic_recovery"
+  ],
+  "not_proven": "actual visual rendering of the four button states across all 53 scenes (S5 human checkpoint on Hub + EscapeMenu + popups required), keyboard focus ring behavior, hover transition feel (PHASE 3 Interaction Pass), gameplay, release readiness; candidate is NOT promoted to baseline"
+}

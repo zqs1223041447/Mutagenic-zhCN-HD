@@ -1,0 +1,145 @@
+{
+  "id": "w2b-3-health-orb",
+  "version": "0.1.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "w2b-2-zone-minimap"
+  ],
+  "conflicts": [],
+  "scope": "PHASE 2b B3 (docs/requirements/PHASE2B_DESIGN_SPEC.md §4): health orb 256px pure-red texture sphere -> 160px programmatic Dark Arcane orb. Globe.tscn (CRLF): load_steps 6->4; remove the two globe PNG ext resources (globe_inner_dark_2 id=1, globe_overlay_dark_final id=4 - M4: referenced only here, remaining ext ids 2/3 untouched); root Control gains anchor_top/bottom=1.0 + margin_top=-160.0/margin_right=160.0 (160x160 bottom-left anchored); TextureProgress keeps step/value/fill_mode (value slot drives _draw liquid) but drops anchor/margin lines and both texture assignments (null textures render nothing, no errors); DynamicFont id=1 gains outline_size 1 + outline_color Background Deep a0.9 (2a outline convention); number HBox re-anchored to orb-lower-third: margins -40/-52/200/-21 (240 wide, centered on x=80, y in [108,139]); HealthLabel margins cleared to 0.0 (container centers it) + custom_colors/font_color Primary; text/align untouched. Globe.gd (LF, CODE_PATCH, compile manifest declares it): full programmatic redraw per spec 4.2 - constants FRAME=Surface 2 / INNER=Background Deep / RIM=Normal Border / RIM_FAINT a0.6 / BLOOD_DEEP #8B1F24 / BLOOD_TOP #C83E42 / SHADOW a0.30 / HILITE a0.10; _draw(): circle 80 FRAME -> 74 INNER -> arc r77 w3 RIM -> arc r70 w1 RIM_FAINT -> 32 horizontal liquid bands (chord half-width 2*sqrt(max(0,66^2-(yc-80)^2)), color BLOOD_DEEP.lerp(BLOOD_TOP, t)) when pct>0.005 -> inner-shadow arc r66 w4 SHADOW over upper rim -> highlight arc r62 w2 HILITE upper-left; _process: 120ms damage flash, modulate channel offset <=14% on orb only, restores to pure white at 0 (NO screen flash); update_progress: original two lines kept verbatim (incl. spaced $HBoxContainer / HealthLabel.text form - compile-verified), plus flash trigger when amount drops (_flash = 0.12) and update() for liquid redraw; update_progress signature unchanged -> GUI.gd zero changes. Godot 3.5 syntax: no super._draw(), draw_arc integer widths, TAU/PI globals. No new file paths (roundtrip 3744), zero gameplay impact, no baseline promotion.",
+  "entities": [
+    {
+      "kind": "visual_health_orb_geometry",
+      "id": "Scenes/GUI/Globes/Globe.tscn::160px_bottom_left",
+      "confidence": "FACT",
+      "expected_runtime_effect": "orb occupies x in [0,160], y in [640,800] (bottom-left, was [0,256]x[544,800]); no overlap with dock (x 340-940) or right-edge modules; mouse_filter=2 keeps zero hitbox"
+    },
+    {
+      "kind": "visual_health_orb_draw",
+      "id": "Scenes/GUI/Globes/Globe.gd::_draw",
+      "confidence": "FACT",
+      "expected_runtime_effect": "procedural orb: dark metal base + inner dark disk + outer rim ring + thin inner ring + 32-band radial-gradient liquid (Health deep -> bright) + upper inner shadow + light highlight; value slot drives liquid height"
+    },
+    {
+      "kind": "visual_health_orb_flash",
+      "id": "Scenes/GUI/Globes/Globe.gd::_process::damage_flash",
+      "confidence": "FACT",
+      "expected_runtime_effect": "on amount decrease a 120ms sub-14%-channel modulate flash on the orb node only, auto-restoring to pure white; no screen-level red flash"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/GUI/Globes/Globe.tscn",
+      "unit_id": "Scenes/GUI/Globes/Globe.tscn::load_steps",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[gd_scene load_steps=6 format=2]",
+      "new_text": "[gd_scene load_steps=4 format=2]",
+      "preimage_sha256": "6f1e300e336650a1edef745196f55f864856b1a9365429e2059990a46d80541e",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/Globes/Globe.tscn",
+      "unit_id": "Scenes/GUI/Globes/Globe.tscn::ext_inner_removal",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[ext_resource path=\"res://sprites/gui/globes/globe_inner_dark_2.png\" type=\"Texture\" id=1]\r\n[ext_resource path=\"res://Fonts/ChivoMono-VariableFont_wght.ttf\" type=\"DynamicFontData\" id=2]",
+      "new_text": "[ext_resource path=\"res://Fonts/ChivoMono-VariableFont_wght.ttf\" type=\"DynamicFontData\" id=2]",
+      "preimage_sha256": "6f1e300e336650a1edef745196f55f864856b1a9365429e2059990a46d80541e",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/Globes/Globe.tscn",
+      "unit_id": "Scenes/GUI/Globes/Globe.tscn::ext_overlay_removal",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[ext_resource path=\"res://Scenes/GUI/Globes/Globe.gd\" type=\"Script\" id=3]\r\n[ext_resource path=\"res://sprites/gui/globes/globe_overlay_dark_final.png\" type=\"Texture\" id=4]",
+      "new_text": "[ext_resource path=\"res://Scenes/GUI/Globes/Globe.gd\" type=\"Script\" id=3]",
+      "preimage_sha256": "6f1e300e336650a1edef745196f55f864856b1a9365429e2059990a46d80541e",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/Globes/Globe.tscn",
+      "unit_id": "Scenes/GUI/Globes/Globe.tscn::root_geometry",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"Globe\" type=\"Control\"]\r\nscript = ExtResource( 3 )",
+      "new_text": "[node name=\"Globe\" type=\"Control\"]\r\nanchor_top = 1.0\r\nanchor_bottom = 1.0\r\nmargin_top = -160.0\r\nmargin_right = 160.0\r\nscript = ExtResource( 3 )",
+      "preimage_sha256": "6f1e300e336650a1edef745196f55f864856b1a9365429e2059990a46d80541e",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/Globes/Globe.tscn",
+      "unit_id": "Scenes/GUI/Globes/Globe.tscn::texture_progress_cleanup",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"TextureProgress\" type=\"TextureProgress\" parent=\".\"]\r\nanchor_top = 1.0\r\nanchor_bottom = 1.0\r\nmargin_top = -256.0\r\nmargin_right = 256.0\r\nstep = 0.0\r\nvalue = 80.0\r\ntexture_under = ExtResource( 1 )\r\ntexture_progress = ExtResource( 4 )\r\nfill_mode = 3",
+      "new_text": "[node name=\"TextureProgress\" type=\"TextureProgress\" parent=\".\"]\r\nstep = 0.0\r\nvalue = 80.0\r\nfill_mode = 3",
+      "preimage_sha256": "6f1e300e336650a1edef745196f55f864856b1a9365429e2059990a46d80541e",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/Globes/Globe.tscn",
+      "unit_id": "Scenes/GUI/Globes/Globe.tscn::dynamic_font_outline",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[sub_resource type=\"DynamicFont\" id=1]\r\nsize = 24\r\nfont_data = ExtResource( 2 )",
+      "new_text": "[sub_resource type=\"DynamicFont\" id=1]\r\nsize = 24\r\nfont_data = ExtResource( 2 )\r\noutline_size = 1\r\noutline_color = Color( 0.0352941, 0.0470588, 0.0627451, 0.9 )",
+      "preimage_sha256": "6f1e300e336650a1edef745196f55f864856b1a9365429e2059990a46d80541e",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/Globes/Globe.tscn",
+      "unit_id": "Scenes/GUI/Globes/Globe.tscn::hbox_reanchor",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"HBoxContainer\" type=\"HBoxContainer\" parent=\".\"]\r\nmargin_left = -174.0\r\nmargin_top = -186.0\r\nmargin_right = 426.0\r\nmargin_bottom = -157.0\r\nalignment = 1",
+      "new_text": "[node name=\"HBoxContainer\" type=\"HBoxContainer\" parent=\".\"]\r\nmargin_left = -40.0\r\nmargin_top = -52.0\r\nmargin_right = 200.0\r\nmargin_bottom = -21.0\r\nalignment = 1",
+      "preimage_sha256": "6f1e300e336650a1edef745196f55f864856b1a9365429e2059990a46d80541e",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/Globes/Globe.tscn",
+      "unit_id": "Scenes/GUI/Globes/Globe.tscn::health_label",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"HealthLabel\" type=\"Label\" parent=\"HBoxContainer\"]\r\nmargin_left = 237.0\r\nmargin_right = 363.0\r\nmargin_bottom = 29.0\r\ncustom_fonts/font = SubResource( 1 )\r\ntext = \"150 / 200\"\r\nalign = 1",
+      "new_text": "[node name=\"HealthLabel\" type=\"Label\" parent=\"HBoxContainer\"]\r\nmargin_left = 0.0\r\nmargin_right = 0.0\r\nmargin_bottom = 29.0\r\ncustom_fonts/font = SubResource( 1 )\r\ntext = \"150 / 200\"\r\nalign = 1\r\ncustom_colors/font_color = Color( 0.894118, 0.913725, 0.937255, 1 )",
+      "preimage_sha256": "6f1e300e336650a1edef745196f55f864856b1a9365429e2059990a46d80541e",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/Globes/Globe.gd",
+      "unit_id": "Scenes/GUI/Globes/Globe.gd::programmatic_redraw",
+      "classification": "CODE_PATCH",
+      "old_text": "func update_progress(amount, amount_max):\n\t\t\t\tvar percent = amount / amount_max\n\t\t\t\t$TextureProgress.value = 100.0 * percent\n\t\t\t\t$HBoxContainer / HealthLabel.text = str(round(amount)) + \" / \" + str(round(amount_max))",
+      "new_text": "const FRAME = Color( 0.0941176, 0.129412, 0.164706, 1 )\nconst INNER = Color( 0.0352941, 0.0470588, 0.0627451, 1 )\nconst RIM = Color( 0.160784, 0.211765, 0.258824, 1 )\nconst RIM_FAINT = Color( 0.160784, 0.211765, 0.258824, 0.6 )\nconst BLOOD_DEEP = Color( 0.545098, 0.121569, 0.141176, 1 )\nconst BLOOD_TOP = Color( 0.784314, 0.243137, 0.258824, 1 )\nconst SHADOW = Color( 0.0352941, 0.0470588, 0.0627451, 0.3 )\nconst HILITE = Color( 0.894118, 0.913725, 0.937255, 0.1 )\n\nvar _flash := 0.0\nvar _last_amount := -1.0\n\nfunc _process(delta):\n\t\t\t\tif _flash > 0.0:\n\t\t\t\t\t\t\t\t_flash -= delta\n\t\t\t\tvar k = clamp(_flash / 0.12, 0.0, 1.0)\n\t\t\t\tmodulate = Color(1, 1 - 0.10 * k, 1 - 0.14 * k, 1)\n\nfunc _draw():\n\t\t\t\tvar c = Vector2(80, 80)\n\t\t\t\tdraw_circle(c, 80, FRAME)\n\t\t\t\tdraw_circle(c, 74, INNER)\n\t\t\t\tdraw_arc(c, 77, 0, TAU, 48, 3.0, RIM, true)\n\t\t\t\tdraw_arc(c, 70, 0, TAU, 40, 1.0, RIM_FAINT, true)\n\t\t\t\tvar pct = $TextureProgress.value / 100.0\n\t\t\t\tif pct > 0.005:\n\t\t\t\t\t\t\t\tvar top = 80.0 - 66.0\n\t\t\t\t\t\t\t\tvar h = 132.0 * pct\n\t\t\t\t\t\t\t\tvar bands = 32\n\t\t\t\t\t\t\t\tvar bh = h / bands\n\t\t\t\t\t\t\t\tfor i in range(bands):\n\t\t\t\t\t\t\t\t\t\t\t\tvar y0 = top + bh * i\n\t\t\t\t\t\t\t\t\t\t\t\tvar yc = y0 + bh * 0.5\n\t\t\t\t\t\t\t\t\t\t\t\tvar half = sqrt(max(0.0, 66.0 * 66.0 - (yc - 80.0) * (yc - 80.0)))\n\t\t\t\t\t\t\t\t\t\t\t\tvar t = clamp((yc - top) / h, 0.0, 1.0)\n\t\t\t\t\t\t\t\t\t\t\t\tdraw_rect(Rect2(80.0 - half, y0, half * 2.0, bh), BLOOD_DEEP.linear_interpolate(BLOOD_TOP, t))\n\t\t\t\tdraw_arc(c, 66, PI, TAU, 24, 4.0, SHADOW, true)\n\t\t\t\tdraw_arc(c, 62, PI * 1.12, PI * 1.38, 12, 2.0, HILITE, true)\n\nfunc update_progress(amount, amount_max):\n\t\t\t\tvar percent = amount / amount_max\n\t\t\t\t$TextureProgress.value = 100.0 * percent\n\t\t\t\t$HBoxContainer / HealthLabel.text = str(round(amount)) + \" / \" + str(round(amount_max))\n\t\t\t\tif amount < _last_amount:\n\t\t\t\t\t\t\t\t_flash = 0.12\n\t\t\t\t_last_amount = amount\n\t\t\t\tupdate()",
+      "preimage_sha256": "5f4646f3519dda57ae30588205d341e217c0c92d3d8cf8b9b0374976df8e2bae",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "gdre_semantic_recovery",
+    "boot_log_script_error_scan"
+  ],
+  "not_proven": "actual visual rendering: orb proportion at 160px, band gradient smoothness (if banding visible S5 -> bands 32->64), flash feel/duration, number readability on liquid at alpha 0.85, no overlap with dock (S5 human checkpoint required), gameplay, release readiness; candidate is NOT promoted to baseline"
+}

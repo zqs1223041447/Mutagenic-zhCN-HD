@@ -1,0 +1,149 @@
+{
+  "id": "w2b-4-command-dock",
+  "version": "0.1.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "w2b-3-health-orb"
+  ],
+  "conflicts": [],
+  "scope": "PHASE 2b B4 (docs/requirements/PHASE2B_DESIGN_SPEC.md §5): bottom command dock via LOCAL override in GUI.tscn (LF). MainTheme.tres id=32 (ninepatch_panel) is shared with PopupMenu and TooltipPanel (M11) so it is NOT touched - dock gets its own StyleBoxFlat id=6: content margin 16 (identical to ninepatch id=32 -> inner content zero movement), bg Surface 1 #121820 alpha 0.92, Normal Border 1px, radius 4. dock PanelContainer (parent SkillBar) gains custom_styles/panel = SubResource( 6 ); rect_min_size 600/mouse_filter 2 untouched. Inner hierarchy colors (zero layout): BlueOrbs/RedOrbs/GreenOrbs/GoldOrbs/CorruptionShards + MutationTierLabel/MutationXP labels -> Primary Text #E4E9EF via per-node custom_colors/font_color; 32px pixel orb icons untouched (PHASE 6). load_steps 14->16 in ONE patch (mechanism-forced: B2 skips 14->15 because load_steps=15 does not exist in the 04_recovered base that every patch's preimage anchors to; B4 performs the full 14->16). sub id=6 inserted at the canonical position before the first [node] block (after B2's id=5 block -> file order id=5 then id=6, satisfying spec 'id=6 after id=5'). V1 compact tier NOT enabled (default off, S5-gated). No new file paths (roundtrip 3744), no gameplay/collision/input changes, no baseline promotion.",
+  "entities": [
+    {
+      "kind": "visual_dock_panel",
+      "id": "Scenes/GUI/GUI.tscn::SkillBar/PanelContainer::custom_styles",
+      "confidence": "FACT",
+      "expected_runtime_effect": "dock renders as Surface 1 alpha 0.92 flat panel with Normal Border 1px + radius 4 + content margin 16; MainTheme id=32 (popups/tooltips) untouched; three content rows keep positions (identical content margin)"
+    },
+    {
+      "kind": "visual_dock_text_hierarchy",
+      "id": "Scenes/GUI/GUI.tscn::dock_labels::Primary",
+      "confidence": "FACT",
+      "expected_runtime_effect": "all dock numbers/labels (5 orb counters + mutation tier + mutation XP) render Primary Text #E4E9EF; orb icons unchanged"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::insert_sub6",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"GUI\" type=\"CanvasLayer\"]\nscript = ExtResource( 2 )",
+      "new_text": "[sub_resource type=\"StyleBoxFlat\" id=6]\ncontent_margin_left = 16.0\ncontent_margin_top = 16.0\ncontent_margin_right = 16.0\ncontent_margin_bottom = 16.0\nbg_color = Color( 0.0705882, 0.0941176, 0.12549, 0.92 )\nborder_width_left = 1\nborder_width_top = 1\nborder_width_right = 1\nborder_width_bottom = 1\nborder_color = Color( 0.160784, 0.211765, 0.258824, 1 )\ncorner_radius_top_left = 4\ncorner_radius_top_right = 4\ncorner_radius_bottom_right = 4\ncorner_radius_bottom_left = 4\n\n[node name=\"GUI\" type=\"CanvasLayer\"]\nscript = ExtResource( 2 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::dock_panel_style",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"PanelContainer\" type=\"PanelContainer\" parent=\"SkillBar\"]\nmargin_left = 340.0\nmargin_right = 940.0\nmargin_bottom = 150.0\nrect_min_size = Vector2( 600, 0 )\nmouse_filter = 2",
+      "new_text": "[node name=\"PanelContainer\" type=\"PanelContainer\" parent=\"SkillBar\"]\nmargin_left = 340.0\nmargin_right = 940.0\nmargin_bottom = 150.0\nrect_min_size = Vector2( 600, 0 )\nmouse_filter = 2\ncustom_styles/panel = SubResource( 6 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::load_steps",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[gd_scene load_steps=14 format=2]",
+      "new_text": "[gd_scene load_steps=16 format=2]",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::BlueOrbs::Primary",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"BlueOrbs\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer\"]\nmargin_left = 36.0\nmargin_top = 3.0\nmargin_right = 48.0\nmargin_bottom = 28.0",
+      "new_text": "[node name=\"BlueOrbs\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer\"]\nmargin_left = 36.0\nmargin_top = 3.0\nmargin_right = 48.0\nmargin_bottom = 28.0\ncustom_colors/font_color = Color( 0.894118, 0.913725, 0.937255, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::RedOrbs::Primary",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"RedOrbs\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer2\"]\nmargin_left = 36.0\nmargin_top = 3.0\nmargin_right = 48.0\nmargin_bottom = 28.0",
+      "new_text": "[node name=\"RedOrbs\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer2\"]\nmargin_left = 36.0\nmargin_top = 3.0\nmargin_right = 48.0\nmargin_bottom = 28.0\ncustom_colors/font_color = Color( 0.894118, 0.913725, 0.937255, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::GreenOrbs::Primary",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"GreenOrbs\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer3\"]\nmargin_left = 36.0\nmargin_top = 3.0\nmargin_right = 48.0\nmargin_bottom = 28.0",
+      "new_text": "[node name=\"GreenOrbs\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer3\"]\nmargin_left = 36.0\nmargin_top = 3.0\nmargin_right = 48.0\nmargin_bottom = 28.0\ncustom_colors/font_color = Color( 0.894118, 0.913725, 0.937255, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::GoldOrbs::Primary",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"GoldOrbs\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer4\"]\nmargin_left = 36.0\nmargin_top = 3.0\nmargin_right = 48.0\nmargin_bottom = 28.0",
+      "new_text": "[node name=\"GoldOrbs\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer4\"]\nmargin_left = 36.0\nmargin_top = 3.0\nmargin_right = 48.0\nmargin_bottom = 28.0\ncustom_colors/font_color = Color( 0.894118, 0.913725, 0.937255, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::CorruptionShards::Primary",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"CorruptionShards\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer5\"]\nmargin_left = 36.0\nmargin_top = 3.0\nmargin_right = 48.0\nmargin_bottom = 28.0",
+      "new_text": "[node name=\"CorruptionShards\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/LootContainer/HBoxContainer5\"]\nmargin_left = 36.0\nmargin_top = 3.0\nmargin_right = 48.0\nmargin_bottom = 28.0\ncustom_colors/font_color = Color( 0.894118, 0.913725, 0.937255, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::MutationTierLabel::Primary",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"MutationTierLabel\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/VBoxContainer/MutationInfoContainer\"]\nmargin_right = 96.0\nmargin_bottom = 25.0\nrect_min_size = Vector2( 96, 0 )\nalign = 1",
+      "new_text": "[node name=\"MutationTierLabel\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/VBoxContainer/MutationInfoContainer\"]\nmargin_right = 96.0\nmargin_bottom = 25.0\nrect_min_size = Vector2( 96, 0 )\nalign = 1\ncustom_colors/font_color = Color( 0.894118, 0.913725, 0.937255, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/GUI/GUI.tscn",
+      "unit_id": "Scenes/GUI/GUI.tscn::MutationXP::Primary",
+      "classification": "RESOURCE_PATCH",
+      "old_text": "[node name=\"MutationXP\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/VBoxContainer/MutationInfoContainer\"]\nmargin_left = 408.0\nmargin_right = 568.0\nmargin_bottom = 25.0\nrect_min_size = Vector2( 160, 0 )\nalign = 1",
+      "new_text": "[node name=\"MutationXP\" type=\"Label\" parent=\"SkillBar/PanelContainer/VBoxContainer/VBoxContainer/MutationInfoContainer\"]\nmargin_left = 408.0\nmargin_right = 568.0\nmargin_bottom = 25.0\nrect_min_size = Vector2( 160, 0 )\nalign = 1\ncustom_colors/font_color = Color( 0.894118, 0.913725, 0.937255, 1 )",
+      "preimage_sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "gdre_semantic_recovery"
+  ],
+  "not_proven": "actual visual rendering: dock slimness vs v8.1, three-row separation readability, translucency over world, orb number contrast, 1280x800/1600x1000/1920x1200 alignment (S5 human checkpoint required), gameplay, release readiness; candidate is NOT promoted to baseline"
+}

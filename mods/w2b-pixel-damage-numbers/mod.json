@@ -1,0 +1,83 @@
+{
+  "id": "w2b-pixel-damage-numbers",
+  "version": "0.1.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "w2a-aggregate"
+  ],
+  "conflicts": [],
+  "scope": "PHASE 6 pixel track batch B-p1 (docs/requirements/PHASE6_PIXEL_ASSET_SPEC.md §5): programmatic fix of the floating combat text (FCT) render chain. Root cause verified in spec §3.1.3: FloatingDamage.tscn:7 parent Node2D scale=Vector2(0.5,0.5) compresses the MainTheme 18px rsans vector font to an effective 9px, which reads as a 'monogram pixel font'; monogram-extended.ttf / stack_pixel.ttf are orphan fonts with zero references in 03_raw/04_recovered and are NOT touched. Fix: scale -> Vector2(1,1) + explicit Label DynamicFont (rsans.ttf size=18, outline_size=1, outline_color=Color(0,0,0,1), mirroring MainTheme default font id=5) so FCT renders at 18px logical coordinates (within spec 16-18px), decoupled from theme default changes. Zero new pack paths (roundtrip 3744 safe). No script changes: FloatingDamage.gd crit rect_scale x2 tween left as-is per spec (crit params await designer decision; the optional CODE_PATCH is deliberately NOT exercised). No font file replacement.",
+  "entities": [
+    {
+      "kind": "visual_floating_damage_scale",
+      "id": "Scenes/Particles/FloatingDamage.tscn::FloatingDamageText::scale",
+      "confidence": "FACT",
+      "expected_runtime_effect": "the FloatingDamageText parent Node2D scale changes from Vector2(0.5,0.5) to Vector2(1,1); the Label child (theme=MainTheme, 18px default font) renders at full 18px logical coordinates instead of effective 9px; shared by all FCT usages (damage numbers / XP / hints)"
+    },
+    {
+      "kind": "visual_floating_damage_font",
+      "id": "Scenes/Particles/FloatingDamage.tscn::Label::custom_fonts/font",
+      "confidence": "FACT",
+      "expected_runtime_effect": "the Label gains an explicit DynamicFont sub-resource (rsans.ttf, size=18, outline_size=1, outline_color=Color(0,0,0,1), identical to MainTheme default font id=5) so FCT font size is explicit in the scene and no longer inherited from the theme default; effective logical size 18px"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Particles/FloatingDamage.tscn",
+      "unit_id": "Scenes/Particles/FloatingDamage.tscn::load_steps",
+      "classification": "TEXT_PATCH",
+      "old_text": "[gd_scene load_steps=3 format=2]",
+      "new_text": "[gd_scene load_steps=5 format=2]",
+      "preimage_sha256": "17BB3F4C9C3469EBE21343E5BF850D1C1C8D5AC219DE2672C7BB8FE2708534BE",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Particles/FloatingDamage.tscn",
+      "unit_id": "Scenes/Particles/FloatingDamage.tscn::header::ext_resource_font",
+      "classification": "TEXT_PATCH",
+      "old_text": "[ext_resource path=\"res://Scenes/Particles/FloatingDamage.gd\" type=\"Script\" id=1]\n[ext_resource path=\"res://Themes/MainTheme.tres\" type=\"Theme\" id=2]",
+      "new_text": "[ext_resource path=\"res://Scenes/Particles/FloatingDamage.gd\" type=\"Script\" id=1]\n[ext_resource path=\"res://Themes/MainTheme.tres\" type=\"Theme\" id=2]\n[ext_resource path=\"res://Fonts/rsans.ttf\" type=\"DynamicFontData\" id=3]\n\n[sub_resource type=\"DynamicFont\" id=1]\nsize = 18\noutline_size = 1\noutline_color = Color( 0, 0, 0, 1 )\nfont_data = ExtResource( 3 )",
+      "preimage_sha256": "17BB3F4C9C3469EBE21343E5BF850D1C1C8D5AC219DE2672C7BB8FE2708534BE",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Particles/FloatingDamage.tscn",
+      "unit_id": "Scenes/Particles/FloatingDamage.tscn::FloatingDamageText::scale",
+      "classification": "TEXT_PATCH",
+      "old_text": "scale = Vector2( 0.5, 0.5 )",
+      "new_text": "scale = Vector2( 1, 1 )",
+      "preimage_sha256": "17BB3F4C9C3469EBE21343E5BF850D1C1C8D5AC219DE2672C7BB8FE2708534BE",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Particles/FloatingDamage.tscn",
+      "unit_id": "Scenes/Particles/FloatingDamage.tscn::Label::custom_fonts/font",
+      "classification": "TEXT_PATCH",
+      "old_text": "theme = ExtResource( 2 )\ntext = \"test\"",
+      "new_text": "theme = ExtResource( 2 )\ncustom_fonts/font = SubResource( 1 )\ntext = \"test\"",
+      "preimage_sha256": "17BB3F4C9C3469EBE21343E5BF850D1C1C8D5AC219DE2672C7BB8FE2708534BE",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "gdre_semantic_recovery"
+  ],
+  "not_proven": "in-game visual rendering of the enlarged 18px FCT (S5 human checkpoint required on BOTH damage numbers and XP/hint classes, per spec §5 B-p1 gate), crit tween rect_scale x2 appearance at scale 1.0 (designer param decision pending; CODE_PATCH deliberately NOT included), gameplay, release readiness; candidate is NOT promoted to baseline"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "w2b-aggregate",
+  "version": "0.1.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "w2a-aggregate",
+    "w2b-1-buttons",
+    "w2b-2-zone-minimap",
+    "w2b-3-health-orb",
+    "w2b-4-command-dock",
+    "w2b-pixel-damage-numbers"
+  ],
+  "conflicts": [],
+  "scope": "PHASE 2b HUD aggregate candidate: superimposes the full 2b HUD batch (w2b-1-buttons Button theme family + w2b-2-zone-minimap unified container language + w2b-3-health-orb 160px programmatic orb + w2b-4-command-dock bottom dock) AND the pixel track batch B-p1 (w2b-pixel-damage-numbers 18px FCT fix) on top of the w2a-aggregate world layer + v1-hd-cleanup + full zhcn v8.1 chain. This mod declares no patches itself; the resolved chain re-applies all patches from the 2a/2b/pixel batches.",
+  "entities": [],
+  "patches": [],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot",
+    "gdre_semantic_recovery"
+  ],
+  "not_proven": "in-game combined visual rendering of HUD + pixel track interplay (buttons/zone panel/minimap/orb/dock/FCT), gameplay, release readiness; candidate is NOT promoted to baseline"
+}
