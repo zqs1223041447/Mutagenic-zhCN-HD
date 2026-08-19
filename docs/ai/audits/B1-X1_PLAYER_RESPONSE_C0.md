@@ -60,3 +60,19 @@
 3. S0 / S1 / S2 / S4；
 4. TestLevel A/B：移动中 Dash、静止 Dash、连续 Dash、鼠标移动模式、键盘模式；
 5. 记录 BEFORE/AFTER，S5 未人工接受前不写 gameplay PASS。
+
+## 6. 本地 canonical build 结果（2026-08-20 实机执行）
+
+> 候选 SHA-256：`40D5F0640695D6A89F1D00AEA5FABFF969722690A04699A0E5341D48C1AC8E95`
+> Build ID：`20260820-0009-40D5F0640695`；完整证据见 gitignored `10_logs/B1-X1-20260819/build.json` 及 s0/s1/s4 各证据文件。
+
+- preimage 逐字节核对 PASS：`04_recovered/Scenes/Player/Player.gd` SHA=`3f009989…c25c` 与 mod.json 两处 `preimage_sha256` 一致；两处 `old_text`（含 tab 缩进）`expected_occurrences=1` 全部命中；文件为 LF 行尾，无 CR 干扰。
+- 构建链 PASS：resolve（1 mod/2 patches）→ apply（5058-file worktree 复制，guard 后仅改 Player.gd）→ compile（venv 3.11.15 + GDRE 编译唯一 `Scenes/Player/Player.gd` → .gde+.remap）→ pack（3744 条目，delta 恰为 2 个物理路径：`Player.gde`、`Player.gd.remap`）→ normalize（1 个零字节 MD5 修正）→ fresh embed（00_original SHA `C7B5D5A5…1209`）。
+- S0 PASS：候选 EXE 提取 3744/3744、0 MD5 不匹配；delta 与声明完全一致、无意外变更；PCK 结构 3744 条目全有效；pristine roundtrip 3/3 MATCH（含 `Scenes/Player/Player` 本身，证明管线无缺陷）。
+- S1 PASS：`probe_boot.py` 20s 真窗口 `Mutagenic`、无 ALERT、无 fatal；boot 使用 SHA `DCFAA13A…E799` 相邻 stub DLL（存档控制件）。
+- S2 core smoke：NOT RUN（宿主无法自动驱动游戏内移动/Dash 输入；需 X5 harness 或人工）。
+- S4 PASS：GDRE 从**最终候选 EXE** 恢复 `Player.gd`，SHA=`9ab80451…ccac` 与构建 worktree 逐字节相同；`last_move_direction = Vector2.RIGHT` 已嵌入；移动时缓存最近非零方向、静止 Dash fallback 到最近方向、`apply_central_impulse(dash_direction * Constants.DASH_AMOUNT)` 生效；`movement_speed`（5 处）、`DASH_AMOUNT`（1 处）、`dash_cooldown = 0.75` 未变。
+- S5：NOT RUN / NOT HUMAN-ACCEPTED（需要游戏内输入驱动 + 人工 A/B，未执行）。
+
+**证明什么**：k1-player-response v0.1 经确定性 canonical 管线产出结构完整、可启动、语义已嵌入最终 EXE 的候选。
+**不证明什么**：真实输入下 Dash 的运行时手感（S2）、静止/移动/连续 Dash 的实机 A/B（S5）、长期稳定性、中央集成后的聚合行为。
