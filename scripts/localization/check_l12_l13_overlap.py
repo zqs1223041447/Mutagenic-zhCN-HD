@@ -1,8 +1,9 @@
 import json
 from pathlib import Path
 
-m12 = json.load(open(r"G:\opencode-Mutageni\mods\c5-l12-stats-tags-zhcn\mod.json", encoding="utf-8"))
-m13 = json.load(open(r"G:\opencode-Mutageni\mods\c5-l13-dynamic-ui-zhcn\mod.json", encoding="utf-8"))
+MODS = Path(__file__).resolve().parents[2] / "mods"
+m12 = json.load(open(MODS / "c5-l12-stats-tags-zhcn/mod.json", encoding="utf-8"))
+m13 = json.load(open(MODS / "c5-l13-dynamic-ui-zhcn/mod.json", encoding="utf-8"))
 
 def norm(p):
     return json.dumps(

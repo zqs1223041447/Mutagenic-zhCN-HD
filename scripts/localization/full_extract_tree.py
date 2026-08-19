@@ -4,7 +4,7 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path(r"G:\opencode-Mutageni")
+ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "10_logs/full_tree_text_extract.json"
 result = {}
 

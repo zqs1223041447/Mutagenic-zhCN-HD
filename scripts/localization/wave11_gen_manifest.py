@@ -31,7 +31,7 @@ import hashlib
 import json
 from pathlib import Path
 
-ROOT = Path(r"G:\opencode-Mutageni")
+ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "mods/c5-l11-passive-tree-zhcn/mod.json"
 EXTRACT_PASSIVES = ROOT / "10_logs/full_passive_text_extract.json"
 EXTRACT_KEYSTONES = ROOT / "10_logs/keystones_extract.json"

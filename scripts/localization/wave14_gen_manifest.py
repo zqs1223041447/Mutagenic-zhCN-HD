@@ -12,7 +12,7 @@ import hashlib
 import json
 from pathlib import Path
 
-ROOT = Path(r"G:\opencode-Mutageni")
+ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "03_raw"
 OUT = ROOT / "mods/c5-l14-static-scenes-zhcn/mod.json"
 

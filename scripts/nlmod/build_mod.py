@@ -30,7 +30,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-ROOT = Path(r"G:\opencode-Mutageni")
+ROOT = Path(__file__).resolve().parents[2]
 PY = ROOT / "02_tools/venv/Scripts/python.exe"
 GDRE = ROOT / "02_tools/gdre/gdre_tools.exe"
 MODS_ROOT = ROOT / "mods"

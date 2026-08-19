@@ -10,7 +10,7 @@ import hashlib
 import json
 from pathlib import Path
 
-ROOT = Path(r"G:\opencode-Mutageni")
+ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "mods/c5-l10-skills-tree-zhcn/mod.json"
 
 # ---- translation table: (file, line_no, old_line, new_line, source_text, translation) ----
