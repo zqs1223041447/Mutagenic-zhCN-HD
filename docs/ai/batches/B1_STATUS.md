@@ -2,7 +2,15 @@
 
 > **用途**：B1 并行研发的协调视图，供执行 Agent 与中央集成读取。
 > **不是产品状态权威**：产品/验证状态仍以 `status.json` 和对应 evidence 为准。
-> **更新时间**：2026-08-19
+> **更新时间**：2026-08-20（B1-I1 中央集成完成）
+
+## B1-I1 集成结果（2026-08-20）
+
+- X0–X5 全部完成并 push，中央集成至 `agent/kinetic-arcane-remaster-foundation`，无文件冲突（merge-tree 预检 rc=0）。
+- 集成提交：`182e79f`(X0) → `0f69ba6`(X1) → `44e6e41`(X2) → `0abfc8d`(X3) → `009d046`(X4) → `6cea0e6`(X5)，集成线 HEAD 推进至 `6cea0e6`。
+- 集成后验证：abs-path scan 0 FAIL（仅 WARN 级 provenance_metadata/local_config）；secret scan 无真实泄漏（findings 全为测试夹具 dummy，已脱敏）；关键交付文件齐全。
+- X1/X2/X4 各 MOD 已在新基线本地 canonical build 通过 S0/S1/S4（fresh embed from 00_original，GDRE 语义恢复确认）；X5 15/15 自测 PASS；X3 为审计+TCE context 移植。
+- 待办：aggregate candidate 聚合构建与回归（与后续批次一起做）；Combat S5 实机/人工验收；baseline promotion 需人工显式批准。
 
 ## 当前基线
 
