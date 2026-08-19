@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "description": "batchctl check-all 组件注册表：repo-relative 路径，新契约落盘即自动接入",
+  "components": [
+    {
+      "id": "batchctl_unit_tests",
+      "kind": "unittest",
+      "relpath": "scripts/ai/tests",
+      "top_level": "scripts/ai/tests",
+      "timeout_s": 600,
+      "required": true,
+      "description": "batchctl 生命周期与控制平面单测（claim/status/handoff/collect/preflight/cleanup/check-all）"
+    },
+    {
+      "id": "abs_path_scan",
+      "kind": "python",
+      "relpath": "scripts/ai/abs_path_scan.py",
+      "args": ["--json"],
+      "timeout_s": 300,
+      "required": true,
+      "description": "repo-wide 宿主绝对路径扫描（AGENTS.md 9.4，production_hardcode 即 FAIL）"
+    },
+    {
+      "id": "secret_scan",
+      "kind": "python",
+      "relpath": "scripts/ai/secret_scan.py",
+      "args": ["--json"],
+      "timeout_s": 300,
+      "required": true,
+      "description": "repo-wide 脱敏 secret 扫描（key 文件只报 presence+SHA，永不输出内容）"
+    },
+    {
+      "id": "combat_harness_selftests",
+      "kind": "python",
+      "relpath": "scripts/validate/combat_harness_selftests.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B1-X5 combat harness 结构/确定性/遥测契约/退出码自测（无需游戏运行）"
+    },
+    {
+      "id": "semantic_combat_pipeline_contract",
+      "kind": "python",
+      "relpath": "scripts/validate/semantic_combat_pipeline_contract.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B1-X3 战斗管线语义契约（SHA canary/锚点/作用域守卫/feat-tce-context 不变量）"
+    },
+    {
+      "id": "event_spine_contract",
+      "kind": "python",
+      "relpath": "scripts/validate/semantic_event_spine_contract.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": false,
+      "description": "B2-X1 combat event spine 语义契约接入位：X1 集成后将契约文件落盘于此路径即自动生效"
+    }
+  ]
+}

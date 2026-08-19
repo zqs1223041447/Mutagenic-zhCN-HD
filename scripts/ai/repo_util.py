@@ -50,7 +50,7 @@ def find_repo_root(start: str | Path | None = None) -> Path:
         pass
     cur = start.resolve()
     while True:
-        if (cur / ".git").exists() and (cur / "AGENTS.md").exists():
+        if (cur / "AGENTS.md").is_file():
             return cur
         if cur.parent == cur:
             break
@@ -58,13 +58,21 @@ def find_repo_root(start: str | Path | None = None) -> Path:
     raise RepoError(f"not inside a Mutagenic repo clone (no git toplevel or AGENTS.md marker): {start}")
 
 
-def find_main_repo_root(start: str | Path | None = None) -> Path:
-    root = find_repo_root(start)
+def git_common_dir(root: str | Path) -> Path:
+    """Absolute path of the git common dir (works from main tree or linked worktree)."""
     common = git("rev-parse", "--git-common-dir", cwd=root).stdout.strip()
     common_path = Path(common)
     if not common_path.is_absolute():
-        common_path = (root / common_path).resolve()
-    return common_path.parent
+        common_path = (Path(root) / common_path).resolve()
+    return common_path
+
+
+def find_main_repo_root(start: str | Path | None = None) -> Path:
+    root = find_repo_root(start)
+    try:
+        return git_common_dir(root).parent
+    except RepoError:
+        return root
 
 
 def worktrees_root(start: str | Path | None = None) -> Path:
@@ -151,5 +159,26 @@ def is_merged(branch: str, into_ref: str, start: str | Path | None = None) -> bo
 
 
 def tracked_files(root: Path) -> list[str]:
-    r = git("ls-files", cwd=root)
-    return [ln for ln in r.stdout.splitlines() if ln]
+    try:
+        r = git("ls-files", cwd=root)
+        return [ln for ln in r.stdout.splitlines() if ln]
+    except RepoError:
+        return _snapshot_files(root)
+
+
+def _snapshot_files(root: Path) -> list[str]:
+    """Fallback for non-git snapshots: list all files under root except .git."""
+    out: list[str] = []
+    for p in root.rglob("*"):
+        if not p.is_file():
+            continue
+        rel = p.relative_to(root).as_posix()
+        if ".git/" in rel or rel.startswith(".git/"):
+            continue
+        out.append(rel)
+    return out
+
+
+def claim_lock_path(root: str | Path) -> Path:
+    """Path of the batchctl claim lock, inside the git common dir (shared by all worktrees)."""
+    return git_common_dir(root) / "batchctl-claim.lock"

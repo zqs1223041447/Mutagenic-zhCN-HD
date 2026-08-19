@@ -92,8 +92,11 @@ def main() -> int:
         check(f"anchor {rel}:{line} {needle!r}", ok)
 
     # --- 3. scope guard: patch paths across tracked mods ---
+    # B2 语义：k1/k2 是 B1 已集成 gameplay MOD，刻意修改 Player.gd/Mob.gd；
+    # scope guard 只约束 TCE 系列（feat-tce/feat-tce-context）不触碰这两个文件。
     mods_root = root / "mods"
     banned = {"Scenes/Player/Player.gd", "Scenes/Mobs/Mob.gd"}
+    tce_mod_ids = {"feat-tce", "feat-tce-context"}
     violations: list[str] = []
     for mod_json in sorted(mods_root.rglob("mod.json")):
         try:
@@ -101,11 +104,13 @@ def main() -> int:
         except Exception as exc:
             check(f"mod json parse {mod_json}", False)
             continue
+        if data.get("id") not in tce_mod_ids:
+            continue
         for patch in data.get("patches", []):
             p = patch.get("path", "")
             if p in banned:
                 violations.append(f"{mod_json.relative_to(root).as_posix()} patches {p}")
-    check("X1/X2 scope guard (no patch touches Player.gd/Mob.gd)", not violations)
+    check("X1/X2 scope guard (TCE mods do not touch Player.gd/Mob.gd)", not violations)
     for v in violations:
         print(f"    scope violation: {v}")
 

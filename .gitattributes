@@ -20,6 +20,8 @@
 *.gd.remap binary
 *.tscn text eol=lf
 *.tres text eol=lf
+*.env text eol=lf
+.env.* text eol=lf
 
 # Byte-preserving immutable provenance: 03_raw / 04_recovered contain mixed
 # CRLF/LF files (936/1554 CRLF files respectively). Any line-ending
