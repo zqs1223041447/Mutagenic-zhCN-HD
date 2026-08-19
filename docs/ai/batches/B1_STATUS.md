@@ -14,7 +14,7 @@
 
 ## 主线同步说明
 
-早期 B1 基线建立时，仓库尚未把 `03_raw/04_recovered` 纳入 Git。2026-08-18 主线已改变这一事实，因此协调 AI 已完成基线重整：
+早期 B1 基线建立时，仓库尚未把 `03_raw/04_recovered` 纳入 Git。主线已经改变这一事实，因此协调 AI 已完成基线重整：
 
 - `03_raw/04_recovered` 现在直接随 clone 提供，仍为不可变 Recovered Provenance；
 - GitHub/远端 AI 可以读取真实 recovered 源码、审查真实 old_text/preimage；
@@ -22,18 +22,56 @@
 - 仓库内部路径仍必须 repo-relative；
 - 多 Agent 必须使用独立 worktree，禁止共享主工作树。
 
-旧 Kinetic 线已保留快照：`archive/kinetic-pre-main-sync-20260819`，仅用于 forensic，不作为新任务基线。
+旧 Kinetic 线保留快照：`archive/kinetic-pre-main-sync-20260819`，仅用于 forensic，不作为新任务基线。
 
 ## Xi 状态
 
-| Task | Branch | 当前状态 | Head / Base | 下一动作 |
+| Task | Branch | 当前状态 | Head | 本地下一动作 |
 |---|---|---|---|---|
-| B1-X0 | `agent/b1-x0-batch-automation` | READY / 待执行 | base=`c864480d…` | 实现正确的 worktree-aware batchctl、portability/secret scan、handoff/collect/integration preflight |
-| B1-X1 | `agent/b1-x1-player-response` | READY / 待执行 | base=`c864480d…` | 读取 tracked `04_recovered`，完成 Player C0 → `k1-player-response` → Candidate/Gates |
-| B1-X2 | `agent/b1-x2-hit-reaction` | READY / 待执行 | base=`c864480d…` | 读取 tracked `04_recovered`，完成 Mob C0 → `k2-hit-reaction` → Candidate/Gates |
-| B1-X3 | `agent/b1-x3-combat-pipeline` | PORTED / 待中央集成 | head=`5418f275b74013d73f813f839f28ba9ef37173e4` | 保留 C0、`feat-tce-context`、semantic contract；B1-I1 做 aggregate 回归 |
-| B1-X4 | `agent/b1-x4-camera-audio` | PORTED+FIXED / 待新基线运行验证 | head=`e061b4758eb16cb034c95dcb9125ca9f4f41a8a8` | v0.2 voice budget 已修正；本地重跑 compile/S0/S1/S4，S5 后置 |
-| B1-X5 | `agent/b1-x5-combat-harness` | READY / 待执行 | base=`c864480d…` | 建立 TestLevel 无人值守 Combat Harness 与 telemetry/evidence |
+| B1-X0 | `agent/b1-x0-batch-automation` | REMOTE C0 DONE / 实现待执行 | `53446b8c118ac546147d070ce16a56b8895afebc` | 实现 worktree-aware batchctl、scanner、secret scan、handoff/collect/integration-preflight，并运行自测 |
+| B1-X1 | `agent/b1-x1-player-response` | REMOTE C0 + CANDIDATE READY | `3d0f9aff685111e4c3b9d1843ea7d647cb0447d3` | 直接对 `k1-player-response` resolve/apply → build → S0/S1/S2/S4 → A/B S5；修复可恢复问题 |
+| B1-X2 | `agent/b1-x2-hit-reaction` | REMOTE C0 + CANDIDATE READY | `46c44846de3c873853aeba38e0451f666d44bb98` | 直接对 `k2-hit-reaction` resolve/apply → build → S0/S1/S2/S4 → A/B S5；验证 DoT/状态色/死亡一次性 |
+| B1-X3 | `agent/b1-x3-combat-pipeline` | PORTED / 待中央集成 | `5418f275b74013d73f813f839f28ba9ef37173e4` | 无需重做 C0；B1-I1 做 aggregate 回归 |
+| B1-X4 | `agent/b1-x4-camera-audio` | PORTED+FIXED / 待新基线运行验证 | `e061b4758eb16cb034c95dcb9125ca9f4f41a8a8` | v0.2 重跑 compile/S0/S1/S4；S5 后置 |
+| B1-X5 | `agent/b1-x5-combat-harness` | REMOTE C0 DONE / harness 实现待执行 | `d388233242ab9ca95c73e9ae67e17ba9a1f2bcb2` | 实现 deterministic scenario driver / seed / telemetry / report，并自测 |
+
+## X0 远端 C0 结论
+
+最新主线 `scripts/bootstrap_deploy.py` 已以 `Path(__file__).resolve().parents[1]` 定位 repo root，属于正确正例，不应重写。
+
+Scanner 必须区分：
+
+- `production_hardcode`：FAIL；
+- `provenance_metadata`：保留并 INFO/WARN，例如 recovered manifest 的历史 `source` 绝对路径；
+- `docs_example`：INFO，例如 `C:\path\to\Mutagenic.exe`；
+- local ignored config：允许本地存在但不得进入生产默认值。
+
+完整预审计：`docs/ai/audits/B1-X0_PORTABILITY_C0.md`。
+
+## X1 远端 C0 / Candidate
+
+真实 `Player.gd` 显示 Dash 直接使用当前 `velocity.normalized()`；静止时 velocity 为零，但仍会播放声音并进入 0.75s cooldown，形成确定性无响应缺口。
+
+`k1-player-response` v0.1 已创建：
+
+- 缓存最近非零移动方向；
+- 当前有输入时仍使用当前方向；
+- 静止 Dash fallback 到最近方向；
+- 不改 movement_speed、DASH_AMOUNT、cooldown、碰撞、伤害或存档。
+
+完整预审计：`docs/ai/audits/B1-X1_PLAYER_RESPONSE_C0.md`。
+
+## X2 远端 C0 / Candidate
+
+`Stats.damage_taken` 只对 Player emit，Mob 没有现成 direct-hit/crit signal。为了不抢 X3 的 `Stats.gd` preimage，v0.1 采用 health-loss visual reaction：
+
+- 60ms `Sprite.self_modulate` 反馈；
+- 160ms 最小间隔；
+- 与现有状态 `Sprite.modulate` 分层；
+- 不改伤害、碰撞、死亡、掉落、TCE；
+- direct hit / DoT / crit-heavy 细分留给后续 combat event foundation。
+
+完整预审计：`docs/ai/audits/B1-X2_HIT_REACTION_C0.md`。
 
 ## X3 移植说明
 
@@ -44,47 +82,56 @@ X3 已从旧 anchor 移植到新基线，当前相对 `batch/b1-anchor` 仅领�
 - `mods/feat-tce-context/mod.json`
 - `scripts/validate/semantic_combat_pipeline_contract.py`
 
-历史 evidence 中记录的旧 base SHA 属于原执行 provenance，不应伪改；当前 branch ancestry 已以新 anchor 为父提交。
+历史 evidence 中记录的旧 base SHA 属于原执行 provenance，不伪改；当前 branch ancestry 已以新 anchor 为父提交。
 
 ## X4 协调修正说明
 
-原 X4 的方向可用，但中央审查发现两个需要修正的问题：
+原 X4 的方向可用，但中央审查修正了两个问题：
 
-1. 旧审计文档含某台机器的 `G:\...` evidence 路径，已改为 `<repo_root>/10_logs/...` 逻辑路径；
-2. 原 voice budget 通过 `child.name == "SoundEffect"` 遍历计数，Godot 重名节点可能自动改名，已升级为 `_sfx_active_count` + `tree_exited` 生命周期回收，并将聚合 key 改为 `bus + stream instance`。
+1. 旧审计文档的宿主 `G:\...` evidence 路径改为 `<repo_root>/10_logs/...` 逻辑路径；
+2. voice budget 从 `child.name == "SoundEffect"` 遍历计数升级为 `_sfx_active_count` + `tree_exited` 生命周期回收，并将聚合 key 改为 `bus + stream instance`。
 
-因此 X4 v0.2 必须在新基线本地重新执行 compile/S0/S1/S4；原运行证据只证明旧版本方向和构建链可行。
+X4 v0.2 必须在新基线本地重跑 compile/S0/S1/S4；原运行证据只证明旧版本方向和构建链可行。
+
+## X5 远端 C0 结论
+
+- `TestSpawner.tscn` 当前只是空 `Node2D`；
+- `TestLevel._ready()` 直接执行 `spawn_cluster_in_ladder(0, 0, 300, current_wave)`；
+- BaseLevel 从 spawnables 随机选择 mob。
+
+因此现有 TestLevel 适合压力试验，不是确定性回归 harness。X5 应新增显式 scenario id + seed + composition + spawn positions/count + telemetry/report；保留随机 300 mobs 作为独立 stress scenario。
+
+完整预审计：`docs/ai/audits/B1-X5_COMBAT_HARNESS_C0.md`。
 
 ## 自动化注意事项
 
-旧 Kinetic 快照中曾出现 `scripts/batch-monitor/batch_monitor.ps1`，它会把多个 Agent 都以同一个主 `repo_root` 作为 `--dir` 启动，违反隔离规则。该实现**没有迁入新基线**。
+旧 Kinetic 快照中曾出现 `scripts/batch-monitor/batch_monitor.ps1`，会把多个 Agent 都以同一个主 `repo_root` 作为 `--dir` 启动，违反隔离规则；该实现没有迁入新基线。
 
-B1-X0 必须实现：
+X0 必须确保：
 
 - 每个 Xi 独立 branch + 独立 Git worktree；
-- OpenCode/其他执行 Agent 的工作目录必须是对应 task worktree；
+- 执行 Agent 工作目录是对应 task worktree；
 - claim/status/handoff/collect/cleanup/integration-preflight 一条命令一个人类意图；
-- 不要求用户手工输入绝对路径；
-- cleanup 对未合并/未知工作树 fail-closed。
+- 不要求用户输入绝对路径；
+- cleanup 对未合并/未知/脏 worktree fail-closed。
 
 ## 当前并发启动建议
 
-可以立即并发执行：
+现在推荐同时继续：
 
-- `B1-X0`
-- `B1-X1`
-- `B1-X2`
-- `B1-X5`
-
-同时让 `B1-X4` 在其现有 branch 上继续执行新基线 v0.2 的 compile/S0/S1/S4 验证。
+- `B1-X0`：从现有 C0 继续实现自动化；
+- `B1-X1`：从现有 Candidate 直接 build/Gate；
+- `B1-X2`：从现有 Candidate 直接 build/Gate；
+- `B1-X5`：从现有 C0 继续实现 harness；
+- `B1-X4`：在现有 branch 重跑 v0.2 Gate。
 
 `B1-X3` 无需重做，等待 B1-I1。
 
-执行 AI 的最简指令仍为：
+最简指令：
 
-`认领 B1-Xn，按仓库规则全自动执行到最远可验证状态。`
+`继续 B1-Xn：读取当前 branch 已有 C0/Candidate，按仓库规则全自动推进到最远可验证状态并更新 handoff。`
 
-对于 X4 使用：
+X4：
 
 `继续 B1-X4：基于当前分支执行 v0.2 新基线 compile/S0/S1/S4，修复可恢复问题并更新 handoff。`
 
@@ -92,9 +139,11 @@ B1-X0 必须实现：
 
 以下全部满足后进入中央集成：
 
-- X0/X1/X2/X5 完成交接；
+- X0 完成自动化实现与自测；
+- X1/X2 完成本地 build/Gates 或给出真实不可自动解决阻塞；
 - X3 当前移植成果保留；
-- X4 v0.2 新基线运行 Gate 完成或明确给出不可自动解决的真实阻塞；
+- X4 v0.2 新基线运行 Gate 完成或给出真实阻塞；
+- X5 harness 实现/自测完成；
 - 各任务提供 branch/final SHA/evidence/潜在冲突路径。
 
-随后由协调 AI统一执行 conflict graph → integration ordering → aggregate candidate → aggregate S0/S1/S2/S4 → 必要 Combat S5 → B2 编排。
+随后由协调 AI 统一执行 conflict graph → integration ordering → preimage drift review → aggregate candidate → aggregate S0/S1/S2/S4 → 必要 Combat S5 → B2 编排。
