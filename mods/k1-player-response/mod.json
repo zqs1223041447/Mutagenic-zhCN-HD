@@ -1,0 +1,52 @@
+{
+  "id": "k1-player-response",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "B1-X1 Player Response: make Dash deterministic when pressed without current movement input by caching the last non-zero movement direction. No movement-speed, cooldown, damage, collision, or save-format changes.",
+  "entities": [
+    {
+      "kind": "player_response",
+      "id": "Scenes/Player/Player.gd::dash_direction_fallback",
+      "confidence": "FACT",
+      "expected_runtime_effect": "Dash always produces a directional impulse when off cooldown. Current movement direction wins; otherwise the last non-zero movement direction is reused."
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Player/Player.gd",
+      "unit_id": "Scenes/Player/Player.gd::dash_response::last_direction_state",
+      "classification": "CODE_PATCH",
+      "old_text": "var dash_cooldown = 0.0",
+      "new_text": "var dash_cooldown = 0.0\nvar last_move_direction = Vector2.RIGHT",
+      "preimage_sha256": "3f0099897fc13c5b16d01042b96042acb301ec8ad9ba078611c06f646c43b25c",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Player/Player.gd",
+      "unit_id": "Scenes/Player/Player.gd::dash_response::direction_fallback",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tif Input.is_action_just_pressed(\"dash\") and dash_cooldown <= 0.0:\n\t\t\t\t\t\t\t\tapply_central_impulse(velocity.normalized() * Constants.DASH_AMOUNT)\n\t\t\t\t\t\t\t\tGlobals.play_sound_effect($DashSound.stream)\n\t\t\t\t\t\t\t\tdash_cooldown = 0.75",
+      "new_text": "\t\t\t\tif velocity.length_squared() > 0.0:\n\t\t\t\t\t\t\t\tlast_move_direction = velocity.normalized()\n\n\t\t\t\tif Input.is_action_just_pressed(\"dash\") and dash_cooldown <= 0.0:\n\t\t\t\t\t\t\t\tvar dash_direction = velocity.normalized()\n\t\t\t\t\t\t\t\tif dash_direction == Vector2.ZERO:\n\t\t\t\t\t\t\t\t\t\t\t\tdash_direction = last_move_direction\n\t\t\t\t\t\t\t\tapply_central_impulse(dash_direction * Constants.DASH_AMOUNT)\n\t\t\t\t\t\t\t\tGlobals.play_sound_effect($DashSound.stream)\n\t\t\t\t\t\t\t\tdash_cooldown = 0.75",
+      "preimage_sha256": "3f0099897fc13c5b16d01042b96042acb301ec8ad9ba078611c06f646c43b25c",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "boot",
+    "dash_idle_direction",
+    "dash_moving_direction"
+  ],
+  "not_proven": "Remote C0 confirms the zero-input Dash defect and exact recovered preimage. Candidate has not yet passed local canonical build, S0/S1/S2/S4, or Combat S5."
+}
