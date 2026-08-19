@@ -4,7 +4,8 @@ import json
 import re
 from pathlib import Path
 
-OUT = Path(r"G:\opencode-Mutageni\10_logs\full_skill_text_extract.json")
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / "10_logs/full_skill_text_extract.json"
 
 def extract_entities(path: Path):
     """Parse dict-of-dicts: internal_key -> { 'name': ..., 'description': ..., ... }"""
@@ -37,7 +38,7 @@ def extract_entities(path: Path):
 
 result = {}
 for name in ["Skills.gd", "SkillSupports.gd"]:
-    p = Path(r"G:\opencode-Mutageni\04_recovered\Globals") / name
+    p = ROOT / "04_recovered/Globals" / name
     entities = extract_entities(p)
     result[name] = {
         "count": len(entities),

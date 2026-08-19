@@ -2,7 +2,7 @@ import json
 import re
 from pathlib import Path
 
-root = Path(r"G:\opencode-Mutageni\04_recovered\Globals\Keystones")
+root = Path(__file__).resolve().parents[2] / "04_recovered/Globals/Keystones"
 result = {}
 for kname in ["TreeKeystones.gd", "SupportKeystones.gd", "UniqueKeystones.gd"]:
     f = root / kname
@@ -36,7 +36,7 @@ for kname in ["TreeKeystones.gd", "SupportKeystones.gd", "UniqueKeystones.gd"]:
         n = e["name"]["value"] if e["name"] else "???"
         print(f"  {e['key']:35s} | {n}")
 
-Path(r"G:\opencode-Mutageni\10_logs\keystones_extract.json").write_text(
+Path(__file__).resolve().parents[2] / "10_logs/keystones_extract.json".write_text(
     json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8"
 )
 print("saved to 10_logs/keystones_extract.json")

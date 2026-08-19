@@ -19,7 +19,7 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path(r"G:\opencode-Mutageni")
+ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT / "04_recovered"
 OUT = ROOT / "mods/c5-l13-dynamic-ui-zhcn/mod.json"
 TARGET_SHA = "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209"

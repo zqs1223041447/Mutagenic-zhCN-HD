@@ -44,7 +44,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-PROJECT = Path(r"G:\opencode-Mutageni")
+PROJECT = Path(__file__).resolve().parents[2]
 RECOVERED = PROJECT / "04_recovered"
 ORIGINAL_SHA = "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209"
 

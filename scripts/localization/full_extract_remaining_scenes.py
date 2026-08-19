@@ -2,8 +2,8 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path(r"G:\opencode-Mutageni\03_raw\Scenes")
-OUT = Path(r"G:\opencode-Mutageni\10_logs\remaining_static_text.json")
+ROOT = Path(__file__).resolve().parents[2] / "03_raw/Scenes"
+OUT = Path(__file__).resolve().parents[2] / "10_logs/remaining_static_text.json"
 
 # files already translated (exclude)
 EXCLUDED = {
