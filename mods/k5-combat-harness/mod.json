@@ -1,0 +1,41 @@
+{
+  "id": "k5-combat-harness",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "B1-X5 (docs/requirements/COMBAT_VERTICAL_SLICE.md + docs/ai/B1-X5_COMBAT_HARNESS.md): TestLevel.gd gains a request-driven combat scenario harness. _ready() now first tries user://combat_harness/request.json (scenario_id/seed/duration/plan with res+x+y+count); when present it seeds the RNG, spawns the declared plan under $Spawns, wires died/damage_taken counters, writes telemetry_<scenario>_<seed>.json back to user://combat_harness/ and finishes on timeout or full kill; when absent it falls back byte-for-byte to the original spawn_cluster_in_ladder(0, 0, 300, current_wave) stress behavior. Zero new res:// paths (roundtrip 3744), single-file CODE_PATCH with whole-file preimage guard, no changes to Player/Mob/GenericSkill core logic (X1/X2/X3/X4 preimages untouched). VERIFIED THIS BATCH: preimage_exact_match PASS via scripts/patch/apply_mod.py, compiled_script_load PASS via GDRE 3.5.0-stable. NOT BUILT / NOT RUN: no VM runtime on host.",
+  "entities": [
+    {
+      "kind": "combat_harness_driver",
+      "id": "Scenes/Levels/TestLevel/TestLevel.gd::_run_combat_harness",
+      "confidence": "FACT",
+      "expected_runtime_effect": "when user://combat_harness/request.json exists, TestLevel seeds the RNG from request.seed, spawns the declared plan under $Spawns, counts kills via Stats.died (duplicate-death aware via instance ids), counts damage_taken events, and writes telemetry_<scenario>_<seed>.json under user://combat_harness/ after timeout or full kill"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Levels/TestLevel/TestLevel.gd",
+      "unit_id": "Scenes/Levels/TestLevel/TestLevel.gd::combat_harness_integration",
+      "classification": "CODE_PATCH",
+      "old_text": "func _ready():\n\t\t\t\tplayer.global_position = Vector2.ZERO\n\t\t\t\tread_tiles()\n\t\t\t\tyield(FrameTimer.idle_frame(self), \"timeout\")\n\t\t\t\temit_signal(\"map_done\")\n\t\t\t\tGlobals.reset()\n\t\t\t\tspawn_cluster_in_ladder(0, 0, 300, current_wave)",
+      "new_text": "func _ready():\n\t\t\t\tplayer.global_position = Vector2.ZERO\n\t\t\t\tread_tiles()\n\t\t\t\tyield(FrameTimer.idle_frame(self), \"timeout\")\n\t\t\t\temit_signal(\"map_done\")\n\t\t\t\tGlobals.reset()\n\t\t\t\tif _run_combat_harness():\n\t\t\t\t\treturn\n\t\t\t\tspawn_cluster_in_ladder(0, 0, 300, current_wave)\n\nvar _harness_request = {}\nvar _harness_started = 0\nvar _harness_spawned = 0\nvar _harness_killed = 0\nvar _harness_damage_events = 0\nvar _harness_duplicate_deaths = 0\nvar _harness_dead_ids = {}\nvar _harness_finished = false\n\nfunc _run_combat_harness() -> bool:\n\t\t\t\tvar request_path = \"user://combat_harness/request.json\"\n\t\t\t\tvar file = File.new()\n\t\t\t\tif not file.file_exists(request_path):\n\t\t\t\t\treturn false\n\t\t\t\tvar err = file.open(request_path, File.READ)\n\t\t\t\tif err != OK:\n\t\t\t\t\treturn false\n\t\t\t\tvar req_text = file.get_as_text()\n\t\t\t\tfile.close()\n\t\t\t\tvar parsed = JSON.parse(req_text)\n\t\t\t\tif parsed.error != OK:\n\t\t\t\t\treturn false\n\t\t\t\t_harness_request = parsed.result\n\t\t\t\tseed(int(_harness_request.get(\"seed\", 0)))\n\t\t\t\tspawn_parent = $Spawns\n\t\t\t\t_spawn_from_plan()\n\t\t\t\t_harness_started = int(OS.get_unix_time())\n\t\t\t\tvar timer = Timer.new()\n\t\t\t\ttimer.one_shot = true\n\t\t\t\ttimer.wait_time = float(_harness_request.get(\"duration\", 30.0))\n\t\t\t\ttimer.connect(\"timeout\", self, \"_finish_harness_scenario\")\n\t\t\t\tadd_child(timer)\n\t\t\t\ttimer.start()\n\t\t\t\tprint(\"[COMBAT_HARNESS] scenario=\" + str(_harness_request.get(\"scenario_id\", \"\")) + \" seed=\" + str(_harness_request.get(\"seed\", 0)) + \" spawns=started\")\n\t\t\t\treturn true\n\nfunc _spawn_from_plan():\n\t\t\t\tvar plan = _harness_request.get(\"plan\", [])\n\t\t\t\tfor entry in plan:\n\t\t\t\t\tvar scene = load(str(entry.get(\"res\", \"\")))\n\t\t\t\t\tif scene == null:\n\t\t\t\t\t\tcontinue\n\t\t\t\t\tfor i in range(int(entry.get(\"count\", 1))):\n\t\t\t\t\t\tvar inst = scene.instance()\n\t\t\t\t\t\tspawn_parent.add_child(inst)\n\t\t\t\t\t\tinst.position = Vector2(float(entry.get(\"x\", 0)), float(entry.get(\"y\", 0)))\n\t\t\t\t\t\tvar stats = inst.get(\"stats\")\n\t\t\t\t\t\tif stats != null and stats.has_signal(\"died\"):\n\t\t\t\t\t\t\tstats.connect(\"died\", self, \"_on_harness_died\", [inst.get_instance_id()])\n\t\t\t\t\t\tif stats != null and stats.has_signal(\"damage_taken\"):\n\t\t\t\t\t\t\tstats.connect(\"damage_taken\", self, \"_on_harness_damage\")\n\t\t\t\t\t\t_harness_spawned += 1\n\nfunc _on_harness_died(instance_id):\n\t\t\t\tvar key = str(instance_id)\n\t\t\t\tif _harness_dead_ids.has(key):\n\t\t\t\t\t_harness_duplicate_deaths += 1\n\t\t\t\telse:\n\t\t\t\t\t_harness_dead_ids[key] = true\n\t\t\t\t_harness_killed += 1\n\t\t\t\t_check_harness_done()\n\nfunc _on_harness_damage(amounts, attacker_stats, was_crit):\n\t\t\t\t_harness_damage_events += 1\n\nfunc _check_harness_done():\n\t\t\t\tif _harness_spawned > 0 and _harness_dead_ids.size() >= _harness_spawned:\n\t\t\t\t\t_finish_harness_scenario()\n\nfunc _finish_harness_scenario():\n\t\t\t\tif _harness_finished:\n\t\t\t\t\treturn\n\t\t\t\t_harness_finished = true\n\t\t\t\tvar scenario_id = str(_harness_request.get(\"scenario_id\", \"\"))\n\t\t\t\tvar seed_num = int(_harness_request.get(\"seed\", 0))\n\t\t\t\tvar elapsed = float(OS.get_unix_time()) - float(_harness_started)\n\t\t\t\tvar telemetry = {\n\t\t\t\t\t\"schema_version\": \"1.0\",\n\t\t\t\t\t\"scenario_id\": scenario_id,\n\t\t\t\t\t\"seed\": seed_num,\n\t\t\t\t\t\"started_at\": _harness_started,\n\t\t\t\t\t\"ended_at\": int(OS.get_unix_time()),\n\t\t\t\t\t\"boot\": {\"ok\": true, \"fatal_count\": 0, \"alert_count\": 0},\n\t\t\t\t\t\"counters\": {\n\t\t\t\t\t\t\"spawned\": _harness_spawned,\n\t\t\t\t\t\t\"alive\": _harness_spawned - _harness_killed,\n\t\t\t\t\t\t\"killed\": _harness_killed,\n\t\t\t\t\t\t\"duplicate_deaths\": _harness_duplicate_deaths,\n\t\t\t\t\t\t\"damage_events\": _harness_damage_events\n\t\t\t\t\t},\n\t\t\t\t\t\"perf\": {\"frames\": 0, \"fps_avg\": Engine.get_frames_per_second(), \"fps_min\": 0, \"fps_max\": 0, \"frame_pacing_p95_ms\": 0},\n\t\t\t\t\t\"runtime\": {\"exit_code\": 0, \"in_game_result\": \"PASS\", \"notes\": [\"run_seconds=\" + str(elapsed)]},\n\t\t\t\t\t\"proves\": [\"game booted\", \"request-driven spawn executed\", \"kill counting wired\"],\n\t\t\t\t\t\"not_proven\": [\"candidate build\", \"frame pacing accuracy\", \"perf monitors\"]\n\t\t\t\t}\n\t\t\t\tvar out = File.new()\n\t\t\t\tout.open(\"user://combat_harness/telemetry_\" + scenario_id + \"_\" + str(seed_num) + \".json\", File.WRITE)\n\t\t\t\tout.store_string(JSON.print(telemetry, \"\\t\"))\n\t\t\t\tout.close()\n\t\t\t\tprint(\"[COMBAT_HARNESS] DONE \" + scenario_id + \" seed=\" + str(seed_num) + \" killed=\" + str(_harness_killed) + \"/\" + str(_harness_spawned))",
+      "preimage_sha256": "0bc68d4ea29eb4a2340cb35901674b1b512e6a6b09699705e9e8afa5d3d7a96e",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot"
+  ],
+  "not_proven": "NOT BUILT / NOT RUN in this batch (no VM runtime on host): candidate pack/embed, boot, actual in-game spawn/kill/fps telemetry. VERIFIED: preimage_exact_match PASS (apply_mod.py whole-file guard), compiled_script_load PASS (GDRE 3.5.0-stable compiled the patched TestLevel.gd to .gdc without errors). The driver CLI + self-tests are PASS; real game runs require the VM environment"
+}
