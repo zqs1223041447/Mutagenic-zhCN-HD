@@ -1,0 +1,139 @@
+{
+  "id": "feat-tce-context",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": ["feat-tce"],
+  "conflicts": [],
+  "scope": "Feat: TCE 事件上下文补全（行为零变化）。玩家侧 on_hit/on_crit 事件 context 增加 target/did_crit，为后续 damage 类 trigger（on-hit-with-crit、对 target 生效效果）提供数据。GenericSkill.on_hit/on_crit 重定向到 Stats 新增 trigger_on_hit_with_context/trigger_on_crit_with_context（带可选参数透传），事件仍单次派发；feat-tce 原函数保留（无调用方）。",
+  "entities": [
+    {
+      "kind": "tce_context_enrichment",
+      "id": "Scenes/Stats.gd::trigger_on_hit_with_context",
+      "confidence": "FACT",
+      "expected_runtime_effect": "玩家 on_hit TCE context 增加 target（防守方 Stats）与 did_crit（本次落地命中是否暴击）；仍单次派发；无 trigger 配置时行为与 vanilla 完全一致"
+    },
+    {
+      "kind": "tce_context_enrichment",
+      "id": "Scenes/Stats.gd::trigger_on_crit_with_context",
+      "confidence": "FACT",
+      "expected_runtime_effect": "玩家 on_crit TCE context 增加 target（防守方 Stats）；仍单次派发；无 trigger 配置时行为与 vanilla 完全一致"
+    },
+    {
+      "kind": "tce_context_enrichment",
+      "id": "Scenes/Skills/GenericSkill.gd::on_hit::forward",
+      "confidence": "FACT",
+      "expected_runtime_effect": "GenericSkill.on_hit(target, did_crit)/on_crit(target) 接受可选参数并重定向到带上下文派发；原守卫（not is_triggered and stats.is_player）与奖励分支不变"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::on_take_damage::forward_target",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t\t\t\t\tskill_parent.on_hit()\n\t\t\t\t\t\t\t\tif did_crit:\n\t\t\t\t\t\t\t\t\t\t\t\tskill_parent.on_crit()",
+      "new_text": "\t\t\t\t\t\t\t\tskill_parent.on_hit(self, did_crit)\n\t\t\t\t\t\t\t\tif did_crit:\n\t\t\t\t\t\t\t\t\t\t\t\tskill_parent.on_crit(self)",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::insert_trigger_on_hit_with_context",
+      "classification": "CODE_PATCH",
+      "old_text": "func trigger_on_hit():",
+      "new_text": "func trigger_on_hit_with_context(target = null, did_crit = false):\n\t\t\t\ttrigger_effects(\"on_hit\", {\"event\": \"on_hit\", \"source\": self, \"target\": target, \"did_crit\": did_crit, \"cause\": \"external\"})\n\nfunc trigger_on_hit():",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::trigger_on_hit::signature_params",
+      "classification": "CODE_PATCH",
+      "old_text": "func trigger_on_hit():",
+      "new_text": "func trigger_on_hit(target = null, did_crit = false):",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::insert_trigger_on_crit_with_context",
+      "classification": "CODE_PATCH",
+      "old_text": "func trigger_on_crit():",
+      "new_text": "func trigger_on_crit_with_context(target = null):\n\t\t\t\ttrigger_effects(\"on_crit\", {\"event\": \"on_crit\", \"source\": self, \"target\": target, \"cause\": \"external\"})\n\nfunc trigger_on_crit():",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::trigger_on_crit::signature_params",
+      "classification": "CODE_PATCH",
+      "old_text": "func trigger_on_crit():",
+      "new_text": "func trigger_on_crit(target = null):",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Skills/GenericSkill.gd",
+      "unit_id": "Scenes/Skills/GenericSkill.gd::on_hit::signature",
+      "classification": "CODE_PATCH",
+      "old_text": "func on_hit():",
+      "new_text": "func on_hit(target = null, did_crit = false):",
+      "preimage_sha256": "0ed26958cfcca8c18effda48e52c9978bb377522444a1c98712b29a14468bf6b",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Skills/GenericSkill.gd",
+      "unit_id": "Scenes/Skills/GenericSkill.gd::on_hit::forward_context",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t\t\t\t\tstats.trigger_on_hit()",
+      "new_text": "\t\t\t\t\t\t\t\tstats.trigger_on_hit_with_context(target, did_crit)",
+      "preimage_sha256": "0ed26958cfcca8c18effda48e52c9978bb377522444a1c98712b29a14468bf6b",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Skills/GenericSkill.gd",
+      "unit_id": "Scenes/Skills/GenericSkill.gd::on_crit::signature",
+      "classification": "CODE_PATCH",
+      "old_text": "func on_crit():",
+      "new_text": "func on_crit(target = null):",
+      "preimage_sha256": "0ed26958cfcca8c18effda48e52c9978bb377522444a1c98712b29a14468bf6b",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Skills/GenericSkill.gd",
+      "unit_id": "Scenes/Skills/GenericSkill.gd::on_crit::forward_context",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t\t\t\t\tstats.trigger_on_crit()",
+      "new_text": "\t\t\t\t\t\t\t\tstats.trigger_on_crit_with_context(target)",
+      "preimage_sha256": "0ed26958cfcca8c18effda48e52c9978bb377522444a1c98712b29a14468bf6b",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "boot"
+  ],
+  "not_proven": "trigger 配置使用 target/did_crit 的实际游戏内效果（需下一个带 damage-trigger 的 MOD 消费验证）；on_take_damage TCE 派发对 DoT tick 的行为（feat-tce 未证明项，仅 per-trigger cooldown 缓解）"
+}
