@@ -1,0 +1,95 @@
+{
+  "evidence_id": "B1-X5-combat-harness-selfcheck",
+  "task_id": "B1-X5",
+  "ran_at": "2026-08-19T17:12:21Z",
+  "repo_head_sha": "d388233242ab9ca95c73e9ae67e17ba9a1f2bcb2",
+  "branch": "agent/b1-x5-combat-harness",
+  "repo_root": "<repo_root>",
+  "driver_sha256": "625de7916e02312f1689619b9fbb65235d6b3aebf60805719427bb434cac3f49",
+  "python_version": "3.11.15",
+  "tests": [
+    {
+      "id": "catalog_parses",
+      "passed": true,
+      "detail": "8 scenarios, zero contract errors"
+    },
+    {
+      "id": "expected_scenario_ids_present",
+      "passed": true,
+      "detail": "all eight expected scenario ids present"
+    },
+    {
+      "id": "plan_determinism_same_seed",
+      "passed": true,
+      "detail": "same seed -> identical plan (sha fcc563ec95e4...), total 20"
+    },
+    {
+      "id": "plan_determinism_diff_seed",
+      "passed": true,
+      "detail": "different seed -> different plan"
+    },
+    {
+      "id": "plan_positions_within_spread",
+      "passed": true,
+      "detail": "all spawn positions within declared spread"
+    },
+    {
+      "id": "stress_random_300_plan_count",
+      "passed": true,
+      "detail": "stress_random_300 plan renders 300 random spawns"
+    },
+    {
+      "id": "report_skeleton_dry_run",
+      "passed": true,
+      "detail": "dry-run skeleton: NOT_PROVEN, exit 3, all contract fields present"
+    },
+    {
+      "id": "telemetry_valid_pass",
+      "passed": true,
+      "detail": "valid telemetry with killed=20 -> PASS (exit 0)"
+    },
+    {
+      "id": "telemetry_required_fail",
+      "passed": true,
+      "detail": "telemetry killed=19 -> FAIL (exit 2)"
+    },
+    {
+      "id": "telemetry_invalid_not_proven",
+      "passed": true,
+      "detail": "schema-invalid telemetry -> NOT_PROVEN (exit 3)"
+    },
+    {
+      "id": "usage_errors_nonzero",
+      "passed": true,
+      "detail": "unknown scenario / missing candidate -> nonzero exit codes"
+    },
+    {
+      "id": "repo_root_from_any_cwd",
+      "passed": true,
+      "detail": "driver resolves repo root from nested cwd"
+    },
+    {
+      "id": "abs_path_scan_x5_files",
+      "passed": true,
+      "detail": "no drive-letter / UNC absolute paths in X5-owned files"
+    },
+    {
+      "id": "secret_scan_x5_files",
+      "passed": true,
+      "detail": "no secret-like tokens in X5-owned files"
+    },
+    {
+      "id": "plan_cli_byte_identical",
+      "passed": true,
+      "detail": "plan CLI is byte-identical for the same seed"
+    }
+  ],
+  "summary": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0
+  },
+  "result": "PASS",
+  "proves": "the harness driver parses its scenario catalog, is seed-deterministic, emits the telemetry contract, classifies PASS/FAIL/NOT_PROVEN, enforces its exit-code contract, resolves the repo root from any cwd and carries no host-absolute paths or secrets in X5-owned files",
+  "not_proven": "in-game execution, real FPS/frame pacing, real kill/death behavior, candidate builds"
+}
