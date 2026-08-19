@@ -1,0 +1,66 @@
+{
+  "id": "k2-hit-reaction",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "B1-X2 Enemy Hit Reaction: health-loss-driven, throttled Sprite self_modulate feedback in Mob.gd. No damage, collision, death, drop, TCE, Camera, or Audio semantic changes.",
+  "entities": [
+    {
+      "kind": "enemy_hit_reaction",
+      "id": "Scenes/Mobs/Mob.gd::health_loss_visual_feedback",
+      "confidence": "FACT",
+      "expected_runtime_effect": "When Mob health decreases, the AnimatedSprite receives a short self_modulate flash at most once per 160ms, then returns to white. Existing status Sprite.modulate remains independent."
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Mobs/Mob.gd",
+      "unit_id": "Scenes/Mobs/Mob.gd::hit_reaction::state",
+      "classification": "CODE_PATCH",
+      "old_text": "onready var pathing = $PathingController\nvar velocity",
+      "new_text": "onready var pathing = $PathingController\nvar velocity\n\n# k2-hit-reaction (B1-X2): visual-only health-loss feedback state\nvar _hit_reaction_previous_health = -1.0\nvar _hit_reaction_remaining = 0.0\nvar _hit_reaction_cooldown = 0.0\nconst HIT_REACTION_DURATION = 0.06\nconst HIT_REACTION_MIN_INTERVAL = 0.16\nconst HIT_REACTION_COLOR = Color(1.0, 0.62, 0.62, 1.0)",
+      "preimage_sha256": "ba46348c8ba490644964a8b9bdabb58a8964199cd3464c468f77cc57babe9364",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Mobs/Mob.gd",
+      "unit_id": "Scenes/Mobs/Mob.gd::hit_reaction::timer_update",
+      "classification": "CODE_PATCH",
+      "old_text": "func _physics_process(delta: float) -> void :\n\t\t\t\tlast_check_time += delta * (0.5 + 0.5 * randf())",
+      "new_text": "func _physics_process(delta: float) -> void :\n\t\t\t\tif _hit_reaction_cooldown > 0.0:\n\t\t\t\t\t\t\t\t_hit_reaction_cooldown = max(0.0, _hit_reaction_cooldown - delta)\n\t\t\t\tif _hit_reaction_remaining > 0.0:\n\t\t\t\t\t\t\t\t_hit_reaction_remaining = max(0.0, _hit_reaction_remaining - delta)\n\t\t\t\t\t\t\t\tif _hit_reaction_remaining <= 0.0:\n\t\t\t\t\t\t\t\t\t\t\t\t$SpriteContainer / Sprite.self_modulate = Color.white\n\n\t\t\t\tlast_check_time += delta * (0.5 + 0.5 * randf())",
+      "preimage_sha256": "ba46348c8ba490644964a8b9bdabb58a8964199cd3464c468f77cc57babe9364",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Mobs/Mob.gd",
+      "unit_id": "Scenes/Mobs/Mob.gd::hit_reaction::health_change",
+      "classification": "CODE_PATCH",
+      "old_text": "func _on_update_healthbar():\n\t\t\t\tstatus_bar.update_healthbar(stats)",
+      "new_text": "func _on_update_healthbar():\n\t\t\t\tvar current_health = stats.health\n\t\t\t\tif _hit_reaction_previous_health >= 0.0 and current_health < _hit_reaction_previous_health and _hit_reaction_cooldown <= 0.0:\n\t\t\t\t\t\t\t\t$SpriteContainer / Sprite.self_modulate = HIT_REACTION_COLOR\n\t\t\t\t\t\t\t\t_hit_reaction_remaining = HIT_REACTION_DURATION\n\t\t\t\t\t\t\t\t_hit_reaction_cooldown = HIT_REACTION_MIN_INTERVAL\n\t\t\t\t_hit_reaction_previous_health = current_health\n\t\t\t\tstatus_bar.update_healthbar(stats)",
+      "preimage_sha256": "ba46348c8ba490644964a8b9bdabb58a8964199cd3464c468f77cc57babe9364",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "boot",
+    "single_hit_reaction",
+    "rapid_hit_throttle",
+    "dot_throttle",
+    "status_color_coexistence",
+    "death_once"
+  ],
+  "not_proven": "Remote C0 confirms the lack of a Mob direct-hit signal and exact Mob.gd preimage. v0.1 has not yet passed local canonical build, S0/S1/S2/S4, or Combat S5; direct-vs-DoT and crit/heavy differentiation remain future work."
+}
