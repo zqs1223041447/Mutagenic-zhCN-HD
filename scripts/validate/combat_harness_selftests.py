@@ -269,6 +269,39 @@ def tc_secret_scan(root: Path, driver: Any, out_dir: Path) -> tuple[bool, str]:
     return True, "no secret-like tokens in X5-owned files"
 
 
+def tc_game_request_contract(root: Path, driver: Any, out_dir: Path) -> tuple[bool, str]:
+    scenario_id, seed = "cluster_kill_20", 2026082005
+    proc = _run(root, "run", "--scenario", scenario_id, "--candidate", str(driver.__file__),
+                "--seed", str(seed), "--out-dir", str(out_dir), "--dry-run")
+    if proc.returncode != driver.EXIT_NOT_PROVEN:
+        return False, f"expected dry-run exit {driver.EXIT_NOT_PROVEN}, got {proc.returncode}: {proc.stdout} {proc.stderr}"
+    request_path = out_dir / "requests" / f"{scenario_id}_{seed}.json"
+    if not request_path.is_file():
+        return False, f"request file not written: {request_path.name}"
+    payload = driver.read_json(request_path)
+    game = payload.get("game_request")
+    if not isinstance(game, dict):
+        return False, "request payload missing 'game_request' object"
+    if game.get("scenario_id") != scenario_id:
+        return False, f"game_request.scenario_id mismatch: {game.get('scenario_id')!r}"
+    if game.get("seed") != seed:
+        return False, f"game_request.seed mismatch: {game.get('seed')!r}"
+    if not isinstance(game.get("duration"), (int, float)) or game["duration"] <= 0:
+        return False, f"game_request.duration invalid: {game.get('duration')!r}"
+    plan = game.get("plan")
+    if not isinstance(plan, list) or len(plan) != 20:
+        return False, f"game_request.plan must flatten 20 spawns, got {type(plan).__name__} len {len(plan) if isinstance(plan, list) else '?'}"
+    for entry in plan:
+        for key in ("res", "x", "y", "count"):
+            if key not in entry:
+                return False, f"game_request.plan entry missing '{key}': {entry}"
+        if not isinstance(entry["res"], str) or not entry["res"].startswith("res://"):
+            return False, f"game_request.plan entry res invalid: {entry['res']!r}"
+        if entry["count"] != 1:
+            return False, f"game_request.plan entry count must be 1 per flattened spawn: {entry}"
+    return True, "game_request mirrors the 20 spawned mobs as res/x/y/count plan entries"
+
+
 def tc_plan_cli_deterministic(root: Path, driver: Any, out_dir: Path) -> tuple[bool, str]:
     scenario_id = "cluster_kill_20"
     seed = "2026082005"
@@ -297,6 +330,7 @@ TESTS: list[tuple[str, Callable[[Path, Any, Path], tuple[bool, str]]]] = [
     ("abs_path_scan_x5_files", tc_abs_path_scan),
     ("secret_scan_x5_files", tc_secret_scan),
     ("plan_cli_byte_identical", tc_plan_cli_deterministic),
+    ("game_request_contract", tc_game_request_contract),
 ]
 
 

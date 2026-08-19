@@ -1,0 +1,20 @@
+{
+  "id": "b2-x0-aggregate",
+  "version": "0.2.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "feat-tce",
+    "feat-tce-context",
+    "k1-player-response",
+    "k2-hit-reaction",
+    "k4-audio-foundation",
+    "k5-combat-harness",
+    "p7-fix-persistence",
+    "b2-x0-combat-harness-bridge"
+  ],
+  "conflicts": [],
+  "scope": "B2-X0 aggregate candidate root: B1-integrated gameplay/foundation mods (feat-tce TCE semantic contract, feat-tce-context, k1 player response, k2 hit reaction, k4 audio foundation, k5 combat harness) plus p7-fix-persistence (USE_STEAM=false local save path required for isolated-APPDATA runtime) plus b2-x0-combat-harness-bridge (ENABLE_TEST_ZONE for the harness route to TestLevel). Localization chain and HD-UI remaster mods are intentionally out of scope for this candidate.",
+  "proves": "the aggregate dependency graph resolves with a single consistent target_original_sha256 and no conflicts",
+  "not_proven": "patch application, compile, pack/embed, S0/S1/S2 runtime evidence"
+}

@@ -95,6 +95,11 @@ func _on_harness_damage(amounts, attacker_stats, was_crit):
 	_damage_events += 1
 
 
+func _iso_utc(unix_seconds):
+	var dt = OS.get_datetime(true)
+	return "%04d-%02d-%02dT%02d:%02d:%02dZ" % [dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second]
+
+
 func _check_harness_done():
 	if _spawned > 0 and _dead_ids.size() >= _spawned:
 		_finish_harness_scenario()
@@ -111,8 +116,8 @@ func _finish_harness_scenario():
 		"schema_version": "1.0",
 		"scenario_id": scenario_id,
 		"seed": seed_num,
-		"started_at": _started,
-		"ended_at": int(OS.get_unix_time()),
+		"started_at": _iso_utc(_started),
+		"ended_at": _iso_utc(int(OS.get_unix_time())),
 		"boot": {"ok": true, "fatal_count": 0, "alert_count": 0},
 		"counters": {
 			"spawned": _spawned,
@@ -125,8 +130,8 @@ func _finish_harness_scenario():
 				"fps_min": 0, "fps_max": 0, "frame_pacing_p95_ms": 0},
 		"runtime": {"exit_code": 0, "in_game_result": "PASS",
 				"notes": ["run_seconds=" + str(elapsed)]},
-		"proves": ["game booted", "request-driven spawn executed", "kill counting wired"],
-		"not_proven": ["candidate build", "frame pacing accuracy", "perf monitors"]
+		"proves": "game booted; request-driven spawn executed; kill counting wired",
+		"not_proven": "candidate build; frame pacing accuracy; perf monitors"
 	}
 	var out = File.new()
 	out.open("user://combat_harness/telemetry_" + scenario_id + "_" + str(seed_num) + ".json", File.WRITE)
