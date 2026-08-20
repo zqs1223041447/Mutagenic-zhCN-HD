@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "intent": "B2-X2 Combat S5 evidence aspect catalog. Each aspect is a uniform evidence format for one player-perceivable combat property: same scenario id / same seed / same spawn composition+positions / same camera start on BOTH sides (baseline and candidate). Scenario bindings MUST reference scenario ids declared in scripts/validate/combat_scenarios.json (B1-X5 catalog). The machine prepares evidence packages only; HUMAN_ACCEPTED is a human-only conclusion and never appears in machine-generated output.",
+  "aspects": [
+    {
+      "id": "player_response",
+      "summary": "Player Response: movement/turn/dash/repeat-cast responsiveness, input-loss and drift checks.",
+      "wave": "A",
+      "depends_on_event_spine": false,
+      "default_scenario": "movement_dash_smoke",
+      "scenario_bindings": [
+        {
+          "scenario": "movement_dash_smoke",
+          "camera_start": [0.0, -180.0],
+          "capture_points": [
+            {"id": "start_frame", "at": 0.0, "kind": "screenshot", "required": true, "telemetry_fields": ["boot.ok"]},
+            {"id": "dash_start", "at": 2.0, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.dashes"]},
+            {"id": "dash_recover", "at": 2.8, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.dashes"]},
+            {"id": "move_strafe", "at": 5.0, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.player_moves"]},
+            {"id": "dash_sequence", "at": 6.0, "kind": "frame_sequence", "required": false, "telemetry_fields": ["counters.dashes"]}
+          ]
+        },
+        {
+          "scenario": "rapid_hit_10s",
+          "camera_start": [0.0, -180.0],
+          "capture_points": [
+            {"id": "start_frame", "at": 0.0, "kind": "screenshot", "required": true, "telemetry_fields": ["boot.ok"]},
+            {"id": "repeated_action", "at": 3.0, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.melee_hits"]},
+            {"id": "sustained_movement", "at": 7.0, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.player_moves"]},
+            {"id": "ten_second_soak", "at": 9.5, "kind": "video", "required": false, "telemetry_fields": ["perf.fps_avg"]}
+          ]
+        }
+      ],
+      "checklist": [
+        {"id": "pr_01", "question": "整体跟手度：哪个版本控制更直接？", "response_type": "prefer_side"},
+        {"id": "pr_02", "question": "移动/转向响应直接感（1 很糊, 5 很直接）", "response_type": "score_1_5"},
+        {"id": "pr_03", "question": "Dash 启动与收尾可读性（1 难判断, 5 清晰）", "response_type": "score_1_5"},
+        {"id": "pr_04", "question": "高速施法/连续 Dash 是否出现输入丢失（被吞）？", "response_type": "yes_no"},
+        {"id": "pr_05", "question": "是否出现滑动失控或穿过碰撞？", "response_type": "yes_no"},
+        {"id": "pr_06", "question": "其他观察（自由文本）", "response_type": "free_text"}
+      ]
+    },
+    {
+      "id": "enemy_hit_reaction",
+      "summary": "Enemy Hit Reaction: direct-hit flash/recoil readability, heavy/crit tier separation, DoT throttling, rapid-hit noise wall.",
+      "wave": "A",
+      "depends_on_event_spine": false,
+      "default_scenario": "single_melee_hit",
+      "scenario_bindings": [
+        {
+          "scenario": "single_melee_hit",
+          "camera_start": [60.0, -120.0],
+          "capture_points": [
+            {"id": "start_frame", "at": 0.0, "kind": "screenshot", "required": true, "telemetry_fields": ["boot.ok"]},
+            {"id": "direct_hit_flash", "at": 9.0, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.damage_events"]},
+            {"id": "hit_contact_fx", "at": 9.2, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.melee_hits"]},
+            {"id": "death_settle", "at": 12.0, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.duplicate_deaths"]},
+            {"id": "hit_sequence", "at": 9.0, "kind": "frame_sequence", "required": false, "telemetry_fields": ["counters.melee_hits"]}
+          ]
+        },
+        {
+          "scenario": "rapid_hit_10s",
+          "camera_start": [0.0, -180.0],
+          "capture_points": [
+            {"id": "start_frame", "at": 0.0, "kind": "screenshot", "required": true, "telemetry_fields": ["boot.ok"]},
+            {"id": "rapid_hits_mid", "at": 4.0, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.melee_hits"]},
+            {"id": "noise_wall_check", "at": 8.0, "kind": "screenshot", "required": true, "telemetry_fields": ["perf.fps_avg"]},
+            {"id": "rapid_hit_soak", "at": 4.0, "kind": "video", "required": false, "telemetry_fields": ["perf.fps_min"]}
+          ]
+        }
+      ],
+      "checklist": [
+        {"id": "hr_01", "question": "受击反馈：哪个版本命中瞬间更清晰？", "response_type": "prefer_side"},
+        {"id": "hr_02", "question": "直接命中瞬间的受击反应（flash/recoil）可读性（1 看不清, 5 清楚）", "response_type": "score_1_5"},
+        {"id": "hr_03", "question": "heavy/crit 与普通命中的层级区分（1 无区分, 5 明显）", "response_type": "score_1_5"},
+        {"id": "hr_04", "question": "DoT tick 反馈是否节流合理（未被每 tick 闪屏淹没）？", "response_type": "yes_no"},
+        {"id": "hr_05", "question": "高频受击下画面是否变成噪声墙？", "response_type": "yes_no"},
+        {"id": "hr_06", "question": "其他观察（自由文本）", "response_type": "free_text"}
+      ]
+    },
+    {
+      "id": "kill_feel",
+      "summary": "Kill Feel (Wave B): single-kill confirmation, cluster-kill release, drop order readability, elite tier separation. Depends on the B2-X1 kill event; before X1/Wave B integration use --require-event-spine to get explicit NOT_RUN.",
+      "wave": "B",
+      "depends_on_event_spine": true,
+      "default_scenario": "cluster_kill_20",
+      "scenario_bindings": [
+        {
+          "scenario": "cluster_kill_20",
+          "camera_start": [90.0, -240.0],
+          "capture_points": [
+            {"id": "start_frame", "at": 0.0, "kind": "screenshot", "required": true, "telemetry_fields": ["boot.ok"]},
+            {"id": "first_kill", "at": 10.0, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.killed"]},
+            {"id": "cluster_peak", "at": 20.0, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.killed"]},
+            {"id": "drop_readability", "at": 21.0, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.killed"]},
+            {"id": "cluster_kill_soak", "at": 10.0, "kind": "video", "required": false, "telemetry_fields": ["perf.fps_min"]}
+          ]
+        },
+        {
+          "scenario": "single_ranged_pack",
+          "camera_start": [150.0, -120.0],
+          "capture_points": [
+            {"id": "start_frame", "at": 0.0, "kind": "screenshot", "required": true, "telemetry_fields": ["boot.ok"]},
+            {"id": "elite_kill_sample", "at": 15.0, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.killed"]},
+            {"id": "pickup_order", "at": 16.0, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.killed"]}
+          ]
+        }
+      ],
+      "checklist": [
+        {"id": "kf_01", "question": "击杀确认：哪个版本死亡反馈更明确？", "response_type": "prefer_side"},
+        {"id": "kf_02", "question": "单杀确认感（dissolve/burst 时序）（1 无感, 5 明确）", "response_type": "score_1_5"},
+        {"id": "kf_03", "question": "群杀释放感（5-20 敌人短时间死亡）（1 无感, 5 满足）", "response_type": "score_1_5"},
+        {"id": "kf_04", "question": "cluster kill 是否形成不可读 FX/声音爆炸？", "response_type": "yes_no"},
+        {"id": "kf_05", "question": "掉落时序是否仍可读？", "response_type": "yes_no"},
+        {"id": "kf_06", "question": "elite 与普通 kill 强度分层是否可感知？（样本含 elite 时）", "response_type": "yes_no"},
+        {"id": "kf_07", "question": "其他观察（自由文本）", "response_type": "free_text"}
+      ]
+    },
+    {
+      "id": "camera",
+      "summary": "Camera: impulse amplitude budget, ordinary-hit/DoT quietness, cluster aggregation, decay/recovery, comfort. Evidence format reserved in Wave A; live impulse exists only after B2-X5 (Wave B), so machine captures report event_spine NOT_RUN until then.",
+      "wave": "B",
+      "depends_on_event_spine": true,
+      "default_scenario": "cluster_kill_20",
+      "scenario_bindings": [
+        {
+          "scenario": "cluster_kill_20",
+          "camera_start": [90.0, -240.0],
+          "capture_points": [
+            {"id": "calm_baseline", "at": 1.0, "kind": "screenshot", "required": true, "telemetry_fields": ["counters.killed"]},
+            {"id": "heavy_impulse", "at": 11.0, "kind": "screenshot", "required": true, "telemetry_fields": ["s5.event_camera_impulses"]},
+            {"id": "cluster_aggregated", "at": 20.0, "kind": "screenshot", "required": true, "telemetry_fields": ["s5.event_camera_impulses"]},
+            {"id": "decay_recovery", "at": 30.0, "kind": "screenshot", "required": true, "telemetry_fields": ["s5.event_camera_impulses"]},
+            {"id": "impulse_sequence", "at": 11.0, "kind": "frame_sequence", "required": false, "telemetry_fields": ["s5.event_camera_impulses"]}
+          ]
+        },
+        {
+          "scenario": "projectile_density",
+          "camera_start": [0.0, -180.0],
+          "capture_points": [
+            {"id": "calm_baseline", "at": 1.0, "kind": "screenshot", "required": true, "telemetry_fields": ["perf.fps_avg"]},
+            {"id": "dense_projectile_impulse", "at": 12.0, "kind": "screenshot", "required": true, "telemetry_fields": ["s5.event_camera_impulses"]}
+          ]
+        }
+      ],
+      "checklist": [
+        {"id": "cm_01", "question": "镜头表现：哪个版本更稳定克制？", "response_type": "prefer_side"},
+        {"id": "cm_02", "question": "heavy/crit/kill 镜头脉冲幅度是否克制（1 乱震, 5 克制）", "response_type": "score_1_5"},
+        {"id": "cm_03", "question": "普通 hit / DoT tick 是否没有触发震动（默认禁止）？", "response_type": "yes_no"},
+        {"id": "cm_04", "question": "群杀时镜头是否只聚合一次而非 N 次叠加？", "response_type": "yes_no"},
+        {"id": "cm_05", "question": "震动后恢复/decay 是否平稳（1 生硬, 5 平滑）", "response_type": "score_1_5"},
+        {"id": "cm_06", "question": "是否出现晕眩/不适感？", "response_type": "yes_no"},
+        {"id": "cm_07", "question": "其他观察（自由文本）", "response_type": "free_text"}
+      ]
+    },
+    {
+      "id": "audio",
+      "summary": "Audio: light/direct hit vs crit/heavy cue separation, kill cue separation, cluster kill suppression, voice budget leaks, machine-gun effect under high hit rate.",
+      "wave": "B",
+      "depends_on_event_spine": true,
+      "default_scenario": "single_melee_hit",
+      "scenario_bindings": [
+        {
+          "scenario": "single_melee_hit",
+          "camera_start": [60.0, -120.0],
+          "capture_points": [
+            {"id": "start_frame", "at": 0.0, "kind": "screenshot", "required": true, "telemetry_fields": ["boot.ok"]},
+            {"id": "impact_light", "at": 9.0, "kind": "audio_clip", "required": false, "telemetry_fields": ["s5.event_audio_voices"]},
+            {"id": "kill_cue", "at": 12.0, "kind": "audio_clip", "required": false, "telemetry_fields": ["s5.event_audio_voices"]}
+          ]
+        },
+        {
+          "scenario": "rapid_hit_10s",
+          "camera_start": [0.0, -180.0],
+          "capture_points": [
+            {"id": "start_frame", "at": 0.0, "kind": "screenshot", "required": true, "telemetry_fields": ["boot.ok"]},
+            {"id": "machine_gun_check", "at": 5.0, "kind": "audio_clip", "required": false, "telemetry_fields": ["s5.event_audio_voices"]},
+            {"id": "voice_budget_peak", "at": 8.0, "kind": "screenshot", "required": true, "telemetry_fields": ["s5.event_audio_voices"]}
+          ]
+        },
+        {
+          "scenario": "cluster_kill_20",
+          "camera_start": [90.0, -240.0],
+          "capture_points": [
+            {"id": "start_frame", "at": 0.0, "kind": "screenshot", "required": true, "telemetry_fields": ["boot.ok"]},
+            {"id": "cluster_cue_suppression", "at": 20.0, "kind": "audio_clip", "required": false, "telemetry_fields": ["s5.event_audio_voices"]},
+            {"id": "no_clipping_check", "at": 21.0, "kind": "screenshot", "required": true, "telemetry_fields": ["s5.event_audio_voices"]}
+          ]
+        }
+      ],
+      "checklist": [
+        {"id": "au_01", "question": "音频表现：哪个版本更清晰不吵？", "response_type": "prefer_side"},
+        {"id": "au_02", "question": "普通 impact 与 crit/heavy cue 可听区分（1 混在一起, 5 分明）", "response_type": "score_1_5"},
+        {"id": "au_03", "question": "kill cue 与普通 hit 可听区分（1 无区分, 5 明显）", "response_type": "score_1_5"},
+        {"id": "au_04", "question": "高频 hit 是否形成音频机枪？", "response_type": "yes_no"},
+        {"id": "au_05", "question": "cluster kill 声音是否削波/叠加失控？", "response_type": "yes_no"},
+        {"id": "au_06", "question": "是否可闻 voice budget 泄漏（断音/抢声）？", "response_type": "yes_no"},
+        {"id": "au_07", "question": "其他观察（自由文本）", "response_type": "free_text"}
+      ]
+    }
+  ]
+}
