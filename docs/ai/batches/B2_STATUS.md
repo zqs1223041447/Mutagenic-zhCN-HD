@@ -1,9 +1,11 @@
 # B2 协调状态视图
 
 > **Batch**：`B2`
-> **状态**：`WAVE_A_READY`
+> **状态**：`WAVE_B_ACTIVE`（Gate A 已通过并冻结 `batch/b2-waveb-anchor`）
 > **Integration line**：`agent/kinetic-arcane-remaster-foundation`
-> **Frozen base ref**：`batch/b2-anchor`
+> **Wave A 集成 HEAD**：`ba4a0120`（X1→X2→X3→X0 依序合并完成）
+> **Frozen base ref（Wave A）**：`batch/b2-anchor` = `2a40ec4d`
+> **Frozen base ref（Wave B）**：`batch/b2-waveb-anchor`（本文件提交后更新为当前集成 HEAD）
 > **任务合同**：`docs/ai/batches/B2_KINETIC_COMBAT_VALIDATION_AND_IMPACT.md`
 > **产品状态权威**：仍为 `status.json` + evidence；本文件只负责 B2 调度。
 
@@ -19,30 +21,32 @@
 
 | Task | 状态 | 目标 |
 |---|---|---|
-| B2-X0 | READY | B1 aggregate Candidate + X5 harness 真实 S2 回归 |
-| B2-X1 | READY | Combat Event Spine v1：direct hit / DoT / crit / kill 单一事件语义 |
-| B2-X2 | READY | Combat S5 A/B evidence automation；机器准备证据，不冒充人工验收 |
-| B2-X3 | READY | batchctl / scanner / harness / semantic contracts 的无人值守控制平面强化 |
+| B2-X0 | ✅ COMPLETED → `agent/b2-x0` = `7009481c` | B1 aggregate Candidate + X5 harness 真实 S2 回归；S0 PASS / S1 PASS / S2 BLOCKED（launcher 键盘路由未产出 telemetry，已如实记录，非阻断） |
+| B2-X1 | ✅ COMPLETED → `agent/b2-x1-combat-event-spine` = `ec5e23e` | Combat Event Spine v1：direct hit / DoT / crit / kill 单一事件语义；contract 44/44 PASS + resolve/apply dry-run PASS |
+| B2-X2 | ✅ COMPLETED → `agent/b2-x2-s5-evidence` = `179e6ac` | Combat S5 A/B evidence automation；23/23 自测 PASS；机器准备证据，不冒充人工验收 |
+| B2-X3 | ✅ COMPLETED → `agent/b2-x3-ci-hardening` = `602c595a` | batchctl / scanner / harness / semantic contracts 的无人值守控制平面强化；check_all 全组件 PASS（event_spine_contract 接入位已预留） |
 
-主控应在资源允许时同时拉起 X0～X3，不得无理由串行。
+Wave A 已完成并集成：`47bdc2d`(X1) → `e2f9cab`(X2) → `e7a3a72`(X3) → `ba4a0120`(X0)。集成后验证：abs-path scan production_hardcode=0、secret findings=0、X1 contract 44/44 PASS、check_all 组件 PASS。
 
 ## Gate A
 
 Wave B 之前至少要求：
 
-- X0 aggregate Candidate 未发现阻断性结构/boot 回归；
-- X1 Event Spine semantic contract PASS；
-- 将 X1 必需事件层与必要回归修复集成后冻结新的 `batch/b2-waveb-anchor`。
+- X0 aggregate Candidate 未发现阻断性结构/boot 回归；✅ S0/S1 PASS（S2 BLOCKED 非阻断，保留人工核查项）
+- X1 Event Spine semantic contract PASS；✅ 44/44 PASS
+- 将 X1 必需事件层与必要回归修复集成后冻结新的 `batch/b2-waveb-anchor`；✅ 本文件提交后更新引用
+
+**Gate A 判定：PASS（2026-08-20）**。冻结 `batch/b2-waveb-anchor` = 当前集成 HEAD。
 
 ## Wave B — Gate A 后并发
 
 | Task | 状态 | 依赖 | 目标 |
 |---|---|---|---|
-| B2-X4 | WAITING_GATE_A | X1 | Kill Feel v1 |
-| B2-X5 | WAITING_GATE_A | X1 | Camera Impulse v1；heavy/crit/kill，普通 hit/DoT 默认不震 |
-| B2-X6 | WAITING_GATE_A | X1 + B1 X4 | Combat Audio Layers v1；hit/crit/kill/cluster 分层 |
+| B2-X4 | ✅ CLAIMED → `agent/b2-x4-kill-feel` | X1 | Kill Feel v1 |
+| B2-X5 | ✅ CLAIMED → `agent/b2-x5-camera-impulse` | X1 | Camera Impulse v1；heavy/crit/kill，普通 hit/DoT 默认不震 |
+| B2-X6 | ✅ CLAIMED → `agent/b2-x6-combat-audio-layers` | X1 + B1 X4 | Combat Audio Layers v1；hit/crit/kill/cluster 分层 |
 
-X4/X5/X6 应在 `batch/b2-waveb-anchor` 上并发，不从旧 `batch/b2-anchor` 私自继续。
+X4/X5/X6 已在 `batch/b2-waveb-anchor` 上并发。
 
 ## B2-I1
 
