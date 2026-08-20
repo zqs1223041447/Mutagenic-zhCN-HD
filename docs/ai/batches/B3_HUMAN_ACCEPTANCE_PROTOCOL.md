@@ -6,6 +6,7 @@
 > **可测文件**：`10_logs/b3-p3-x0-promotion-20260820/candidate/Mutagenic.exe`（+ 同目录 `steam_api64.dll`）
 > **权威来源**：`docs/ai/audits/B3-P3-X0_PROMOTION_BUILD.json`、`docs/ai/audits/B3-P3-X1_PROMOTION_GATES.json`、`docs/ai/audits/B3_PROMOTION_EVIDENCE_PACKAGE.json`
 > **创建**：2026-08-20（GPT 终审 B3-P3 PASS 后固化）
+> **验收范围决定（用户确认 2026-08-20）**：**保持现状，分开验收**——本候选（3127D394）只含 B3 战斗手感 MOD（10 个正式 gameplay MOD：feat-tce/feat-tce-context/k1-player-response/k2-hit-reaction/k4-audio-foundation/p7-fix-persistence/b2-x1-combat-event-spine/b2-x4-kill-feel/b2-x5-camera-impulse/b2-x6-combat-audio-layers），**不含汉化**（汉化在独立 C5 线 `mods/localization`，zh_CN Core Playable v8.1 SHA 033A34F7… 单独验收）；不构建"汉化+战斗"组合候选。
 
 ---
 
