@@ -1,9 +1,9 @@
 {
   "contract_id": "semantic_validation_promotion_parity",
   "schema_version": 1,
-  "created_at_utc": "2026-08-20T08:35:22Z",
+  "created_at_utc": "2026-08-20T08:35:46Z",
   "branch": "agent/b3-p2-x1",
-  "head_sha": "60f9232ca8d802de1016f3e3d46778bbc5b79a7d",
+  "head_sha": "750865b3d142f5bac5e0a4bf62045fbca7c362e2",
   "resolver": "scripts/patch/resolve_mod_chain.py",
   "candidates": {
     "validation": {
