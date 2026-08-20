@@ -87,3 +87,40 @@ B2-I1 COMPLETE（S0/S1/S4 PASS，S2 BLOCKED 如实，S5 machine EVIDENCE_PREPARE
 ## 4. 集成与后续
 
 全部 B3-P0 完成后：协调 AI 中央集成 → 全契约回归 → push 协调线 → 更新 B3_STATUS 与 PR → 再次 GPT 评审；同时吸收用户 S5 八项反馈决定 B3 Combat Polish 与 Density 执行批次。
+
+---
+
+# B3-P1 — Diagnostics / Readiness Wave（GPT 评审 2026-08-20 批准）
+
+> **Base**：`batch/b3-p1-anchor` = `de039a6`（B3-P0 集成 HEAD）
+> **状态**：OPEN FOR CLAIM
+> **背景**：GPT 评审 B3-P0 PASS；CI 仅为 `CI_CONFIGURED / LOCAL_PASS, GITHUB_RUN_NOT_PROVEN`；S2 冻结已缩到 do_save_game 附近，需宿主侧 bisect；S5 反馈需预建映射以快速响应。
+
+## 执行原则
+
+- 三个任务并行，独立 branch + worktree（batchctl claim）；
+- **禁止**实际 Combat Polish 调参（WAITING_HUMAN_S5）；**禁止**提高正式 Density（WAITING_S2_AND_S5）；**禁止** baseline promotion；
+- **禁止**倒填 B2 历史 S2 PASS；不修改正式 gameplay（X1 只做 diagnostic tooling/MOD）；
+- X1 的 diagnostic MOD 必须走声明式 mod.json（apply_mod 硬约束：old_text 必须存在于原始 04_recovered 内容，preimage=整文件 SHA）；不改正式 B2 evidence。
+
+## 任务合同
+
+### B3-P1-X0 — CI Bring-up
+
+查明 `ci-static-semantic` 在 de039a6 无远端 workflow run / combined status 为空的原因（候选：workflow 文件只存在于非默认分支、`on: push` 对非默认分支不触发、Draft PR 不触发等），修复触发/权限/配置问题并取得**真实 GitHub Actions PASS**。不得用本地 PASS 冒充云端 PASS。验收：远端 workflow run 存在且 PASS（或明确证明当前仓库配置下不可达 + 修复方案），PR required gate 准备状态说明。
+
+### B3-P1-X1 — S2 Save Bisect
+
+不改变正式 gameplay；围绕 `GameState.do_save_game()`（compute_checksum → compute_stamp → JSON.print → File.open/store/close → _on_save）以**声明式 diagnostic MOD** 写磁盘级 marker（before/after 每子步骤）；三组 control：① 当前 generated seed save、② 历史已验证正常真实 save、③ 无 save/fresh profile。目标：把冻结缩到具体调用子步骤；无法继续时才生成 VM/hang-dump handoff。复用 B3-X0 的 launch_harness_game.py v2 可观测性。验收：bisect 结论（冻结子步骤定位）+ 三组 control 结果 + diagnostic MOD/工具提交；不得倒填 B2 历史 S2 PASS。
+
+### B3-P1-X2 — S5 Feedback Intake
+
+不修改 gameplay；建立当前 8 项 S5 人工验收 checklist → Kill Feel / Camera Impulse / Combat Audio 各 tunable 参数（含允许调整范围）→ 对应 semantic contract → 需要重跑的 regression/Gate 的映射文档。用户反馈返回后即可自动生成 Combat Polish 调参任务。验收：`docs/ai/batches/B3_S5_INTAKE_MAP.md`（或等价文档）+ 映射校验（每个 checklist 项可追溯到具体 tunable/contract）。
+
+## B3-P1 集成
+
+三任务完成后：merge-tree 预检 → 依序合并 → check_all 全量 → push → 更新 B3_STATUS/PR → GPT 评审；继续等待/吸收 HUMAN S5 反馈。
+
+## Promotion 条件（GPT 强化，含新增 S3）
+
+S0 + S1 + S2 + S3 + S4 PASS + HUMAN S5 PASS + GitHub CI PASS + final fresh rebuild + 用户显式批准。顺序：修通 S2 → HUMAN S5 → 必要 Combat Polish → fresh aggregate rebuild → S0/S1/S2/S3/S4 → 受调参影响项重新 HUMAN S5 → CI PASS → 用户显式 promotion。PR #1 在此之前保持 Draft。
