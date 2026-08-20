@@ -1,0 +1,34 @@
+{
+  "experiment_id": "B2-I1-S2-SUPPLEMENT",
+  "recorded_at": "2026-08-20",
+  "branch": "agent/b3-x0-s2-route-recovery",
+  "base_sha": "68bb1c184dfab3a96554fd3d7c52581ef6c6a266",
+  "supersedes_nothing": "B2-I1_AGGREGATE_EVIDENCE.json 的 S2=BLOCKED 是历史事实，保持原样；本文件仅为后续补充（supplemental），不修改历史证据",
+  "candidate_under_test": {
+    "path": "<repo_root>/10_logs/b2-i1-aggregate-20260820/candidate/Mutagenic.exe",
+    "bytes": 103341700,
+    "sha256": "4AD1DE3844324A6F0331AAE664392403A824C695D7983C34DF304115CDE8E3FF",
+    "note": "与 B2-I1 final aggregate Candidate 完全相同（工具修复不触碰 candidate，hash 不变）"
+  },
+  "tooling_changes_landed": {
+    "launch_harness_game.py": "B3-X0 launcher v2：VK_F10 0x7A→0x79 修正（0x7A 实为 VK_F11；goto_test_level 绑定 physical_keycode 16777253=KEY_F10，正确 VK=0x79）；scenario_id/seed 回退 id/default_seed；磁盘级可观测性（seed save 指纹 before/after、godot log marker 时间线、heartbeat.jsonl 逐 poll、phase 列表、early-exit 检测、telemetry 截图）；timeout 90→180s",
+    "make_harness_seed_save.py": "新增：GameState 兼容 seed save 生成器（save_version=1、needs_starter=false、WARRIOR root_warrior、stamp/checksum=null 触发 verify_stamp 重写信号）；tooling-only，不触碰 recovered 源码"
+  },
+  "S2_core_smoke": "BLOCKED（与 B2 历史一致：telemetry 仍未产出；不伪造 PASS）",
+  "S2_detail": {
+    "launcher_steps_run1": "window_found=true, save_loaded=true, enter_menu_sent=true, enter_character_sent=true, f10_sent=true, process_exited_early=false, telemetry_found=false, status=FAIL",
+    "save_loaded_improvement": "较 B2 的 save_loaded=false 有进展：seed save 生成器 stage 后 'LOADED AND MERGED' marker 出现（04:45:05Z），存档被游戏重写（sha b87ca356…→22590511…，2183→2170 bytes），save 加载链确认就绪",
+    "root_cause": "主循环冻结：boot 后约 2–5s 主循环停转——godot.log 最后一行是残缺的 'Doing actual save from '（debounce save 触发点），存档 sha 自 04:45:05Z 起 3+ 分钟不再变化，窗口像素静止，之后所有 Enter/F10 键输入无效（heartbeat 71KB 全程 telemetry=false）；launcher 键盘序列最早 ~12–20s 才开始，远晚于冻结点 → 此前 B2-X0/B2-I1 的 f10_sent=true 但无 telemetry 由此解释，并非键位路由问题",
+    "log_buffering_known_issue": "godot.log 不可靠：print 缓冲，B2-I1 的 348B 日志实为杀进程时仅 flush banner；运行时轮询必须以磁盘产物（_0_6_0.dat sha/mtime、combat_harness 目录、telemetry 文件）为准",
+    "screenshot_quirk": "PowerShell CopyFromScreen 在本机截屏为单色黑（1536x864），截图证据仅作过程参考",
+    "remaining": "冻结根因（debounce save 之后主循环停转）需 VM/人工核查：可能与宿主运行环境、显卡/驱动或引擎主循环路径有关；goto_test_level → harness request 消费链路在本宿主无 VM 条件下无法进一步验证"
+  },
+  "verification": {
+    "combat_harness_selftests": "16/16 PASS (exit 0)",
+    "abs_path_scan": "production_hardcode=0",
+    "secret_scan": "findings=0",
+    "py_compile": "launch_harness_game.py / make_harness_seed_save.py OK"
+  },
+  "proves": "B2-I1 candidate 在隔离 APPDATA 下可完成 save 加载（save_loaded=true，'LOADED AND MERGED'）；S2 断点已从'键盘路由未知'收窄为'主循环冻结'；VK_F10 键位错误已修正；S2 无 telemetry 的原因与可观测性缺陷已被定位与补齐",
+  "not_proven": "S2 真实运行态 telemetry（游戏主循环冻结，goto_test_level 未能消费 harness request）；冻结根因；VM 环境下的运行行为"
+}
