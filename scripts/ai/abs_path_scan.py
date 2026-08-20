@@ -102,6 +102,29 @@ def _json_path_for(file_path: Path, needle: str) -> str | None:
     return paths[0] if paths else None
 
 
+def _is_system_dir(matched: str) -> bool:
+    """True when the matched segment is (part of) an OS-level system directory.
+
+    The scanner's own pattern table writes prefixes with doubled backslashes
+    (for example ``C:\\Windows`` inside a Python string literal), and
+    _full_segment may truncate at spaces (``C:\\Program`` from
+    ``C:\\Program Files\\...``). Iteratively unescape backslash doublings and
+    compare in both directions, so pattern definitions and truncated segments
+    are not misclassified as hardcodes.
+    """
+    candidates = [matched]
+    while True:
+        nxt = candidates[-1].replace("\\\\", "\\")
+        if nxt == candidates[-1]:
+            break
+        candidates.append(nxt)
+    for raw in candidates:
+        for prefix in SYSTEM_DIR_PREFIXES:
+            if raw.startswith(prefix) or prefix.startswith(raw):
+                return True
+    return False
+
+
 def classify(rel: str, matched: str, json_path: str | None = None) -> tuple[str, str]:
     parts = Path(rel).parts
     if rel.startswith("03_raw/") or rel.startswith("04_recovered/"):
@@ -118,7 +141,7 @@ def classify(rel: str, matched: str, json_path: str | None = None) -> tuple[str,
             return "provenance_metadata", f"provenance/evidence field '{leaf}' - preserve verbatim"
         if leaf in PATCH_PAYLOAD_FIELDS:
             return "provenance_metadata", f"patch payload field '{leaf}' mirrors recovered/historical content"
-    if matched.startswith(SYSTEM_DIR_PREFIXES):
+    if _is_system_dir(matched):
         return "local_config", "OS-level system directory (Windows) - not machine-specific user data"
     if any(m in matched for m in PLACEHOLDER_MARKERS):
         return "docs_example", "placeholder path (\\path\\to\\...) - documentation style"

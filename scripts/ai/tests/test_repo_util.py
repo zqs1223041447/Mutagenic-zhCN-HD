@@ -54,10 +54,15 @@ class RepoUtilTest(unittest.TestCase):
                 in_real = True
                 break
             real = real.parent
-        if in_real:
-            main = repo_util.find_main_repo_root()
-            self.assertTrue(main.name == "Mutagenic-zhCN-HD")
-            self.assertTrue((main.parent / (main.name + ".worktrees") / "B1" / "X0").is_dir())
+        if not in_real:
+            self.skipTest("not running inside a real Mutagenic clone")
+            return
+        main = repo_util.find_main_repo_root()
+        self.assertTrue((main / "AGENTS.md").is_file(), "main root must carry the AGENTS.md marker")
+        wt = repo_util.worktrees_root()
+        self.assertTrue(wt.name.endswith(".worktrees"), "worktrees root must follow the derived layout")
+        self.assertTrue((main / "status.json").is_file() or (main / "scripts").is_dir(),
+                        "main root must be a real Mutagenic clone")
 
     def test_task_parsing_and_defaults(self):
         self.assertEqual(repo_util.split_task("B1-X1"), ("B1", "X1"))

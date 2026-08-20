@@ -27,14 +27,17 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
+import time
 from pathlib import Path
 
 import abs_path_scan
+import check_all
 import secret_scan
-from repo_util import (RepoError, default_branch, find_main_repo_root, find_repo_root,
-                       find_worktree, git, is_merged, ref_exists, ref_sha,
+from repo_util import (RepoError, claim_lock_path, default_branch, find_main_repo_root,
+                       find_repo_root, find_worktree, git, is_merged, ref_exists, ref_sha,
                        split_task, task_dir, tracked_files, worktree_list, worktrees_root)
 
 IMMUTABLE_PREFIXES = ("00_original/", "03_raw/", "04_recovered/")
@@ -227,6 +230,44 @@ def _scan_changed(root: Path, changed: list[str]) -> dict:
     }
 
 
+# ---------------------------------------------------------------- claim lock
+class ClaimLock:
+    """O_EXCL lock in the git common dir: two concurrent `claim` runs for the
+    same batch cannot both pass the check-then-create window (B2-X3: 并发
+    claim 冲突). A stale lock (older than stale_seconds) is broken once so an
+    unattended run cannot hang forever on a crashed predecessor."""
+
+    def __init__(self, main, stale_seconds: int = 300):
+        self.lock_path = claim_lock_path(main)
+        self.stale_seconds = stale_seconds
+
+    def __enter__(self):
+        for attempt in range(2):
+            try:
+                fd = os.open(self.lock_path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+                with os.fdopen(fd, "w") as fh:
+                    fh.write(f"{os.getpid()}\n{time.time()}\n")
+                return self
+            except FileExistsError:
+                age = time.time() - self.lock_path.stat().st_mtime
+                if attempt == 0 and age > self.stale_seconds:
+                    try:
+                        self.lock_path.unlink()
+                    except OSError:
+                        pass
+                    continue
+                raise RepoError(
+                    f"claim: another claim is in progress (lock {self.lock_path}, age {int(age)}s); "
+                    "retry later, or remove the lock file if it is stale")
+
+    def __exit__(self, *exc):
+        try:
+            self.lock_path.unlink()
+        except OSError:
+            pass
+        return False
+
+
 # ---------------------------------------------------------------- claim
 def cmd_claim(args) -> int:
     main = find_main_repo_root()
@@ -245,45 +286,52 @@ def cmd_claim(args) -> int:
         print(f"claim {args.task}: base ref {base!r} does not resolve", file=sys.stderr)
         return 2
 
-    registry = worktree_list(main)
-    existing = find_worktree(tw_dir, main)
-    if existing is not None:
-        eb = existing.get("branch")
-        if args.branch and eb and eb != args.branch:
-            print(f"claim {args.task}: task dir already hosts branch {eb} (requested {args.branch})", file=sys.stderr)
-            return 2
-        print(f"claim {args.task}: already claimed (idempotent)")
-        print(f"  branch    : {eb or '[detached]'}")
-        print(f"  worktree  : {existing['path']}")
-        print(f"  head      : {_short(existing.get('head'))}")
-        return 0
-    if tw_dir.exists():
-        print(f"claim {args.task}: directory exists but is NOT a registered git worktree - "
-              "refusing to touch unknown state (fail-closed)", file=sys.stderr)
-        return 2
-
-    other = [e for e in registry if e.get("branch") == branch and e["path"] != tw_dir]
-    if other:
-        print(f"claim {args.task}: branch {branch} already checked out at {other[0]['path']}", file=sys.stderr)
-        return 2
-
     base_sha = ref_sha(base, main)
-    if ref_exists(branch, main):
-        plan = [f"git worktree add {tw_dir} {branch}"]
-    else:
-        plan = [f"git worktree add -b {branch} {tw_dir} {base}"]
     if args.dry_run:
+        plan = [f"git worktree add {tw_dir} {branch}"] if ref_exists(branch, main) \
+            else [f"git worktree add -b {branch} {tw_dir} {base}"]
         print(f"claim {args.task} (DRY-RUN, nothing executed):")
         for p in plan:
             print(f"  git -C {main} {p}")
         print(f"  base_sha = {base_sha}")
         return 0
 
-    tw_dir.parent.mkdir(parents=True, exist_ok=True)
-    if ref_exists(branch, main):
-        git("worktree", "add", str(tw_dir), branch, cwd=main)
-    else:
-        git("worktree", "add", "-b", branch, str(tw_dir), base, cwd=main)
+    with ClaimLock(main):
+        registry = worktree_list(main)
+        existing = find_worktree(tw_dir, main)
+        if existing is not None:
+            eb = existing.get("branch")
+            if args.branch and eb and eb != args.branch:
+                print(f"claim {args.task}: task dir already hosts branch {eb} (requested {args.branch})",
+                      file=sys.stderr)
+                return 2
+            print(f"claim {args.task}: already claimed (idempotent)")
+            print(f"  branch    : {eb or '[detached]'}")
+            print(f"  worktree  : {existing['path']}")
+            print(f"  head      : {_short(existing.get('head'))}")
+            return 0
+        if tw_dir.exists():
+            print(f"claim {args.task}: directory exists but is NOT a registered git worktree - "
+                  "refusing to touch unknown state (fail-closed)", file=sys.stderr)
+            return 2
+
+        other = [e for e in registry if e.get("branch") == branch and e["path"] != tw_dir]
+        if other:
+            print(f"claim {args.task}: branch {branch} already checked out at {other[0]['path']}",
+                  file=sys.stderr)
+            return 2
+
+        tw_dir.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            if ref_exists(branch, main):
+                git("worktree", "add", str(tw_dir), branch, cwd=main)
+            else:
+                git("worktree", "add", "-b", branch, str(tw_dir), base, cwd=main)
+        except RepoError as e:
+            print(f"claim {args.task}: git worktree add failed: {e}", file=sys.stderr)
+            print("  hint: 并发 claim 占用（branch/目录已被其他任务使用）或路径不可写；"
+                  "先运行 'batchctl status <batch>' 检查后重试", file=sys.stderr)
+            return 2
     head = ref_sha("HEAD", tw_dir)
     print(f"claim {args.task}: OK")
     print(f"  branch    : {branch}")
@@ -393,6 +441,7 @@ def cmd_handoff(args) -> int:
             "worktree": "<task worktree path>", "base_sha": "<anchor sha>",
             "final_sha": "<HEAD sha>", "commits_since_base": [], "changed_files": [],
             "uncommitted": [], "ahead": 0, "behind": 0,
+            "verification_exit_code": 0,
             "scans": {"path_production_hardcode": 0, "secret_findings": 0},
             "verification": {"S0": "NOT_RUN", "S1": "NOT_RUN", "S2": "NOT_RUN",
                              "S4": "NOT_RUN", "S5": "NOT_RUN"},
@@ -402,6 +451,9 @@ def cmd_handoff(args) -> int:
         }
     else:
         report = _build_handoff(state, args.task)
+        report["verification_exit_code"] = args.exit_code
+        if args.summary:
+            report["summary"] = args.summary
         if state.get("registered") and state.get("branch"):
             changed = [c.split("\t", 1)[-1] for c in report["changed_files"] if "\t" in c]
             changed += [c[3:] for c in report["uncommitted"] if len(c) > 3]
@@ -442,15 +494,30 @@ def cmd_handoff(args) -> int:
 
 
 # ---------------------------------------------------------------- collect
+def _normalize_exit(code) -> int | None:
+    if isinstance(code, bool):
+        return None
+    if isinstance(code, int):
+        return code
+    if isinstance(code, str) and code.strip().lstrip("-").isdigit():
+        return int(code.strip())
+    return None
+
+
 def cmd_collect(args) -> int:
     base_dir = Path(args.worktrees_root) if args.worktrees_root else worktrees_root()
     handoffs_dir = base_dir / args.batch / "handoffs"
     gathered: list[dict] = []
     missing: list[str] = []
+    incomplete: list[str] = []
     if handoffs_dir.is_dir():
         for f in sorted(handoffs_dir.glob("*.yaml")):
             try:
-                gathered.append(_yaml_load(f.read_text(encoding="utf-8")))
+                data = _yaml_load(f.read_text(encoding="utf-8"))
+                gathered.append(data)
+                code = _normalize_exit(data.get("verification_exit_code"))
+                if code is not None and code != 0:
+                    incomplete.append(f"{f.stem}: declared verification exit_code {code} (non-zero)")
             except Exception as e:
                 missing.append(f"{f.name}: unreadable ({e})")
     for e in worktree_list():
@@ -459,20 +526,28 @@ def cmd_collect(args) -> int:
             task = rel.name
             if not (handoffs_dir / f"{task}.yaml").exists():
                 missing.append(f"{task}: claimed, no handoff")
+    verdict = "FAIL" if (missing or incomplete) else "PASS"
+    rc = 1 if (missing or incomplete) else 0
     if args.json:
-        print(json.dumps({"batch": args.batch, "handoffs": gathered, "missing": missing},
+        print(json.dumps({"batch": args.batch, "verdict": verdict, "handoffs": gathered,
+                          "missing": missing, "incomplete": incomplete, "exit_code": rc},
                          indent=1, ensure_ascii=False))
-        return 0
-    print(f"collect {args.batch}: {len(gathered)} handoff(s)")
+        return rc
+    print(f"collect {args.batch}: {len(gathered)} handoff(s) verdict={verdict}")
     for h in gathered:
-        print(f"  {h.get('task_id'):8s} {h.get('branch') or '?':44s} base={_short(h.get('base_sha'))} "
+        code = h.get("verification_exit_code", "?")
+        print(f"  {str(h.get('task_id') or '?'):8s} {h.get('branch') or '?':44s} base={_short(h.get('base_sha'))} "
               f"head={_short(h.get('final_sha'))} files={len(h.get('changed_files') or [])} "
-              f"push={h.get('push_status', '?')}")
+              f"push={h.get('push_status', '?')} verify_exit={code}")
     if missing:
-        print("missing/incomplete:")
+        print("missing:")
         for m in missing:
             print(f"  - {m}")
-    return 0
+    if incomplete:
+        print("incomplete:")
+        for m in incomplete:
+            print(f"  - {m}")
+    return rc
 
 
 # ---------------------------------------------------------------- preflight
@@ -620,6 +695,8 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("handoff", help="collect structured handoff report")
     p.add_argument("task")
     p.add_argument("--template", action="store_true", help="print empty template only")
+    p.add_argument("--exit-code", type=int, default=0, help="declare verification exit code in report")
+    p.add_argument("--summary", help="one-line summary recorded in the report")
     p.add_argument("--out", help="output file (default <worktrees_root>/<batch>/handoffs/<task>.yaml)")
     p.add_argument("--worktrees-root")
     p.add_argument("--dry-run", action="store_true")
