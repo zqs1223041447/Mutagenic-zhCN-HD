@@ -109,6 +109,15 @@
       "timeout_s": 300,
       "required": true,
       "description": "B3-P2-X1 Validation/Promotion 候选分隔 parity 契约 32/32（真实 resolve 三根对比：Validation 14 mods/51 patches、Promotion 11 mods/49 patches、差集恰为 k5 harness+bridge+diagnostic；promotion 零禁用面；pristine ENABLE_TEST_ZONE 影响面 false/2 sites；机器报告 B3-P2-X1_PARITY_REPORT.json）"
+    },
+    {
+      "id": "s3_persistence_selfcheck",
+      "kind": "python",
+      "relpath": "scripts/validate/s3_persistence_selftests.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B3-P2-X2 S3 persistence gate 离线自检 17/17（语义指纹/volatile 豁免 timestamp·checksum·stamp/同态判定/planted marker/非法输入/PASS·FAIL·BLOCKED 分类/可移植性+secret 卫生；不含游戏运行——真实 save→exit→reload 由 s3_persistence_gate.py 对候选 EXE 显式执行）"
     }
   ]
 }
