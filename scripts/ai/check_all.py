@@ -13,11 +13,11 @@ depends on, in one command with stable exit codes:
 
 Components are declared in ``scripts/ai/check_all_components.json``
 (repo-relative). A later task integrates a new contract simply by adding
-its entry file; the registry already carries the hook (e.g. the B2-X1
-combat event spine contract, NOT RUN until X1 lands).
+its entry file; since B3-X1 every registered component is ``required``:
+a missing entry is a FAIL, not a NOT_RUN (control-plane closure).
 
-Report contract (``--json`` / ``--out``): see _report_shape in
-``scripts/ai/tests/test_check_all.py``.
+Report contract (``--json`` / ``--out``): the JSON report dict is built in
+``run_check_all`` below (result / summary / components / not_run_ids).
 
 Usage (from any repo path):
     python scripts/ai/check_all.py [--json] [--out <path>] [--registry <path>]
@@ -149,7 +149,7 @@ def run_check_all(root: Path, registry_path: str | Path | None = None, out: str 
 
     branch, head = _branch_and_head(root)
     report = {
-        "check_all": "B2-X3",
+        "check_all": "B3-X1",
         "ran_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         "repo_root": str(root),
         "branch": branch,
@@ -161,10 +161,12 @@ def run_check_all(root: Path, registry_path: str | Path | None = None, out: str 
         "not_run_ids": [c["id"] for c in not_run],
         "result": result,
         "exit_code": exit_code,
-        "proves": "all registered machine gates that could run are PASS: batchctl 单测、绝对路径扫描、"
-                  "secret 扫描、combat harness 自测、semantic combat pipeline 契约（按注册表现状）",
-        "not_proven": "未注册/未落盘的契约（如 B2-X1 event spine），游戏内运行态、候选构建与人工验收"
-                      "由对应任务各自负责",
+        "proves": "all registered machine gates that could run are PASS: batchctl 单测、绝对路径"
+                  "扫描、secret 扫描、combat harness 自测、semantic 契约全家桶（pipeline/event "
+                  "spine/kill feel/camera/combat audio）+ combat audio policy selftest + S5 "
+                  "evidence selfcheck（全部 required，入口缺失即 FAIL）",
+        "not_proven": "游戏内运行态（S2 harness telemetry、实际声音/镜头行为）、候选构建与人工 S5"
+                      " 验收由对应 workflow/任务各自负责；本 gate 只证明静态语义与契约不变性",
     }
     if json_out:
         print(json.dumps(report, ensure_ascii=False, indent=1))

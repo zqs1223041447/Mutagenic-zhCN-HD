@@ -1,0 +1,54 @@
+name: ci-static-semantic
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  static-semantic:
+    name: static + semantic contracts (repo-only, no EXE)
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: workflow yaml syntax check
+        run: |
+          python -m pip install --quiet pyyaml
+          python - <<'EOF'
+          import pathlib
+          import yaml
+          path = pathlib.Path('.github/workflows/ci-static-semantic.yml')
+          docs = list(yaml.safe_load_all(path.read_text(encoding='utf-8')))
+          assert docs and all(d is not None for d in docs), 'empty or invalid YAML document'
+          job = docs[0]['jobs']['static-semantic']
+          assert isinstance(job, dict) and 'steps' in job, 'workflow job/steps missing'
+          print(f'yaml OK: {len(docs)} document(s), job static-semantic with {len(job["steps"])} step(s)')
+          EOF
+
+      - name: abs-path scan (portability gate, production_hardcode blocks)
+        run: python scripts/ai/abs_path_scan.py --json
+
+      - name: secret scan (redacted gate, findings block)
+        run: python scripts/ai/secret_scan.py --json
+
+      - name: unified check-all (all semantic contracts + selftests, exit 0 required)
+        run: python scripts/ai/check_all.py --out check_all_report.json
+        timeout-minutes: 30
+
+      - name: upload gate evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-gate-evidence
+          path: |
+            check_all_report.json
+            10_logs/combat_harness_selfcheck/*.json
+            10_logs/s5_evidence_selfcheck/*.json
+          if-no-files-found: warn
