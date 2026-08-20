@@ -73,7 +73,9 @@ Wave A / Wave B 完成后中央集成：
 - 不在 B2 扩大战斗密度数值；Build Density 只建立性能/回归基线；
 - 不用 every-hit camera shake / hit-stop / audio spam 伪造手感。
 
-## 主控最简启动指令
+## 启动历史指令（已归档，不再使用）
+
+> 以下为 B2 启动历史指令，B2 已完成，仅作过程留档，不再使用。
 
 ```text
 启动 B2：解析 batch/b2-anchor，使用 batchctl 为 B2-X0～X3 建立独立 branch/worktree，并行拉起四个 Worker；持续监控、失败重试、完成即补位。Gate A 通过后由主控集成必要前置并冻结 batch/b2-waveb-anchor，再并行拉起 B2-X4～X6。最终执行 B2-I1 聚合回归、push、更新 PR/handoff；除真正人工 Gate 外不要等待用户。
