@@ -124,3 +124,44 @@ B2-I1 COMPLETE（S0/S1/S4 PASS，S2 BLOCKED 如实，S5 machine EVIDENCE_PREPARE
 ## Promotion 条件（GPT 强化，含新增 S3）
 
 S0 + S1 + S2 + S3 + S4 PASS + HUMAN S5 PASS + GitHub CI PASS + final fresh rebuild + 用户显式批准。顺序：修通 S2 → HUMAN S5 → 必要 Combat Polish → fresh aggregate rebuild → S0/S1/S2/S3/S4 → 受调参影响项重新 HUMAN S5 → CI PASS → 用户显式 promotion。PR #1 在此之前保持 Draft。
+
+---
+
+# B3-P2 — S2/S3/发行候选边界收口（GPT 评审 2026-08-20 批准）
+
+> **Base**：`batch/b3-p2-anchor` = `60f9232`（B3-P1 集成 HEAD）
+> **状态**：OPEN FOR CLAIM
+> **背景**：GPT 评审 B3-P1 PASS（CI GITHUB_RUN_PASS 采纳）。S2 已证 save 路径无冻结、TestLevel 路由到达、harness spawns=started，剩余问题=玩家 3–5s 死亡而 telemetry 需 ~20s 完成——已从"环境未知"转为"确定性测试 harness 生命周期问题"，无需 VM。promotion 前必须处理 b2-x0-combat-harness-bridge 写入 ENABLE_TEST_ZONE=true 的风险（不应默认随 baseline 晋升）。
+
+## 执行原则
+
+- 三任务并行，独立 branch + worktree（batchctl claim）；
+- **禁止**修改正常 gameplay 数值（Combat Polish WAITING_HUMAN_S5）；**禁止**真实 Density 提升（WAITING_S2_PASS_AND_S5_STABLE）；**禁止** baseline promotion；
+- 验证 Candidate 允许 harness/ENABLE_TEST_ZONE；Promotion Candidate 必须剥离 diagnostic/test-only route/ENABLE_TEST_ZONE=true；
+- 不修改 `00_original/03_raw/04_recovered`；apply_mod 硬约束（old_text 存在于原始 04_recovered 内容，preimage=整文件 SHA）；
+- X0 必须真实跑出 telemetry 才能写 S2 PASS，不得伪造。
+
+## 任务合同
+
+### B3-P2-X0 — S2 Telemetry Closure
+
+完善 combat harness telemetry 生命周期：scenario 启动即创建 telemetry/session 文件；周期 checkpoint（固定间隔 flush）；player death / scene exit / timeout 均 flush 并记录 `exit_reason` + partial telemetry；新增仅在 harness/TestLevel 下生效的确定性 nonlethal `runtime_smoke_safe` 场景（test-only：enemy_damage_scale=0 或 player_invulnerable=true，普通游戏绝不受影响），使 S2 稳定跑到 final telemetry。证明链：boot → load → hideout → TestLevel → spawn → main loop → harness runtime → telemetry → clean completion。**不修改正常 gameplay 数值**（test-only 豁免必须限定在该 harness 场景显式开启时）。验收：真实跑 S2 取得 final telemetry 后写 PASS（或如实记录 BLOCKED+原因）；telemetry 含 exit_reason/checkpoint 证据。
+
+### B3-P2-X1 — Validation/Promotion Candidate Separation
+
+正式区分双 modset：
+- **Validation Candidate** = 正式 gameplay mods + harness + `ENABLE_TEST_ZONE=true`（b2-x0-combat-harness-bridge 现状）；
+- **Promotion Candidate** = 相同正式 gameplay mods − diagnostic mods − test-only route − `ENABLE_TEST_ZONE=true`；
+建立 gameplay parity contract：证明两者除调试入口外行为/正式 MOD 完全一致（如 resolve 链对比、非 harness patch 集一致、patch 集差集仅限 harness 相关）。产出：modset 定义（mods/ 或 docs 中的 manifest/文档）+ parity contract 脚本/文档。验收：parity 检查 PASS（真实命令输出），文档化两候选构成差异；不触碰正式 gameplay 数值。
+
+### B3-P2-X2 — S3 Persistence Regression Automation
+
+把 isolated APPDATA `save → exit → reload → same-state` 验证做成无人值守 S3 gate 与 evidence：save 后记录状态指纹（存档 sha/关键字段），退出重载后比较一致；工具化脚本 + evidence 文档；可先在当前可用 Candidate 验证工具，最终 promotion Candidate 必须重跑。验收：S3 工具 selftest PASS + 当前 Candidate 上真实 save/reload 验证记录（PASS 或如实 BLOCKED）；evidence 结构对齐既有证据文档。
+
+## B3-P2 集成
+
+三任务完成后：merge-tree 预检 → 依序合并 → 确认最终 HEAD GitHub Actions run success（gh run list 实证）→ check_all 全量 → abs-path/secret → push 核验 → 更新 B3_STATUS（移除旧 B3-P0 启动指令）→ 更新 PR #1 正文到当前状态 → GPT 评审；继续等待 HUMAN S5 反馈。
+
+## Promotion 条件（GPT 再强化，含调试入口剥离）
+
+GitHub CI PASS + Promotion Candidate fresh rebuild + S0/S1/S2/S3/S4 PASS + HUMAN S5 PASS + Validation↔Promotion parity PASS + 无 diagnostic/test-only MOD + 用户显式批准。HUMAN S5 绑定最终 Promotion Candidate SHA；若人工验收的是 Validation Candidate 也可沿用，前提是 parity contract 证明唯一差异为 TestLevel/harness 调试入口。
