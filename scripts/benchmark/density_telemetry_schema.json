@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0",
+  "intent": "B3-X3 density benchmark telemetry envelope. Superset of scripts/validate/combat_telemetry_schema.json: every field required by the base combat contract stays required here, so any telemetry that validates against this schema also validates against the base combat schema (compat invariant enforced by density_benchmark_selftests.py tc_base_schema_compat). New optional blocks (metrics / audio / camera) are the benchmark measurement envelope: they must be produced in-game by reusing the existing single bus (combat event spine -> ScenarioDirector telemetry writer) when a benchmark-capable candidate runs on the VM; when they are absent (legacy combat telemetry), the host driver derives frame-time / fps / event-rate from perf+counters and marks them derived. The host driver is the contract keeper; this file and density_matrix.json are the only interface changes, no new in-game bus is introduced.",
+  "base_schema": "scripts/validate/combat_telemetry_schema.json",
+  "root_required": [
+    "schema_version",
+    "scenario_id",
+    "seed",
+    "started_at",
+    "ended_at",
+    "boot",
+    "counters",
+    "runtime"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Must equal the driver's TELEMETRY_SCHEMA_VERSION (1.0)."
+    },
+    "scenario_id": {
+      "type": "string",
+      "description": "Level/density scenario id; must equal the requested level id."
+    },
+    "seed": {
+      "type": "integer",
+      "description": "Explicit seed used for the in-game RNG. Must equal the requested seed."
+    },
+    "started_at": {
+      "type": "string",
+      "description": "ISO-8601 UTC start timestamp."
+    },
+    "ended_at": {
+      "type": "string",
+      "description": "ISO-8601 UTC end timestamp."
+    },
+    "boot": {
+      "type": "object",
+      "required": ["ok"],
+      "properties": {
+        "ok": {
+          "type": "boolean",
+          "description": "True when the game window became visible and no fatal/ALERT occurred."
+        },
+        "fatal_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Count of captured fatal markers during the run."
+        },
+        "alert_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Count of captured ALERT dialogs/log markers during the run."
+        }
+      }
+    },
+    "counters": {
+      "type": "object",
+      "required": ["spawned", "alive", "killed", "duplicate_deaths"],
+      "properties": {
+        "spawned": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Mobs spawned by the level."
+        },
+        "alive": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Mobs still alive at run end."
+        },
+        "killed": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Mobs that reached their death settlement."
+        },
+        "duplicate_deaths": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Second+ death settlement attempts on the same mob."
+        },
+        "damage_events": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Direct damage events observed (mob health loss events)."
+        },
+        "melee_hits": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Melee hits observed."
+        },
+        "crits": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Crit hits observed."
+        },
+        "projectiles": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Projectiles spawned during the run."
+        },
+        "triggers": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "TCE/chain/pierce trigger dispatches observed."
+        },
+        "player_moves": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Player movement input samples applied."
+        },
+        "dashes": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Dash activations observed."
+        }
+      }
+    },
+    "perf": {
+      "type": "object",
+      "required": ["frames", "fps_avg"],
+      "properties": {
+        "frames": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fps_avg": {
+          "type": "number",
+          "minimum": 0
+        },
+        "fps_min": {
+          "type": "number",
+          "minimum": 0
+        },
+        "fps_max": {
+          "type": "number",
+          "minimum": 0
+        },
+        "frame_pacing_p95_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "frame_pacing_p99_ms": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Benchmark envelope: p99 frame pacing in ms (in-game percentile over raw frame-time samples)."
+        },
+        "frame_pacing_max_ms": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Benchmark envelope: worst single-frame pacing in ms."
+        },
+        "fps_p1": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Benchmark envelope: 1st-percentile fps (long-tail floor)."
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "required": ["duration_seconds", "frames"],
+      "properties": {
+        "duration_seconds": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Measured in-game run duration in seconds (ended_at - started_at)."
+        },
+        "frames": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Frames produced during the measured window."
+        },
+        "frame_time": {
+          "type": "object",
+          "required": ["avg_ms", "p95_ms", "p99_ms", "max_ms"],
+          "properties": {
+            "avg_ms": {"type": "number", "minimum": 0},
+            "p95_ms": {"type": "number", "minimum": 0},
+            "p99_ms": {"type": "number", "minimum": 0},
+            "max_ms": {"type": "number", "minimum": 0}
+          },
+          "description": "Exact in-game frame-time distribution (avg/p95/p99/max in ms), computed in-game from raw frame samples."
+        },
+        "fps": {
+          "type": "object",
+          "required": ["avg", "min", "p1"],
+          "properties": {
+            "avg": {"type": "number", "minimum": 0},
+            "min": {"type": "number", "minimum": 0},
+            "p1": {"type": "number", "minimum": 0}
+          },
+          "description": "Exact in-game fps distribution."
+        },
+        "event_rate": {
+          "type": "object",
+          "required": ["events_total", "events_per_second"],
+          "properties": {
+            "events_total": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Spine events observed during the run (combat event spine seq harvested, ring buffer capped at 64 per frame)."
+            },
+            "events_per_second": {
+              "type": "number",
+              "minimum": 0,
+              "description": "events_total / duration_seconds, recomputed host-side from the raw totals."
+            }
+          },
+          "description": "Event rate via the B2-X1 combat event spine (single bus; no new bus)."
+        },
+        "voice_budget": {
+          "type": "object",
+          "required": ["max_concurrent", "over_budget_count"],
+          "properties": {
+            "max_concurrent": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Max concurrent voices observed in the run (k4 single funnel, 16 concurrent voice budget)."
+            },
+            "over_budget_count": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Frames/samples where concurrent voices exceeded 16 (must stay 0 while the k4 funnel holds)."
+            }
+          },
+          "description": "Voice budget gauge against the k4 single-funnel 16-voice cap (B1 k4-audio-foundation)."
+        },
+        "camera_budget": {
+          "type": "object",
+          "required": [
+            "impulses_total",
+            "max_amplitude",
+            "max_offset",
+            "capped_amplitude_count",
+            "capped_offset_count"
+          ],
+          "properties": {
+            "impulses_total": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Impulse events consumed by the camera aggregator."
+            },
+            "max_amplitude": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Max aggregated impulse amplitude observed (X5 IMPULSE_BUDGET_MAX = 4.0)."
+            },
+            "max_offset": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Max |camera2d.offset| applied (X5 IMPULSE_MAX_OFFSET = 3.5)."
+            },
+            "capped_amplitude_count": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Times amplitude was clamped to the budget (X5 capped_amplitude telemetry)."
+            },
+            "capped_offset_count": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Times offset was clamped to the safety cap (X5 capped_offset telemetry)."
+            }
+          },
+          "description": "Camera impulse budget gauge against the B2-X5 Camera Impulse aggregator (get_camera_impulse_telemetry)."
+        }
+      },
+      "description": "Benchmark measurement envelope. Produced by a benchmark-capable candidate through the existing spine/telemetry path; absent in legacy combat telemetry (driver then derives metrics and flags them derived)."
+    },
+    "audio": {
+      "type": "object",
+      "properties": {
+        "layers_fired": {
+          "type": "object",
+          "description": "Per-layer play counters for the B2-X6 combat audio layers (light/heavy/kill) when a candidate carries the audio layer mod."
+        }
+      },
+      "description": "Optional combat-audio layer observation; informational only in the density benchmark."
+    },
+    "capture": {
+      "type": "object",
+      "required": ["screenshots"],
+      "properties": {
+        "screenshots": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "video": {
+          "type": "string"
+        }
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "required": ["exit_code"],
+      "properties": {
+        "exit_code": {
+          "type": "integer",
+          "description": "In-game process exit code."
+        },
+        "in_game_result": {
+          "type": "string",
+          "enum": ["PASS", "FAIL", "NOT_PROVEN"],
+          "description": "In-game self classification; the host driver re-evaluates asserts independently and its verdict is authoritative."
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "proves": {
+      "type": "string",
+      "description": "Free-form: what the in-game run claims to prove."
+    },
+    "not_proven": {
+      "type": "string",
+      "description": "Free-form: what the in-game run does not claim to prove."
+    }
+  }
+}
