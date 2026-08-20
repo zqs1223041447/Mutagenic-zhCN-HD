@@ -1,0 +1,92 @@
+﻿{
+    "task_id":  "B3-P3-X0",
+    "title":  "Promotion Candidate Build——promotion-aggregate 链 11 mods/49 patches canonical pipeline 构建（主控接管执行）",
+    "branch":  "agent/b3-p3-x0",
+    "base_sha":  "8e28662ea7b6d1b69294ac9204aafef6f15bbbdd",
+    "audit_date":  "2026-08-20",
+    "build":  {
+                  "candidate_exe_path":  "G:\\Mutageni-Kinetic-agent\\Mutagenic-zhCN-HD.worktrees\\B3\\P3-X0\\10_logs\\b3-p3-x0-promotion-20260820\\candidate\\Mutagenic.exe",
+                  "candidate_exe_sha256":  "3127D3948BCEEC66057F6D2359EB2E47C0FA77938F1153F41AA2C348E2FF7314",
+                  "candidate_exe_bytes":  103336292,
+                  "build_id":  "20260820-X0-3127D394",
+                  "root_mod":  "mods/b3-p2-x1-promotion-aggregate/mod.json",
+                  "mods":  11,
+                  "patch_count":  49
+              },
+    "chain":  [
+                  {
+                      "step":  "resolve_mod_chain",
+                      "verdict":  "PASS",
+                      "patch_count":  49,
+                      "mods":  11,
+                      "root":  "mods/b3-p2-x1-promotion-aggregate/mod.json"
+                  },
+                  {
+                      "step":  "apply_mod",
+                      "verdict":  "PASS",
+                      "file_count":  5058,
+                      "changed":  49
+                  },
+                  {
+                      "step":  "compile_declared_scripts",
+                      "verdict":  "PASS",
+                      "unique_gd":  10,
+                      "gdre_invocations":  8
+                  },
+                  {
+                      "step":  "build_declared_pack",
+                      "verdict":  "PASS",
+                      "count":  3744
+                  },
+                  {
+                      "step":  "GDRE pck-create + normalize_pck_md5",
+                      "verdict":  "PASS",
+                      "entries":  3744,
+                      "already_valid":  3743,
+                      "patched":  1
+                  },
+                  {
+                      "step":  "embed_pck fresh from 00_original/Mutagenic.exe",
+                      "verdict":  "PASS"
+                  },
+                  {
+                      "step":  "verify_exe_structure --pck-start 40545280",
+                      "verdict":  "PASS",
+                      "valid_entries":  3744
+                  }
+              ],
+    "zero_trace":  {
+                       "forbidden_tokens":  [
+                                                "ENABLE_TEST_ZONE = true",
+                                                "ENABLE_TEST_ZONE=true",
+                                                "user://s2_markers",
+                                                "_s2marker",
+                                                "KEY_END",
+                                                "_run_combat_harness",
+                                                "user://combat_harness"
+                                            ],
+                       "hits":  {
+
+                                },
+                       "testlevel_in_promotion_patches":  false,
+                       "constants_enable_test_zone":  "const ENABLE_TEST_ZONE = false",
+                       "verdict":  "PASS",
+                       "proves":  "promotion candidate 无 k5 harness driver / no marker writer / no KEY_END route / no request-driven harness / ENABLE_TEST_ZONE=false"
+                   },
+    "removed_diagnostics":  [
+                                {
+                                    "path":  "Scenes/Levels/TestLevel/TestLevel.gd",
+                                    "unit_id":  "combat_harness_integration",
+                                    "declaring_mod":  "k5-combat-harness",
+                                    "reason":  "k5 harness driver: request-driven scenario harness (user://combat_harness/request.json)——validation 链有、promotion 链无（parity validation_minus_promotion 实证）"
+                                },
+                                {
+                                    "path":  "Globals/Constants.gd",
+                                    "unit_id":  "enable_test_zone",
+                                    "declaring_mod":  "b2-x0-combat-harness-bridge",
+                                    "reason":  "harness bridge: Constants.ENABLE_TEST_ZONE = true (goto_test_level debug key)——validation 链有、promotion 链无（parity 实证，promotion 保持 false）"
+                                }
+                            ],
+    "proves":  "promotion candidate 从 00_original 新鲜嵌入，结构 3744/3744 有效，官方 gameplay 链完整（11 mods/49 patches），零诊断痕迹",
+    "not_proven":  "runtime/S1 boot/S0 语义/S3 persistence/S4 contracts（B3-P3-X1 门禁覆盖）；HUMAN S5 验收"
+}
