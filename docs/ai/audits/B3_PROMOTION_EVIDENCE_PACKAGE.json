@@ -16,17 +16,20 @@
   ],
   "sections": {
     "promotion_candidate": {
-      "status": "PENDING_X0",
-      "expected_evidence_path": "docs/ai/audits/B3-P3-X0_PROMOTION_BUILD.json",
+      "status": "READY",
+      "evidence_path": "docs/ai/audits/B3-P3-X0_PROMOTION_BUILD.json",
       "root_mod": "mods/b3-p2-x1-promotion-aggregate/mod.json",
       "root_mod_version": "0.1.0",
-      "candidate_exe_path": "待填 (PENDING_X0：<repo_root>/10_logs/ 下 X0 产出的 promotion candidate，大证据不入库，bundle 只引用路径/hash)",
-      "candidate_exe_sha256": "待填 (PENDING_X0)",
-      "candidate_exe_bytes": "待填 (PENDING_X0)",
-      "build_id": "待填 (PENDING_X0)",
-      "removed_diagnostic_list": "待填 (PENDING_X0；预期=对照 parity 报告 validation_minus_promotion 两 patch：k5-combat-harness 的 TestLevel.gd combat_harness_integration + b2-x0-combat-harness-bridge 的 Constants.gd enable_test_zone)",
-      "structure_verification": "待填 (PENDING_X0；预期=verify_exe_structure / normalize_pck_md5 / roundtrip 复用既有工具)",
-      "note": "X0（并行 worker）产出后须回填本节的 hash/bytes/build_id 并核验与 B3-P3-X0_PROMOTION_BUILD.json 一致"
+      "candidate_exe_path": "G:\\Mutageni-Kinetic-agent\\Mutagenic-zhCN-HD.worktrees\\B3\\P3-X0\\10_logs\\b3-p3-x0-promotion-20260820\\candidate\\Mutagenic.exe (10_logs 不入库，bundle 只引用路径/hash)",
+      "candidate_exe_sha256": "3127D3948BCEEC66057F6D2359EB2E47C0FA77938F1153F41AA2C348E2FF7314",
+      "candidate_exe_bytes": 103336292,
+      "build_id": "20260820-X0-3127D394",
+      "removed_diagnostic_list": [
+        "Scenes/Levels/TestLevel/TestLevel.gd::combat_harness_integration（k5-combat-harness：request-driven scenario harness）",
+        "Globals/Constants.gd::enable_test_zone（b2-x0-combat-harness-bridge：ENABLE_TEST_ZONE=true goto_test_level debug key）"
+      ],
+      "structure_verification": "verify_exe_structure --pck-start 40545280 PASS：entry_count=3744 valid_entries=3744 bad_entries=[]；normalize_pck_md5 3743 already_valid + 1 已知零字节 MD5 修复（与 b2-i1 一致）；embed fresh from 00_original/Mutagenic.exe",
+      "note": "X0 构建链 7 步全 PASS（resolve 11 mods/49 patches → apply 49/5058 → compile 10 unique gd → build_declared_pack 3744 → pck-create v1 + normalize → fresh embed → verify_exe_structure）；零痕迹断言：forbidden tokens 0 命中、TestLevel 不在 promotion patches、Constants.ENABLE_TEST_ZONE=false"
     },
     "mod_chain": {
       "status": "READY",
@@ -86,8 +89,8 @@
       "enable_test_zone_impact": "pristine Constants.gd=false 保持 false（promotion 未改）；HideoutLevel.gd goto_test_level 守卫 gate 保持 inactive（来源 parity 报告 enable_test_zone_impact 字段）"
     },
     "gates_s0_s4": {
-      "status": "PENDING_X1",
-      "expected_evidence_path": "docs/ai/audits/B3-P3-X1_PROMOTION_GATES.json",
+      "status": "READY",
+      "evidence_path": "docs/ai/audits/B3-P3-X1_PROMOTION_GATES.json",
       "plan": "docs/ai/batches/B3_PLAN.md B3-P3-X1 任务合同",
       "gate_definition": {
         "S0_structure": "roundtrip/PCK checksum/delta 精确（复用 verify_exe_structure / roundtrip 既有工具）",
@@ -96,7 +99,13 @@
         "S3_persistence": "scripts/validate/s3_persistence_gate.py 在 Promotion Candidate 上重跑（B3-P2-S3_PERSISTENCE_GATE.md §5.4；B3-P2-S3_EVIDENCE.json not_proven 第 5 条要求）",
         "S4_semantic": "既有 semantic contracts 在 Promotion 链根上通过（check_all 组件内或等价）"
       },
-      "per_gate_result": "待填 (PENDING_X1：S0–S4 各自 PASS/BLOCKED + proves/not_proven，X1 产出后回填)"
+      "per_gate_result": [
+        {"gate": "S0_structure", "verdict": "PASS", "proves": "verify_exe_structure 3744/3744 valid entries, pck_start=40545280, bad_entries=0（X0 构建链 step7 实测）"},
+        {"gate": "S1_boot", "verdict": "PASS", "proves": "probe_boot.py 20s 实测：窗口 Mutagenic、无 modal dialog、boot markers 3 条、fatal markers none、game_window=True、alert_window=False"},
+        {"gate": "S2_core_smoke", "verdict": "BLOCKED", "proves": "promotion 无 request-driven harness 无 TestLevel 自动化入口（parity 实证）；正式路径 S2 自动化不可用，如实 BLOCKED+原因；启动/存档面已由 S1/S3 覆盖，基础战斗路径待 HUMAN S5 实机"},
+        {"gate": "S3_persistence", "verdict": "PASS", "proves": "s3_persistence_gate.py 在 Promotion Candidate 重跑 exit=0：run1 载入 seed→重写磁盘→退出→run2 同 APPDATA 重载（LOADED AND MERGED）→重写，post-exit 语义状态 run1==run2（semantic_sha256 a7ca81b8… 双轮一致，diffs=0）；planted marker 存活；volatile 仅 timestamp/checksum/stamp"},
+        {"gate": "S4_semantic", "verdict": "PASS", "proves": "semantic_validation_promotion_parity.py 32/32：49 共享 patch 逐字节一致、差集恰为 harness 驱动+ENABLE_TEST_ZONE bridge+diagnostics、forbidden tokens 0 命中、ENABLE_TEST_ZONE=false"}
+      ]
     },
     "ci_runs": {
       "status": "READY",
@@ -165,20 +174,20 @@
       {
         "id": "promotion_candidate_gates_not_run",
         "item": "Promotion Candidate 的 S0–S5 门禁尚未执行",
-        "detail": "依赖 X0 构建产出候选与 X1 执行门禁；本 bundle 引用 X0/X1 证据文件（PENDING_X0/PENDING_X1）",
-        "source": "docs/ai/batches/B3_PLAN.md B3-P3 任务合同 + 本 bundle PENDING 标注"
+        "detail": "已由 B3-P3-X1 执行：S0 结构 PASS / S1 boot PASS / S3 persistence PASS / S4 parity PASS；S2 core smoke BLOCKED（正式路径无 harness，如实记录）；S5 待 HUMAN",
+        "source": "docs/ai/audits/B3-P3-X1_PROMOTION_GATES.json（已回填，不再 PENDING）"
       },
       {
         "id": "s3_gate_promotion_rerun",
         "item": "S3 persistence 门禁须对 Promotion Candidate 重跑",
-        "detail": "B3-P2-X2 的 PASS 是针对 b2-i1 aggregate 候选（sha 4ad1de38）；promotion 候选必须重跑门禁并归档新证据",
-        "source": "docs/ai/audits/B3-P2-S3_EVIDENCE.json not_proven 第 5 条"
+        "detail": "已重跑并 PASS：s3_persistence_gate.py 在 Promotion Candidate（sha 3127D394…）上 exit=0，语义指纹 a7ca81b8… 双轮一致、diffs=0、planted marker 存活",
+        "source": "10_logs/b3-p3-x1-promotion-gates-20260820/s3/s3_gate_report.json/s3_persistence_evidence.json（已回填，不再 PENDING）"
       },
       {
         "id": "s2_promotion_smoke_no_harness",
         "item": "S2 Promotion 版核心冒烟不依赖 TestLevel debug harness",
-        "detail": "正式路径无 harness 可用时须如实记录 BLOCKED+原因，不伪造（B3-P3-X1 合同）",
-        "source": "docs/ai/batches/B3_PLAN.md B3-P3-X1 任务合同"
+        "detail": "如实 BLOCKED：promotion 无 request-driven harness 无 TestLevel 自动化入口（parity 契约实证）；启动/存档面已由 S1/S3 覆盖，基础战斗路径待 HUMAN S5 实机",
+        "source": "docs/ai/audits/B3-P3-X1_PROMOTION_GATES.json per_gate[2]（已回填，不再 PENDING）"
       },
       {
         "id": "boss_no_s5_scene_binding",
@@ -189,7 +198,7 @@
     ],
     "human_s5_checklist": {
       "status": "WAITING",
-      "bound_to": "Promotion Candidate SHA（PENDING_X0：docs/ai/audits/B3-P3-X0_PROMOTION_BUILD.json candidate_exe_sha256；X0 产出后回填绑定）",
+      "bound_to": "Promotion Candidate SHA 3127D3948BCEEC66057F6D2359EB2E47C0FA77938F1153F41AA2C348E2FF7314（docs/ai/audits/B3-P3-X0_PROMOTION_BUILD.json candidate_exe_sha256 已回填）",
       "bound_to_note": "HUMAN S5 绑定最终 Promotion Candidate SHA；若人工验收 Validation Candidate 也可沿用，前提是 parity contract 证明唯一差异为 TestLevel/harness 调试入口（B3_PLAN.md Promotion 条件）",
       "gate_semantics": "唯一 HUMAN_ACCEPTED 录入路径 = scripts/validate/s5_evidence.py（machine 只产出 EVIDENCE_PREPARED/verdict=null；selfcheck 内建 human_gate_never_auto_accepted 断言）",
       "intake_map_ref": "docs/ai/batches/B3_S5_INTAKE_MAP.md §1 总表",
@@ -212,6 +221,6 @@
       ]
     }
   },
-  "proves": "Promotion Evidence Package 组装完成：MOD chain（promotion-aggregate 11 mods/49 patches）与 parity（32/32）引用 B3-P2-X1_PARITY_REPORT.json 真实值；CI 汇总引用真实 run id（32355579771 等，全 success）；未验证项逐条带来源；HUMAN S5 checklist 绑定 Promotion Candidate SHA（PENDING_X0 待回填）状态 WAITING",
-  "not_proven": "Promotion Candidate SHA/bytes、X0 构建证据、X1 S0–S4 门禁结果——均依赖并行 worker X0/X1 产出（本 bundle 已标注 PENDING_X0/PENDING_X1 与预期路径，不编造）；HUMAN S5 八项均未获完整人工验收"
+  "proves": "Promotion Evidence Package 组装完成：Promotion Candidate（sha 3127D394…/103336292B/Build 20260820-X0-3127D394）来自 X0 构建证据；MOD chain（11 mods/49 patches）与 parity（32/32）引用 B3-P2-X1_PARITY_REPORT.json 真实值；S0–S4 门禁结果引用 B3-P3-X1_PROMOTION_GATES.json（S0/S1/S3/S4 PASS、S2 如实 BLOCKED）；S3 persistence 已在 Promotion Candidate 重跑 PASS（语义指纹 a7ca81b8…双轮一致）；CI 汇总引用真实 run id（32355579771 等，全 success）；未验证项逐条带来源；HUMAN S5 checklist 绑定 Promotion Candidate SHA（3127D394…）状态 WAITING",
+  "not_proven": "S2 基础战斗路径正式冒烟（BLOCKED 待 HUMAN S5 实机）；Steam 云存档分支；HUMAN S5 八项未获完整人工验收（2–8 DEFERRED_BY_USER，1 PENDING_FULL_TEST）；最终 baseline promotion 未批准"
 }
