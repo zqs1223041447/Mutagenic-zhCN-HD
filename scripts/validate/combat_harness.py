@@ -450,6 +450,26 @@ def run_command(root: Path, args: argparse.Namespace) -> int:
     for directory in (request_dir, telemetry_dir, report_dir):
         directory.mkdir(parents=True, exist_ok=True)
     expected_telemetry = (args.telemetry or telemetry_dir / f"{scenario['id']}_{seed}.json").resolve()
+    game_plan: list[dict[str, Any]] = []
+    for spawn in plan.get("spawns", []):
+        if spawn.get("resource") is None:
+            raise SystemExit(
+                f"ERROR: plan spawn {spawn.get('order')} has no resource; "
+                f"mob {spawn.get('mob')!r} is missing from catalog mob_resources"
+            )
+        game_plan.append({
+            "res": spawn["resource"],
+            "x": float(spawn["position"][0]),
+            "y": float(spawn["position"][1]),
+            "count": 1,
+        })
+    game_request = {
+        "schema_version": TELEMETRY_SCHEMA_VERSION,
+        "scenario_id": scenario["id"],
+        "seed": seed,
+        "duration": float(scenario.get("duration_seconds", 30.0)),
+        "plan": game_plan,
+    }
     request = {
         "schema_version": TELEMETRY_SCHEMA_VERSION,
         "scenario": scenario,
@@ -457,8 +477,10 @@ def run_command(root: Path, args: argparse.Namespace) -> int:
         "plan": plan,
         "mob_resources": catalog.get("mob_resources", {}),
         "expected_telemetry_path": str(expected_telemetry),
-        "contract": "ScenarioDirector.gd reads this request, seeds Godot RNG with 'seed', spawns per 'plan', "
-                    "then writes telemetry JSON conforming to combat_telemetry_schema.json to 'expected_telemetry_path'.",
+        "contract": "ScenarioDirector.gd reads 'game_request' (scenario_id/seed/duration/plan with "
+                    "res+x+y+count), seeds Godot RNG with 'seed', spawns per the plan, then writes "
+                    "telemetry JSON conforming to combat_telemetry_schema.json to 'expected_telemetry_path'.",
+        "game_request": game_request,
     }
     request_path = request_dir / f"{scenario['id']}_{seed}.json"
     request_path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

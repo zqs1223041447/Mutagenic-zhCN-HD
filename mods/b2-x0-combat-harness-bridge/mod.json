@@ -1,0 +1,41 @@
+{
+  "id": "b2-x0-combat-harness-bridge",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "B2-X0 harness bridge: enables Constants.ENABLE_TEST_ZONE so the game's built-in debug keybinding goto_test_level (End key, project.godot) can switch from Hideout to TestLevel during automated S2 combat-harness runs. Debug-only surface: no gameplay code path changes. Without this the recovered player can never reach TestLevel and the k5 request-driven harness cannot run; the flag gates a single keybind check inside HideoutLevel.gd _input().",
+  "entities": [
+    {
+      "kind": "harness_bridge",
+      "id": "Globals/Constants.gd::ENABLE_TEST_ZONE",
+      "confidence": "FACT",
+      "expected_runtime_effect": "HideoutLevel.gd treats the goto_test_level key as active and switch_levels('test_level', true, 1) loads TestLevel.tscn"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/Constants.gd",
+      "unit_id": "Globals/Constants.gd::enable_test_zone",
+      "classification": "CODE_PATCH",
+      "old_text": "const ENABLE_TEST_ZONE = false",
+      "new_text": "const ENABLE_TEST_ZONE = true",
+      "preimage_sha256": "06c720820cefed096921535d7394cd37018da59d900d99927d95a6784ccdcf44",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "compiled_script_load",
+    "declared_delta",
+    "pck_checksum",
+    "exe_structure",
+    "pck_roundtrip",
+    "boot"
+  ],
+  "not_proven": "S2 in-game run evidence (produced by B2-X0 harness run); the flag itself does not teleport the player"
+}
