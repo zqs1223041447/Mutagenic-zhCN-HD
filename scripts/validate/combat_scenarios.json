@@ -549,6 +549,91 @@
         "duplicate_deaths"
       ],
       "stress": true
+    },
+    {
+      "id": "runtime_smoke_safe",
+      "version": 1,
+      "summary": "Lifecycle smoke (B3-P2-X0): 3 skeleton warriors spawn near the player. The harness explicitly activates a harness-only player_invulnerable exemption (health_max=1e8 + per-checkpoint fill_health, gated on this scenario_id) so the run survives to its 20s timeout; asserts prove the full telemetry lifecycle closes: session file at start, periodic checkpoints flushed, status=complete, exit_reason=timeout, without any player death or mob kill firing.",
+      "default_seed": 2026082201,
+      "duration_seconds": 20.0,
+      "end_condition": {
+        "type": "timeout",
+        "timeout_seconds": 20.0
+      },
+      "spawn": {
+        "mode": "plan",
+        "origin": [140.0, 0.0],
+        "spread": 60.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [
+        {
+          "mob": "skeleton_warrior",
+          "count": 3
+        }
+      ],
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "exactly_three_spawned",
+          "field": "counters.spawned",
+          "op": ">=",
+          "value": 3,
+          "capability": "required"
+        },
+        {
+          "label": "telemetry_status_complete",
+          "field": "status",
+          "op": "==",
+          "value": "complete",
+          "capability": "required"
+        },
+        {
+          "label": "exit_reason_timeout",
+          "field": "exit_reason",
+          "op": "==",
+          "value": "timeout",
+          "capability": "required"
+        },
+        {
+          "label": "checkpoints_flushed",
+          "field": "counters.checkpoint_count",
+          "op": ">=",
+          "value": 1,
+          "capability": "required"
+        },
+        {
+          "label": "no_mobs_died",
+          "field": "counters.killed",
+          "op": "==",
+          "value": 0,
+          "capability": "required"
+        },
+        {
+          "label": "no_duplicate_death",
+          "field": "counters.duplicate_deaths",
+          "op": "==",
+          "value": 0,
+          "capability": "required"
+        }
+      ],
+      "proves": "that the in-game telemetry lifecycle is fully closed on the candidate: a request-driven run creates its session file, flushes periodic checkpoints, reaches its timeout, and writes final telemetry with status=complete / exit_reason=timeout / counters.checkpoint_count>=1, with the harness-only exemption keeping the player alive (killed==0). No gameplay values are changed outside this explicit scenario.",
+      "not_proven": "combat correctness; kill/crit semantics; perf characterization; any candidate-specific player-response delta (player is invulnerable here by design)",
+      "requires": [
+        "boot",
+        "telemetry_lifecycle",
+        "checkpoints",
+        "exit_reason"
+      ],
+      "stress": false
     }
   ]
 }

@@ -24,6 +24,7 @@ EXPECTED_SCENARIO_IDS = [
     "projectile_density",
     "chain_pierce_trigger",
     "stress_random_300",
+    "runtime_smoke_safe",
 ]
 X5_FILES = [
     "scripts/validate/combat_harness.py",
@@ -100,7 +101,7 @@ def tc_expected_ids_present(root: Path, driver: Any, out_dir: Path) -> tuple[boo
     missing = [expected for expected in EXPECTED_SCENARIO_IDS if expected not in ids]
     if missing:
         return False, f"missing scenario ids: {missing}"
-    return True, "all eight expected scenario ids present"
+    return True, "all nine expected scenario ids present"
 
 
 def tc_plan_determinism_same_seed(root: Path, driver: Any, out_dir: Path) -> tuple[bool, str]:

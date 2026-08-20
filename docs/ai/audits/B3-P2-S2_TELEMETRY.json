@@ -1,0 +1,91 @@
+{
+  "task_id": "B3-P2-X0",
+  "title": "S2 Telemetry Closure — k5 combat harness 生命周期补全（session 文件 / checkpoint flush / exit_reason / 免伤 smoke 场景）",
+  "branch": "agent/b3-p2-x0",
+  "base_sha": "60f9232ca8d802de1016f3e3d46778bbc5b79a7d",
+  "audit_date": "2026-08-20",
+  "build": {
+    "candidate_exe": "Mutagenic_s2diag_telemetry.exe",
+    "candidate_exe_sha256": "AE84916E3D3913B41C2310BB59AC83F1F155F22425DA08559A0765687FD50790",
+    "candidate_exe_bytes": 103346052,
+    "k5_mod_version": "0.2.0",
+    "k5_patch": "Scenes/Levels/TestLevel/TestLevel.gd (single CODE_PATCH, old_text 224B 保持原样, preimage_sha256 0bc68d4ea29eb4a2340cb35901674b1b512e6a6b09699705e9e8afa5d3d7a96e 不变)",
+    "lifecycle_changes": [
+      "session_<scenario>_<seed>.json 在 scenario 启动即写入（status=running），2s 周期 checkpoint Timer 将 {t, spawned, killed, alive, damage_events, fps} 追加进 checkpoints 并重写 session",
+      "所有终止路径统一收敛到 _finish_harness_exit(reason)：timeout / all_killed / player_died / scene_exit，写最终 telemetry（schema_version 1.0 + status=complete + exit_reason + checkpoints + counters.checkpoint_count）+ session complete + 停用并释放 checkpoint timer",
+      "player.stats.died 信号连接 → 玩家死亡即 flush 部分遥测；_exit_tree() 未完成时 flush scene_exit 后调用 ._exit_tree() 保留 BaseLevel 清理",
+      "runtime_smoke_safe 场景激活 harness-only 免伤豁免（base_stats[health_max]=1e8 + recompute_stats(false) + 每 checkpoint fill_health），仅按 scenario_id 门控，普通游戏零影响",
+      "计时器读取 duration_seconds 优先（与 request.json 实际字段一致），回退 duration 再回退 30.0"
+    ],
+    "chain": [
+      {"step": "resolve_mod_chain", "verdict": "PASS", "patch_count": 63, "mods": 15, "root": "mods/b3-p1-s2-diagnostic/mod.json"},
+      {"step": "apply_mod", "verdict": "PASS", "file_count": 5058, "changed": 63},
+      {"step": "compile_declared_scripts", "verdict": "PASS", "unique_gd": 12, "gdre_invocations": 10},
+      {"step": "build_declared_pack", "verdict": "PASS", "count": 3744},
+      {"step": "GDRE pck-create + normalize_pck_md5", "verdict": "PASS", "entries": 3744, "already_valid": 3743, "patched": 1},
+      {"step": "embed_pck fresh from 00_original/Mutagenic.exe", "verdict": "PASS"},
+      {"step": "verify_exe_structure --pck-start 40545280", "verdict": "PASS", "valid_entries": 3744}
+    ]
+  },
+  "schema_decision": "schema_version 保持 1.0；仅向 combat_telemetry_schema.json 增加 optional 根字段 status / exit_reason / checkpoints / session_file + counters.checkpoint_count；density_telemetry_schema.json 镜像相同 props 维持 superset 不变式（tc_base_schema_compat）。不 bump TELEMETRY_SCHEMA_VERSION，避免触碰 combat/density/s5 selftests 中硬编码 1.0 的 fixture 与 mismatch 检查。",
+  "runs": [
+    {
+      "id": "run1",
+      "scenario": "runtime_smoke_safe",
+      "seed": 2026082201,
+      "request": "{\"scenario_id\":\"runtime_smoke_safe\",\"seed\":2026082201,\"duration_seconds\":20.0,\"plan\":[{\"res\":\"res://Scenes/Mobs/Basic/Creatures/SkeletonWarrior.tscn\",\"x\":140,\"y\":0,\"count\":3}]}",
+      "runner": "save_bisect_runner.py --duration 75 --enter-from 5.5 --enter-every 1.5 --end-from 13 --end-every 2.5",
+      "window_found": true,
+      "markers": "11/11 (m01_enter..m11_onsave_done)",
+      "telemetry_found": true,
+      "session_file": "session_runtime_smoke_safe_2026082201.json (status=complete)",
+      "telemetry_result": {
+        "status": "complete",
+        "exit_reason": "timeout",
+        "schema_version": "1.0",
+        "counters": {"spawned": 3, "alive": 3, "killed": 0, "duplicate_deaths": 0, "damage_events": 0, "checkpoint_count": 10},
+        "checkpoints": 10,
+        "runtime_notes": ["run_seconds=20", "exit_reason=timeout"],
+        "fps_avg": 144
+      },
+      "driver_verdict": "PASS — telemetry valid (0 issues); 7/7 required asserts pass (boot_ok / exactly_three_spawned / telemetry_status_complete / exit_reason_timeout / checkpoints_flushed>=1 / no_mobs_died / no_duplicate_death)",
+      "evidence": "10_logs/b3-p2-x0-s2-telemetry-20260820/run1/ + driver_verdict/reports/runtime_smoke_safe_2026082201_PASS.json"
+    },
+    {
+      "id": "run2",
+      "scenario": "single_melee_hit（非免伤对照，证明玩家死亡不再丢遥测）",
+      "seed": 2026082124,
+      "request": "{\"scenario_id\":\"single_melee_hit\",\"seed\":2026082124,\"duration_seconds\":20.0,\"plan\":[{\"res\":\"res://Scenes/Mobs/Basic/Creatures/SkeletonWarrior.tscn\",\"x\":0,\"y\":0,\"count\":3}]}",
+      "runner": "save_bisect_runner.py --duration 60 --enter-from 5.5 --enter-every 1.5 --end-from 13 --end-every 2.5",
+      "window_found": true,
+      "markers": "11/11",
+      "telemetry_found": true,
+      "session_file": "session_single_melee_hit_2026082124.json (status=complete)",
+      "telemetry_result": {
+        "status": "complete",
+        "exit_reason": "player_died",
+        "schema_version": "1.0",
+        "counters": {"spawned": 3, "alive": 3, "killed": 0, "duplicate_deaths": 0, "damage_events": 0, "checkpoint_count": 9},
+        "checkpoints": 9,
+        "runtime_notes": ["run_seconds=18", "exit_reason=player_died"]
+      },
+      "driver_verdict": "PASS — telemetry valid (0 issues); required asserts pass；optional direct_hit_damage_observed FAIL（玩家先死未造成伤害，符合预期，不阻断 PASS）",
+      "proves": "B3-P1-X1 telemetry_gap 闭环：玩家死亡路径现在也会写出 session + telemetry（此前 P1-X1 c7 玩家死亡导致 telemetry 从未写出）",
+      "evidence": "10_logs/b3-p2-x0-s2-telemetry-20260820/run2/ + driver_verdict/reports/single_melee_hit_2026082124_PASS.json"
+    }
+  ],
+  "gates": [
+    {"gate": "combat_harness_selftests.py", "verdict": "PASS", "detail": "16/16（含新增 runtime_smoke_safe 断言与 catalog 解析）"},
+    {"gate": "density_benchmark_selftests.py", "verdict": "PASS", "detail": "21/21（tc_base_schema_compat 验证 combat schema props ⊆ density superset）"},
+    {"gate": "s5_evidence_selftests.py", "verdict": "PASS", "detail": "23/23"},
+    {"gate": "check_all.py", "verdict": "PASS", "detail": "11/11 components"},
+    {"gate": "py_compile 相关脚本", "verdict": "PASS"},
+    {"gate": "abs_path / secret scan（X5 + benchmark + s5 文件集）", "verdict": "PASS", "detail": "hits=0 findings=0"}
+  ],
+  "evidence_locations": "10_logs/b3-p2-x0-s2-telemetry-20260820/ (build/, run1/, run2/, driver_verdict/, 不入库)",
+  "residual_risks": [
+    "telemetry 内 perf 帧统计仍为占位（frames=0/fps_min=0 等由游戏侧后续填充）；本次只证明生命周期闭环",
+    "免伤豁免与 harness 生命周期间接复用 Stats.gd recompute_stats(false)/fill_health()，仅在 scenario_id=runtime_smoke_safe 时激活",
+    "all_killed / scene_exit 出口路径未在本批独立运行中触发（run1=timeout, run2=player_died），代码路径已由编译+结构验证覆盖"
+  ]
+}

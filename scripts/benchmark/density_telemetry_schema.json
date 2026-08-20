@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "intent": "B3-X3 density benchmark telemetry envelope. Superset of scripts/validate/combat_telemetry_schema.json: every field required by the base combat contract stays required here, so any telemetry that validates against this schema also validates against the base combat schema (compat invariant enforced by density_benchmark_selftests.py tc_base_schema_compat). New optional blocks (metrics / audio / camera) are the benchmark measurement envelope: they must be produced in-game by reusing the existing single bus (combat event spine -> ScenarioDirector telemetry writer) when a benchmark-capable candidate runs on the VM; when they are absent (legacy combat telemetry), the host driver derives frame-time / fps / event-rate from perf+counters and marks them derived. The host driver is the contract keeper; this file and density_matrix.json are the only interface changes, no new in-game bus is introduced.",
+  "intent": "B3-X3 density benchmark telemetry envelope (mirrors the B3-P2-X0 lifecycle envelope: status / exit_reason / checkpoints / counters.checkpoint_count / session_file are optional and backward-compatible, schema_version stays 1.0). Superset of scripts/validate/combat_telemetry_schema.json: every field required by the base combat contract stays required here, so any telemetry that validates against this schema also validates against the base combat schema (compat invariant enforced by density_benchmark_selftests.py tc_base_schema_compat). New optional blocks (metrics / audio / camera) are the benchmark measurement envelope: they must be produced in-game by reusing the existing single bus (combat event spine -> ScenarioDirector telemetry writer) when a benchmark-capable candidate runs on the VM; when they are absent (legacy combat telemetry), the host driver derives frame-time / fps / event-rate from perf+counters and marks them derived. The host driver is the contract keeper; this file and density_matrix.json are the only interface changes, no new in-game bus is introduced.",
   "base_schema": "scripts/validate/combat_telemetry_schema.json",
   "root_required": [
     "schema_version",
@@ -111,8 +111,29 @@
           "type": "integer",
           "minimum": 0,
           "description": "Dash activations observed."
+        },
+        "checkpoint_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of lifecycle checkpoints flushed into session_<scenario>_<seed>.json during the run (B3-P2-X0)."
         }
       }
+    },
+    "status": {
+      "type": "string",
+      "description": "Run lifecycle state at write time: running (session file only) or complete (final telemetry). Optional; absent on pre-B3-P2-X0 telemetry."
+    },
+    "exit_reason": {
+      "type": "string",
+      "description": "Termination path of the in-game run: timeout, all_killed, player_died, scene_exit. Optional; absent on pre-B3-P2-X0 telemetry."
+    },
+    "checkpoints": {
+      "type": "array",
+      "description": "Periodic lifecycle snapshots (t, spawned, killed, alive, damage_events, fps) flushed during the run. Optional; absent on pre-B3-P2-X0 telemetry."
+    },
+    "session_file": {
+      "type": "string",
+      "description": "Relative/logical name of the companion session_<scenario>_<seed>.json file written at scenario start. Optional."
     },
     "perf": {
       "type": "object",
