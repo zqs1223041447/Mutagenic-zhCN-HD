@@ -1,0 +1,65 @@
+{
+  "experiment_id": "B2-I1-AGGREGATE-EVIDENCE",
+  "recorded_at": "2026-08-20",
+  "branch": "agent/kinetic-arcane-remaster-foundation",
+  "base_sha": "1fec08a578c34a87fa9afeba77bc8f98909f700a",
+  "aggregate_mod": "mods/b2-i1-aggregate/mod.json (RESOLVED_MOD_CHAIN v0.2.0)",
+  "resolution_order": [
+    "feat-tce", "feat-tce-context", "k1-player-response", "k2-hit-reaction",
+    "k4-audio-foundation", "k5-combat-harness", "p7-fix-persistence",
+    "b2-x0-combat-harness-bridge", "b2-x0-aggregate", "b2-x1-combat-event-spine",
+    "b2-x4-kill-feel", "b2-x5-camera-impulse", "b2-x6-combat-audio-layers",
+    "b2-i1-aggregate"
+  ],
+  "build": {
+    "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+    "evidence_dir": "<repo_root>/10_logs/b2-i1-aggregate-20260820/",
+    "apply_patches": 51,
+    "compile_bytecode": "3.5.3.stable",
+    "compile_unique_gd": 11,
+    "pack_entries": 3744,
+    "fresh_embed": "from 00_original Mutagenic.exe",
+    "candidate": "candidate/Mutagenic.exe (103,341,700 bytes)"
+  },
+  "S0_structure": "PASS",
+  "S0_detail": {
+    "roundtrip": "11/11 PASS (probe_pristine_roundtrip.py；全部唯一声明 .gd 的 03_raw→decompile→compile→encrypt 字节一致)",
+    "delta_report": "PASS (22 changed: 11 .gde + 11 .gd.remap；unexpected_changed_paths 空，declared_paths_without_delta 空)",
+    "normalize": "PASS (3744 entries；already_valid=3743，仅修正 1 处已知 GDRE zero-byte MD5 缺陷，rejected_mismatches 空)",
+    "verify_exe_structure": "PASS (entry_count=3744 valid_entries=3744 bad_entries 空，pck-start=40545280)"
+  },
+  "S1_boot": "PASS",
+  "S1_detail": "isolated APPDATA (apdata_s1)：probe_boot alive@12s=true, game_window=true, modal_dialog=none；新鲜 Godot log (godot2026-08-20T11.03.24.log 6 lines) fatal markers 空；引擎 3.5.3.stable.custom_build + OpenGL ES 3.0 (RTX 5070)",
+  "S2_core_smoke": "BLOCKED (harness telemetry 未取到)",
+  "S2_detail": {
+    "launcher_steps": "window_found=true, save_loaded=false, enter_menu_sent=true, enter_character_sent=true, f10_sent=true, foreground=['Mutagenic','Mutagenic']；telemetry_found=false",
+    "scenario": "single_melee_hit (default_seed) → NOT_PROVEN (launcher status=FAIL)",
+    "reason": "candidate 正常出窗并执行键盘序列（Enter/Enter/F10 goto_test_level），但 k5 harness 未产出 telemetry 文件；save_loaded=false 表明 save 加载链未就绪。与环境限制一致：无 VM、键盘路由后 harness telemetry 从未产出（B2-X0 S2 同结论）",
+    "recovery": "需 VM/人工介入核查 goto_test_level 路由、_0_6_0.dat seed save 与 harness request 消费；由后续批次在真实运行环境重试"
+  },
+  "S4_semantic": "PASS",
+  "S4_detail": {
+    "semantic_event_spine_contract": "44/44 checks PASS (exit 0)",
+    "semantic_kill_feel_contract": "80/80 checks PASS (exit 0)",
+    "semantic_camera_impulse_contract": "93/93 checks PASS (exit 0)",
+    "semantic_combat_audio_contract": "120/120 checks PASS (exit 0)",
+    "semantic_combat_pipeline_contract": "78/78 checks PASS (exit 0)",
+    "aggregate_claim": "X4/X5/X6 各契约在 aggregate 上下文（resolved 14-mod 链）中对 pristine 锚点复验全部通过：无跨 mod 锚点相交、无 damage-math/事件语义/第二 bus 变更、无宿主绝对路径"
+  },
+  "S5_machine": "EVIDENCE_PREPARED (candidate-side NOT_RUN skeleton，human gate 未接受)",
+  "S5_machine_detail": {
+    "s5_evidence_selftest": "selfcheck 23/23 PASS (exit 0)——含 human_gate_never_auto_accepted 断言",
+    "packages": {
+      "player_response": "b2x2-player_response-movement_dash_smoke-2026082001-candidate NOT_RUN (vm_not_launched, telemetry_missing)",
+      "enemy_hit_reaction": "b2x2-enemy_hit_reaction-single_melee_hit-2026082002-candidate NOT_RUN (vm_not_launched, telemetry_missing)",
+      "kill_feel": "b2x2-kill_feel-cluster_kill_20-2026082003-candidate NOT_RUN (vm_not_launched, telemetry_missing)",
+      "camera": "b2x2-camera-cluster_kill_20-2026082004-candidate NOT_RUN (vm_not_launched, telemetry_missing)",
+      "audio": "b2x2-audio-single_melee_hit-2026082005-candidate NOT_RUN (vm_not_launched, telemetry_missing)"
+    },
+    "human_gate": "machine_status=EVIDENCE_PREPARED, verdict=null；机器绝不写入 HUMAN_ACCEPTED",
+    "plan_sample": "camera/cluster_kill_20 seed 2026082005: spawn 20 (10 skeleton_warrior+5 skeleton_archer+5 zombie), camera_start [90,-240]"
+  },
+  "selfcheck": "s5_evidence selftest 23/23 PASS + 各契约内建 selftest 全过",
+  "proves": "B2 Wave A + Wave B 全链（14 mods, 51 patches）在单一 aggregate candidate 中 resolve/apply/compile(11 unique .gd)/pack(3744 entries)/normalize/embed 无冲突；S0 结构（roundtrip/delta/normalize/exe_structure）与 S1 boot PASS；S4 五契约在 aggregate 上下文全 PASS——X4/X5/X6 与 X0/X1 共存无锚点冲突、无行为越界；machine S5 evidence 包结构与 human gate 语义正确",
+  "not_proven": "S2 真实运行态 telemetry（场景内击杀/死亡/FPS/voice/camera 计数）；S5 视觉与手感验收（human gate 保持 EVIDENCE_PREPARED，需 VM + 人工 checklist）；真实运行环境下的 Compile/runtime 行为；S3 persistence"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "b2-i1-aggregate",
+  "version": "0.2.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "b2-x0-aggregate",
+    "b2-x1-combat-event-spine",
+    "b2-x4-kill-feel",
+    "b2-x5-camera-impulse",
+    "b2-x6-combat-audio-layers"
+  ],
+  "conflicts": [],
+  "scope": "B2-I1 aggregate candidate root: B2 Wave A (feat-tce, feat-tce-context, k1-player-response, k2-hit-reaction, k4-audio-foundation, k5-combat-harness, p7-fix-persistence, b2-x0-combat-harness-bridge, b2-x1-combat-event-spine, b2-x2-combat-timing) plus B2 Wave B (b2-x4-kill-feel, b2-x5-camera-impulse, b2-x6-combat-audio-layers) resolved through b2-x0-aggregate's dependency expansion. This is the final B2 combat-feel integration candidate for the Kinetic Arcane remaster. Localization chain and HD-UI remaster mods remain intentionally out of scope.",
+  "proves": "the full B2 dependency graph (Wave A + Wave B, 15 mods) resolves with a single consistent target_original_sha256 and no conflicts",
+  "not_proven": "patch application, compile, pack/embed, S0/S1/S2/S4/S5 runtime evidence"
+}

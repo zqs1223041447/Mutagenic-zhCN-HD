@@ -73,6 +73,7 @@ env/
 node_modules/
 .opencode/node_modules/
 .opencode/.cache/
+.opencode/loop-history/
 # ============================================================
 # Windows / editors
 # ============================================================

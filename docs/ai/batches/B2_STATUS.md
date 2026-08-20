@@ -1,7 +1,7 @@
 # B2 协调状态视图
 
 > **Batch**：`B2`
-> **状态**：`B2-I1_INTEGRATED`（Wave A + Wave B 全部集成，验证通过）
+> **状态**：`B2-I1_COMPLETE`（final aggregate Candidate 构建完成：S0/S1/S4 PASS，machine S5 evidence 已产出；S2 保持 BLOCKED 如实；HUMAN S5 gate 保持 HUMAN_REQUIRED）
 > **Integration line**：`agent/kinetic-arcane-remaster-foundation`
 > **B2 集成 HEAD**：`2917fff`（Wave A `ba4a0120` + X4/X5/X6 依序合并）
 > **Frozen base ref（Wave A）**：`batch/b2-anchor` = `2a40ec4d`
@@ -57,8 +57,11 @@ Wave A / Wave B 完成后中央集成：
 - ✅ base/final SHA 校验（全部 base=对应 anchor，final SHA 远端核验）
 - ✅ preimage drift / semantic conflict graph（merge-tree 预检全部 conflict_blocks=0；X4/X5/X6 相互与 X1 锚点零重叠）
 - ✅ 合并 X0–X6 → `2917fff`
-- ⏳ final aggregate Candidate + aggregate S0/S1/S2/S4（B2-I1 聚合构建阶段，依赖 GDRE 管线）
-- ⏳ machine S5 evidence（X2 工具已就绪，待 aggregate Candidate）
+- ✅ final aggregate Candidate（`mods/b2-i1-aggregate` 14-mod RESOLVED_MOD_CHAIN，resolve/apply 51 patches / compile 11 unique .gd / pack 3744 entries / normalize / fresh embed 全 PASS；candidate 103,341,700 bytes）
+- ✅ aggregate S0/S1（roundtrip 11/11、delta 精确、exe_structure 3744/3744、normalize rejected=0；probe_boot PASS）
+- ✅ aggregate S4（五个 semantic contract 全 PASS：event_spine 44/44、kill_feel 80/80、camera 93/93、combat_audio 120/120、pipeline 78/78）
+- ⏳ aggregate S2（BLOCKED 如实记录：launcher window_found=true、telemetry_found=false，无 VM 环境限制同 B2-X0；不阻断交付，待 VM/人工核查）
+- ✅ machine S5 evidence（s5_evidence selfcheck 23/23 PASS；5 aspect candidate-side package 已产出，NOT_RUN skeleton，machine_status=EVIDENCE_PREPARED，机器绝不写 HUMAN_ACCEPTED）
 - ⏳ HUMAN S5 gate（保持 HUMAN_REQUIRED，人工/VM 验收）
 - ⏳ 更新 PR（本文件提交后执行）
 - ⏳ B3 planning（含 Build Density 基线与更完整 Combat Polish）
