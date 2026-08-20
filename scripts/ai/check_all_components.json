@@ -100,6 +100,15 @@
       "timeout_s": 300,
       "required": true,
       "description": "B2-X2 combat S5 evidence 驱动自检 23/23（aspects/plan determinism/NOT_RUN 语义/human gate 卫生/abs-path+secret 扫描）"
+    },
+    {
+      "id": "s3_persistence_selfcheck",
+      "kind": "python",
+      "relpath": "scripts/validate/s3_persistence_selftests.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B3-P2-X2 S3 persistence gate 离线自检 17/17（语义指纹/volatile 豁免 timestamp·checksum·stamp/同态判定/planted marker/非法输入/PASS·FAIL·BLOCKED 分类/可移植性+secret 卫生；不含游戏运行——真实 save→exit→reload 由 s3_persistence_gate.py 对候选 EXE 显式执行）"
     }
   ]
 }

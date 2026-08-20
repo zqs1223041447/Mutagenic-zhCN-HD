@@ -1,0 +1,104 @@
+{
+  "task_id": "B3-P2-X2",
+  "title": "S3 Persistence Gate — save → exit → reload 同态验证（无人值守）",
+  "branch": "agent/b3-p2-x2",
+  "base_sha": "60f9232ca8d802de1016f3e3d46778bbc5b79a7d",
+  "final_sha": "pending-coordinator-integration",
+  "audit_date": "2026-08-20",
+  "gate": {
+    "id": "S3 persistence (save->exit->reload same-state)",
+    "tool": "scripts/validate/s3_persistence_gate.py",
+    "tool_version": "B3-P2-X2-s3-persistence-gate-v1",
+    "automation": "unattended / non-interactive / fail-fast (exit 0 PASS, 1 FAIL, 2 BLOCKED, 3 USAGE)",
+    "engine": "two-game-launch cycle against ONE isolated APPDATA profile; semantic state comparison of the game's own saved file before and after the exit/reload boundary"
+  },
+  "test_target": {
+    "candidate_exe": "Mutagenic.exe (b2-i1 aggregate candidate)",
+    "candidate_exe_sha256": "4ad1de3844324a6f0331aae664392403a824c695d7983c34df304115cde8e3ff",
+    "candidate_exe_bytes": 103341700,
+    "source": "10_logs/b2-i1-aggregate-20260820/candidate/ (10_logs 不入库，candidate 已由 B2 批次的 S0/S1 门禁放行)"
+  },
+  "seed_save": {
+    "generator": "scripts/validate/make_harness_seed_save.py",
+    "path": "10_logs/b3-p2-x2-s3-persistence-20260820/seed/_0_6_0_default.dat",
+    "disk_sha256": "6e58c3e8174b49f7e3a258abf8a98ca6b22ae9729e9756e8044e83a4db2f5a0e",
+    "disk_bytes": 3740,
+    "finalized_sha256": "71d2ac47db2c6b8aa872cf9b0b54825026d172ab310e66f1cd5db649fba9c52e",
+    "finalize": "enable_fullscreen=False patched (stage_seed 注入以保窗口化无边框实操一致)",
+    "note": "make_harness_seed_save.py 打印的 sha/size 是对内存 LF 串计算（3568B/12788c70）；Windows write_text 按 CRLF 落盘（3740B/6e58c3e8），是生成器标记打印的既有偏差，非门禁问题。门禁记录以磁盘字节为准。",
+    "reproducibility": "seed 与 B3-P1-X1 S2 bisect c1 所用 harness seed 字节一致（同一生成器、同一环境）"
+  },
+  "method": {
+    "run1": "启动候选 → 真实窗口出现 + 种子存档被加载且磁盘重写（disk sha 变更 或 'LOADED AND MERGED' 日志标记） → settle 窗口（12s 无重写） → WM_CLOSE 优雅退出（exit_code=0）",
+    "run2": "对同一 APPDATA profile 再次启动 → 必须再次出现 'LOADED AND MERGED' 加载标记 → 再次磁盘重写 → settle → WM_CLOSE 退出",
+    "sane_state_contract": "run1 退出后的存档语义指纹 == run2 重载/重写后的存档语义指纹",
+    "semantic_fingerprint": "对存档 JSON 做 canonicalize（key 排序）+ 剔除每档必变的三项 volatile（timestamp/checksum/stamp），其余全部顶层字段（save_version/settings/shared_stash/keybind_overrides/characters/completed_achievements）参与 sha256 语义指纹",
+    "planted_marker": "种子中埋入 character 'default' (class=WARRIOR) 且 needs_starter=false；run2 结束需仍在场（证明存档角色级数据跨进程存活）",
+    "exit_stability": "settled 快照与进程退出后磁碟快照必须一致（防 '仅内存假象'）",
+    "log_guards": "run1/run2 无 fatal 标记、无 'No save file found'、有 'Game saved!' 与 'LOADED AND MERGED'"
+  },
+  "run_results": {
+    "run1": {
+      "window_found": true,
+      "load_trigger": "log_marker",
+      "load_after_launch_sec": 9.77,
+      "rewrite_count": 1,
+      "settled_after_sec": 21.8,
+      "exit": "wm_close exit_code=0",
+      "raw_sha256": "1431612bd38b967935e7b53bd3e3882e3bd645d7e429ff91df16ba1885cbdceb",
+      "semantic_sha256": "a7ca81b86c1a82a0146bc0b61bc9427d94ba6c081ad6ddb648923e20b1af1842",
+      "field_brief": "save_version=1 settings(14 keys, enable_fullscreen=false, vsync=true) shared_stash={} keybind_overrides(6: WASD+dash+interact) characters=[default needs_starter=false] completed_achievements=[]",
+      "volatile_present": {"timestamp": true, "checksum": true, "stamp": true}
+    },
+    "run2": {
+      "window_found": true,
+      "load_trigger": "log_marker",
+      "load_after_launch_sec": 9.77,
+      "rewrite_count": 1,
+      "settled_after_sec": 21.78,
+      "exit": "wm_close exit_code=0",
+      "raw_sha256": "5512e32bb438088677155bf988c3c7e5ac440a62791e95700c12d75946a091a3",
+      "semantic_sha256": "a7ca81b86c1a82a0146bc0b61bc9427d94ba6c081ad6ddb648923e20b1af1842",
+      "field_brief": "与 run1 完全一致（含 keybind_overrides 六键、character default、needs_starter=false）",
+      "load_marker_seen": true
+    },
+    "comparison": {
+      "semantic_diff_paths": [],
+      "run1_exit_vs_run2_settled_same_semantic_sha": true,
+      "run1_exit_stable": true,
+      "changed_raw_bytes": true,
+      "note": "run1/run2 的 raw sha 不同（1431612b vs 5512e32b）而语义 sha 相同，恰好证明 volatile 三字段（timestamp/checksum/stamp）是每档唯一真实差异，其余状态跨 exit 周期完全一致。"
+    }
+  },
+  "status": "PASS",
+  "proves": "该候选（b2-i1 aggregate, Mutagenic.exe sha4ad1de38）在单一隔离 APPDATA profile 下完成真实 save→exit→reload 周期：run1 加载种子并改写存档→进程退出→run2 冷启动同 profile 重新加载（'LOADED AND MERGED'）并再次改写；跨进程边界后存档语义状态与 run1 退出时逐字段一致（0 差异路径），埋入的 character 标记存活；timestamp/checksum/stamp 为唯一每档漂移项且已被语义指纹明确豁免。",
+  "not_proven": [
+    "存档路径之外的游戏内进度（mid-run orbs/genes/stage/关卡内状态）未注入输入不在此门禁范围（本门禁只证明游戏自己写出的存档跨 exit 周期同态）",
+    "Steam 云存档分支（p7-fix-persistence USE_STEAM=false 本地分支；云分支须单独验证）",
+    "视觉/UI 行为（属 S5）",
+    "键位/设置 UI 变更写回未注入（种子与首次加载后都处于默认键位；keybind_overrides={}→6 键默认归一化由 load_keybinds 注入，两轮一致）",
+    "最终晋升候选（final promotion candidate）尚未跑过本门禁——晋升前必须对晋升对象重跑本门禁并归档新证据"
+  ],
+  "gates": [
+    {"gate": "s3_persistence_selftests.py (离线)", "verdict": "PASS", "detail": "17/17（语义指纹/volatile 豁免/同态判定/planted marker/非法输入/PASS·FAIL·BLOCKED 分类/可移植性+secret 卫生/证据 schema）"},
+    {"gate": "check_all.py", "verdict": "PASS", "detail": "12/12（含新增 s3_persistence_selfcheck）"},
+    {"gate": "abs_path_scan --include-untracked", "verdict": "PASS", "detail": "production_hardcode=0（46 hits 均为 WARN/INFO 分类：provenance 9/local_config 17/test_fixture 14/docs_example 6/false_positive 0）"},
+    {"gate": "secret_scan --include-untracked", "verdict": "PASS", "detail": "findings=0"},
+    {"gate": "py 编译", "verdict": "PASS", "detail": "s3_persistence_gate.py / s3_persistence_selftests.py 均无语法错误"}
+  ],
+  "evidence_locations": {
+    "raw_experiment (不入库)": "10_logs/b3-p2-x2-s3-persistence-20260820/",
+    "gate_evidence_json": "10_logs/b3-p2-x2-s3-persistence-20260820/evidence/s3_persistence_evidence.json",
+    "selftests_evidence_json": "10_logs/b3-p2-x2-s3-persistence-20260820/selftest_evidence/s3_persistence_selftests_evidence.json",
+    "seed": "10_logs/b3-p2-x2-s3-persistence-20260820/seed/_0_6_0_default.dat",
+    "run_log_tails": "evidence/run1_log_tail.txt, evidence/run2_log_tail.txt",
+    "runtime_artifacts": "evidence/seed_staged.json, run1_exit.json, run2_settled.json, run2_exit.json"
+  },
+  "residual_risks": [
+    "make_harness_seed_save.py 打印的内存 sha 与实际落盘 sha 不一致（Windows CRLF 换行）——本期已按磁盘字节记录；建议随下次维护把打印改为对 write_bytes 后的字节计算",
+    "每次 run 仅 1 次磁盘重写（加载期 rewrite），settle 12s 内未出现 debounce 二次重写——门禁已含 rewritten_twice 校验，本次为 1 次亦满足 '真实落盘' 底线；若要覆盖 debounce 重写路径可加长 settle 或注入存档变更",
+    "seed 的 keybind_overrides={} 在首次加载被游戏归一化为 6 个默认键——同态比较发生在 game-written 存档之间（run1 vs run2），不受种子形状影响",
+    "无 gameplay 输入：'同态' 指游戏自身写出的状态，不含玩家在局内产生的新状态",
+    "promotion 候选需重跑本门禁（见 not_proven 第 5 条）"
+  ]
+}
