@@ -1,0 +1,58 @@
+﻿{
+    "task_id":  "B3-P3-X1",
+    "title":  "Promotion Candidate Gates——S0–S4 门禁（主控接管执行，子 agent 空回传）",
+    "branch":  "agent/b3-p3-x1",
+    "base_sha":  "8e28662ea7b6d1b69294ac9204aafef6f15bbbdd",
+    "audit_date":  "2026-08-20",
+    "candidate":  {
+                      "exe":  "G:\\Mutageni-Kinetic-agent\\Mutagenic-zhCN-HD.worktrees\\B3\\P3-X0\\10_logs\\b3-p3-x0-promotion-20260820\\candidate\\Mutagenic.exe",
+                      "sha256":  "3127D3948BCEEC66057F6D2359EB2E47C0FA77938F1153F41AA2C348E2FF7314",
+                      "bytes":  103336292,
+                      "source_evidence":  "docs/ai/audits/B3-P3-X0_PROMOTION_BUILD.json"
+                  },
+    "per_gate":  [
+                     {
+                         "gate":  "S0_structure",
+                         "verdict":  "PASS",
+                         "proves":  "verify_exe_structure 3744/3744 valid entries, pck_start=40545280, bad_entries=0（X0 构建链 step7 实测输出）",
+                         "not_proven":  "runtime behavior",
+                         "evidence_ref":  "docs/ai/audits/B3-P3-X0_PROMOTION_BUILD.json chain[6]"
+                     },
+                     {
+                         "gate":  "S1_boot",
+                         "verdict":  "PASS",
+                         "proves":  "probe_boot.py 20s 实测：窗口 Mutagenic 存在、无 modal dialog、boot markers( GameState getting ready / Loaded data for / Physics FPS set to )、fatal markers=none、alert_window=False、game_window=True",
+                         "not_proven":  "战斗/存档/UI 行为",
+                         "evidence_ref":  "10_logs/b3-p3-x1-promotion-gates-20260820/s1/（probe_boot 输出）"
+                     },
+                     {
+                         "gate":  "S2_core_smoke",
+                         "verdict":  "BLOCKED",
+                         "proves":  "promotion 候选无 request-driven harness 无 TestLevel 自动化入口（parity 契约实证）——正式路径 S2 自动化不可用",
+                         "not_proven":  "启动→主流程→存档路径→基础战斗路径的正式路径冒烟",
+                         "reason":  "按 B3_PLAN B3-P3-X1 合同：正式路径无 harness 可用时如实 BLOCKED+原因；启动与存档路径已分别由 S1 boot 与 S3 persistence 覆盖，基础战斗路径待 HUMAN S5 实机覆盖",
+                         "evidence_ref":  "docs/ai/audits/B3-P2-X1_PARITY_REPORT.json validation_minus_promotion"
+                     },
+                     {
+                         "gate":  "S3_persistence",
+                         "verdict":  "PASS",
+                         "proves":  "s3_persistence_gate.py 在 Promotion Candidate 上重跑：run1 载入 seed 存档并重写磁盘、进程退出、run2 同一 APPDATA 重新载入(\u0027LOADED AND MERGED\u0027)并重写，post-exit 语义状态 run1==run2（semantic_sha256 a7ca81b8… 双轮一致，diffs=0）；planted marker default 存活；timestamp/checksum/stamp 为唯一 volatile 差异；exit code 0",
+                         "not_proven":  "存档路径外进程内进度（orbs/genes/stage）；Steam 云分支（USE_STEAM=false）；UI 行为",
+                         "evidence_ref":  "10_logs/b3-p3-x1-promotion-gates-20260820/s3/s3_gate_report.json/s3_persistence_evidence.json"
+                     },
+                     {
+                         "gate":  "S4_semantic",
+                         "verdict":  "PASS",
+                         "proves":  "semantic_validation_promotion_parity.py 32/32：promotion 链根 11 mods/49 patches 解析成功、49 共享 patch 与 validation 逐字节一致、差集恰为 harness 驱动+ENABLE_TEST_ZONE bridge+diagnostics、forbidden tokens 0 命中、Constants.ENABLE_TEST_ZONE=false",
+                         "not_proven":  "运行时行为",
+                         "evidence_ref":  "10_logs/b3-p3-x1-promotion-gates-20260820/parity.json + scripts/validate/semantic_validation_promotion_parity.py"
+                     }
+                 ],
+    "proves":  "Promotion Candidate（sha 3127D394…）通过 S0 结构 / S1 boot / S3 persistence / S4 semantic parity 门禁；S2 如实 BLOCKED（正式路径无 harness，启动/存档面已由 S1/S3 覆盖）",
+    "not_proven":  "S2 基础战斗路径正式冒烟（待 HUMAN S5）；Steam 云分支；HUMAN S5 8 项；最终 baseline promotion",
+    "residual_risks":  [
+                           "S2 基础战斗路径无机器自动化——人类实机覆盖前保持 BLOCKED",
+                           "Steam 云存档分支未验证（USE_STEAM=false 本地分支）",
+                           "S1 20s 窗口存活已证，长时稳定性未证"
+                       ]
+}
