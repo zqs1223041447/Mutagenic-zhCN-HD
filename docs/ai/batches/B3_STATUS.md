@@ -54,7 +54,9 @@
 - B3-P2-X1 后续：promotion 候选构建 + 其上 S0–S5 重跑（含 S3 gate 重跑）→ 交 B3-P2 集成后的后续批次
 - GitHub CI 状态：GITHUB_RUN_PASS（真实，见下节）
 
-## CI 状态（B3-P1-X0 Bring-up 实证）
+## CI 状态（B3-P2 集成 HEAD 实证）
+
+> **结论：GITHUB_RUN_PASS** —— B3-P2 集成后最终 HEAD `359d1f5` 的 push run `32354862043`（3m31s）全 success：workflow yaml syntax ✓、abs-path scan ✓、secret scan ✓、unified check-all ✓、upload gate evidence ✓。PR run `32354867312` 同期全绿。B3-P2-XX 各分支 push run（X0 `32354141596`、X2 `32350960008` 等）亦全 success。
 
 > **结论：GITHUB_RUN_PASS** —— `ci-static-semantic`（workflow_id 338323634）在协调线每次 push / PR sync 均产生真实 Actions run 且全部 success，非本地 check_all 冒充。
 
