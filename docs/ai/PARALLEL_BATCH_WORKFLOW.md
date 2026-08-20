@@ -156,6 +156,41 @@ AI 必须动态解析：
 
 ---
 
+## 5.1 子 Agent 空回传 → 自动重派 → Coordinator 接管（supervisor 证据协议）
+
+> 背景：B3-P3 批次实测，子 Agent 通道在长任务上多次出现 **session error 空回传**（返回空结果、无任何工具调用、磁盘零改动）。该现象不是任务失败，而是通道故障。本协议固化无人值守下的处理顺序与证据要求。
+
+### 5.1.1 判定顺序（每次空回传必须执行）
+
+1. **先核磁盘，再重派**：收到空回传后，立即检查任务 worktree / 目标路径是否有实际改动（`git status`、文件存在性、产物 SHA）。磁盘有产物 → 按产物继续；磁盘零改动 → 进入重派。
+2. **重派计数**：同一任务最多重派 2 次（共 3 次尝试）。每次重派必须携带前次失败摘要，禁止原样重复同一 prompt。
+3. **Coordinator 接管**：第 3 次空回传后，Coordinator 直接接管执行该任务（不继续消耗子 Agent 会话），并在批次控制面记录 takeover 证据。
+4. **接管即全量实证**：Coordinator 接管后按任务原始验收标准全量执行（不因接管而降低证据要求），如实记录 PASS/BLOCKED。
+
+### 5.1.2 证据固化要求
+
+每次空回传与接管必须在批次控制面（BATCH_STATUS.md / evidence bundle）记录：
+
+- `task_id`、`attempt` 次数、每次回传类型（session error / 空结果 / 部分结果）；
+- 磁盘核验结果（改动文件列表或"零改动"）；
+- 重派时的增量上下文；
+- takeover 决策（第几次后接管、接管原因）；
+- 接管后执行链与最终证据文件引用。
+
+### 5.1.3 与证据可信度的关系
+
+- 接管不改变成果可信度：证据以**最终产物 + 验证报告**为准，与执行者身份无关；
+- 空回传本身不是失败证据，也不得被当作"任务未完成"；
+- 任何 PASS 都必须有对应证据文件（verified_at/command/artifact），接管路径同样适用。
+
+### 5.1.4 B3-P3 实测记录（参考样本）
+
+- B3-P3-X0：3 次空回传 → Coordinator 接管 → 全链构建 PASS（`docs/ai/audits/B3-P3-X0_PROMOTION_BUILD.json`）；
+- B3-P3-X2：2 次空回传，但磁盘留有 bundle 产物 → 按产物提交并回填（`docs/ai/audits/B3_PROMOTION_EVIDENCE_PACKAGE.json`）；
+- B3-P3-X1：1 次空回传 → Coordinator 接管 → 门禁 PASS/BLOCKED 如实（`docs/ai/audits/B3-P3-X1_PROMOTION_GATES.json`）。
+
+---
+
 ## 6. 真正人工 Gate
 
 以下才可以阻塞等待用户：
