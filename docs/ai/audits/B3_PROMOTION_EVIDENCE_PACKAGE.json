@@ -1,0 +1,226 @@
+{
+  "contract_id": "b3_promotion_evidence_package",
+  "schema_version": 1,
+  "created_at_utc": "2026-08-20T09:58:35Z",
+  "task_id": "B3-P3-X2",
+  "title": "Final Evidence Bundle — Promotion Evidence Package",
+  "branch": "agent/b3-p3-x2",
+  "base_sha": "8e28662ea7b6d1b69294ac9204aafef6f15bbbdd",
+  "integration_line": "agent/kinetic-arcane-remaster-foundation",
+  "integration_head_at_bundle": "173bdcf763c35862504c7a213c2bc857b0b2a514",
+  "batch_base": "batch/b3-p3-anchor = 8e28662 (B3_PLAN.md B3-P3 节)",
+  "purpose": "将来 baseline promotion 时人工只需确认 bundle 与真实产物一致，无需重新整理证据。所有引用均为真实路径/id/hash，或明确 PENDING_X0/PENDING_X1 标注待填。",
+  "bundle_files": [
+    "docs/ai/audits/B3_PROMOTION_EVIDENCE_PACKAGE.json",
+    "docs/ai/batches/B3_PROMOTION_EVIDENCE_PACKAGE.md"
+  ],
+  "sections": {
+    "promotion_candidate": {
+      "status": "READY",
+      "evidence_path": "docs/ai/audits/B3-P3-X0_PROMOTION_BUILD.json",
+      "root_mod": "mods/b3-p2-x1-promotion-aggregate/mod.json",
+      "root_mod_version": "0.1.0",
+      "candidate_exe_path": "G:\\Mutageni-Kinetic-agent\\Mutagenic-zhCN-HD.worktrees\\B3\\P3-X0\\10_logs\\b3-p3-x0-promotion-20260820\\candidate\\Mutagenic.exe (10_logs 不入库，bundle 只引用路径/hash)",
+      "candidate_exe_sha256": "3127D3948BCEEC66057F6D2359EB2E47C0FA77938F1153F41AA2C348E2FF7314",
+      "candidate_exe_bytes": 103336292,
+      "build_id": "20260820-X0-3127D394",
+      "removed_diagnostic_list": [
+        "Scenes/Levels/TestLevel/TestLevel.gd::combat_harness_integration（k5-combat-harness：request-driven scenario harness）",
+        "Globals/Constants.gd::enable_test_zone（b2-x0-combat-harness-bridge：ENABLE_TEST_ZONE=true goto_test_level debug key）"
+      ],
+      "structure_verification": "verify_exe_structure --pck-start 40545280 PASS：entry_count=3744 valid_entries=3744 bad_entries=[]；normalize_pck_md5 3743 already_valid + 1 已知零字节 MD5 修复（与 b2-i1 一致）；embed fresh from 00_original/Mutagenic.exe",
+      "note": "X0 构建链 7 步全 PASS（resolve 11 mods/49 patches → apply 49/5058 → compile 10 unique gd → build_declared_pack 3744 → pck-create v1 + normalize → fresh embed → verify_exe_structure）；零痕迹断言：forbidden tokens 0 命中、TestLevel 不在 promotion patches、Constants.ENABLE_TEST_ZONE=false"
+    },
+    "mod_chain": {
+      "status": "READY",
+      "source": "docs/ai/audits/B3-P2-X1_PARITY_REPORT.json candidates.promotion（真实 resolver 输出，head_sha=750865b3d142f5bac5e0a4bf62045fbca7c362e2，branch=agent/b3-p2-x1）",
+      "root": "mods/b3-p2-x1-promotion-aggregate/mod.json",
+      "mod_count": 11,
+      "patch_count": 49,
+      "resolution_order": [
+        "feat-tce",
+        "feat-tce-context",
+        "k1-player-response",
+        "k2-hit-reaction",
+        "k4-audio-foundation",
+        "p7-fix-persistence",
+        "b2-x1-combat-event-spine",
+        "b2-x4-kill-feel",
+        "b2-x5-camera-impulse",
+        "b2-x6-combat-audio-layers",
+        "b3-p2-x1-promotion-aggregate"
+      ],
+      "resolver_stdout": "{\"resolution_order\": [\"feat-tce\", \"feat-tce-context\", \"k1-player-response\", \"k2-hit-reaction\", \"k4-audio-foundation\", \"p7-fix-persistence\", \"b2-x1-combat-event-spine\", \"b2-x4-kill-feel\", \"b2-x5-camera-impulse\", \"b2-x6-combat-audio-layers\", \"b3-p2-x1-promotion-aggregate\"], \"patch_count\": 49, \"asset_overlay_count\": 0, \"verdict\": \"PASS\"}",
+      "composition_doc": "docs/ai/batches/B3_CANDIDATE_SPLIT.md"
+    },
+    "parity_report": {
+      "status": "READY",
+      "reference": "docs/ai/audits/B3-P2-X1_PARITY_REPORT.json",
+      "contract": "scripts/validate/semantic_validation_promotion_parity.py",
+      "checks_total": 32,
+      "checks_passed": 32,
+      "verdict": "PASS",
+      "head_sha": "750865b3d142f5bac5e0a4bf62045fbca7c362e2",
+      "validation_minus_promotion": [
+        {
+          "path": "Globals/Constants.gd",
+          "unit_id": "Globals/Constants.gd::enable_test_zone",
+          "declaring_mod": "b2-x0-combat-harness-bridge",
+          "reason": "harness bridge: Constants.ENABLE_TEST_ZONE = true (goto_test_level debug key)"
+        },
+        {
+          "path": "Scenes/Levels/TestLevel/TestLevel.gd",
+          "unit_id": "Scenes/Levels/TestLevel/TestLevel.gd::combat_harness_integration",
+          "declaring_mod": "k5-combat-harness",
+          "reason": "k5 harness driver: TestLevel.gd request-driven scenario harness (user://combat_harness/request.json)"
+        }
+      ],
+      "identical_shared_preimage_and_semantics": true,
+      "forbidden_tokens": [
+        "ENABLE_TEST_ZONE = true",
+        "ENABLE_TEST_ZONE=true",
+        "user://s2_markers",
+        "_s2marker",
+        "KEY_END",
+        "_run_combat_harness",
+        "user://combat_harness"
+      ],
+      "forbidden_promotion_hits": {},
+      "enable_test_zone_impact": "pristine Constants.gd=false 保持 false（promotion 未改）；HideoutLevel.gd goto_test_level 守卫 gate 保持 inactive（来源 parity 报告 enable_test_zone_impact 字段）"
+    },
+    "gates_s0_s4": {
+      "status": "READY",
+      "evidence_path": "docs/ai/audits/B3-P3-X1_PROMOTION_GATES.json",
+      "plan": "docs/ai/batches/B3_PLAN.md B3-P3-X1 任务合同",
+      "gate_definition": {
+        "S0_structure": "roundtrip/PCK checksum/delta 精确（复用 verify_exe_structure / roundtrip 既有工具）",
+        "S1_boot": "真实窗口/进程 + 无 ALERT + 无 fatal（probe_boot 或等价）",
+        "S2_core_smoke": "启动→主流程→存档路径→基础战斗路径；不依赖 TestLevel debug harness；正式路径无 harness 可用时如实 BLOCKED+原因",
+        "S3_persistence": "scripts/validate/s3_persistence_gate.py 在 Promotion Candidate 上重跑（B3-P2-S3_PERSISTENCE_GATE.md §5.4；B3-P2-S3_EVIDENCE.json not_proven 第 5 条要求）",
+        "S4_semantic": "既有 semantic contracts 在 Promotion 链根上通过（check_all 组件内或等价）"
+      },
+      "per_gate_result": [
+        {"gate": "S0_structure", "verdict": "PASS", "proves": "verify_exe_structure 3744/3744 valid entries, pck_start=40545280, bad_entries=0（X0 构建链 step7 实测）"},
+        {"gate": "S1_boot", "verdict": "PASS", "proves": "probe_boot.py 20s 实测：窗口 Mutagenic、无 modal dialog、boot markers 3 条、fatal markers none、game_window=True、alert_window=False"},
+        {"gate": "S2_core_smoke", "verdict": "BLOCKED", "proves": "promotion 无 request-driven harness 无 TestLevel 自动化入口（parity 实证）；正式路径 S2 自动化不可用，如实 BLOCKED+原因；启动/存档面已由 S1/S3 覆盖，基础战斗路径待 HUMAN S5 实机"},
+        {"gate": "S3_persistence", "verdict": "PASS", "proves": "s3_persistence_gate.py 在 Promotion Candidate 重跑 exit=0：run1 载入 seed→重写磁盘→退出→run2 同 APPDATA 重载（LOADED AND MERGED）→重写，post-exit 语义状态 run1==run2（semantic_sha256 a7ca81b8… 双轮一致，diffs=0）；planted marker 存活；volatile 仅 timestamp/checksum/stamp"},
+        {"gate": "S4_semantic", "verdict": "PASS", "proves": "semantic_validation_promotion_parity.py 32/32：49 共享 patch 逐字节一致、差集恰为 harness 驱动+ENABLE_TEST_ZONE bridge+diagnostics、forbidden tokens 0 命中、ENABLE_TEST_ZONE=false"}
+      ]
+    },
+    "ci_runs": {
+      "status": "READY",
+      "workflow": {
+        "name": "ci-static-semantic",
+        "workflow_id": 338323634,
+        "state": "active",
+        "query": "gh run list --repo zqs1223041447/Mutagenic-zhCN-HD --workflow ci-static-semantic.yml --limit 3"
+      },
+      "latest_coordination_line_push_run": {
+        "run_id": 32355579771,
+        "event": "push",
+        "branch": "agent/kinetic-arcane-remaster-foundation",
+        "head_sha": "173bdcf763c35862504c7a213c2bc857b0b2a514",
+        "head_commit_title": "规划(B3-P3): Promotion Candidate Validation Wave——Promotion Build / Gates / Evidence Bundle（GPT 评审批准，base=batch/b3-p3-anchor）",
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "additional_runs": [
+        {
+          "run_id": 32355584355,
+          "event": "pull_request",
+          "conclusion": "success",
+          "note": "与 173bdcf 同期的 PR sync run"
+        },
+        {
+          "run_id": 32355295494,
+          "event": "pull_request",
+          "conclusion": "success",
+          "note": "更早的 PR sync run"
+        },
+        {
+          "run_id": 32354862043,
+          "event": "push",
+          "head_sha": "359d1f5a6c73f3f5bd102bba14f0d86271390bc6",
+          "conclusion": "success",
+          "note": "B3-P2 集成 HEAD 359d1f5 的 push run（来源：commit 8e28662 信息 + gh run view 实证）"
+        }
+      ]
+    },
+    "unverified_items": [
+      {
+        "id": "steam_cloud_branch",
+        "item": "Steam 云存档分支未验证",
+        "detail": "p7-fix-persistence 仅验证 USE_STEAM=false 本地 File 分支；Steam 云分支须单独验证",
+        "source": "docs/ai/audits/B3-P2-S3_EVIDENCE.json not_proven 第 2 条"
+      },
+      {
+        "id": "perf_frame_stats_placeholder",
+        "item": "telemetry 内 perf 帧统计仍为占位",
+        "detail": "frames=0/fps_min=0 等由游戏侧后续填充；本次只证明生命周期闭环",
+        "source": "docs/ai/audits/B3-P2-S2_TELEMETRY.json residual_risks 第 1 条"
+      },
+      {
+        "id": "all_killed_scene_exit_not_independently_triggered",
+        "item": "all_killed / scene_exit 出口路径未在本批独立运行中触发",
+        "detail": "run1=timeout、run2=player_died；两出口代码路径已由编译+结构验证覆盖",
+        "source": "docs/ai/audits/B3-P2-S2_TELEMETRY.json residual_risks 第 3 条"
+      },
+      {
+        "id": "human_s5_items_2_8_deferred",
+        "item": "HUMAN S5 第 2–8 项 DEFERRED_BY_USER",
+        "detail": "用户暂停 S5 人工测试（后续有实际进展再测）；HUMAN S5 gate 保持未通过，机器绝不写 HUMAN_ACCEPTED",
+        "source": "<repo_root>/10_logs/s5-human-feedback-20260820.md（不入库）+ docs/ai/batches/B3_STATUS.md B2 遗留待办"
+      },
+      {
+        "id": "promotion_candidate_gates_not_run",
+        "item": "Promotion Candidate 的 S0–S5 门禁尚未执行",
+        "detail": "已由 B3-P3-X1 执行：S0 结构 PASS / S1 boot PASS / S3 persistence PASS / S4 parity PASS；S2 core smoke BLOCKED（正式路径无 harness，如实记录）；S5 待 HUMAN",
+        "source": "docs/ai/audits/B3-P3-X1_PROMOTION_GATES.json（已回填，不再 PENDING）"
+      },
+      {
+        "id": "s3_gate_promotion_rerun",
+        "item": "S3 persistence 门禁须对 Promotion Candidate 重跑",
+        "detail": "已重跑并 PASS：s3_persistence_gate.py 在 Promotion Candidate（sha 3127D394…）上 exit=0，语义指纹 a7ca81b8… 双轮一致、diffs=0、planted marker 存活",
+        "source": "10_logs/b3-p3-x1-promotion-gates-20260820/s3/s3_gate_report.json/s3_persistence_evidence.json（已回填，不再 PENDING）"
+      },
+      {
+        "id": "s2_promotion_smoke_no_harness",
+        "item": "S2 Promotion 版核心冒烟不依赖 TestLevel debug harness",
+        "detail": "如实 BLOCKED：promotion 无 request-driven harness 无 TestLevel 自动化入口（parity 契约实证）；启动/存档面已由 S1/S3 覆盖，基础战斗路径待 HUMAN S5 实机",
+        "source": "docs/ai/audits/B3-P3-X1_PROMOTION_GATES.json per_gate[2]（已回填，不再 PENDING）"
+      },
+      {
+        "id": "boss_no_s5_scene_binding",
+        "item": "Boss 击杀无 S5 场景绑定（s5_aspects.json kill_feel 场景无 boss 专属）",
+        "detail": "#5 Boss 验收只能靠用户实机自由操作反馈，无机器 capture",
+        "source": "docs/ai/batches/B3_S5_INTAKE_MAP.md §7.2 剩余风险"
+      }
+    ],
+    "human_s5_checklist": {
+      "status": "WAITING",
+      "bound_to": "Promotion Candidate SHA 3127D3948BCEEC66057F6D2359EB2E47C0FA77938F1153F41AA2C348E2FF7314（docs/ai/audits/B3-P3-X0_PROMOTION_BUILD.json candidate_exe_sha256 已回填）",
+      "bound_to_note": "HUMAN S5 绑定最终 Promotion Candidate SHA；若人工验收 Validation Candidate 也可沿用，前提是 parity contract 证明唯一差异为 TestLevel/harness 调试入口（B3_PLAN.md Promotion 条件）",
+      "gate_semantics": "唯一 HUMAN_ACCEPTED 录入路径 = scripts/validate/s5_evidence.py（machine 只产出 EVIDENCE_PREPARED/verdict=null；selfcheck 内建 human_gate_never_auto_accepted 断言）",
+      "intake_map_ref": "docs/ai/batches/B3_S5_INTAKE_MAP.md §1 总表",
+      "items": [
+        {
+          "num": 1,
+          "item": "普通 hit 无震 / 有 hit 音效",
+          "user_feedback": "不要屏幕震动（其他暂无感觉）",
+          "user_feedback_source": "<repo_root>/10_logs/s5-human-feedback-20260820.md（不入库）",
+          "consistency": "与契约一致：direct_hit 普通命中不产生 camera impulse（semantic_camera_impulse_contract.py 7a blocked 断言），符合预期",
+          "status": "PENDING_FULL_TEST"
+        },
+        {"num": 2, "item": "小怪击杀 shatter+脉冲+blood_explosion", "user_feedback": "暂不测试（后续有实际进展再测）", "status": "DEFERRED_BY_USER"},
+        {"num": 3, "item": "5–20 快速击杀集群抑制", "user_feedback": "暂不测试（后续有实际进展再测）", "status": "DEFERRED_BY_USER"},
+        {"num": 4, "item": "精英击杀 shatter×1.25", "user_feedback": "暂不测试（后续有实际进展再测）", "status": "DEFERRED_BY_USER"},
+        {"num": 5, "item": "Boss 击杀 shatter+poof×1.6", "user_feedback": "暂不测试（后续有实际进展再测）", "status": "DEFERRED_BY_USER"},
+        {"num": 6, "item": "重击 heavy 脉冲 + ice_crack", "user_feedback": "暂不测试（后续有实际进展再测）", "status": "DEFERRED_BY_USER"},
+        {"num": 7, "item": "DoT 全抑制（无震/无 shatter/无 poof）", "user_feedback": "暂不测试（后续有实际进展再测）", "status": "DEFERRED_BY_USER"},
+        {"num": 8, "item": "全程无报错崩溃", "user_feedback": "暂不测试（后续有实际进展再测）", "status": "DEFERRED_BY_USER"}
+      ]
+    }
+  },
+  "proves": "Promotion Evidence Package 组装完成：Promotion Candidate（sha 3127D394…/103336292B/Build 20260820-X0-3127D394）来自 X0 构建证据；MOD chain（11 mods/49 patches）与 parity（32/32）引用 B3-P2-X1_PARITY_REPORT.json 真实值；S0–S4 门禁结果引用 B3-P3-X1_PROMOTION_GATES.json（S0/S1/S3/S4 PASS、S2 如实 BLOCKED）；S3 persistence 已在 Promotion Candidate 重跑 PASS（语义指纹 a7ca81b8…双轮一致）；CI 汇总引用真实 run id（32355579771 等，全 success）；未验证项逐条带来源；HUMAN S5 checklist 绑定 Promotion Candidate SHA（3127D394…）状态 WAITING",
+  "not_proven": "S2 基础战斗路径正式冒烟（BLOCKED 待 HUMAN S5 实机）；Steam 云存档分支；HUMAN S5 八项未获完整人工验收（2–8 DEFERRED_BY_USER，1 PENDING_FULL_TEST）；最终 baseline promotion 未批准"
+}
