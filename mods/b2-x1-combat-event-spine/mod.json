@@ -1,0 +1,107 @@
+{
+  "id": "b2-x1-combat-event-spine",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": ["feat-tce-context"],
+  "conflicts": [],
+  "scope": "Feat: 战斗事件脊柱 v1。在 Stats.apply_damage 既有结算点旁增加统一事件分类与记录（direct_hit/dot_tick/crit/kill 四类 event_class），补全 context（event_class/seq/timestamp_ms/did_kill/source/target/is_dot/did_crit/skill_parent），供 Wave B（X4 Kill Feel / X5 Camera / X6 Audio）消费。事件层只记录不做 FX/Audio；不改变伤害/碰撞/死亡结算；不复制第二套事件总线（trigger_effects 调用点数量保持不变，仅旁路记录）。",
+  "entities": [
+    {
+      "kind": "combat_event_spine",
+      "id": "Scenes/Stats.gd::_spine_event_class",
+      "confidence": "FACT",
+      "expected_runtime_effect": "按 is_dot/did_crit 将落地伤害分类为 dot_tick / crit / direct_hit（kill 由调用点显式标注）；纯函数式分类，不改变伤害数值"
+    },
+    {
+      "kind": "combat_event_spine",
+      "id": "Scenes/Stats.gd::_spine_record",
+      "confidence": "FACT",
+      "expected_runtime_effect": "实例级递增 seq、OS.get_ticks_msec() 时间戳、合并 context 生成事件记录并写入 _spine_last_events 环形缓冲（上限 64，pop_front 淘汰）；不触发任何表现层逻辑"
+    },
+    {
+      "kind": "combat_event_spine",
+      "id": "Scenes/Stats.gd::apply_damage::dot_tick_emit",
+      "confidence": "FACT",
+      "expected_runtime_effect": "is_dot_damage 分支（DoT tick 落地）恰发一次 dot_tick 事件；DoT 不伪装成 direct_hit"
+    },
+    {
+      "kind": "combat_event_spine",
+      "id": "Scenes/Stats.gd::apply_damage::direct_hit_emit",
+      "confidence": "FACT",
+      "expected_runtime_effect": "非 DoT 且 damage_multiplier != 0 的落地命中，在 on_take_damage 调用前恰发一次 direct_hit/crit 事件（crit 由 _spine_event_class 派生）"
+    },
+    {
+      "kind": "combat_event_spine",
+      "id": "Scenes/Stats.gd::apply_damage::kill_emit",
+      "confidence": "FACT",
+      "expected_runtime_effect": "attacker_stats != null 且 did_kill 分支恰发一次 kill 事件（did_kill=true，is_dot 透传 DoT 击杀）；死亡仍只结算一次（health<=0/is_dead 早退不变）"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::vars::spine",
+      "classification": "CODE_PATCH",
+      "old_text": "var accumulated_applied_damage = 0.0",
+      "new_text": "var accumulated_applied_damage = 0.0\nvar _spine_event_seq = 0\nvar _spine_last_events = []",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::insert_spine_helpers",
+      "classification": "CODE_PATCH",
+      "old_text": "func apply_damage(damage_bundle, color = Color.white, attacker_stats = null, show_damage = false, is_dot_damage = false, skill_parent = null, can_block = true):",
+      "new_text": "func _spine_event_class(is_dot, did_crit):\n\t\t\t\tif is_dot:\n\t\t\t\t\t\t\t\treturn \"dot_tick\"\n\t\t\t\tif did_crit:\n\t\t\t\t\t\t\t\treturn \"crit\"\n\t\t\t\treturn \"direct_hit\"\n\nfunc _spine_record(event_class, context):\n\t\t\t\t_spine_event_seq += 1\n\t\t\t\tvar record = {\"event_class\": event_class, \"seq\": _spine_event_seq, \"timestamp_ms\": OS.get_ticks_msec()}\n\t\t\t\trecord[\"did_kill\"] = context.get(\"did_kill\", false)\n\t\t\t\tfor k in context:\n\t\t\t\t\t\t\t\trecord[k] = context[k]\n\t\t\t\t_spine_last_events.append(record)\n\t\t\t\tif _spine_last_events.size() > 64:\n\t\t\t\t\t\t\t\t_spine_last_events.pop_front()\n\t\t\t\treturn record\n\nfunc apply_damage(damage_bundle, color = Color.white, attacker_stats = null, show_damage = false, is_dot_damage = false, skill_parent = null, can_block = true):",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::apply_damage::dot_tick_emit",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tif is_dot_damage:\n\t\t\t\t\t\t\t\taccumulated_dot_damage += combined_effective_damage",
+      "new_text": "\t\t\t\tif is_dot_damage:\n\t\t\t\t\t\t\t\taccumulated_dot_damage += combined_effective_damage\n\t\t\t\t\t\t\t\t_spine_record(\"dot_tick\", {\"source\": attacker_stats, \"target\": self, \"is_dot\": true})",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::apply_damage::direct_hit_emit",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tif not is_dot_damage and damage_multiplier != 0:\n\t\t\t\t\t\t\t\ton_take_damage(attacker_stats, damage_bundle, effective_damage, is_dot_damage, did_crit, skill_parent)",
+      "new_text": "\t\t\t\tif not is_dot_damage and damage_multiplier != 0:\n\t\t\t\t\t\t\t\t_spine_record(_spine_event_class(false, did_crit), {\"source\": attacker_stats, \"target\": self, \"did_crit\": did_crit, \"is_dot\": false, \"skill_parent\": skill_parent})\n\t\t\t\t\t\t\t\ton_take_damage(attacker_stats, damage_bundle, effective_damage, is_dot_damage, did_crit, skill_parent)",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Stats.gd",
+      "unit_id": "Scenes/Stats.gd::apply_damage::kill_emit",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tif attacker_stats != null and did_kill:\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tattacker_stats.on_kill(self, is_dot_damage)",
+      "new_text": "\t\t\t\tif attacker_stats != null and did_kill:\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tattacker_stats.on_kill(self, is_dot_damage)\n\t\t\t\t\t\t\t\t_spine_record(\"kill\", {\"source\": attacker_stats, \"target\": self, \"is_dot\": is_dot_damage, \"did_kill\": true})",
+      "preimage_sha256": "c187245e4f475e0928252610bb9d6d27fcb4a23c68754b4409df5a6eb9997234",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "boot"
+  ],
+  "not_proven": "真实游戏 runtime 事件序列（需 VM boot + harness telemetry）；事件消费方（X4/X5/X6）行为；seq 为实例级而非全局单调（多 Stats 实例并发时由消费方按自身实例读缓冲）"
+}
