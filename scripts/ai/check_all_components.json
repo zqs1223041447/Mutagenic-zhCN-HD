@@ -100,6 +100,15 @@
       "timeout_s": 300,
       "required": true,
       "description": "B2-X2 combat S5 evidence 驱动自检 23/23（aspects/plan determinism/NOT_RUN 语义/human gate 卫生/abs-path+secret 扫描）"
+    },
+    {
+      "id": "validation_promotion_parity",
+      "kind": "python",
+      "relpath": "scripts/validate/semantic_validation_promotion_parity.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B3-P2-X1 Validation/Promotion 候选分隔 parity 契约 32/32（真实 resolve 三根对比：Validation 14 mods/51 patches、Promotion 11 mods/49 patches、差集恰为 k5 harness+bridge+diagnostic；promotion 零禁用面；pristine ENABLE_TEST_ZONE 影响面 false/2 sites；机器报告 B3-P2-X1_PARITY_REPORT.json）"
     }
   ]
 }

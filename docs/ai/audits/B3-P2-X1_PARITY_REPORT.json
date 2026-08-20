@@ -1,0 +1,232 @@
+{
+  "contract_id": "semantic_validation_promotion_parity",
+  "schema_version": 1,
+  "created_at_utc": "2026-08-20T08:35:46Z",
+  "branch": "agent/b3-p2-x1",
+  "head_sha": "750865b3d142f5bac5e0a4bf62045fbca7c362e2",
+  "resolver": "scripts/patch/resolve_mod_chain.py",
+  "candidates": {
+    "validation": {
+      "root": "mods/b2-i1-aggregate/mod.json",
+      "mod_count": 14,
+      "patch_count": 51,
+      "resolution_order": [
+        "feat-tce",
+        "feat-tce-context",
+        "k1-player-response",
+        "k2-hit-reaction",
+        "k4-audio-foundation",
+        "k5-combat-harness",
+        "p7-fix-persistence",
+        "b2-x0-combat-harness-bridge",
+        "b2-x0-aggregate",
+        "b2-x1-combat-event-spine",
+        "b2-x4-kill-feel",
+        "b2-x5-camera-impulse",
+        "b2-x6-combat-audio-layers",
+        "b2-i1-aggregate"
+      ],
+      "resolver_stdout": "{\"resolution_order\": [\"feat-tce\", \"feat-tce-context\", \"k1-player-response\", \"k2-hit-reaction\", \"k4-audio-foundation\", \"k5-combat-harness\", \"p7-fix-persistence\", \"b2-x0-combat-harness-bridge\", \"b2-x0-aggregate\", \"b2-x1-combat-event-spine\", \"b2-x4-kill-feel\", \"b2-x5-camera-impulse\", \"b2-x6-combat-audio-layers\", \"b2-i1-aggregate\"], \"patch_count\": 51, \"asset_overlay_count\": 0, \"verdict\": \"PASS\"}"
+    },
+    "validation_with_diagnostics": {
+      "root": "mods/b3-p1-s2-diagnostic/mod.json",
+      "mod_count": 15,
+      "patch_count": 63,
+      "resolution_order": [
+        "feat-tce",
+        "feat-tce-context",
+        "k1-player-response",
+        "k2-hit-reaction",
+        "k4-audio-foundation",
+        "k5-combat-harness",
+        "p7-fix-persistence",
+        "b2-x0-combat-harness-bridge",
+        "b2-x0-aggregate",
+        "b2-x1-combat-event-spine",
+        "b2-x4-kill-feel",
+        "b2-x5-camera-impulse",
+        "b2-x6-combat-audio-layers",
+        "b2-i1-aggregate",
+        "b3-p1-s2-diagnostic"
+      ],
+      "resolver_stdout": "{\"resolution_order\": [\"feat-tce\", \"feat-tce-context\", \"k1-player-response\", \"k2-hit-reaction\", \"k4-audio-foundation\", \"k5-combat-harness\", \"p7-fix-persistence\", \"b2-x0-combat-harness-bridge\", \"b2-x0-aggregate\", \"b2-x1-combat-event-spine\", \"b2-x4-kill-feel\", \"b2-x5-camera-impulse\", \"b2-x6-combat-audio-layers\", \"b2-i1-aggregate\", \"b3-p1-s2-diagnostic\"], \"patch_count\": 63, \"asset_overlay_count\": 0, \"verdict\": \"PASS\"}"
+    },
+    "promotion": {
+      "root": "mods/b3-p2-x1-promotion-aggregate/mod.json",
+      "mod_count": 11,
+      "patch_count": 49,
+      "resolution_order": [
+        "feat-tce",
+        "feat-tce-context",
+        "k1-player-response",
+        "k2-hit-reaction",
+        "k4-audio-foundation",
+        "p7-fix-persistence",
+        "b2-x1-combat-event-spine",
+        "b2-x4-kill-feel",
+        "b2-x5-camera-impulse",
+        "b2-x6-combat-audio-layers",
+        "b3-p2-x1-promotion-aggregate"
+      ],
+      "resolver_stdout": "{\"resolution_order\": [\"feat-tce\", \"feat-tce-context\", \"k1-player-response\", \"k2-hit-reaction\", \"k4-audio-foundation\", \"p7-fix-persistence\", \"b2-x1-combat-event-spine\", \"b2-x4-kill-feel\", \"b2-x5-camera-impulse\", \"b2-x6-combat-audio-layers\", \"b3-p2-x1-promotion-aggregate\"], \"patch_count\": 49, \"asset_overlay_count\": 0, \"verdict\": \"PASS\"}"
+    }
+  },
+  "parity": {
+    "shared_formal_patch_count": 49,
+    "promotion_minus_validation": [],
+    "validation_minus_promotion": [
+      {
+        "path": "Globals/Constants.gd",
+        "old_text_sha256": "12be0ea6bc5a82ea8ff403aed2300920236665e8ec5332d25b5754e70fabda13",
+        "unit_id": "Globals/Constants.gd::enable_test_zone",
+        "declaring_mod": "b2-x0-combat-harness-bridge",
+        "reason": "harness bridge: Constants.ENABLE_TEST_ZONE = true (goto_test_level debug key)"
+      },
+      {
+        "path": "Scenes/Levels/TestLevel/TestLevel.gd",
+        "old_text_sha256": "67ea3319687f2abf1cc072c6ab9a008440e0bc8d217c5c6a92250c210140fb6d",
+        "unit_id": "Scenes/Levels/TestLevel/TestLevel.gd::combat_harness_integration",
+        "declaring_mod": "k5-combat-harness",
+        "reason": "k5 harness driver: TestLevel.gd request-driven scenario harness (user://combat_harness/request.json)"
+      }
+    ],
+    "validation_diag_minus_promotion": [
+      {
+        "path": "Globals/Constants.gd",
+        "old_text_sha256": "12be0ea6bc5a82ea8ff403aed2300920236665e8ec5332d25b5754e70fabda13",
+        "unit_id": "Globals/Constants.gd::enable_test_zone",
+        "declaring_mod": "b2-x0-combat-harness-bridge",
+        "reason": "harness bridge: Constants.ENABLE_TEST_ZONE = true (goto_test_level debug key)"
+      },
+      {
+        "path": "Globals/GameState.gd",
+        "old_text_sha256": "48fce801afa00fd1b01861220bb2436f680728cc31b1260b0afc828d5b33028a",
+        "unit_id": "Globals/GameState.gd::s2_marker_helper",
+        "declaring_mod": "b3-p1-s2-diagnostic",
+        "reason": "diagnostic mod: GameState.do_save_game s2 markers + HideoutLevel KEY_END test-only route"
+      },
+      {
+        "path": "Globals/GameState.gd",
+        "old_text_sha256": "07aaa04508fea5271c1fa757f3cd28e70cdce7a67f234f73c2446d722b6cc799",
+        "unit_id": "Globals/GameState.gd::do_save_game::m01_enter",
+        "declaring_mod": "b3-p1-s2-diagnostic",
+        "reason": "diagnostic mod: GameState.do_save_game s2 markers + HideoutLevel KEY_END test-only route"
+      },
+      {
+        "path": "Globals/GameState.gd",
+        "old_text_sha256": "76ca848f6d222e8d6bb4a7262ba579fc9bec70983dd040c3a031e17873a54663",
+        "unit_id": "Globals/GameState.gd::do_save_game::m02_timestamp",
+        "declaring_mod": "b3-p1-s2-diagnostic",
+        "reason": "diagnostic mod: GameState.do_save_game s2 markers + HideoutLevel KEY_END test-only route"
+      },
+      {
+        "path": "Globals/GameState.gd",
+        "old_text_sha256": "69a5ac9296e45bdc0ff2fd4bfd7d63207e2a106f3225b1aa372bb07a0b8bb2d7",
+        "unit_id": "Globals/GameState.gd::do_save_game::m03_checksum",
+        "declaring_mod": "b3-p1-s2-diagnostic",
+        "reason": "diagnostic mod: GameState.do_save_game s2 markers + HideoutLevel KEY_END test-only route"
+      },
+      {
+        "path": "Globals/GameState.gd",
+        "old_text_sha256": "1c00143bbfb09c82a185068c606aa630cf5eff13d8cbeb853ab3900b8c888ee8",
+        "unit_id": "Globals/GameState.gd::do_save_game::m04_stamp",
+        "declaring_mod": "b3-p1-s2-diagnostic",
+        "reason": "diagnostic mod: GameState.do_save_game s2 markers + HideoutLevel KEY_END test-only route"
+      },
+      {
+        "path": "Globals/GameState.gd",
+        "old_text_sha256": "bfe8b9a6eaeba81bd7ec176f464af5e6a1e1683fc5df271c518a1d65cdf3c035",
+        "unit_id": "Globals/GameState.gd::do_save_game::m05_serialize",
+        "declaring_mod": "b3-p1-s2-diagnostic",
+        "reason": "diagnostic mod: GameState.do_save_game s2 markers + HideoutLevel KEY_END test-only route"
+      },
+      {
+        "path": "Globals/GameState.gd",
+        "old_text_sha256": "15c6b958fc29afbd10f9bf9f691cf34b390d20cb8765a8b387ae0bb5c4c83b73",
+        "unit_id": "Globals/GameState.gd::do_save_game::m06_dataprep",
+        "declaring_mod": "b3-p1-s2-diagnostic",
+        "reason": "diagnostic mod: GameState.do_save_game s2 markers + HideoutLevel KEY_END test-only route"
+      },
+      {
+        "path": "Globals/GameState.gd",
+        "old_text_sha256": "c7c2922da1dbcca89a8f13eff528ffccaa70fc89016d2af61bd660cbb8e12a6a",
+        "unit_id": "Globals/GameState.gd::do_save_game::m07_pre_open_and_m08_open_done",
+        "declaring_mod": "b3-p1-s2-diagnostic",
+        "reason": "diagnostic mod: GameState.do_save_game s2 markers + HideoutLevel KEY_END test-only route"
+      },
+      {
+        "path": "Globals/GameState.gd",
+        "old_text_sha256": "0476a8036dbdb0843b662119857a994f673f06f24bc1928d383b49d704078f0a",
+        "unit_id": "Globals/GameState.gd::do_save_game::m09_store",
+        "declaring_mod": "b3-p1-s2-diagnostic",
+        "reason": "diagnostic mod: GameState.do_save_game s2 markers + HideoutLevel KEY_END test-only route"
+      },
+      {
+        "path": "Globals/GameState.gd",
+        "old_text_sha256": "826af84473644ea073bfd2565439a0f1f88e9d17a0ead582794b7c4deadd70df",
+        "unit_id": "Globals/GameState.gd::do_save_game::m10_close",
+        "declaring_mod": "b3-p1-s2-diagnostic",
+        "reason": "diagnostic mod: GameState.do_save_game s2 markers + HideoutLevel KEY_END test-only route"
+      },
+      {
+        "path": "Globals/GameState.gd",
+        "old_text_sha256": "9c5bed153d152907761a55d3856441ba8bdf56d05976b03d27520bae9e99e121",
+        "unit_id": "Globals/GameState.gd::do_save_game::m11_onsave_done",
+        "declaring_mod": "b3-p1-s2-diagnostic",
+        "reason": "diagnostic mod: GameState.do_save_game s2 markers + HideoutLevel KEY_END test-only route"
+      },
+      {
+        "path": "Scenes/Levels/Hideout/HideoutLevel.gd",
+        "old_text_sha256": "b057bce4066d66cef4dd803a2ed5c3aa0cebe363ee4f05e9ddc06e85696d5eba",
+        "unit_id": "",
+        "declaring_mod": "b3-p1-s2-diagnostic",
+        "reason": "diagnostic mod: GameState.do_save_game s2 markers + HideoutLevel KEY_END test-only route"
+      },
+      {
+        "path": "Scenes/Levels/TestLevel/TestLevel.gd",
+        "old_text_sha256": "67ea3319687f2abf1cc072c6ab9a008440e0bc8d217c5c6a92250c210140fb6d",
+        "unit_id": "Scenes/Levels/TestLevel/TestLevel.gd::combat_harness_integration",
+        "declaring_mod": "k5-combat-harness",
+        "reason": "k5 harness driver: TestLevel.gd request-driven scenario harness (user://combat_harness/request.json)"
+      }
+    ],
+    "identical_shared_preimage_and_semantics": true,
+    "preimage_parity": {
+      "method": "resolver resolved manifest byte-compare (canonical including preimage_sha256/placeholders/format_tokens)"
+    },
+    "promotion_minus_validation_diag": []
+  },
+  "forbidden": {
+    "tokens": [
+      "ENABLE_TEST_ZONE = true",
+      "ENABLE_TEST_ZONE=true",
+      "user://s2_markers",
+      "_s2marker",
+      "KEY_END",
+      "_run_combat_harness",
+      "user://combat_harness"
+    ],
+    "promotion_hits": {},
+    "forbidden_mod_ids_in_promotion_order": []
+  },
+  "enable_test_zone_impact": {
+    "Constants.gd": {
+      "path": "04_recovered/Globals/Constants.gd",
+      "occurrences": 1,
+      "pristine_value": "false",
+      "promotion_value": "false (unchanged)"
+    },
+    "HideoutLevel.gd": {
+      "path": "04_recovered/Scenes/Levels/Hideout/HideoutLevel.gd",
+      "occurrences": 1,
+      "gate": "goto_test_level keybind gated by Constants.ENABLE_TEST_ZONE; no KEY_END bypass in promotion",
+      "pristine_value": "false gate inactive",
+      "promotion_value": "false gate inactive (unchanged)"
+    }
+  },
+  "checks": {
+    "total": 32,
+    "passed": 32
+  },
+  "verdict": "PASS"
+}
