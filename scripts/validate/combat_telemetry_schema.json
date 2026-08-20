@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "intent": "B1-X5 Combat Test Harness telemetry minimal contract. Every in-game scenario run MUST emit a telemetry JSON conforming to this schema; the host driver validates it before evaluating asserts. Optional sections are emitted when the in-game capability exists; missing optional sections are recorded as not_measured, never as PASS/FAIL. This contract is the only interface between the in-game fixture (k5-combat-harness MOD / ScenarioDirector.gd) and the host driver (scripts/validate/combat_harness.py).",
+  "intent": "B1-X5 Combat Test Harness telemetry minimal contract (extended by B3-P2-X0 with an optional lifecycle envelope: status/exit_reason/checkpoints/session_file are optional and backward-compatible; the schema_version stays 1.0 and older telemetry remains valid). Every in-game scenario run MUST emit a telemetry JSON conforming to this schema; the host driver validates it before evaluating asserts. Optional sections are emitted when the in-game capability exists; missing optional sections are recorded as not_measured, never as PASS/FAIL. This contract is the only interface between the in-game fixture (k5-combat-harness MOD / Scenes/Levels/TestLevel/TestLevel.gd::_run_combat_harness) and the host driver (scripts/validate/combat_harness.py).",
   "root_required": [
     "schema_version",
     "scenario_id",
@@ -110,8 +110,29 @@
           "type": "integer",
           "minimum": 0,
           "description": "Dash activations observed."
+        },
+        "checkpoint_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of lifecycle checkpoints flushed into session_<scenario>_<seed>.json during the run (B3-P2-X0)."
         }
       }
+    },
+    "status": {
+      "type": "string",
+      "description": "Run lifecycle state at write time: running (session file only) or complete (final telemetry). Optional; absent on pre-B3-P2-X0 telemetry."
+    },
+    "exit_reason": {
+      "type": "string",
+      "description": "Termination path of the in-game run: timeout, all_killed, player_died, scene_exit. Optional; absent on pre-B3-P2-X0 telemetry."
+    },
+    "checkpoints": {
+      "type": "array",
+      "description": "Periodic lifecycle snapshots (t, spawned, killed, alive, damage_events, fps) flushed during the run. Optional; absent on pre-B3-P2-X0 telemetry."
+    },
+    "session_file": {
+      "type": "string",
+      "description": "Relative/logical name of the companion session_<scenario>_<seed>.json file written at scenario start. Optional."
     },
     "perf": {
       "type": "object",
