@@ -1,12 +1,12 @@
 # B3 协调状态视图
 
 > **Batch**：`B3`
-> **状态**：`B3-P0_INTEGRATED`（四任务全部集成：S2 路由定位 / 控制面闭环 / 元数据卫生 / 密度基准脚手架；check_all 11/11 PASS）
+> **状态**：`B3-P1_INTEGRATED`（B3-P0 四任务 + B3-P1 三任务全部集成：CI 云端 PASS / S2 存档 bisect 定位 / S5 反馈映射就绪；check_all 11/11 PASS）
 > **Integration line**：`agent/kinetic-arcane-remaster-foundation`
-> **B3 集成 HEAD**：`f1546f4`（X0→X1→X2→X3 依序合并，merge-tree 预检全部 clean）
-> **Planning/prep base**：`batch/b3-anchor` = `68bb1c1`（B2-I1 集成 HEAD，GPT 评审指定统一 base）
+> **B3 集成 HEAD**：`9be7fc0`（P0: f1546f4；P1: X0→X1→X2 依序合并，merge-tree 预检全部 clean）
+> **Planning/prep base**：`batch/b3-anchor` = `68bb1c1`（P0）；`batch/b3-p1-anchor` = `de039a6`（P1）
 > **任务合同**：`docs/ai/batches/B3_PLAN.md`
-> **来源**：GPT 评审（2026-08-20，会话 6a83bc24）：B2-I1 判定"有条件 PASS"，批准立即启动 B3-P0 四任务，Combat Polish 调参保持 WAITING_HUMAN_S5。
+> **来源**：GPT 评审（2026-08-20，会话 6a83bc24）：B2-I1 判定"有条件 PASS"；B3-P0 评审 PASS；批准 B3-P1 Diagnostics/Readiness Wave；Combat Polish 调参保持 WAITING_HUMAN_S5。
 
 ## B3-P0 — 已完成并集成
 
@@ -19,17 +19,27 @@
 
 集成验证：merge-tree 预检 conflict_blocks=0（四分支两两 clean）；合并后 check_all 11/11 PASS（event_spine 44/44、kill_feel 80/80、camera 93/93、combat_audio 120/120、audio selftest 14/14、s5 selfcheck 23/23、pipeline 78/78、harness selftest 16/16、batchctl 56 tests）；abs-path production_hardcode=0；secret findings=0；worktrees 全部清理（B3-X1 长路径残留已手动清除）。
 
-## B2 遗留待办（不变）
+## B3-P1 — 已完成并集成（GPT 评审批准 Diagnostics/Readiness Wave）
 
-- ⏳ HUMAN S5 gate（HUMAN_REQUIRED：8 项人工 A/B 验收，等待用户反馈；机器绝不写 HUMAN_ACCEPTED）
-- ⏳ S2 telemetry：断点已定位（主循环冻结），根因核查需 VM/人工（B3-X0 已产出 supplement 证据 + 修复工具）
-- ⏳ baseline promotion：绝对禁止（需 S2 PASS + HUMAN S5 PASS + 元数据修正 + 最终 fresh rebuild 全验证）
+| Task | 状态 | 分支 / final_sha | 交付 |
+|---|---|---|---|
+| B3-P1-X0 | ✅ COMPLETED → `agent/b3-p1-x0` = `2386881` | CI Bring-up：诊断=协调线每次 push/PR sync 均有真实 Actions run 且全 success（GPT 评审时点无 run 已自愈；"combined status 为空"是 legacy commit-status 通道盲区，Actions 走 check-runs API）；修复=workflow 增加 `workflow_dispatch`；**GITHUB_RUN_PASS 真实**（run 32339170665/32339176772 等 6 个 success，artifact ci-gate-evidence 上传）；状态文档落盘 |
+| B3-P1-X1 | ✅ COMPLETED → `agent/b3-p1-x1` = `ae769fe` | S2 Save Bisect：声明式 diagnostic MOD（`mods/b3-p1-s2-diagnostic`，12 patches）+ `save_bisect_runner.py`；do_save_game 全部 11 子步骤（m01→m11）6 次运行每次写满——"Doing actual save from 处冻结"是 kill 时日志 flush 截断伪影，存档路径毫秒级完成；c7 修复后 `Destination found:test_level` + `[COMBAT_HARNESS] spawns=started`（3 次）——**S2 全链首次闭环**；遗留：telemetry 未写出（玩家被 3 只 SkeletonWarrior 击杀打断 20s 计时，归 combat 切片）；bisect 证据 `docs/ai/audits/B3-P1-S2_BISECT.json`；候选 `Mutagenic_s2diag2.exe` sha256 F7A8C874… 3744/3744 |
+| B3-P1-X2 | ✅ COMPLETED → `agent/b3-p1-x2` = `a9a77ed` | S5 Feedback Intake：`docs/ai/batches/B3_S5_INTAKE_MAP.md`（242 行）——8 项人工验收 checklist → Kill/Camera/Audio tunable（现值→建议范围）→ semantic contract → FAIL regression 路径全映射；含调参影响面（Camera 契约 7d/7h/7i 联合不定式、Audio 字面量钉死、Kill Feel budget 绿域 [1,5]）、调参任务模板（B3-CP<NN> + G1–G10 验证序列）；未改任何 gameplay 数值；human gate 语义保持（HUMAN_ACCEPTED 仅人工录入） |
+
+集成验证：merge-tree 预检 3 分支两两 clean → 依序合并 `9be7fc0` → check_all 11/11 PASS → abs-path production_hardcode=0 → secret findings=0 → worktrees 全部清理（P1-X0 长路径残留已手动清除）。
+
+## B2 遗留待办（更新）
+
+- ⏳ HUMAN S5 gate（HUMAN_REQUIRED：8 项人工 A/B 验收，等待用户反馈；机器绝不写 HUMAN_ACCEPTED）——S5 Intake Map 已就绪，反馈回来可立即生成调参任务
+- ⏳ S2 telemetry：bisect 已证 save 路径无冻结（截断伪影）；全链已闭环到 harness spawns=started；telemetry 写出仅剩"玩家被击杀打断计时"问题，归 combat 切片/后续批次
+- ⏳ baseline promotion：绝对禁止（强化条件：S0+S1+S2+S3+S4 PASS + HUMAN S5 PASS + GitHub CI PASS + final fresh rebuild + 用户显式批准）
 
 ## 下一批（待 HUMAN S5 反馈 + GPT 评审）
 
-- B3 Combat Polish 实际调参（Kill/Camera/Audio 数值）→ WAITING_HUMAN_S5，暂不 claim
-- B3 Density 真实实验（提高密度并测性能/可读性）→ 依赖 S2 PASS + S5 稳定
-- ✅ GitHub CI Bring-up（B3-P1-X0）完成：GITHUB_RUN_PASS（真实 Actions run 实证，见下）
+- B3 Combat Polish 实际调参（Kill/Camera/Audio 数值）→ WAITING_HUMAN_S5，暂不 claim（S5 Intake Map 提供任务书模板）
+- B3 Density 真实实验（提高密度并测性能/可读性）→ 依赖 S2 telemetry + S5 稳定
+- GitHub CI 状态：GITHUB_RUN_PASS（真实，见下节）
 
 ## CI 状态（B3-P1-X0 Bring-up 实证）
 
