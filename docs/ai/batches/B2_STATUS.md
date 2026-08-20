@@ -1,11 +1,11 @@
 # B2 协调状态视图
 
 > **Batch**：`B2`
-> **状态**：`WAVE_B_ACTIVE`（Gate A 已通过并冻结 `batch/b2-waveb-anchor`）
+> **状态**：`B2-I1_INTEGRATED`（Wave A + Wave B 全部集成，验证通过）
 > **Integration line**：`agent/kinetic-arcane-remaster-foundation`
-> **Wave A 集成 HEAD**：`ba4a0120`（X1→X2→X3→X0 依序合并完成）
+> **B2 集成 HEAD**：`2917fff`（Wave A `ba4a0120` + X4/X5/X6 依序合并）
 > **Frozen base ref（Wave A）**：`batch/b2-anchor` = `2a40ec4d`
-> **Frozen base ref（Wave B）**：`batch/b2-waveb-anchor`（本文件提交后更新为当前集成 HEAD）
+> **Frozen base ref（Wave B）**：`batch/b2-waveb-anchor` = `ea7854f`
 > **任务合同**：`docs/ai/batches/B2_KINETIC_COMBAT_VALIDATION_AND_IMPACT.md`
 > **产品状态权威**：仍为 `status.json` + evidence；本文件只负责 B2 调度。
 
@@ -42,17 +42,26 @@ Wave B 之前至少要求：
 
 | Task | 状态 | 依赖 | 目标 |
 |---|---|---|---|
-| B2-X4 | ✅ CLAIMED → `agent/b2-x4-kill-feel` | X1 | Kill Feel v1 |
-| B2-X5 | ✅ CLAIMED → `agent/b2-x5-camera-impulse` | X1 | Camera Impulse v1；heavy/crit/kill，普通 hit/DoT 默认不震 |
-| B2-X6 | ✅ CLAIMED → `agent/b2-x6-combat-audio-layers` | X1 + B1 X4 | Combat Audio Layers v1；hit/crit/kill/cluster 分层 |
+| B2-X4 | ✅ COMPLETED → `agent/b2-x4-kill-feel` = `8f4a65f` | X1 | Kill Feel v1；contract 80/80 PASS + apply dry-run PASS；分层 normal/elite/boss + cluster 预算抑制（GameState 400ms/3 cap），复用 shatter/poof 资产，零新总线/零伤害改动 |
+| B2-X5 | ✅ COMPLETED → `agent/b2-x5-camera-impulse` = `54fa8d2` | X1 | Camera Impulse v1；contract 93/93 PASS；impulse 仅绑定 kill/elite_kill/heavy（普通 hit/DoT 默认不震），budget/window/decay/cap/cluster 合并/telemetry 齐备 |
+| B2-X6 | ✅ COMPLETED → `agent/b2-x6-combat-audio-layers` = `d5d70ae` | X1 + B1 X4 | Combat Audio Layers v1；contract 120/120 + selftest 14/14 PASS；light/heavy/kill/cluster 分层经 k4 单漏斗（16 voice budget/tree_exited 保留），DoT 抑制，零新增二进制资产 |
 
-X4/X5/X6 已在 `batch/b2-waveb-anchor` 上并发。
+Wave B 已完成并集成：`fe17456`(X4) → `03a2b20`(X5) → `2917fff`(X6)。集成后验证：三个 contract 全 PASS、abs-path production_hardcode=0、secret findings=0。
 
 ## B2-I1
 
 Wave A / Wave B 完成后中央集成：
 
-`collect → scope/security/path review → preimage/semantic conflict → integration → final aggregate candidate → S0/S1/S2/S4 → machine S5 evidence → HUMAN S5 gate → B3 planning`
+- ✅ collect handoffs（X0–X6 全部完成）
+- ✅ scope / immutable / secret / abs-path review（abs-path 0 hardcode、secret 0 findings；00_original/03_raw/04_recovered 未触碰）
+- ✅ base/final SHA 校验（全部 base=对应 anchor，final SHA 远端核验）
+- ✅ preimage drift / semantic conflict graph（merge-tree 预检全部 conflict_blocks=0；X4/X5/X6 相互与 X1 锚点零重叠）
+- ✅ 合并 X0–X6 → `2917fff`
+- ⏳ final aggregate Candidate + aggregate S0/S1/S2/S4（B2-I1 聚合构建阶段，依赖 GDRE 管线）
+- ⏳ machine S5 evidence（X2 工具已就绪，待 aggregate Candidate）
+- ⏳ HUMAN S5 gate（保持 HUMAN_REQUIRED，人工/VM 验收）
+- ⏳ 更新 PR（本文件提交后执行）
+- ⏳ B3 planning（含 Build Density 基线与更完整 Combat Polish）
 
 ## B2 不做的事
 
