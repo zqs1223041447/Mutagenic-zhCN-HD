@@ -165,3 +165,44 @@ S0 + S1 + S2 + S3 + S4 PASS + HUMAN S5 PASS + GitHub CI PASS + final fresh rebui
 ## Promotion 条件（GPT 再强化，含调试入口剥离）
 
 GitHub CI PASS + Promotion Candidate fresh rebuild + S0/S1/S2/S3/S4 PASS + HUMAN S5 PASS + Validation↔Promotion parity PASS + 无 diagnostic/test-only MOD + 用户显式批准。HUMAN S5 绑定最终 Promotion Candidate SHA；若人工验收的是 Validation Candidate 也可沿用，前提是 parity contract 证明唯一差异为 TestLevel/harness 调试入口。
+
+---
+
+# B3-P3 — Promotion Candidate Validation Wave（GPT 评审 2026-08-20 批准）
+
+> **Base**：`batch/b3-p3-anchor` = `8e28662`（B3-P2 集成 HEAD）
+> **状态**：OPEN FOR CLAIM
+> **背景**：GPT 评审 B3-P2 PASS（S2 telemetry 闭环、parity 32/32、S3 gate、CI 全绿采纳）。工程已从"开发功能"进入"把开发 Candidate 变成可被信任的发行 Candidate"阶段：生成 Promotion Candidate → 全量验证 → 证据打包，之后进入最终 Promotion Review。
+
+## 执行原则
+
+- 三任务并行，独立 branch + worktree（batchctl claim）；
+- **禁止** baseline promotion；**禁止** Combat Polish 数值调整（WAITING_HUMAN_S5，2–8 项 DEFERRED_BY_USER，提前调参会污染人工验收基线）；**禁止** Build Density 正式实验；
+- Promotion Candidate = 正式 Kinetic Arcane gameplay mods（K1/K2/Event Spine/Kill Feel/Camera/Audio）− 全部 diagnostic/test-only MOD（k5 harness runtime、ENABLE_TEST_ZONE bridge、marker writer、KEY_END debug route、b3-p1-s2-diagnostic）；
+- 复用 B3-P2-X1 已建链根 `mods/b3-p2-x1-promotion-aggregate`（11 mods/49 patches，parity 32/32 已证）为构建输入；
+- 不修改 `00_original/03_raw/04_recovered`；apply_mod 硬约束；候选产物放 10_logs/ 不入库；
+- 所有 Gate 必须 evidence 化（PASS 注明证明什么/不证明什么），禁止伪造。
+
+## 任务合同
+
+### B3-P3-X0 — Promotion Candidate Build
+
+用 `mods/b3-p2-x1-promotion-aggregate/mod.json` 作为链根，走 canonical pipeline：resolve → apply → compile（manifest 声明脚本）→ pack → **fresh embed（从 00_original）** → Promotion Candidate EXE。输出：resolved chain（mods/patches 清单）、candidate SHA256 + bytes、removed diagnostic 清单（对照 Validation 差集：k5 harness + b2-x0 bridge + b3-p1-s2-diagnostic）、Build ID、toolchain/manifest 记录。验证产物结构（verify_exe_structure / normalize_pck_md5 等既有工具），确认无 harness/test-only 痕迹（复用/引用 parity 脚本或等价断言：Promotion Candidate 不含 ENABLE_TEST_ZONE=true、无 marker writer、无 KEY_END route）。验收：candidate 产出 + 结构验证 PASS + removed 清单可追溯。
+
+### B3-P3-X1 — Promotion Candidate Gates
+
+在 B3-P3-X0 产出的 Promotion Candidate 上执行 S0/S1/S2/S3/S4 全量验证：
+- **S0** 结构：roundtrip/PCK checksum/delta 精确（复用既有工具，如 verify_exe_structure / roundtrip）；
+- **S1** boot：真实窗口/进程 + 无 ALERT + 无 fatal（probe_boot 或等价）；
+- **S2** Promotion 版核心冒烟：游戏启动 → 主流程 → 存档路径 → 基础战斗路径；**不依赖 TestLevel debug harness**（不要用 harness 当正式运行证明；正式路径无 harness 可用时如实记录 BLOCKED+原因，不伪造）；
+- **S3** persistence：复用 B3-P2-X2 的 `s3_persistence_gate.py` 在 Promotion Candidate 上重跑（手册 B3-P2-S3_PERSISTENCE_GATE.md §5.4）；
+- **S4** mod-specific 语义：既有 semantic contracts 在 Promotion 链根上通过（check_all 组件内或等价验证）；
+- 全部结果 evidence 化（S0–S4 各自 PASS/BLOCKED + proves/not_proven）。验收：S0–S4 全 evidence 化，真实运行记录。
+
+### B3-P3-X2 — Final Evidence Bundle
+
+整理 Promotion Evidence Package：Candidate SHA + MOD chain + parity report（引用 B3-P2-X1）+ S0–S4 gates（引用 X0/X1 产出）+ CI run（引用 push run id）+ 未验证项清单 + HUMAN S5 checklist（绑定 Promotion Candidate SHA，状态 WAITING）。结构对齐既有证据文档（manifest/evidence JSON + 人类可读说明）。目标：将来 baseline promotion 时只需人工确认，不用重新整理证据。验收：bundle 完整、可追溯、引用真实产物路径/hash。
+
+## B3-P3 集成
+
+三任务完成后：merge-tree 预检 → 依序合并 → check_all 全量 → CI run 确认 → push 核验 → 更新 B3_STATUS/PR → GPT 评审（最终 Promotion Review）。HUMAN S5 继续等待（Promotion Candidate 产出后供用户验收）。
