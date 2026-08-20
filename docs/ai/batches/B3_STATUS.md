@@ -29,7 +29,23 @@
 
 - B3 Combat Polish 实际调参（Kill/Camera/Audio 数值）→ WAITING_HUMAN_S5，暂不 claim
 - B3 Density 真实实验（提高密度并测性能/可读性）→ 依赖 S2 PASS + S5 稳定
-- GitHub CI 首跑观察（本地无 act，以 GitHub 侧 job 状态为准）
+- ✅ GitHub CI Bring-up（B3-P1-X0）完成：GITHUB_RUN_PASS（真实 Actions run 实证，见下）
+
+## CI 状态（B3-P1-X0 Bring-up 实证）
+
+> **结论：GITHUB_RUN_PASS** —— `ci-static-semantic`（workflow_id 338323634）在协调线每次 push / PR sync 均产生真实 Actions run 且全部 success，非本地 check_all 冒充。
+
+**诊断经过（gh CLI 实测，不猜）**：
+1. workflow 是否被识别：`gh workflow list` → `ci-static-semantic active 338323634` ✅；
+2. 协调线 HEAD 是否有 run：`gh api repos/.../actions/runs` → de039a6（B3-P0 集成 HEAD）push run `32337242527` + PR run `32337246144` 均 `conclusion=success`；后续 cf059cf 的 push/PR run（`32338068644`/`32338071546`）同样 success ✅；
+3. Draft PR #1：`gh pr checks 1` 显示 2 个 check `pass`，`pull_request` 事件（opened/synchronize）在 Draft PR 上照常触发——Draft 不是无 run 的原因；
+4. "combined status 为空"真相：`GET /commits/{sha}/status` 返回 `statuses: []` 是 **legacy commit-status contexts 通道**；GitHub Actions 结果走 **Check Runs API**（`check-runs` 实证 2 个 run success）。空 statuses 是 API 语义，不代表 CI 未运行；GPT 评审时的 combined-status 工具观察的通道看不到 Actions。
+
+**修复（最小改动）**：workflow 增加 `workflow_dispatch` 触发（手动复验通道，`gh workflow run ci-static-semantic --ref <branch>`）；`push`/`pull_request` 保持全分支/PR 监听。行为无其他变更。
+
+**复验**：`agent/b3-p1-x0` 分支 push + dispatch 各产生一个 run，均 PASS（详见该任务交接的 run id/url）。
+
+**查看方式**：`gh pr checks 1`、`gh run list`、`gh run view <id>` 或仓库 Actions tab；PR 合并所需 required checks 若启用 branch protection 才会写 branch 状态，当前 repo 未启用。
 
 ## 主控最简启动指令（B3-P0 已执行完毕）
 
