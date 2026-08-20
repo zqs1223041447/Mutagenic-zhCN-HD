@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T08:10:00+08:00",
+  "updated_at": "2026-08-20T11:59:00+08:00",
   "project_phase": "PHASE_6_INCREMENTAL_MOD_LOCALIZATION_INTEGRATION",
   "original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
   "trusted_baselines": {
@@ -174,11 +174,13 @@
     "localization_c5_l25_core_playable_v7": "PASS",
     "localization_c5_l29_core_playable_v8": "PASS",
     "localization_c5_l32_core_playable_v81": "PASS",
-    "visual_ui_remaster": "IN_PROGRESS"
+    "visual_ui_remaster": "IN_PROGRESS",
+    "b2_i1_aggregate": "PASS"
   },
   "gate_scope": {
     "localization": "IN_PROGRESS: C5-L1 through C5-L20 machine Gates PASS (main menu, character select, dialogs, settings, keybinds, pause/death, HUD, skills 53+60, passives 326+88, stats/tags, dynamic UI, static scenes, zones/monsters, status effects, equipment, unique items); human checkpoints are SHA-bound phase records with active_blocker=false; broad localization continues",
-    "persistence_track": "COMPLETED_FOR_LOCAL_PLAY: the P7-FIX persistence experiment is closed. Machine gates (preimage patch, one-script compile, exact two-path delta, PCK/EXE structure, full roundtrip, GDRE semantic recovery showing USE_STEAM=false, boot, isolated-APPDATA local save/load cycle) are PASS, and the SHA-bound human checkpoint is PASS (user created character asdf in runtime_candidate, closed and reopened, character exists and is usable; save file C:/Users/ZQS/AppData/Roaming/Godot/app_userdata/Mutagenic/_0_6_0.dat SHA A2DD4595ECF0128AA57037D4D9206CAA89832FAAEEFFC2EE32F3295A59844E99). ORIGINAL/CLEAN NOOP Quit observations remain in the separate baseline/environment track and are not localization regressions; Steam-available parity is out of scope by user decision (LOCAL_PLAY_ONLY)."
+    "persistence_track": "COMPLETED_FOR_LOCAL_PLAY: the P7-FIX persistence experiment is closed. Machine gates (preimage patch, one-script compile, exact two-path delta, PCK/EXE structure, full roundtrip, GDRE semantic recovery showing USE_STEAM=false, boot, isolated-APPDATA local save/load cycle) are PASS, and the SHA-bound human checkpoint is PASS (user created character asdf in runtime_candidate, closed and reopened, character exists and is usable; save file C:/Users/ZQS/AppData/Roaming/Godot/app_userdata/Mutagenic/_0_6_0.dat SHA A2DD4595ECF0128AA57037D4D9206CAA89832FAAEEFFC2EE32F3295A59844E99). ORIGINAL/CLEAN NOOP Quit observations remain in the separate baseline/environment track and are not localization regressions; Steam-available parity is out of scope by user decision (LOCAL_PLAY_ONLY).",
+    "b2_i1_aggregate": "B2-I1_AGGREGATE (non-baseline gate, no promotion): S0/S1/S4/machine-S5 PASS per docs/ai/audits/B2-I1_AGGREGATE_EVIDENCE.json - S0 structure (roundtrip 11/11, delta 精确, normalize rejected=0, exe_structure 3744/3744) PASS, S1 boot (probe_boot, isolated APPDATA) PASS, S4 semantic (event_spine 44/44, kill_feel 80/80, camera 93/93, combat_audio 120/120, pipeline 78/78) PASS, machine S5 evidence package selfcheck 23/23 + candidate-side NOT_RUN skeleton (EVIDENCE_PREPARED, machine 绝不写 HUMAN_ACCEPTED); S2 BLOCKED 如实记录 (launcher window_found=true, telemetry_found=false, 无 VM 环境限制同 B2-X0, 非阻断); human S5 HUMAN_REQUIRED (VM + 人工 checklist 验收 combat feel)。resolution_order 14 mods per evidence；未写入 trusted_baselines。"
   },
   "evidence": {
     "environment": "10_logs/environment.json",
@@ -328,7 +330,8 @@
     "c5_l19": "10_logs/C5-L19-unique-items-20260815/build.json",
     "c5_l20": "10_logs/C5-L20-core-playable-v3-20260815/build.json",
     "c5_l20_semantic": "10_logs/C5-L20-core-playable-v3-20260815/semantic_confirmation.json",
-    "c5_l20_human_request": "10_logs/C5-L20-core-playable-v3-20260815/HUMAN_CHECK_REQUEST.md"
+    "c5_l20_human_request": "10_logs/C5-L20-core-playable-v3-20260815/HUMAN_CHECK_REQUEST.md",
+    "b2_i1_aggregate": "docs/ai/audits/B2-I1_AGGREGATE_EVIDENCE.json"
   },
   "known_baseline_behaviors": [
     "ORIGINAL and CLEAN NOOP share the previously observed Quit/persistence uncertainty; this is a separate baseline track.",
