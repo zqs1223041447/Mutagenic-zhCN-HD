@@ -1,12 +1,12 @@
 # B3 协调状态视图
 
 > **Batch**：`B3`
-> **状态**：`B3-P2_INTEGRATED`（B3-P0 四任务 + B3-P1 三任务 + B3-P2 三任务全部集成：CI 云端 PASS / S2 telemetry 生命周期闭环 / Validation-Promotion 候选分隔 / S3 persistence 无人值守门禁；check_all 13/13 PASS）
+> **状态**：`B3-P3_INTEGRATED`（B3-P0 四任务 + B3-P1 三任务 + B3-P2 三任务 + **B3-P3 Promotion Candidate Validation Wave** 全部集成：Promotion Candidate 构建 + S0–S4 门禁 + Final Evidence Bundle；check_all 13/13 PASS）
 > **Integration line**：`agent/kinetic-arcane-remaster-foundation`
-> **B3 集成 HEAD**：`d86cf12`（P0: f1546f4；P1: 9be7fc0；P2: X0→X1→X2 依序合并，仅 check_all_components.json 双组件冲突已消解）
-> **Planning/prep base**：`batch/b3-anchor` = `68bb1c1`（P0）；`batch/b3-p1-anchor` = `de039a6`（P1）；`batch/b3-p2-anchor` = `60f9232`（P2）
+> **B3 集成 HEAD**：`c1b8262`（P0: f1546f4；P1: 9be7fc0；P2: d86cf12；P3: X0→X1→X2 依序合并，无冲突）
+> **Planning/prep base**：`batch/b3-anchor` = `68bb1c1`（P0）；`batch/b3-p1-anchor` = `de039a6`（P1）；`batch/b3-p2-anchor` = `60f9232`（P2）；`batch/b3-p3-anchor` = `8e28662`（P3）
 > **任务合同**：`docs/ai/batches/B3_PLAN.md`
-> **来源**：GPT 评审（2026-08-20，会话 6a83bc24）：B2-I1 判定"有条件 PASS"；B3-P0 评审 PASS；B3-P1 评审 PASS（采纳 GITHUB_RUN_PASS）；批准 B3-P2 S2/S3/候选边界收口；Combat Polish 调参保持 WAITING_HUMAN_S5。
+> **来源**：GPT 评审（2026-08-20，会话 6a83bc24）：B2-I1 判定"有条件 PASS"；B3-P0 评审 PASS；B3-P1 评审 PASS（采纳 GITHUB_RUN_PASS）；B3-P2 评审 PASS；批准 B3-P3 Promotion Candidate Validation Wave。Combat Polish 调参保持 WAITING_HUMAN_S5。
 
 ## B3-P0 — 已完成并集成
 
@@ -39,24 +39,36 @@
 
 集成验证：merge-tree 预检 X0↔X1 / X0↔X2 均 clean，仅 X1↔X2 在 `check_all_components.json` 双组件冲突（validation_promotion_parity + s3_persistence_selfcheck，均已保留）→ 依序合并 `d86cf12` → check_all **13/13 PASS**（新增 parity 32/32、s3 17/17）→ abs-path production_hardcode=0 → secret findings=0 → worktrees 全部清理（长路径残留已用 `rmdir /s /q \\?\...` 手动清除）→ push 核验远端 d86cf12 一致 → CI run（push 32354647049 + PR 32354650592）确认。
 
+## B3-P3 — 已完成并集成（GPT 评审批准 Promotion Candidate Validation Wave）
+
+> **执行说明**：X0/X1/X2 三任务子 agent 通道连续空回传（各 2–3 次，磁盘零改动），主控按"空回传先核磁盘再重派、两次后主控接管"策略接管执行并全量实证。
+
+| Task | 状态 | 分支 / final_sha | 交付 |
+|---|---|---|---|
+| B3-P3-X0 | ✅ COMPLETED → `agent/b3-p3-x0` = `f0b086f` | **Promotion Candidate Build**：链根 `mods/b3-p2-x1-promotion-aggregate/mod.json`（11 mods/49 patches）canonical pipeline 全链 PASS：resolve（49 patches）→ apply（49/5058，changed 面无 TestLevel.gd）→ compile（10 unique gd/8 GDRE invocations）→ build_declared_pack（3744，base=03_raw）→ GDRE pck-create（PCK v1/3.5.3，注意 pck-version 必须传 1）→ normalize_pck_md5（3743 valid + 1 已知零字节修复，与 b2-i1 一致）→ **fresh embed from 00_original** → verify_exe_structure **3744/3744 PASS**（pck-start 40545280）；**零痕迹断言 PASS**：forbidden tokens 0 命中、ENABLE_TEST_ZONE=false、无 marker writer/KEY_END/request-driven harness；candidate `10_logs/b3-p3-x0-promotion-20260820/candidate/Mutagenic.exe` **sha256 3127D394… 103336292B**（已复制保留到主仓库 10_logs 供 S5）；证据 `docs/ai/audits/B3-P3-X0_PROMOTION_BUILD.json` |
+| B3-P3-X1 | ✅ COMPLETED → `agent/b3-p3-x1` = `280f2c0` | **Promotion Candidate Gates**：S0 结构 PASS（verify_exe_structure 3744/3744 复用）；S1 boot PASS（probe_boot 20s：窗口 Mutagenic、无 modal、无 fatal、game_window=True）；**S2 core smoke 如实 BLOCKED**（promotion 无 request-driven harness 无 TestLevel 自动化入口——parity 实证；启动/存档面已由 S1/S3 覆盖，基础战斗路径待 HUMAN S5 实机）；**S3 persistence PASS**（s3_persistence_gate.py 在 Promotion Candidate 重跑 exit=0：run1 载入 seed→重写磁盘→退出→run2 同 APPDATA 重载 LOADED AND MERGED→重写，semantic_sha256 `a7ca81b8…` 双轮一致、diffs=0、planted marker 存活、volatile 仅 timestamp/checksum/stamp）；**S4 semantic PASS**（parity 32/32：49 共享 patch 逐字节一致、差集恰为 harness 驱动+ENABLE_TEST_ZONE bridge+diagnostics、forbidden tokens 0 命中）；证据 `docs/ai/audits/B3-P3-X1_PROMOTION_GATES.json` + `10_logs/b3-p3-x1-promotion-gates-20260820/`（已保留） |
+| B3-P3-X2 | ✅ COMPLETED → `agent/b3-p3-x2` = `424ee98` | **Final Evidence Bundle**：`docs/ai/audits/B3_PROMOTION_EVIDENCE_PACKAGE.json` + `docs/ai/batches/B3_PROMOTION_EVIDENCE_PACKAGE.md`——Promotion Candidate（SHA/bytes/Build ID 20260820-X0-3127D394）、MOD chain（11 mods/49 patches）、parity 32/32、S0–S4 gates、CI run 汇总（真实 id 全 success）、未验证项逐条带来源（Steam 云分支/perf 占位/all_killed 出口未独立触发/Steam 云/S5 2–8 DEFERRED）、HUMAN S5 checklist 绑定 Promotion Candidate SHA **3127D394…** 状态 WAITING（第 1 项用户反馈已录"不要屏幕震动"与契约一致；2–8 DEFERRED_BY_USER）；PENDING_X0/PENDING_X1 标注已随 X0/X1 证据产出回填为真实引用 |
+
+集成验证：merge-tree 预检三分支两两 clean → 依序合并 `c1b8262`（X0 ed29469 → X1 09fb537 → X2 c1b8262）→ check_all **13/13 PASS**（head c1b8262）→ push 核验远端 c1b8262 一致 → CI run（push **32365409301** + PR **32365414341**）均 success → 运行证据（X0 build 产物/X1 s3+parity 证据）已复制保留到主仓库 10_logs；P3 worktrees 待清理。
+
 ## B2 遗留待办（更新）
 
-- ⏳ HUMAN S5 gate（HUMAN_REQUIRED：8 项人工 A/B 验收，等待用户反馈；机器绝不写 HUMAN_ACCEPTED）——S5 Intake Map 已就绪，反馈回来可立即生成调参任务。用户已反馈第 1 项"不要屏幕震动"（与契约一致：direct_hit 无 camera impulse），2–8 项 DEFERRED_BY_USER（等后续实际进展再测）；反馈表 `10_logs/s5-human-feedback-20260820.md`
+- ⏳ HUMAN S5 gate（HUMAN_REQUIRED：8 项人工 A/B 验收，等待用户反馈；机器绝不写 HUMAN_ACCEPTED）——S5 Intake Map 已就绪，**HUMAN S5 checklist 现绑定 Promotion Candidate SHA 3127D394…**（B3_PROMOTION_EVIDENCE_PACKAGE.json）；用户已反馈第 1 项"不要屏幕震动"（与契约一致：direct_hit 无 camera impulse），2–8 项 DEFERRED_BY_USER（等后续实际进展再测）；反馈表 `10_logs/s5-human-feedback-20260820.md`；**S5 可测候选：`10_logs/b3-p3-x0-promotion-20260820/candidate/Mutagenic.exe`（sha256 3127D3948BCEEC66057F6D2359EB2E47C0FA77938F1153F41AA2C348E2FF7314）**
 - ✅ S2 telemetry：B3-P2-X0 已闭环——run1 timeout/run2 player_died 双出口真实 telemetry PASS（生命周期 + exit_reason + checkpoint + session 文件全齐）；perf 帧统计仍为占位（frames=0/fps_min=0 由游戏侧后续填充）；all_killed/scene_exit 出口未独立运行触发（代码路径由编译+结构验证覆盖）
-- ✅ S3 persistence：B3-P2-X2 已建立无人值守门禁并在当前候选真实 PASS；promotion 候选必须重跑门禁
-- ⏳ Validation/Promotion：B3-P2-X1 已分隔并 parity 32/32 PASS；promotion 候选**未构建/未跑 S0–S5**（已声明 gated，not_proven 如实写入报告）
-- ⏳ baseline promotion：绝对禁止（强化条件：S0+S1+S2+S3+S4 PASS + HUMAN S5 PASS + GitHub CI PASS + final fresh rebuild + Validation↔Promotion parity PASS + 无 diagnostic/test-only MOD + 用户显式批准）
+- ✅ S3 persistence：B3-P2-X2 已建立无人值守门禁；**B3-P3-X1 已在 Promotion Candidate 重跑 PASS**（语义指纹 a7ca81b8 双轮一致、diffs=0、planted marker 存活，exit 0）
+- ✅ Validation/Promotion：B3-P2-X1 已分隔并 parity 32/32 PASS；**B3-P3-X0 已构建 Promotion Candidate（3127D394）**；**B3-P3-X1 已在候选上跑 S0/S1/S3/S4 PASS、S2 如实 BLOCKED**（正式路径无 harness，基础战斗路径待 HUMAN S5 实机）
+- ⏳ baseline promotion：绝对禁止（强化条件：S0+S1+S2+S3+S4 PASS + HUMAN S5 PASS + GitHub CI PASS + final fresh rebuild + Validation↔Promotion parity PASS + 无 diagnostic/test-only MOD + 用户显式批准）——S2 仍 BLOCKED、HUMAN S5 未过，条件未满足
 
 ## 下一批（待 HUMAN S5 反馈 + GPT 评审）
 
 - B3 Combat Polish 实际调参（Kill/Camera/Audio 数值）→ WAITING_HUMAN_S5（S5 Intake Map 提供任务书模板；用户 2–8 项 DEFERRED_BY_USER）
 - B3 Density 真实实验（提高密度并测性能/可读性）→ 依赖 S2 telemetry 完成 + S5 稳定
-- B3-P2-X1 后续：promotion 候选构建 + 其上 S0–S5 重跑（含 S3 gate 重跑）→ 交 B3-P2 集成后的后续批次
+- **B3-P3 后续：最终 Promotion Review——三任务已集成（c1b8262）、check_all 13/13、CI 全绿；待 GPT 评审终审 + HUMAN S5 在 Promotion Candidate（3127D394）上恢复测试（2–8 项）**
 - GitHub CI 状态：GITHUB_RUN_PASS（真实，见下节）
 
-## CI 状态（B3-P2 集成 HEAD 实证）
+## CI 状态（B3-P3 集成 HEAD 实证）
 
-> **结论：GITHUB_RUN_PASS** —— B3-P2 集成后最终 HEAD `359d1f5` 的 push run `32354862043`（3m31s）全 success：workflow yaml syntax ✓、abs-path scan ✓、secret scan ✓、unified check-all ✓、upload gate evidence ✓。PR run `32354867312` 同期全绿。B3-P2-XX 各分支 push run（X0 `32354141596`、X2 `32350960008` 等）亦全 success。
+> **结论：GITHUB_RUN_PASS** —— B3-P3 集成后最终 HEAD `c1b8262` 的 push run `32365409301` 全 success，PR run `32365414341` 同期全绿。B3-P2 集成 HEAD `359d1f5` push run `32354862043`（3m31s）全 success：workflow yaml syntax ✓、abs-path scan ✓、secret scan ✓、unified check-all ✓、upload gate evidence ✓。B3-P3-XX 各分支 push run（X0 `32364412514`、X2 `32365035096` 等）亦全 success。
 
 > **结论：GITHUB_RUN_PASS** —— `ci-static-semantic`（workflow_id 338323634）在协调线每次 push / PR sync 均产生真实 Actions run 且全部 success，非本地 check_all 冒充。
 
