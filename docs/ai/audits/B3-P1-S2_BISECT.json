@@ -1,0 +1,105 @@
+{
+  "task_id": "B3-P1-X1",
+  "title": "S2 Save Bisect — GameState.do_save_game() 子步骤冻结定位",
+  "branch": "agent/b3-p1-x1",
+  "base_sha": "de039a6ce0c86e0c104268f359f3279f7c2ef3a9",
+  "audit_date": "2026-08-20",
+  "build": {
+    "candidate_exe": "Mutagenic_s2diag2.exe",
+    "candidate_exe_sha256": "F7A8C874ADCCBCF1BB8A0336319AE2079F00DD6EF182B6187D1F968F2904D95A",
+    "candidate_exe_bytes": 103342596,
+    "diagnostic_mod": "mods/b3-p1-s2-diagnostic (12 CODE_PATCHes)",
+    "diagnostic_patches": [
+      "GameState.gd x11 (m01_enter..m11_onsave_done markers in do_save_game) + helper _s2marker(token)",
+      "HideoutLevel.gd x1 (accept scancode KEY_END for goto_test_level; physical_scancode 不可由合成输入填充)"
+    ],
+    "game_fingerprint_target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+    "game_state_gd_original_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+    "hideout_level_gd_original_sha256": "2b4aea0a97a39ebf295d9ec7cf883086eb7bdc2af3a0d734b19af2c67324b3d1",
+    "chain": [
+      {"step": "resolve_mod_chain", "verdict": "PASS", "patch_count": 63, "mods": 15},
+      {"step": "apply_mod", "verdict": "PASS", "file_count": 5058, "changed": 63},
+      {"step": "compile_declared_scripts", "verdict": "PASS", "unique_gd": 12, "gdre_invocations": 10},
+      {"step": "build_declared_pack", "verdict": "PASS", "count": 3744},
+      {"step": "GDRE pck-create + normalize_pck_md5", "verdict": "PASS", "entries": 3744, "already_valid": 3743, "patched": 1},
+      {"step": "embed_pck fresh from 00_original/Mutagenic.exe", "verdict": "PASS"},
+      {"step": "verify_exe_structure --pck-start 40545280", "verdict": "PASS", "valid_entries": 3744}
+    ]
+  },
+  "method": "声明式 diagnostic MOD 在 GameState.do_save_game() 全部 11 个子步骤写入 user://s2_markers/ 标记文件（m01_enter→m02_timestamp→m03_checksum→m04_stamp→m05_serialize→m06_dataprep→m07_pre_open→m08_open_done→m09_store→m10_close→m11_onsave_done）；以内容+时间戳双差分追踪每次写入/重写。三组 control + 2 组输入注入 run，" ,
+  "controls": [
+    {
+      "id": "c1",
+      "scenario": "生成 seed save (_0_6_0_default.dat, sha6e58c3e817, 3740B) + request.json, 无输入, 50s",
+      "result": "markers 11/11 完成 (load 3.8s 全簇) + debounce 8.8s 全簇重写 (marker_rewrite x11)",
+      "save_rewrites": ["703445456c@4.0s size2082", "69aa4b229e@9.3s size2170"],
+      "cpu_percent_range": "0.0-1.6 (菜单空闲)",
+      "freeze": "NO",
+      "evidence": "controls/c1/control_c1_evidence.json"
+    },
+    {
+      "id": "c2",
+      "scenario": "历史真实存档 (b3-x0 run1 apdata _0_6_0.dat, sha225905116a) + request.json, 无输入, 50s",
+      "result": "markers 11/11 完成 (load 3.8s) + debounce 8.8s 全簇重写",
+      "save_rewrites": ["4b3c9edf7c@3.8s size2170", "6d3e293e45@8.8s size2170"],
+      "cpu_percent_range": "0.0-3.1 (菜单空闲)",
+      "freeze": "NO",
+      "evidence": "controls/c2/control_c2_evidence.json"
+    },
+    {
+      "id": "c3",
+      "scenario": "全新 profile（无存档无 request）, 50s",
+      "result": "首次启动即创建 default save：markers 11/11 完成 @8.5s (debounce 触发)，save_after=58610c395a size729",
+      "cpu_percent_range": "0.0-2.3",
+      "freeze": "NO",
+      "evidence": "controls/c3/control_c3_evidence.json"
+    },
+    {
+      "id": "c4",
+      "scenario": "seed save + Enter 注入 (菜单→World) + PostMessage End x16, 75s",
+      "result": "World 进入 (GOING TO HIDEOUT/Resetting World)；debounce 全簇 m01..m11 @10.6s；End 键无 goto_test_level（物理键绑定不匹配合成 WM_KEYDOWN）",
+      "freeze": "NO",
+      "evidence": "controls/c4/control_c4_evidence.json"
+    },
+    {
+      "id": "c5/c6",
+      "scenario": "SendInput/keybd_event End 注入（含 ALT+SetForegroundWindow 解锁）, 80s",
+      "result": "fg_ok=False x25/25：控制台环境无法把游戏窗口置为前台，真实输入路径不可达；物理键注入路线被排除",
+      "freeze": "NO",
+      "evidence": ["controls/c5/control_c5_evidence.json", "controls/c6/control_c6_evidence.json"]
+    },
+    {
+      "id": "c7",
+      "scenario": "patch 后候选 (Mutagenic_s2diag2.exe) + Enter 注入 + PostMessage End x24, 75s",
+      "result": "End#1 = 15.4s → 'Destination found:test_level'+'[COMBAT_HARNESS] scenario=single_melee_hit seed=2026082124 spawns=started'；路由全通；3 次进入 test_level 均 spawns=started；玩家被 3 只 SkeletonWarrior 击杀 (You died. x3) → 回 hideout → 20s 计时器未及触发，telemetry 未写出（战斗切片遗留项，非存档路径问题）",
+      "freeze": "NO",
+      "evidence": "controls/c7/control_c7_evidence.json"
+    }
+  ],
+  "verdict_save_bisect": "PASS — do_save_game() 全部 11 个子步骤在全部 6 次运行、每次 save 调用（加载期 save、debounce save、世界切换 save、全新档首次建档）中均完整执行，最末标记 m11_onsave_done 恒达。'Doing actual save from debounce 处冻结' 的 X0 假设被证伪：该行为 kill 时日志 flush 截断伪影（godot.log 滞后刷盘），实际 save 代码毫秒级完成。冻结不发生在 do_save_game 内部。",
+  "root_cause_of_stalled_chain": {
+    "原 X0 两大误判": [
+      "1) goto_test_level 键是 physical_scancode=16777253 (KEY_END/End)，launcher 一直发 F10 (0x79) —— 键发错了：'Destination found:test_level' 从未出现；",
+      "2) SendInput 需前台焦点，而控制台无法激活游戏窗口（fg_ok=False 25/25），PostMessage 又是唯一可达通道但无法填充 physical_scancode → 动作永不匹配。"
+    ],
+    "修复": "diagnostic MOD 增补 HideoutLevel.gd 一行：`or event.scancode == KEY_END`（postmessage 合成键携带 scancode=KEY_END），不改任何 gameplay 路径 (ENABLE_TEST_ZONE 仍为唯一开关，仍属调试面)。",
+    "修复后证据": "c7 log: Destination found:test_level → Resetting World → [COMBAT_HARNESS] scenario=single_melee_hit seed=2026082124 spawns=started（共 3 次）。S2 路由（boot→菜单→hideout→test_level→harness 生怪）完整打通。"
+  },
+  "telemetry_gap": {
+    "表现": "harness 每次 spawns=started 后 3-5s 内被玩家死亡 (You died.) 打断 → switch_levels(hideout) → TestLevel 释放 → 20s 计时器未触发 → [COMBAT_HARNESS] DONE 从未打印、telemetry_*.json 未写出。",
+    "归属": "B1-X5/k5-combat-harness 战斗切片（需战斗输入或 0-damage 调参），不属本 S2 存档 bisect 范围；路由可达性已证明。"
+  },
+  "gates": [
+    {"gate": "combat_harness_selftests.py", "verdict": "PASS", "detail": "16/16"},
+    {"gate": "abs_path_scan --changed-in base --fail-on FAIL", "verdict": "PASS", "detail": "hits=0 production_hardcode=0"},
+    {"gate": "secret_scan", "verdict": "PASS", "detail": "findings=0"},
+    {"gate": "py_compile save_bisect_runner.py", "verdict": "PASS"},
+    {"gate": "脚本/数据可移植性", "verdict": "PASS", "detail": "runner/exe 路径全部 CLI 注入，证据 JSON 无硬编码宿主路径"}
+  ],
+  "evidence_locations": "10_logs/b3-p1-x1-s2-bisect-20260820/ (build/ + controls/c1..c7/, 不入库)",
+  "residual_risks": [
+    "c7 中 Enter 注入持续 75s（含世界内），可能触发未预期 UI；后续 run 建议缩短 enter 窗口到 hideout 进入为止",
+    "telemetry 补全需战斗切片侧提供稳定击杀/免伤手段",
+    "HideoutLevel 补丁为调试面改动，若验收需要 '原样按键可用'，最终方案应改 launcher 用真实键（VM/人类会话）而非本补丁"
+  ]
+}

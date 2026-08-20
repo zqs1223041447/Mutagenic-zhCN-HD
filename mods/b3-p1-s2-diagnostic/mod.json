@@ -1,0 +1,160 @@
+{
+  "id": "b3-p1-s2-diagnostic",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "b2-i1-aggregate"
+  ],
+  "conflicts": [],
+  "scope": "B3-P1-X1 S2 Save Bisect diagnostic: instrument GameState.do_save_game() substeps with disk-level markers under user://s2_markers/ (m01_enter, m02_timestamp, m03_checksum, m04_stamp, m05_serialize, m06_dataprep, m07_pre_open, m08_open_done, m09_store, m10_close, m11_onsave_done). Each marker is a unique empty-content file whose presence/absence in the user data dir bisects the B2-I1 debounce-save freeze into a specific substep. Pure observational CODE_PATCH: no gameplay behavior changes, no new res:// paths, marker writer is a standalone helper injected immediately before func do_save_game(). Anchors verified unique against pristine 04_recovered content (whole-file preimage 0976e0f4...). Applies on top of the full B2-I1 aggregate chain (14 mods) per task spec.",
+  "entities": [
+    {
+      "kind": "save_bisect_marker_probe",
+      "id": "Globals/GameState.gd::do_save_game::s2_markers",
+      "confidence": "FACT",
+      "expected_runtime_effect": "each do_save_game() invocation (load-time save_game(false) and the 5s-debounce save from _physics_process) writes marker files m01..m11 in creation order; the last marker present before the observed freeze identifies the frozen substep"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::s2_marker_helper",
+      "classification": "CODE_PATCH",
+      "old_text": "func do_save_game():",
+      "new_text": "func _s2marker(token):\n\t\t\t\tvar dir = Directory.new()\n\t\t\t\tdir.make_dir_recursive(\"user://s2_markers\")\n\t\t\t\tvar mf = File.new()\n\t\t\t\tvar err = mf.open(\"user://s2_markers/\" + token, File.WRITE)\n\t\t\t\tif err == OK:\n\t\t\t\t\t\t\t\tmf.store_string(str(OS.get_unix_time()))\n\t\t\t\t\t\t\t\tmf.close()\n\nfunc do_save_game():",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::do_save_game::m01_enter",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tvar old_time = saved_stats.timestamp\n",
+      "new_text": "\t\t\t\t_s2marker(\"m01_enter\")\n\t\t\t\tvar old_time = saved_stats.timestamp\n",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::do_save_game::m02_timestamp",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tsaved_stats.timestamp = OS.get_unix_time()\n",
+      "new_text": "\t\t\t\tsaved_stats.timestamp = OS.get_unix_time()\n\t\t\t\t_s2marker(\"m02_timestamp\")\n",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::do_save_game::m03_checksum",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tsaved_stats.checksum = compute_checksum(saved_stats, old_time)\n",
+      "new_text": "\t\t\t\tsaved_stats.checksum = compute_checksum(saved_stats, old_time)\n\t\t\t\t_s2marker(\"m03_checksum\")\n",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::do_save_game::m04_stamp",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tsaved_stats.stamp = compute_stamp(saved_stats)\n",
+      "new_text": "\t\t\t\tsaved_stats.stamp = compute_stamp(saved_stats)\n\t\t\t\t_s2marker(\"m04_stamp\")\n",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::do_save_game::m05_serialize",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tvar serialized = JSON.print(saved_stats, \"\", true)\n",
+      "new_text": "\t\t\t\tvar serialized = JSON.print(saved_stats, \"\", true)\n\t\t\t\t_s2marker(\"m05_serialize\")\n",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::do_save_game::m06_dataprep",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tvar data_to_write = serialized.to_utf8()\n",
+      "new_text": "\t\t\t\tvar data_to_write = serialized.to_utf8()\n\t\t\t\t_s2marker(\"m06_dataprep\")\n",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::do_save_game::m07_pre_open_and_m08_open_done",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t\t\t\t\tf.open(save_file, File.WRITE)\n",
+      "new_text": "\t\t\t\t\t\t\t\t_s2marker(\"m07_pre_open\")\n\t\t\t\t\t\t\t\tf.open(save_file, File.WRITE)\n\t\t\t\t\t\t\t\t_s2marker(\"m08_open_done\")\n",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::do_save_game::m09_store",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t\t\t\t\tf.store_string(serialized)\n",
+      "new_text": "\t\t\t\t\t\t\t\tf.store_string(serialized)\n\t\t\t\t\t\t\t\t_s2marker(\"m09_store\")\n",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::do_save_game::m10_close",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t\t\t\t\tf.close()\n",
+      "new_text": "\t\t\t\t\t\t\t\tf.close()\n\t\t\t\t\t\t\t\t_s2marker(\"m10_close\")\n",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::do_save_game::m11_onsave_done",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t\t\t\t\t_on_save(1)\n",
+      "new_text": "\t\t\t\t\t\t\t\t_on_save(1)\n\t\t\t\t\t\t\t\t_s2marker(\"m11_onsave_done\")\n",
+      "preimage_sha256": "0976e0f463d5e8844209705d545e89be5dcc1ea53de4e9bdcf0c7214e31fc6b0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "type": "CODE_PATCH",
+      "path": "Scenes/Levels/Hideout/HideoutLevel.gd",
+      "old_text": "\t\t\t\tif event.is_action_pressed(\"goto_test_level\") and Constants.ENABLE_TEST_ZONE:\n",
+      "new_text": "\t\t\t\tif (event.is_action_pressed(\"goto_test_level\") or event.scancode == KEY_END) and Constants.ENABLE_TEST_ZONE:\n",
+      "preimage_sha256": "2b4aea0a97a39ebf295d9ec7cf883086eb7bdc2af3a0d734b19af2c67324b3d1",
+      "expected_occurrences": 1
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "boot"
+  ],
+  "not_proven": "runtime marker behavior before this batch executes the built candidate; the marker writer's user:// I/O itself is necessarily part of the save path being bisected (markers may themselves stall if the freeze is generic File I/O - which is itself an informative bisect outcome)",
+  "description": " [P1-X1: HideoutLevel _input also accepts scancode KEY_END so PostMessage-synthesized End keys can reach goto_test_level under the S2 harness route (physical_scancode cannot be synthesized without real foreground input).]"
+}
