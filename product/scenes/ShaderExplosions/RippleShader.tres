@@ -1,0 +1,51 @@
+[gd_resource type="Shader" format=3]
+
+[resource]
+code = "// Converted/modified from ShaderToy: https://www.shadertoy.com/view/ldBXDD
+// Attach this shader to a ColorRect
+
+shader_type canvas_item;
+
+const float PI = 3.14159;
+
+uniform vec4 color: hint_color;
+uniform float pct_done: hint_range(0.0, 1.0, 0.1) = 0.0;
+uniform float burst_width: hint_range(0.01, 0.5, 0.01) = 0.1;
+uniform float start_amount: hint_range(0.0, 1.0, 0.1) = 0.3;
+uniform bool only_arc;
+uniform float arc_angle = 0.0;
+
+void fragment() {
+    float effective_pct_done = pct_done;
+    if (start_amount > 0.0) {
+        effective_pct_done = pct_done * (1.0 - start_amount) + start_amount;
+    }
+    float burst_offset = burst_width / 2.0;
+    float alpha = 2.0 * length(vec2(0.5, 0.5) - UV) * (1.0 - burst_width) + burst_width;
+    float delta = abs(alpha - effective_pct_done + burst_offset);
+    if (delta <= burst_offset) {
+        float strength = clamp(cos(PI * delta / burst_offset), 0.0, 1.0);
+        vec4 mix_color = vec4(color);
+        mix_color.a = strength / 3.0;
+        COLOR = mix_color;
+    } else {
+        COLOR.a = 0.0;
+    }
+    // Kill the shit outside the circle radius
+    if (alpha > effective_pct_done + burst_offset) {
+        COLOR.a = 0.0;
+    }
+    
+    
+    if (only_arc) {
+        COLOR.a = clamp(COLOR.a * pct_done * 3.0, 0.0, 1.0);
+        vec2 right = vec2(1.0, 0.0);
+        vec2 direction = UV - vec2(0.5);
+        float closeness = acos(dot(right, direction) / (length(right) * length(direction)));
+        if (abs(closeness) > arc_angle / 2.0 || direction.x <= 0.0) {
+            COLOR.a = 0.0;
+        }
+    } else {
+        COLOR.a *= clamp(1.0 - abs(0.9 - pct_done), 0.0, 1.0);
+    }        
+}"

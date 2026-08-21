@@ -160,7 +160,7 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 - recovered 指纹不变
 - 有 4.7.1 则 headless import RAN；错误分类；zero errors 不是本波要求
 
-## 5c. P1-WAVE-D（当前批次）— World / Spawn / Movement
+## 5c. P1-WAVE-D（已完成）— World / Spawn / Movement
 
 **Allowed:** `product/scenes/World.*`、`product/scenes/Player/**`、`product/scenes/Levels/**`（Default/Spawn/NavMesh/Loader）、`product/scenes/GUI/**`、`product/scenes/Stats.*`、`product/scenes/Popups/EscapeMenu.*`、`product/Tilesets/**`、`product/Shaders/**`、`scripts/migration/world_convert.py`、tests、evidence
 
@@ -174,7 +174,20 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 - recovered 指纹不变
 - 有 4.7.1 则 import RAN；错误分类；zero errors 不是本波要求
 
-后续子系统（本波不做）：Combat → Skill/Passive → Equipment → VFX/Audio
+## 5d. P1-WAVE-E（当前批次）— Combat / Projectile / Status
+
+**Allowed:** `product/scenes/Skills/GenericSkill.*`、`product/scenes/Projectiles/**`、`product/scenes/StatusEffects/**`、`product/scenes/AreaInstantDamageApplier/**`、`product/scenes/ShaderExplosions/**`、`scripts/migration/combat_convert.py`、tests、`migration/conversion/wave_e_combat_report.json`
+
+**Forbidden:** `03_raw/**`、`04_recovered/**`、Mobs/Levels/Player 全量重写、World 全量重写、GeneEditor/PassiveTree 全量系统、新增 Gameplay
+
+**Acceptance:**
+- GenericSkill.gd、Projectile.tscn/gd、BaseEffect.gd、Generic Status Effects 在 product 且 scene format=3 / GDScript 4 语法转换
+- Player 保留 dash（`apply_central_impulse` + `dash`）
+- `run/main_scene` 仍是 LoadGame
+- recovered 指纹不变
+- 有 4.7.1 则 headless import RAN；错误分类；zero errors 不是本波要求
+
+后续子系统（本波不做）：Mob AI → Skill/Passive Tree UI → Equipment → VFX/Audio
 
 ## 6. 进入 P2 / P3 的最低条件
 

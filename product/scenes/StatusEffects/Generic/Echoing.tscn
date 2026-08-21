@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/StatusEffects/Generic/Echoing.gd" id="1"]
+
+[node name="Echoing" type="Node"]
+script = ExtResource("1")
+recompute_stats = false
+description = "Echoing"
+base_lifetime = 0.5
+unique_group = "Echoing"
+is_unique_status_flag = true

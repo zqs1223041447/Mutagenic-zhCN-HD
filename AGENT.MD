@@ -154,7 +154,9 @@ Godot 3.5.3 = Legacy Reference
 
 **P1-WAVE-C（已完成）：** Menu / Character / Save。
 
-**P1-WAVE-D（当前批次）：World / Spawn / Movement**
+**P1-WAVE-D（已完成）：** World / Spawn / Movement。
+
+**P1-WAVE-E（当前批次）：Combat / Projectile / Status**
 
 | ID | Goal | 关键验收 |
 |----|------|----------|
@@ -174,10 +176,17 @@ Godot 3.5.3 = Legacy Reference
 
 | 角色 | 身份 | 职责 |
 |------|------|------|
-| **Coordinator（主 AGENT）** | **gork** | 校准状态、生成 Task DAG、分配 Worker、Review/Merge、状态与 Evidence 更新、清理、生成下一批、决定何时请 gpt 会诊 |
+| **Coordinator（主操控者）** | **gork** | 校准状态、生成 Task DAG、并行调度子 agent、Review/Merge、状态与 Evidence 更新、清理、生成下一批、决定何时请 gpt 会诊。gork 不亲自串行干活，只做编排与集成 |
 | **Primary Worker** | **AGY**（gemini cli 技能） | 默认执行具体 Task：实现、自测、产出 Evidence 与 Handoff |
 | **Fallback Worker** | **opencode**（opencode cli 技能） | 当 AGY 额度不足或不可用时接替执行 Task |
 | **Expert Consultant** | **gpt**（外部专家技能） | 仅在疑难杂症、复杂架构决策、反复失败、或需要深度推理时由 gork 主动调用协助，不替代日常干活 |
+
+### 并行调度模式（强制）
+
+1. gork 是唯一主操控者：拆解 Task DAG 后，把相互独立的 Task **并行派发给多个子 agent**，使用 **background 模式**同时执行，不得串行排队。
+2. 有依赖关系的任务必须显式标注依赖；无依赖的任务默认并行。
+3. 子 agent 返回后由 gork 统一 Review、集成、验证、提交；子 agent 不得自行 commit 中央分支。
+4. 单个子 agent 失败不影响其他并行任务；失败任务按 RETRY 预算重试或换 Worker 重派。
 
 ### 调度规则（强制）
 

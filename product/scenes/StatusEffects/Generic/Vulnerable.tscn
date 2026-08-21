@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/StatusEffects/Generic/Vulnerable.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/buff_icons/vulnerable.png" id="2"]
+
+[node name="Vulnerable" type="Node"]
+script = ExtResource("1")
+description = "Vulnerable"
+texture = ExtResource("2")
+only_apply_strongest = true
+lifetime = 4.0
+base_lifetime = 4.0
+unique_group = "Vulnerable"

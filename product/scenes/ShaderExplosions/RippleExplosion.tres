@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://scenes/ShaderExplosions/RippleShader.tres" id="1"]
+
+[resource]
+shader = ExtResource("1")
+shader_parameter/color = null
+shader_parameter/pct_done = 0.0
+shader_parameter/burst_width = 0.1
+shader_parameter/start_amount = 0.3
+shader_parameter/only_arc = null
+shader_parameter/arc_angle = 0.0
