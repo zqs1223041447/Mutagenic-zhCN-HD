@@ -23,6 +23,9 @@
 /build/
 /artifacts/
 /archive/
+# Build performance persistent caches (see docs/build/COMPILE_PERFORMANCE_PLAN.md §2-§8)
+# default <repo_root>/.cache/  (overridable via MUTAGENIC_CACHE_ROOT); never track
+/.cache/
 # ============================================================
 # Runtime state
 # ============================================================

@@ -59,6 +59,7 @@ pristine game → fingerprint → raw extraction → recovered source → schema
 | 如何构建？ | canonical pipeline（scripts/pipeline + docs/architecture/PIPELINE.md） |
 | 如何跑游戏/验证？ | VM workflow（docs/dev-environment + Hyper-V skill） |
 | 哪个版本是 baseline？ | release registry（status.json + releases/*.json） |
+| 如何做构建性能优化？ | `docs/build/COMPILE_PERFORMANCE_PLAN.md`（L2 构建性能权威，AGENTS.md §6.1 仅入口） |
 | 历史大文件在哪？ | 本地配置的 archive root；仓库不得硬编码宿主绝对路径 |
 
 > 规则：一个问题的答案只有一个权威源。任何文档与 status.json 冲突时，以 status.json 为准。
@@ -90,6 +91,19 @@ pristine game → fingerprint → raw extraction → recovered source → schema
   - S2 core smoke / S3 persistence / S4 mod-specific / S5 visual（按需）
   - **语义确认**：GDRE 从最终 EXE 恢复目标 .gde，确认新值已嵌入（权威，不靠 UI）。
 - 每个 Gate 必须有证据文件（verified_at/command/artifact）；PASS 注明“证明什么/不证明什么”。
+
+### 6.1 构建性能双模式（渐进式披露入口）
+
+> **渐进式披露**：本节仅声明全局硬规则与默认行为，完整 20 章执行方案、验收标准与实施顺序见 `docs/build/COMPILE_PERFORMANCE_PLAN.md`（L2 构建性能权威）。凡任务涉及 `compile / pack / PCK / embed / verify / 构建耗时`，AI 必须先读该文件再执行，不得仅凭本节摘要猜测细节。
+
+- **双路径**：`FAST DEV BUILD`（日常迭代，默认）vs `CANONICAL RELEASE BUILD`（中央集成/Promotion/baseline/PR Gate/最终证据，必选）。
+- **默认行为**：开发期默认 `--mode fast`；Promotion Candidate / baseline 必须 `--mode release`。`FAST` 产物标注 `NOT PROMOTION ELIGIBLE`，不得晋升 baseline。
+- **加速前提**：`FAST` 允许持久编译缓存、toolchain attestation 复用、base hash index 复用、persistent pack staging、collision-safe batching 与 quick checks；`RELEASE` 必须 fresh resolve/apply、validated 编译、fresh pack、full PCK+normalize、fresh embed、3744/3744 verify 与全量 roundtrip/S0~S4。
+- **不可为提速削弱验证**：`normalize_pck_md5` 与 `verify_exe_structure` 的 RELEASE 全量 Gate 不得增量化；`00_original/03_raw/04_recovered` 仍不可变；禁止 hardlink `03_raw` 到可写 pack、禁止在旧 modded EXE 上叠加、禁止跳过 preimage、禁止抽样冒充完整 Gate、禁止硬编码宿主绝对路径。
+- **缓存与可移植性**：默认缓存 `<repo_root>/.cache/`（含 `gdre/`、`pack_stage/`、`base_index/`、`build_profile.json`），已 `.gitignore`；可经 `MUTAGENIC_CACHE_ROOT` 覆盖；cache key 必须包含 `相对路径+源码SHA+GDRE SHA+bytecode版本+编译工具版本+key指纹(SHA)`，禁止落盘真实 key。
+- **并发纪律**：Coding 可并行，Heavy Build / Verify 默认各 1 槽（build semaphore），禁止 `N Agent × M GDRE workers` 抢占；CLI `--workers` > `build_profile.json` > 安全默认值。
+- **执行顺序**：严格 `Timing → Cache → Worker/Queue → Attestation/Index → Batching/Staging → FAST/RELEASE → pck-patch 实验`，每步 `实现→benchmark→回归→commit→push` 后再下一步；单步提速 <5% 且显著增复杂则不入 canonical，任何 `.gde/PCK` 不一致或 S0/S1/S3/S4 回归立即 rollback。
+- **报告**：`FAST`/`RELEASE` 均须打印分阶段耗时与 cache/GDRE 统计，并落盘 `10_logs/<build-id>/timing.json` + `build.json`；Release 回归需 `check_all/abs_path_scan/secret_scan` 全过。
 
 ---
 
@@ -162,6 +176,7 @@ pristine game → fingerprint → raw extraction → recovered source → schema
 - 并行批次 / X1、X2… 多 Agent 认领 → `docs/ai/PARALLEL_BATCH_WORKFLOW.md`
 - Runtime bug → canonical candidate → VM verification
 - 管线 bug → scripts/pipeline；VM/工具链 bug → scripts/vm
+- 构建/编译/打包耗时优化或 FAST/RELEASE 迭代 → `docs/build/COMPILE_PERFORMANCE_PLAN.md`（必读后再动 `scripts/build/*.py`）
 
 ---
 
@@ -189,4 +204,4 @@ pristine game → fingerprint → raw extraction → recovered source → schema
 
 ---
 
-*权威层级：AGENTS.md（L0）> status.json（L1 机器状态）> 子文档（L2）。SKILL.md 是执行适配层，不是政策制定者；不得复制一套新规则。*
+*权威层级：AGENTS.md（L0）> status.json（L1 机器状态）> 子文档（L2，含 `docs/build/COMPILE_PERFORMANCE_PLAN.md` 构建性能权威）。SKILL.md 是执行适配层，不是政策制定者；不得复制一套新规则。*

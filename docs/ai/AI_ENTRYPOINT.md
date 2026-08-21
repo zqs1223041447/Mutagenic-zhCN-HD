@@ -17,6 +17,7 @@
 | 管线 bug | `scripts/pipeline/` | 修管线，不动输入 |
 | VM/工具链 bug | `scripts/vm/` + Hyper-V skill | VM 运维 |
 | 存档/持久化问题 | 对应 localization/persistence workflow | canonical build |
+| 构建/编译/打包慢 · 性能优化 · FAST/RELEASE | `docs/build/COMPILE_PERFORMANCE_PLAN.md`（L2 构建性能权威，AGENTS.md §6.1 仅入口；**编译时必读**） | `FAST`(dev) / `RELEASE`(promotion) 双模式；按 `Timing→Cache→Worker/Queue→Attestation/Index→Batching/Staging→FAST/RELEASE→pck-patch` 顺序实现 |
 
 ---
 
@@ -28,7 +29,8 @@
 | 当前版本/状态 | `status.json` |
 | 人类可读状态 | `PROJECT_STATE.md`（生成视图） |
 | 原始/恢复来源 | `manifests/provenance/*` + tracked `03_raw/04_recovered` |
-| 如何构建 | `docs/architecture/PIPELINE.md` + `scripts/pipeline/` |
+| 如何构建 | `docs/architecture/PIPELINE.md` + `scripts/build/` + `scripts/pipeline/` |
+| 构建性能如何优化 | `docs/build/COMPILE_PERFORMANCE_PLAN.md`（AGENTS.md §6.1 入口；编译时必读，含 --mode fast/release、缓存、worker、staging 全规范） |
 | Kinetic Arcane 总方向 | `docs/requirements/KINETIC_ARCANE_REMASTER.md` |
 | Combat Vertical Slice | `docs/requirements/COMBAT_VERTICAL_SLICE.md` |
 | 多 Agent 并发/交接/集成 | `docs/ai/PARALLEL_BATCH_WORKFLOW.md` |
@@ -53,14 +55,20 @@
 
 ## 4. 构建/验证最小入口
 
+> **编译性能渐进式披露**：本节仅最小入口。凡涉及 `compile / pack / PCK / embed / verify` 耗时或改动 `scripts/build/*.py`，必须先读 `docs/build/COMPILE_PERFORMANCE_PLAN.md` 再执行（见 AGENTS.md §6.1）。
+
 所有脚本必须自己解析 repo root，调用者不应硬编码宿主绝对路径。
 
 ```powershell
 python scripts/nlmod/build_mod.py --mod-id <id>
 python scripts/probe_boot.py <candidate> --seconds 15
+# 性能双模式（见 docs/build/COMPILE_PERFORMANCE_PLAN.md §9）
+python scripts/nlmod/build_mod.py --mod-id <id> --mode fast      # 日常迭代，默认；NOT PROMOTION ELIGIBLE
+python scripts/nlmod/build_mod.py --mod-id <id> --mode release   # Promotion/baseline，必须；fresh + 3744/3744 verify
 ```
 
 手工 canonical 顺序仍为：resolve → apply → compile → pack → fresh embed → candidate → verify。
+性能优化后顺序不变，但 `FAST` 允许缓存/复用/增量 staging，`RELEASE` 保持全量 fail-closed（详见 performance plan §1–§11）。
 
 `03_raw/04_recovered` 现在可直接从 clone 中读取真实内容与 preimage；真正 Candidate 的 fresh embed、boot、S4/S5 仍需要本地 `00_original`、工具链与运行/VM 环境。
 
