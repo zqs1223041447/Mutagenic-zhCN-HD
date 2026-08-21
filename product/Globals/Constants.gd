@@ -87,7 +87,7 @@ const OrbName = {
 				OrbType.CORRUPTION: "Corruption Shard", 
 }
 
-var USE_STEAM = true
+var USE_STEAM = false
 
 var GAME_VERSION = "EA 0.6.2"
 

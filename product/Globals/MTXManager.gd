@@ -27,12 +27,13 @@ var currency_string = ""
 var Steam = Engine.get_singleton("Steam") if Engine.has_singleton("Steam") else null
 
 func initialize():
-				Steam.connect("inventory_full_update", Callable(self, "handle_inventory_full_update"))
-				Steam.connect("inventory_request_prices_result", Callable(self, "handle_inventory_request_prices_result"))
-				Steam.connect("inventory_start_purchase_result", Callable(self, "handle_inventory_start_purchase_result"))
-				Steam.connect("inventory_result_ready", Callable(self, "handle_inventory_result_ready"))
-				fetch_items()
-				request_prices()
+				if Constants.USE_STEAM:
+								Steam.connect("inventory_full_update", Callable(self, "handle_inventory_full_update"))
+								Steam.connect("inventory_request_prices_result", Callable(self, "handle_inventory_request_prices_result"))
+								Steam.connect("inventory_start_purchase_result", Callable(self, "handle_inventory_start_purchase_result"))
+								Steam.connect("inventory_result_ready", Callable(self, "handle_inventory_result_ready"))
+								fetch_items()
+								request_prices()
 
 
 

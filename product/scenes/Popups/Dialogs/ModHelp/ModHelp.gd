@@ -1,4 +1,4 @@
-extends PopupBase
+﻿extends PopupBase
 
 var mod_tab = preload("res://scenes/Popups/Dialogs/ModHelp/ModTab.tscn")
 
@@ -70,7 +70,7 @@ func _physics_process(delta: float) -> void :
 																content_container.scroll_vertical -= 15
 
 				if Input.is_key_pressed(KEY_F):
-								if Input.is_key_pressed(KEY_CONTROL):
+								if Input.is_key_pressed(KEY_CTRL):
 												searcher.grab_focus()
 												searcher.select_all()
 

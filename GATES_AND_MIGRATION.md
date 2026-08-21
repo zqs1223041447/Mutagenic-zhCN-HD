@@ -284,6 +284,24 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 
 运行时 missing_asset ≈256（.aseprite 无源 SpriteFrames、UI 音效/贴图）属美术管线边界；Steam 替代层属架构决策需会诊。P1 静态迁移主体已收敛，下一步应评估进入 P2（最小自主循环）的条件是否满足：Product 可稳定 headless 运行 ✓、多 Agent 自我验证闭环 ✓、状态/清理/集成自动化 ✓。
 
+## 6. P2 Minimal AI Autonomous Loop
+
+### P2-BATCH-1（已完成）— Steam 层落地 + Boot 基线 + 冒烟链路
+
+**会诊决议（alpha 专家顾问，gork 批准）：** Steam 采用 A2 方案——`USE_STEAM=false` 激活原生本地存档回退，补守卫不删调用本体。P2 定义为单条自动化取证链路：boot probe → 冒烟跳转 → 取证 bundle → 状态回写。
+
+**结果：**
+- P2-A0：boot 错误 662→59（-91%），Steam 类清零，本地 user:// 存档路径激活
+- P2-A1：boot 基线双跑稳定（rc=0，59 错误）
+- P2-A2：冒烟三跳 LoadGame→Menu→TestLevel 全部到达（SMOKE_PASS），每跳零新增错误
+- P2-A4：状态回写由 gork 在本批完成
+
+**P2 后续候选（按需）：** A3 取证 bundle 一键归档标准化；运行时 Nil 引用类错误收敛（TestLevel 跳转样本）；美术管线决策（aseprite 源缺失）提请人类。
+
+## 7. 进入 P3 的条件
+
+P3 Playable Baseline：能进入角色 → 进入世界 → 移动 → 释放技能 → 击杀怪物 → 拾取装备 → 打开技能/被动界面 → 保存/读取，且上述流程可被自动化测试覆盖。当前冒烟已到 TestLevel 场景加载；角色进入与战斗闭环待验证。
+
 ## 5j. P1-WAVE-K（已完成）— Globals 脚本 API 残留清理
 
 **Allowed:** `product/Globals/**`、`product/scenes/**` 中机械 API 重命名（OS.*→DisplayServer/Window、Directory→DirAccess、TYPE_REAL→TYPE_FLOAT、ALIGN_RIGHT→HORIZONTAL_ALIGNMENT_RIGHT、rect_size→size、get_screen_refresh_rate 等已迁移脚本的残留项）、`scripts/migration/api_residue_convert.py`、`migration/conversion/wave_k_report.json`、tests

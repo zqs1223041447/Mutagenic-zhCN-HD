@@ -176,7 +176,10 @@ Godot 3.5.3 = Legacy Reference
 
 **P1-WAVE-N（已完成）：** 着色器与类解析级联收敛。P1 静态迁移主体收敛：import SCRIPT ERROR 1、shader 错误 0。
 
-**当前决策点：** P2 进入条件已满足（headless 可运行、验证闭环可用、自动化可用）。剩余运行时 missing_asset 属美术管线边界，Steam 层需会诊。
+**当前主线：P2 Minimal AI Autonomous Loop**
+- P2-BATCH-1（已完成）：Steam 层 A2 落地（boot 错误 662→59）、boot 基线双跑稳定、冒烟三跳 SMOKE_PASS
+- P2 定义：boot probe → 冒烟跳转 → 取证 bundle → 状态回写，单条链路可重复
+- 剩余运行时 missing_asset 属美术管线边界（需人类决策 aseprite 源）；Steam 真接入延后
 
 | ID | Goal | 关键验收 |
 |----|------|----------|

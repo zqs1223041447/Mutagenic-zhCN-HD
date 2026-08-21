@@ -10,8 +10,8 @@
     "remote_url": "https://github.com/zqs1223041447/Mutagenic-zhCN-HD.git",
     "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
-  "current_phase": "P1_GODOT_4_7_1_MIGRATION",
-  "current_gate": "P2-ENTRY-REVIEW",
+  "current_phase": "P2_MINIMAL_AI_AUTONOMOUS_LOOP",
+  "current_gate": "P2-BATCH-1",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -573,6 +573,37 @@
         "migration/conversion/wave_n_aseprite_raw.json",
         "migration/conversion/wave_n_tooltip_raw.json"
       ]
+    },
+    "P2-BATCH-1": {
+      "goal": "Steam layer A2 + boot baseline + smoke chain",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "steam_decision": "A2 (USE_STEAM=false + guards, expert consult accepted)",
+        "boot_script_errors": {
+          "before": 662,
+          "after": 59
+        },
+        "steam_class_errors": 0,
+        "boot_baseline_runs": 2,
+        "boot_baseline_returncode": 0,
+        "smoke_overall": "SMOKE_PASS",
+        "smoke_chain": [
+          "res://scenes/LoadGame.tscn",
+          "res://scenes/Menu.tscn",
+          "res://scenes/Levels/TestLevel/TestLevel.tscn"
+        ],
+        "smoke_new_errors_per_hop": 0,
+        "recovered_unmodified": true,
+        "tests": "187 OK"
+      },
+      "note": "MILESTONE: full scene chain LoadGame->Menu->TestLevel reaches headless. Local save fallback active. Remaining 59 boot errors are art-pipeline boundary assets.",
+      "evidence": [
+        "migration/conversion/p2_batch1_report.json",
+        "migration/conversion/p2_boot_baseline_1.json",
+        "migration/conversion/p2_boot_baseline_2.json",
+        "migration/conversion/p2_smoke_3.json"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -605,13 +636,13 @@
   },
   "next_ready": [
     {
-      "id": "P2-ENTRY-REVIEW",
-      "goal": "Review P2 entry conditions and define P2 Minimal AI Autonomous Loop scope",
+      "id": "P2-BATCH-2",
+      "goal": "Runtime Nil-reference convergence on TestLevel path + evidence bundle standardization (A3)",
       "depends_on": [
-        "P1-WAVE-N"
+        "P2-BATCH-1"
       ],
       "status": "READY",
-      "note": "Per GATES section 6: headless stable run OK, multi-agent self-verification loop OK, state/cleanup/integration automation OK. Remaining runtime missing_asset is art-pipeline boundary; Steam replacement layer needs gpt consult before implementation. Execution mode: parallel background subagents per AGENT.MD."
+      "note": "Smoke samples showed Nil connect/get_children runtime errors on TestLevel load. Fix with root-cause classification; standardize evidence bundle archiving. aseprite art-pipeline decision belongs to human."
     }
   ]
 }

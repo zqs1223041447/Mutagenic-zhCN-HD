@@ -17,11 +17,12 @@ var LEADERBOARD_HANDLES = {}
 var LEADERBOARD_DATA = {}
 
 func initialize():
-				Steam.connect("leaderboard_find_result", Callable(self, "_on_leaderboard_find_result"))
-				Steam.connect("leaderboard_score_uploaded", Callable(self, "_on_leaderboard_score_uploaded"))
-				Steam.connect("leaderboard_scores_downloaded", Callable(self, "_on_leaderboard_scores_downloaded"))
-				Steam.setLeaderboardDetailsMax(16)
-				load_leaderboard_handles()
+				if Constants.USE_STEAM:
+								Steam.connect("leaderboard_find_result", Callable(self, "_on_leaderboard_find_result"))
+								Steam.connect("leaderboard_score_uploaded", Callable(self, "_on_leaderboard_score_uploaded"))
+								Steam.connect("leaderboard_scores_downloaded", Callable(self, "_on_leaderboard_scores_downloaded"))
+								Steam.setLeaderboardDetailsMax(16)
+								load_leaderboard_handles()
 
 func load_leaderboard_handles():
 				for level in Levels.config:
