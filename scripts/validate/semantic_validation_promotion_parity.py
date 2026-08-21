@@ -66,6 +66,7 @@ FORMAL_MOD_IDS = [
     "feat-tce", "feat-tce-context", "k1-player-response", "k2-hit-reaction",
     "k4-audio-foundation", "p7-fix-persistence", "b2-x1-combat-event-spine",
     "b2-x4-kill-feel", "b2-x5-camera-impulse", "b2-x6-combat-audio-layers",
+    "b3-cp1-camera-zoom-setting",
 ]
 VALIDATION_ORDER_EXPECTED = [
     "feat-tce", "feat-tce-context", "k1-player-response", "k2-hit-reaction",
@@ -78,6 +79,7 @@ VALIDATION_ONLY_MOD_IDS = [
     "k5-combat-harness", "b2-x0-combat-harness-bridge", "b3-p1-s2-diagnostic",
 ]
 PROMOTION_ONLY_ROOT_IDS = ["b3-p2-x1-promotion-aggregate"]
+PROMOTION_EXTRA_MOD_IDS = ["b3-cp1-camera-zoom-setting"]  # B3-S5 zoom setting, promotion-only
 STRIP_REASONS = {
     "k5-combat-harness": "k5 harness driver: TestLevel.gd request-driven scenario harness (user://combat_harness/request.json)",
     "b2-x0-combat-harness-bridge": "harness bridge: Constants.ENABLE_TEST_ZONE = true (goto_test_level debug key)",
@@ -379,9 +381,16 @@ def main(argv: list[str] | None = None) -> int:
         == canonical(next(normalized_patch(x) for x in v_patches if patch_key(normalized_patch(x)) == k))
         for k in shared_keys
     )
-    check("promotion patches all present in validation (p-v empty)", pk - vk == set())
-    check("promotion patches all present in validation-diag (p-d empty)", pk - dk == set())
-    check("shared formal patch count == promotion count", len(shared_keys) == len(p_patches))
+    # B3-S5: b3-cp1 is promotion-only (not in validation), allow its patches
+    _promotion_extra_keys: set = set()
+    for _mid in PROMOTION_EXTRA_MOD_IDS:
+        try:
+            _promotion_extra_keys |= mod_patch_pairs(root, _mid)
+        except FileNotFoundError:
+            pass
+    check("promotion patches all present in validation (p-v empty, allow promotion extra)", (pk - _promotion_extra_keys) - vk == set())
+    check("promotion patches all present in validation-diag (p-d empty, allow promotion extra)", (pk - _promotion_extra_keys) - dk == set())
+    check("shared formal patch count == promotion count minus promotion-extra", len(shared_keys) == len(p_patches) - len(pk & _promotion_extra_keys))
     check("shared formal patches byte-identical across validation/promotion", identical_shared)
 
     # --- 3. strip is EXACTLY the validation-only mods (provenance-driven) ---

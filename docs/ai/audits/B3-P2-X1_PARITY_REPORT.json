@@ -1,9 +1,9 @@
 {
   "contract_id": "semantic_validation_promotion_parity",
   "schema_version": 1,
-  "created_at_utc": "2026-08-20T11:45:38Z",
+  "created_at_utc": "2026-08-21T03:17:10Z",
   "branch": "agent/kinetic-arcane-remaster-foundation",
-  "head_sha": "c1b8262552a9f4c3c093a5d7e22785b082423b64",
+  "head_sha": "be4da3df90ec058fa26505dce36ee5152df716d0",
   "resolver": "scripts/patch/resolve_mod_chain.py",
   "candidates": {
     "validation": {
@@ -53,8 +53,8 @@
     },
     "promotion": {
       "root": "mods/b3-p2-x1-promotion-aggregate/mod.json",
-      "mod_count": 11,
-      "patch_count": 49,
+      "mod_count": 12,
+      "patch_count": 57,
       "resolution_order": [
         "feat-tce",
         "feat-tce-context",
@@ -66,14 +66,48 @@
         "b2-x4-kill-feel",
         "b2-x5-camera-impulse",
         "b2-x6-combat-audio-layers",
+        "b3-cp1-camera-zoom-setting",
         "b3-p2-x1-promotion-aggregate"
       ],
-      "resolver_stdout": "{\"resolution_order\": [\"feat-tce\", \"feat-tce-context\", \"k1-player-response\", \"k2-hit-reaction\", \"k4-audio-foundation\", \"p7-fix-persistence\", \"b2-x1-combat-event-spine\", \"b2-x4-kill-feel\", \"b2-x5-camera-impulse\", \"b2-x6-combat-audio-layers\", \"b3-p2-x1-promotion-aggregate\"], \"patch_count\": 49, \"asset_overlay_count\": 0, \"verdict\": \"PASS\"}"
+      "resolver_stdout": "{\"resolution_order\": [\"feat-tce\", \"feat-tce-context\", \"k1-player-response\", \"k2-hit-reaction\", \"k4-audio-foundation\", \"p7-fix-persistence\", \"b2-x1-combat-event-spine\", \"b2-x4-kill-feel\", \"b2-x5-camera-impulse\", \"b2-x6-combat-audio-layers\", \"b3-cp1-camera-zoom-setting\", \"b3-p2-x1-promotion-aggregate\"], \"patch_count\": 57, \"asset_overlay_count\": 0, \"verdict\": \"PASS\"}"
     }
   },
   "parity": {
     "shared_formal_patch_count": 49,
-    "promotion_minus_validation": [],
+    "promotion_minus_validation": [
+      [
+        "unit",
+        "Globals/GameState.gd::settings::camera_zoom_default"
+      ],
+      [
+        "unit",
+        "Globals/GameState.gd::settings::set_camera_zoom"
+      ],
+      [
+        "unit",
+        "Scenes/Player/Player.gd::camera_zoom::apply_func"
+      ],
+      [
+        "unit",
+        "Scenes/Player/Player.gd::camera_zoom::ready_apply"
+      ],
+      [
+        "unit",
+        "Scenes/Player/Player.gd::camera_zoom::settings_connect"
+      ],
+      [
+        "unit",
+        "Scenes/Popups/Dialogs/Settings/Settings.gd::on_settings_change_zoom"
+      ],
+      [
+        "unit",
+        "Scenes/Popups/Dialogs/Settings/Settings.gd::zoom_handler"
+      ],
+      [
+        "unit",
+        "Scenes/Popups/Dialogs/Settings/Settings.tscn::zoom_slider_nodes"
+      ]
+    ],
     "validation_minus_promotion": [
       {
         "path": "Globals/Constants.gd",
@@ -194,7 +228,40 @@
     "preimage_parity": {
       "method": "resolver resolved manifest byte-compare (canonical including preimage_sha256/placeholders/format_tokens)"
     },
-    "promotion_minus_validation_diag": []
+    "promotion_minus_validation_diag": [
+      [
+        "unit",
+        "Globals/GameState.gd::settings::camera_zoom_default"
+      ],
+      [
+        "unit",
+        "Globals/GameState.gd::settings::set_camera_zoom"
+      ],
+      [
+        "unit",
+        "Scenes/Player/Player.gd::camera_zoom::apply_func"
+      ],
+      [
+        "unit",
+        "Scenes/Player/Player.gd::camera_zoom::ready_apply"
+      ],
+      [
+        "unit",
+        "Scenes/Player/Player.gd::camera_zoom::settings_connect"
+      ],
+      [
+        "unit",
+        "Scenes/Popups/Dialogs/Settings/Settings.gd::on_settings_change_zoom"
+      ],
+      [
+        "unit",
+        "Scenes/Popups/Dialogs/Settings/Settings.gd::zoom_handler"
+      ],
+      [
+        "unit",
+        "Scenes/Popups/Dialogs/Settings/Settings.tscn::zoom_slider_nodes"
+      ]
+    ]
   },
   "forbidden": {
     "tokens": [

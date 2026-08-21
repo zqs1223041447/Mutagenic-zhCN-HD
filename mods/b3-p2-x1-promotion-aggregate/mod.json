@@ -13,7 +13,8 @@
     "b2-x1-combat-event-spine",
     "b2-x4-kill-feel",
     "b2-x5-camera-impulse",
-    "b2-x6-combat-audio-layers"
+    "b2-x6-combat-audio-layers",
+    "b3-cp1-camera-zoom-setting"
   ],
   "conflicts": [],
   "scope": "B3-P2-X1 Promotion Candidate aggregate root (see docs/ai/batches/B3_CANDIDATE_SPLIT.md): same 10 formal gameplay MODs as the B2-I1 validation chain (feat-tce, feat-tce-context, k1-player-response, k2-hit-reaction, k4-audio-foundation, p7-fix-persistence, b2-x1-combat-event-spine, b2-x4-kill-feel, b2-x5-camera-impulse, b2-x6-combat-audio-layers) minus the validation-only mods (k5-combat-harness harness driver, b2-x0-combat-harness-bridge ENABLE_TEST_ZONE flag) and minus all diagnostic mods (b3-p1-s2-diagnostic). Composition metadata only: no patches of its own, no gameplay value/semantic change. Produces the Promotion Candidate resolved patch set whose only difference from the Validation Candidate is the harness/test-only entry surface.",

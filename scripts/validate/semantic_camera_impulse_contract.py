@@ -17,7 +17,7 @@ Pins the camera impulse aggregator contract delivered by B2-X5:
      dot_tick are never converted into impulses.
   5. Consume-side aggregator canaries: direct_hit/dot_tick records are
      explicitly skipped (blocked_* counters), crit -> lightweight impulse,
-     kill/elite_kill/heavy -> budget-capped impulses; constants
+     crit/heavy -> budget-capped impulses; kill/elite_kill disabled (blocked_kill_pulses) per HUMAN S5 2026-08-20; constants
      IMPULSE_BUDGET_MAX / IMPULSE_WINDOW_MS / IMPULSE_DECAY_PER_SEC /
      IMPULSE_MAX_OFFSET / IMPULSE_CLUSTER_APPENDIX exist; cluster merge
      counter and event count telemetry fields exist.
@@ -25,7 +25,7 @@ Pins the camera impulse aggregator contract delivered by B2-X5:
      health (no damage_multiplier /= *= assignment, no health -= /=,
      no combined_effective_damage assignment).
   7. Deterministic mirror simulation of the aggregator (budget cap, short
-     aggregation window, decay, offset safety cap, cluster kill merge,
+     aggregation window, decay, offset safety cap, kill pulse disabled (blocked), cluster kill merge (pre-disable logic preserved for heavy),
      event count telemetry) using constants parsed from the actual patch
      payloads.
   8. No host absolute paths in the three B2-X5 files.
@@ -110,7 +110,7 @@ class MirrorAggregator:
             "events": 0, "impulses": 0, "kills": 0, "elite_kills": 0,
             "heavies": 0, "crits": 0, "clusters": 0, "blocked_direct_hits": 0,
             "blocked_dot_ticks": 0, "blocked_kill_records": 0,
-            "capped_amplitude": 0, "capped_offset": 0,
+            "capped_amplitude": 0, "capped_offset": 0, "blocked_kill_pulses": 0,
         }
 
     def consume(self, event_class: str, now_ms: int, kind: str = "",
@@ -135,7 +135,8 @@ class MirrorAggregator:
                 self.t["kills"] += 1
                 if is_elite:
                     self.t["elite_kills"] += 1
-                self._add(amplitude * self.kill_ratio, True, now_ms)
+                self.t["blocked_kill_pulses"] += 1
+                return
             elif kind == "heavy":
                 self.t["heavies"] += 1
                 self._add(amplitude, False, now_ms)
@@ -318,8 +319,8 @@ def main() -> int:
           'event_class == "dot_tick"' in agg and "blocked_dot_ticks" in agg)
     check("crit -> lightweight impulse",
           'event_class == "crit"' in agg and "_impulse_add(IMPULSE_CRIT_AMPLITUDE, false)" in agg)
-    check("kill/elite_kill impulse consumed under budget",
-          'event_class == "impulse"' in agg and "_impulse_add(amplitude * IMPULSE_KILL_RATIO, true)" in agg)
+    check("kill impulse disabled (blocked_kill_pulses counted, no add)",
+          'event_class == "impulse"' in agg and "blocked_kill_pulses" in agg and "_impulse_add(amplitude * IMPULSE_KILL_RATIO, true)" not in agg)
     check("heavy impulse consumed", "_impulse_add(amplitude, false)" in agg)
     check("budget clamp in _impulse_add",
           "min(_impulse_amplitude + added_amplitude, IMPULSE_BUDGET_MAX)" in agg)
@@ -329,7 +330,7 @@ def main() -> int:
     check("telemetry fields include events/impulses/kills/heavies/crits",
           all(k in agg for k in ('"events": 0', '"impulses": 0', '"kills": 0',
                                  '"heavies": 0', '"crits": 0', '"blocked_direct_hits": 0',
-                                 '"blocked_dot_ticks": 0', '"capped_amplitude": 0', '"capped_offset": 0')))
+                                 '"blocked_dot_ticks": 0', '"capped_amplitude": 0', '"capped_offset": 0', '"blocked_kill_pulses": 0')))
     check("telemetry accessor exposed", "get_camera_impulse_telemetry()" in agg)
     check("camera2d offset written each frame", "camera2d.offset = offset" in agg)
 
@@ -369,22 +370,20 @@ def main() -> int:
         m.decay(0.2)
         check("7c: decay returns amplitude to zero",
               m.amplitude == 0.0 or abs(m.amplitude - max(0.0, 1.8 - m.decay * 0.2)) < 1e-9)
-        # 7d. cluster kill merge within window: sub-additive, budget-bounded
+        # 7d. kill impulse disabled: burst only counted, no amplitude/cluster
         kill_amp = 1.6
         m2 = MirrorAggregator(agg_consts)
         for i, t in enumerate([0, 80, 160, 240]):
             m2.consume("impulse", t, kind="kill", amplitude=kill_amp)
-        single = kill_amp * m2.kill_ratio
-        merged_final = m2.amplitude
-        check("7d: 4-kill burst merged (clusters==3) and budget-bounded",
-              m2.t["kills"] == 4 and m2.t["clusters"] == 3 and m2.t["impulses"] == 4
-              and merged_final == m2.budget_max and m2.t["capped_amplitude"] >= 2)
-        # 7e. kills separated beyond the window are independent groups
+        check("7d: 4-kill burst blocked (kills==4, blocked==4, zero amplitude, no cluster)",
+              m2.t["kills"] == 4 and m2.t["blocked_kill_pulses"] == 4 and m2.t["clusters"] == 0
+              and m2.t["impulses"] == 0 and m2.amplitude == 0.0)
+        # 7e. separated kills disabled: both counted, no groups/clusters
         m3 = MirrorAggregator(agg_consts)
         m3.consume("impulse", 0, kind="kill", amplitude=kill_amp)
         m3.consume("impulse", 10000, kind="kill", amplitude=kill_amp)
-        check("7e: separated kills form separate groups, no cluster count",
-              m3.groups == 2 and m3.t["clusters"] == 0 and m3.t["kills"] == 2)
+        check("7e: separated kills blocked (kills==2, blocked==2, no amplitude)",
+              m3.t["kills"] == 2 and m3.t["blocked_kill_pulses"] == 2 and m3.amplitude == 0.0 and m3.groups == 0)
         # 7f. offset safety cap
         m4 = MirrorAggregator(agg_consts)
         for i in range(30):
@@ -396,12 +395,11 @@ def main() -> int:
         m5 = MirrorAggregator(agg_consts)
         m5.consume("impulse", 9000, kind="heavy", amplitude=1.2)
         check("7g: heavy impulse consumed", m5.t["heavies"] == 1 and m5.amplitude == 1.2)
-        # 7h. elite kill amplitude
+        # 7h. elite kill disabled: counted but no amplitude
         m6 = MirrorAggregator(agg_consts)
         m6.consume("impulse", 11000, kind="kill", amplitude=2.4, is_elite=True)
-        check("7h: elite kill impulse consumed with elite counter",
-              m6.t["elite_kills"] == 1 and m6.t["kills"] == 1
-              and abs(m6.amplitude - 2.4 * m6.kill_ratio) < 1e-9)
+        check("7h: elite kill blocked (elite_kills==1, kills==1, blocked==1, zero amplitude)",
+              m6.t["elite_kills"] == 1 and m6.t["kills"] == 1 and m6.t["blocked_kill_pulses"] == 1 and m6.amplitude == 0.0)
         # 7i. emission policy mirror: heavy gate threshold & kill gate
         check("7i: heavy threshold constant > 0 and < 1", 0.0 < stats_consts["IMPULSE_HEAVY_THRESHOLD_RATIO"] < 1.0)
         check("7i: kill amplitude < elite amplitude < budget",
