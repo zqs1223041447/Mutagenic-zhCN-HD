@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-21T22:20:00+08:00",
+  "updated_at": "2026-08-22T00:00:00+08:00",
   "coordinator": "gork",
   "central_branch": "agent/kinetic-arcane-remaster-foundation",
   "git": {
     "branch": "agent/kinetic-arcane-remaster-foundation",
-    "head": "72ea09d32c0606477366cf2a0a80360cf455ddeb",
+    "head": "b3bbb751e6e16bbc601d44c727a770cf4d9ddcbf",
     "remote": "origin",
     "remote_url": "https://github.com/zqs1223041447/Mutagenic-zhCN-HD.git",
-    "note": "Pushed 72ea09d. CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
+    "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
   "current_phase": "P1_GODOT_4_7_1_MIGRATION",
-  "current_gate": "P1-WAVE-D",
+  "current_gate": "P1-WAVE-G",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -250,6 +250,60 @@
       "evidence": [
         "migration/conversion/wave_d_world_report.json"
       ]
+    },
+    "P1-WAVE-E": {
+      "goal": "Combat / Projectile / Status subsystem conversion",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "files_copied": 26,
+        "converted_text_files": 22,
+        "binaries": 4,
+        "projectile_format3": true,
+        "generic_skill_callable": true,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "blocker_count": 777,
+        "zero_errors_required": false,
+        "tests": "102 OK"
+      },
+      "note": "Dominant blockers unchanged: missing preloads (sprites/skills playable scenes/mobs), Steam singleton, GeneMods resolve. Not rewritten as CLEAN.",
+      "evidence": [
+        "migration/conversion/wave_e_combat_report.json",
+        "scripts/migration/combat_convert.py",
+        "scripts/ai/tests/test_combat_convert.py"
+      ]
+    },
+    "P1-WAVE-F": {
+      "goal": "Mob / AI foundation subsystem conversion",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "files_copied": 27,
+        "converted_text_files": 26,
+        "binaries": 1,
+        "excluded": ["Scenes/Mobs/Basic/TrainingDummy.tscn (deferred to Hideout batch)"],
+        "mob_tscn_format3": true,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "error_count": 1031,
+        "blocker_count": 982,
+        "zero_errors_required": false,
+        "tests": "106 OK"
+      },
+      "note": "Mobs tree converted via mob_convert.py with parallel background subagents (inventory scan || converter impl). Blocker growth from missing skill sprites/playable scenes is expected and classified.",
+      "evidence": [
+        "migration/conversion/wave_f_mob_report.json",
+        "migration/inventory/wave_f_mobs_inventory.json",
+        "scripts/migration/mob_convert.py",
+        "scripts/ai/tests/test_mob_convert.py"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -282,11 +336,11 @@
   },
   "next_ready": [
     {
-      "id": "P1-WAVE-E",
-      "goal": "Combat / Projectile / Status subsystem conversion",
-      "depends_on": ["P1-D0", "P1-D1", "P1-D2"],
+      "id": "P1-WAVE-G",
+      "goal": "Skill playable scenes/sprites + Skill/Passive Tree UI foundation",
+      "depends_on": ["P1-WAVE-F"],
       "status": "READY",
-      "note": "Copy/convert projectiles, generic skill, status effects. Missing mob/skill preloads stay ERRORS_CLASSIFIED."
+      "note": "Copy/convert scenes/Skills Playable + sprites/skills to kill dominant preload blockers; tree UI base. Execution mode: parallel background subagents per AGENT.MD."
     }
   ]
 }

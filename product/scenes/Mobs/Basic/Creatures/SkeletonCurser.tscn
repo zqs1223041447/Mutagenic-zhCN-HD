@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Shader" path="res://scenes/Shaders/OutlineShader.tres" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/Mobs/Mob.tscn" id="2"]
+[ext_resource type="SpriteFrames" path="res://sprites/monsters/skeleton_curser.aseprite" id="3"]
+[ext_resource type="Script" path="res://scenes/Mobs/Basic/Creatures/SkeletonCurser.gd" id="4"]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 4.0
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource("1")
+shader_parameter/color = Color(0, 0.141176, 0.898039, 0.313726)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/enabled = false
+shader_parameter/inside = true
+shader_parameter/make_transparent = false
+shader_parameter/add_margins = false
+
+[node name="SkeletonCurser" instance=ExtResource("2")]
+script = ExtResource("4")
+type="SKELETON_CURSER"
+target_proximity = 80.0
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("1")
+
+[node name="CollisionShape2D" parent="MobCollider" index="0"]
+shape = SubResource("2")
+
+[node name="Sprite" parent="SpriteContainer" index="0"]
+material = SubResource("3")
+frames = ExtResource("3")
+frame = 2
+
+[node name="StatusBar" parent="." index="6"]
+offset_top = -29.0
+offset_bottom = 5.0

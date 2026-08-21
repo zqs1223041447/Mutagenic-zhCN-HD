@@ -174,7 +174,7 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 - recovered 指纹不变
 - 有 4.7.1 则 import RAN；错误分类；zero errors 不是本波要求
 
-## 5d. P1-WAVE-E（当前批次）— Combat / Projectile / Status
+## 5d. P1-WAVE-E（已完成）— Combat / Projectile / Status
 
 **Allowed:** `product/scenes/Skills/GenericSkill.*`、`product/scenes/Projectiles/**`、`product/scenes/StatusEffects/**`、`product/scenes/AreaInstantDamageApplier/**`、`product/scenes/ShaderExplosions/**`、`scripts/migration/combat_convert.py`、tests、`migration/conversion/wave_e_combat_report.json`
 
@@ -188,6 +188,37 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 - 有 4.7.1 则 headless import RAN；错误分类；zero errors 不是本波要求
 
 后续子系统（本波不做）：Mob AI → Skill/Passive Tree UI → Equipment → VFX/Audio
+
+## 5e. P1-WAVE-F（已完成）— Mob / AI 基础
+
+**Allowed:** `product/scenes/Mobs/**`（Mob 基础场景/脚本/Stats node）、`scripts/migration/mob_convert.py`、`migration/inventory/wave_f_mobs_inventory.json`、`migration/conversion/wave_f_mob_report.json`、tests
+
+**Forbidden:** `03_raw/**`、`04_recovered/**`、Skills Playable 全量场景、Levels 全量重写、GeneEditor/PassiveTree 全量系统、新增 Gameplay
+
+**Acceptance:**
+- Mob.tscn/gd 与 Stats node 在 product 且 scene format=3 / GDScript 4 语法转换
+- 机器可读 mobs inventory（从 04_recovered 扫描产生）
+- Player 保留 dash（`apply_central_impulse` + `dash`）
+- `run/main_scene` 仍是 LoadGame
+- recovered 指纹不变
+- 有 4.7.1 则 headless import RAN；错误分类；zero errors 不是本波要求
+
+执行模式：gork 并行派发 background 子 agent（inventory 扫描 ∥ converter 实现），由 gork 统一集成验证。
+
+## 5f. P1-WAVE-G（当前批次）— Skill 场景资源 + Skill/Passive Tree UI 基础
+
+**Allowed:** `product/scenes/Skills/**`（Playable 技能场景）、`product/sprites/skills/**`、SkillTree/PassiveTree UI 场景与脚本、`scripts/migration/skill_convert.py`、`migration/inventory/wave_g_*.json`、`migration/conversion/wave_g_skill_report.json`、tests
+
+**Forbidden:** `03_raw/**`、`04_recovered/**`、Mobs/Levels 全量重写、GeneEditor 全量系统、新增 Gameplay
+
+**Acceptance:**
+- Playable 技能场景在 product 且 scene format=3 / GDScript 4 语法转换
+- 技能图标 sprites 复制到位，preload 缺失显著下降
+- Player 保留 dash；`run/main_scene` 仍是 LoadGame
+- recovered 指纹不变
+- 有 4.7.1 则 headless import RAN；错误分类；zero errors 不是本波要求
+
+后续子系统（本波不做）：Equipment → VFX/Audio → Levels 补全
 
 ## 6. 进入 P2 / P3 的最低条件
 

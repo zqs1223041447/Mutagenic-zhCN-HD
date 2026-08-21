@@ -156,7 +156,11 @@ Godot 3.5.3 = Legacy Reference
 
 **P1-WAVE-D（已完成）：** World / Spawn / Movement。
 
-**P1-WAVE-E（当前批次）：Combat / Projectile / Status**
+**P1-WAVE-E（已完成）：** Combat / Projectile / Status。
+
+**P1-WAVE-F（已完成）：** Mob / AI 基础。
+
+**P1-WAVE-G（当前批次）：Skill 场景资源 + Skill/Passive Tree UI 基础**
 
 | ID | Goal | 关键验收 |
 |----|------|----------|
