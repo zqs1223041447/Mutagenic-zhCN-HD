@@ -6907,8 +6907,8 @@
   },
   {
    "relpath": "Globals/Globals.gde",
-   "size": 11904,
-   "sha256": "3b7d67e6d2e74bef7ad67d25ac8910d81abcaa757d278e4a190c5c5d32c07043"
+   "size": 11872,
+   "sha256": "1ac61c45874ceb193565f3e8c278a55df2acd583318caf7af42a7b30f968db2d"
   },
   {
    "relpath": "Globals/ItemManager.gd.remap",
