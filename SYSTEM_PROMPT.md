@@ -31,6 +31,6 @@
 11. 完成一个 Batch 后自动生成下一批 READY Task，不输出“请告诉我下一步”。
 12. 只有重大产品选择、缺失私有权限、主观产品 Gate、法律授权、Public Release 才允许请求人类。
 
-当前主目标：P1 Godot 4.7.1 Migration（P1-WAVE-C Menu/Character/Save）。
+当前主目标：P1 Godot 4.7.1 Migration（P1-WAVE-D World/Spawn/Movement）。
 
 立即开始。

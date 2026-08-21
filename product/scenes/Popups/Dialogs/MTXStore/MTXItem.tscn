@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://sprites/player/helmets/ninja.png" id="1"]
+[ext_resource type="Script" path="res://scenes/Popups/Dialogs/MTXStore/MTXItem.gd" id="2"]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.101961, 0.606403, 0.827451, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.827451, 0.545098, 0.101961, 1)
+expand_margin_left = 2.0
+
+[node name="MTXItem" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+script = ExtResource("2")
+
+[node name="NameLabel" type="Label" parent="."]
+offset_right = 1280.0
+offset_bottom = 14.0
+text = "Cosmetic Name"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_top = 18.0
+offset_right = 1280.0
+offset_bottom = 66.0
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+offset_left = 616.0
+offset_right = 664.0
+offset_bottom = 48.0
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("1")
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/PanelContainer"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 40.0
+custom_minimum_size = Vector2(32, 32)
+texture = ExtResource("1")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PriceLabel" type="Label" parent="."]
+offset_top = 70.0
+offset_right = 1280.0
+offset_bottom = 84.0
+text = "Price Here"
+align = 1
+
+[node name="PurchaseButton" type="Button" parent="."]
+visible = false
+offset_top = 88.0
+offset_right = 1280.0
+offset_bottom = 108.0
+text = "Purchase"
+
+[connection signal="pressed" from="PurchaseButton" to="." method="_on_Button_pressed"]

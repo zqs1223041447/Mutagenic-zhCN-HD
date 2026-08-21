@@ -11,7 +11,7 @@
     "note": "Pushed 72ea09d. CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
   "current_phase": "P1_GODOT_4_7_1_MIGRATION",
-  "current_gate": "P1-WAVE-C",
+  "current_gate": "P1-WAVE-D",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -216,6 +216,40 @@
       "evidence": [
         "migration/conversion/wave_c_menu_report.json"
       ]
+    },
+    "P1-D0": {
+      "goal": "World + Player movement + Dash",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "world_format3": true,
+        "dash_impulse_present": true,
+        "mouse_button_godot4": true,
+        "ysort_folded": true
+      }
+    },
+    "P1-D1": {
+      "goal": "BaseLevel spawn + DefaultLevel + SpawnLocation",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "required_present": true,
+        "files_copied": 160,
+        "recovered_unmodified": true
+      }
+    },
+    "P1-D2": {
+      "goal": "Headless import after world conversion",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "zero_errors_required": false
+      },
+      "evidence": [
+        "migration/conversion/wave_d_world_report.json"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -248,11 +282,11 @@
   },
   "next_ready": [
     {
-      "id": "P1-WAVE-D",
-      "goal": "World / Spawn / Movement subsystem conversion",
-      "depends_on": ["P1-C0", "P1-C1", "P1-C2"],
+      "id": "P1-WAVE-E",
+      "goal": "Combat / Projectile / Status subsystem conversion",
+      "depends_on": ["P1-D0", "P1-D1", "P1-D2"],
       "status": "READY",
-      "note": "Copy/convert World.tscn, Player movement, BaseLevel spawn. Do not rewrite remaining Steam/preload ERRORS_CLASSIFIED as CLEAN."
+      "note": "Copy/convert projectiles, generic skill, status effects. Missing mob/skill preloads stay ERRORS_CLASSIFIED."
     }
   ]
 }

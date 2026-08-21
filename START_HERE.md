@@ -45,7 +45,7 @@ Godot 3.5.3 = Legacy Reference
 
 目标：尽快让 Godot 4 Product 进入可玩基线。
 
-P1-WAVE-A / P1-WAVE-B 已完成。立即执行 **P1-WAVE-C**（Menu / Character / Save）。
+P1-WAVE-A / B / C 已完成。立即执行 **P1-WAVE-D**（World / Spawn / Movement）。
 
 ## 文档卫生
 

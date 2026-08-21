@@ -152,7 +152,9 @@ Godot 3.5.3 = Legacy Reference
 
 **P1-WAVE-B（已完成）：** Boot / Project / Autoload / Input。
 
-**P1-WAVE-C（当前批次）：Menu / Character / Save**
+**P1-WAVE-C（已完成）：** Menu / Character / Save。
+
+**P1-WAVE-D（当前批次）：World / Spawn / Movement**
 
 | ID | Goal | 关键验收 |
 |----|------|----------|

@@ -160,7 +160,21 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 - recovered 指纹不变
 - 有 4.7.1 则 headless import RAN；错误分类；zero errors 不是本波要求
 
-后续子系统（本波不做）：World / Movement → Combat → Skill/Passive → Equipment → VFX/Audio
+## 5c. P1-WAVE-D（当前批次）— World / Spawn / Movement
+
+**Allowed:** `product/scenes/World.*`、`product/scenes/Player/**`、`product/scenes/Levels/**`（Default/Spawn/NavMesh/Loader）、`product/scenes/GUI/**`、`product/scenes/Stats.*`、`product/scenes/Popups/EscapeMenu.*`、`product/Tilesets/**`、`product/Shaders/**`、`scripts/migration/world_convert.py`、tests、evidence
+
+**Forbidden:** `03_raw/**`、`04_recovered/**`、Skills/Projectiles/Mobs 全量子系统、新增 Gameplay
+
+**Acceptance:**
+- World/Player/BaseLevel/SpawnLocation/DefaultLevel 在 product 且 scene format=3
+- Player 保留 dash（`apply_central_impulse` + input action `dash`）
+- YSort → Node2D + `y_sort_enabled`
+- `run/main_scene` 仍是 LoadGame
+- recovered 指纹不变
+- 有 4.7.1 则 import RAN；错误分类；zero errors 不是本波要求
+
+后续子系统（本波不做）：Combat → Skill/Passive → Equipment → VFX/Audio
 
 ## 6. 进入 P2 / P3 的最低条件
 

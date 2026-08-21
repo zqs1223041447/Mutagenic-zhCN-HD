@@ -106,9 +106,10 @@ def rewrite_scenes_case(text: str) -> str:
     return text.replace("res://Scenes/", "res://scenes/")
 
 
-def is_forbidden(rel: str) -> bool:
+def is_forbidden(rel: str, prefixes: Iterable[str] | None = None) -> bool:
     rel = rel.replace("\\", "/")
-    return any(rel.startswith(p) or rel == p.rstrip("/") for p in FORBIDDEN_PREFIXES)
+    prefixes = tuple(prefixes) if prefixes is not None else FORBIDDEN_PREFIXES
+    return any(rel.startswith(p) or rel == p.rstrip("/") for p in prefixes)
 
 
 def parse_attrs(blob: str) -> dict[str, str]:
@@ -139,6 +140,11 @@ def _rewrite_type_attr(match: re.Match[str]) -> str:
 
 def convert_scene_text(text: str) -> str:
     out = text.replace("format=2", "format=3")
+    out = re.sub(
+        r'(\[node [^\]]*?)type="YSort"([^\]]*\])',
+        r"\1type=\"Node2D\"\2\ny_sort_enabled = true",
+        out,
+    )
     lines: list[str] = []
     for line in out.splitlines(keepends=True):
         if line.startswith("[ext_resource"):
@@ -174,6 +180,11 @@ def convert_scene_text(text: str) -> str:
         return f"{match.group(1)}({args})"
 
     out = re.sub(r"(Vector2|Vector3|Color|Rect2)\(\s*([^)]*?)\s*\)", _compact, out)
+    out = re.sub(r"\bPoolRealArray\b", "PackedFloat32Array", out)
+    out = re.sub(r"\bPoolVector2Array\b", "PackedVector2Array", out)
+    out = re.sub(r"\bPoolStringArray\b", "PackedStringArray", out)
+    out = re.sub(r"\bPoolIntArray\b", "PackedInt32Array", out)
+    out = re.sub(r"\bshader_param/", "shader_parameter/", out)
     return out
 
 
@@ -188,14 +199,18 @@ def extract_res_paths(text: str) -> list[str]:
     return found
 
 
-def collect_menu_files(recovered: Path, roots: Iterable[str] | None = None) -> list[str]:
+def collect_menu_files(
+    recovered: Path,
+    roots: Iterable[str] | None = None,
+    forbidden: Iterable[str] | None = None,
+) -> list[str]:
     recovered = Path(recovered)
     queue = [res_to_rel(r) for r in (roots or ROOTS)]
     seen: set[str] = set()
     ordered: list[str] = []
     while queue:
         rel = queue.pop(0)
-        if rel in seen or is_forbidden(rel):
+        if rel in seen or is_forbidden(rel, forbidden):
             continue
         src = recovered / rel
         if not src.is_file():
@@ -208,7 +223,7 @@ def collect_menu_files(recovered: Path, roots: Iterable[str] | None = None) -> l
         if src.suffix.lower() in TEXT_SUFFIXES:
             text = src.read_text(encoding="utf-8", errors="replace")
             for dep in extract_res_paths(text):
-                if dep not in seen and not is_forbidden(dep):
+                if dep not in seen and not is_forbidden(dep, forbidden):
                     queue.append(dep)
     return ordered
 
