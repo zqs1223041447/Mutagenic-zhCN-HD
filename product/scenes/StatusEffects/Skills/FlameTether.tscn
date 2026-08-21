@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/StatusEffects/Skills/FlameTether.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/skills/flame_tether.png" id="2"]
+
+[node name="FlameTether" type="Node"]
+script = ExtResource("1")
+permanent = true
+texture = ExtResource("2")

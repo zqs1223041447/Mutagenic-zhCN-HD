@@ -32,9 +32,18 @@ from typing import Any, Callable, Mapping
 
 DEFAULT_QUIT_AFTER = 600
 DEFAULT_TIMEOUT_S = 120
-MAX_ERROR_LINES = 50
+MAX_ERROR_LINES = 500
+ERROR_CLASSES = ("missing_asset", "class_resolve", "load_fail", "api_member")
 SCRIPT_ERROR_RE = re.compile(r"SCRIPT\s+ERROR", re.IGNORECASE)
 ERROR_LINE_RE = re.compile(r"(?:script\s+error|error|parse\s+error)", re.IGNORECASE)
+ERROR_CLASS_RES: dict[str, re.Pattern[str]] = {
+    "missing_asset": re.compile(
+        r"preload|failed loading resource|cannot open file|file not found", re.IGNORECASE
+    ),
+    "class_resolve": re.compile(r"could not resolve class", re.IGNORECASE),
+    "load_fail": re.compile(r"failed to load script", re.IGNORECASE),
+    "api_member": re.compile(r"cannot find member|not declared", re.IGNORECASE),
+}
 
 ENV_VARS = ("MUTAGENIC_GODOT_4", "GODOT4", "GODOT_BIN")
 WHICH_NAMES = (
@@ -117,14 +126,36 @@ def sanitize_cmd(cmd: list[str], repo_root: Path) -> list[str]:
     return out
 
 
-def analyze_output(stdout: str, stderr: str) -> dict[str, Any]:
+def empty_error_class_counts() -> dict[str, int]:
+    return {**{cls: 0 for cls in ERROR_CLASSES}, "other": 0}
+
+
+def classify_error_line(line: str) -> str:
+    for cls, pattern in ERROR_CLASS_RES.items():
+        if pattern.search(line):
+            return cls
+    return "other"
+
+
+def classify_error_lines(lines: list[str]) -> dict[str, int]:
+    counts = empty_error_class_counts()
+    for ln in lines:
+        counts[classify_error_line(ln)] += 1
+    return counts
+
+
+def analyze_output(
+    stdout: str, stderr: str, max_error_lines: int = MAX_ERROR_LINES
+) -> dict[str, Any]:
     lines = [ln for ln in stdout.splitlines()] + [ln for ln in stderr.splitlines()]
     script_error_count = sum(1 for ln in lines if SCRIPT_ERROR_RE.search(ln))
     error_lines = [ln.strip() for ln in lines if ERROR_LINE_RE.search(ln)]
+    limit = max(0, int(max_error_lines))
     return {
         "script_error_count": script_error_count,
-        "error_lines": error_lines[:MAX_ERROR_LINES],
-        "error_lines_truncated": len(error_lines) > MAX_ERROR_LINES,
+        "script_errors_by_class": classify_error_lines(error_lines),
+        "error_lines": error_lines[:limit],
+        "error_lines_truncated": len(error_lines) > limit,
     }
 
 
@@ -141,6 +172,7 @@ def run_boot_probe(
     product_dir: Path,
     quit_after: int = DEFAULT_QUIT_AFTER,
     timeout_s: int = DEFAULT_TIMEOUT_S,
+    max_error_lines: int = MAX_ERROR_LINES,
     run: RunFn | None = None,
     clock: ClockFn | None = None,
 ) -> dict[str, Any]:
@@ -185,7 +217,7 @@ def run_boot_probe(
     duration_ms = int((clock() - started) * 1000)
     stdout = _as_text(proc.stdout)
     stderr = _as_text(proc.stderr)
-    analysis = analyze_output(stdout, stderr)
+    analysis = analyze_output(stdout, stderr, max_error_lines=max_error_lines)
     status = classify_boot(proc.returncode, analysis["script_error_count"])
     return {
         "status": status,
@@ -287,6 +319,7 @@ def gather_report(
     product_dir: Path | None = None,
     quit_after: int = DEFAULT_QUIT_AFTER,
     timeout_s: int = DEFAULT_TIMEOUT_S,
+    max_error_lines: int = MAX_ERROR_LINES,
     environ: Mapping[str, str] | None = None,
     which: WhichFn | None = None,
     is_file: IsFile | None = None,
@@ -307,6 +340,7 @@ def gather_report(
             "duration_ms": None,
             "cmd": [],
             "script_error_count": 0,
+            "script_errors_by_class": empty_error_class_counts(),
             "error_lines": [],
             "error_lines_truncated": False,
         }
@@ -316,6 +350,7 @@ def gather_report(
             product,
             quit_after=quit_after,
             timeout_s=timeout_s,
+            max_error_lines=max_error_lines,
             run=run,
             clock=clock,
         )
@@ -336,9 +371,11 @@ def gather_report(
             "detail": boot.get("detail") or "",
             "returncode": boot["returncode"],
             "timed_out": boot["timed_out"],
-            "script_error_count": boot["script_error_count"],
-            "error_lines": boot["error_lines"],
+            "script_error_count": boot.get("script_error_count", 0),
+            "script_errors_by_class": boot.get("script_errors_by_class") or empty_error_class_counts(),
+            "error_lines": boot.get("error_lines", []),
             "error_lines_truncated": boot.get("error_lines_truncated", False),
+            "max_error_lines": int(max_error_lines),
             "duration_ms": boot["duration_ms"],
             "quit_after": int(quit_after),
             "timeout_s": int(timeout_s),
@@ -395,6 +432,13 @@ def main(
     ap.add_argument("--product", type=Path, default=None, help="product dir (default: <root>/product)")
     ap.add_argument("--quit-after", dest="quit_after", type=int, default=DEFAULT_QUIT_AFTER)
     ap.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT_S, help="subprocess timeout seconds")
+    ap.add_argument(
+        "--max-error-lines",
+        dest="max_error_lines",
+        type=int,
+        default=MAX_ERROR_LINES,
+        help="max captured error lines kept in report (default: %(default)s)",
+    )
     ap.add_argument("--out", type=Path, default=None, help="write JSON report to PATH")
     ap.add_argument("--json", action="store_true", help="also print full JSON to stdout")
     args = ap.parse_args(argv)
@@ -406,6 +450,7 @@ def main(
         product_dir=product,
         quit_after=args.quit_after,
         timeout_s=args.timeout,
+        max_error_lines=args.max_error_lines,
         environ=environ,
         which=which,
         is_file=is_file,

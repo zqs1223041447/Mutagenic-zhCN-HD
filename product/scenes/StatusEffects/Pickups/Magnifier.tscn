@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://sprites/drops/magnifier.png" id="1"]
+[ext_resource type="Script" path="res://scenes/StatusEffects/Pickups/Magnifier.gd" id="2"]
+
+[node name="Magnifier" type="Node"]
+script = ExtResource("2")
+description = "Magnifier"
+on_apply_tip = "Projectile Frenzy"
+is_powerup = true
+texture = ExtResource("1")
+lifetime = 25.0

@@ -83,8 +83,8 @@ class BootClassificationTest(unittest.TestCase):
         self.assertEqual(out["script_error_count"], 2)
         self.assertTrue(any("Parse Error" in ln for ln in out["error_lines"]))
 
-    def test_error_lines_capped_at_50(self):
-        stdout = "".join(f"SCRIPT ERROR: boom {i}\n" for i in range(60))
+    def test_error_lines_default_cap_is_500(self):
+        stdout = "".join(f"SCRIPT ERROR: boom {i}\n" for i in range(600))
         out = pbp.run_boot_probe(
             "/tools/godot471",
             Path("/repo/product"),
@@ -92,9 +92,83 @@ class BootClassificationTest(unittest.TestCase):
             clock=iter([0.0, 0.1]).__next__,
         )
         self.assertEqual(out["status"], "BOOTED_WITH_ERRORS")
+        self.assertEqual(out["script_error_count"], 600)
+        self.assertEqual(len(out["error_lines"]), pbp.MAX_ERROR_LINES)
+        self.assertTrue(out["error_lines_truncated"])
+
+    def test_max_error_lines_param_controls_cap(self):
+        stdout = "".join(f"SCRIPT ERROR: boom {i}\n" for i in range(60))
+        out = pbp.run_boot_probe(
+            "/tools/godot471",
+            Path("/repo/product"),
+            max_error_lines=50,
+            run=fake_run(stdout, "", 0),
+            clock=iter([0.0, 0.1]).__next__,
+        )
         self.assertEqual(out["script_error_count"], 60)
         self.assertEqual(len(out["error_lines"]), 50)
         self.assertTrue(out["error_lines_truncated"])
+
+    def test_max_error_lines_zero_keeps_nothing(self):
+        stdout = "SCRIPT ERROR: boom\n"
+        out = pbp.run_boot_probe(
+            "/tools/godot471",
+            Path("/repo/product"),
+            max_error_lines=0,
+            run=fake_run(stdout, "", 0),
+            clock=iter([0.0, 0.1]).__next__,
+        )
+        self.assertEqual(out["error_lines"], [])
+        self.assertTrue(out["error_lines_truncated"])
+        self.assertEqual(sum(out["script_errors_by_class"].values()), 1)
+
+    def test_script_errors_by_class_counts(self):
+        err = "\n".join([
+            'ERROR: Failed loading resource: res://scenes/missing.tscn',
+            "ERROR: Cannot open file 'res://assets/x.png'.",
+            "ERROR: File not found: res://fonts/y.ttf",
+            "SCRIPT ERROR: Could not resolve class \"FooBar\"",
+            "SCRIPT ERROR: Failed to load script \"res://res/bad.gd\" with error -2.",
+            "SCRIPT ERROR: Cannot find member \"hp\" in base \"Node\".",
+            "SCRIPT ERROR: Identifier \"y\" not declared in the current scope.",
+            "SCRIPT ERROR: Parse Error: bad token",
+        ])
+        out = pbp.run_boot_probe(
+            "/tools/godot471",
+            Path("/repo/product"),
+            run=fake_run("", err, 0),
+            clock=iter([0.0, 0.5]).__next__,
+        )
+        classes = out["script_errors_by_class"]
+        self.assertEqual(classes["missing_asset"], 3)
+        self.assertEqual(classes["class_resolve"], 1)
+        self.assertEqual(classes["load_fail"], 1)
+        self.assertEqual(classes["api_member"], 2)
+        self.assertEqual(classes["other"], 1)
+        self.assertEqual(set(classes), set(pbp.ERROR_CLASSES) | {"other"})
+        self.assertEqual(sum(classes.values()), len(out["error_lines"]))
+
+    def test_script_errors_by_class_counts_all_lines_not_only_kept_ones(self):
+        stdout = "".join("SCRIPT ERROR: Parse Error: bad token\n" for _ in range(600))
+        out = pbp.run_boot_probe(
+            "/tools/godot471",
+            Path("/repo/product"),
+            max_error_lines=10,
+            run=fake_run(stdout, "", 0),
+            clock=iter([0.0, 0.1]).__next__,
+        )
+        self.assertEqual(out["script_errors_by_class"]["other"], 600)
+
+    def test_clean_boot_has_zeroed_class_map(self):
+        out = pbp.run_boot_probe(
+            "/tools/godot471",
+            Path("/repo/product"),
+            run=fake_run("", "", 0),
+            clock=iter([0.0, 0.25]).__next__,
+        )
+        self.assertEqual(
+            out["script_errors_by_class"], pbp.empty_error_class_counts()
+        )
 
     def test_crashed_nonzero_returncode(self):
         out = pbp.run_boot_probe(
@@ -171,6 +245,9 @@ class DiscoveryAndReportTest(unittest.TestCase):
         self.assertTrue(report["engine"]["tool_missing"])
         self.assertEqual(report["boot"]["cmd"], [])
         self.assertNotEqual(report["overall"], "PASS")
+        self.assertEqual(
+            report["boot"]["script_errors_by_class"], pbp.empty_error_class_counts()
+        )
 
     def test_delegation_via_product_toolchain_env_binary(self):
         report = pbp.gather_report(
@@ -253,12 +330,14 @@ class DiscoveryAndReportTest(unittest.TestCase):
         self.assertEqual(report["overall"], report["boot"]["status"])
         for key in (
             "status", "detail", "returncode", "timed_out", "script_error_count",
-            "error_lines", "duration_ms", "quit_after", "timeout_s", "cmd",
-            "stdout_head", "stderr_head",
+            "script_errors_by_class", "error_lines", "error_lines_truncated",
+            "duration_ms", "quit_after", "timeout_s", "max_error_lines",
+            "cmd", "stdout_head", "stderr_head",
         ):
             self.assertIn(key, report["boot"], key)
         self.assertEqual(report["boot"]["quit_after"], pbp.DEFAULT_QUIT_AFTER)
         self.assertEqual(report["boot"]["timeout_s"], pbp.DEFAULT_TIMEOUT_S)
+        self.assertEqual(report["boot"]["max_error_lines"], pbp.MAX_ERROR_LINES)
         payload = json.dumps(report, ensure_ascii=False)
         self.assertIsInstance(json.loads(payload), dict)
         self.assertEqual(pbp.exit_code_for(report), 1)
@@ -345,6 +424,24 @@ class CliTest(unittest.TestCase):
             self.assertEqual(data["boot"]["status"], "BOOTED")
             self.assertEqual(data["boot"]["cmd"][0], "<repo>/Godot.exe")
             self.assertIn("boot=BOOTED", buf.getvalue())
+
+    def test_main_accepts_max_error_lines_flag(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            binary = root / "Godot.exe"
+            out = root / "boot.json"
+            code = pbp.main(
+                ["--root", str(root), "--out", str(out), "--max-error-lines", "7"],
+                environ={"MUTAGENIC_GODOT_4": str(binary)},
+                which=lambda name: None,
+                is_file=lambda p: Path(p) == binary,
+                run=version_then_boot(),
+                clock=iter([0.0, 0.3]).__next__,
+            )
+            self.assertEqual(code, 0)
+            data = json.loads(out.read_text(encoding="utf-8"))
+            self.assertEqual(data["boot"]["max_error_lines"], 7)
+            self.assertIn("script_errors_by_class", data["boot"])
 
     def test_main_crashed_exit_code_one(self):
         with tempfile.TemporaryDirectory() as td:

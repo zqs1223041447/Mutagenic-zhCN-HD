@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/Projectiles/Skills/SharknadoShardProjectile.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="2"]
+[ext_resource type="SpriteFrames" path="res://sprites/projectiles/sharknado_shard.aseprite" id="3"]
+
+[node name="SharknadoShardProjectile" instance=ExtResource("2")]
+z_index = -4
+collision_mask = 256
+script = ExtResource("1")
+does_rotate = true
+
+[node name="Sprite" parent="." index="1"]
+frames = ExtResource("3")
+playing = true

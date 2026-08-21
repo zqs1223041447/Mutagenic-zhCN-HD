@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/Projectiles/MeleeSkills/ShockwaveProjectile.gd" id="2"]
+
+[sub_resource type="CircleShape2D" id=4]
+resource_local_to_scene = true
+
+[node name="ShockwaveProjectile" instance=ExtResource("1")]
+script = ExtResource("2")
+has_limited_hits = false
+ignore_terrain = true
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("4")
+
+[node name="Glow" parent="." index="2"]
+visible = false
+
+[node name="Timer" type="Timer" parent="." index="3"]
+process_mode = 0
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

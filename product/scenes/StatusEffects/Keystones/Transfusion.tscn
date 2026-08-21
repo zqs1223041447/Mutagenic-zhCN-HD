@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/StatusEffects/Keystones/Transfusion.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/status_effects_new/transfusion.png" id="2"]
+
+[node name="Transfusion" type="Node"]
+script = ExtResource("1")
+description = "Transfusion"
+texture = ExtResource("2")
+only_apply_strongest = true
+base_lifetime = 8.0
+unique_group = "Transfusion"

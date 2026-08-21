@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Texture2D" path="res://sprites/effects/smoke.png" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="2"]
+[ext_resource type="Script" path="res://scenes/Projectiles/Skills/PlagueCloudsProjectile.gd" id="3"]
+
+[sub_resource type="Gradient" id=4]
+colors = PoolColorArray( 1, 1, 1, 0.411765, 1, 1, 1, 0.0470588 )
+
+[sub_resource type="GradientTexture" id=5]
+gradient = SubResource("4")
+
+[sub_resource type="Curve" id=1]
+max_value = 4.0
+_data = [ Vector2(0, 0.501136), 0.0, 0.0, 0, 0, Vector2(0.944984, 2.65909), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource("1")
+
+[sub_resource type="ParticlesMaterial" id=3]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity = 15.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 720.0
+angle_random = 1.0
+scale = 3.0
+scale_curve = SubResource("2")
+color = Color(0.352941, 0.819608, 0.160784, 0.376471)
+color_ramp = SubResource("5")
+
+[node name="PlagueCloudsProjectile" instance=ExtResource("2")]
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+monitorable = false
+script = ExtResource("3")
+does_hit = false
+
+[node name="Glow" parent="." index="2"]
+visible = false
+
+[node name="Particles2D" type="GPUParticles2D" parent="." index="3"]
+amount = 1
+randomness = 1.0
+local_coords = false
+process_material = SubResource("3")
+texture = ExtResource("1")

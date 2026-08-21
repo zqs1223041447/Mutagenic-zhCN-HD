@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/StatusEffects/DamageAilments/Bleed.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/status_effects/bleeding.png" id="2"]
+
+[node name="Bleed" type="Node"]
+script = ExtResource("1")
+recompute_stats = false
+description = "Bleeding"
+texture = ExtResource("2")
+is_ailment = true
+does_ramp = true
+damage_combine_group = "Bleed"
+is_damaging_ailment = true
+base_lifetime = 4.0
+unique_group = "Bleed"

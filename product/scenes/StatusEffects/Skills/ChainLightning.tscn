@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/StatusEffects/Skills/ChainLightning.gd" id="1"]
+
+[node name="ChainLightning" type="Node"]
+script = ExtResource("1")
+recompute_stats = false
+base_lifetime = 0.1

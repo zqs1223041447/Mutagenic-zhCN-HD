@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://sprites/buff_icons/unleash.png" id="1"]
+[ext_resource type="Script" path="res://scenes/StatusEffects/Keystones/UnleashEffect.gd" id="2"]
+
+[node name="UnleashEffect" type="Node"]
+script = ExtResource("2")
+description = "Unleash"
+texture = ExtResource("1")
+base_lifetime = 4.0
+unique_group = "Unleash"

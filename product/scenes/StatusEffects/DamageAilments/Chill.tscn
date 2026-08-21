@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/StatusEffects/DamageAilments/Chill.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/status_effects/chilled.png" id="2"]
+
+[node name="Chill" type="Node"]
+script = ExtResource("1")
+description = "Chilled"
+texture = ExtResource("2")
+is_ailment = true
+only_apply_strongest = true
+base_lifetime = 4.0
+unique_group = "Chill"
+does_tick = false

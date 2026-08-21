@@ -11,7 +11,7 @@
     "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
   "current_phase": "P1_GODOT_4_7_1_MIGRATION",
-  "current_gate": "P1-WAVE-M",
+  "current_gate": "P1-WAVE-N",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -484,6 +484,33 @@
         "scripts/bootstrap/product_boot_probe.py",
         "scripts/ai/tests/test_boot_probe.py"
       ]
+    },
+    "P1-WAVE-M": {
+      "goal": "Combat asset roots completion + boot error convergence",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "files_copied": 380,
+        "converted_text_files": 235,
+        "binaries": 145,
+        "roots": 15,
+        "import_blocker_count": 784,
+        "import_blocker_delta_vs_prev": -216,
+        "boot_status": "BOOTED_WITH_ERRORS",
+        "boot_script_errors": 490,
+        "boot_error_delta_vs_575_baseline": -85,
+        "boot_errors_by_class": {"missing_asset": 313, "other": 393, "load_fail": 140, "class_resolve": 102, "api_member": 55},
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "tests": "155 OK"
+      },
+      "note": "15 asset roots copied via generic roots converter. GenericSkill cascade root (GameState Godot3 API) already fixed in Wave L. Exposed: shader compilation errors (10+8) and super-class cascades (36) -> Wave N scope.",
+      "evidence": [
+        "migration/conversion/wave_m_report.json",
+        "migration/conversion/wave_m_boot_probe.json",
+        "migration/inventory/wave_m_boot_errors_inventory.json"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -516,11 +543,11 @@
   },
   "next_ready": [
     {
-      "id": "P1-WAVE-M",
-      "goal": "Runtime boot error convergence (575 baseline -> significant reduction)",
-      "depends_on": ["P1-WAVE-L"],
+      "id": "P1-WAVE-N",
+      "goal": "Shader compilation fixes + super-class cascade + api_member residue convergence (boot 490 baseline)",
+      "depends_on": ["P1-WAVE-M"],
       "status": "READY",
-      "note": "Fix runtime errors from boot probe with root-cause classification (missing_asset/load_order/api_misuse/missing_node). Steam layer deferred pending gpt consult; aseprite frames stay at art-pipeline boundary. Execution mode: parallel background subagents per AGENT.MD."
+      "note": "Godot 4 shader syntax conversion, class inheritance cascade fixes, 55 api_member sites. Steam layer deferred pending gpt consult; aseprite frames stay at art-pipeline boundary. Execution mode: parallel background subagents per AGENT.MD."
     }
   ]
 }

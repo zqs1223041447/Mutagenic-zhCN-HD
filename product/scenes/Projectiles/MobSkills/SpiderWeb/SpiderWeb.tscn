@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/Projectiles/MobSkills/SpiderWeb/SpiderWeb.gd" id="2"]
+[ext_resource type="SpriteFrames" path="res://sprites/projectiles/spider_web.aseprite" id="3"]
+[ext_resource type="Material" path="res://scenes/Shaders/RotateMaterial.tres" id="4"]
+
+[node name="SpiderWeb" instance=ExtResource("1")]
+script = ExtResource("2")
+tint_for_enemy = false
+
+[node name="Sprite" parent="." index="1"]
+material = ExtResource("4")
+frames = ExtResource("3")
+
+[node name="Glow" parent="." index="2"]
+visible = true

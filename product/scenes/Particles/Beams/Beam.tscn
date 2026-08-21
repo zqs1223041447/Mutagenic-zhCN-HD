@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scenes/Particles/Beams/Beam.gd" id="1"]
+[ext_resource type="Shader" path="res://scenes/Shaders/BeamShader.tres" id="2"]
+
+[sub_resource type="OpenSimplexNoise" id=7]
+
+[sub_resource type="NoiseTexture" id=8]
+seamless = true
+noise = SubResource("7")
+
+[sub_resource type="ShaderMaterial" id=6]
+resource_local_to_scene = true
+shader = ExtResource("2")
+shader_parameter/color = Color(0.807843, 0.290196, 0.113725, 1)
+shader_parameter/brightness = 5.0
+shader_parameter/alpha = 0.41
+shader_parameter/noise = SubResource("8")
+
+[sub_resource type="ImageTexture" id=9]
+size = Vector2(1, 1)
+
+[node name="Beam" type="Node2D"]
+script = ExtResource("1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("6")
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_right = 16.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2(32, 32)
+mouse_filter = 2
+texture = SubResource("9")
+expand_mode = 1
+stretch_mode = 5

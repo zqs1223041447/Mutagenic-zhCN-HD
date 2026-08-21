@@ -170,7 +170,11 @@ Godot 3.5.3 = Legacy Reference
 
 **P1-WAVE-K（已完成）：** Globals 脚本 API 残留清理。
 
-**P1 当前剩余 blocker 类别：** Steam 替代层（架构决策，需会诊）、.aseprite SpriteFrames（美术管线边界）、OS.window_*/Directory/set_target_fps 语义改写、UI 音效/贴图补全。
+**P1-WAVE-L（已完成）：** 语义残留收尾 + Product 首次 headless 启动成功。
+
+**P1-WAVE-M（已完成）：** 战斗资产补全，import blocker 1000→784，boot 错误 575→490。
+
+**P1-WAVE-N（当前批次）：着色器与类解析级联收敛**
 
 | ID | Goal | 关键验收 |
 |----|------|----------|

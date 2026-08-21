@@ -272,15 +272,19 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 
 **结果：** GameState.gd 8 处语义改写（DisplayServer/DirAccess/Engine.max_fps）；`product_boot_probe.py` 落地；**Product 首次 headless 启动成功**（rc=0，BOOTED_WITH_ERRORS，575 个运行时脚本错误，17.8s）。运行时错误成为主要信号类别。
 
-## 5l. P1-WAVE-M（当前批次）— 运行时启动错误收敛
+## 5l. P1-WAVE-M（已完成）— 战斗资产补全与启动错误收敛
 
-**Allowed:** `product/**` 中运行时错误的机械修复（autoload 加载顺序、缺失节点路径、运行时 API 误用）、`migration/conversion/wave_m_report.json`、tests、boot probe 复跑证据
+**结果：** 15 个资产根批量复制（380 文件）；import blocker 1000→784；boot script errors 575→490。
+
+## 5m. P1-WAVE-N（当前批次）— 着色器与类解析级联收敛
+
+**Allowed:** `product/**` 中 shader 编译错误修复（Godot 4 shader 语法机械转换）、super-class 解析级联修复、api_member 残留（55 处）、`migration/conversion/wave_n_report.json`、tests、boot probe 复跑证据
 
 **Forbidden:** `03_raw/**`、`04_recovered/**`、语义重写、新增 Gameplay、Steam 替代层实现
 
 **Acceptance:**
-- boot probe 的 script_error_count 相对 575 基线显著下降
-- 每处修复有根因归类（missing_asset / load_order / api_misuse / missing_node）
+- boot probe script_error_count 相对 490 基线显著下降
+- Shader compilation failed 类错误清零或逐条归类 residuals
 - Player 保留 dash；`run/main_scene` 仍是 LoadGame
 - recovered 指纹不变
 - 错误归因区分"新暴露"与"回归"

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/StatusEffects/Skills/Webbed.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/projectiles/spider_web.png" id="2"]
+
+[node name="Webbed" type="Node"]
+script = ExtResource("1")
+description = "Webbed"
+texture = ExtResource("2")
+base_lifetime = 4.0
+unique_group = "Webbed"
