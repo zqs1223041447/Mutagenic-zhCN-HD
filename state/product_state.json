@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-21T19:46:00+08:00",
+  "decision_authority": "USER_APPROVED_2026-08-21",
+  "integration_branch": "agent/kinetic-arcane-remaster-foundation",
+  "remote_head_before_adoption": "641d944e8aa175d3de89183ca554e81a2cff1a51",
+  "phase": "P0_REPO_CLOSURE",
+  "phase_status": "INTEGRATING_ADOPTION",
+  "product_engine": {
+    "name": "Godot",
+    "version": "4.7.1",
+    "channel": "stable",
+    "role": "ONLY_ACTIVE_PRODUCT_ENGINE"
+  },
+  "legacy_reference": {
+    "engine": "Godot 3.5.3",
+    "role": "READ_ONLY_REFERENCE",
+    "active_gameplay_development": false,
+    "active_long_term_build_investment": false,
+    "sources": ["03_raw", "04_recovered", "status.json", "releases", "docs/ai/audits"]
+  },
+  "current_gate": "P0_REPO_CLOSURE_CI_GREEN",
+  "next_gate": "P1_GODOT_4_7_1_MIGRATION_READY",
+  "product_principles": [
+    "active skills plus Dash, permanent characters",
+    "Class plus Specialization plus Passive plus Skill/Support",
+    "Equipment and Gene split",
+    "Rare numerical ceiling, Legendary rule-changing anchor",
+    "Campaign plus Map Item plus Atlas endgame",
+    "Halls-style dark retro presentation without survivor auto-attack conversion",
+    "POE-like mechanisms without copying protected assets/text/names/numbers"
+  ],
+  "legacy_status_note": "status.json remains authoritative for Legacy historical evidence but no longer controls Product roadmap",
+  "known_repo_issues_at_adoption": [
+    "PR #1 metadata is stale and still describes old 3127D394 release hold",
+    "current CI run #62 fails on two release archive_locator host absolute paths",
+    "old Fresh Clone command does not explicitly checkout integration branch"
+  ],
+  "p0_changes": [
+    "adopt Godot 4.7.1 single product mainline",
+    "convert Legacy 3.5.3 to read-only reference",
+    "replace 38-doc planning surface with 12 core documents",
+    "fix Fresh Clone branch targeting",
+    "remove release manifest host absolute archive locators",
+    "add Product toolchain doctor"
+  ],
+  "next_batch": {
+    "id": "P1-WAVE-A",
+    "start_condition": "P0_REPO_CLOSURE_CI_GREEN",
+    "tasks": [
+      {"id": "P1-X0", "name": "Godot 4.7.1 Conversion Seed", "goal": "create product project seed and deterministic conversion report"},
+      {"id": "P1-X1", "name": "Migration Compatibility Inventory", "goal": "scan 3.5.3 scripts/scenes/resources for 4.x incompatibilities and rank blockers"},
+      {"id": "P1-X2", "name": "Product Toolchain Closure", "goal": "pin Godot 4.7.1 local/headless validation and machine-readable doctor evidence"},
+      {"id": "P1-X3", "name": "Preservation Contracts", "goal": "freeze gameplay/schema/save/build facts that migration must preserve"}
+    ]
+  },
+  "public_release_requires_user_approval": true,
+  "zero_human_code_target": true
+}

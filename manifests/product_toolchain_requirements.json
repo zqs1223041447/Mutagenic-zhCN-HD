@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "product_engine": {"name": "Godot", "version": "4.7.1", "channel": "stable", "required": true},
+  "python": {"minimum": "3.11", "required": true},
+  "git": {"minimum": "2.40", "required": true},
+  "environment": {
+    "MUTAGENIC_GODOT4": "optional explicit path to Godot 4.7.1 executable"
+  },
+  "deferred_tools": {
+    "godot_mcp": "enable after Product project can boot; adapter only, CLI/tests remain canonical",
+    "stagehand": "defer until first playable Godot 4 baseline",
+    "blender": "5.2 LTS planned for scaled art production",
+    "blender_mcp": "optional spike only",
+    "limboai": "optional Elite/Boss only",
+    "sqlite_or_analytics_db": "do not add until JSON state becomes a measured bottleneck"
+  },
+  "legacy_only": ["Godot 3.5.3", "GDRE 2.6.4", "PCK v1 pipeline", "private original EXE/script key"]
+}
