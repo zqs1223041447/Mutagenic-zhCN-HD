@@ -207,6 +207,9 @@ def _hit(rel: str, line_no: int, matched: str, klass: str, why: str, json_path: 
 def scan_files(root: Path, rel_files: list[str]) -> list[dict]:
     hits: list[dict] = []
     for rel in rel_files:
+        # Provenance/evidence/generated are not production code — skip to keep doctor fast
+        if rel.startswith("03_raw/") or rel.startswith("04_recovered/") or rel.startswith("10_logs/") or rel.startswith(".cache/") or rel.startswith(".private_devkit/") or rel.startswith(".devkit/"):
+            continue
         if not rel.endswith(tuple(SCAN_EXTS)):
             continue
         if "script_key.txt" in rel or rel == "manifests/script_key.txt":

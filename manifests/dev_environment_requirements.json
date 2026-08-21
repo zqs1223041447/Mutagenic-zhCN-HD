@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "description": "Portable development environment closure - minimal loop (no gameplay). All paths repo-relative; external assets injected via env/CLI.",
+  "required_assets": [
+    {
+      "id": "original_exe",
+      "path": "00_original/Mutagenic.exe",
+      "destination": "00_original/Mutagenic.exe",
+      "classification": "USER_OWNED_COPYRIGHT",
+      "expected_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+      "size": 103290320,
+      "notes": "Pristine commercial EXE, never committed. Fresh embed source.",
+      "bootstrap_provider": [
+        "existing_correct_sha",
+        "MUTAGENIC_DEVKIT_ROOT/00_original/Mutagenic.exe",
+        "MUTAGENIC_ORIGINAL_EXE",
+        "BLOCKED_BY_PRIVATE_ASSET"
+      ],
+      "env_vars": ["MUTAGENIC_DEVKIT_ROOT", "MUTAGENIC_ORIGINAL_EXE"]
+    },
+    {
+      "id": "script_key",
+      "path": "manifests/script_key.txt",
+      "destination": "manifests/script_key.txt",
+      "classification": "SECRET",
+      "key_fingerprint_placeholder": "sha256:<key_file_sha256>",
+      "expected_size": 64,
+      "expected_format": "64 hex chars (32 bytes AES key), single line",
+      "notes": "Local AES script encryption key. Never committed, never logged plaintext. Only fingerprint.",
+      "bootstrap_provider": [
+        "MUTAGENIC_SCRIPT_KEY",
+        "MUTAGENIC_SCRIPT_KEY_FILE",
+        "MUTAGENIC_DEVKIT_ROOT/manifests/script_key.txt",
+        "BLOCKED_BY_PRIVATE_ASSET"
+      ],
+      "env_vars": ["MUTAGENIC_SCRIPT_KEY", "MUTAGENIC_SCRIPT_KEY_FILE", "MUTAGENIC_DEVKIT_ROOT"]
+    },
+    {
+      "id": "gdre_tool",
+      "path": "02_tools/gdre/gdre_tools.exe",
+      "destination": "02_tools/gdre/gdre_tools.exe",
+      "classification": "DOWNLOADABLE_TOOL",
+      "version": "2.6.4",
+      "expected_sha256": "88d6fbccfb7e5bacca7d248c5171fe66bbef15d78e0d7f6287c2f44e78aa9eaf",
+      "notes": "Godot RE Tools v2.6.4 for script decompile/compile and PCK operations. Downloadable, not copyright.",
+      "bootstrap_provider": [
+        "existing",
+        "MUTAGENIC_TOOL_ROOT/gdre/gdre_tools.exe",
+        "MUTAGENIC_DEVKIT_ROOT/02_tools/gdre/gdre_tools.exe",
+        "manual_download"
+      ],
+      "env_vars": ["MUTAGENIC_TOOL_ROOT", "MUTAGENIC_DEVKIT_ROOT"]
+    },
+    {
+      "id": "recovered_provenance",
+      "paths": ["03_raw", "04_recovered"],
+      "destinations": ["03_raw", "04_recovered"],
+      "classification": "TRACKED_RECOVERED_PROVENANCE",
+      "file_counts": {
+        "03_raw": 3744,
+        "04_recovered": 5058
+      },
+      "manifests": ["manifests/raw_manifest.json", "manifests/recovered_clean_manifest.json"],
+      "gitattributes": "/03_raw/** -text -eol ; /04_recovered/** -text -eol",
+      "notes": "Already tracked via Git (byte-preserving). Clone provides them. Verify via manifests.",
+      "bootstrap_provider": [
+        "git_clone"
+      ]
+    }
+  ],
+  "required_tools": [
+    {
+      "id": "python",
+      "name": "python",
+      "version_constraint": ">=3.11",
+      "check": "python --version",
+      "purpose": "Pipeline, GDRE bridge, crypto"
+    },
+    {
+      "id": "git",
+      "name": "git",
+      "version_constraint": ">=2.40",
+      "check": "git --version",
+      "purpose": "Repo root discovery, provenance, worktree"
+    },
+    {
+      "id": "powershell",
+      "name": "powershell",
+      "version_constraint": ">=5.1",
+      "check": "powershell -NoProfile -Command $PSVersionTable.PSVersion",
+      "alternate": "pwsh",
+      "purpose": "Windows boot/VM probes, secret/portability scans"
+    }
+  ],
+  "environment_variables": [
+    {
+      "name": "MUTAGENIC_DEVKIT_ROOT",
+      "purpose": "Private devkit root for portable restore (contains 00_original/ and manifests/script_key.txt)",
+      "example": "<any_local_path>/mutagenic_devkit",
+      "required": false
+    },
+    {
+      "name": "MUTAGENIC_ORIGINAL_EXE",
+      "purpose": "Direct path to owned pristine Mutagenic.exe",
+      "example": "<any_local_path>/Mutagenic.exe",
+      "required": false
+    },
+    {
+      "name": "MUTAGENIC_SCRIPT_KEY_FILE",
+      "purpose": "Path to file containing 64-hex script key",
+      "example": "<any_local_path>/script_key.txt",
+      "required": false
+    },
+    {
+      "name": "MUTAGENIC_TOOL_ROOT",
+      "purpose": "Root for downloadable tools (contains gdre/)",
+      "example": "<any_local_path>/tools",
+      "required": false
+    },
+    {
+      "name": "MUTAGENIC_CACHE_ROOT",
+      "purpose": "Override for build caches (default <repo_root>/.cache)",
+      "example": "<any_local_path>/.cache",
+      "required": false
+    },
+    {
+      "name": "MUTAGENIC_SCRIPT_KEY",
+      "purpose": "Inline 64-hex script key (least preferred, env may leak; prefer _FILE)",
+      "example": "64 hex chars",
+      "required": false,
+      "secret": true
+    }
+  ],
+  "gitignored_cache_dirs": [
+    ".cache",
+    ".private_devkit",
+    ".devkit"
+  ],
+  "readiness_levels": [
+    "LEVEL_0_REPO_READY",
+    "LEVEL_1_BUILD_READY",
+    "LEVEL_2_RUNTIME_READY",
+    "LEVEL_3_FULL_VALIDATION_READY"
+  ]
+}

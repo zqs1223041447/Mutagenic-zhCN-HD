@@ -26,7 +26,15 @@ import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+# Portable repo_root: prefer dev_environment.find_repo_root (git-aware), fallback to parents[2]
+try:
+    import sys as _sys
+    from pathlib import Path as _Path
+    _sys.path.insert(0, str(_Path(__file__).resolve().parents[2] / "scripts" / "env"))
+    from dev_environment import find_repo_root as _find_repo_root  # type: ignore
+    ROOT = _find_repo_root()
+except Exception:
+    ROOT = Path(__file__).resolve().parents[2]
 GDRE = ROOT / "02_tools/gdre/gdre_tools.exe"
 KEY_FILE = ROOT / "manifests/script_key.txt"
 BYTECODE = "3.5.3.stable"

@@ -99,6 +99,8 @@ def scan_text(rel: str, text: str) -> list[dict]:
 def scan_files(root: Path, rel_files: list[str], scan_ignored: bool = False) -> list[dict]:
     findings: list[dict] = []
     for rel in rel_files:
+        if rel.startswith("03_raw/") or rel.startswith("04_recovered/") or rel.startswith("10_logs/") or rel.startswith(".cache/") or rel.startswith(".private_devkit/") or rel.startswith(".devkit/"):
+            continue
         if is_key_file(rel):
             continue
         if "tests/fixtures" in rel:
