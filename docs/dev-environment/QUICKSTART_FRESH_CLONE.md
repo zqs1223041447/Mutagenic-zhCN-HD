@@ -1,68 +1,58 @@
-# Fresh Clone — Godot 4.7.1 Product 单主线
+# Fresh Clone — bootstrap / doctor
 
-> 目标：新机器/新 AI 会话直接进入固定集成分支，不再误落 `main`，也不被 Legacy 私有资产阻塞 Product 开发。
+当前入口是 `AGENT.MD`，不是本页。本页只验证本机私资产和工具是否齐。
 
-## 1. Clone 固定分支
-
-```powershell
-git clone --branch agent/kinetic-arcane-remaster-foundation --single-branch https://github.com/zqs1223041447/Mutagenic-zhCN-HD.git
-cd Mutagenic-zhCN-HD
-git branch --show-current
-python scripts/bootstrap/product_doctor.py
-```
-
-期望 branch：
-
-`agent/kinetic-arcane-remaster-foundation`
-
-## 2. Product 工具链
-
-必需：
-
-- Git >= 2.40
-- Python >= 3.11
-- Godot 4.7.1 stable
-
-如果 Godot 不在 PATH，设置：
+`LEVEL_3` 的 abs-path / secret 闭合 **不阻塞** Product 迁移。Godot 4.7.1 是 DOWNLOADABLE_TOOL：
 
 ```powershell
-$env:MUTAGENIC_GODOT4 = "<your-godot-4.7.1-executable>"
-python scripts/bootstrap/product_doctor.py
+python scripts/bootstrap/fetch_godot.py
+python scripts/bootstrap/product_toolchain.py --sanitize
+python scripts/bootstrap/bootstrap_dev_env.py
+python scripts/bootstrap/dev_doctor.py
 ```
 
-脚本结果：
+可在仓库任意子目录运行。`--json -` 出机器可读报告。也可用 `scripts/bootstrap/bootstrap.ps1` / `doctor.ps1`。
 
-- `PRODUCT_DEV_READY`：仓库与 Godot 4.7.1 就绪。
-- `PRODUCT_REPO_READY_TOOLCHAIN_BLOCKED`：仓库可工作，但本机尚未找到正确 Godot；AI 可以继续做静态迁移/文档/数据任务，不得伪称 runtime PASS。
+---
 
-## 3. 进入任务前读取
+## 两种正常结果
 
-1. `AGENTS.md`
-2. `state/product_state.json`
-3. `docs/ai/AI_ENTRYPOINT.md`
-4. `docs/ai/master-plan/2026-08-21/00_README.md`
-5. `state/product_state.json.next_batch`
+**没有私资产**（全新 clone 预期）：`overall: BLOCKED_BY_PRIVATE_ASSET`（`original_exe`, `script_key`）。这不是失败。此时仍可只读审计 `03_raw/` / `04_recovered/`。
 
-## 4. Legacy 私有资产
+**已配置私资产**：应到 `DEV_ENV_READY`。
 
-`00_original/Mutagenic.exe`、script key、GDRE 只在需要复验 Godot 3.5.3 Legacy 历史构建时使用。
+| 资产 | 位置 | 说明 |
+|---|---|---|
+| `original_exe` | `00_original/Mutagenic.exe` | SHA `C7B5D5A5…2451209` / 103,290,320 B |
+| `script_key` | `manifests/script_key.txt` | 64 hex，不入库 |
+| `gdre` | `02_tools/gdre/gdre_tools.exe` | 可后补，缺失通常只 WARN |
 
-**Product Godot 4.7.1 迁移和新功能开发不得以缺少这些私有资产为默认阻塞条件。**
-
-旧的 `bootstrap_dev_env.py` / `dev_doctor.py` 继续保留给 Legacy 复验；Product 默认用 `product_doctor.py`。
-
-## 5. 工作区
-
-推荐固定结构：
-
-```text
-<WORKSPACE_ROOT>/
-├─ Mutagenic-zhCN-HD/   # 唯一主 clone
-├─ worktrees/           # AI 管理
-├─ tool-cache/
-├─ runtime/
-├─ artifacts/
-└─ private/
+```powershell
+$env:MUTAGENIC_DEVKIT_ROOT = "D:\mutagenic_devkit"
+python scripts/bootstrap/bootstrap_dev_env.py
 ```
 
-仓库不得记录 `<WORKSPACE_ROOT>` 的真实绝对路径。
+或：`MUTAGENIC_ORIGINAL_EXE`、`MUTAGENIC_SCRIPT_KEY_FILE`。
+
+源机器导出 DevKit：
+
+```powershell
+python scripts/bootstrap/export_private_devkit.py --out D:\mutagenic_devkit
+```
+
+DevKit 目录永不入库。
+
+---
+
+## Readiness
+
+| Level | 含义 | 与 P1 的关系 |
+|---|---|---|
+| `LEVEL_0_REPO_READY` | Git + `03_raw` + `04_recovered` | 足够做源码扫描 / P1-X1 / P1-X3 |
+| `LEVEL_1_BUILD_READY` | L0 + EXE + key + GDRE + Python | Legacy candidate 构建；**不等于** Godot 4 Product Ready |
+| `LEVEL_2_RUNTIME_READY` | L1 + cache | Legacy boot / 持久化实验 |
+| `LEVEL_3_FULL_VALIDATION_READY` | L2 + abs-path + secret | 与 P1 并行补齐，不挡 Product Seed |
+
+判定以 doctor JSON 为准，不要把 `AGENTS.md` + `status.json` 可解析当成 L0 的定义。
+
+`.env` 永不入库。日志只记密钥 fingerprint，不打明文。

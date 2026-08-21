@@ -1,0 +1,110 @@
+{
+    "nodes": [
+        {
+            "id": "root",
+            "passive_tag": "root",
+            "position": [
+                0,
+                0
+            ]
+        },
+        {
+            "id": "a2109",
+            "passive_tag": "spirited_resilience",
+            "position": [
+                160,
+                0
+            ]
+        },
+        {
+            "id": "5ee00",
+            "passive_tag": "fury",
+            "position": [
+                0,
+                -160
+            ]
+        },
+        {
+            "id": "f058e",
+            "passive_tag": "youthful_recklessness",
+            "position": [
+                0,
+                160
+            ]
+        },
+        {
+            "id": "17039",
+            "passive_tag": "battle_hardened",
+            "position": [
+                -160,
+                0
+            ]
+        },
+        {
+            "id": "4dc34",
+            "passive_tag": "hoplite",
+            "position": [
+                -160,
+                -160
+            ]
+        },
+        {
+            "id": "7dca0",
+            "passive_tag": "swordsman",
+            "position": [
+                160,
+                -160
+            ]
+        },
+        {
+            "id": "c99b4",
+            "passive_tag": "thors_apprentice",
+            "position": [
+                160,
+                160
+            ]
+        },
+        {
+            "id": "c4de9",
+            "passive_tag": "warriors_spirit",
+            "position": [
+                -160,
+                160
+            ]
+        }
+    ],
+    "edges": [
+        [
+            "a2109",
+            "root"
+        ],
+        [
+            "5ee00",
+            "root"
+        ],
+        [
+            "f058e",
+            "root"
+        ],
+        [
+            "17039",
+            "root"
+        ],
+        [
+            "4dc34",
+            "root"
+        ],
+        [
+            "7dca0",
+            "root"
+        ],
+        [
+            "c99b4",
+            "root"
+        ],
+        [
+            "c4de9",
+            "root"
+        ]
+    ]
+}

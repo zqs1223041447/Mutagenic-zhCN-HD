@@ -1,0 +1,752 @@
+[
+    {
+        "skill": {
+            "damage": 10,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 11,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 12,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 13,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 14,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 15,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 17,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 18,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 20,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 21,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 23,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 25,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 27,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 30,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 32,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 35,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 38,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 41,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 45,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 49,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 53,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 58,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 63,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 68,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 74,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 81,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 88,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 95,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 104,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 113,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 123,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 133,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 145,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 158,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 171,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 186,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 202,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 220,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 239,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 260,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 283,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 307,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 334,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 363,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 395,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 430,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 467,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 508,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 552,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 600,
+            "projectile_count": 1,
+            "projectile_speed": 110,
+            "crit_chance": 0.09,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 0,
+            "lightning_ailment_effect": 1.9,
+            "lightning_ailment_chance": 0.2,
+            "damage_effectiveness": 0.3,
+            "cooldown": 1
+        }
+    }
+]

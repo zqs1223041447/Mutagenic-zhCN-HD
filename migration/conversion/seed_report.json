@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "task": "P1-X0",
+  "generated_at": "2026-08-21T13:38:32Z",
+  "product_dir": "product",
+  "seed": {
+    "project_godot": "product/project.godot",
+    "main_scene": "res://scenes/seed.tscn",
+    "identity": {
+      "config_version": 5,
+      "features": [
+        "4.7",
+        "Forward Plus"
+      ],
+      "features_raw": "\"4.7\", \"Forward Plus\"",
+      "name": "Mutagenic",
+      "is_godot4": true,
+      "is_godot3": false
+    }
+  },
+  "static_parse": {
+    "status": "PASS",
+    "godot4": true,
+    "errors": []
+  },
+  "engine": {
+    "status": "SUCCESS",
+    "version": "4.7.1",
+    "resolved_via": "REPO_RELATIVE",
+    "tool_missing": false
+  },
+  "import_parse": {
+    "status": "RAN",
+    "result": "CLEAN",
+    "returncode": 0,
+    "errors": [],
+    "zero_errors_required": false,
+    "note": "Seed-only import (project.godot + scenes/seed.tscn + icon.svg) before P1-WAVE-B expanded product/."
+  },
+  "recovered_unmodified": true,
+  "notes": [
+    "Zero conversion/import errors are not required for P1-X0.",
+    "Godot 4.7.1 was fetched to gitignored 02_tools/godot/; discovery SUCCESS is local, CI fetches via scripts/bootstrap/fetch_godot.py.",
+    "P1-WAVE-B later replaced product/project.godot; Wave B import evidence is migration/conversion/wave_b_boot_report.json and is ERRORS_CLASSIFIED, not CLEAN."
+  ]
+}

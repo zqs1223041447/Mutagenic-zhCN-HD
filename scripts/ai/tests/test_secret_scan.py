@@ -31,7 +31,7 @@ class RedactionTest(unittest.TestCase):
 
     def test_key_value_redacted(self):
         raw_secret = self.SK_PREFIX + "123456"
-        findings = self._run("scripts/demo.py", f'api' + '_key = "{raw_secret}"\n')
+        findings = self._run("scripts/demo.py", "api" + "_key = \"" + raw_secret + "\"\n")
         kv = [f for f in findings if f["rule"] == "key_value"]
         self.assertTrue(kv, "api_key pair must be detected by key_value rule")
         self.assertIn("<redacted", kv[0]["key"])
@@ -72,6 +72,21 @@ class RedactionTest(unittest.TestCase):
     def test_plain_env_without_sensitive_name_ignored(self):
         findings = self._run(".env", "FOO=bar123456\n")
         self.assertEqual(findings, [])
+
+    def test_log_words_and_fstrings_are_not_secrets(self):
+        text = (
+            'log(f"[bootstrap] script_key: restored from {src_desc}")\n'
+            'log(f"[bootstrap] script_key: existing valid at {dest}")\n'
+            'reasons["LEVEL_3"] = f"abs={abs_ok} secret={sec_ok}"\n'
+        )
+        findings = self._run("scripts/bootstrap/bootstrap_dev_env.py", text)
+        self.assertEqual(findings, [])
+
+    def test_quoted_key_value_still_detected(self):
+        findings = self._run("scripts/demo.py", 'api' + '_key = "abcdefghijklmnop"\n')
+        self.assertTrue(findings)
+        self.assertEqual(findings[0]["rule"], "key_value")
+        self.assertIn("<redacted", findings[0]["key"])
 
     def test_cli_never_prints_raw(self):
         raw = RedactionTest.SK_PREFIX + "123456"

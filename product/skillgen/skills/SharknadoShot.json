@@ -1,0 +1,652 @@
+[
+    {
+        "skill": {
+            "damage": 6,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 7,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 7,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 8,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 8,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 9,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 10,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 11,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 12,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 13,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 14,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 15,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 16,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 18,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 19,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 21,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 23,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 25,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 27,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 29,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 32,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 35,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 38,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 41,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 45,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 48,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 53,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 57,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 62,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 68,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 74,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 80,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 87,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 95,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 103,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 112,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 121,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 132,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 144,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 156,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 170,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 184,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 201,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 218,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 237,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 258,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 280,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 305,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 331,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    },
+    {
+        "skill": {
+            "damage": 360,
+            "projectile_count": 1,
+            "projectile_speed": 180,
+            "crit_chance": 0.05,
+            "crit_multi": 0.0,
+            "skill_chain": 0,
+            "skill_pierce": 1,
+            "damage_effectiveness": 0.5,
+            "cooldown": 1
+        }
+    }
+]

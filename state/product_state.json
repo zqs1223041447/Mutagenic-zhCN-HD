@@ -1,59 +1,225 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-21T19:46:00+08:00",
-  "decision_authority": "USER_APPROVED_2026-08-21",
-  "integration_branch": "agent/kinetic-arcane-remaster-foundation",
-  "remote_head_before_adoption": "641d944e8aa175d3de89183ca554e81a2cff1a51",
-  "phase": "P0_REPO_CLOSURE",
-  "phase_status": "INTEGRATING_ADOPTION",
-  "product_engine": {
-    "name": "Godot",
+  "updated_at": "2026-08-21T22:20:00+08:00",
+  "coordinator": "gork",
+  "central_branch": "agent/kinetic-arcane-remaster-foundation",
+  "git": {
+    "branch": "agent/kinetic-arcane-remaster-foundation",
+    "head": "f1d4ade075c8afae2819d439159931f9429d1562",
+    "remote": "origin",
+    "remote_url": "https://github.com/zqs1223041447/Mutagenic-zhCN-HD.git",
+    "note": "After P1-WAVE-B + LEVEL_3-C0 + GOAL docs commits; push follows."
+  },
+  "current_phase": "P1_GODOT_4_7_1_MIGRATION",
+  "current_gate": "P1-WAVE-B",
+  "engine": {
+    "product": "4.7.1-stable",
+    "legacy_reference": "3.5.3",
+    "product_runtime_ready": false,
+    "godot_4_7_1_on_path": false,
+    "godot_4_7_1_discovery_this_session": "SUCCESS",
+    "discovery_overall": "SUCCESS",
+    "resolved_via": "REPO_RELATIVE",
     "version": "4.7.1",
-    "channel": "stable",
-    "role": "ONLY_ACTIVE_PRODUCT_ENGINE"
+    "binary_gitignored": "02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+    "fetch_script": "scripts/bootstrap/fetch_godot.py",
+    "note": "Local discovery SUCCESS via gitignored 02_tools/godot. CI fetches linux zip. Not rewritten from NOT_FOUND without a binary."
   },
-  "legacy_reference": {
-    "engine": "Godot 3.5.3",
-    "role": "READ_ONLY_REFERENCE",
-    "active_gameplay_development": false,
-    "active_long_term_build_investment": false,
-    "sources": ["03_raw", "04_recovered", "status.json", "releases", "docs/ai/audits"]
+  "environment": {
+    "source": "MACHINE_RECALIBRATED",
+    "independently_reverified_this_session": true,
+    "Git": "PASS",
+    "Python": "PASS",
+    "Private_DevKit": "PASS",
+    "Original_Mutagenic.exe": "PASS",
+    "Script_Key": "PASS",
+    "GDRE": "PASS",
+    "Python_dependencies": "PASS",
+    "Bootstrap": "DEV_ENV_READY",
+    "LEVEL_0_REPO_READY": "PASS",
+    "LEVEL_1_BUILD_READY": "PASS",
+    "Basic_Legacy_Build_Ability": "READY",
+    "LEVEL_2_RUNTIME_READY": "PASS",
+    "LEVEL_3_FULL_VALIDATION": "PASS",
+    "RUNTIME_VM": "BLOCKED",
+    "note": "Doctor LEVEL_3_FULL_VALIDATION_READY is abs-path production_hardcode=0 + secret findings=0 + L2. VM/Hyper-V remains BLOCKED and is not claimed as PASS."
   },
-  "current_gate": "P0_REPO_CLOSURE_CI_GREEN",
-  "next_gate": "P1_GODOT_4_7_1_MIGRATION_READY",
-  "product_principles": [
-    "active skills plus Dash, permanent characters",
-    "Class plus Specialization plus Passive plus Skill/Support",
-    "Equipment and Gene split",
-    "Rare numerical ceiling, Legendary rule-changing anchor",
-    "Campaign plus Map Item plus Atlas endgame",
-    "Halls-style dark retro presentation without survivor auto-attack conversion",
-    "POE-like mechanisms without copying protected assets/text/names/numbers"
-  ],
-  "legacy_status_note": "status.json remains authoritative for Legacy historical evidence but no longer controls Product roadmap",
-  "known_repo_issues_at_adoption": [
-    "PR #1 metadata is stale and still describes old 3127D394 release hold",
-    "current CI run #62 fails on two release archive_locator host absolute paths",
-    "old Fresh Clone command does not explicitly checkout integration branch"
-  ],
-  "p0_changes": [
-    "adopt Godot 4.7.1 single product mainline",
-    "convert Legacy 3.5.3 to read-only reference",
-    "replace 38-doc planning surface with 12 core documents",
-    "fix Fresh Clone branch targeting",
-    "remove release manifest host absolute archive locators",
-    "add Product toolchain doctor"
-  ],
-  "next_batch": {
-    "id": "P1-WAVE-A",
-    "start_condition": "P0_REPO_CLOSURE_CI_GREEN",
-    "tasks": [
-      {"id": "P1-X0", "name": "Godot 4.7.1 Conversion Seed", "goal": "create product project seed and deterministic conversion report"},
-      {"id": "P1-X1", "name": "Migration Compatibility Inventory", "goal": "scan 3.5.3 scripts/scenes/resources for 4.x incompatibilities and rank blockers"},
-      {"id": "P1-X2", "name": "Product Toolchain Closure", "goal": "pin Godot 4.7.1 local/headless validation and machine-readable doctor evidence"},
-      {"id": "P1-X3", "name": "Preservation Contracts", "goal": "freeze gameplay/schema/save/build facts that migration must preserve"}
+  "workspace": {
+    "product_dir": "PRESENT",
+    "migration_dir": "PRESENT",
+    "state_dir": "PRESENT",
+    "schema_dir_05": "MISSING",
+    "baseline_dir_01": "MISSING",
+    "generated_06_to_09": "ABSENT_OK",
+    "docs_dir": "PRESENT_MOSTLY_LEGACY",
+    "godot_4_7_1_tools_dir": "GITIGNORED_PRESENT_LOCALLY"
+  },
+  "legacy_status": {
+    "file": "status.json",
+    "role": "LEGACY_REFERENCE_ONLY",
+    "not_current_authority": true,
+    "project_phase": "PHASE_6_INCREMENTAL_MOD_LOCALIZATION_INTEGRATION",
+    "governance_hold": "promotion_recorded_governance_hold",
+    "human_readable_view": "PROJECT_STATE.md"
+  },
+  "docs_hygiene": {
+    "audited_at": "2026-08-21",
+    "index": "docs/README.md",
+    "action": "non_reusable_deleted_reusable_rewritten",
+    "deleted_count": 29,
+    "read_only_evidence": [
+      "docs/ai/audits/"
+    ],
+    "legacy_reference_only": [
+      "status.json",
+      "PROJECT_STATE.md",
+      "releases/"
     ]
   },
-  "public_release_requires_user_approval": true,
-  "zero_human_code_target": true
+  "tasks": {
+    "P1-X0": {
+      "goal": "Conversion Seed",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "seed": "PASS",
+        "static_parse_godot4": "PASS",
+        "import_parse": "RAN",
+        "import_result": "CLEAN",
+        "engine": "SUCCESS",
+        "zero_errors_required": false
+      },
+      "evidence": [
+        "product/scenes/seed.tscn",
+        "migration/conversion/seed_report.json"
+      ]
+    },
+    "P1-X1": {
+      "goal": "Compatibility Inventory",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "categories": ["Script", "Scene", "Resource", "Settings"],
+        "files_scanned": 913,
+        "item_count": 1274,
+        "blocker_dag_nodes": 43
+      },
+      "evidence": [
+        "migration/inventory/compat_inventory.json"
+      ]
+    },
+    "P1-X2": {
+      "goal": "Product Toolchain Closure",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "discovery": "DONE",
+        "engine": "SUCCESS",
+        "tool_missing": false,
+        "never_status": "PASS",
+        "ci_job": "PRESENT",
+        "fetch_script": "PRESENT"
+      },
+      "evidence": [
+        "scripts/bootstrap/product_toolchain.py",
+        "scripts/bootstrap/fetch_godot.py",
+        ".github/workflows/ci-static-semantic.yml"
+      ],
+      "note": "Local binary is gitignored. Discovery uses SUCCESS not PASS. CI downloads via fetch_godot.py."
+    },
+    "P1-X3": {
+      "goal": "Preservation Contracts",
+      "status": "DONE",
+      "blocked_by": [],
+      "source_of_truth": "recovered_source_scan",
+      "evidence": [
+        "migration/preservation/contracts.json"
+      ]
+    },
+    "LEVEL_3-C0": {
+      "goal": "LEVEL_3 closure (abs path, secret, bootstrap, CI discovery)",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "abs_path_production_hardcode": 0,
+        "secret_findings": 0,
+        "releases_classified_as": "provenance_metadata",
+        "bootstrap_cmd": "PRESENT",
+        "ci_fetch_godot": "PRESENT",
+        "vm_runtime": "BLOCKED"
+      },
+      "note": "releases/*.json reclassified as provenance (historical evidence), not rewritten as production PASS. Secret log-word false positives filtered; real secrets still FAIL. VM remains BLOCKED."
+    },
+    "P1-B0": {
+      "goal": "Project settings + input map",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "config_version": 5,
+        "input_actions": 27,
+        "required_actions_present": true
+      }
+    },
+    "P1-B1": {
+      "goal": "Autoload registry + Globals conversion",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "autoloads": 179,
+        "scripts_converted": 185,
+        "recovered_unmodified": true,
+        "data_copied": ["passive_tree_data", "skillgen", "world_map_data"]
+      }
+    },
+    "P1-B2": {
+      "goal": "Headless import evidence",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "returncode": 0,
+        "zero_errors_required": false,
+        "blocker_count": 773
+      },
+      "note": "Dominant remaining blockers: missing preloads (sprites/scenes), Steam singleton, GeneMods resolve, leftover connect() arity. Not rewritten as CLEAN."
+    }
+  },
+  "preservation_counts_unverified": {
+    "note": "AGENT.MD 约数，仅作对照，不是 PASS",
+    "base_classes": 4,
+    "specializations": 8,
+    "skills": 53,
+    "supports": 60,
+    "passive_nodes": 326,
+    "keystones": 88,
+    "stats": 149,
+    "skill_tags": 24
+  },
+  "preservation_counts_scanned": {
+    "note": "P1-X3 从 04_recovered 扫描；passive 1192 来自 PassiveTreeData 加载的 passive_tree_gen.json（tree_data_06.json 为 321 节点，约数来源）",
+    "source_of_truth": "recovered_source_scan",
+    "classes": 4,
+    "specializations": 8,
+    "skills": 53,
+    "supports": 60,
+    "passives": 1192,
+    "keystones": 88,
+    "stats": 148,
+    "tags": 25,
+    "equipment_slots": 10,
+    "equipment_data": 47,
+    "input_actions": 27,
+    "save_keys": 59,
+    "combat_critical_ids": 91
+  },
+  "next_ready": [
+    {
+      "id": "P1-WAVE-C",
+      "goal": "Menu / Character / Save subsystem conversion",
+      "depends_on": ["P1-B0", "P1-B1", "P1-B2"],
+      "status": "READY",
+      "note": "Next subsystem after Boot/Project/Autoload/Input. Copy/convert LoadGame + character select + save scripts/scenes; remaining preload assets as needed for boot."
+    }
+  ]
 }

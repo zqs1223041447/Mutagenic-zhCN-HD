@@ -45,6 +45,12 @@ class ClassifyTest(unittest.TestCase):
         self.assertEqual(cls, "provenance_metadata")
         cls, _ = abs_path_scan.classify("04_recovered/Globals/Stats.gd", r"G:\anything")
         self.assertEqual(cls, "provenance_metadata")
+        cls, _ = abs_path_scan.classify(
+            "releases/b3-p3-3127D394.json",
+            r"G:\Mutageni-Archive\releases\b3-p3-3127D394\\",
+            "archive_locator",
+        )
+        self.assertEqual(cls, "provenance_metadata")
 
     def test_local_config(self):
         cls, _ = abs_path_scan.classify("tools.lock.json", "F:/SteamLibrary/steamapps/common/Mutagenic",

@@ -129,6 +129,8 @@ def classify(rel: str, matched: str, json_path: str | None = None) -> tuple[str,
     parts = Path(rel).parts
     if rel.startswith("03_raw/") or rel.startswith("04_recovered/"):
         return "provenance_metadata", "immutable recovered provenance - never modify"
+    if rel.startswith("releases/"):
+        return "provenance_metadata", "historical release evidence - preserve verbatim, never treat as runtime default"
     if "docs" in parts:
         return "docs_example", "documentation/example scope"
     if rel == "status.json":

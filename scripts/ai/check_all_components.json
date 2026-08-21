@@ -9,7 +9,7 @@
       "top_level": "scripts/ai/tests",
       "timeout_s": 600,
       "required": true,
-      "description": "batchctl 生命周期与控制平面单测（claim/status/handoff/collect/preflight/cleanup/check-all）"
+      "description": "batchctl 生命周期与控制平面单测 + P1-WAVE-A conversion/inventory/preservation/toolchain 单测"
     },
     {
       "id": "abs_path_scan",
@@ -109,6 +109,15 @@
       "timeout_s": 300,
       "required": true,
       "description": "B3-P2-X1 Validation/Promotion 候选分隔 parity 契约 32/32（真实 resolve 三根对比：Validation 14 mods/51 patches、Promotion 11 mods/49 patches、差集恰为 k5 harness+bridge+diagnostic；promotion 零禁用面；pristine ENABLE_TEST_ZONE 影响面 false/2 sites；机器报告 B3-P2-X1_PARITY_REPORT.json）"
+    },
+    {
+      "id": "product_toolchain_discovery",
+      "kind": "python",
+      "relpath": "scripts/bootstrap/product_toolchain.py",
+      "args": ["--sanitize"],
+      "timeout_s": 60,
+      "required": true,
+      "description": "P1-X2 Godot 4.7.1 discovery: SUCCESS/NOT_FOUND/MISSING_PRIVATE/TOOL_FAILED — honest NOT_FOUND is exit 0, never PASS"
     },
     {
       "id": "s3_persistence_selfcheck",

@@ -1,0 +1,402 @@
+[
+    {
+        "skill": {
+            "radius": 20,
+            "base_duration": 8.0,
+            "curse_effect": 1.0,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 21,
+            "base_duration": 8.0,
+            "curse_effect": 1.01,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 21,
+            "base_duration": 8.0,
+            "curse_effect": 1.01,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 22,
+            "base_duration": 8.0,
+            "curse_effect": 1.02,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 22,
+            "base_duration": 8.0,
+            "curse_effect": 1.02,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 23,
+            "base_duration": 8.0,
+            "curse_effect": 1.03,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 24,
+            "base_duration": 8.0,
+            "curse_effect": 1.03,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 24,
+            "base_duration": 8.0,
+            "curse_effect": 1.04,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 25,
+            "base_duration": 8.0,
+            "curse_effect": 1.04,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 26,
+            "base_duration": 8.0,
+            "curse_effect": 1.05,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 27,
+            "base_duration": 8.0,
+            "curse_effect": 1.06,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 27,
+            "base_duration": 8.0,
+            "curse_effect": 1.06,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 28,
+            "base_duration": 8.0,
+            "curse_effect": 1.07,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 29,
+            "base_duration": 8.0,
+            "curse_effect": 1.07,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 30,
+            "base_duration": 8.0,
+            "curse_effect": 1.08,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 31,
+            "base_duration": 8.0,
+            "curse_effect": 1.08,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 31,
+            "base_duration": 8.0,
+            "curse_effect": 1.09,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 32,
+            "base_duration": 8.0,
+            "curse_effect": 1.1,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 33,
+            "base_duration": 8.0,
+            "curse_effect": 1.1,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 34,
+            "base_duration": 8.0,
+            "curse_effect": 1.11,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 35,
+            "base_duration": 8.0,
+            "curse_effect": 1.11,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 36,
+            "base_duration": 8.0,
+            "curse_effect": 1.12,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 37,
+            "base_duration": 8.0,
+            "curse_effect": 1.13,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 38,
+            "base_duration": 8.0,
+            "curse_effect": 1.13,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 39,
+            "base_duration": 8.0,
+            "curse_effect": 1.14,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 41,
+            "base_duration": 8.0,
+            "curse_effect": 1.14,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 42,
+            "base_duration": 8.0,
+            "curse_effect": 1.15,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 43,
+            "base_duration": 8.0,
+            "curse_effect": 1.16,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 44,
+            "base_duration": 8.0,
+            "curse_effect": 1.16,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 45,
+            "base_duration": 8.0,
+            "curse_effect": 1.17,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 47,
+            "base_duration": 8.0,
+            "curse_effect": 1.17,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 48,
+            "base_duration": 8.0,
+            "curse_effect": 1.18,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 49,
+            "base_duration": 8.0,
+            "curse_effect": 1.19,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 51,
+            "base_duration": 8.0,
+            "curse_effect": 1.19,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 52,
+            "base_duration": 8.0,
+            "curse_effect": 1.2,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 54,
+            "base_duration": 8.0,
+            "curse_effect": 1.21,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 55,
+            "base_duration": 8.0,
+            "curse_effect": 1.21,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 57,
+            "base_duration": 8.0,
+            "curse_effect": 1.22,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 59,
+            "base_duration": 8.0,
+            "curse_effect": 1.23,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 60,
+            "base_duration": 8.0,
+            "curse_effect": 1.23,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 62,
+            "base_duration": 8.0,
+            "curse_effect": 1.24,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 64,
+            "base_duration": 8.0,
+            "curse_effect": 1.25,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 66,
+            "base_duration": 8.0,
+            "curse_effect": 1.25,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 68,
+            "base_duration": 8.0,
+            "curse_effect": 1.26,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 69,
+            "base_duration": 8.0,
+            "curse_effect": 1.27,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 71,
+            "base_duration": 8.0,
+            "curse_effect": 1.27,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 73,
+            "base_duration": 8.0,
+            "curse_effect": 1.28,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 76,
+            "base_duration": 8.0,
+            "curse_effect": 1.29,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 78,
+            "base_duration": 8.0,
+            "curse_effect": 1.29,
+            "cooldown": 3.0
+        }
+    },
+    {
+        "skill": {
+            "radius": 80,
+            "base_duration": 8.0,
+            "curse_effect": 1.3,
+            "cooldown": 3.0
+        }
+    }
+]

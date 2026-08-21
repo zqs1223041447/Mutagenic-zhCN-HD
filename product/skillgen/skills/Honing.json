@@ -1,0 +1,952 @@
+[
+    {
+        "skill": {
+            "radius": 60
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.25,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.1,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.26,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.1,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.26,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.1,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 62
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.27,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.1,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.27,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.28,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 64
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.29,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.29,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.3,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 66
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.31,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.11,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.31,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.12,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.32,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.12,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 68
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.33,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.12,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.33,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.12,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.34,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.12,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 70
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.35,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.12,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 71
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.36,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.37,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.37,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 73
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.38,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 74
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.39,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.4,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.13,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.41,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.14,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 76
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.42,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.14,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 77
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.43,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.14,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 78
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.44,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.14,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 79
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.45,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.14,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.46,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.15,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.47,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.15,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 81
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.48,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.15,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 82
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.49,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.15,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 83
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.5,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 84
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.51,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 85
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.52,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.54,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.55,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.16,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 87
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.56,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.17,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 88
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.57,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.17,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 89
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.59,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.17,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 90
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.6,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.17,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 91
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.61,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 92
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.63,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 93
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.64,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 94
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.66,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.18,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 95
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.67,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.19,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 96
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.69,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.19,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 97
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.7,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.19,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 98
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.72,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.19,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 99
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.73,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.2,
+                    "type": "percent"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 100
+        },
+        "aura": {
+            "crit_chance": [
+                {
+                    "amount": 0.75,
+                    "type": "percent"
+                }
+            ],
+            "cast_speed": [
+                {
+                    "amount": 0.2,
+                    "type": "percent"
+                }
+            ]
+        }
+    }
+]

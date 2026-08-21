@@ -1,0 +1,110 @@
+{
+    "nodes": [
+        {
+            "id": "root",
+            "passive_tag": "root",
+            "position": [
+                0,
+                0
+            ]
+        },
+        {
+            "id": "a2109",
+            "passive_tag": "bonded_electrons",
+            "position": [
+                160,
+                0
+            ]
+        },
+        {
+            "id": "5ee00",
+            "passive_tag": "energetic_flesh",
+            "position": [
+                0,
+                -160
+            ]
+        },
+        {
+            "id": "f058e",
+            "passive_tag": "chaotic_resonance",
+            "position": [
+                0,
+                160
+            ]
+        },
+        {
+            "id": "17039",
+            "passive_tag": "one_with_lightning",
+            "position": [
+                -160,
+                0
+            ]
+        },
+        {
+            "id": "a8b79",
+            "passive_tag": "reverence",
+            "position": [
+                -160,
+                -160
+            ]
+        },
+        {
+            "id": "63985",
+            "passive_tag": "ire",
+            "position": [
+                -160,
+                160
+            ]
+        },
+        {
+            "id": "8c3c1",
+            "passive_tag": "derision",
+            "position": [
+                160,
+                160
+            ]
+        },
+        {
+            "id": "d02e4",
+            "passive_tag": "scorn",
+            "position": [
+                160,
+                -160
+            ]
+        }
+    ],
+    "edges": [
+        [
+            "a2109",
+            "root"
+        ],
+        [
+            "5ee00",
+            "root"
+        ],
+        [
+            "f058e",
+            "root"
+        ],
+        [
+            "17039",
+            "root"
+        ],
+        [
+            "a8b79",
+            "root"
+        ],
+        [
+            "63985",
+            "root"
+        ],
+        [
+            "8c3c1",
+            "root"
+        ],
+        [
+            "d02e4",
+            "root"
+        ]
+    ]
+}

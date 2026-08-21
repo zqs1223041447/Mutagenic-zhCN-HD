@@ -1,0 +1,4062 @@
+{
+    "nodes": [
+        {
+            "id": "root",
+            "passive_tag": "root",
+            "position": [
+                0,
+                0
+            ]
+        },
+        {
+            "id": "root_warrior",
+            "passive_tag": "root_warrior",
+            "position": [
+                0,
+                -640
+            ]
+        },
+        {
+            "id": "root_tank",
+            "passive_tag": "root_tank",
+            "position": [
+                0,
+                640
+            ]
+        },
+        {
+            "id": "root_mage",
+            "passive_tag": "root_mage",
+            "position": [
+                640,
+                0
+            ]
+        },
+        {
+            "id": "root_rogue",
+            "passive_tag": "root_rogue",
+            "position": [
+                -640,
+                0
+            ]
+        },
+        {
+            "id": "22b0f",
+            "passive_tag": "starter_node",
+            "position": [
+                0,
+                -704
+            ]
+        },
+        {
+            "id": "9360b",
+            "passive_tag": "starter_node",
+            "position": [
+                704,
+                0
+            ]
+        },
+        {
+            "id": "8a75b",
+            "passive_tag": "starter_node",
+            "position": [
+                0,
+                704
+            ]
+        },
+        {
+            "id": "e3332",
+            "passive_tag": "starter_node",
+            "position": [
+                -704,
+                0
+            ]
+        },
+        {
+            "id": "c6c13",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                736,
+                -64
+            ]
+        },
+        {
+            "id": "edf8d",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                800,
+                -128
+            ]
+        },
+        {
+            "id": "6d05b",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                736,
+                64
+            ]
+        },
+        {
+            "id": "df124",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                800,
+                128
+            ]
+        },
+        {
+            "id": "700a5",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1056,
+                0
+            ]
+        },
+        {
+            "id": "0fa1b",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                960,
+                -128
+            ]
+        },
+        {
+            "id": "85d9e",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                960,
+                128
+            ]
+        },
+        {
+            "id": "0c6d8",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1024,
+                64
+            ]
+        },
+        {
+            "id": "c0c7d",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1024,
+                -64
+            ]
+        },
+        {
+            "id": "7b38d",
+            "passive_tag": "minor_constitution",
+            "position": [
+                64,
+                -736
+            ]
+        },
+        {
+            "id": "7f2e3",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -64,
+                -736
+            ]
+        },
+        {
+            "id": "4126d",
+            "passive_tag": "minor_constitution",
+            "position": [
+                128,
+                -800
+            ]
+        },
+        {
+            "id": "d6ace",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -128,
+                -800
+            ]
+        },
+        {
+            "id": "82b2e",
+            "passive_tag": "minor_constitution",
+            "position": [
+                128,
+                -960
+            ]
+        },
+        {
+            "id": "3648e",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -128,
+                -960
+            ]
+        },
+        {
+            "id": "817f1",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -64,
+                -1024
+            ]
+        },
+        {
+            "id": "bbc06",
+            "passive_tag": "minor_constitution",
+            "position": [
+                64,
+                -1024
+            ]
+        },
+        {
+            "id": "19737",
+            "passive_tag": "minor_constitution",
+            "position": [
+                0,
+                -1056
+            ]
+        },
+        {
+            "id": "09c82",
+            "passive_tag": "minor_strength",
+            "position": [
+                64,
+                736
+            ]
+        },
+        {
+            "id": "f6cd1",
+            "passive_tag": "minor_strength",
+            "position": [
+                128,
+                800
+            ]
+        },
+        {
+            "id": "2e94a",
+            "passive_tag": "minor_strength",
+            "position": [
+                128,
+                928
+            ]
+        },
+        {
+            "id": "498a8",
+            "passive_tag": "minor_strength",
+            "position": [
+                -64,
+                736
+            ]
+        },
+        {
+            "id": "2e864",
+            "passive_tag": "minor_strength",
+            "position": [
+                -128,
+                800
+            ]
+        },
+        {
+            "id": "e608d",
+            "passive_tag": "minor_strength",
+            "position": [
+                -128,
+                928
+            ]
+        },
+        {
+            "id": "808de",
+            "passive_tag": "minor_strength",
+            "position": [
+                -96,
+                1024
+            ]
+        },
+        {
+            "id": "502dd",
+            "passive_tag": "minor_strength",
+            "position": [
+                96,
+                1024
+            ]
+        },
+        {
+            "id": "edd31",
+            "passive_tag": "minor_strength",
+            "position": [
+                0,
+                1056
+            ]
+        },
+        {
+            "id": "9297a",
+            "passive_tag": "minor_agility",
+            "position": [
+                -736,
+                -64
+            ]
+        },
+        {
+            "id": "1511f",
+            "passive_tag": "minor_agility",
+            "position": [
+                -736,
+                64
+            ]
+        },
+        {
+            "id": "4048a",
+            "passive_tag": "minor_agility",
+            "position": [
+                -800,
+                128
+            ]
+        },
+        {
+            "id": "cee2f",
+            "passive_tag": "minor_agility",
+            "position": [
+                -800,
+                -128
+            ]
+        },
+        {
+            "id": "c3f3b",
+            "passive_tag": "minor_agility",
+            "position": [
+                -928,
+                128
+            ]
+        },
+        {
+            "id": "65612",
+            "passive_tag": "minor_agility",
+            "position": [
+                -928,
+                -128
+            ]
+        },
+        {
+            "id": "de025",
+            "passive_tag": "minor_agility",
+            "position": [
+                -992,
+                -96
+            ]
+        },
+        {
+            "id": "b731b",
+            "passive_tag": "minor_agility",
+            "position": [
+                -1056,
+                0
+            ]
+        },
+        {
+            "id": "e670a",
+            "passive_tag": "minor_agility",
+            "position": [
+                -992,
+                96
+            ]
+        },
+        {
+            "id": "be6c7",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1280,
+                0
+            ]
+        },
+        {
+            "id": "a73e6",
+            "passive_tag": "minor_agility",
+            "position": [
+                -1280,
+                0
+            ]
+        },
+        {
+            "id": "d32e1",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1280,
+                -128
+            ]
+        },
+        {
+            "id": "b89b7",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1280,
+                128
+            ]
+        },
+        {
+            "id": "0d197",
+            "passive_tag": "minor_agility",
+            "position": [
+                -1280,
+                -128
+            ]
+        },
+        {
+            "id": "fed12",
+            "passive_tag": "minor_agility",
+            "position": [
+                -1280,
+                128
+            ]
+        },
+        {
+            "id": "e1146",
+            "passive_tag": "minor_strength",
+            "position": [
+                0,
+                1280
+            ]
+        },
+        {
+            "id": "eaa8e",
+            "passive_tag": "minor_strength",
+            "position": [
+                128,
+                1280
+            ]
+        },
+        {
+            "id": "f4709",
+            "passive_tag": "minor_strength",
+            "position": [
+                -128,
+                1280
+            ]
+        },
+        {
+            "id": "8e434",
+            "passive_tag": "minor_constitution",
+            "position": [
+                0,
+                -1280
+            ]
+        },
+        {
+            "id": "b0185",
+            "passive_tag": "minor_constitution",
+            "position": [
+                128,
+                -1280
+            ]
+        },
+        {
+            "id": "64c24",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -128,
+                -1280
+            ]
+        },
+        {
+            "id": "9f650",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1440,
+                0
+            ]
+        },
+        {
+            "id": "67636",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1536,
+                -96
+            ]
+        },
+        {
+            "id": "3407e",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1536,
+                96
+            ]
+        },
+        {
+            "id": "34a40",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1632,
+                0
+            ]
+        },
+        {
+            "id": "3a3b2",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1536,
+                0
+            ]
+        },
+        {
+            "id": "e8e44",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1440,
+                224
+            ]
+        },
+        {
+            "id": "b9f68",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1440,
+                -224
+            ]
+        },
+        {
+            "id": "9931f",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1792,
+                0
+            ]
+        },
+        {
+            "id": "13f31",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1792,
+                -128
+            ]
+        },
+        {
+            "id": "e400d",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1792,
+                128
+            ]
+        },
+        {
+            "id": "f08cc",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1632,
+                224
+            ]
+        },
+        {
+            "id": "3ff85",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1632,
+                -224
+            ]
+        },
+        {
+            "id": "31010",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1280,
+                288
+            ]
+        },
+        {
+            "id": "87ad5",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1280,
+                -288
+            ]
+        },
+        {
+            "id": "86314",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                704,
+                -192
+            ]
+        },
+        {
+            "id": "8a0e5",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                704,
+                160
+            ]
+        },
+        {
+            "id": "18a7c",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                896,
+                -288
+            ]
+        },
+        {
+            "id": "ef37c",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1088,
+                -288
+            ]
+        },
+        {
+            "id": "74b8c",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                896,
+                288
+            ]
+        },
+        {
+            "id": "8e1e4",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1088,
+                288
+            ]
+        },
+        {
+            "id": "44f2a",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1280,
+                -448
+            ]
+        },
+        {
+            "id": "1dbc4",
+            "passive_tag": "minor_constitution",
+            "position": [
+                192,
+                -704
+            ]
+        },
+        {
+            "id": "4ef7e",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -192,
+                -704
+            ]
+        },
+        {
+            "id": "76267",
+            "passive_tag": "minor_constitution",
+            "position": [
+                288,
+                -1280
+            ]
+        },
+        {
+            "id": "5fea7",
+            "passive_tag": "minor_constitution",
+            "position": [
+                288,
+                -896
+            ]
+        },
+        {
+            "id": "375dc",
+            "passive_tag": "minor_constitution",
+            "position": [
+                288,
+                -1088
+            ]
+        },
+        {
+            "id": "24619",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3200,
+                0
+            ]
+        },
+        {
+            "id": "86172",
+            "passive_tag": "minor_constitution",
+            "position": [
+                0,
+                -3200
+            ]
+        },
+        {
+            "id": "727f3",
+            "passive_tag": "minor_constitution",
+            "position": [
+                3200,
+                -3200
+            ]
+        },
+        {
+            "id": "a931d",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1280,
+                -1280
+            ]
+        },
+        {
+            "id": "4294d",
+            "passive_tag": "minor_constitution",
+            "position": [
+                448,
+                -1280
+            ]
+        },
+        {
+            "id": "ce486",
+            "passive_tag": "minor_constitution",
+            "position": [
+                608,
+                -1280
+            ]
+        },
+        {
+            "id": "06620",
+            "passive_tag": "minor_constitution",
+            "position": [
+                768,
+                -1280
+            ]
+        },
+        {
+            "id": "7c27c",
+            "passive_tag": "minor_constitution",
+            "position": [
+                928,
+                -1280
+            ]
+        },
+        {
+            "id": "f41d6",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1056,
+                -1184
+            ]
+        },
+        {
+            "id": "dfce0",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1152,
+                -1184
+            ]
+        },
+        {
+            "id": "55006",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1056,
+                -1376
+            ]
+        },
+        {
+            "id": "fcc7a",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1152,
+                -1376
+            ]
+        },
+        {
+            "id": "5aa73",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1280,
+                -608
+            ]
+        },
+        {
+            "id": "b864f",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1280,
+                -768
+            ]
+        },
+        {
+            "id": "b4ee5",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1280,
+                -928
+            ]
+        },
+        {
+            "id": "11670",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1376,
+                -1152
+            ]
+        },
+        {
+            "id": "5e675",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1184,
+                -1152
+            ]
+        },
+        {
+            "id": "4307f",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1184,
+                -1056
+            ]
+        },
+        {
+            "id": "c11b9",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1376,
+                -1056
+            ]
+        },
+        {
+            "id": "34698",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1408,
+                -1184
+            ]
+        },
+        {
+            "id": "76269",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1504,
+                -1184
+            ]
+        },
+        {
+            "id": "be114",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1408,
+                -1376
+            ]
+        },
+        {
+            "id": "ddc50",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1504,
+                -1376
+            ]
+        },
+        {
+            "id": "d8143",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1632,
+                -1280
+            ]
+        },
+        {
+            "id": "bd364",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1376,
+                -1408
+            ]
+        },
+        {
+            "id": "f7926",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1184,
+                -1408
+            ]
+        },
+        {
+            "id": "b3029",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1184,
+                -1504
+            ]
+        },
+        {
+            "id": "79590",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1376,
+                -1504
+            ]
+        },
+        {
+            "id": "7dd34",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1280,
+                -1632
+            ]
+        },
+        {
+            "id": "2c34f",
+            "passive_tag": "minor_constitution",
+            "position": [
+                0,
+                -2240
+            ]
+        },
+        {
+            "id": "1f315",
+            "passive_tag": "minor_constitution",
+            "position": [
+                320,
+                -2240
+            ]
+        },
+        {
+            "id": "c08c7",
+            "passive_tag": "minor_constitution",
+            "position": [
+                640,
+                -2240
+            ]
+        },
+        {
+            "id": "2f9e1",
+            "passive_tag": "minor_constitution",
+            "position": [
+                960,
+                -2240
+            ]
+        },
+        {
+            "id": "3b47a",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1280,
+                -2240
+            ]
+        },
+        {
+            "id": "f6ce9",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1600,
+                -2240
+            ]
+        },
+        {
+            "id": "c33c6",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1920,
+                -2240
+            ]
+        },
+        {
+            "id": "cbec0",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2240,
+                -2240
+            ]
+        },
+        {
+            "id": "3e3d9",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2240,
+                -1920
+            ]
+        },
+        {
+            "id": "25792",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2240,
+                -1600
+            ]
+        },
+        {
+            "id": "ef4ad",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2240,
+                -1280
+            ]
+        },
+        {
+            "id": "9fc7c",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2240,
+                -960
+            ]
+        },
+        {
+            "id": "4de94",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2240,
+                -640
+            ]
+        },
+        {
+            "id": "02942",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2240,
+                -320
+            ]
+        },
+        {
+            "id": "af58c",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2240,
+                0
+            ]
+        },
+        {
+            "id": "9089f",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3200,
+                -320
+            ]
+        },
+        {
+            "id": "a5d06",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3200,
+                -640
+            ]
+        },
+        {
+            "id": "52ca2",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3200,
+                -960
+            ]
+        },
+        {
+            "id": "2195b",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3200,
+                -1280
+            ]
+        },
+        {
+            "id": "8b0f9",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3200,
+                -1600
+            ]
+        },
+        {
+            "id": "6c2e4",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3200,
+                -2240
+            ]
+        },
+        {
+            "id": "abefb",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3200,
+                -1920
+            ]
+        },
+        {
+            "id": "c9bb3",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3200,
+                -2560
+            ]
+        },
+        {
+            "id": "a855c",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3200,
+                -2880
+            ]
+        },
+        {
+            "id": "f0ce1",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2144,
+                -2144
+            ]
+        },
+        {
+            "id": "1423d",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2560,
+                0
+            ]
+        },
+        {
+            "id": "ddee9",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2880,
+                0
+            ]
+        },
+        {
+            "id": "57b58",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1376,
+                -352
+            ]
+        },
+        {
+            "id": "3d0a6",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1472,
+                -448
+            ]
+        },
+        {
+            "id": "42537",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1376,
+                -544
+            ]
+        },
+        {
+            "id": "ba20a",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1184,
+                -512
+            ]
+        },
+        {
+            "id": "bc0cb",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1088,
+                -608
+            ]
+        },
+        {
+            "id": "990e0",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1184,
+                -704
+            ]
+        },
+        {
+            "id": "26211",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1376,
+                -672
+            ]
+        },
+        {
+            "id": "035d2",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1472,
+                -768
+            ]
+        },
+        {
+            "id": "54d62",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1376,
+                -864
+            ]
+        },
+        {
+            "id": "616ae",
+            "passive_tag": "minor_constitution",
+            "position": [
+                352,
+                -1376
+            ]
+        },
+        {
+            "id": "8f600",
+            "passive_tag": "minor_constitution",
+            "position": [
+                448,
+                -1472
+            ]
+        },
+        {
+            "id": "74661",
+            "passive_tag": "minor_constitution",
+            "position": [
+                544,
+                -1376
+            ]
+        },
+        {
+            "id": "c94a8",
+            "passive_tag": "minor_constitution",
+            "position": [
+                512,
+                -1184
+            ]
+        },
+        {
+            "id": "dc8f9",
+            "passive_tag": "minor_constitution",
+            "position": [
+                608,
+                -1088
+            ]
+        },
+        {
+            "id": "07de9",
+            "passive_tag": "minor_constitution",
+            "position": [
+                704,
+                -1184
+            ]
+        },
+        {
+            "id": "ada01",
+            "passive_tag": "minor_constitution",
+            "position": [
+                672,
+                -1376
+            ]
+        },
+        {
+            "id": "9f23e",
+            "passive_tag": "minor_constitution",
+            "position": [
+                768,
+                -1472
+            ]
+        },
+        {
+            "id": "1d650",
+            "passive_tag": "minor_constitution",
+            "position": [
+                864,
+                -1376
+            ]
+        },
+        {
+            "id": "0b15e",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -288,
+                -896
+            ]
+        },
+        {
+            "id": "f7a77",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -288,
+                -1088
+            ]
+        },
+        {
+            "id": "19c99",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -288,
+                -1280
+            ]
+        },
+        {
+            "id": "ca391",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -64,
+                -1472
+            ]
+        },
+        {
+            "id": "9ae1f",
+            "passive_tag": "minor_constitution",
+            "position": [
+                64,
+                -1472
+            ]
+        },
+        {
+            "id": "5387e",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -64,
+                -1632
+            ]
+        },
+        {
+            "id": "afa3b",
+            "passive_tag": "minor_constitution",
+            "position": [
+                64,
+                -1632
+            ]
+        },
+        {
+            "id": "18685",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -64,
+                -1792
+            ]
+        },
+        {
+            "id": "36476",
+            "passive_tag": "minor_constitution",
+            "position": [
+                64,
+                -1792
+            ]
+        },
+        {
+            "id": "cd78c",
+            "passive_tag": "minor_constitution",
+            "position": [
+                224,
+                -1792
+            ]
+        },
+        {
+            "id": "6a5d9",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -224,
+                -1792
+            ]
+        },
+        {
+            "id": "c44ac",
+            "passive_tag": "minor_constitution",
+            "position": [
+                352,
+                -1920
+            ]
+        },
+        {
+            "id": "b92b6",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -352,
+                -1920
+            ]
+        },
+        {
+            "id": "51a46",
+            "passive_tag": "minor_constitution",
+            "position": [
+                224,
+                -1920
+            ]
+        },
+        {
+            "id": "93892",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -224,
+                -1920
+            ]
+        },
+        {
+            "id": "42a76",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -160,
+                -2240
+            ]
+        },
+        {
+            "id": "eb614",
+            "passive_tag": "minor_constitution",
+            "position": [
+                160,
+                -2240
+            ]
+        },
+        {
+            "id": "5a9bb",
+            "passive_tag": "minor_constitution",
+            "position": [
+                0,
+                -2880
+            ]
+        },
+        {
+            "id": "a244d",
+            "passive_tag": "minor_constitution",
+            "position": [
+                0,
+                -2560
+            ]
+        },
+        {
+            "id": "1c4a5",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -160,
+                -2560
+            ]
+        },
+        {
+            "id": "0a605",
+            "passive_tag": "minor_constitution",
+            "position": [
+                160,
+                -2560
+            ]
+        },
+        {
+            "id": "f00e0",
+            "passive_tag": "minor_constitution",
+            "position": [
+                128,
+                -2880
+            ]
+        },
+        {
+            "id": "cd247",
+            "passive_tag": "minor_constitution",
+            "position": [
+                -128,
+                -2880
+            ]
+        },
+        {
+            "id": "bd526",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2336,
+                -224
+            ]
+        },
+        {
+            "id": "b5f09",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2432,
+                -320
+            ]
+        },
+        {
+            "id": "84b11",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2336,
+                -416
+            ]
+        },
+        {
+            "id": "83a36",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2144,
+                -544
+            ]
+        },
+        {
+            "id": "a5ad5",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2048,
+                -640
+            ]
+        },
+        {
+            "id": "87468",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2144,
+                -736
+            ]
+        },
+        {
+            "id": "3617f",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2336,
+                -864
+            ]
+        },
+        {
+            "id": "a4897",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2432,
+                -960
+            ]
+        },
+        {
+            "id": "7e688",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2336,
+                -1056
+            ]
+        },
+        {
+            "id": "238f9",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2144,
+                -1504
+            ]
+        },
+        {
+            "id": "80628",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2048,
+                -1600
+            ]
+        },
+        {
+            "id": "32dd0",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2144,
+                -1696
+            ]
+        },
+        {
+            "id": "5e033",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2336,
+                -1824
+            ]
+        },
+        {
+            "id": "d3356",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2432,
+                -1920
+            ]
+        },
+        {
+            "id": "b5d38",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2336,
+                -2016
+            ]
+        },
+        {
+            "id": "8ba7f",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                224,
+                -2144
+            ]
+        },
+        {
+            "id": "de6ab",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                320,
+                -2048
+            ]
+        },
+        {
+            "id": "081a0",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                416,
+                -2144
+            ]
+        },
+        {
+            "id": "12dbe",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                544,
+                -2336
+            ]
+        },
+        {
+            "id": "3ae14",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                640,
+                -2432
+            ]
+        },
+        {
+            "id": "be590",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                736,
+                -2336
+            ]
+        },
+        {
+            "id": "470c8",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                864,
+                -2144
+            ]
+        },
+        {
+            "id": "c5dae",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                960,
+                -2048
+            ]
+        },
+        {
+            "id": "e5a09",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1056,
+                -2144
+            ]
+        },
+        {
+            "id": "a8874",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1504,
+                -2336
+            ]
+        },
+        {
+            "id": "5172c",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1600,
+                -2432
+            ]
+        },
+        {
+            "id": "0a1a0",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1696,
+                -2336
+            ]
+        },
+        {
+            "id": "41e8f",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1824,
+                -2144
+            ]
+        },
+        {
+            "id": "20e84",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                1920,
+                -2048
+            ]
+        },
+        {
+            "id": "87494",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2016,
+                -2144
+            ]
+        },
+        {
+            "id": "d0733",
+            "passive_tag": "minor_constitution",
+            "position": [
+                320,
+                -3200
+            ]
+        },
+        {
+            "id": "21ea7",
+            "passive_tag": "minor_constitution",
+            "position": [
+                640,
+                -3200
+            ]
+        },
+        {
+            "id": "46860",
+            "passive_tag": "minor_constitution",
+            "position": [
+                960,
+                -3200
+            ]
+        },
+        {
+            "id": "c8756",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1280,
+                -3200
+            ]
+        },
+        {
+            "id": "5016b",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1600,
+                -3200
+            ]
+        },
+        {
+            "id": "11ae6",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1920,
+                -3200
+            ]
+        },
+        {
+            "id": "0a2bb",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2240,
+                -3200
+            ]
+        },
+        {
+            "id": "137e6",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2560,
+                -3200
+            ]
+        },
+        {
+            "id": "55ae2",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2880,
+                -3200
+            ]
+        },
+        {
+            "id": "bcff2",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2560,
+                -1280
+            ]
+        },
+        {
+            "id": "c884b",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2880,
+                -1280
+            ]
+        },
+        {
+            "id": "d580d",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1280,
+                -2560
+            ]
+        },
+        {
+            "id": "c1130",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1280,
+                -2880
+            ]
+        },
+        {
+            "id": "3fa50",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2720,
+                -2240
+            ]
+        },
+        {
+            "id": "9af49",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2240,
+                -2720
+            ]
+        },
+        {
+            "id": "6a33f",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2720,
+                -2720
+            ]
+        },
+        {
+            "id": "5c39a",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2624,
+                -2624
+            ]
+        },
+        {
+            "id": "36f66",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2624,
+                -2528
+            ]
+        },
+        {
+            "id": "f0de5",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2528,
+                -2528
+            ]
+        },
+        {
+            "id": "7b1b6",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2528,
+                -2624
+            ]
+        },
+        {
+            "id": "bc17e",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1280,
+                -3392
+            ]
+        },
+        {
+            "id": "3871b",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1280,
+                -3552
+            ]
+        },
+        {
+            "id": "da355",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1376,
+                -3648
+            ]
+        },
+        {
+            "id": "e8ed2",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1184,
+                -3648
+            ]
+        },
+        {
+            "id": "5c6ee",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1184,
+                -3776
+            ]
+        },
+        {
+            "id": "aed0d",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1376,
+                -3776
+            ]
+        },
+        {
+            "id": "202c3",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1280,
+                -3872
+            ]
+        },
+        {
+            "id": "79bd9",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3360,
+                -1280
+            ]
+        },
+        {
+            "id": "54801",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3520,
+                -1280
+            ]
+        },
+        {
+            "id": "2d2ea",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3616,
+                -1184
+            ]
+        },
+        {
+            "id": "b19ea",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3616,
+                -1376
+            ]
+        },
+        {
+            "id": "062ed",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3744,
+                -1376
+            ]
+        },
+        {
+            "id": "8e409",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3744,
+                -1184
+            ]
+        },
+        {
+            "id": "90639",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3840,
+                -1280
+            ]
+        },
+        {
+            "id": "a9288",
+            "passive_tag": "minor_constitution",
+            "position": [
+                224,
+                -3104
+            ]
+        },
+        {
+            "id": "c687a",
+            "passive_tag": "minor_constitution",
+            "position": [
+                320,
+                -3008
+            ]
+        },
+        {
+            "id": "d1819",
+            "passive_tag": "minor_constitution",
+            "position": [
+                416,
+                -3104
+            ]
+        },
+        {
+            "id": "17001",
+            "passive_tag": "minor_constitution",
+            "position": [
+                736,
+                -3104
+            ]
+        },
+        {
+            "id": "11574",
+            "passive_tag": "minor_constitution",
+            "position": [
+                640,
+                -3008
+            ]
+        },
+        {
+            "id": "4e95a",
+            "passive_tag": "minor_constitution",
+            "position": [
+                544,
+                -3104
+            ]
+        },
+        {
+            "id": "4c634",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3104,
+                -224
+            ]
+        },
+        {
+            "id": "f6c2a",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3008,
+                -320
+            ]
+        },
+        {
+            "id": "0a586",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3104,
+                -416
+            ]
+        },
+        {
+            "id": "086f6",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3104,
+                -736
+            ]
+        },
+        {
+            "id": "bd65b",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3008,
+                -640
+            ]
+        },
+        {
+            "id": "a4af2",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3104,
+                -544
+            ]
+        },
+        {
+            "id": "431ef",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1152,
+                -2880
+            ]
+        },
+        {
+            "id": "57cd1",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1024,
+                -2880
+            ]
+        },
+        {
+            "id": "4879a",
+            "passive_tag": "minor_constitution",
+            "position": [
+                896,
+                -2880
+            ]
+        },
+        {
+            "id": "cff33",
+            "passive_tag": "minor_constitution",
+            "position": [
+                896,
+                -2752
+            ]
+        },
+        {
+            "id": "b9450",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1152,
+                -2560
+            ]
+        },
+        {
+            "id": "4151e",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1024,
+                -2560
+            ]
+        },
+        {
+            "id": "4eff9",
+            "passive_tag": "minor_constitution",
+            "position": [
+                896,
+                -2560
+            ]
+        },
+        {
+            "id": "9112b",
+            "passive_tag": "minor_constitution",
+            "position": [
+                896,
+                -2688
+            ]
+        },
+        {
+            "id": "1c1a2",
+            "passive_tag": "minor_constitution",
+            "position": [
+                704,
+                -2720
+            ]
+        },
+        {
+            "id": "f4cc7",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2560,
+                -1152
+            ]
+        },
+        {
+            "id": "f88a5",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2880,
+                -1152
+            ]
+        },
+        {
+            "id": "6b8e9",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2560,
+                -1024
+            ]
+        },
+        {
+            "id": "27b1c",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2880,
+                -1024
+            ]
+        },
+        {
+            "id": "d1392",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2560,
+                -896
+            ]
+        },
+        {
+            "id": "4d011",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2880,
+                -896
+            ]
+        },
+        {
+            "id": "e580a",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2752,
+                -896
+            ]
+        },
+        {
+            "id": "a1a13",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2688,
+                -896
+            ]
+        },
+        {
+            "id": "53ac8",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2720,
+                -768
+            ]
+        },
+        {
+            "id": "6017f",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2240,
+                -2880
+            ]
+        },
+        {
+            "id": "e226c",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2240,
+                -3072
+            ]
+        },
+        {
+            "id": "98a18",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2304,
+                -2976
+            ]
+        },
+        {
+            "id": "c5c7c",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2176,
+                -2976
+            ]
+        },
+        {
+            "id": "b9981",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2880,
+                -2240
+            ]
+        },
+        {
+            "id": "9d1d5",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3072,
+                -2240
+            ]
+        },
+        {
+            "id": "6e051",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2976,
+                -2176
+            ]
+        },
+        {
+            "id": "57041",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                2976,
+                -2304
+            ]
+        },
+        {
+            "id": "ff649",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2016,
+                -3104
+            ]
+        },
+        {
+            "id": "85bdc",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1920,
+                -3008
+            ]
+        },
+        {
+            "id": "29838",
+            "passive_tag": "minor_constitution",
+            "position": [
+                1824,
+                -3104
+            ]
+        },
+        {
+            "id": "648d3",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3104,
+                -2016
+            ]
+        },
+        {
+            "id": "c224f",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3008,
+                -1920
+            ]
+        },
+        {
+            "id": "b8f5a",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3104,
+                -1824
+            ]
+        },
+        {
+            "id": "930e0",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2464,
+                -3104
+            ]
+        },
+        {
+            "id": "03f10",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2560,
+                -3008
+            ]
+        },
+        {
+            "id": "ed406",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2656,
+                -3104
+            ]
+        },
+        {
+            "id": "86682",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3104,
+                -2464
+            ]
+        },
+        {
+            "id": "bc04f",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3008,
+                -2560
+            ]
+        },
+        {
+            "id": "d62e9",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3104,
+                -2656
+            ]
+        },
+        {
+            "id": "2bf86",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2880,
+                -3360
+            ]
+        },
+        {
+            "id": "66cd9",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2880,
+                -3520
+            ]
+        },
+        {
+            "id": "bc3c0",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2976,
+                -3616
+            ]
+        },
+        {
+            "id": "95623",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2976,
+                -3744
+            ]
+        },
+        {
+            "id": "fe259",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2880,
+                -3840
+            ]
+        },
+        {
+            "id": "719d1",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2784,
+                -3616
+            ]
+        },
+        {
+            "id": "2ee08",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2784,
+                -3744
+            ]
+        },
+        {
+            "id": "45dff",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3360,
+                -2880
+            ]
+        },
+        {
+            "id": "d4e93",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3520,
+                -2880
+            ]
+        },
+        {
+            "id": "453cb",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3616,
+                -2784
+            ]
+        },
+        {
+            "id": "b523c",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3616,
+                -2976
+            ]
+        },
+        {
+            "id": "03832",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3744,
+                -2976
+            ]
+        },
+        {
+            "id": "dd567",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3744,
+                -2784
+            ]
+        },
+        {
+            "id": "e68f2",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3840,
+                -2880
+            ]
+        },
+        {
+            "id": "9163b",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2336,
+                -3296
+            ]
+        },
+        {
+            "id": "65eec",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2240,
+                -3392
+            ]
+        },
+        {
+            "id": "88c15",
+            "passive_tag": "minor_constitution",
+            "position": [
+                2144,
+                -3296
+            ]
+        },
+        {
+            "id": "152ae",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3296,
+                -2336
+            ]
+        },
+        {
+            "id": "99cf0",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3392,
+                -2240
+            ]
+        },
+        {
+            "id": "3a0b4",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3296,
+                -2144
+            ]
+        },
+        {
+            "id": "fbc2f",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3360,
+                -1920
+            ]
+        },
+        {
+            "id": "69196",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3520,
+                -1920
+            ]
+        },
+        {
+            "id": "e7919",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3616,
+                -2016
+            ]
+        },
+        {
+            "id": "db24c",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3616,
+                -1824
+            ]
+        },
+        {
+            "id": "8c70f",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3744,
+                -1824
+            ]
+        },
+        {
+            "id": "f2b6d",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3744,
+                -2016
+            ]
+        },
+        {
+            "id": "b7b78",
+            "passive_tag": "minor_wisdom",
+            "position": [
+                3840,
+                -1920
+            ]
+        }
+    ],
+    "edges": [
+        [
+            "root",
+            "root_warrior"
+        ],
+        [
+            "root",
+            "root_tank"
+        ],
+        [
+            "root",
+            "root_mage"
+        ],
+        [
+            "root",
+            "root_rogue"
+        ],
+        [
+            "22b0f",
+            "root_warrior"
+        ],
+        [
+            "22b0f",
+            "7b38d"
+        ],
+        [
+            "22b0f",
+            "7f2e3"
+        ],
+        [
+            "22b0f",
+            "4ef7e"
+        ],
+        [
+            "9360b",
+            "root_mage"
+        ],
+        [
+            "9360b",
+            "c6c13"
+        ],
+        [
+            "8a75b",
+            "root_tank"
+        ],
+        [
+            "e3332",
+            "root_rogue"
+        ],
+        [
+            "c6c13",
+            "edf8d"
+        ],
+        [
+            "6d05b",
+            "9360b"
+        ],
+        [
+            "6d05b",
+            "df124"
+        ],
+        [
+            "700a5",
+            "c0c7d"
+        ],
+        [
+            "700a5",
+            "be6c7"
+        ],
+        [
+            "0fa1b",
+            "edf8d"
+        ],
+        [
+            "0fa1b",
+            "c0c7d"
+        ],
+        [
+            "85d9e",
+            "df124"
+        ],
+        [
+            "0c6d8",
+            "700a5"
+        ],
+        [
+            "0c6d8",
+            "85d9e"
+        ],
+        [
+            "7f2e3",
+            "d6ace"
+        ],
+        [
+            "4126d",
+            "7b38d"
+        ],
+        [
+            "4126d",
+            "82b2e"
+        ],
+        [
+            "82b2e",
+            "bbc06"
+        ],
+        [
+            "3648e",
+            "d6ace"
+        ],
+        [
+            "3648e",
+            "817f1"
+        ],
+        [
+            "19737",
+            "817f1"
+        ],
+        [
+            "19737",
+            "bbc06"
+        ],
+        [
+            "19737",
+            "8e434"
+        ],
+        [
+            "09c82",
+            "8a75b"
+        ],
+        [
+            "09c82",
+            "f6cd1"
+        ],
+        [
+            "2e94a",
+            "f6cd1"
+        ],
+        [
+            "2e94a",
+            "502dd"
+        ],
+        [
+            "498a8",
+            "8a75b"
+        ],
+        [
+            "2e864",
+            "498a8"
+        ],
+        [
+            "2e864",
+            "e608d"
+        ],
+        [
+            "808de",
+            "e608d"
+        ],
+        [
+            "808de",
+            "edd31"
+        ],
+        [
+            "502dd",
+            "edd31"
+        ],
+        [
+            "9297a",
+            "e3332"
+        ],
+        [
+            "9297a",
+            "cee2f"
+        ],
+        [
+            "1511f",
+            "e3332"
+        ],
+        [
+            "1511f",
+            "4048a"
+        ],
+        [
+            "4048a",
+            "c3f3b"
+        ],
+        [
+            "c3f3b",
+            "e670a"
+        ],
+        [
+            "65612",
+            "cee2f"
+        ],
+        [
+            "65612",
+            "de025"
+        ],
+        [
+            "b731b",
+            "de025"
+        ],
+        [
+            "b731b",
+            "e670a"
+        ],
+        [
+            "be6c7",
+            "d32e1"
+        ],
+        [
+            "a73e6",
+            "b731b"
+        ],
+        [
+            "a73e6",
+            "fed12"
+        ],
+        [
+            "b89b7",
+            "be6c7"
+        ],
+        [
+            "b89b7",
+            "e8e44"
+        ],
+        [
+            "0d197",
+            "a73e6"
+        ],
+        [
+            "e1146",
+            "edd31"
+        ],
+        [
+            "e1146",
+            "eaa8e"
+        ],
+        [
+            "e1146",
+            "f4709"
+        ],
+        [
+            "8e434",
+            "b0185"
+        ],
+        [
+            "64c24",
+            "8e434"
+        ],
+        [
+            "64c24",
+            "ca391"
+        ],
+        [
+            "9f650",
+            "be6c7"
+        ],
+        [
+            "67636",
+            "9f650"
+        ],
+        [
+            "3407e",
+            "9f650"
+        ],
+        [
+            "3407e",
+            "34a40"
+        ],
+        [
+            "34a40",
+            "67636"
+        ],
+        [
+            "34a40",
+            "3a3b2"
+        ],
+        [
+            "34a40",
+            "9931f"
+        ],
+        [
+            "3a3b2",
+            "9f650"
+        ],
+        [
+            "e8e44",
+            "f08cc"
+        ],
+        [
+            "b9f68",
+            "d32e1"
+        ],
+        [
+            "9931f",
+            "e400d"
+        ],
+        [
+            "9931f",
+            "af58c"
+        ],
+        [
+            "13f31",
+            "9931f"
+        ],
+        [
+            "13f31",
+            "3ff85"
+        ],
+        [
+            "e400d",
+            "f08cc"
+        ],
+        [
+            "3ff85",
+            "b9f68"
+        ],
+        [
+            "31010",
+            "b89b7"
+        ],
+        [
+            "31010",
+            "8e1e4"
+        ],
+        [
+            "87ad5",
+            "d32e1"
+        ],
+        [
+            "87ad5",
+            "ef37c"
+        ],
+        [
+            "86314",
+            "9360b"
+        ],
+        [
+            "8a0e5",
+            "9360b"
+        ],
+        [
+            "18a7c",
+            "86314"
+        ],
+        [
+            "18a7c",
+            "ef37c"
+        ],
+        [
+            "74b8c",
+            "8a0e5"
+        ],
+        [
+            "74b8c",
+            "8e1e4"
+        ],
+        [
+            "44f2a",
+            "87ad5"
+        ],
+        [
+            "44f2a",
+            "5aa73"
+        ],
+        [
+            "44f2a",
+            "57b58"
+        ],
+        [
+            "1dbc4",
+            "22b0f"
+        ],
+        [
+            "1dbc4",
+            "5fea7"
+        ],
+        [
+            "76267",
+            "b0185"
+        ],
+        [
+            "375dc",
+            "76267"
+        ],
+        [
+            "375dc",
+            "5fea7"
+        ],
+        [
+            "24619",
+            "9089f"
+        ],
+        [
+            "24619",
+            "ddee9"
+        ],
+        [
+            "86172",
+            "f00e0"
+        ],
+        [
+            "86172",
+            "cd247"
+        ],
+        [
+            "86172",
+            "d0733"
+        ],
+        [
+            "727f3",
+            "a855c"
+        ],
+        [
+            "a931d",
+            "dfce0"
+        ],
+        [
+            "a931d",
+            "fcc7a"
+        ],
+        [
+            "a931d",
+            "be114"
+        ],
+        [
+            "a931d",
+            "bd364"
+        ],
+        [
+            "a931d",
+            "f7926"
+        ],
+        [
+            "4294d",
+            "76267"
+        ],
+        [
+            "4294d",
+            "ce486"
+        ],
+        [
+            "4294d",
+            "616ae"
+        ],
+        [
+            "06620",
+            "ce486"
+        ],
+        [
+            "06620",
+            "7c27c"
+        ],
+        [
+            "06620",
+            "ada01"
+        ],
+        [
+            "7c27c",
+            "f41d6"
+        ],
+        [
+            "dfce0",
+            "f41d6"
+        ],
+        [
+            "55006",
+            "7c27c"
+        ],
+        [
+            "55006",
+            "fcc7a"
+        ],
+        [
+            "5aa73",
+            "b864f"
+        ],
+        [
+            "5aa73",
+            "ba20a"
+        ],
+        [
+            "b4ee5",
+            "b864f"
+        ],
+        [
+            "b4ee5",
+            "c11b9"
+        ],
+        [
+            "11670",
+            "a931d"
+        ],
+        [
+            "11670",
+            "c11b9"
+        ],
+        [
+            "5e675",
+            "a931d"
+        ],
+        [
+            "4307f",
+            "b4ee5"
+        ],
+        [
+            "4307f",
+            "5e675"
+        ],
+        [
+            "34698",
+            "a931d"
+        ],
+        [
+            "34698",
+            "76269"
+        ],
+        [
+            "76269",
+            "d8143"
+        ],
+        [
+            "be114",
+            "ddc50"
+        ],
+        [
+            "d8143",
+            "ddc50"
+        ],
+        [
+            "d8143",
+            "ef4ad"
+        ],
+        [
+            "b3029",
+            "f7926"
+        ],
+        [
+            "79590",
+            "bd364"
+        ],
+        [
+            "79590",
+            "7dd34"
+        ],
+        [
+            "7dd34",
+            "b3029"
+        ],
+        [
+            "2c34f",
+            "42a76"
+        ],
+        [
+            "2c34f",
+            "eb614"
+        ],
+        [
+            "2c34f",
+            "a244d"
+        ],
+        [
+            "1f315",
+            "c08c7"
+        ],
+        [
+            "1f315",
+            "eb614"
+        ],
+        [
+            "1f315",
+            "8ba7f"
+        ],
+        [
+            "2f9e1",
+            "c08c7"
+        ],
+        [
+            "2f9e1",
+            "3b47a"
+        ],
+        [
+            "2f9e1",
+            "470c8"
+        ],
+        [
+            "3b47a",
+            "7dd34"
+        ],
+        [
+            "3b47a",
+            "f6ce9"
+        ],
+        [
+            "3b47a",
+            "d580d"
+        ],
+        [
+            "c33c6",
+            "f6ce9"
+        ],
+        [
+            "c33c6",
+            "cbec0"
+        ],
+        [
+            "cbec0",
+            "f0ce1"
+        ],
+        [
+            "3e3d9",
+            "cbec0"
+        ],
+        [
+            "3e3d9",
+            "5e033"
+        ],
+        [
+            "25792",
+            "3e3d9"
+        ],
+        [
+            "25792",
+            "ef4ad"
+        ],
+        [
+            "9fc7c",
+            "ef4ad"
+        ],
+        [
+            "4de94",
+            "9fc7c"
+        ],
+        [
+            "4de94",
+            "83a36"
+        ],
+        [
+            "02942",
+            "4de94"
+        ],
+        [
+            "02942",
+            "af58c"
+        ],
+        [
+            "02942",
+            "bd526"
+        ],
+        [
+            "9089f",
+            "a5d06"
+        ],
+        [
+            "52ca2",
+            "a5d06"
+        ],
+        [
+            "52ca2",
+            "c884b"
+        ],
+        [
+            "2195b",
+            "52ca2"
+        ],
+        [
+            "2195b",
+            "8b0f9"
+        ],
+        [
+            "2195b",
+            "c884b"
+        ],
+        [
+            "2195b",
+            "79bd9"
+        ],
+        [
+            "8b0f9",
+            "abefb"
+        ],
+        [
+            "8b0f9",
+            "c884b"
+        ],
+        [
+            "6c2e4",
+            "abefb"
+        ],
+        [
+            "6c2e4",
+            "c9bb3"
+        ],
+        [
+            "6c2e4",
+            "9d1d5"
+        ],
+        [
+            "abefb",
+            "fbc2f"
+        ],
+        [
+            "a855c",
+            "c9bb3"
+        ],
+        [
+            "1423d",
+            "af58c"
+        ],
+        [
+            "1423d",
+            "ddee9"
+        ],
+        [
+            "3d0a6",
+            "57b58"
+        ],
+        [
+            "3d0a6",
+            "42537"
+        ],
+        [
+            "ba20a",
+            "bc0cb"
+        ],
+        [
+            "990e0",
+            "bc0cb"
+        ],
+        [
+            "26211",
+            "b864f"
+        ],
+        [
+            "035d2",
+            "26211"
+        ],
+        [
+            "035d2",
+            "54d62"
+        ],
+        [
+            "616ae",
+            "8f600"
+        ],
+        [
+            "74661",
+            "8f600"
+        ],
+        [
+            "c94a8",
+            "ce486"
+        ],
+        [
+            "c94a8",
+            "dc8f9"
+        ],
+        [
+            "07de9",
+            "dc8f9"
+        ],
+        [
+            "9f23e",
+            "ada01"
+        ],
+        [
+            "1d650",
+            "9f23e"
+        ],
+        [
+            "0b15e",
+            "4ef7e"
+        ],
+        [
+            "0b15e",
+            "f7a77"
+        ],
+        [
+            "19c99",
+            "64c24"
+        ],
+        [
+            "19c99",
+            "f7a77"
+        ],
+        [
+            "9ae1f",
+            "b0185"
+        ],
+        [
+            "9ae1f",
+            "ca391"
+        ],
+        [
+            "9ae1f",
+            "afa3b"
+        ],
+        [
+            "5387e",
+            "ca391"
+        ],
+        [
+            "5387e",
+            "afa3b"
+        ],
+        [
+            "18685",
+            "5387e"
+        ],
+        [
+            "18685",
+            "36476"
+        ],
+        [
+            "18685",
+            "6a5d9"
+        ],
+        [
+            "18685",
+            "93892"
+        ],
+        [
+            "18685",
+            "42a76"
+        ],
+        [
+            "36476",
+            "afa3b"
+        ],
+        [
+            "36476",
+            "cd78c"
+        ],
+        [
+            "36476",
+            "51a46"
+        ],
+        [
+            "36476",
+            "eb614"
+        ],
+        [
+            "6a5d9",
+            "b92b6"
+        ],
+        [
+            "c44ac",
+            "cd78c"
+        ],
+        [
+            "51a46",
+            "c44ac"
+        ],
+        [
+            "93892",
+            "b92b6"
+        ],
+        [
+            "5a9bb",
+            "86172"
+        ],
+        [
+            "5a9bb",
+            "a244d"
+        ],
+        [
+            "1c4a5",
+            "42a76"
+        ],
+        [
+            "1c4a5",
+            "cd247"
+        ],
+        [
+            "0a605",
+            "eb614"
+        ],
+        [
+            "0a605",
+            "f00e0"
+        ],
+        [
+            "b5f09",
+            "bd526"
+        ],
+        [
+            "84b11",
+            "b5f09"
+        ],
+        [
+            "83a36",
+            "a5ad5"
+        ],
+        [
+            "87468",
+            "a5ad5"
+        ],
+        [
+            "3617f",
+            "9fc7c"
+        ],
+        [
+            "3617f",
+            "a4897"
+        ],
+        [
+            "7e688",
+            "a4897"
+        ],
+        [
+            "238f9",
+            "25792"
+        ],
+        [
+            "238f9",
+            "80628"
+        ],
+        [
+            "32dd0",
+            "80628"
+        ],
+        [
+            "5e033",
+            "d3356"
+        ],
+        [
+            "b5d38",
+            "d3356"
+        ],
+        [
+            "8ba7f",
+            "de6ab"
+        ],
+        [
+            "081a0",
+            "de6ab"
+        ],
+        [
+            "12dbe",
+            "c08c7"
+        ],
+        [
+            "12dbe",
+            "3ae14"
+        ],
+        [
+            "3ae14",
+            "be590"
+        ],
+        [
+            "470c8",
+            "c5dae"
+        ],
+        [
+            "c5dae",
+            "e5a09"
+        ],
+        [
+            "a8874",
+            "f6ce9"
+        ],
+        [
+            "5172c",
+            "a8874"
+        ],
+        [
+            "0a1a0",
+            "5172c"
+        ],
+        [
+            "41e8f",
+            "c33c6"
+        ],
+        [
+            "20e84",
+            "41e8f"
+        ],
+        [
+            "20e84",
+            "87494"
+        ],
+        [
+            "21ea7",
+            "d0733"
+        ],
+        [
+            "21ea7",
+            "46860"
+        ],
+        [
+            "46860",
+            "c8756"
+        ],
+        [
+            "46860",
+            "c1130"
+        ],
+        [
+            "5016b",
+            "c8756"
+        ],
+        [
+            "5016b",
+            "c1130"
+        ],
+        [
+            "11ae6",
+            "5016b"
+        ],
+        [
+            "11ae6",
+            "ff649"
+        ],
+        [
+            "0a2bb",
+            "11ae6"
+        ],
+        [
+            "0a2bb",
+            "137e6"
+        ],
+        [
+            "0a2bb",
+            "e226c"
+        ],
+        [
+            "0a2bb",
+            "9163b"
+        ],
+        [
+            "137e6",
+            "55ae2"
+        ],
+        [
+            "137e6",
+            "930e0"
+        ],
+        [
+            "55ae2",
+            "727f3"
+        ],
+        [
+            "bcff2",
+            "ef4ad"
+        ],
+        [
+            "bcff2",
+            "c884b"
+        ],
+        [
+            "bcff2",
+            "f4cc7"
+        ],
+        [
+            "c884b",
+            "f88a5"
+        ],
+        [
+            "c1130",
+            "c8756"
+        ],
+        [
+            "c1130",
+            "d580d"
+        ],
+        [
+            "3fa50",
+            "cbec0"
+        ],
+        [
+            "3fa50",
+            "bcff2"
+        ],
+        [
+            "3fa50",
+            "c884b"
+        ],
+        [
+            "3fa50",
+            "6a33f"
+        ],
+        [
+            "3fa50",
+            "b9981"
+        ],
+        [
+            "9af49",
+            "cbec0"
+        ],
+        [
+            "9af49",
+            "d580d"
+        ],
+        [
+            "9af49",
+            "c1130"
+        ],
+        [
+            "6a33f",
+            "727f3"
+        ],
+        [
+            "6a33f",
+            "9af49"
+        ],
+        [
+            "5c39a",
+            "6a33f"
+        ],
+        [
+            "36f66",
+            "5c39a"
+        ],
+        [
+            "36f66",
+            "f0de5"
+        ],
+        [
+            "7b1b6",
+            "f0de5"
+        ],
+        [
+            "bc17e",
+            "c8756"
+        ],
+        [
+            "3871b",
+            "bc17e"
+        ],
+        [
+            "3871b",
+            "da355"
+        ],
+        [
+            "3871b",
+            "e8ed2"
+        ],
+        [
+            "5c6ee",
+            "e8ed2"
+        ],
+        [
+            "aed0d",
+            "da355"
+        ],
+        [
+            "202c3",
+            "5c6ee"
+        ],
+        [
+            "202c3",
+            "aed0d"
+        ],
+        [
+            "54801",
+            "79bd9"
+        ],
+        [
+            "54801",
+            "b19ea"
+        ],
+        [
+            "2d2ea",
+            "54801"
+        ],
+        [
+            "2d2ea",
+            "8e409"
+        ],
+        [
+            "062ed",
+            "b19ea"
+        ],
+        [
+            "062ed",
+            "90639"
+        ],
+        [
+            "8e409",
+            "90639"
+        ],
+        [
+            "a9288",
+            "d0733"
+        ],
+        [
+            "a9288",
+            "c687a"
+        ],
+        [
+            "c687a",
+            "d1819"
+        ],
+        [
+            "17001",
+            "21ea7"
+        ],
+        [
+            "11574",
+            "17001"
+        ],
+        [
+            "11574",
+            "4e95a"
+        ],
+        [
+            "4c634",
+            "9089f"
+        ],
+        [
+            "4c634",
+            "f6c2a"
+        ],
+        [
+            "0a586",
+            "f6c2a"
+        ],
+        [
+            "086f6",
+            "a5d06"
+        ],
+        [
+            "086f6",
+            "bd65b"
+        ],
+        [
+            "a4af2",
+            "bd65b"
+        ],
+        [
+            "431ef",
+            "c1130"
+        ],
+        [
+            "431ef",
+            "57cd1"
+        ],
+        [
+            "4879a",
+            "57cd1"
+        ],
+        [
+            "4879a",
+            "cff33"
+        ],
+        [
+            "b9450",
+            "d580d"
+        ],
+        [
+            "4151e",
+            "b9450"
+        ],
+        [
+            "4151e",
+            "4eff9"
+        ],
+        [
+            "4eff9",
+            "9112b"
+        ],
+        [
+            "1c1a2",
+            "cff33"
+        ],
+        [
+            "1c1a2",
+            "9112b"
+        ],
+        [
+            "6b8e9",
+            "f4cc7"
+        ],
+        [
+            "6b8e9",
+            "d1392"
+        ],
+        [
+            "27b1c",
+            "f88a5"
+        ],
+        [
+            "27b1c",
+            "4d011"
+        ],
+        [
+            "4d011",
+            "e580a"
+        ],
+        [
+            "a1a13",
+            "d1392"
+        ],
+        [
+            "53ac8",
+            "e580a"
+        ],
+        [
+            "53ac8",
+            "a1a13"
+        ],
+        [
+            "6017f",
+            "9af49"
+        ],
+        [
+            "6017f",
+            "98a18"
+        ],
+        [
+            "6017f",
+            "c5c7c"
+        ],
+        [
+            "98a18",
+            "e226c"
+        ],
+        [
+            "c5c7c",
+            "e226c"
+        ],
+        [
+            "6e051",
+            "b9981"
+        ],
+        [
+            "6e051",
+            "9d1d5"
+        ],
+        [
+            "57041",
+            "b9981"
+        ],
+        [
+            "57041",
+            "9d1d5"
+        ],
+        [
+            "85bdc",
+            "ff649"
+        ],
+        [
+            "29838",
+            "85bdc"
+        ],
+        [
+            "648d3",
+            "abefb"
+        ],
+        [
+            "648d3",
+            "c224f"
+        ],
+        [
+            "b8f5a",
+            "c224f"
+        ],
+        [
+            "03f10",
+            "930e0"
+        ],
+        [
+            "03f10",
+            "ed406"
+        ],
+        [
+            "86682",
+            "c9bb3"
+        ],
+        [
+            "86682",
+            "bc04f"
+        ],
+        [
+            "bc04f",
+            "d62e9"
+        ],
+        [
+            "2bf86",
+            "55ae2"
+        ],
+        [
+            "2bf86",
+            "66cd9"
+        ],
+        [
+            "66cd9",
+            "bc3c0"
+        ],
+        [
+            "66cd9",
+            "719d1"
+        ],
+        [
+            "95623",
+            "bc3c0"
+        ],
+        [
+            "95623",
+            "fe259"
+        ],
+        [
+            "2ee08",
+            "fe259"
+        ],
+        [
+            "2ee08",
+            "719d1"
+        ],
+        [
+            "45dff",
+            "a855c"
+        ],
+        [
+            "45dff",
+            "d4e93"
+        ],
+        [
+            "453cb",
+            "d4e93"
+        ],
+        [
+            "453cb",
+            "dd567"
+        ],
+        [
+            "b523c",
+            "d4e93"
+        ],
+        [
+            "03832",
+            "b523c"
+        ],
+        [
+            "03832",
+            "e68f2"
+        ],
+        [
+            "dd567",
+            "e68f2"
+        ],
+        [
+            "65eec",
+            "9163b"
+        ],
+        [
+            "65eec",
+            "88c15"
+        ],
+        [
+            "152ae",
+            "6c2e4"
+        ],
+        [
+            "152ae",
+            "99cf0"
+        ],
+        [
+            "3a0b4",
+            "99cf0"
+        ],
+        [
+            "69196",
+            "fbc2f"
+        ],
+        [
+            "69196",
+            "e7919"
+        ],
+        [
+            "69196",
+            "db24c"
+        ],
+        [
+            "e7919",
+            "f2b6d"
+        ],
+        [
+            "8c70f",
+            "db24c"
+        ],
+        [
+            "8c70f",
+            "b7b78"
+        ],
+        [
+            "b7b78",
+            "f2b6d"
+        ]
+    ]
+}

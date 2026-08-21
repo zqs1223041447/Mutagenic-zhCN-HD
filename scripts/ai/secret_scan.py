@@ -65,6 +65,25 @@ def _redact(name_hint: str, value: str) -> str:
     return f"{name_hint}=<redacted:{len(value)}>"
 
 
+_NON_SECRET_WORDS = {
+    "restored", "existing", "missing", "provided", "fingerprint",
+    "present", "absent", "disabled", "enabled", "true", "false",
+    "required", "optional", "placeholder", "example",
+}
+
+
+def looks_like_secret_value(value: str) -> bool:
+    """Reject log-words and f-string interpolations that are not secrets."""
+    raw = (value or "").strip().strip("'\"")
+    if len(raw) < 8:
+        return False
+    if re.fullmatch(r"\{[A-Za-z_][A-Za-z0-9_]*\}", raw):
+        return False
+    if raw.lower() in _NON_SECRET_WORDS:
+        return False
+    return True
+
+
 def scan_text(rel: str, text: str) -> list[dict]:
     findings: list[dict] = []
     for line_no, raw in enumerate(text.splitlines(), 1):
@@ -84,6 +103,8 @@ def scan_text(rel: str, text: str) -> list[dict]:
             for m in rx.finditer(raw):
                 if rule_name == "key_value":
                     name, value = m.group(1), m.group(2)
+                    if not looks_like_secret_value(value):
+                        continue
                     hint = _redact(name, value)
                 elif rule_name == "private_key_block":
                     hint = f"private_key_block=<redacted:lines>"

@@ -522,6 +522,43 @@ def check_runtime(repo_root: Path) -> dict:
     }
 
 
+def check_godot_product(repo_root: Path) -> dict:
+    """Product engine discovery. Missing Godot 4.7.1 is BLOCKED, never PASS."""
+    try:
+        from product_toolchain import discover_product_godot  # type: ignore
+        result = discover_product_godot(repo_root)
+    except Exception as exc:
+        return {
+            "id": "GODOT_4_7_1",
+            "status": "FAIL",
+            "proves": "",
+            "not_proven": str(exc),
+            "remediation": "Fix scripts/bootstrap/product_toolchain.py",
+        }
+    engine = result.get("engine") or {}
+    st = engine.get("status")
+    mapped = {
+        "SUCCESS": "PASS",
+        "NOT_FOUND": "BLOCKED",
+        "TOOL_MISSING": "BLOCKED",
+        "VERSION_MISMATCH": "FAIL",
+        "TOOL_FAILED": "FAIL",
+        "MISSING_PRIVATE": "BLOCKED",
+    }.get(st, "BLOCKED")
+    return {
+        "id": "GODOT_4_7_1",
+        "status": mapped,
+        "proves": "Godot 4.7.1 discovered and version-verified" if mapped == "PASS" else "",
+        "not_proven": "" if mapped == "PASS" else "Product Godot 4.7.1 runtime not available",
+        "remediation": engine.get("detail") or "",
+        "discovery_status": st,
+        "version": engine.get("version"),
+        "tool_missing": engine.get("tool_missing"),
+        "resolved_via": engine.get("resolved_via"),
+        "private_assets": (result.get("private_assets") or {}).get("status"),
+    }
+
+
 def check_vm(repo_root: Path) -> dict:
     # Probe Hyper-V / VM availability — no hard-coded host; just check powershell / hyper-v
     # If unavailable, BLOCKED is expected
@@ -621,6 +658,7 @@ def main(argv: list[str] | None = None) -> int:
     checks["VALIDATE"] = check_validate(repo_root)
     checks["RUNTIME"] = check_runtime(repo_root)
     checks["VM"] = check_vm(repo_root)
+    checks["GODOT_4_7_1"] = check_godot_product(repo_root)
 
     levels_info = compute_levels(checks, repo_root)
     levels = levels_info["levels"]
@@ -684,7 +722,7 @@ def main(argv: list[str] | None = None) -> int:
     if git_info.get("head") and len(git_info.get("head")) >= 8:
         print(f"head_short: {git_info.get('head')[:8]}")
     print("--- checks ---")
-    for cid in ["GIT","REPO","PROVENANCE","ORIGINAL_ASSET","SCRIPT_KEY","TOOLS","PYTHON","PIPELINE","BUILD","VALIDATE","RUNTIME","VM"]:
+    for cid in ["GIT","REPO","PROVENANCE","ORIGINAL_ASSET","SCRIPT_KEY","TOOLS","PYTHON","PIPELINE","BUILD","VALIDATE","RUNTIME","VM","GODOT_4_7_1"]:
         info = checks.get(cid, {})
         st = info.get("status", "UNKNOWN")
         print(f"  {cid:15s} {st}")

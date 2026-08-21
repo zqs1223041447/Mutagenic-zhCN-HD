@@ -90,6 +90,16 @@
       "check": "powershell -NoProfile -Command $PSVersionTable.PSVersion",
       "alternate": "pwsh",
       "purpose": "Windows boot/VM probes, secret/portability scans"
+    },
+    {
+      "id": "godot_4_7_1",
+      "name": "godot",
+      "version_constraint": "4.7.1",
+      "check": "godot --version",
+      "purpose": "Product engine (Godot 4.7.1 stable). Discovery via PATH / MUTAGENIC_GODOT_4 / repo-relative 02_tools/godot/. Missing is NOT_FOUND, never PASS.",
+      "classification": "DOWNLOADABLE_TOOL",
+      "missing_status": "NOT_FOUND",
+      "env_vars": ["MUTAGENIC_GODOT_4", "GODOT4", "GODOT_BIN"]
     }
   ],
   "environment_variables": [
@@ -115,6 +125,12 @@
       "name": "MUTAGENIC_TOOL_ROOT",
       "purpose": "Root for downloadable tools (contains gdre/)",
       "example": "<any_local_path>/tools",
+      "required": false
+    },
+    {
+      "name": "MUTAGENIC_GODOT_4",
+      "purpose": "Path to Godot 4.7.1 stable binary for Product headless import (never hardcoded in source)",
+      "example": "<any_local_path>/Godot_v4.7.1-stable",
       "required": false
     },
     {

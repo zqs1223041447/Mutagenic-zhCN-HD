@@ -1,0 +1,1452 @@
+[
+    {
+        "skill": {
+            "radius": 60
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.1,
+                    "type": "more"
+                },
+                {
+                    "amount": 1.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.15,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.1,
+                    "type": "more"
+                },
+                {
+                    "amount": 1.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.16,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.1,
+                    "type": "more"
+                },
+                {
+                    "amount": 1.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.16,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 62
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.1,
+                    "type": "more"
+                },
+                {
+                    "amount": 1.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.17,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.1,
+                    "type": "more"
+                },
+                {
+                    "amount": 1.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.17,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.1,
+                    "type": "more"
+                },
+                {
+                    "amount": 2.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.18,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 64
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "more"
+                },
+                {
+                    "amount": 2.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.18,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "more"
+                },
+                {
+                    "amount": 2.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.19,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "more"
+                },
+                {
+                    "amount": 2.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.2,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 66
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "more"
+                },
+                {
+                    "amount": 2.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.2,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "more"
+                },
+                {
+                    "amount": 3.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.21,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "more"
+                },
+                {
+                    "amount": 3.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.22,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 68
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "more"
+                },
+                {
+                    "amount": 3.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.22,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "more"
+                },
+                {
+                    "amount": 4.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.23,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "more"
+                },
+                {
+                    "amount": 4.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.24,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 70
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "more"
+                },
+                {
+                    "amount": 4.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.31,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 71
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.11,
+                    "type": "more"
+                },
+                {
+                    "amount": 5.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.31,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.12,
+                    "type": "more"
+                },
+                {
+                    "amount": 5.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.12,
+                    "type": "more"
+                },
+                {
+                    "amount": 6.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 73
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.12,
+                    "type": "more"
+                },
+                {
+                    "amount": 7.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 74
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.12,
+                    "type": "more"
+                },
+                {
+                    "amount": 7.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.12,
+                    "type": "more"
+                },
+                {
+                    "amount": 8.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.12,
+                    "type": "more"
+                },
+                {
+                    "amount": 9.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.31,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 76
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.12,
+                    "type": "more"
+                },
+                {
+                    "amount": 10.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.35,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 77
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.12,
+                    "type": "more"
+                },
+                {
+                    "amount": 11.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.35,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 78
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.12,
+                    "type": "more"
+                },
+                {
+                    "amount": 12.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 79
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.12,
+                    "type": "more"
+                },
+                {
+                    "amount": 13.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.35,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "more"
+                },
+                {
+                    "amount": 14.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.37,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "more"
+                },
+                {
+                    "amount": 16.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.37,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 81
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "more"
+                },
+                {
+                    "amount": 17.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.39,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 82
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "more"
+                },
+                {
+                    "amount": 19.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 83
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "more"
+                },
+                {
+                    "amount": 21.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.39,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.42,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 84
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "more"
+                },
+                {
+                    "amount": 23.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.39,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 85
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "more"
+                },
+                {
+                    "amount": 26.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.44,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "more"
+                },
+                {
+                    "amount": 29.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.46,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "more"
+                },
+                {
+                    "amount": 31.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.41,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.47,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 87
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.13,
+                    "type": "more"
+                },
+                {
+                    "amount": 35.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.42,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.49,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 88
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.14,
+                    "type": "more"
+                },
+                {
+                    "amount": 38.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.42,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.51,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 89
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.14,
+                    "type": "more"
+                },
+                {
+                    "amount": 42.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.52,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 90
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.14,
+                    "type": "more"
+                },
+                {
+                    "amount": 47.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.54,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 91
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.14,
+                    "type": "more"
+                },
+                {
+                    "amount": 51.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.44,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.56,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 92
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.14,
+                    "type": "more"
+                },
+                {
+                    "amount": 57.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.45,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.58,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 93
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.14,
+                    "type": "more"
+                },
+                {
+                    "amount": 63.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.45,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.6,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 94
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.14,
+                    "type": "more"
+                },
+                {
+                    "amount": 69.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.46,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.62,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 95
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.14,
+                    "type": "more"
+                },
+                {
+                    "amount": 76.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.47,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.64,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 96
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.15,
+                    "type": "more"
+                },
+                {
+                    "amount": 84.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.47,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.66,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 97
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.15,
+                    "type": "more"
+                },
+                {
+                    "amount": 93.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.48,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.68,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 98
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.15,
+                    "type": "more"
+                },
+                {
+                    "amount": 103.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.49,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.7,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 99
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.15,
+                    "type": "more"
+                },
+                {
+                    "amount": 113.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.49,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.73,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 100
+        },
+        "aura": {
+            "lightning_damage": [
+                {
+                    "amount": 0.15,
+                    "type": "more"
+                },
+                {
+                    "amount": 125.0,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_chance": [
+                {
+                    "amount": 0.5,
+                    "type": "flat"
+                }
+            ],
+            "lightning_ailment_effect": [
+                {
+                    "amount": 0.75,
+                    "type": "flat"
+                }
+            ]
+        }
+    }
+]
