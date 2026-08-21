@@ -8,7 +8,7 @@ signal context_entity_changed(entity)
 signal show_notification(child)
 signal show_message(text)
 
-var sound_effect = preload("res://Scenes/SoundEffect.tscn")
+var sound_effect = preload("res://scenes/SoundEffect.tscn")
 var rare_orb_sfx = preload("res://Sounds/Pickups/rare_orb.wav")
 
 var selected_character_name = "default"

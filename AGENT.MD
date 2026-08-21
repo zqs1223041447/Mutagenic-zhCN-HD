@@ -150,7 +150,9 @@ Godot 3.5.3 = Legacy Reference
 
 **P1-WAVE-A（已完成）：** P1-X0 Seed、P1-X1 Inventory、P1-X2 Toolchain discovery、P1-X3 Preservation Contracts。
 
-**P1-WAVE-B（当前批次）：Boot / Project / Autoload / Input**
+**P1-WAVE-B（已完成）：** Boot / Project / Autoload / Input。
+
+**P1-WAVE-C（当前批次）：Menu / Character / Save**
 
 | ID | Goal | 关键验收 |
 |----|------|----------|

@@ -1,12 +1,12 @@
 extends Node
 
 
-var default_level = preload("res://Scenes/Levels/Default/DefaultLevel.tscn")
-var hideout_level = preload("res://Scenes/Levels/Hideout/HideoutLevel.tscn")
-var boss_level = preload("res://Scenes/Levels/BossArenas/BossArena.tscn")
-var spirit_of_the_ancient_level = preload("res://Scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.tscn")
-var ladder_level = preload("res://Scenes/Levels/Ladder/Ladder.tscn")
-var test_level = preload("res://Scenes/Levels/TestLevel/TestLevel.tscn")
+var default_level = preload("res://scenes/Levels/Default/DefaultLevel.tscn")
+var hideout_level = preload("res://scenes/Levels/Hideout/HideoutLevel.tscn")
+var boss_level = preload("res://scenes/Levels/BossArenas/BossArena.tscn")
+var spirit_of_the_ancient_level = preload("res://scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.tscn")
+var ladder_level = preload("res://scenes/Levels/Ladder/Ladder.tscn")
+var test_level = preload("res://scenes/Levels/TestLevel/TestLevel.tscn")
 
 
 var tileset_factory = preload("res://Tilesets/tileset_factory.png")
@@ -41,10 +41,10 @@ var icon_boss = preload("res://sprites/worldmap/boss.png")
 var icon_ladder = preload("res://sprites/worldmap/ladder.png")
 
 
-var gatekeeper = preload("res://Scenes/Mobs/Bosses/GateKeeper.tscn")
-var sludge = preload("res://Scenes/Mobs/Bosses/Sludge.tscn")
-var spirit_of_the_ancient = preload("res://Scenes/Mobs/Bosses/SpiritOfTheAncient.tscn")
-var mutated_spider = preload("res://Scenes/Mobs/Bosses/MutatedSpider.tscn")
+var gatekeeper = preload("res://scenes/Mobs/Bosses/GateKeeper.tscn")
+var sludge = preload("res://scenes/Mobs/Bosses/Sludge.tscn")
+var spirit_of_the_ancient = preload("res://scenes/Mobs/Bosses/SpiritOfTheAncient.tscn")
+var mutated_spider = preload("res://scenes/Mobs/Bosses/MutatedSpider.tscn")
 
 enum Layout{
 				FIXED,

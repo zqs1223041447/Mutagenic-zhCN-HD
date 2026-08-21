@@ -476,6 +476,13 @@ def convert_gdscript(text: str) -> str:
     out = re.sub(r"\bJSON\.parse\s*\(", "JSON.parse_string(", out)
     out = re.sub(r"\bOS\.get_ticks_msec\s*\(", "Time.get_ticks_msec(", out)
     out = re.sub(r"\bOS\.get_unix_time\s*\(", "Time.get_unix_time_from_system(", out)
+    out = re.sub(r"\bOS\.get_screen_refresh_rate\s*\(", "DisplayServer.screen_get_refresh_rate(", out)
+    out = re.sub(r"\bEngine\.iterations_per_second\b", "Engine.physics_ticks_per_second", out)
+    out = re.sub(
+        r"\$[A-Za-z0-9_]+(?:\s*/\s*[A-Za-z0-9_]+)+",
+        lambda m: re.sub(r"\s*/\s*", "/", m.group(0)),
+        out,
+    )
     out = re.sub(r"\brand_range\s*\(", "randf_range(", out)
     out = re.sub(r"\bstepify\s*\(", "snapped(", out)
     out = re.sub(r"\bstr2var\b", "str_to_var", out)

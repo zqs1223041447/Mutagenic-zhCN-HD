@@ -1,8 +1,8 @@
 extends Node
 
-var notification_message = preload("res://Scenes/GUI/NotificationMessage.tscn")
+var notification_message = preload("res://scenes/GUI/NotificationMessage.tscn")
 
-var help_tip = preload("res://Scenes/Popups/Dialogs/HelpTip/LevelupTip/LevelupTip.tscn")
+var help_tip = preload("res://scenes/Popups/Dialogs/HelpTip/LevelupTip/LevelupTip.tscn")
 
 signal changed
 signal genes_changed
@@ -230,7 +230,7 @@ func load_game():
 												Steam.fileReadAsync(save_file, 0, file_size)
 								else:
 												print("No save file found")
-												get_tree().change_scene_to_file("res://Scenes/Menu.tscn")
+												get_tree().change_scene_to_file("res://scenes/Menu.tscn")
 				else:
 								var f = FileAccess.open(save_file, FileAccess.READ)
 								if FileAccess.file_exists(save_file):
@@ -249,7 +249,7 @@ func load_game():
 																print("failed to load:", json)
 								load_keybinds()
 								set_volume_levels()
-								get_tree().change_scene_to_file("res://Scenes/Menu.tscn")
+								get_tree().change_scene_to_file("res://scenes/Menu.tscn")
 
 func _on_load(result):
 				if result.result == 1:
@@ -275,7 +275,7 @@ func _on_load(result):
 				load_keybinds()
 				set_volume_levels()
 				print("Going to menu")
-				get_tree().change_scene_to_file("res://Scenes/Menu.tscn")
+				get_tree().change_scene_to_file("res://scenes/Menu.tscn")
 
 func _on_save(result):
 				if result == 1:
@@ -330,7 +330,7 @@ func reset_game_state():
 				
 				reset_saved_state()
 				load_keybinds()
-				get_tree().change_scene_to_file("res://Scenes/Menu.tscn")
+				get_tree().change_scene_to_file("res://scenes/Menu.tscn")
 
 func set_music_enabled(enabled):
 				saved_stats.settings.enable_music = enabled

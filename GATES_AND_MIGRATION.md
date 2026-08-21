@@ -147,7 +147,20 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 - bootstrap.cmd / doctor.cmd / fetch_godot / CI discovery
 - 不得把仍存在的 production_hardcode 或真 secret 改写成 PASS
 
-后续子系统（本波不做）：Menu / Character / Save → World / Movement → Combat → Skill/Passive → Equipment → VFX/Audio
+## 5b. P1-WAVE-C（当前批次）— Menu / Character / Save
+
+**Allowed:** `product/Scenes/**`（菜单/角色选择/存档弹窗及其直接依赖）、`product/Themes/**`、`product/Fonts/**`、`product/sprites/splash/**`、`product/sprites/gui/**`、`product/Sounds/UI/**`、`scripts/migration/menu_convert.py`、`migration/conversion/**`、tests、`product/project.godot` 的 `run/main_scene` 行
+
+**Forbidden:** `03_raw/**`、`04_recovered/**`、战斗/关卡/怪物子系统、新增 Gameplay
+
+**Acceptance:**
+- `Scenes/LoadGame.tscn` + `Scenes/Menu.tscn` + CharacterSelect 在 product 中且 scene format=3
+- `run/main_scene` 指向 `res://scenes/LoadGame.tscn`
+- LoadGame.gd 使用 Godot 4 刷新率/物理 tick API
+- recovered 指纹不变
+- 有 4.7.1 则 headless import RAN；错误分类；zero errors 不是本波要求
+
+后续子系统（本波不做）：World / Movement → Combat → Skill/Passive → Equipment → VFX/Audio
 
 ## 6. 进入 P2 / P3 的最低条件
 

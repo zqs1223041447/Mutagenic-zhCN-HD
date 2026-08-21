@@ -1,0 +1,150 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Theme" path="res://Themes/MainTheme.tres" id="1"]
+[ext_resource type="Script" path="res://scenes/Menu.gd" id="2"]
+[ext_resource type="Texture2D" path="res://sprites/MUTAGENIC.png" id="3"]
+[ext_resource type="Texture2D" path="res://sprites/splash/background_blurred.png" id="4"]
+[ext_resource type="AudioStream" path="res://Sounds/BackgroundMusic/Space Laboratory Loop.ogg" id="5"]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[node name="Menu" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("1")
+theme_override_styles/panel = SubResource("3")
+script = ExtResource("2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 800.0
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 7
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_right = 1280.0
+offset_bottom = 800.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+offset_left = 320.0
+offset_top = 40.0
+offset_right = 960.0
+offset_bottom = 760.0
+custom_minimum_size = Vector2(0, 720)
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer"]
+offset_right = 640.0
+offset_bottom = 160.0
+custom_minimum_size = Vector2(640, 160)
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CenterContainer" type="PanelContainer" parent="CenterContainer/VBoxContainer"]
+offset_top = 164.0
+offset_right = 640.0
+offset_bottom = 579.0
+theme_override_styles/panel = SubResource("2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer"]
+offset_right = 640.0
+offset_bottom = 415.0
+theme_override_constants/separation = 16
+
+[node name="HelpLabel2" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+offset_right = 640.0
+offset_bottom = 20.0
+align = 1
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+offset_top = 36.0
+offset_right = 640.0
+offset_bottom = 76.0
+focus_neighbour_top = NodePath("../QuitButton")
+theme_override_colors/font_color_disabled = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.827451, 0.545098, 0.101961, 1)
+text = "Play"
+
+[node name="HelpLabel" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+offset_top = 92.0
+offset_right = 640.0
+offset_bottom = 135.0
+text = "
+Help Guides"
+align = 1
+
+[node name="HelpButton" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+offset_top = 151.0
+offset_right = 640.0
+offset_bottom = 191.0
+text = "Help Reference"
+
+[node name="HelpButton2" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+offset_top = 207.0
+offset_right = 640.0
+offset_bottom = 247.0
+text = "Item Mod Reference"
+
+[node name="UniqueItems" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+offset_top = 263.0
+offset_right = 640.0
+offset_bottom = 303.0
+text = "Unique Item Reference"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+offset_top = 319.0
+offset_right = 640.0
+offset_bottom = 359.0
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+offset_top = 375.0
+offset_right = 640.0
+offset_bottom = 415.0
+focus_neighbour_bottom = NodePath("../StartButton")
+text = "Quit"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+offset_top = 583.0
+offset_right = 640.0
+offset_bottom = 603.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+offset_right = 476.0
+offset_bottom = 20.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
+offset_right = 60.0
+offset_bottom = 20.0
+focus_mode = 2
+text = "Build:"
+
+[node name="VersionLabel" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
+offset_left = 64.0
+offset_right = 64.0
+offset_bottom = 20.0
+focus_mode = 2
+
+[node name="LinkButton" type="LinkButton" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+offset_left = 480.0
+offset_right = 640.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0.294118, 0.65098, 0.27451, 1)
+text = "Official Discord"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5")
+bus = "Music"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/HelpButton" to="." method="_on_HelpButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/HelpButton2" to="." method="_on_HelpButton2_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/UniqueItems" to="." method="_on_UniqueItems_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/SettingsButton" to="." method="_on_SettingsButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer2/LinkButton" to="." method="_on_LinkButton_pressed"]

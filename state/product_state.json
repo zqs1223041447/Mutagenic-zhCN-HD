@@ -11,7 +11,7 @@
     "note": "Pushed 72ea09d. CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
   "current_phase": "P1_GODOT_4_7_1_MIGRATION",
-  "current_gate": "P1-WAVE-B",
+  "current_gate": "P1-WAVE-C",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -183,6 +183,39 @@
         "blocker_count": 773
       },
       "note": "Dominant remaining blockers: missing preloads (sprites/scenes), Steam singleton, GeneMods resolve, leftover connect() arity. Not rewritten as CLEAN."
+    },
+    "P1-C0": {
+      "goal": "Menu + LoadGame scene conversion",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "loadgame_format3": true,
+        "main_scene": "res://scenes/LoadGame.tscn",
+        "files_copied": 54
+      }
+    },
+    "P1-C1": {
+      "goal": "Character select + save boot surface",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "character_select_present": true,
+        "recovered_unmodified": true
+      }
+    },
+    "P1-C2": {
+      "goal": "Headless import after menu conversion",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "zero_errors_required": false,
+        "case_mismatch": 0
+      },
+      "evidence": [
+        "migration/conversion/wave_c_menu_report.json"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -215,11 +248,11 @@
   },
   "next_ready": [
     {
-      "id": "P1-WAVE-C",
-      "goal": "Menu / Character / Save subsystem conversion",
-      "depends_on": ["P1-B0", "P1-B1", "P1-B2"],
+      "id": "P1-WAVE-D",
+      "goal": "World / Spawn / Movement subsystem conversion",
+      "depends_on": ["P1-C0", "P1-C1", "P1-C2"],
       "status": "READY",
-      "note": "Next subsystem after Boot/Project/Autoload/Input. Copy/convert LoadGame + character select + save scripts/scenes; remaining preload assets as needed for boot."
+      "note": "Copy/convert World.tscn, Player movement, BaseLevel spawn. Do not rewrite remaining Steam/preload ERRORS_CLASSIFIED as CLEAN."
     }
   ]
 }
