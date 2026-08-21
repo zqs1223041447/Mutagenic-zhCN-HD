@@ -11,7 +11,7 @@
     "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
   "current_phase": "P1_GODOT_4_7_1_MIGRATION",
-  "current_gate": "P1-WAVE-I",
+  "current_gate": "P1-WAVE-J",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -364,6 +364,37 @@
         "scripts/migration/equipment_convert.py",
         "scripts/ai/tests/test_equipment_convert.py"
       ]
+    },
+    "P1-WAVE-I": {
+      "goal": "Levels completion (Hideout/BossArenas/Ladder/TestLevel) + worldmap/tileset sprites",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "files_copied": 38,
+        "converted_text_files": 13,
+        "binaries": 25,
+        "hideout_format3": true,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_runs": 2,
+        "import_result": "ERRORS_CLASSIFIED",
+        "error_count": 1057,
+        "blocker_count": 968,
+        "blocker_delta_vs_prev": -86,
+        "resolved_vs_prev_wave": 100,
+        "newly_exposed_vs_prev_wave": "14 blocker-class + 40 warnings (known out-of-scope deps)",
+        "zero_errors_required": false,
+        "tests": "120 OK"
+      },
+      "note": "Levels.gd autoload compile restored (preload chicken-and-egg solved by second import run). Abs-path scan caught sandbox path leak in wave_h inventory; scrubbed. Out-of-scope deps deferred to Wave J: Interactables/**, Environment/Brazier, TrainingDummy, ambience_boss.ogg.",
+      "evidence": [
+        "migration/conversion/wave_i_levels_report.json",
+        "migration/inventory/wave_i_levels_inventory.json",
+        "scripts/migration/levels_convert.py",
+        "scripts/ai/tests/test_levels_convert.py"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -396,11 +427,11 @@
   },
   "next_ready": [
     {
-      "id": "P1-WAVE-I",
-      "goal": "Levels completion (Hideout/BossArenas/Ladder/TestLevel) + worldmap/tileset sprites",
-      "depends_on": ["P1-WAVE-H"],
+      "id": "P1-WAVE-J",
+      "goal": "Interactables / Environment completion (GeneEditor components, GearBench, Notice, Brazier, TrainingDummy, missing audio)",
+      "depends_on": ["P1-WAVE-I"],
       "status": "READY",
-      "note": "Copy/convert remaining Levels scenes + worldmap/tileset sprites. Steam replacement layer is a later architectural decision (consult first). Execution mode: parallel background subagents per AGENT.MD."
+      "note": "Consolidates deferred items from Wave H/I. Import must run twice, take second run. Steam replacement layer stays a later architectural decision (consult first). Execution mode: parallel background subagents per AGENT.MD."
     }
   ]
 }

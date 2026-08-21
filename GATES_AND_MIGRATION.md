@@ -236,7 +236,7 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 
 后续子系统（本波不做）：VFX/Audio → Levels 补全 → Steam 替代层
 
-## 5h. P1-WAVE-I（当前批次）— Levels 补全 + 剩余世界资源
+## 5h. P1-WAVE-I（已完成）— Levels 补全 + 剩余世界资源
 
 **Allowed:** `product/scenes/Levels/**`（Hideout/BossArenas/Ladder/TestLevel 等）、`product/Tilesets/**`、`product/sprites/worldmap/**`、`scripts/migration/levels_convert.py`、`migration/inventory/wave_i_*.json`、`migration/conversion/wave_i_levels_report.json`、tests
 
@@ -251,6 +251,22 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 - 错误归因必须区分"新暴露"与"回归"
 
 后续子系统（本波不做）：Steam 替代层（架构决策，需会诊）→ VFX/Audio → Interactables
+
+## 5i. P1-WAVE-J（当前批次）— Interactables / Environment 补全
+
+**Allowed:** `product/scenes/Interactables/**`、`product/scenes/Environment/**`、Wave H/I 延后项（GeneEditor 组件、GearBench、Notice、TrainingDummy）、缺失音效资产、`scripts/migration/interactables_convert.py`、`migration/inventory/wave_j_*.json`、`migration/conversion/wave_j_report.json`、tests
+
+**Forbidden:** `03_raw/**`、`04_recovered/**`、Mobs/Skills/Levels 全量重写、新增 Gameplay
+
+**Acceptance:**
+- Interactables/Environment 场景在 product 且 format=3 / GDScript 4
+- Wave H 延后的 GeneEditor/GearBench/Notice 与 Wave I 关卡依赖（Brazier/TrainingDummy/ambience_boss.ogg）就位
+- Player 保留 dash；`run/main_scene` 仍是 LoadGame
+- recovered 指纹不变
+- headless import 需连续运行两次取第二次为准（新资产 preload 鸡生蛋）
+- 错误归因必须区分"新暴露"与"回归"
+
+后续子系统（本波不做）：Steam 替代层（架构决策，需会诊）→ VFX/Audio 收尾
 
 ## 6. 进入 P2 / P3 的最低条件
 

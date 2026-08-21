@@ -164,7 +164,9 @@ Godot 3.5.3 = Legacy Reference
 
 **P1-WAVE-H（已完成）：** Equipment / Gene 基础。
 
-**P1-WAVE-I（当前批次）：Levels 补全 + 剩余世界资源**
+**P1-WAVE-I（已完成）：** Levels 补全 + 剩余世界资源。
+
+**P1-WAVE-J（当前批次）：Interactables / Environment 补全**
 
 | ID | Goal | 关键验收 |
 |----|------|----------|

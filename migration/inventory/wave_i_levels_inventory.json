@@ -1,0 +1,1365 @@
+{
+  "meta": {
+    "wave": "P1-WAVE-I",
+    "title": "Levels completion + worldmap/tileset sprites inventory",
+    "generated_by": "worker scan script (temp: wave_i_inventory.py)",
+    "read_only_guarantees": [
+      "04_recovered/** untouched",
+      "03_raw/** untouched",
+      "product/** untouched"
+    ],
+    "notes": [
+      "Product path mapping: recovered 'Scenes/' -> product 'scenes/'.",
+      "'in_product' checks use exact-path existence after mapping.",
+      "preload/load/ext_resource references scanned across product/**/*.gd|.tscn|.tres excluding .godot cache."
+    ]
+  },
+  "levels": {
+    "source_root": "04_recovered/Scenes/Levels/",
+    "target_root": "product/scenes/Levels/",
+    "subdirs": [
+      "BossArenas",
+      "BossArenas/SpiritOfTheAncient",
+      "Default",
+      "Hideout",
+      "Ladder",
+      "TestLevel"
+    ],
+    "files_total": 24,
+    "in_product": [
+      "res://Scenes/Levels/BaseLevel.gd",
+      "res://Scenes/Levels/BaseLevel.tscn",
+      "res://Scenes/Levels/GenericTileset.tres",
+      "res://Scenes/Levels/LevelLoader.gd",
+      "res://Scenes/Levels/LevelLoader.tscn",
+      "res://Scenes/Levels/NavMesh.gd",
+      "res://Scenes/Levels/NavMesh.tscn",
+      "res://Scenes/Levels/SpawnLocation.gd",
+      "res://Scenes/Levels/SpawnLocation.tscn",
+      "res://Scenes/Levels/Default/DefaultLevel.gd",
+      "res://Scenes/Levels/Default/DefaultLevel.tscn"
+    ],
+    "missing": [
+      "res://Scenes/Levels/WorldMapTileset.tres",
+      "res://Scenes/Levels/BossArenas/BossArena.gd",
+      "res://Scenes/Levels/BossArenas/BossArena.tscn",
+      "res://Scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.gd",
+      "res://Scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.tscn",
+      "res://Scenes/Levels/Hideout/HideoutLevel.gd",
+      "res://Scenes/Levels/Hideout/HideoutLevel.tscn",
+      "res://Scenes/Levels/Ladder/Ladder.gd",
+      "res://Scenes/Levels/Ladder/Ladder.tscn",
+      "res://Scenes/Levels/Ladder/LadderSpawner.tscn",
+      "res://Scenes/Levels/TestLevel/TestLevel.gd",
+      "res://Scenes/Levels/TestLevel/TestLevel.tscn",
+      "res://Scenes/Levels/TestLevel/TestSpawner.tscn"
+    ],
+    "files": [
+      {
+        "recovered_path": "res://Scenes/Levels/BaseLevel.gd",
+        "name": "BaseLevel.gd",
+        "subdir": "(root)",
+        "ext": ".gd",
+        "in_product": true,
+        "product_path": "product/scenes/Levels/BaseLevel.gd"
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/BaseLevel.tscn",
+        "name": "BaseLevel.tscn",
+        "subdir": "(root)",
+        "ext": ".tscn",
+        "in_product": true,
+        "product_path": "product/scenes/Levels/BaseLevel.tscn"
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/GenericTileset.tres",
+        "name": "GenericTileset.tres",
+        "subdir": "(root)",
+        "ext": ".tres",
+        "in_product": true,
+        "product_path": "product/scenes/Levels/GenericTileset.tres"
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/LevelLoader.gd",
+        "name": "LevelLoader.gd",
+        "subdir": "(root)",
+        "ext": ".gd",
+        "in_product": true,
+        "product_path": "product/scenes/Levels/LevelLoader.gd"
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/LevelLoader.tscn",
+        "name": "LevelLoader.tscn",
+        "subdir": "(root)",
+        "ext": ".tscn",
+        "in_product": true,
+        "product_path": "product/scenes/Levels/LevelLoader.tscn"
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/NavMesh.gd",
+        "name": "NavMesh.gd",
+        "subdir": "(root)",
+        "ext": ".gd",
+        "in_product": true,
+        "product_path": "product/scenes/Levels/NavMesh.gd"
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/NavMesh.tscn",
+        "name": "NavMesh.tscn",
+        "subdir": "(root)",
+        "ext": ".tscn",
+        "in_product": true,
+        "product_path": "product/scenes/Levels/NavMesh.tscn"
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/SpawnLocation.gd",
+        "name": "SpawnLocation.gd",
+        "subdir": "(root)",
+        "ext": ".gd",
+        "in_product": true,
+        "product_path": "product/scenes/Levels/SpawnLocation.gd"
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/SpawnLocation.tscn",
+        "name": "SpawnLocation.tscn",
+        "subdir": "(root)",
+        "ext": ".tscn",
+        "in_product": true,
+        "product_path": "product/scenes/Levels/SpawnLocation.tscn"
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/WorldMapTileset.tres",
+        "name": "WorldMapTileset.tres",
+        "subdir": "(root)",
+        "ext": ".tres",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/BossArenas/BossArena.gd",
+        "name": "BossArena.gd",
+        "subdir": "BossArenas",
+        "ext": ".gd",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/BossArenas/BossArena.tscn",
+        "name": "BossArena.tscn",
+        "subdir": "BossArenas",
+        "ext": ".tscn",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.gd",
+        "name": "SpiritOfTheAncient.gd",
+        "subdir": "BossArenas/SpiritOfTheAncient",
+        "ext": ".gd",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.tscn",
+        "name": "SpiritOfTheAncient.tscn",
+        "subdir": "BossArenas/SpiritOfTheAncient",
+        "ext": ".tscn",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/Default/DefaultLevel.gd",
+        "name": "DefaultLevel.gd",
+        "subdir": "Default",
+        "ext": ".gd",
+        "in_product": true,
+        "product_path": "product/scenes/Levels/Default/DefaultLevel.gd"
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/Default/DefaultLevel.tscn",
+        "name": "DefaultLevel.tscn",
+        "subdir": "Default",
+        "ext": ".tscn",
+        "in_product": true,
+        "product_path": "product/scenes/Levels/Default/DefaultLevel.tscn"
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/Hideout/HideoutLevel.gd",
+        "name": "HideoutLevel.gd",
+        "subdir": "Hideout",
+        "ext": ".gd",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/Hideout/HideoutLevel.tscn",
+        "name": "HideoutLevel.tscn",
+        "subdir": "Hideout",
+        "ext": ".tscn",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/Ladder/Ladder.gd",
+        "name": "Ladder.gd",
+        "subdir": "Ladder",
+        "ext": ".gd",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/Ladder/Ladder.tscn",
+        "name": "Ladder.tscn",
+        "subdir": "Ladder",
+        "ext": ".tscn",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/Ladder/LadderSpawner.tscn",
+        "name": "LadderSpawner.tscn",
+        "subdir": "Ladder",
+        "ext": ".tscn",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/TestLevel/TestLevel.gd",
+        "name": "TestLevel.gd",
+        "subdir": "TestLevel",
+        "ext": ".gd",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/TestLevel/TestLevel.tscn",
+        "name": "TestLevel.tscn",
+        "subdir": "TestLevel",
+        "ext": ".tscn",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Scenes/Levels/TestLevel/TestSpawner.tscn",
+        "name": "TestSpawner.tscn",
+        "subdir": "TestLevel",
+        "ext": ".tscn",
+        "in_product": false,
+        "product_path": null
+      }
+    ]
+  },
+  "tilesets": {
+    "source_root": "Tilesets/",
+    "target_root": "product/Tilesets/",
+    "kind": "tileset_sprites",
+    "counts": {
+      "png": 15,
+      "png_import": 15,
+      "aseprite_import": 1,
+      "other": 0
+    },
+    "files_total_src": 31,
+    "png_sources_total": 15,
+    "in_product_png": [
+      "res://Tilesets/tileset_factory.png"
+    ],
+    "missing_png": [
+      "res://Tilesets/tileset_beach.png",
+      "res://Tilesets/tileset_blood_church.png",
+      "res://Tilesets/tileset_cemetery.png",
+      "res://Tilesets/tileset_dead_grass.png",
+      "res://Tilesets/tileset_dirt.png",
+      "res://Tilesets/tileset_dungeon.png",
+      "res://Tilesets/tileset_grass.png",
+      "res://Tilesets/tileset_hideout.png",
+      "res://Tilesets/tileset_map.png",
+      "res://Tilesets/tileset_pit.png",
+      "res://Tilesets/tileset_red_cave.png",
+      "res://Tilesets/tileset_shrine.png",
+      "res://Tilesets/tileset_snow.png",
+      "res://Tilesets/tileset_sota.png"
+    ],
+    "missing_sidecars_only": [
+      "res://Tilesets/tileset_beach.png.import",
+      "res://Tilesets/tileset_blood_church.png.import",
+      "res://Tilesets/tileset_cemetery.png.import",
+      "res://Tilesets/tileset_dead_grass.png.import",
+      "res://Tilesets/tileset_dirt.png.import",
+      "res://Tilesets/tileset_dungeon.png.import",
+      "res://Tilesets/tileset_grass.png.import",
+      "res://Tilesets/tileset_hideout.png.import",
+      "res://Tilesets/tileset_map.png.import",
+      "res://Tilesets/tileset_pit.aseprite.import",
+      "res://Tilesets/tileset_pit.png.import",
+      "res://Tilesets/tileset_red_cave.png.import",
+      "res://Tilesets/tileset_shrine.png.import",
+      "res://Tilesets/tileset_snow.png.import",
+      "res://Tilesets/tileset_sota.png.import"
+    ],
+    "missing_total_incl_sidecars": 29,
+    "entries": [
+      {
+        "recovered_path": "res://Tilesets/tileset_beach.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_beach.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_blood_church.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_blood_church.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_cemetery.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_cemetery.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_dead_grass.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_dead_grass.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_dirt.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_dirt.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_dungeon.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_dungeon.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_factory.png",
+        "type": "png",
+        "in_product": true,
+        "product_path": "product/Tilesets/tileset_factory.png"
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_factory.png.import",
+        "type": "png_import",
+        "in_product": true,
+        "product_path": "product/Tilesets/tileset_factory.png.import"
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_grass.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_grass.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_hideout.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_hideout.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_map.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_map.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_pit.aseprite.import",
+        "type": "aseprite_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_pit.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_pit.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_red_cave.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_red_cave.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_shrine.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_shrine.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_snow.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_snow.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_sota.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://Tilesets/tileset_sota.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      }
+    ]
+  },
+  "worldmap": {
+    "source_root": "sprites/worldmap/",
+    "target_root": "product/sprites/worldmap/",
+    "kind": "worldmap_sprites",
+    "counts": {
+      "png": 11,
+      "png_import": 11,
+      "aseprite_import": 12,
+      "other": 0
+    },
+    "files_total_src": 34,
+    "png_sources_total": 11,
+    "in_product_png": [],
+    "missing_png": [
+      "res://sprites/worldmap/blood_church.png",
+      "res://sprites/worldmap/boss.png",
+      "res://sprites/worldmap/catacombs.png",
+      "res://sprites/worldmap/dungeon.png",
+      "res://sprites/worldmap/field_of_despair.png",
+      "res://sprites/worldmap/grasslands.png",
+      "res://sprites/worldmap/ladder.png",
+      "res://sprites/worldmap/map.png",
+      "res://sprites/worldmap/mountain.png",
+      "res://sprites/worldmap/musty_den.png",
+      "res://sprites/worldmap/sandstorm.png"
+    ],
+    "missing_sidecars_only": [
+      "res://sprites/worldmap/blood_church.aseprite.import",
+      "res://sprites/worldmap/blood_church.png.import",
+      "res://sprites/worldmap/boss.aseprite.import",
+      "res://sprites/worldmap/boss.png.import",
+      "res://sprites/worldmap/catacombs.aseprite.import",
+      "res://sprites/worldmap/catacombs.png.import",
+      "res://sprites/worldmap/dungeon.aseprite.import",
+      "res://sprites/worldmap/dungeon.png.import",
+      "res://sprites/worldmap/field_of_despair.aseprite.import",
+      "res://sprites/worldmap/field_of_despair.png.import",
+      "res://sprites/worldmap/grasslands.aseprite.import",
+      "res://sprites/worldmap/grasslands.png.import",
+      "res://sprites/worldmap/ladder.aseprite.import",
+      "res://sprites/worldmap/ladder.png.import",
+      "res://sprites/worldmap/map.aseprite.import",
+      "res://sprites/worldmap/map.png.import",
+      "res://sprites/worldmap/map_highlighted.aseprite.import",
+      "res://sprites/worldmap/mountain.aseprite.import",
+      "res://sprites/worldmap/mountain.png.import",
+      "res://sprites/worldmap/musty_den.aseprite.import",
+      "res://sprites/worldmap/musty_den.png.import",
+      "res://sprites/worldmap/sandstorm.aseprite.import",
+      "res://sprites/worldmap/sandstorm.png.import"
+    ],
+    "missing_total_incl_sidecars": 34,
+    "entries": [
+      {
+        "recovered_path": "res://sprites/worldmap/blood_church.aseprite.import",
+        "type": "aseprite_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/blood_church.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/blood_church.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/boss.aseprite.import",
+        "type": "aseprite_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/boss.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/boss.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/catacombs.aseprite.import",
+        "type": "aseprite_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/catacombs.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/catacombs.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/dungeon.aseprite.import",
+        "type": "aseprite_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/dungeon.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/dungeon.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/field_of_despair.aseprite.import",
+        "type": "aseprite_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/field_of_despair.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/field_of_despair.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/grasslands.aseprite.import",
+        "type": "aseprite_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/grasslands.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/grasslands.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/ladder.aseprite.import",
+        "type": "aseprite_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/ladder.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/ladder.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/map.aseprite.import",
+        "type": "aseprite_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/map.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/map.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/map_highlighted.aseprite.import",
+        "type": "aseprite_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/mountain.aseprite.import",
+        "type": "aseprite_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/mountain.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/mountain.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/musty_den.aseprite.import",
+        "type": "aseprite_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/musty_den.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/musty_den.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/sandstorm.aseprite.import",
+        "type": "aseprite_import",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/sandstorm.png",
+        "type": "png",
+        "in_product": false,
+        "product_path": null
+      },
+      {
+        "recovered_path": "res://sprites/worldmap/sandstorm.png.import",
+        "type": "png_import",
+        "in_product": false,
+        "product_path": null
+      }
+    ]
+  },
+  "product_references": {
+    "res://Scenes/Levels/BossArenas/BossArena.tscn": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://scenes/Levels/BossArenas/BossArena.tscn",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.tscn": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.tscn",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Scenes/Levels/Hideout/HideoutLevel.tscn": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://scenes/Levels/Hideout/HideoutLevel.tscn",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Scenes/Levels/Ladder/Ladder.tscn": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://scenes/Levels/Ladder/Ladder.tscn",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Scenes/Levels/TestLevel/TestLevel.tscn": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://scenes/Levels/TestLevel/TestLevel.tscn",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Tilesets/tileset_beach.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://Tilesets/tileset_beach.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Tilesets/tileset_blood_church.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://Tilesets/tileset_blood_church.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Tilesets/tileset_cemetery.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://Tilesets/tileset_cemetery.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Tilesets/tileset_dead_grass.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://Tilesets/tileset_dead_grass.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Tilesets/tileset_dirt.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://Tilesets/tileset_dirt.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Tilesets/tileset_dungeon.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://Tilesets/tileset_dungeon.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Tilesets/tileset_grass.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://Tilesets/tileset_grass.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Tilesets/tileset_hideout.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://Tilesets/tileset_hideout.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Tilesets/tileset_pit.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://Tilesets/tileset_pit.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Tilesets/tileset_red_cave.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://Tilesets/tileset_red_cave.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Tilesets/tileset_shrine.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://Tilesets/tileset_shrine.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Tilesets/tileset_snow.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://Tilesets/tileset_snow.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://Tilesets/tileset_sota.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://Tilesets/tileset_sota.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://sprites/worldmap/blood_church.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://sprites/worldmap/blood_church.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://sprites/worldmap/boss.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://sprites/worldmap/boss.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://sprites/worldmap/catacombs.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://sprites/worldmap/catacombs.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://sprites/worldmap/dungeon.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://sprites/worldmap/dungeon.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://sprites/worldmap/field_of_despair.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://sprites/worldmap/field_of_despair.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://sprites/worldmap/grasslands.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://sprites/worldmap/grasslands.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://sprites/worldmap/ladder.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://sprites/worldmap/ladder.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://sprites/worldmap/mountain.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://sprites/worldmap/mountain.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://sprites/worldmap/musty_den.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://sprites/worldmap/musty_den.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ],
+    "res://sprites/worldmap/sandstorm.png": [
+      {
+        "referenced_by": "product/Globals/Levels.gd",
+        "raw_path": "res://sprites/worldmap/sandstorm.png",
+        "via": [
+          "preload/load",
+          "string_literal"
+        ]
+      }
+    ]
+  },
+  "missing_scene_dependencies": {
+    "res://Scenes/Levels/WorldMapTileset.tres": {
+      "ext_resources_unique": 1,
+      "deps": [
+        {
+          "path": "res://Tilesets/tileset_map.png",
+          "status": "in_04_recovered"
+        }
+      ],
+      "unresolved_not_found": 0,
+      "has_deps_inside_this_wave_scope": true
+    },
+    "res://Scenes/Levels/BossArenas/BossArena.gd": {
+      "ext_resources_unique": 0,
+      "deps": [],
+      "unresolved_not_found": 0,
+      "has_deps_inside_this_wave_scope": false
+    },
+    "res://Scenes/Levels/BossArenas/BossArena.tscn": {
+      "ext_resources_unique": 4,
+      "deps": [
+        {
+          "path": "res://Scenes/Levels/BaseLevel.tscn",
+          "status": "in_product"
+        },
+        {
+          "path": "res://Scenes/Levels/BossArenas/BossArena.gd",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Sounds/BackgroundMusic/ambience_boss.ogg",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Tilesets/tileset_factory.png",
+          "status": "in_product"
+        }
+      ],
+      "unresolved_not_found": 0,
+      "has_deps_inside_this_wave_scope": true
+    },
+    "res://Scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.gd": {
+      "ext_resources_unique": 0,
+      "deps": [],
+      "unresolved_not_found": 0,
+      "has_deps_inside_this_wave_scope": false
+    },
+    "res://Scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.tscn": {
+      "ext_resources_unique": 5,
+      "deps": [
+        {
+          "path": "res://Scenes/Environment/Brazier.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Levels/BaseLevel.tscn",
+          "status": "in_product"
+        },
+        {
+          "path": "res://Scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.gd",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Sounds/BackgroundMusic/ambience_boss.ogg",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Tilesets/tileset_factory.png",
+          "status": "in_product"
+        }
+      ],
+      "unresolved_not_found": 0,
+      "has_deps_inside_this_wave_scope": true
+    },
+    "res://Scenes/Levels/Hideout/HideoutLevel.gd": {
+      "ext_resources_unique": 0,
+      "deps": [],
+      "unresolved_not_found": 0,
+      "has_deps_inside_this_wave_scope": false
+    },
+    "res://Scenes/Levels/Hideout/HideoutLevel.tscn": {
+      "ext_resources_unique": 14,
+      "deps": [
+        {
+          "path": "res://Scenes/Environment/Brazier.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Interactables/ClassChanger/ClassStatue.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Interactables/CraftingBench/CraftingBench.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Interactables/GearBench/SkillBench.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Interactables/LoadoutBench/LoadoutBench.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Interactables/MutationBench/MutationBench.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Interactables/OutfitBench/OutfitBench.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Interactables/Portal/Portal.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Interactables/SharedStash/SharedStash.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Levels/BaseLevel.tscn",
+          "status": "in_product"
+        },
+        {
+          "path": "res://Scenes/Levels/Hideout/HideoutLevel.gd",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Mobs/Basic/TrainingDummy.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Tilesets/tileset_factory.png",
+          "status": "in_product"
+        }
+      ],
+      "unresolved_not_found": 0,
+      "has_deps_inside_this_wave_scope": true
+    },
+    "res://Scenes/Levels/Ladder/Ladder.gd": {
+      "ext_resources_unique": 0,
+      "deps": [],
+      "unresolved_not_found": 0,
+      "has_deps_inside_this_wave_scope": false
+    },
+    "res://Scenes/Levels/Ladder/Ladder.tscn": {
+      "ext_resources_unique": 8,
+      "deps": [
+        {
+          "path": "res://Fonts/ChivoMono-VariableFont_wght.ttf",
+          "status": "in_product"
+        },
+        {
+          "path": "res://Scenes/Levels/BaseLevel.tscn",
+          "status": "in_product"
+        },
+        {
+          "path": "res://Scenes/Levels/Ladder/Ladder.gd",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Levels/Ladder/LadderSpawner.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Sounds/BackgroundMusic/ambience_boss.ogg",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Themes/MainTheme.tres",
+          "status": "in_product"
+        },
+        {
+          "path": "res://Tilesets/tileset_dirt.png",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Tilesets/tileset_factory.png",
+          "status": "in_product"
+        }
+      ],
+      "unresolved_not_found": 0,
+      "has_deps_inside_this_wave_scope": true
+    },
+    "res://Scenes/Levels/Ladder/LadderSpawner.tscn": {
+      "ext_resources_unique": 0,
+      "deps": [],
+      "unresolved_not_found": 0,
+      "has_deps_inside_this_wave_scope": false
+    },
+    "res://Scenes/Levels/TestLevel/TestLevel.gd": {
+      "ext_resources_unique": 0,
+      "deps": [],
+      "unresolved_not_found": 0,
+      "has_deps_inside_this_wave_scope": false
+    },
+    "res://Scenes/Levels/TestLevel/TestLevel.tscn": {
+      "ext_resources_unique": 8,
+      "deps": [
+        {
+          "path": "res://Fonts/ChivoMono-VariableFont_wght.ttf",
+          "status": "in_product"
+        },
+        {
+          "path": "res://Scenes/Levels/BaseLevel.tscn",
+          "status": "in_product"
+        },
+        {
+          "path": "res://Scenes/Levels/TestLevel/TestLevel.gd",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Scenes/Levels/TestLevel/TestSpawner.tscn",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Sounds/BackgroundMusic/ambience_boss.ogg",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Themes/MainTheme.tres",
+          "status": "in_product"
+        },
+        {
+          "path": "res://Tilesets/tileset_dirt.png",
+          "status": "in_04_recovered"
+        },
+        {
+          "path": "res://Tilesets/tileset_factory.png",
+          "status": "in_product"
+        }
+      ],
+      "unresolved_not_found": 0,
+      "has_deps_inside_this_wave_scope": true
+    },
+    "res://Scenes/Levels/TestLevel/TestSpawner.tscn": {
+      "ext_resources_unique": 0,
+      "deps": [],
+      "unresolved_not_found": 0,
+      "has_deps_inside_this_wave_scope": false
+    }
+  },
+  "classification": {
+    "in_scope_wave_i": [
+      "res://Scenes/Levels/WorldMapTileset.tres",
+      "res://Scenes/Levels/BossArenas/BossArena.gd",
+      "res://Scenes/Levels/BossArenas/BossArena.tscn",
+      "res://Scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.gd",
+      "res://Scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.tscn",
+      "res://Scenes/Levels/Hideout/HideoutLevel.gd",
+      "res://Scenes/Levels/Hideout/HideoutLevel.tscn",
+      "res://Scenes/Levels/Ladder/Ladder.gd",
+      "res://Scenes/Levels/Ladder/Ladder.tscn",
+      "res://Scenes/Levels/Ladder/LadderSpawner.tscn",
+      "res://Scenes/Levels/TestLevel/TestLevel.gd",
+      "res://Scenes/Levels/TestLevel/TestLevel.tscn",
+      "res://Scenes/Levels/TestLevel/TestSpawner.tscn",
+      "res://Tilesets/tileset_beach.png",
+      "res://Tilesets/tileset_blood_church.png",
+      "res://Tilesets/tileset_cemetery.png",
+      "res://Tilesets/tileset_dead_grass.png",
+      "res://Tilesets/tileset_dirt.png",
+      "res://Tilesets/tileset_dungeon.png",
+      "res://Tilesets/tileset_grass.png",
+      "res://Tilesets/tileset_hideout.png",
+      "res://Tilesets/tileset_map.png",
+      "res://Tilesets/tileset_pit.png",
+      "res://Tilesets/tileset_red_cave.png",
+      "res://Tilesets/tileset_shrine.png",
+      "res://Tilesets/tileset_snow.png",
+      "res://Tilesets/tileset_sota.png",
+      "res://sprites/worldmap/blood_church.png",
+      "res://sprites/worldmap/boss.png",
+      "res://sprites/worldmap/catacombs.png",
+      "res://sprites/worldmap/dungeon.png",
+      "res://sprites/worldmap/field_of_despair.png",
+      "res://sprites/worldmap/grasslands.png",
+      "res://sprites/worldmap/ladder.png",
+      "res://sprites/worldmap/map.png",
+      "res://sprites/worldmap/mountain.png",
+      "res://sprites/worldmap/musty_den.png",
+      "res://sprites/worldmap/sandstorm.png"
+    ],
+    "in_scope_wave_i_count": 38,
+    "deferred": [
+      {
+        "items": [
+          "res://Tilesets/tileset_beach.png.import",
+          "res://Tilesets/tileset_blood_church.png.import",
+          "res://Tilesets/tileset_cemetery.png.import",
+          "res://Tilesets/tileset_dead_grass.png.import",
+          "res://Tilesets/tileset_dirt.png.import",
+          "res://Tilesets/tileset_dungeon.png.import",
+          "res://Tilesets/tileset_grass.png.import",
+          "res://Tilesets/tileset_hideout.png.import",
+          "res://Tilesets/tileset_map.png.import",
+          "res://Tilesets/tileset_pit.aseprite.import",
+          "res://Tilesets/tileset_pit.png.import",
+          "res://Tilesets/tileset_red_cave.png.import",
+          "res://Tilesets/tileset_shrine.png.import",
+          "res://Tilesets/tileset_snow.png.import",
+          "res://Tilesets/tileset_sota.png.import",
+          "res://sprites/worldmap/blood_church.aseprite.import",
+          "res://sprites/worldmap/blood_church.png.import",
+          "res://sprites/worldmap/boss.aseprite.import",
+          "res://sprites/worldmap/boss.png.import",
+          "res://sprites/worldmap/catacombs.aseprite.import",
+          "res://sprites/worldmap/catacombs.png.import",
+          "res://sprites/worldmap/dungeon.aseprite.import",
+          "res://sprites/worldmap/dungeon.png.import",
+          "res://sprites/worldmap/field_of_despair.aseprite.import",
+          "res://sprites/worldmap/field_of_despair.png.import",
+          "res://sprites/worldmap/grasslands.aseprite.import",
+          "res://sprites/worldmap/grasslands.png.import",
+          "res://sprites/worldmap/ladder.aseprite.import",
+          "res://sprites/worldmap/ladder.png.import",
+          "res://sprites/worldmap/map.aseprite.import",
+          "res://sprites/worldmap/map.png.import",
+          "res://sprites/worldmap/map_highlighted.aseprite.import",
+          "res://sprites/worldmap/mountain.aseprite.import",
+          "res://sprites/worldmap/mountain.png.import",
+          "res://sprites/worldmap/musty_den.aseprite.import",
+          "res://sprites/worldmap/musty_den.png.import",
+          "res://sprites/worldmap/sandstorm.aseprite.import",
+          "res://sprites/worldmap/sandstorm.png.import"
+        ],
+        "reason": "*.import sidecars are regenerated by Godot 4 headless import; no manual migration needed"
+      }
+    ]
+  }
+}
