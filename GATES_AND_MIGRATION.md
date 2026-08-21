@@ -252,7 +252,7 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 
 后续子系统（本波不做）：Steam 替代层（架构决策，需会诊）→ VFX/Audio → Interactables
 
-## 5i. P1-WAVE-J（当前批次）— Interactables / Environment 补全
+## 5i. P1-WAVE-J（已完成）— Interactables / Environment 补全
 
 **Allowed:** `product/scenes/Interactables/**`、`product/scenes/Environment/**`、Wave H/I 延后项（GeneEditor 组件、GearBench、Notice、TrainingDummy）、缺失音效资产、`scripts/migration/interactables_convert.py`、`migration/inventory/wave_j_*.json`、`migration/conversion/wave_j_report.json`、tests
 
@@ -267,6 +267,21 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 - 错误归因必须区分"新暴露"与"回归"
 
 后续子系统（本波不做）：Steam 替代层（架构决策，需会诊）→ VFX/Audio 收尾
+
+## 5j. P1-WAVE-K（当前批次）— Globals 脚本 API 残留清理
+
+**Allowed:** `product/Globals/**`、`product/scenes/**` 中机械 API 重命名（OS.*→DisplayServer/Window、Directory→DirAccess、TYPE_REAL→TYPE_FLOAT、ALIGN_RIGHT→HORIZONTAL_ALIGNMENT_RIGHT、rect_size→size、get_screen_refresh_rate 等已迁移脚本的残留项）、`scripts/migration/api_residue_convert.py`、`migration/conversion/wave_k_report.json`、tests
+
+**Forbidden:** `03_raw/**`、`04_recovered/**`、语义重写（只做等价 API 替换）、新增 Gameplay、Steam 替代层实现
+
+**Acceptance:**
+- import 报告中 OS/Directory/TYPE_REAL/ALIGN_RIGHT/rect_size 类 parse 错误显著下降
+- 每处替换为 Godot 4 等价 API，不做行为变更；无法等价替换的记 residuals 不强改
+- Player 保留 dash；`run/main_scene` 仍是 LoadGame
+- recovered 指纹不变
+- headless import 双次运行取第二次；错误归因区分"新暴露"与"回归"
+
+后续子系统（本波不做）：Steam 替代层（需会诊）→ .aseprite SpriteFrames（需美术管线决策，Non-Goal 边界内暂缓）
 
 ## 6. 进入 P2 / P3 的最低条件
 

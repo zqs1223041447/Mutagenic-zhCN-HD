@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Popups/Dialogs/HelpTip/HelpTip.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/Popups/Dialogs/HelpTip/NoWeaponWarning/NoWeaponWarning.gd" id="2"]
+
+[node name="NoWeaponWarning" instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="PanelContainer" parent="MarginContainer/CenterContainer" index="0"]
+offset_top = 160.0
+offset_bottom = 640.0
+custom_minimum_size = Vector2(640, 480)
+
+[node name="VBoxContainer" parent="MarginContainer/CenterContainer/PanelContainer" index="0"]
+offset_bottom = 464.0
+
+[node name="Label" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer/HBoxContainer" index="0"]
+theme_override_colors/font_color = Color(0.827451, 0.545098, 0.101961, 1)
+
+[node name="RichTextLabel" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer" index="1"]
+offset_bottom = 376.0
+bbcode_text = "[center]World Map[/center]
+
+You must have a primary skill equipped in order to travel the world of Mutagenic.
+
+[color=#53dfdf]
+Please select a skill from the \"Weapons and Abilities\" bench.
+[/color]"
+text = "World Map
+
+You must have a primary skill equipped in order to travel the world of Mutagenic.
+
+
+Please select a skill from the \"Weapons and Abilities\" bench.
+"
+
+[node name="HBoxContainer2" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer" index="2"]
+offset_top = 408.0
+offset_bottom = 448.0

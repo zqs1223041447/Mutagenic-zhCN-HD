@@ -166,7 +166,9 @@ Godot 3.5.3 = Legacy Reference
 
 **P1-WAVE-I（已完成）：** Levels 补全 + 剩余世界资源。
 
-**P1-WAVE-J（当前批次）：Interactables / Environment 补全**
+**P1-WAVE-J（已完成）：** Interactables / Environment 补全。
+
+**P1-WAVE-K（当前批次）：Globals 脚本 API 残留清理**
 
 | ID | Goal | 关键验收 |
 |----|------|----------|

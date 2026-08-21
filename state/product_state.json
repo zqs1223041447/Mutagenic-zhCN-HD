@@ -11,7 +11,7 @@
     "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
   "current_phase": "P1_GODOT_4_7_1_MIGRATION",
-  "current_gate": "P1-WAVE-J",
+  "current_gate": "P1-WAVE-K",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -395,6 +395,41 @@
         "scripts/migration/levels_convert.py",
         "scripts/ai/tests/test_levels_convert.py"
       ]
+    },
+    "P1-WAVE-J": {
+      "goal": "Interactables / Environment completion (consolidates Wave H/I deferrals)",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "files_copied": 37,
+        "dep_closure_files_copied": 7,
+        "interactables_scenes": 10,
+        "gearbench_present": true,
+        "brazier_present": true,
+        "training_dummy_present": true,
+        "ambience_boss_ogg_present": true,
+        "gene_editor_components_present": true,
+        "dep_popups_format3": true,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_runs": 2,
+        "import_result": "ERRORS_CLASSIFIED",
+        "error_count": 1124,
+        "blocker_count": 1035,
+        "blocker_delta_vs_prev": 67,
+        "blocker_delta_attribution": "exposed-only: newly parsed scripts referencing unmigrated UI/audio assets + 15 .aseprite SpriteFrames (non-migratable without art pipeline, stays classified)",
+        "zero_errors_required": false,
+        "tests": "125 OK"
+      },
+      "note": "Converter subagent first run falsely reported completion (files absent); re-dispatched with disk verification. Transitive popup dep closure added 7 format=3 scenes.",
+      "evidence": [
+        "migration/conversion/wave_j_report.json",
+        "migration/inventory/wave_j_interactables_inventory.json",
+        "scripts/migration/interactables_convert.py",
+        "scripts/ai/tests/test_interactables_convert.py"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -427,11 +462,11 @@
   },
   "next_ready": [
     {
-      "id": "P1-WAVE-J",
-      "goal": "Interactables / Environment completion (GeneEditor components, GearBench, Notice, Brazier, TrainingDummy, missing audio)",
-      "depends_on": ["P1-WAVE-I"],
+      "id": "P1-WAVE-K",
+      "goal": "Globals script API residue cleanup (OS.*/Directory/TYPE_REAL/ALIGN_RIGHT/rect_size -> Godot 4 equivalents)",
+      "depends_on": ["P1-WAVE-J"],
       "status": "READY",
-      "note": "Consolidates deferred items from Wave H/I. Import must run twice, take second run. Steam replacement layer stays a later architectural decision (consult first). Execution mode: parallel background subagents per AGENT.MD."
+      "note": "Pure mechanical API renames on already-migrated scripts; no semantic rewrites, unequivalent cases stay in residuals. Steam layer + aseprite frames stay deferred (consult/art-pipeline boundary). Execution mode: parallel background subagents per AGENT.MD."
     }
   ]
 }

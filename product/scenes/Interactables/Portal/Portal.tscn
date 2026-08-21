@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Interactables/Interactable.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/Interactables/Portal/Portal.gd" id="2"]
+[ext_resource type="SpriteFrames" path="res://sprites/hideout/portal.aseprite" id="3"]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 32.06
+
+[node name="Portal" instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="Sprite" parent="." index="0"]
+frames = ExtResource("3")
+frame = 3
+speed_scale = 0.5
+playing = true
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 0)
+shape = SubResource("1")
+
+[node name="Node2D" parent="." index="2"]
+visible = false

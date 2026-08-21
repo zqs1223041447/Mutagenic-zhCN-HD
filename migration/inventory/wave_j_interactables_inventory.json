@@ -1,0 +1,1745 @@
+{
+  "meta": {
+    "wave": "P1-WAVE-J",
+    "title": "Interactables / Environment completion + prior-wave deferred items",
+    "generated_by": "worker scan script (temp: wave_j_inventory.py)",
+    "read_only_guarantees": [
+      "04_recovered/** untouched",
+      "03_raw/** untouched",
+      "product/** untouched"
+    ],
+    "notes": [
+      "Product path mapping: recovered 'Scenes/' -> product 'scenes/'.",
+      "Dependency statuses: in_product | in_scope_wave_j | in_04_recovered_outside_scope | not_found.",
+      "dangling_refs = refs neither resolvable in product nor covered by this wave scope.",
+      "'.aseprite' ext_resources are Godot3 Aseprite-importer artifacts; product needs png/SpriteFrames equivalents.",
+      "'deferred' below = previously-deferred items found ALREADY migrated this scan (no action); none postponed further."
+    ]
+  },
+  "summary": {
+    "total_source_files": 43,
+    "in_product": 6,
+    "missing_in_scope_wave_j": 37,
+    "dangling_refs_total": 18,
+    "dangling_not_found": 8,
+    "dangling_recovered_only": 10,
+    "product_reference_targets": 18,
+    "product_reference_hits_preload_load_ext_string": 24
+  },
+  "sources": {
+    "interactables": {
+      "source_root": "04_recovered/Scenes/Interactables",
+      "target_root": "product/scenes/Interactables/",
+      "files_total": 20,
+      "counts": {
+        "in_product": 0,
+        "missing": 20
+      },
+      "missing": [
+        "res://Scenes/Interactables/ClassChanger/ClassStatue.gd",
+        "res://Scenes/Interactables/ClassChanger/ClassStatue.tscn",
+        "res://Scenes/Interactables/CraftingBench/CraftingBench.gd",
+        "res://Scenes/Interactables/CraftingBench/CraftingBench.tscn",
+        "res://Scenes/Interactables/GearBench/SkillBench.gd",
+        "res://Scenes/Interactables/GearBench/SkillBench.tscn",
+        "res://Scenes/Interactables/Interactable.gd",
+        "res://Scenes/Interactables/Interactable.tscn",
+        "res://Scenes/Interactables/LoadoutBench/LoadoutBench.gd",
+        "res://Scenes/Interactables/LoadoutBench/LoadoutBench.tscn",
+        "res://Scenes/Interactables/MutationBench/MutationBench.gd",
+        "res://Scenes/Interactables/MutationBench/MutationBench.tscn",
+        "res://Scenes/Interactables/OutfitBench/OutfitBench.gd",
+        "res://Scenes/Interactables/OutfitBench/OutfitBench.tscn",
+        "res://Scenes/Interactables/Portal/Portal.gd",
+        "res://Scenes/Interactables/Portal/Portal.tscn",
+        "res://Scenes/Interactables/SharedStash/SharedStash.gd",
+        "res://Scenes/Interactables/SharedStash/SharedStash.tscn",
+        "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.gd",
+        "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.tscn"
+      ],
+      "in_product": [],
+      "files": [
+        {
+          "recovered_path": "res://Scenes/Interactables/ClassChanger/ClassStatue.gd",
+          "expected_product_path": "res://scenes/Interactables/ClassChanger/ClassStatue.gd",
+          "name": "ClassStatue.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/ClassChanger/ClassStatue.tscn",
+          "expected_product_path": "res://scenes/Interactables/ClassChanger/ClassStatue.tscn",
+          "name": "ClassStatue.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/CraftingBench/CraftingBench.gd",
+          "expected_product_path": "res://scenes/Interactables/CraftingBench/CraftingBench.gd",
+          "name": "CraftingBench.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/CraftingBench/CraftingBench.tscn",
+          "expected_product_path": "res://scenes/Interactables/CraftingBench/CraftingBench.tscn",
+          "name": "CraftingBench.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/GearBench/SkillBench.gd",
+          "expected_product_path": "res://scenes/Interactables/GearBench/SkillBench.gd",
+          "name": "SkillBench.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/GearBench/SkillBench.tscn",
+          "expected_product_path": "res://scenes/Interactables/GearBench/SkillBench.tscn",
+          "name": "SkillBench.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/Interactable.gd",
+          "expected_product_path": "res://scenes/Interactables/Interactable.gd",
+          "name": "Interactable.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/Interactable.tscn",
+          "expected_product_path": "res://scenes/Interactables/Interactable.tscn",
+          "name": "Interactable.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/LoadoutBench/LoadoutBench.gd",
+          "expected_product_path": "res://scenes/Interactables/LoadoutBench/LoadoutBench.gd",
+          "name": "LoadoutBench.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/LoadoutBench/LoadoutBench.tscn",
+          "expected_product_path": "res://scenes/Interactables/LoadoutBench/LoadoutBench.tscn",
+          "name": "LoadoutBench.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/MutationBench/MutationBench.gd",
+          "expected_product_path": "res://scenes/Interactables/MutationBench/MutationBench.gd",
+          "name": "MutationBench.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/MutationBench/MutationBench.tscn",
+          "expected_product_path": "res://scenes/Interactables/MutationBench/MutationBench.tscn",
+          "name": "MutationBench.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/OutfitBench/OutfitBench.gd",
+          "expected_product_path": "res://scenes/Interactables/OutfitBench/OutfitBench.gd",
+          "name": "OutfitBench.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/OutfitBench/OutfitBench.tscn",
+          "expected_product_path": "res://scenes/Interactables/OutfitBench/OutfitBench.tscn",
+          "name": "OutfitBench.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/Portal/Portal.gd",
+          "expected_product_path": "res://scenes/Interactables/Portal/Portal.gd",
+          "name": "Portal.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/Portal/Portal.tscn",
+          "expected_product_path": "res://scenes/Interactables/Portal/Portal.tscn",
+          "name": "Portal.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/SharedStash/SharedStash.gd",
+          "expected_product_path": "res://scenes/Interactables/SharedStash/SharedStash.gd",
+          "name": "SharedStash.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/SharedStash/SharedStash.tscn",
+          "expected_product_path": "res://scenes/Interactables/SharedStash/SharedStash.tscn",
+          "name": "SharedStash.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.gd",
+          "expected_product_path": "res://scenes/Interactables/SpecializationStatue/SpecializationStatue.gd",
+          "name": "SpecializationStatue.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.tscn",
+          "expected_product_path": "res://scenes/Interactables/SpecializationStatue/SpecializationStatue.tscn",
+          "name": "SpecializationStatue.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        }
+      ]
+    },
+    "environment_brazier": {
+      "source_root": "04_recovered/Scenes/Environment",
+      "target_root": "product/scenes/Environment/",
+      "files_total": 1,
+      "counts": {
+        "in_product": 0,
+        "missing": 1
+      },
+      "missing": [
+        "res://Scenes/Environment/Brazier.tscn"
+      ],
+      "in_product": [],
+      "files": [
+        {
+          "recovered_path": "res://Scenes/Environment/Brazier.tscn",
+          "expected_product_path": "res://scenes/Environment/Brazier.tscn",
+          "name": "Brazier.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        }
+      ]
+    },
+    "gene_editor_components": {
+      "source_root": "04_recovered/Scenes/Popups/Dialogs/GeneEditor",
+      "target_root": "product/scenes/Popups/Dialogs/GeneEditor/",
+      "files_total": 16,
+      "counts": {
+        "in_product": 4,
+        "missing": 12
+      },
+      "missing": [
+        "res://Scenes/Popups/Dialogs/GeneEditor/CraftButton.gd",
+        "res://Scenes/Popups/Dialogs/GeneEditor/CraftButton.tscn",
+        "res://Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+        "res://Scenes/Popups/Dialogs/GeneEditor/GeneButton.tscn",
+        "res://Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd",
+        "res://Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
+        "res://Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.gd",
+        "res://Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn",
+        "res://Scenes/Popups/Dialogs/GeneEditor/ItemList.gd",
+        "res://Scenes/Popups/Dialogs/GeneEditor/ItemList.tscn",
+        "res://Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.gd",
+        "res://Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn"
+      ],
+      "in_product": [
+        "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+        "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn",
+        "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd",
+        "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn"
+      ],
+      "files": [
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/CraftButton.gd",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/CraftButton.gd",
+          "name": "CraftButton.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/CraftButton.tscn",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/CraftButton.tscn",
+          "name": "CraftButton.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+          "name": "GeneButton.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneButton.tscn",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/GeneButton.tscn",
+          "name": "GeneButton.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd",
+          "name": "GeneEditor.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
+          "name": "GeneEditor.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.gd",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.gd",
+          "name": "GeneInventoryPopup.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn",
+          "name": "GeneInventoryPopup.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+          "name": "GeneLoadout.gd",
+          "ext": ".gd",
+          "in_product": true
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn",
+          "name": "GeneLoadout.tscn",
+          "ext": ".tscn",
+          "in_product": true
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/ItemList.gd",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/ItemList.gd",
+          "name": "ItemList.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/ItemList.tscn",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/ItemList.tscn",
+          "name": "ItemList.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd",
+          "name": "LoadoutSlot.gd",
+          "ext": ".gd",
+          "in_product": true
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn",
+          "name": "LoadoutSlot.tscn",
+          "ext": ".tscn",
+          "in_product": true
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.gd",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.gd",
+          "name": "StashTransferPopup.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn",
+          "expected_product_path": "res://scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn",
+          "name": "StashTransferPopup.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        }
+      ]
+    },
+    "ui_moditem_notice": {
+      "source_root": "04_recovered/Scenes/UI",
+      "target_root": "product/scenes/UI/",
+      "files_total": 4,
+      "counts": {
+        "in_product": 2,
+        "missing": 2
+      },
+      "missing": [
+        "res://Scenes/UI/Notice.gd",
+        "res://Scenes/UI/Notice.tscn"
+      ],
+      "in_product": [
+        "res://Scenes/UI/ModItem.gd",
+        "res://Scenes/UI/ModItem.tscn"
+      ],
+      "files": [
+        {
+          "recovered_path": "res://Scenes/UI/ModItem.gd",
+          "expected_product_path": "res://scenes/UI/ModItem.gd",
+          "name": "ModItem.gd",
+          "ext": ".gd",
+          "in_product": true
+        },
+        {
+          "recovered_path": "res://Scenes/UI/ModItem.tscn",
+          "expected_product_path": "res://scenes/UI/ModItem.tscn",
+          "name": "ModItem.tscn",
+          "ext": ".tscn",
+          "in_product": true
+        },
+        {
+          "recovered_path": "res://Scenes/UI/Notice.gd",
+          "expected_product_path": "res://scenes/UI/Notice.gd",
+          "name": "Notice.gd",
+          "ext": ".gd",
+          "in_product": false
+        },
+        {
+          "recovered_path": "res://Scenes/UI/Notice.tscn",
+          "expected_product_path": "res://scenes/UI/Notice.tscn",
+          "name": "Notice.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        }
+      ]
+    },
+    "training_dummy": {
+      "source_root": "04_recovered/Scenes/Mobs/Basic",
+      "target_root": "product/scenes/Mobs/Basic/",
+      "files_total": 1,
+      "counts": {
+        "in_product": 0,
+        "missing": 1
+      },
+      "missing": [
+        "res://Scenes/Mobs/Basic/TrainingDummy.tscn"
+      ],
+      "in_product": [],
+      "files": [
+        {
+          "recovered_path": "res://Scenes/Mobs/Basic/TrainingDummy.tscn",
+          "expected_product_path": "res://scenes/Mobs/Basic/TrainingDummy.tscn",
+          "name": "TrainingDummy.tscn",
+          "ext": ".tscn",
+          "in_product": false
+        }
+      ]
+    },
+    "ambience_boss_music": {
+      "source_root": "04_recovered/Sounds/BackgroundMusic",
+      "target_root": "product/Sounds/BackgroundMusic/",
+      "files_total": 1,
+      "counts": {
+        "in_product": 0,
+        "missing": 1
+      },
+      "missing": [
+        "res://Sounds/BackgroundMusic/ambience_boss.ogg"
+      ],
+      "in_product": [],
+      "files": [
+        {
+          "recovered_path": "res://Sounds/BackgroundMusic/ambience_boss.ogg",
+          "expected_product_path": "res://Sounds/BackgroundMusic/ambience_boss.ogg",
+          "name": "ambience_boss.ogg",
+          "ext": ".ogg",
+          "in_product": false
+        }
+      ]
+    }
+  },
+  "scene_dependencies": {
+    "res://Scenes/Interactables/ClassChanger/ClassStatue.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 1,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/CharacterSelect/CharacterChanger.tscn",
+          "via": "preload/load",
+          "status": "in_04_recovered_outside_scope"
+        }
+      ],
+      "unresolved_after_wave_count": 1
+    },
+    "res://Scenes/Interactables/ClassChanger/ClassStatue.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 5,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Interactables/ClassChanger/ClassStatue.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://Scenes/Interactables/Interactable.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/effects/shadow.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/effects/shadow.png"
+        },
+        {
+          "path": "res://Scenes/UI/Notice.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/hideout/statue.aseprite",
+          "via": "ext_resource",
+          "status": "not_found"
+        }
+      ],
+      "unresolved_after_wave_count": 1
+    },
+    "res://Scenes/Interactables/CraftingBench/CraftingBench.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 1,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn",
+          "via": "preload/load",
+          "status": "in_scope_wave_j"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Interactables/CraftingBench/CraftingBench.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 3,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Interactables/Interactable.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://Scenes/Interactables/CraftingBench/CraftingBench.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/effects/shadow.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/effects/shadow.png"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Interactables/GearBench/SkillBench.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 1,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/SkillSelect/SkillSelect.tscn",
+          "via": "preload/load",
+          "status": "in_04_recovered_outside_scope"
+        }
+      ],
+      "unresolved_after_wave_count": 1
+    },
+    "res://Scenes/Interactables/GearBench/SkillBench.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 4,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Interactables/GearBench/SkillBench.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://Scenes/Interactables/Interactable.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/effects/shadow.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/effects/shadow.png"
+        },
+        {
+          "path": "res://Scenes/UI/Notice.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Interactables/Interactable.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 0,
+      "deps": [],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Interactables/Interactable.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 3,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Interactables/Interactable.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/hideout/bench.aseprite",
+          "via": "ext_resource",
+          "status": "not_found"
+        },
+        {
+          "path": "res://Themes/InGameText.tres",
+          "via": "ext_resource",
+          "status": "in_04_recovered_outside_scope"
+        }
+      ],
+      "unresolved_after_wave_count": 2
+    },
+    "res://Scenes/Interactables/LoadoutBench/LoadoutBench.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 1,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn",
+          "via": "preload/load",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Interactables/LoadoutBench/LoadoutBench.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 3,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Interactables/Interactable.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://Scenes/Interactables/LoadoutBench/LoadoutBench.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/effects/shadow.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/effects/shadow.png"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Interactables/MutationBench/MutationBench.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 1,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.tscn",
+          "via": "preload/load",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.tscn"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Interactables/MutationBench/MutationBench.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 3,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Interactables/Interactable.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://Scenes/Interactables/MutationBench/MutationBench.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/effects/shadow.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/effects/shadow.png"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Interactables/OutfitBench/OutfitBench.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 1,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+          "via": "preload/load",
+          "status": "in_04_recovered_outside_scope"
+        }
+      ],
+      "unresolved_after_wave_count": 1
+    },
+    "res://Scenes/Interactables/OutfitBench/OutfitBench.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 3,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Interactables/OutfitBench/OutfitBench.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://Scenes/Interactables/Interactable.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/effects/shadow.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/effects/shadow.png"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Interactables/Portal/Portal.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 2,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/WorldMap/WorldMapPopup.tscn",
+          "via": "preload/load",
+          "status": "in_04_recovered_outside_scope"
+        },
+        {
+          "path": "res://Scenes/Popups/Dialogs/HelpTip/NoWeaponWarning/NoWeaponWarning.tscn",
+          "via": "preload/load",
+          "status": "in_04_recovered_outside_scope"
+        }
+      ],
+      "unresolved_after_wave_count": 2
+    },
+    "res://Scenes/Interactables/Portal/Portal.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 3,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Interactables/Interactable.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://Scenes/Interactables/Portal/Portal.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/hideout/portal.aseprite",
+          "via": "ext_resource",
+          "status": "not_found"
+        }
+      ],
+      "unresolved_after_wave_count": 1
+    },
+    "res://Scenes/Interactables/SharedStash/SharedStash.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 1,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn",
+          "via": "preload/load",
+          "status": "in_scope_wave_j"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Interactables/SharedStash/SharedStash.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 5,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Interactables/SharedStash/SharedStash.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://Scenes/Interactables/Interactable.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/effects/shadow.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/effects/shadow.png"
+        },
+        {
+          "path": "res://Scenes/UI/Notice.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/hideout/chest.aseprite",
+          "via": "ext_resource",
+          "status": "not_found"
+        }
+      ],
+      "unresolved_after_wave_count": 1
+    },
+    "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 1,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/SpecializationPicker/SpecializationPicker.tscn",
+          "via": "preload/load",
+          "status": "in_04_recovered_outside_scope"
+        }
+      ],
+      "unresolved_after_wave_count": 1
+    },
+    "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 5,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://Scenes/Interactables/Interactable.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/effects/shadow.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/effects/shadow.png"
+        },
+        {
+          "path": "res://Scenes/UI/Notice.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/hideout/statue.aseprite",
+          "via": "ext_resource",
+          "status": "not_found"
+        }
+      ],
+      "unresolved_after_wave_count": 1
+    },
+    "res://Scenes/Environment/Brazier.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 2,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://sprites/environment/brazier.aseprite",
+          "via": "ext_resource",
+          "status": "not_found"
+        },
+        {
+          "path": "res://sprites/effects/smoke.png",
+          "via": "ext_resource",
+          "status": "in_04_recovered_outside_scope"
+        }
+      ],
+      "unresolved_after_wave_count": 2
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/CraftButton.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 0,
+      "deps": [],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/CraftButton.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 1,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/CraftButton.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 5,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/TintedConfirmationDialog.tscn",
+          "via": "preload/load",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Popups/Dialogs/TintedConfirmationDialog.tscn"
+        },
+        {
+          "path": "res://sprites/gui/quit.png",
+          "via": "preload/load",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/gui/quit.png"
+        },
+        {
+          "path": "res://sprites/gui/active.png",
+          "via": "preload/load",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/gui/active.png"
+        },
+        {
+          "path": "res://Scenes/Popups/Dialogs/TextInputDialog.tscn",
+          "via": "preload/load",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Popups/Dialogs/TextInputDialog.tscn"
+        },
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
+          "via": "preload/load",
+          "status": "in_scope_wave_j"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/GeneButton.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 4,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://Scenes/Tooltips/GeneTooltip/GeneTooltip.tscn",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Tooltips/GeneTooltip/GeneTooltip.tscn"
+        },
+        {
+          "path": "res://sprites/gui/radio_checked.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/gui/radio_checked.png"
+        },
+        {
+          "path": "res://Fonts/rsans.ttf",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://Fonts/rsans.ttf"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 3,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/TintedConfirmationDialog.tscn",
+          "via": "preload/load",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Popups/Dialogs/TintedConfirmationDialog.tscn"
+        },
+        {
+          "path": "res://Scenes/Popups/Dialogs/HelpTip/CraftingHelp/CraftingHelp.tscn",
+          "via": "preload/load",
+          "status": "in_04_recovered_outside_scope"
+        },
+        {
+          "path": "res://Scenes/UI/ModItem.tscn",
+          "via": "preload/load",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/UI/ModItem.tscn"
+        }
+      ],
+      "unresolved_after_wave_count": 1
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 10,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://sprites/gui/gene.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/gui/gene.png"
+        },
+        {
+          "path": "res://Themes/MainTheme.tres",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://Themes/MainTheme.tres"
+        },
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/CraftButton.tscn",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://sprites/drops/blue_orb.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/drops/blue_orb.png"
+        },
+        {
+          "path": "res://sprites/drops/gold_orb.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/drops/gold_orb.png"
+        },
+        {
+          "path": "res://sprites/drops/red_orb.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/drops/red_orb.png"
+        },
+        {
+          "path": "res://sprites/drops/green_orb.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/drops/green_orb.png"
+        },
+        {
+          "path": "res://sprites/drops/corruption.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/drops/corruption.png"
+        },
+        {
+          "path": "res://sprites/gui/important.png",
+          "via": "ext_resource",
+          "status": "in_04_recovered_outside_scope"
+        }
+      ],
+      "unresolved_after_wave_count": 1
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 1,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/ItemList.tscn",
+          "via": "preload/load",
+          "status": "in_scope_wave_j"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 2,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://Themes/MainTheme.tres",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://Themes/MainTheme.tres"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 2,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/TextInputDialog.tscn",
+          "via": "preload/load",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Popups/Dialogs/TextInputDialog.tscn"
+        },
+        {
+          "path": "res://Scenes/Popups/Dialogs/HelpTip/LoadoutScreenTip/LoadoutScreenTip.tscn",
+          "via": "preload/load",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Popups/Dialogs/HelpTip/LoadoutScreenTip/LoadoutScreenTip.tscn"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 3,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd"
+        },
+        {
+          "path": "res://Themes/MainTheme.tres",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://Themes/MainTheme.tres"
+        },
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/ItemList.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 1,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneButton.tscn",
+          "via": "preload/load",
+          "status": "in_scope_wave_j"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/ItemList.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 1,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/ItemList.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 1,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn",
+          "via": "preload/load",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 3,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd"
+        },
+        {
+          "path": "res://Scenes/Tooltips/GeneTooltip/GeneTooltip.tscn",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Tooltips/GeneTooltip/GeneTooltip.tscn"
+        },
+        {
+          "path": "res://sprites/gui/gene_offensive.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/gui/gene_offensive.png"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 1,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/ItemList.tscn",
+          "via": "preload/load",
+          "status": "in_scope_wave_j"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 2,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        },
+        {
+          "path": "res://Themes/MainTheme.tres",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://Themes/MainTheme.tres"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/UI/ModItem.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 0,
+      "deps": [],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/UI/ModItem.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 2,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://Scenes/UI/ModItem.gd",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/UI/ModItem.gd"
+        },
+        {
+          "path": "res://sprites/gui/locked.png",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://sprites/gui/locked.png"
+        }
+      ],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/UI/Notice.gd": {
+      "kind": "gd",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 0,
+      "deps": [],
+      "unresolved_after_wave_count": 0
+    },
+    "res://Scenes/UI/Notice.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 2,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://sprites/gui/notice.aseprite",
+          "via": "ext_resource",
+          "status": "not_found"
+        },
+        {
+          "path": "res://Scenes/UI/Notice.gd",
+          "via": "ext_resource",
+          "status": "in_scope_wave_j"
+        }
+      ],
+      "unresolved_after_wave_count": 1
+    },
+    "res://Scenes/Mobs/Basic/TrainingDummy.tscn": {
+      "kind": "scene",
+      "ext_resources_unique": 2,
+      "preload_load_unique": 0,
+      "deps": [
+        {
+          "path": "res://sprites/monsters/skeleton_warrior.aseprite",
+          "via": "ext_resource",
+          "status": "not_found"
+        },
+        {
+          "path": "res://Scenes/Mobs/Mob.tscn",
+          "via": "ext_resource",
+          "status": "in_product",
+          "resolves_to_product": "res://scenes/Mobs/Mob.tscn"
+        }
+      ],
+      "unresolved_after_wave_count": 1
+    },
+    "res://Sounds/BackgroundMusic/ambience_boss.ogg": {
+      "kind": "scene",
+      "ext_resources_unique": 0,
+      "preload_load_unique": 0,
+      "deps": [],
+      "unresolved_after_wave_count": 0
+    }
+  },
+  "dangling_refs": [
+    {
+      "from_source": "res://Scenes/Interactables/ClassChanger/ClassStatue.gd",
+      "path": "res://Scenes/Popups/Dialogs/CharacterSelect/CharacterChanger.tscn",
+      "status": "in_04_recovered_outside_scope",
+      "via": "preload/load",
+      "note": "only in 04_recovered; still unresolved in product unless migrated later"
+    },
+    {
+      "from_source": "res://Scenes/Interactables/ClassChanger/ClassStatue.tscn",
+      "path": "res://sprites/hideout/statue.aseprite",
+      "status": "not_found",
+      "via": "ext_resource",
+      "note": "missing everywhere"
+    },
+    {
+      "from_source": "res://Scenes/Interactables/GearBench/SkillBench.gd",
+      "path": "res://Scenes/Popups/Dialogs/SkillSelect/SkillSelect.tscn",
+      "status": "in_04_recovered_outside_scope",
+      "via": "preload/load",
+      "note": "only in 04_recovered; still unresolved in product unless migrated later"
+    },
+    {
+      "from_source": "res://Scenes/Interactables/Interactable.tscn",
+      "path": "res://sprites/hideout/bench.aseprite",
+      "status": "not_found",
+      "via": "ext_resource",
+      "note": "missing everywhere"
+    },
+    {
+      "from_source": "res://Scenes/Interactables/Interactable.tscn",
+      "path": "res://Themes/InGameText.tres",
+      "status": "in_04_recovered_outside_scope",
+      "via": "ext_resource",
+      "note": "only in 04_recovered; still unresolved in product unless migrated later"
+    },
+    {
+      "from_source": "res://Scenes/Interactables/OutfitBench/OutfitBench.gd",
+      "path": "res://Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+      "status": "in_04_recovered_outside_scope",
+      "via": "preload/load",
+      "note": "only in 04_recovered; still unresolved in product unless migrated later"
+    },
+    {
+      "from_source": "res://Scenes/Interactables/Portal/Portal.gd",
+      "path": "res://Scenes/Popups/Dialogs/WorldMap/WorldMapPopup.tscn",
+      "status": "in_04_recovered_outside_scope",
+      "via": "preload/load",
+      "note": "only in 04_recovered; still unresolved in product unless migrated later"
+    },
+    {
+      "from_source": "res://Scenes/Interactables/Portal/Portal.gd",
+      "path": "res://Scenes/Popups/Dialogs/HelpTip/NoWeaponWarning/NoWeaponWarning.tscn",
+      "status": "in_04_recovered_outside_scope",
+      "via": "preload/load",
+      "note": "only in 04_recovered; still unresolved in product unless migrated later"
+    },
+    {
+      "from_source": "res://Scenes/Interactables/Portal/Portal.tscn",
+      "path": "res://sprites/hideout/portal.aseprite",
+      "status": "not_found",
+      "via": "ext_resource",
+      "note": "missing everywhere"
+    },
+    {
+      "from_source": "res://Scenes/Interactables/SharedStash/SharedStash.tscn",
+      "path": "res://sprites/hideout/chest.aseprite",
+      "status": "not_found",
+      "via": "ext_resource",
+      "note": "missing everywhere"
+    },
+    {
+      "from_source": "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.gd",
+      "path": "res://Scenes/Popups/Dialogs/SpecializationPicker/SpecializationPicker.tscn",
+      "status": "in_04_recovered_outside_scope",
+      "via": "preload/load",
+      "note": "only in 04_recovered; still unresolved in product unless migrated later"
+    },
+    {
+      "from_source": "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.tscn",
+      "path": "res://sprites/hideout/statue.aseprite",
+      "status": "not_found",
+      "via": "ext_resource",
+      "note": "missing everywhere"
+    },
+    {
+      "from_source": "res://Scenes/Environment/Brazier.tscn",
+      "path": "res://sprites/environment/brazier.aseprite",
+      "status": "not_found",
+      "via": "ext_resource",
+      "note": "missing everywhere"
+    },
+    {
+      "from_source": "res://Scenes/Environment/Brazier.tscn",
+      "path": "res://sprites/effects/smoke.png",
+      "status": "in_04_recovered_outside_scope",
+      "via": "ext_resource",
+      "note": "only in 04_recovered; still unresolved in product unless migrated later"
+    },
+    {
+      "from_source": "res://Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd",
+      "path": "res://Scenes/Popups/Dialogs/HelpTip/CraftingHelp/CraftingHelp.tscn",
+      "status": "in_04_recovered_outside_scope",
+      "via": "preload/load",
+      "note": "only in 04_recovered; still unresolved in product unless migrated later"
+    },
+    {
+      "from_source": "res://Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
+      "path": "res://sprites/gui/important.png",
+      "status": "in_04_recovered_outside_scope",
+      "via": "ext_resource",
+      "note": "only in 04_recovered; still unresolved in product unless migrated later"
+    },
+    {
+      "from_source": "res://Scenes/UI/Notice.tscn",
+      "path": "res://sprites/gui/notice.aseprite",
+      "status": "not_found",
+      "via": "ext_resource",
+      "note": "missing everywhere"
+    },
+    {
+      "from_source": "res://Scenes/Mobs/Basic/TrainingDummy.tscn",
+      "path": "res://sprites/monsters/skeleton_warrior.aseprite",
+      "status": "not_found",
+      "via": "ext_resource",
+      "note": "missing everywhere"
+    }
+  ],
+  "product_references": {
+    "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn": [
+      {
+        "referenced_by": "product/scenes/World.gd",
+        "line": 8,
+        "raw_path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn",
+        "via": [
+          "preload/load"
+        ]
+      },
+      {
+        "referenced_by": "product/scenes/GUI/GUI.gd",
+        "line": 13,
+        "raw_path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn",
+        "via": [
+          "preload/load"
+        ]
+      }
+    ],
+    "res://Sounds/BackgroundMusic/ambience_boss.ogg": [
+      {
+        "referenced_by": "product/scenes/Levels/BossArenas/BossArena.tscn",
+        "line": 6,
+        "raw_path": "res://Sounds/BackgroundMusic/ambience_boss.ogg",
+        "via": [
+          "ext_resource"
+        ]
+      },
+      {
+        "referenced_by": "product/scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.tscn",
+        "line": 6,
+        "raw_path": "res://Sounds/BackgroundMusic/ambience_boss.ogg",
+        "via": [
+          "ext_resource"
+        ]
+      },
+      {
+        "referenced_by": "product/scenes/Levels/Ladder/Ladder.tscn",
+        "line": 6,
+        "raw_path": "res://Sounds/BackgroundMusic/ambience_boss.ogg",
+        "via": [
+          "ext_resource"
+        ]
+      },
+      {
+        "referenced_by": "product/scenes/Levels/TestLevel/TestLevel.tscn",
+        "line": 6,
+        "raw_path": "res://Sounds/BackgroundMusic/ambience_boss.ogg",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Environment/Brazier.tscn": [
+      {
+        "referenced_by": "product/scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.tscn",
+        "line": 7,
+        "raw_path": "res://Scenes/Environment/Brazier.tscn",
+        "via": [
+          "ext_resource"
+        ]
+      },
+      {
+        "referenced_by": "product/scenes/Levels/Hideout/HideoutLevel.tscn",
+        "line": 16,
+        "raw_path": "res://Scenes/Environment/Brazier.tscn",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Interactables/CraftingBench/CraftingBench.tscn": [
+      {
+        "referenced_by": "product/scenes/Levels/Hideout/HideoutLevel.tscn",
+        "line": 6,
+        "raw_path": "res://Scenes/Interactables/CraftingBench/CraftingBench.tscn",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Interactables/MutationBench/MutationBench.tscn": [
+      {
+        "referenced_by": "product/scenes/Levels/Hideout/HideoutLevel.tscn",
+        "line": 7,
+        "raw_path": "res://Scenes/Interactables/MutationBench/MutationBench.tscn",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Interactables/Portal/Portal.tscn": [
+      {
+        "referenced_by": "product/scenes/Levels/Hideout/HideoutLevel.tscn",
+        "line": 8,
+        "raw_path": "res://Scenes/Interactables/Portal/Portal.tscn",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Interactables/GearBench/SkillBench.tscn": [
+      {
+        "referenced_by": "product/scenes/Levels/Hideout/HideoutLevel.tscn",
+        "line": 9,
+        "raw_path": "res://Scenes/Interactables/GearBench/SkillBench.tscn",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Interactables/LoadoutBench/LoadoutBench.tscn": [
+      {
+        "referenced_by": "product/scenes/Levels/Hideout/HideoutLevel.tscn",
+        "line": 10,
+        "raw_path": "res://Scenes/Interactables/LoadoutBench/LoadoutBench.tscn",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Interactables/OutfitBench/OutfitBench.tscn": [
+      {
+        "referenced_by": "product/scenes/Levels/Hideout/HideoutLevel.tscn",
+        "line": 11,
+        "raw_path": "res://Scenes/Interactables/OutfitBench/OutfitBench.tscn",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Mobs/Basic/TrainingDummy.tscn": [
+      {
+        "referenced_by": "product/scenes/Levels/Hideout/HideoutLevel.tscn",
+        "line": 12,
+        "raw_path": "res://Scenes/Mobs/Basic/TrainingDummy.tscn",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.tscn": [
+      {
+        "referenced_by": "product/scenes/Levels/Hideout/HideoutLevel.tscn",
+        "line": 13,
+        "raw_path": "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.tscn",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Interactables/ClassChanger/ClassStatue.tscn": [
+      {
+        "referenced_by": "product/scenes/Levels/Hideout/HideoutLevel.tscn",
+        "line": 14,
+        "raw_path": "res://Scenes/Interactables/ClassChanger/ClassStatue.tscn",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Interactables/SharedStash/SharedStash.tscn": [
+      {
+        "referenced_by": "product/scenes/Levels/Hideout/HideoutLevel.tscn",
+        "line": 15,
+        "raw_path": "res://Scenes/Interactables/SharedStash/SharedStash.tscn",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd": [
+      {
+        "referenced_by": "product/scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn",
+        "line": 3,
+        "raw_path": "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn": [
+      {
+        "referenced_by": "product/scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn",
+        "line": 5,
+        "raw_path": "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd": [
+      {
+        "referenced_by": "product/scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn",
+        "line": 3,
+        "raw_path": "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ],
+    "res://Scenes/UI/ModItem.tscn": [
+      {
+        "referenced_by": "product/scenes/Popups/Dialogs/GeneSelector/GeneSelector.gd",
+        "line": 4,
+        "raw_path": "res://Scenes/UI/ModItem.tscn",
+        "via": [
+          "preload/load"
+        ]
+      },
+      {
+        "referenced_by": "product/scenes/Tooltips/GeneTooltip/GeneInfo.gd",
+        "line": 4,
+        "raw_path": "res://Scenes/UI/ModItem.tscn",
+        "via": [
+          "preload/load"
+        ]
+      }
+    ],
+    "res://Scenes/UI/ModItem.gd": [
+      {
+        "referenced_by": "product/scenes/UI/ModItem.tscn",
+        "line": 3,
+        "raw_path": "res://Scenes/UI/ModItem.gd",
+        "via": [
+          "ext_resource"
+        ]
+      }
+    ]
+  },
+  "product_references_counts": {
+    "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn": 2,
+    "res://Sounds/BackgroundMusic/ambience_boss.ogg": 4,
+    "res://Scenes/Environment/Brazier.tscn": 2,
+    "res://Scenes/Interactables/CraftingBench/CraftingBench.tscn": 1,
+    "res://Scenes/Interactables/MutationBench/MutationBench.tscn": 1,
+    "res://Scenes/Interactables/Portal/Portal.tscn": 1,
+    "res://Scenes/Interactables/GearBench/SkillBench.tscn": 1,
+    "res://Scenes/Interactables/LoadoutBench/LoadoutBench.tscn": 1,
+    "res://Scenes/Interactables/OutfitBench/OutfitBench.tscn": 1,
+    "res://Scenes/Mobs/Basic/TrainingDummy.tscn": 1,
+    "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.tscn": 1,
+    "res://Scenes/Interactables/ClassChanger/ClassStatue.tscn": 1,
+    "res://Scenes/Interactables/SharedStash/SharedStash.tscn": 1,
+    "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd": 1,
+    "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn": 1,
+    "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd": 1,
+    "res://Scenes/UI/ModItem.tscn": 2,
+    "res://Scenes/UI/ModItem.gd": 1
+  },
+  "classification": {
+    "in_scope_wave_j": [
+      "res://Scenes/Interactables/ClassChanger/ClassStatue.gd",
+      "res://Scenes/Interactables/ClassChanger/ClassStatue.tscn",
+      "res://Scenes/Interactables/CraftingBench/CraftingBench.gd",
+      "res://Scenes/Interactables/CraftingBench/CraftingBench.tscn",
+      "res://Scenes/Interactables/GearBench/SkillBench.gd",
+      "res://Scenes/Interactables/GearBench/SkillBench.tscn",
+      "res://Scenes/Interactables/Interactable.gd",
+      "res://Scenes/Interactables/Interactable.tscn",
+      "res://Scenes/Interactables/LoadoutBench/LoadoutBench.gd",
+      "res://Scenes/Interactables/LoadoutBench/LoadoutBench.tscn",
+      "res://Scenes/Interactables/MutationBench/MutationBench.gd",
+      "res://Scenes/Interactables/MutationBench/MutationBench.tscn",
+      "res://Scenes/Interactables/OutfitBench/OutfitBench.gd",
+      "res://Scenes/Interactables/OutfitBench/OutfitBench.tscn",
+      "res://Scenes/Interactables/Portal/Portal.gd",
+      "res://Scenes/Interactables/Portal/Portal.tscn",
+      "res://Scenes/Interactables/SharedStash/SharedStash.gd",
+      "res://Scenes/Interactables/SharedStash/SharedStash.tscn",
+      "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.gd",
+      "res://Scenes/Interactables/SpecializationStatue/SpecializationStatue.tscn",
+      "res://Scenes/Environment/Brazier.tscn",
+      "res://Scenes/Popups/Dialogs/GeneEditor/CraftButton.gd",
+      "res://Scenes/Popups/Dialogs/GeneEditor/CraftButton.tscn",
+      "res://Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+      "res://Scenes/Popups/Dialogs/GeneEditor/GeneButton.tscn",
+      "res://Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd",
+      "res://Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
+      "res://Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.gd",
+      "res://Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn",
+      "res://Scenes/Popups/Dialogs/GeneEditor/ItemList.gd",
+      "res://Scenes/Popups/Dialogs/GeneEditor/ItemList.tscn",
+      "res://Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.gd",
+      "res://Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn",
+      "res://Scenes/UI/Notice.gd",
+      "res://Scenes/UI/Notice.tscn",
+      "res://Scenes/Mobs/Basic/TrainingDummy.tscn",
+      "res://Sounds/BackgroundMusic/ambience_boss.ogg"
+    ],
+    "already_migrated_no_action": [
+      "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+      "res://Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn",
+      "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd",
+      "res://Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn",
+      "res://Scenes/UI/ModItem.gd",
+      "res://Scenes/UI/ModItem.tscn"
+    ],
+    "deferred": []
+  }
+}
