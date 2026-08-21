@@ -424,6 +424,8 @@ func increment_load():
 
 func spawn_cluster(tile_options, amount):
 				var spawnables = get_spawnables()
+				if len(spawnables) == 0:
+								return
 				var mob_to_spawn = spawnables[randi() % len(spawnables)]
 
 				if typeof(mob_to_spawn) == TYPE_ARRAY:
@@ -465,6 +467,8 @@ func spawn(tile_options, mob_to_spawn, make_elite = false, make_magic = false, m
 
 func spawn_cluster_in_ladder(x, y, amount, wave = 1):
 				var spawnables = get_spawnables()
+				if len(spawnables) == 0:
+								return
 				var mob_to_spawn = spawnables[randi() % len(spawnables)]
 
 				if typeof(mob_to_spawn) == TYPE_ARRAY:
@@ -510,6 +514,8 @@ func _on_MobDisabler_timeout() -> void :
 
 func recompute_far_mobs():
 				
+				if not level or not player:
+								return
 				var mobs_to_keep_disabled = []
 
 				for mob in level.get_children():

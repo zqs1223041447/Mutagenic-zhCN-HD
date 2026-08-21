@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-22T00:00:00+08:00",
+  "updated_at": "2026-08-21T21:45:12+08:00",
   "coordinator": "gork",
   "central_branch": "agent/kinetic-arcane-remaster-foundation",
   "git": {
@@ -11,7 +11,7 @@
     "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
   "current_phase": "P2_MINIMAL_AI_AUTONOMOUS_LOOP",
-  "current_gate": "P2-BATCH-1",
+  "current_gate": "P2-BATCH-2",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -604,6 +604,36 @@
         "migration/conversion/p2_boot_baseline_2.json",
         "migration/conversion/p2_smoke_3.json"
       ]
+    },
+    "P2-BATCH-2": {
+      "goal": "TestLevel runtime Nil-reference convergence",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "nil_script_errors": {
+          "before": 4,
+          "after": 0
+        },
+        "total_script_errors_same_conditions": {
+          "before": 63,
+          "after": 50
+        },
+        "sites_fixed": 6,
+        "files_changed": 5,
+        "root_causes": {
+          "load_order": 4,
+          "api_misuse": 1,
+          "preload_cycle": 1,
+          "missing_node": 0
+        },
+        "smoke_regression": "3/3 SMOKE_PASS",
+        "tests": "187 OK",
+        "recovered_unmodified": true
+      },
+      "note": "IdleFrame->process_frame rename unblocked permanently-hung coroutines; Levels.gd preload cycle fixed via preload->load; pool %0 guarded.",
+      "evidence": [
+        "git diff 62b3703..HEAD -- product/scenes"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -636,13 +666,13 @@
   },
   "next_ready": [
     {
-      "id": "P2-BATCH-2",
-      "goal": "Runtime Nil-reference convergence on TestLevel path + evidence bundle standardization (A3)",
+      "id": "P2-BATCH-3",
+      "goal": "BaseLevel tile pipeline Godot 4 residue (get_used_cells layer param, set_cell G3 form, update_bitmask_region) + TierLoader Array errors + audio bus index",
       "depends_on": [
-        "P2-BATCH-1"
+        "P2-BATCH-2"
       ],
       "status": "READY",
-      "note": "Smoke samples showed Nil connect/get_children runtime errors on TestLevel load. Fix with root-cause classification; standardize evidence bundle archiving. aseprite art-pipeline decision belongs to human."
+      "note": "Blocking normal world-entry flow. Execution mode: parallel background subagents per AGENT.MD."
     }
   ]
 }

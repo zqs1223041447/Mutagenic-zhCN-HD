@@ -7,7 +7,7 @@ class FrameTimer_ extends Node:
 				var frames: = 1
 
 				func _ready() -> void :
-								get_tree().connect("idle_frame", Callable(self, "_on_timeout"))
+								get_tree().connect("process_frame", Callable(self, "_on_timeout"))
 
 				func _on_timeout() -> void :
 								frames -= 1

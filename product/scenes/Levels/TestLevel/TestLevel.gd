@@ -17,8 +17,9 @@ func get_spawnables():
 				return spawnables
 
 func _ready():
-				player.global_position = Vector2.ZERO
-				read_tiles()
+				if player:
+								player.global_position = Vector2.ZERO
+								read_tiles()
 				await FrameTimer.idle_frame(self).timeout
 				emit_signal("map_done")
 				Globals.reset()

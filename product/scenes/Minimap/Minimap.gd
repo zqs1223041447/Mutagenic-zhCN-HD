@@ -15,7 +15,8 @@ var offset_y
 const IMAGE_PADDING = 80
 
 func _ready() -> void :
-				level.connect("map_done", Callable(self, "_render_map"))
+				if level:
+								level.connect("map_done", Callable(self, "_render_map"))
 				MapMods.connect("mods_changed", Callable(self, "_render_mods"))
 				_render_mods()
 
@@ -24,8 +25,9 @@ func _render_mods():
 								mod.queue_free()
 
 				var mods = MapMods.get_map_mods()
+				var levels_ready = Levels != null and Globals.selected_level != null
 
-				if len(mods) > 0 or Levels.is_current_level_hideout():
+				if len(mods) > 0 or (levels_ready and Levels.is_current_level_hideout()):
 								var label = Label.new()
 								label.text = "Zone Mods"
 								label.align = HORIZONTAL_ALIGNMENT_RIGHT
@@ -41,7 +43,7 @@ func _render_mods():
 								label.align = HORIZONTAL_ALIGNMENT_RIGHT
 								mod_list.add_child(label)
 
-				if Levels.is_current_level_hideout():
+				if levels_ready and Levels.is_current_level_hideout():
 								var label = mod_label.instantiate()
 								label.text = "Players have 25% More Movement Speed"
 								label.align = HORIZONTAL_ALIGNMENT_RIGHT
