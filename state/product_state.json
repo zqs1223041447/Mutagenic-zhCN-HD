@@ -5,10 +5,10 @@
   "central_branch": "agent/kinetic-arcane-remaster-foundation",
   "git": {
     "branch": "agent/kinetic-arcane-remaster-foundation",
-    "head": "f1d4ade075c8afae2819d439159931f9429d1562",
+    "head": "72ea09d32c0606477366cf2a0a80360cf455ddeb",
     "remote": "origin",
     "remote_url": "https://github.com/zqs1223041447/Mutagenic-zhCN-HD.git",
-    "note": "After P1-WAVE-B + LEVEL_3-C0 + GOAL docs commits; push follows."
+    "note": "Pushed 72ea09d. CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
   "current_phase": "P1_GODOT_4_7_1_MIGRATION",
   "current_gate": "P1-WAVE-B",
