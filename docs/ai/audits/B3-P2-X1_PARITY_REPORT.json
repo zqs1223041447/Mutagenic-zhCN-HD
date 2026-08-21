@@ -1,9 +1,9 @@
 {
   "contract_id": "semantic_validation_promotion_parity",
   "schema_version": 1,
-  "created_at_utc": "2026-08-21T06:21:27Z",
+  "created_at_utc": "2026-08-21T07:11:19Z",
   "branch": "agent/kinetic-arcane-remaster-foundation",
-  "head_sha": "d409256d08ed215708aebaf727b8e33ff473fa9d",
+  "head_sha": "6c8d23bfba178733c67b14fcb4d1f25d6dbbd2d9",
   "resolver": "scripts/patch/resolve_mod_chain.py",
   "candidates": {
     "validation": {
