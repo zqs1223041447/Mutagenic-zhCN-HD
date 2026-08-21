@@ -265,8 +265,8 @@ func _on_load(result):
 												if modded:
 																mark_modified(saved_stats)
 
-												OS.window_fullscreen = saved_stats.settings.enable_fullscreen
-												OS.window_maximized = saved_stats.settings.enable_fullscreen
+												DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if saved_stats.settings.enable_fullscreen else DisplayServer.WINDOW_MODE_WINDOWED)
+												DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED if saved_stats.settings.enable_fullscreen else DisplayServer.WINDOW_MODE_WINDOWED)
 												set_vsync(saved_stats.settings.enable_vsync)
 								else:
 												print("failed to load:", json)
@@ -324,8 +324,7 @@ func reset_game_state():
 								if Steam.fileExists(saved_game):
 												Steam.fileDelete(saved_game)
 				else:
-								var d = Directory.new()
-								d.remove(saved_game)
+								DirAccess.remove(saved_game)
 
 				
 				reset_saved_state()
@@ -354,20 +353,20 @@ func set_floating_xp_enabled(enabled):
 
 func set_fullscreen(enabled):
 				saved_stats.settings.enable_fullscreen = enabled
-				OS.window_maximized = enabled
-				OS.window_fullscreen = enabled
+				DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED if enabled else DisplayServer.WINDOW_MODE_WINDOWED)
+				DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if enabled else DisplayServer.WINDOW_MODE_WINDOWED)
 				emit_signal("settings_changed")
 
 func set_vsync(enabled):
 				saved_stats.settings.enable_vsync = enabled
-				OS.vsync_enabled = enabled
+				DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED if enabled else DisplayServer.VSYNC_DISABLED)
 				if not enabled:
-								var refresh_rate = OS.get_screen_refresh_rate()
+								var refresh_rate = DisplayServer.screen_get_refresh_rate()
 								if refresh_rate < 0:
 												print("Failed to find refresh rate. Setting to 60 fps target")
 												refresh_rate = 60.0
 								print("Setting refresh rate to ", refresh_rate, " fps")
-								Engine.set_target_fps(60)
+								Engine.max_fps = 60
 				emit_signal("settings_changed")
 
 func set_fx(enabled):

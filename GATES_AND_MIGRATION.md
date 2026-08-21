@@ -268,6 +268,25 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 
 后续子系统（本波不做）：Steam 替代层（架构决策，需会诊）→ VFX/Audio 收尾
 
+## 5k. P1-WAVE-L（已完成）— 语义残留收尾 + P1-V0 首次启动
+
+**结果：** GameState.gd 8 处语义改写（DisplayServer/DirAccess/Engine.max_fps）；`product_boot_probe.py` 落地；**Product 首次 headless 启动成功**（rc=0，BOOTED_WITH_ERRORS，575 个运行时脚本错误，17.8s）。运行时错误成为主要信号类别。
+
+## 5l. P1-WAVE-M（当前批次）— 运行时启动错误收敛
+
+**Allowed:** `product/**` 中运行时错误的机械修复（autoload 加载顺序、缺失节点路径、运行时 API 误用）、`migration/conversion/wave_m_report.json`、tests、boot probe 复跑证据
+
+**Forbidden:** `03_raw/**`、`04_recovered/**`、语义重写、新增 Gameplay、Steam 替代层实现
+
+**Acceptance:**
+- boot probe 的 script_error_count 相对 575 基线显著下降
+- 每处修复有根因归类（missing_asset / load_order / api_misuse / missing_node）
+- Player 保留 dash；`run/main_scene` 仍是 LoadGame
+- recovered 指纹不变
+- 错误归因区分"新暴露"与"回归"
+
+后续子系统（本波不做）：Steam 替代层（需会诊）→ .aseprite SpriteFrames（美术管线边界）
+
 ## 5j. P1-WAVE-K（已完成）— Globals 脚本 API 残留清理
 
 **Allowed:** `product/Globals/**`、`product/scenes/**` 中机械 API 重命名（OS.*→DisplayServer/Window、Directory→DirAccess、TYPE_REAL→TYPE_FLOAT、ALIGN_RIGHT→HORIZONTAL_ALIGNMENT_RIGHT、rect_size→size、get_screen_refresh_rate 等已迁移脚本的残留项）、`scripts/migration/api_residue_convert.py`、`migration/conversion/wave_k_report.json`、tests

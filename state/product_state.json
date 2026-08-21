@@ -11,7 +11,7 @@
     "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
   "current_phase": "P1_GODOT_4_7_1_MIGRATION",
-  "current_gate": "P1-WAVE-K",
+  "current_gate": "P1-WAVE-M",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -460,6 +460,30 @@
         "scripts/migration/api_residue_convert.py",
         "scripts/ai/tests/test_api_residue_convert.py"
       ]
+    },
+    "P1-WAVE-L": {
+      "goal": "Semantic residue closure + P1-V0 first headless boot",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "semantic_fixes": 8,
+        "file": "product/Globals/GameState.gd",
+        "boot_status": "BOOTED_WITH_ERRORS",
+        "boot_returncode": 0,
+        "boot_script_errors": 575,
+        "boot_duration_ms": 17827,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "tests": "149 OK"
+      },
+      "note": "MILESTONE: product boots headless for the first time (rc=0). Runtime script errors (575) become the primary signal class. Boot probe tooling landed at scripts/bootstrap/product_boot_probe.py.",
+      "evidence": [
+        "migration/conversion/wave_l_report.json",
+        "migration/conversion/wave_l_boot_probe.json",
+        "scripts/bootstrap/product_boot_probe.py",
+        "scripts/ai/tests/test_boot_probe.py"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -492,11 +516,11 @@
   },
   "next_ready": [
     {
-      "id": "P1-WAVE-L",
-      "goal": "Semantic residue closure (7 MANUAL_REVIEW sites: OS.window_*/vsync, Directory->DirAccess, Engine.set_target_fps) + P1-V0 headless boot probe",
-      "depends_on": ["P1-WAVE-K"],
+      "id": "P1-WAVE-M",
+      "goal": "Runtime boot error convergence (575 baseline -> significant reduction)",
+      "depends_on": ["P1-WAVE-L"],
       "status": "READY",
-      "note": "7 sites get Godot 4 equivalent rewrites (standard migrations, not architecture changes); then first headless boot attempt of product main scene for runtime evidence. Steam replacement layer explicitly deferred pending gpt consult (architecture). Execution mode: parallel background subagents per AGENT.MD."
+      "note": "Fix runtime errors from boot probe with root-cause classification (missing_asset/load_order/api_misuse/missing_node). Steam layer deferred pending gpt consult; aseprite frames stay at art-pipeline boundary. Execution mode: parallel background subagents per AGENT.MD."
     }
   ]
 }
