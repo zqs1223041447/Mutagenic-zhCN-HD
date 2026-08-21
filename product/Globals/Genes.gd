@@ -591,7 +591,7 @@ const craft_name = {
 				CraftType.UNLOCK_SPECIFIC_MOD: "Unlock Mod", 
 }
 
-const craft_costs = {
+var craft_costs = {
 				
 				CraftType.CLEAR: [], 
 				CraftType.EXTRACT: [{"orb": Constants.OrbType.BLUE, "cost": 1}], 
@@ -665,8 +665,8 @@ func drop_only_mods_for_base_type(base_type):
 				get_tree().quit()
 
 func _ready() -> void :
-				connect("gene_edited", self, "_on_edit")
-				connect("genes_changed", self, "_on_edit")
+				connect("gene_edited", Callable(self, "_on_edit"))
+				connect("genes_changed", Callable(self, "_on_edit"))
 
 				compute_base_types_for_slot()
 
@@ -1515,8 +1515,8 @@ func craft_recombinate(gene_id):
 
 func sort_mods(gene_id):
 				var gene = GameState.get_active_stats().genes[gene_id]
-				gene.prefixes.sort_custom(self, "mod_sorter")
-				gene.suffixes.sort_custom(self, "mod_sorter")
+				gene.prefixes.sort_custom(Callable(self, "mod_sorter"))
+				gene.suffixes.sort_custom(Callable(self, "mod_sorter"))
 
 func delete_gene(gene_id, emit = true):
 				GameState.get_active_stats().genes.erase(gene_id)

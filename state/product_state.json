@@ -11,7 +11,7 @@
     "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
   "current_phase": "P1_GODOT_4_7_1_MIGRATION",
-  "current_gate": "P1-WAVE-H",
+  "current_gate": "P1-WAVE-I",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -334,6 +334,36 @@
         "scripts/migration/skill_convert.py",
         "scripts/ai/tests/test_skill_convert.py"
       ]
+    },
+    "P1-WAVE-H": {
+      "goal": "Equipment / Gene foundation (GeneMods compile chain + equipment assets)",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "script_fixes": 6,
+        "gene_mods_cascade_resolved": true,
+        "files_copied": 61,
+        "roots": ["sprites/gui/equipment", "sprites/base_types", "Sounds/UI/Crafting"],
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "error_count": 1103,
+        "blocker_count": 1054,
+        "blocker_delta_vs_prev": -431,
+        "resolved_vs_prev_wave": 366,
+        "newly_exposed_vs_prev_wave": 1,
+        "zero_errors_required": false,
+        "tests": "115 OK"
+      },
+      "note": "Root cause was parse_residual: GeneMods.gd:403 sort_custom two-arg form cascading to 75 Genes scripts. Fixed via Callable forms + const->var craft_costs. Deferred: GeneEditor components, GearBench, Notice (Interactables wave).",
+      "evidence": [
+        "migration/conversion/wave_h_equipment_report.json",
+        "migration/inventory/wave_h_equipment_inventory.json",
+        "scripts/migration/equipment_convert.py",
+        "scripts/ai/tests/test_equipment_convert.py"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -366,11 +396,11 @@
   },
   "next_ready": [
     {
-      "id": "P1-WAVE-H",
-      "goal": "Equipment / Gene foundation (GeneMods compile chain + equipment data/UI base)",
-      "depends_on": ["P1-WAVE-G"],
+      "id": "P1-WAVE-I",
+      "goal": "Levels completion (Hideout/BossArenas/Ladder/TestLevel) + worldmap/tileset sprites",
+      "depends_on": ["P1-WAVE-H"],
       "status": "READY",
-      "note": "Fix GeneMods resolve cascade within mechanical-conversion scope; convert equipment scenes/scripts. Regression-vs-exposed error attribution required. Execution mode: parallel background subagents per AGENT.MD."
+      "note": "Copy/convert remaining Levels scenes + worldmap/tileset sprites. Steam replacement layer is a later architectural decision (consult first). Execution mode: parallel background subagents per AGENT.MD."
     }
   ]
 }

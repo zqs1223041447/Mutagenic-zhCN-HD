@@ -400,7 +400,7 @@ func get_explicit_tiers():
 																res["affix_type"] = mod.affix_type
 
 												result.append(res)
-				result.sort_custom(self, "tier_sort")
+				result.sort_custom(Callable(self, "tier_sort"))
 				return result
 
 func tier_sort(a, b):

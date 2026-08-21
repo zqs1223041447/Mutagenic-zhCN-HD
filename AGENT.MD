@@ -162,7 +162,9 @@ Godot 3.5.3 = Legacy Reference
 
 **P1-WAVE-G（已完成）：** Skill 场景资源 + Skill/Passive Tree UI 基础。
 
-**P1-WAVE-H（当前批次）：Equipment / Gene 基础**
+**P1-WAVE-H（已完成）：** Equipment / Gene 基础。
+
+**P1-WAVE-I（当前批次）：Levels 补全 + 剩余世界资源**
 
 | ID | Goal | 关键验收 |
 |----|------|----------|

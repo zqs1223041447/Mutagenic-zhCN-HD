@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "task": "P1-WAVE-H",
+  "scope": "Equipment / Gene 基础（GeneMods 编译链 + Equipment 场景面）",
+  "scanned_at": "2026-08-22T01:30:00+08:00",
+  "read_only_guarantee": {
+    "04_recovered": "unmodified",
+    "03_raw": "untouched",
+    "product": "unmodified (analysis ran in temp sandbox copies only)",
+    "sandbox_dir": "C:/Users/dev/AppData/Local/Temp/opencode/wave_h_gdsandbox2"
+  },
+  "evidence_sources": [
+    "migration/conversion/wave_g_skill_report.json#import_parse.errors (1534 errors)",
+    "product/.godot/global_script_class_cache.cfg",
+    "empirical godot --headless --check-only runs on sandbox copies"
+  ],
+  "gene_mods_root_cause": {
+    "category": "parse_residual",
+    "summary": "product/Globals/Genes/GeneMods.gd:403 残留 Godot 3 双参数 sort_custom(self, \"tier_sort\")。Godot 4.7.1 中 Array.sort_custom 只接受单个 Callable，属硬解析错误；GeneMods.gd 编译失败 → class_name GeneMods 无法注册 → 所有 extends GeneMods 的脚本级联报 'Could not resolve class \"GeneMods\"'。",
+    "primary_evidence": {
+      "file": "product/Globals/Genes/GeneMods.gd",
+      "line": 403,
+      "code": "result.sort_custom(self, \"tier_sort\")",
+      "recovered_counterpart": "04_recovered/Globals/Genes/GeneMods.gd:403 (同一残留; 该文件另含 stepify，product 版已转 snapped)",
+      "engine_verification": {
+        "method": "godot --headless --check-only -s res://GeneMods.gd (sandbox copy + stub autoloads Constants/StatsInfo/Genes/SkillTags)",
+        "engine": "02_tools/godot/Godot_v4.7.1-stable_win64_console.exe (4.7.1.stable.official.a13da4feb)",
+        "exit_code": 1,
+        "errors": [
+          "SCRIPT ERROR: Parse Error: Too many arguments for \"sort_custom()\" call. Expected at most 1 but received 2. (res://GeneMods.gd:403)",
+          "SCRIPT ERROR: Parse Error: Invalid argument for \"sort_custom()\" function: argument 1 should be \"Callable\" but is \"GeneMods\". (res://GeneMods.gd:403)"
+        ],
+        "conclusion": "stub 掉依赖后 GeneMods.gd 唯一内在错误即 :403 —— 文件其余部分已 Godot-4 兼容"
+      }
+    },
+    "missing_deps": [],
+    "missing_deps_note": "无缺失文件：GeneMods.gd 存在且已登记于 product/.godot/global_script_class_cache.cfg (class GeneMods -> res://Globals/Genes/GeneMods.gd)；Constants/Genes/StatsInfo autoload 均在 product/project.godot 注册。失败纯因编译错误。",
+    "cyclic_reference": false,
+    "secondary_blockers_same_chain": {
+      "description": "即使修复 :403，autoload 链根 Globals/Genes.gd 自身仍有残留，会继续压垮整链（GeneMods.gd 调用 Genes.roll_tier_strength() @154/223/256）。",
+      "items": [
+        {
+          "file": "product/Globals/Genes.gd",
+          "lines": [594, 597, 598, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612],
+          "category": "parse_residual",
+          "issue": "const craft_costs = { ... Constants.OrbType.* ... } — GDScript 2 中访问其他 autoload 成员不是常量表达式",
+          "evidence": "sandbox check-only 报 'Assigned value for constant \"craft_costs\" isn\\u2019t a constant expression.' (res://Genes_real.gd:594); Constants.gd:74 确有 enum OrbType",
+          "fix_hint": "const 改 var（或改引用 preload 的脚本常量类）"
+        },
+        {
+          "file": "product/Globals/Genes.gd",
+          "lines": [668, 669],
+          "category": "parse_residual",
+          "issue": "connect(\"gene_edited\", self, \"_on_edit\") / connect(\"genes_changed\", self, \"_on_edit\") Godot 3 四参签名",
+          "evidence": "wave_g report x2: 'Invalid argument for \"connect()\" function: argument 2 should be \"Callable\" but is \"res://Globals/Genes.gd\"'; sandbox 复现同错误对",
+          "fix_hint": "connect(..., Callable(self, \"_on_edit\")) 或 signal.connect(_on_edit)"
+        },
+        {
+          "file": "product/Globals/Genes.gd",
+          "lines": [1518, 1519],
+          "category": "runtime_risk_not_parse_error",
+          "issue": "gene.prefixes/suffixes.sort_custom(self, \"mod_sorter\") — 操作数经 Variant 成员访问，编译期不查参（故未出现在 import 错误中），运行时必然出错",
+          "fix_hint": "随本波一并改为 Callable 形式"
+        },
+        {
+          "file": "product/Globals/Genes.gd",
+          "lines": [3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 25, 26, 27, 28, 29, 31, 32, 33, 34, 35, 37, 38, 39, 40, 41, 43, 44, 45, 46, 47, 49, 50, 51, 52, 53, 55, 56, 57, 58, 59, 62, 63, 64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 78],
+          "category": "missing_dependency_asset",
+          "issue": "57 条 sprites/gui/equipment/* 与 sprites/base_types/* preload + 3 条 Sounds/UI/Crafting/*.wav preload，目标目录在 product 全部缺失 → 'Preload file ... does not exist' 解析错误",
+          "detail": "product 缺失目录: sprites/base_types/(整目录), sprites/gui/equipment/(整目录), Sounds/UI/Crafting/(仅缺 Crafting 子目录)"
+        }
+      ]
+    },
+    "cascade": {
+      "could_not_resolve_class_GeneMods_count": 75,
+      "mechanism": "extends GeneMods (75/79 个 Globals/Genes/** 脚本) 在 GeneMods 类不可解析时报 'Could not resolve class GeneMods'，随后 'Failed to load script ... Parse error' + 'Failed to create an autoload ... is not compiling'",
+      "affected_autoloads_total_report": 95,
+      "affected_scripts_list_ref": "wave_g_skill_report.json 内 'Failed to load script res://Globals/Genes/**' 共 79 条（含 UniquePools/UniqueGenes/DropOnlyMods/CommonMods/BaseTypes 全部）",
+      "out_of_scope_similar_chains": [
+        {"class": "GenericSkill", "count": 66},
+        {"class": "GenericAura", "count": 30},
+        {"class": "BaseLevel", "count": 1},
+        {"class": "Mob", "count": 2}
+      ]
+    }
+  },
+  "equipment_sources": {
+    "note": "04_recovered/Scenes 下不存在 Equipment/Items/Inventory 专用目录；装备/仓库 UI 实际位于 GeneEditor/GeneSelector 弹窗、Scenes/UI 与 GearBench 可交互物。",
+    "top_level_dirs_scanned": ["AreaInstantDamageApplier", "AreaSkillEffects", "DelayedSkill", "Environment", "Explosions", "GroundDegens", "GUI", "Interactables", "KeystoneCycles", "Levels", "Minimap", "Mobs", "Particles", "Pickups", "Player", "Popups", "Projectiles", "ShaderExplosions", "Shaders", "Skills", "StatusBar", "StatusEffects", "Tooltips", "UI"],
+    "matched_dirs": [
+      {
+        "dir": "04_recovered/Scenes/Popups/Dialogs/GeneEditor",
+        "role": "装备/基因仓库主 UI（equipment loadout + inventory popup）",
+        "total_files": 16,
+        "by_extension": {".gd": 8, ".tscn": 8},
+        "components": ["CraftButton", "GeneButton", "GeneEditor", "GeneInventoryPopup", "GeneLoadout", "ItemList", "LoadoutSlot", "StashTransferPopup"]
+      },
+      {
+        "dir": "04_recovered/Scenes/Popups/Dialogs/GeneSelector",
+        "role": "基因选择弹窗（装备 mod 展示入口）",
+        "total_files": 4,
+        "by_extension": {".gd": 2, ".tscn": 2},
+        "components": ["GeneOption", "GeneSelector"]
+      },
+      {
+        "dir": "04_recovered/Scenes/UI",
+        "role": "ModItem(mod 行控件) + Notice(通用通知)",
+        "total_files": 4,
+        "by_extension": {".gd": 2, ".tscn": 2},
+        "components": ["ModItem", "Notice"]
+      },
+      {
+        "dir": "04_recovered/Scenes/Interactables/GearBench",
+        "role": "装备台可交互物（Hideout 引用）",
+        "total_files": 2,
+        "by_extension": {".gd": 1, ".tscn": 1},
+        "components": ["SkillBench"]
+      },
+      {
+        "dir": "04_recovered/sprites/gui/equipment",
+        "role": "9 装备槽位图标 + minor_buff 图标",
+        "total_files": 33,
+        "png_assets": 11,
+        "import_metadata": 22
+      },
+      {
+        "dir": "04_recovered/sprites/base_types",
+        "role": "装备 base_type 图标（武器/盾/甲/盔/腰带/手套/靴/裤/戒/符/minor）",
+        "total_files": 141,
+        "png_assets": 47,
+        "import_metadata": 94
+      }
+    ],
+    "globals_genes_chain": {
+      "root": "04_recovered/Globals/Genes",
+      "total_scripts": 79,
+      "subdirs": ["DropOnlyModes/Common(=Common)", "BaseTypes/{Weapons,Shields,Rings,Pants,Helmets,Amulets,Gloves,Body,Boots,Belts,Minors}", "UniquePools"],
+      "note": "79 个 .gd 两树一一对应；product 侧额外带 .uid"
+    }
+  },
+  "product_references": {
+    "resolved_refs_already_wired": [
+      {"ref": "res://scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn", "referenced_by": ["scenes/World.gd", "scenes/GUI/GUI.gd"], "exists_in_product": true},
+      {"ref": "res://scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd", "referenced_by": ["scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn"], "exists_in_product": true},
+      {"ref": "res://scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn", "referenced_by": ["scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn"], "exists_in_product": true},
+      {"ref": "res://scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd", "referenced_by": ["scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn"], "exists_in_product": true},
+      {"ref": "res://scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn", "referenced_by": ["scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd"], "exists_in_product": true},
+      {"ref": "res://scenes/Popups/Dialogs/GeneSelector/GeneSelector.gd", "referenced_by": ["scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn"], "exists_in_product": true},
+      {"ref": "res://scenes/Popups/Dialogs/GeneSelector/GeneOption.tscn", "referenced_by": ["scenes/Popups/Dialogs/GeneSelector/GeneSelector.gd"], "exists_in_product": true},
+      {"ref": "res://scenes/Popups/Dialogs/GeneSelector/GeneOption.gd", "referenced_by": ["scenes/Popups/Dialogs/GeneSelector/GeneOption.tscn"], "exists_in_product": true},
+      {"ref": "res://scenes/UI/ModItem.tscn", "referenced_by": ["scenes/Popups/Dialogs/GeneSelector/GeneSelector.gd", "scenes/Tooltips/GeneTooltip/GeneInfo.gd"], "exists_in_product": true},
+      {"ref": "res://scenes/UI/ModItem.gd", "referenced_by": ["scenes/UI/ModItem.tscn"], "exists_in_product": true}
+    ],
+    "dangling_refs_pending": [
+      {
+        "ref": "res://scenes/GeneEditor/GeneLoadout.tscn",
+        "referenced_by": ["scenes/Menu.gd:56 (change_scene_to_file)"],
+        "issue": "旧版路径布局残留；实际文件在 scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn（recovered 同样残留旧路径）",
+        "proposed_fix": "重写为 res://scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn"
+      },
+      {
+        "ref": "res://scenes/GeneEditor/GeneInventory.tscn",
+        "referenced_by": ["scenes/Menu.gd:60 (change_scene_to_file)"],
+        "issue": "该路径在 recovered/product 均不存在（legacy）；最近对应物为 recovered Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn（未迁移）",
+        "proposed_fix": "迁移 GeneInventoryPopup 后指向之，或临时禁用入口"
+      },
+      {
+        "ref": "res://sprites/gui/equipment/*.png (10 图标) + res://sprites/base_types/*.png (47 图标)",
+        "referenced_by": ["Globals/Genes.gd x57 preloads"],
+        "issue": "两个目录在 product 整体缺失 → Genes.gd 解析必败",
+        "proposed_fix": "按 Wave-G sprite 复制管线拷贝 png(+.import)，排除 aseprite 元数据"
+      },
+      {
+        "ref": "res://Sounds/UI/Crafting/{change_keystone,recombinate,scramble}.wav",
+        "referenced_by": ["Globals/Genes.gd:3-5"],
+        "issue": "Sounds/UI/Crafting 子目录缺失（product/Sounds/UI 存在但无 Crafting）",
+        "proposed_fix": "拷贝 3 个 wav"
+      }
+    ],
+    "gene_mods_dependent_scripts": {
+      "extends_or_references_gene_mods": 75,
+      "total_scripts_globals_genes": 79,
+      "list_source": "product/Globals/Genes/**/*.gd 正则 ^extends GeneMods | GeneMods.new | preload(GeneMods)"
+    }
+  },
+  "classification": {
+    "in_scope_wave_h": [
+      {
+        "item": "product/Globals/Genes/GeneMods.gd",
+        "action": "fix parse_residual line 403 sort_custom(self,\"tier_sort\") -> sort_custom(Callable(self,\"tier_sort\"))",
+        "unblocks": 75,
+        "files": 1
+      },
+      {
+        "item": "product/Globals/Genes.gd syntax residuals",
+        "action": "fix :594 const craft_costs (autoload member in const-expr)、:668/:669 connect 签名、:1518/:1519 sort_custom（运行时风险一并修）",
+        "files": 1
+      },
+      {
+        "item": "assets for Genes.gd preloads",
+        "action": "copy sprites/gui/equipment (11 png), sprites/base_types (47 png), Sounds/UI/Crafting (3 wav) 并转换 .import",
+        "files": 61
+      },
+      {
+        "item": "Globals/Genes/** 75 dependent scripts",
+        "action": "no-edit validation after root fixes（随根修复自动消除 'Could not resolve class GeneMods'）",
+        "files": 75
+      },
+      {
+        "item": "scenes/Menu.gd equipment entry wiring",
+        "action": ":56/:60 旧路径重写至 Popups/Dialogs 布局",
+        "files": 1
+      }
+    ],
+    "deferred": [
+      {
+        "item": "Scenes/Popups/Dialogs/GeneEditor 未迁移组件 (CraftButton/GeneButton/GeneEditor/GeneInventoryPopup/ItemList/StashTransferPopup)",
+        "files": 12,
+        "reason": "消费方 CraftingBench.gd 属 Interactables 未迁移；product 内当前无引用链"
+      },
+      {
+        "item": "Scenes/Interactables/GearBench (SkillBench.gd/.tscn)",
+        "files": 2,
+        "reason": "Interactables 波次；唯一场景引用方 HideoutLevel.tscn 未迁移"
+      },
+      {
+        "item": "Scenes/UI/Notice.gd/.tscn",
+        "files": 2,
+        "reason": "消费方全部为 deferred Interactables (ClassChanger/GearBench/SharedStash/SpecializationStatue)"
+      }
+    ],
+    "already_migrated": [
+      {"item": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout(.gd/.tscn)", "wave": "C/D"},
+      {"item": "Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot(.gd/.tscn)", "wave": "C/D"},
+      {"item": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector(.gd/.tscn)", "wave": "C/D"},
+      {"item": "Scenes/Popups/Dialogs/GeneSelector/GeneOption(.gd/.tscn)", "wave": "C/D"},
+      {"item": "Scenes/UI/ModItem(.gd/.tscn)", "wave": "C/D"},
+      {"item": "Globals/Genes/** 79 scripts copied + project.godot autoload entries registered (compile-blocked by GeneMods chain)", "wave": "seed/B"}
+    ]
+  },
+  "notes": [
+    "report 中 95 个 'not compiling' autoload 含大量与 GeneMods 无关者（GameState/Globals/Steam 相关等），归后续波次。",
+    "'Could not resolve class GenericSkill'(x66)/GenericAura(x30) 为同构级联链，建议独立任务处理。",
+    "Godot 4.7.1 二进制位置: 02_tools/godot/Godot_v4.7.1-stable_win64_console.exe；本次分析全部以 --check-only 于 Temp 沙箱执行，未触碰 product/.godot。"
+  ]
+}

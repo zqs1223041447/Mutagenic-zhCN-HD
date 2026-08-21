@@ -220,7 +220,7 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 
 后续子系统（本波不做）：Equipment → VFX/Audio → Levels 补全
 
-## 5g. P1-WAVE-H（当前批次）— Equipment / Gene 基础
+## 5g. P1-WAVE-H（已完成）— Equipment / Gene 基础
 
 **Allowed:** `product/Globals/Genes/**`、GeneMods 编译链相关脚本修复（机械转换范畴）、Equipment 数据/UI 场景基础、`scripts/migration/equipment_convert.py`、`migration/inventory/wave_h_*.json`、`migration/conversion/wave_h_equipment_report.json`、tests
 
@@ -235,6 +235,22 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 - 错误归因必须区分"新暴露"与"回归"（对比上一波分类计数）
 
 后续子系统（本波不做）：VFX/Audio → Levels 补全 → Steam 替代层
+
+## 5h. P1-WAVE-I（当前批次）— Levels 补全 + 剩余世界资源
+
+**Allowed:** `product/scenes/Levels/**`（Hideout/BossArenas/Ladder/TestLevel 等）、`product/Tilesets/**`、`product/sprites/worldmap/**`、`scripts/migration/levels_convert.py`、`migration/inventory/wave_i_*.json`、`migration/conversion/wave_i_levels_report.json`、tests
+
+**Forbidden:** `03_raw/**`、`04_recovered/**`、Mobs/Skills 全量重写、新增 Gameplay
+
+**Acceptance:**
+- Hideout/BossArenas 等关卡场景在 product 且 format=3 / GDScript 4
+- worldmap/tileset sprites 复制到位，preload 缺失下降
+- Player 保留 dash；`run/main_scene` 仍是 LoadGame
+- recovered 指纹不变
+- 有 4.7.1 则 headless import RAN；错误分类；zero errors 不是本波要求
+- 错误归因必须区分"新暴露"与"回归"
+
+后续子系统（本波不做）：Steam 替代层（架构决策，需会诊）→ VFX/Audio → Interactables
 
 ## 6. 进入 P2 / P3 的最低条件
 
