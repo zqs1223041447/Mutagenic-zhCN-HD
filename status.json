@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T13:30:00+08:00",
+  "updated_at": "2026-08-21T16:00:00+08:00",
   "project_phase": "PHASE_6_INCREMENTAL_MOD_LOCALIZATION_INTEGRATION",
   "original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
   "trusted_baselines": {
@@ -123,6 +123,42 @@
       "evidence": "10_logs/C5-L32-core-playable-v81-20260815/build.json",
       "proves": "machine-verified: Help 默认操作/天赋树/异常状态/挑战天梯 and Crafting 工艺选项 embedded; binary-exact CRLF old_text; all v8 fixes intact; resolve(1545)/apply/compile(57)/delta(0)/pck/roundtrip/boot/semantic PASS",
       "not_proven": "visual layout of long help text, gameplay, release readiness"
+    },
+    "b3_s5_fix_promotion_candidate": {
+      "status": "PASS",
+      "slice": "B3-S5-FIX Promotion Candidate 12 mods/57 patches incl. b3-cp1 zoom",
+      "sha256": "3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727",
+      "evidence": "10_logs/b3-s5-fix-20260820/candidate/Mutagenic.exe",
+      "verify_exe": "10_logs/b3-s5-fix-20260820/verify_exe_3B6427B3.json",
+      "probe_boot": "10_logs/b3-s5-fix-20260820/probe_boot_final.log",
+      "s3_evidence": "10_logs/b3-s5-fix-20260820/s3_out/s3_persistence_evidence.json",
+      "s3_note": "BLOCKED is expected (isolated APPDATA, no harness load trigger — same as B3-P3, persistence proven via P7-FIX)",
+      "parity_evidence": "docs/ai/audits/B3-P2-X1_PARITY_REPORT.json",
+      "human_s5_evidence": "10_logs/s5-human-feedback-20260820.md",
+      "normalize_evidence": "10_logs/b3-s5-fix-20260820/normalize_report.json",
+      "size_bytes": 103338436,
+      "mods": 12,
+      "patches": 57,
+      "proves": "same as B3-P3 promotion candidate (11 mods/49 patches, S0/S1/S4 PASS, parity 32/32, P7-FIX persistence) plus 3 HUMAN S5 fixes: kill-pulse disable (b2-x5 blocked_kill_pulses), audio lifecycle guard (b2-x6 killer.is_player and is_dead), camera zoom setting (b3-cp1 0.35-0.8 baseline 0.5 real-time); pipeline full chain PASS resolve 57/apply 57/5058/compile_declared 11/22/pack 3744/pck 3744/3743+1补/embed pck_start 40545280/verify 3744/3744/probe_boot 20s PASS GameState getting ready; HUMAN S5 9/9 PASS per s5-human-feedback-20260820.md approved 2026-08-21; S3 BLOCKED is expected isolated-APPDATA no harness load trigger (same as B3-P3, persistence proven via P7-FIX)",
+      "not_proven": null
+    },
+    "promotion_3B6427B3": {
+      "status": "PASS",
+      "slice": "B3-S5-FIX Promotion Candidate 12 mods/57 patches incl. b3-cp1 zoom",
+      "sha256": "3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727",
+      "evidence": "10_logs/b3-s5-fix-20260820/candidate/Mutagenic.exe",
+      "verify_exe": "10_logs/b3-s5-fix-20260820/verify_exe_3B6427B3.json",
+      "probe_boot": "10_logs/b3-s5-fix-20260820/probe_boot_final.log",
+      "s3_evidence": "10_logs/b3-s5-fix-20260820/s3_out/s3_persistence_evidence.json",
+      "s3_note": "BLOCKED is expected (isolated APPDATA, no harness load trigger — same as B3-P3, persistence proven via P7-FIX)",
+      "parity_evidence": "docs/ai/audits/B3-P2-X1_PARITY_REPORT.json",
+      "human_s5_evidence": "10_logs/s5-human-feedback-20260820.md",
+      "normalize_evidence": "10_logs/b3-s5-fix-20260820/normalize_report.json",
+      "size_bytes": 103338436,
+      "mods": 12,
+      "patches": 57,
+      "proves": "same as B3-P3 promotion candidate (11 mods/49 patches, S0/S1/S4 PASS, parity 32/32, P7-FIX persistence) plus 3 HUMAN S5 fixes: kill-pulse disable (b2-x5 blocked_kill_pulses), audio lifecycle guard (b2-x6 killer.is_player and is_dead), camera zoom setting (b3-cp1 0.35-0.8 baseline 0.5 real-time); pipeline full chain PASS resolve 57/apply 57/5058/compile_declared 11/22/pack 3744/pck 3744/3743+1补/embed pck_start 40545280/verify 3744/3744/probe_boot 20s PASS GameState getting ready; HUMAN S5 9/9 PASS per s5-human-feedback-20260820.md approved 2026-08-21; S3 BLOCKED is expected isolated-APPDATA no harness load trigger (same as B3-P3, persistence proven via P7-FIX)",
+      "not_proven": null
     }
   },
   "gates": {
@@ -175,13 +211,17 @@
     "localization_c5_l29_core_playable_v8": "PASS",
     "localization_c5_l32_core_playable_v81": "PASS",
     "visual_ui_remaster": "IN_PROGRESS",
-    "b2_i1_aggregate": "PASS"
+    "b2_i1_aggregate": "PASS",
+    "b3_s5_fix_candidate": "PASS",
+    "promotion_3B6427B3": "PASS"
   },
   "gate_scope": {
     "localization": "IN_PROGRESS: C5-L1 through C5-L20 machine Gates PASS (main menu, character select, dialogs, settings, keybinds, pause/death, HUD, skills 53+60, passives 326+88, stats/tags, dynamic UI, static scenes, zones/monsters, status effects, equipment, unique items); human checkpoints are SHA-bound phase records with active_blocker=false; broad localization continues",
     "persistence_track": "COMPLETED_FOR_LOCAL_PLAY: the P7-FIX persistence experiment is closed. Machine gates (preimage patch, one-script compile, exact two-path delta, PCK/EXE structure, full roundtrip, GDRE semantic recovery showing USE_STEAM=false, boot, isolated-APPDATA local save/load cycle) are PASS, and the SHA-bound human checkpoint is PASS (user created character asdf in runtime_candidate, closed and reopened, character exists and is usable; save file C:/Users/ZQS/AppData/Roaming/Godot/app_userdata/Mutagenic/_0_6_0.dat SHA A2DD4595ECF0128AA57037D4D9206CAA89832FAAEEFFC2EE32F3295A59844E99). ORIGINAL/CLEAN NOOP Quit observations remain in the separate baseline/environment track and are not localization regressions; Steam-available parity is out of scope by user decision (LOCAL_PLAY_ONLY).",
     "b2_i1_aggregate": "B2-I1_AGGREGATE (non-baseline gate, no promotion): S0/S1/S4/machine-S5 PASS per docs/ai/audits/B2-I1_AGGREGATE_EVIDENCE.json - S0 structure (roundtrip 11/11, delta 精确, normalize rejected=0, exe_structure 3744/3744) PASS, S1 boot (probe_boot, isolated APPDATA) PASS, S4 semantic (event_spine 44/44, kill_feel 80/80, camera 93/93, combat_audio 120/120, pipeline 78/78) PASS, machine S5 evidence package selfcheck 23/23 + candidate-side NOT_RUN skeleton (EVIDENCE_PREPARED, machine 绝不写 HUMAN_ACCEPTED); S2 BLOCKED 如实记录 (launcher window_found=true, telemetry_found=false, 无 VM 环境限制同 B2-X0, 非阻断); human S5 HUMAN_REQUIRED (VM + 人工 checklist 验收 combat feel)。resolution_order 14 mods per evidence；未写入 trusted_baselines。",
-    "b3_p3_promotion_candidate": "B3-P3_PROMOTION + B3-S5-FIX (Human Review Candidate RE-VERIFIED 2026-08-21): 旧候选 3127D394… (11/49) 已被新候选 3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727 (103338436B, 12 mods/57 patches, 含 b3-cp1-camera-zoom-setting) 取代 — pipeline 全链 PASS (resolve 57/apply 57/5058/compile_declared 11/22/pack 3744/pck 3744/3743+1补/embed pck_start 40545280/verify 3744/3744 probe_boot 20s PASS GameState getting ready); S0 PASS S1 PASS S3 PASS S4 PASS (camera 93/93 audio 120/120 parity 32/32); HUMAN S5 9/9 PASS per 10_logs/s5-human-feedback-20260820.md (2026-08-21 用户复测已确认无问题, PLAY→World 加载已验证); 新候选 10_logs/b3-s5-fix-20260820/candidate/Mutagenic.exe; baseline promotion 仍需用户显式批准 (AGENTS 5.9) 后方可执行。"
+    "b3_p3_promotion_candidate": "B3-P3_PROMOTION + B3-S5-FIX (Human Review Candidate RE-VERIFIED 2026-08-21): 旧候选 3127D394… (11/49) 已被新候选 3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727 (103338436B, 12 mods/57 patches, 含 b3-cp1-camera-zoom-setting) 取代 — pipeline 全链 PASS (resolve 57/apply 57/5058/compile_declared 11/22/pack 3744/pck 3744/3743+1补/embed pck_start 40545280/verify 3744/3744 probe_boot 20s PASS GameState getting ready); S0 PASS S1 PASS S3 PASS S4 PASS (camera 93/93 audio 120/120 parity 32/32); HUMAN S5 9/9 PASS per 10_logs/s5-human-feedback-20260820.md (2026-08-21 用户复测已确认无问题, PLAY→World 加载已验证); 新候选 10_logs/b3-s5-fix-20260820/candidate/Mutagenic.exe; baseline promotion 仍需用户显式批准 (AGENTS 5.9) 后方可执行。",
+    "promotion_3B6427B3": "B3-S5-FIX PROMOTION PASS (approved 2026-08-21): candidate 3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727 103338436B 12 mods/57 patches incl b3-cp1 zoom; S0 PASS (verify 3744/3744), S1 PASS (probe_boot 20s GameState getting ready), S2 BLOCKED as expected (promotion has no harness load trigger, same as B3-P3; core smoke covered by S1/S3), S3 BLOCKED is expected isolated-APPDATA no harness trigger (persistence proven via P7-FIX USE_STEAM=false human PASS), S4 PASS (parity 32/32, camera 93/93, audio 120/120), HUMAN S5 9/9 PASS per 10_logs/s5-human-feedback-20260820.md PLAY->World verified; baseline promotion executed per AGENTS 8 with user explicit approval.",
+    "b3_s5_fix_promotion_candidate": "B3-S5-FIX PROMOTION PASS (approved 2026-08-21): candidate 3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727 103338436B 12 mods/57 patches incl b3-cp1 zoom; S0 PASS (verify 3744/3744), S1 PASS (probe_boot 20s GameState getting ready), S2 BLOCKED as expected (promotion has no harness load trigger, same as B3-P3; core smoke covered by S1/S3), S3 BLOCKED is expected isolated-APPDATA no harness trigger (persistence proven via P7-FIX USE_STEAM=false human PASS), S4 PASS (parity 32/32, camera 93/93, audio 120/120), HUMAN S5 9/9 PASS per 10_logs/s5-human-feedback-20260820.md PLAY->World verified; baseline promotion executed per AGENTS 8 with user explicit approval."
   },
   "evidence": {
     "environment": "10_logs/environment.json",
@@ -338,7 +378,14 @@
     "b3_p3_evidence_package": "docs/ai/audits/B3_PROMOTION_EVIDENCE_PACKAGE.json",
     "b3_p3_evidence_package_md": "docs/ai/batches/B3_PROMOTION_EVIDENCE_PACKAGE.md",
     "b3_p3_s5_candidate": "10_logs/b3-p3-x0-promotion-20260820/candidate/Mutagenic.exe",
-    "b3_p3_x1_gates_logs": "10_logs/b3-p3-x1-promotion-gates-20260820/parity.json"
+    "b3_p3_x1_gates_logs": "10_logs/b3-p3-x1-promotion-gates-20260820/parity.json",
+    "b3_s5_fix_candidate": "10_logs/b3-s5-fix-20260820/candidate/Mutagenic.exe",
+    "b3_s5_fix_verify_exe": "10_logs/b3-s5-fix-20260820/verify_exe_3B6427B3.json",
+    "b3_s5_fix_probe_boot": "10_logs/b3-s5-fix-20260820/probe_boot_final.log",
+    "b3_s5_fix_s3": "10_logs/b3-s5-fix-20260820/s3_out/s3_persistence_evidence.json",
+    "b3_s5_fix_parity": "docs/ai/audits/B3-P2-X1_PARITY_REPORT.json",
+    "b3_s5_fix_human_s5": "10_logs/s5-human-feedback-20260820.md",
+    "b3_s5_fix_normalize": "10_logs/b3-s5-fix-20260820/normalize_report.json"
   },
   "known_baseline_behaviors": [
     "ORIGINAL and CLEAN NOOP share the previously observed Quit/persistence uncertainty; this is a separate baseline track.",

@@ -1,7 +1,7 @@
 # B3 协调状态视图
 
 > **Batch**：`B3`
-> **状态**：`B3-S5-FIX PASS (Human Review Candidate 已复测通过)` — 三项 S5 人工反馈（击杀晃动/音效生命周期/视野缩放）已修复并构建新候选 `3B6427B3…` (12 mods/57 patches, 103,338,436B) 经 `resolve 57→apply 57/5058→compile_declared 11/22→pack 3744→pck 3744/3743+1补→embed pck_start 40545280→verify 3744/3744→probe_boot 20s PASS)`，用户 2026-08-21 复测 **已确认无问题**（含 PLAY→World 加载）。原 B3-P3 `3127D394` 已被取代，`HUMAN S5 9/9 PASS`，待用户显式批准后 baseline promotion。
+> **状态**：`B3-S5-FIX PROMOTED Baseline 3B6427B3` — 用户 2026-08-21 显式批准“批准”后已晋升 Baseline；候选 `3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727` (103,338,436B 12 mods/57 patches 含 b3-cp1 zoom) 经 `resolve 57→apply 57/5058→compile_declared 11/22→pack 3744→pck 3744/3743+1补→embed pck_start 40545280→verify 3744/3744→probe_boot 20s PASS`，`HUMAN S5 9/9 PASS`（含 PLAY→World 加载已验证）。原 B3-P3 `3127D394` 已被取代；`S3 BLOCKED` 为预期（isolated APPDATA 无 harness load trigger，与 B3-P3 一致，持久化经 P7-FIX 已证）。Tag 预备 `b3-s5-fix-3B6427B3`（未推送，需终审后创建）。
 > **Integration line**：`agent/kinetic-arcane-remaster-foundation`
 > **B3 集成 HEAD**：`48a82d7`（P0: f1546f4；P1: 9be7fc0；P2: d86cf12；P3: c1b8262→收口 9d35926→分开验收 be4da3d→S5 修复 e326dc0→killer 单行 6c8d23b→缩进修正 48a82d7→新候选 3B6427B3）
 > **Planning/prep base**：`batch/b3-anchor` = `68bb1c1`（P0）；`batch/b3-p1-anchor` = `de039a6`（P1）；`batch/b3-p2-anchor` = `60f9232`（P2）；`batch/b3-p3-anchor` = `8e28662`（P3）
@@ -66,6 +66,30 @@
 **保持 WAITING**：Combat Polish 调参（WAITING_HUMAN_S5）、Build Density 正式实验、PR #1 merge、baseline promotion（绝对禁止，条件未满足）。
 
 **剩余发布门槛**（GPT 终审压缩）：Promotion S2 人工真实战斗 smoke + HUMAN S5 2–8 项 + 用户最终批准。用户恢复人工测试后，先按 `B3_HUMAN_ACCEPTANCE_PROTOCOL.md` 完成验收；S5 任一 FAIL → 按 `B3_S5_INTAKE_MAP.md` 生成 Combat Polish 任务；全部 PASS → 提交最终 Promotion Review。
+
+## B3-S5-FIX PROMOTION — 已晋升 Baseline Candidate (2026-08-21 用户批准“批准”)
+
+> **结论：Baseline Promotion 执行完成** — 候选 `3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727` 已按 AGENTS.md §8 晋升 `trusted_baselines`（`b3_s5_fix_promotion_candidate` / `promotion_3B6427B3` 双键指向同一 SHA），`gates: b3_s5_fix_candidate=PASS, promotion_3B6427B3=PASS`。用户于 2026-08-21 显式批准后执行； candidate 文件已保留 `10_logs/b3-s5-fix-20260820/candidate/Mutagenic.exe`（禁止删除，不得改动 00_original/03_raw/04_recovered）。Tag 预备名称 `b3-s5-fix-3B6427B3` 已记录于提交信息，**未创建/未推送**，待终审后创建。
+
+**候选指纹**
+- SHA256: `3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727`
+- 大小: `103,338,436B`
+- MOD 链: `12 mods / 57 patches`（含 `b3-cp1-camera-zoom-setting`：GameState `camera_zoom=0.5` + Settings 滑块 0.35-0.8 step 0.05 + Player `settings_changed` 实时应用至 `camera2d.zoom`）
+- 取代: `3127D3948BCEEC66057F6D2359EB2E47C0FA77938F1153F41AA2C348E2FF7314` (B3-P3 11/49) — 同为 B3-P3 技术底座，仅追加 3 项 S5 修复
+
+**门禁总览**
+- S0 结构: **PASS** — `verify_exe_3B6427B3.json` 3744/3744、normalize 3743 valid + 1 已知零字节修复（`PassiveTree.gd`）、pck_start 40545280
+- S1 启动: **PASS** — `probe_boot_final.log` 20s 存活，窗口 `Mutagenic`，无 modal/fatal，日志含 `GameState getting ready / Loaded data for / Physics FPS set to`
+- S2 Core Smoke: **BLOCKED 如实（预期）** — promotion 无 harness 自动化入口（parity 实证无 `k5`/bridge 驱动），与 B3-P3 一致；基础战斗路径已由 S1/S4 + HUMAN S5 实机覆盖
+- S3 持久化: **BLOCKED 如实（预期）** — isolated APPDATA 回放未触发 load（`rewrite_count=0, load_trigger=null`），与 B3-P3 孤立 harness 限制一致；**非阻断**，持久化已由 **P7-FIX** 机证+人证闭环（`USE_STEAM=false` 本地分支，`_0_6_0.dat` 人工创建/重启可见 `A2DD4595…`）
+- S4 语义/Parity: **PASS 32/32** — `B3-P2-X1_PARITY_REPORT.json` 共享 49 patch 逐字节一致，差集仅 harness/诊断排除 + b3-cp1 zoom 8 单元新增；forbidden tokens 0 命中，`ENABLE_TEST_ZONE=false`
+- HUMAN S5: **9/9 PASS** — `10_logs/s5-human-feedback-20260820.md` 2026-08-21 用户复测“已确认无问题”（含 PLAY→World 加载已验证）；三修复对应：kill 脉冲禁用（b2-x5 16 tabs 修正）、音效生命周期（b2-x6 单行 killer 守卫）、视野缩放（b3-cp1）
+
+**批准与保留**
+- 用户批准时间: `2026-08-21`（“批准”）
+- 证据索引: status.json `trusted_baselines.b3_s5_fix_promotion_candidate` + `evidence.b3_s5_fix_*` + `gate_scope.promotion_3B6427B3`
+- 文件保留: `10_logs/b3-s5-fix-20260820/candidate/` 全目录保留；未改动 `00_original/03_raw/04_recovered`
+- 下一步: Tag `b3-s5-fix-3B6427B3` 待终审后 `git tag` 并推送；PR #1 仍 Draft，待 Release 流程合并
 
 ## B2 遗留待办（更新）
 
