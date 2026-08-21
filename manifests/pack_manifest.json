@@ -6857,8 +6857,8 @@
   },
   {
    "relpath": "Globals/Constants.gde",
-   "size": 3200,
-   "sha256": "7d58cec3455ebd9e6f769e739a056ee92d0f491a51e2a13436c6e5decfae0b5d"
+   "size": 2880,
+   "sha256": "4d28d0e125f3a3b6bf9655b9738f70afeccb75fe0bfecf052457bc1683bfc0dd"
   },
   {
    "relpath": "Globals/Filters.gd.remap",
@@ -6877,8 +6877,8 @@
   },
   {
    "relpath": "Globals/GameState.gde",
-   "size": 51552,
-   "sha256": "95f35091c59c60973d18f31a9b4ec7907c4f678563550e90e7b0f4f6c6f53da3"
+   "size": 51984,
+   "sha256": "8557012576bd34b94a4ba33dccfdff91f3b813a3a8ee7f73245536973834fa24"
   },
   {
    "relpath": "Globals/GeneGenerator.gd.remap",
@@ -6897,8 +6897,8 @@
   },
   {
    "relpath": "Globals/Genes.gde",
-   "size": 59248,
-   "sha256": "c6bb6fa680b7a4feb51350077cd440e92399e5dff2be89a9c9f555a63889c40f"
+   "size": 59408,
+   "sha256": "e4a368cfacedeb2aca733206a6e707c1c083cb413f15fa066b5073e06075cf02"
   },
   {
    "relpath": "Globals/Globals.gd.remap",
@@ -6907,8 +6907,8 @@
   },
   {
    "relpath": "Globals/Globals.gde",
-   "size": 8816,
-   "sha256": "0e160c9c117dea5f3fcb38d19db4949e8efd4f88b6d5157d98804052494a6d06"
+   "size": 11904,
+   "sha256": "3b7d67e6d2e74bef7ad67d25ac8910d81abcaa757d278e4a190c5c5d32c07043"
   },
   {
    "relpath": "Globals/ItemManager.gd.remap",
@@ -6967,8 +6967,8 @@
   },
   {
    "relpath": "Globals/Levels.gde",
-   "size": 10864,
-   "sha256": "37deaaab7af2723b8a1d5559990dbc9e37bd38038412a1312ef400f2b84e5292"
+   "size": 10896,
+   "sha256": "18f96ece675ec385acdee3069487432c6a2817db60d4b4549faf1eef246a7cb1"
   },
   {
    "relpath": "Globals/MapMods.gd.remap",
@@ -6978,7 +6978,7 @@
   {
    "relpath": "Globals/MapMods.gde",
    "size": 8400,
-   "sha256": "41a595f3ac08c9f616ace1268a9b847bc4769317e920afaaba6af0ab975f3527"
+   "sha256": "2f07e1b71be91f359981349e7d066138333ff5970ac2ad8a651b6eb371216457"
   },
   {
    "relpath": "Globals/Mitigation.gd.remap",
@@ -7007,8 +7007,8 @@
   },
   {
    "relpath": "Globals/MonsterMods.gde",
-   "size": 3968,
-   "sha256": "b87232e10c7deea320fc7a15047bedc6ad1169d93706d03c6f520118cb675cd8"
+   "size": 3984,
+   "sha256": "ef154c5367df75595b759a36df940d269c7d195c85a3a5580aeb3460076ae7e0"
   },
   {
    "relpath": "Globals/MonsterTypes.gd.remap",
@@ -7028,7 +7028,7 @@
   {
    "relpath": "Globals/MTXManager.gde",
    "size": 3968,
-   "sha256": "f4914073d46b5890f832a0c70506dc9798f6ba7c6c5edc8e9103a81e909a7061"
+   "sha256": "b8ba04e161d14c7463174f0a97ad42fa08924e7a3c8728871c0bf2607ce2a9bb"
   },
   {
    "relpath": "Globals/OrbTypes.gd.remap",
@@ -7057,8 +7057,8 @@
   },
   {
    "relpath": "Globals/PassiveTagStats.gde",
-   "size": 123440,
-   "sha256": "41d2c8ccd95f7c814f039808a316bffd2a0197f3733ca5bd115ec5bb52b0bf5c"
+   "size": 124480,
+   "sha256": "63631b682f6581fc80d8894cfab5063d535c958f073f52aee1857198080fc1b0"
   },
   {
    "relpath": "Globals/PassiveTreeData.gd.remap",
@@ -7068,7 +7068,7 @@
   {
    "relpath": "Globals/PassiveTreeData.gde",
    "size": 3216,
-   "sha256": "3120e394ce36cebea20384f550a997ab648523bab3915361d5f2bec7da225622"
+   "sha256": "110eee10ba4be2ad669724f559eb656e663d9056653f5cb7a9376091d739fdd2"
   },
   {
    "relpath": "Globals/PassiveTreeUtils.gd.remap",
@@ -7097,8 +7097,8 @@
   },
   {
    "relpath": "Globals/PlayableClasses.gde",
-   "size": 5264,
-   "sha256": "1c8e5ec71f03a311dacd1b8d20f94a06c29f190110ba14afcff567a508011b29"
+   "size": 5408,
+   "sha256": "4cb0e9a5ecbe00eab780b43ae2742a645f2d747f3b097fddcdb7ff33f316ca9a"
   },
   {
    "relpath": "Globals/PopupManager.gd.remap",
@@ -7128,7 +7128,7 @@
   {
    "relpath": "Globals/SearchUtils.gde",
    "size": 2128,
-   "sha256": "d825eab9153cd558a6b696ad960ca310e7611e8ca23fd0d73e811845363f5f1b"
+   "sha256": "d09c1aa6b2f2421f28000895cc6f73428f7005d426f93651111c2f6467c542e9"
   },
   {
    "relpath": "Globals/Skills.gd.remap",
@@ -7137,8 +7137,8 @@
   },
   {
    "relpath": "Globals/Skills.gde",
-   "size": 39280,
-   "sha256": "699c05172554f69b001e0b8287ae8c9cf85246616d6f415e32a1cda250ccba97"
+   "size": 39712,
+   "sha256": "dcc28716d949e960c05a074c91ffca8fd382a05a1177a3aa04c3c15ab1f7749e"
   },
   {
    "relpath": "Globals/SkillSupports.gd.remap",
@@ -7147,8 +7147,8 @@
   },
   {
    "relpath": "Globals/SkillSupports.gde",
-   "size": 29264,
-   "sha256": "d514147a3f95dfe83414dc1e1599ff7c7814102dcf3f113826ab9e5405a3b0df"
+   "size": 29824,
+   "sha256": "5b35882a0226c7c84ffc1f76e144a3d7bac99eb6fd34342c31247cd28056514b"
   },
   {
    "relpath": "Globals/SkillTags.gd.remap",
@@ -7158,7 +7158,7 @@
   {
    "relpath": "Globals/SkillTags.gde",
    "size": 2624,
-   "sha256": "e537dfe68802ed1f3b5138e723739d6404b694d19b0097749b21081dc96e465d"
+   "sha256": "09344051675cb9c962715c3c12eab3cf887884c36135e7840cd5af8a8cf87217"
   },
   {
    "relpath": "Globals/SlotRequirements.gd.remap",
@@ -7188,7 +7188,7 @@
   {
    "relpath": "Globals/SpecializationData.gde",
    "size": 3824,
-   "sha256": "9284fcacfbad54b50af2f3e93a0397da6c7eef9c14db752b1bf8ad568954772c"
+   "sha256": "60d111194f2d1d27a50db4e9b01ec1eda02284938ed217751598be5139fd0717"
   },
   {
    "relpath": "Globals/SpecializationTreeUtils.gd.remap",
@@ -7217,8 +7217,8 @@
   },
   {
    "relpath": "Globals/StarterBuilds.gde",
-   "size": 7280,
-   "sha256": "e0914af158a5c46f5ea38fe3ffc81f15959d04dae8c1e4518639c61c172b97e2"
+   "size": 7328,
+   "sha256": "5f71210fcbd7ec3788d38cca54d8a3e53d4a2a825fbb910d8437bf1376da2fc0"
   },
   {
    "relpath": "Globals/StatsInfo.gd.remap",
@@ -7227,8 +7227,8 @@
   },
   {
    "relpath": "Globals/StatsInfo.gde",
-   "size": 35664,
-   "sha256": "5a3c2c910196e0c8bc898a3b034fe0a21fc8d4cfd76b0de067167772e1a8e56a"
+   "size": 36032,
+   "sha256": "a5ae3fbdbeab386984db183b11e248d20ed092112fbdf9234e13962784d263c0"
   },
   {
    "relpath": "Globals/StatusEffects.gd.remap",
@@ -7268,7 +7268,7 @@
   {
    "relpath": "Globals/WorldMapData.gde",
    "size": 2912,
-   "sha256": "53d3c7a6aaf46e14a6e6dc5984ec641268811aeaacea9ccf93db38a871e7238d"
+   "sha256": "475009d810ed502f24d9bca7d2433fe0d628bd6756b8b091791671aceeb54b83"
   },
   {
    "relpath": "Globals/WorldMapUtils.gd.remap",
@@ -7297,8 +7297,8 @@
   },
   {
    "relpath": "Globals/__OldPassiveStats.gde",
-   "size": 84192,
-   "sha256": "b4469b817c49721800708b0be34c766b4ddff0d08a238108e60a6247bb22c057"
+   "size": 84752,
+   "sha256": "15525a803d8aa865b2ccd37411626532d90c0d8e9c6b270aecbe3546bfc665f3"
   },
   {
    "relpath": "Globals/Genes/GeneMods.gd.remap",
@@ -7307,8 +7307,8 @@
   },
   {
    "relpath": "Globals/Genes/GeneMods.gde",
-   "size": 12272,
-   "sha256": "3c510f835ca85d630f3acc7a34ff545c2a0255a7c3e3b57f39eee3b0317f766c"
+   "size": 12400,
+   "sha256": "eb4bf2e248982d45e1bc1d3f474880a830d47a2e4519c786873360db4f0506b1"
   },
   {
    "relpath": "Globals/Genes/UniqueGenes.gd.remap",
@@ -7457,8 +7457,8 @@
   },
   {
    "relpath": "Globals/Genes/BaseTypes/Body/LifeBodyMods.gde",
-   "size": 2240,
-   "sha256": "698f48d0d6f3327ce1243288885118b929dbd063c7b36609d9c69c1a801c5c31"
+   "size": 2992,
+   "sha256": "b9d79cd4fca248cca484863c10330fabd8513993c8c549ae170fffed82432f6c"
   },
   {
    "relpath": "Globals/Genes/BaseTypes/Boots/ArmorBootsMods.gd.remap",
@@ -8077,8 +8077,8 @@
   },
   {
    "relpath": "Globals/Genes/UniquePools/UniquePoolGeneric.gde",
-   "size": 15968,
-   "sha256": "b5accd7468b0015e426bc5aded6eb7c0b0a40faa64f0dea61cb06d93306d80af"
+   "size": 16000,
+   "sha256": "60902a96f187b59bedea4186035c9a5a60e029bdb470312b4b0733241b575695"
   },
   {
    "relpath": "Globals/Genes/UniquePools/UniquePoolSOTA.gd.remap",
@@ -8088,7 +8088,7 @@
   {
    "relpath": "Globals/Genes/UniquePools/UniquePoolSOTA.gde",
    "size": 1088,
-   "sha256": "b21b11299f32f64665565e187449c0b2f3e3141757457efeb0234490b8ae2be1"
+   "sha256": "b095c15ab03e32c73501bc2fe779e97749cca9614d84fb270bd5e9e16c832405"
   },
   {
    "relpath": "Globals/Keystones/SupportKeystones.gd.remap",
@@ -8097,8 +8097,8 @@
   },
   {
    "relpath": "Globals/Keystones/SupportKeystones.gde",
-   "size": 2464,
-   "sha256": "299a65a98f6b437d918bd55d3f685b8c61e8eb76247d6c3de8a8c4dd9513b113"
+   "size": 2608,
+   "sha256": "751b56ebdc95e1f2876bc0aa4d00bd59cae6f3cb0d077205453a720f5ae981f9"
   },
   {
    "relpath": "Globals/Keystones/TreeKeystones.gd.remap",
@@ -8107,8 +8107,8 @@
   },
   {
    "relpath": "Globals/Keystones/TreeKeystones.gde",
-   "size": 12976,
-   "sha256": "bf890399c39f4d42235024c2e28e36f6be5cb1e4817edb072188d47de940a1a4"
+   "size": 13456,
+   "sha256": "12198a8753a9c3b7d560d74c2a41bf19a5d8123d0b6d775045b0470ea7ba7a33"
   },
   {
    "relpath": "Globals/Keystones/UniqueKeystones.gd.remap",
@@ -8117,8 +8117,8 @@
   },
   {
    "relpath": "Globals/Keystones/UniqueKeystones.gde",
-   "size": 2976,
-   "sha256": "e06e8011b59abf71fd8d93f56c0812be8d713739dced05c60f6f24fde3384553"
+   "size": 3328,
+   "sha256": "5b9f161a1364c7febf07e7ee1a903cb01490528b494870cb9c8c97a1dd8f79b6"
   },
   {
    "relpath": "Globals/LayoutGenerators/Layout.gd.remap",
@@ -8177,8 +8177,8 @@
   },
   {
    "relpath": "Globals/MonsterStats/MonsterStats.gde",
-   "size": 9152,
-   "sha256": "4838d7563c24adef08a45f2a84ffc920a848a1b869c068aa5d772e0b64af01bd"
+   "size": 9184,
+   "sha256": "8eb56118960bd728db1a741128d97561db45dfec3112c4306d6066c6571d54c1"
   },
   {
    "relpath": "Globals/SkillTiers/AmplificationAuraTiers.gd.remap",
@@ -8618,7 +8618,7 @@
   {
    "relpath": "Globals/SkillTiers/ShotgunTiers.gde",
    "size": 192,
-   "sha256": "23facd845b17d05dd403fa60ae194ff96be91e134e1859cfd77d634e2f4069b3"
+   "sha256": "9958eb4e86001cef14ca6998f0b35fb37a7fa0ce837687d758c6b49d81da4d2d"
   },
   {
    "relpath": "Globals/SkillTiers/ShrapnelBombTiers.gd.remap",
@@ -8787,8 +8787,8 @@
   },
   {
    "relpath": "Scenes/Menu.tscn",
-   "size": 5725,
-   "sha256": "4360a857f666950040e73a6ff2348ffb6d554a17b429a35f1f94cf56f4a72d70"
+   "size": 5722,
+   "sha256": "54337eed6778446f85d22a6c52eec149ac557860613206853c769b791724a778"
   },
   {
    "relpath": "Scenes/SoundEffect.gd.remap",
@@ -8812,13 +8812,13 @@
   },
   {
    "relpath": "Scenes/Stats.gde",
-   "size": 77456,
-   "sha256": "7009e06ad27e31b60da96ec9f578112f737178b6c5c3704968194aabf0287d86"
+   "size": 83968,
+   "sha256": "915ca8f25fa7ab6a1360dcfdfaff8521655e3282002ee53ec22ebf88d4364267"
   },
   {
    "relpath": "Scenes/Stats.tscn",
-   "size": 1553,
-   "sha256": "bbc401deca8fb2218b7c3135f4aa6e8ad2b24b0a0b93a7cad7da39497e6c42cf"
+   "size": 1552,
+   "sha256": "075d2c916acdecc6491c29604cfb1d4c266c5e87505f90e675a94588ecde1f8f"
   },
   {
    "relpath": "Scenes/StatsContainer.gd.remap",
@@ -8842,8 +8842,8 @@
   },
   {
    "relpath": "Scenes/World.tscn",
-   "size": 1098,
-   "sha256": "f2793457e77b8473e7b03672d1bae773c72e57e5eb491383599b139cd2ecdd9d"
+   "size": 1060,
+   "sha256": "180f8df0f1054b443d593205dc771dc8a2bab44de9568510b038c9ce42c69552"
   },
   {
    "relpath": "Scenes/AreaInstantDamageApplier/AreaInstanceDamageApplier.gd.remap",
@@ -9158,12 +9158,12 @@
   {
    "relpath": "Scenes/GUI/GUI.gde",
    "size": 15024,
-   "sha256": "22c944441267cffbcf1e9899ef3415d14818c8dc70b849be44f75dcc2d17a7f0"
+   "sha256": "e54bdb40f0d6d56ff93039d2121e91f6c18813041ff6ab8194ac3829d8b754ac"
   },
   {
    "relpath": "Scenes/GUI/GUI.tscn",
-   "size": 14926,
-   "sha256": "01df386ac935a8860115ede03d1b6121073b21d3b9ad87ad7c286475d48d4e2d"
+   "size": 14444,
+   "sha256": "9f43dca77d107ed5ed89d679c4035db3262acfc17b017c866f0a49ebfd3173b2"
   },
   {
    "relpath": "Scenes/GUI/NotificationMessage.gd.remap",
@@ -9248,7 +9248,7 @@
   {
    "relpath": "Scenes/Interactables/ClassChanger/ClassStatue.gde",
    "size": 528,
-   "sha256": "1439a412d934c3bc49ce8882f0d84b7e89cb1d0fb411a946c989b864fa62ec6e"
+   "sha256": "86e1b3d66a14ee786b62e1eaa9ab25ebf600f64a8650e1a5cd2bff62ead78a58"
   },
   {
    "relpath": "Scenes/Interactables/ClassChanger/ClassStatue.tscn",
@@ -9263,7 +9263,7 @@
   {
    "relpath": "Scenes/Interactables/CraftingBench/CraftingBench.gde",
    "size": 480,
-   "sha256": "aa21dd6772a4eaa465dab51287ff533391ad5220ba4644d3cfaa377193335ec0"
+   "sha256": "7eb43a72b485f3a64cae077747f9315a656a2266732a7100cc11a8099bca26ac"
   },
   {
    "relpath": "Scenes/Interactables/CraftingBench/CraftingBench.tscn",
@@ -9277,8 +9277,8 @@
   },
   {
    "relpath": "Scenes/Interactables/GearBench/SkillBench.gde",
-   "size": 880,
-   "sha256": "9737ba8ab636dc0d76536f653e550abd217cc2e848839ba5e87fb5c692afcfb6"
+   "size": 896,
+   "sha256": "37db74db7b01803f994ddafc7845eb8a6285a372b7ab809f76f777bfb13e2ce7"
   },
   {
    "relpath": "Scenes/Interactables/GearBench/SkillBench.tscn",
@@ -9292,8 +9292,8 @@
   },
   {
    "relpath": "Scenes/Interactables/LoadoutBench/LoadoutBench.gde",
-   "size": 464,
-   "sha256": "2db9d02cf6d8a3450500fcf9ea343a05f78f0eaeca36487448ec278b54dbba67"
+   "size": 480,
+   "sha256": "92107ffa0d901fbbcc41fe20dee89c6686b38a1e1e3133f6cd7bd43488d30a04"
   },
   {
    "relpath": "Scenes/Interactables/LoadoutBench/LoadoutBench.tscn",
@@ -9308,7 +9308,7 @@
   {
    "relpath": "Scenes/Interactables/MutationBench/MutationBench.gde",
    "size": 480,
-   "sha256": "d29d0cc1c650e6f6f87a41be4a5efb2b20afc5ad3a8207885140f1468dfdf125"
+   "sha256": "302f54a7eb37a77694d887e9ac097530b1f38f529f9c105649defb0dd182abae"
   },
   {
    "relpath": "Scenes/Interactables/MutationBench/MutationBench.tscn",
@@ -9322,8 +9322,8 @@
   },
   {
    "relpath": "Scenes/Interactables/OutfitBench/OutfitBench.gde",
-   "size": 464,
-   "sha256": "4929a34a8169f1851dfbf129320b0f8c8188f17edc7dd58ef85113f89f928aaf"
+   "size": 480,
+   "sha256": "eeecbdfe3e4201a8dec8d80c01a18d09e6e47abc13d9fa8f3d5d63a680ba2f0b"
   },
   {
    "relpath": "Scenes/Interactables/OutfitBench/OutfitBench.tscn",
@@ -9338,7 +9338,7 @@
   {
    "relpath": "Scenes/Interactables/Portal/Portal.gde",
    "size": 800,
-   "sha256": "82ef3aee5479f5a3db822ebb613acf29c86c9e29fd54c9f4ee273eaed3f2215d"
+   "sha256": "897021beffa89b2e6b91bf6e67c994ede7b9954534c1ba951ff0d5914a7c1c69"
   },
   {
    "relpath": "Scenes/Interactables/Portal/Portal.tscn",
@@ -9352,8 +9352,8 @@
   },
   {
    "relpath": "Scenes/Interactables/SharedStash/SharedStash.gde",
-   "size": 512,
-   "sha256": "044425dac180c36dca9c0d0ace4444a11d9483933edffe6ea195e98966e10c7e"
+   "size": 528,
+   "sha256": "4642a07d8c5b8783ce2cbe308cf09482d0579dfab378cc9c1c6404536e263a0e"
   },
   {
    "relpath": "Scenes/Interactables/SharedStash/SharedStash.tscn",
@@ -9367,8 +9367,8 @@
   },
   {
    "relpath": "Scenes/Interactables/SpecializationStatue/SpecializationStatue.gde",
-   "size": 992,
-   "sha256": "83b8c25a70a6591334c147f99ac84467ff14efab0197241c36618a14dd8f338e"
+   "size": 1008,
+   "sha256": "2822bf052169e6d3f8b65058bcd82b6242d53c799483b71611166a775be01b6b"
   },
   {
    "relpath": "Scenes/Interactables/SpecializationStatue/SpecializationStatue.tscn",
@@ -9457,8 +9457,8 @@
   },
   {
    "relpath": "Scenes/Levels/BaseLevel.gde",
-   "size": 17680,
-   "sha256": "a09dcb1704242d4b80de12ac83bbef40f8f60448c28095aa06c0c49d98c411eb"
+   "size": 17664,
+   "sha256": "fd1d18ed3a6e4b1bfe9671327e6b5413905f9696166ba5341c984db7196557c5"
   },
   {
    "relpath": "Scenes/Levels/BaseLevel.tscn",
@@ -9482,8 +9482,8 @@
   },
   {
    "relpath": "Scenes/Levels/LevelLoader.tscn",
-   "size": 1240,
-   "sha256": "c4f19889ee2fa5b44fed448bfcb440d50ca6b72a0b5c758174377741d685097b"
+   "size": 1197,
+   "sha256": "c5f4f28d3968399b9285764f4821b03c83ef9746296c65067ce3a099918b9630"
   },
   {
    "relpath": "Scenes/Levels/NavMesh.gd.remap",
@@ -9588,12 +9588,12 @@
   {
    "relpath": "Scenes/Levels/Ladder/Ladder.gde",
    "size": 2800,
-   "sha256": "cfc23e1961568853905e67f526769656a4d58997f6d5fe1cf41490e6e7068ca3"
+   "sha256": "d2a1eab1c42f9fbe8c7902de1968ce8f79f81244d803ae1873234be32d8c8175"
   },
   {
    "relpath": "Scenes/Levels/Ladder/Ladder.tscn",
-   "size": 20664,
-   "sha256": "aff609a32c65ff509cb9c4c8e20cd0da7bbbf694d86d7400a8dddce6cb6f0049"
+   "size": 20224,
+   "sha256": "4253f564c1bb50596ee71187eb66374e59ea6969829087764dfe0e2b595bf390"
   },
   {
    "relpath": "Scenes/Levels/Ladder/LadderSpawner.tscn",
@@ -9612,8 +9612,8 @@
   },
   {
    "relpath": "Scenes/Levels/TestLevel/TestLevel.tscn",
-   "size": 19487,
-   "sha256": "f4523162ad6a5ca584d7fa10b99f0685604b50e51888d386d8cb6abd02ffee73"
+   "size": 19485,
+   "sha256": "fffa55a65462e577bc8d5e95ec136f95439138a50806dcc82135d0ae9e7b0e17"
   },
   {
    "relpath": "Scenes/Levels/TestLevel/TestSpawner.tscn",
@@ -9627,8 +9627,8 @@
   },
   {
    "relpath": "Scenes/Minimap/Minimap.gde",
-   "size": 4112,
-   "sha256": "309827c71f304eca6e77ae80916f1a2ea29a7cb4e6dd07c76c067ebaeb850bd3"
+   "size": 4128,
+   "sha256": "b3d1417583f7870b8da6c82133518d2f7ef70f43b3dca86386aa2e415bc4b673"
   },
   {
    "relpath": "Scenes/Minimap/Minimap.tscn",
@@ -9677,13 +9677,13 @@
   },
   {
    "relpath": "Scenes/Mobs/Mob.gde",
-   "size": 16512,
-   "sha256": "c43b9af7add1a245d9760fb9900f99e2df5c1a6a70771dc1b8b4eb43a80f04cb"
+   "size": 19152,
+   "sha256": "bef630b6375136738bda0a11e661be1b1a5790949a056a9b0d60fef88bf332e5"
   },
   {
    "relpath": "Scenes/Mobs/Mob.tscn",
-   "size": 4026,
-   "sha256": "670861ca333a7bd0d88fc4eed72d78914b730cf71c4ea267c7d83cdfcb849c9c"
+   "size": 4025,
+   "sha256": "8baddbaaa00d9749e4fa8c379baa5ba77e9fd98b870e3c3c7736e3f05f4ee3e4"
   },
   {
    "relpath": "Scenes/Mobs/PathingController.gd.remap",
@@ -9702,8 +9702,8 @@
   },
   {
    "relpath": "Scenes/Mobs/Basic/TrainingDummy.tscn",
-   "size": 1938,
-   "sha256": "b4fa6d6040be5707c2437986270a28a9a86bb544579659c2c985134003af034b"
+   "size": 1937,
+   "sha256": "2ca69e454d5b7773139b783f5c9dff56b3769e0681e0f25bc2697d05c200e0f2"
   },
   {
    "relpath": "Scenes/Mobs/Basic/Creatures/AttackDog.tscn",
@@ -9932,8 +9932,8 @@
   },
   {
    "relpath": "Scenes/Particles/FloatingDamage.tscn",
-   "size": 501,
-   "sha256": "8090c9cd82ded07c6c18f6ec69d6f07d059f638b890491ce4a5f4cdd8ac146a5"
+   "size": 481,
+   "sha256": "17bb3f4c9c3469ebe21343e5bf850d1c1c8d5ac219de2672c7bb8fe2708534be"
   },
   {
    "relpath": "Scenes/Particles/FloatingDamageManager.gd.remap",
@@ -10103,12 +10103,12 @@
   {
    "relpath": "Scenes/Pickups/Pickup.gde",
    "size": 2592,
-   "sha256": "8ca1722416ba1fdf2c153568b7fe862fa65e06cd7afd6a406b90590220217ca9"
+   "sha256": "599001dc4d222059632c38067b32003768a48131f0e09fc3a51f8c191d6deb09"
   },
   {
    "relpath": "Scenes/Pickups/Pickup.tscn",
-   "size": 2855,
-   "sha256": "9ee0693692e37dcb566e5565c328b5adcb8872f420dc94bb6a9806c8943e10d3"
+   "size": 2854,
+   "sha256": "000ee25b95ee923e1dc2610488a56b048b6817aedc4272b7d9dda42631a3798f"
   },
   {
    "relpath": "Scenes/Pickups/Gene/GenePickup.gd.remap",
@@ -10148,12 +10148,12 @@
   {
    "relpath": "Scenes/Pickups/Portal/PortalPickup.gde",
    "size": 800,
-   "sha256": "99540830d3bcfe92e0b83379142abdd2fdbebe34bcb6d7ffaae34b8ffa4036ad"
+   "sha256": "c1e63dec0478a4b8fe55ccf784ff1a99d45e0f9570f44409e84e9258e8d33323"
   },
   {
    "relpath": "Scenes/Pickups/Portal/PortalPickup.tscn",
-   "size": 1940,
-   "sha256": "c71ad42e20d868b78a0ce82b267f615d43760ffc983dd8289c50859d55853857"
+   "size": 1933,
+   "sha256": "6b139829ee23276c033c6b247ba9a9380120890905639b352c6ead1416953a46"
   },
   {
    "relpath": "Scenes/Player/ArrowToPortalSprite.gd.remap",
@@ -10172,13 +10172,13 @@
   },
   {
    "relpath": "Scenes/Player/Player.gde",
-   "size": 10080,
-   "sha256": "849df649f4e2274853ac73aeb4d4e20b00de4e501dbd5d13b4d6bb8f6e1e8884"
+   "size": 15008,
+   "sha256": "7a5320fa90cde3e740d0d8d91af8009b0fade49db29e4392b0329914abaa5ad5"
   },
   {
    "relpath": "Scenes/Player/Player.tscn",
-   "size": 21686,
-   "sha256": "d393645567c5fce753bfa1bc158f452d6c13a91515353e1c30bdedaea150c163"
+   "size": 20951,
+   "sha256": "c0175a110ce487ef74c2467468bc272daa252eacf17990e6b75d0933893bfa19"
   },
   {
    "relpath": "Scenes/Popups/DeathScreen.gd.remap",
@@ -10188,12 +10188,12 @@
   {
    "relpath": "Scenes/Popups/DeathScreen.gde",
    "size": 3280,
-   "sha256": "37a75a2e8de7f197a73ce4f49b8ffcdd3aee531366b646eb47839b00ef814710"
+   "sha256": "ac1c0051433c4aa08029b252fca3f448bf5f2a1e90326a743a7e23f790d5beab"
   },
   {
    "relpath": "Scenes/Popups/DeathScreen.tscn",
-   "size": 3122,
-   "sha256": "377654bee465aaf65bd75b99538306c3a456f0b1d59fbe932fb87b8c1ac862e0"
+   "size": 3035,
+   "sha256": "cc9727bf164ec435b2398397622e3a090881c8aea52b3d7bec7f1703f3f5c723"
   },
   {
    "relpath": "Scenes/Popups/EscapeMenu.gd.remap",
@@ -10203,12 +10203,12 @@
   {
    "relpath": "Scenes/Popups/EscapeMenu.gde",
    "size": 11360,
-   "sha256": "7fbb5814c1cd9180fada2cf6ed6ae87b92f2ece245f0938cf57c11c107c22ef8"
+   "sha256": "7b2fb6f7c6be59424f1142151e5202dcf91d42c6cd3a3f1da2cf451169219097"
   },
   {
    "relpath": "Scenes/Popups/EscapeMenu.tscn",
-   "size": 26228,
-   "sha256": "e44aeb291407bee5e72fafc500ab16ea68c52b939d871bd13101ddd658a5afd9"
+   "size": 26241,
+   "sha256": "24dd209d6749f193f713858021fa454ea4695ba0c59492ed17129c0aa153cb74"
   },
   {
    "relpath": "Scenes/Popups/EscapeMenuStat.gd.remap",
@@ -10222,8 +10222,8 @@
   },
   {
    "relpath": "Scenes/Popups/EscapeMenuStat.tscn",
-   "size": 565,
-   "sha256": "54dbb25e12620f9c3a2a54e04839bfa143c6e4ded3d49411fb34632a1f349b0e"
+   "size": 536,
+   "sha256": "e1c931743477526e96f9f35fd19e1fe97d081f567b593e7911b3d7a190da4a98"
   },
   {
    "relpath": "Scenes/Popups/ItemTabContent.gd.remap",
@@ -10233,12 +10233,12 @@
   {
    "relpath": "Scenes/Popups/ItemTabContent.gde",
    "size": 6240,
-   "sha256": "bba60fac1a3eb438b810b9dfabe6c7d697cefb693257e8e46dceb631b8d3ab83"
+   "sha256": "ef4973b67214f7df702330f3c438c58b56b9709a802577c063ccfacd74e8207e"
   },
   {
    "relpath": "Scenes/Popups/ItemTabContent.tscn",
-   "size": 2474,
-   "sha256": "8e2523620674fd7816a147e7157244af9f794d88f8285ecb6c01be125f6076ff"
+   "size": 2456,
+   "sha256": "1df75fce1c722411c42fa368c35b19ded6a00189d9f52ff88a8a6a7a27417f77"
   },
   {
    "relpath": "Scenes/Popups/LeaderboardEntry.tscn",
@@ -10247,8 +10247,8 @@
   },
   {
    "relpath": "Scenes/Popups/LeaderboardPopup.tscn",
-   "size": 2226,
-   "sha256": "89720411059fd035cb2ce69c7b5a2daf6dcf1b582230c8e33adbff46648c6297"
+   "size": 2229,
+   "sha256": "93120917c37bf7c66f062a6979319bf41d0be58022544ca30941493a44e9f09c"
   },
   {
    "relpath": "Scenes/Popups/PopupBase.gd.remap",
@@ -10287,8 +10287,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/TextInputDialog.tscn",
-   "size": 3515,
-   "sha256": "c5b6428236637bce60032e6457591ced0c198d60c68dd0255701b90af38824cb"
+   "size": 3507,
+   "sha256": "f7607bc5823fd5b64075b71ed7d9ac63aae107313a4e6039e296636f0ea9d0ae"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/TintedConfirmationDialog.gd.remap",
@@ -10318,7 +10318,7 @@
   {
    "relpath": "Scenes/Popups/Dialogs/CharacterSelect/CharacterChanger.tscn",
    "size": 3212,
-   "sha256": "14643944300a52a9abc497dc95d7ade49688b456b5c621ae7d8b74e419246e85"
+   "sha256": "ff0cd043ba87b08620707f855d1586b638d8cfc5829aa0cded98a8209f6070f0"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/CharacterSelect/CharacterClass.gd.remap",
@@ -10327,13 +10327,13 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/CharacterSelect/CharacterClass.gde",
-   "size": 1440,
-   "sha256": "1d1f8b1017e32723df556e88676a0e58894059c28e80298341f0f893eeea13c5"
+   "size": 1456,
+   "sha256": "6e7bb6c90b358a5180ca58f990ea647d9836f4f1f232879a14fdafc8b13d9c07"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/CharacterSelect/CharacterClass.tscn",
-   "size": 1275,
-   "sha256": "d341a26f7ace4d810a40c7bfeb3465360f8d8aa88876109c7fd15334500a0760"
+   "size": 1279,
+   "sha256": "b0d4295f0373e5ce2e4210825ec41f0806df056a9f867a2677b4324da16ab154"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/CharacterSelect/CharacterCreator.gd.remap",
@@ -10348,7 +10348,7 @@
   {
    "relpath": "Scenes/Popups/Dialogs/CharacterSelect/CharacterCreator.tscn",
    "size": 3108,
-   "sha256": "09885ed387c54bf6bcb41d7ad63dbd3681b01d4165e3edb8baf63dc25b897d48"
+   "sha256": "14e4dc40644c1b74b478910e5da1df3161f0bd49a2d2244aa0eda5e160746e41"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.gd.remap",
@@ -10362,8 +10362,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSelect.tscn",
-   "size": 2794,
-   "sha256": "ac6e242b2be63ec31d4d30c6ecf4971d2651c371c45a2ccadf42b78bbf8053dc"
+   "size": 2801,
+   "sha256": "55d1f48e84f0f0ac4a1b0f127ea89db9cedec2f6f87dc7088ea4a99a3417f9ad"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.gd.remap",
@@ -10373,12 +10373,12 @@
   {
    "relpath": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.gde",
    "size": 2768,
-   "sha256": "3896f26d050854229661d4f69c3cdf591703d27d6e9d0ebb1c991f190a0ecdc6"
+   "sha256": "2125cf53bf7542fbdb676d4261bf19b5205cb4ed55e99e3f4fee458ca45345ad"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.tscn",
-   "size": 19093,
-   "sha256": "912eb91a703ad8e0f59103e85c62683a1b5304bc737b9be3816ffbb43c0794ce"
+   "size": 19096,
+   "sha256": "9d00c2aa8f20a74a3ad9c95b5db90d4c2a64e5a9612838c82534ddc8ac2ced9d"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/ConfirmWindow/ConfirmWindow.gd.remap",
@@ -10407,8 +10407,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/CraftButton.tscn",
-   "size": 683,
-   "sha256": "a4abe1a70f8566d707b25329a0218fd94549250eccb57d207e55d3568f413444"
+   "size": 654,
+   "sha256": "1b291f3192c1bec3bac0e2fb59e8012539cb258aa5a73547976f4986b2450f2e"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gd.remap",
@@ -10418,12 +10418,12 @@
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.gde",
    "size": 5248,
-   "sha256": "2f1e5be61c74053f7e7389b56793d1792f1770a7c969d2931ac8327f9db850e9"
+   "sha256": "d2270d76cd3597c05a2456bfcf56fb5915b781766e8f7675ef714e639b5503bf"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/GeneButton.tscn",
-   "size": 2183,
-   "sha256": "76c11c73df419181787c4e9a737eee5d1c89fe89d122f46bc3cf5f13509b4c68"
+   "size": 2123,
+   "sha256": "4d42ed4c8d2cd28f555a50822b5e514655b96c9b715b1a0334917565c7878461"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd.remap",
@@ -10432,13 +10432,13 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.gde",
-   "size": 7776,
-   "sha256": "6c4a0e1e13c8d5e04bf5a737b9c7fdce58a6916b14931d0b42ee52086db5981e"
+   "size": 7792,
+   "sha256": "c99e0321d4a42a9a66c58f41f08ccaff02c08f3e76ec0fcdb378118f467d77e0"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
-   "size": 15501,
-   "sha256": "af426eced29bcb310e531e7636dd4e855bd954465783c0b158a2b13c46b46bef"
+   "size": 15496,
+   "sha256": "146b40ee2f9e470d2aeaf2c5c29259b1f2b1a440773f1fce243b696122a9d32c"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.gd.remap",
@@ -10452,8 +10452,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/GeneInventoryPopup.tscn",
-   "size": 3975,
-   "sha256": "798f7aac4a17b83f896bba78c49dafb6180220498e6fb316f29bd9702b57c717"
+   "size": 3868,
+   "sha256": "75bc74bd2c7fdf9a4748a4d393782bc37adc951a90feaa55097eff80957266b4"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd.remap",
@@ -10463,12 +10463,12 @@
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gde",
    "size": 4144,
-   "sha256": "2f4f3a42e3adae3cf641a264a56c91ac6f2f22a957b306ef195a343d1189582e"
+   "sha256": "765188c90ada8afa738217458ad0c0d2882277921914b436cd61185c37b6c321"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/GeneLoadout.tscn",
-   "size": 13626,
-   "sha256": "b86fefefa339685c2ced84469370e8de5a7d85002548ddc013aa6bdd753d4a89"
+   "size": 13632,
+   "sha256": "787059c9505154bd0fb710eec8cef9e68455fb6fb02970c3addb89d3b23afef8"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/ItemList.gd.remap",
@@ -10497,8 +10497,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.tscn",
-   "size": 2617,
-   "sha256": "9b5f0d8231f22a9ac200d13665f48337cdb62824e28f727e71590a87919903c5"
+   "size": 2534,
+   "sha256": "26b1ef44f7248c04aca093003718d66b73c454bb46c59881274644f6f9b8db2d"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.gd.remap",
@@ -10512,8 +10512,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneEditor/StashTransferPopup.tscn",
-   "size": 4897,
-   "sha256": "1563912c13a2366189b147026d27293b1077ae8a37e5d1ab7ce7fcd0dbaaa4d0"
+   "size": 4894,
+   "sha256": "6103bd417e5ac13782c06b4db77ba985909e022760a470ed18e33dfe59da99d4"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneSelector/GeneOption.gd.remap",
@@ -10527,8 +10527,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneSelector/GeneOption.tscn",
-   "size": 863,
-   "sha256": "5b93b246208013b3df690945860d94b65b3c5eaaeb812ac8ce02a9cb5fafbc12"
+   "size": 836,
+   "sha256": "79805a3cfb595dcb5805afb91a0b7da49098d3965c3f8bae5185fbad553143e6"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.gd.remap",
@@ -10537,13 +10537,13 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.gde",
-   "size": 6592,
-   "sha256": "2e492428e0473812f74a53db25cd66c93fe5936f51f64b209353d16bb87b3df9"
+   "size": 6576,
+   "sha256": "6cd940107351b624f9f88baaf588494a0c4636016de2600d06b2efdc13faf8e0"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/GeneSelector/GeneSelector.tscn",
-   "size": 6006,
-   "sha256": "bb27b4a581fbc389dd066fc45f212ac43f1c0d65c4c1ce78bfed065c4b4edde3"
+   "size": 6003,
+   "sha256": "3e1e1cd7652a689bb0cd01a5c18e3dd8140d6b3857535f3cd1abae6c12cc8f11"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/Help/Help.gd.remap",
@@ -10557,8 +10557,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/Help/Help.tscn",
-   "size": 28294,
-   "sha256": "cb3c23fd10812c911e44c41ad92a91e46fe92a17513eec70193f9a3398848aaa"
+   "size": 28293,
+   "sha256": "4397bffe4d1f309be09fc4a31956dba07ec9317811a78ea4108926e1842587ae"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/HelpTip/HelpTip.gd.remap",
@@ -10572,8 +10572,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/HelpTip/HelpTip.tscn",
-   "size": 2353,
-   "sha256": "d3778dc4f8008809b89c8e0398083ee6f8c8a383ec8c08f3a2fb9ac2d4bcccea"
+   "size": 2284,
+   "sha256": "e32b199722e71039127d272043b9a66d5995afb7d9520d17f21df2fb00541d71"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/HelpTip/CraftingHelp/CraftingHelp.gd.remap",
@@ -10587,8 +10587,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/HelpTip/CraftingHelp/CraftingHelp.tscn",
-   "size": 3496,
-   "sha256": "4c06c484697ed6ef6ef81d11fac802f3c9dca6f757a8205944a21276ab6e00cd"
+   "size": 3497,
+   "sha256": "5cb9ab870ffb8f119e2496d9e290e49c8332c1f76f64c886ae1e958e4ef951df"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/HelpTip/GeneTip/GeneTip.gd.remap",
@@ -10707,8 +10707,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/Keybinds/KeybindOption.tscn",
-   "size": 643,
-   "sha256": "7eae17f8055b40ab8a0c654a5c8715a21560a4288ad4540ff08e915ddba07238"
+   "size": 618,
+   "sha256": "c0fd4dc2a19b08ea61c4514c2fe72bf854792a1b305cddab4e3916be4ff87c97"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/Keybinds/Keybinds.gd.remap",
@@ -10722,8 +10722,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/Keybinds/Keybinds.tscn",
-   "size": 4313,
-   "sha256": "d8ec5f75ab63cff0955dbf5d66ea85fee370bf4768811a21931614584a6e2552"
+   "size": 4316,
+   "sha256": "0502ce0986b4e27c06ce10e61a6e560d0f7aa6f12d0d2aa5cfc1a0323107709d"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/ModHelp/ModHelp.gd.remap",
@@ -10737,8 +10737,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/ModHelp/ModHelp.tscn",
-   "size": 3048,
-   "sha256": "6d3ee05137a270041130b61e4da06e3dabc113f00891fb63244a38296761b96d"
+   "size": 2961,
+   "sha256": "fc5f50eea461cda8b27cfb115aa4ddaec438c7401f265750015ade4f0fe7de24"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/ModHelp/ModTab.gd.remap",
@@ -10747,8 +10747,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/ModHelp/ModTab.gde",
-   "size": 1280,
-   "sha256": "653ad3e005e2fe99ac6ca025e48a2d9a65c6e80f6782925fab06ddd4c03ad277"
+   "size": 1296,
+   "sha256": "d0f47e58ac6d2073428a0707e057db8e2bc21b323aeb457bc05f5bf71aa97d67"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/ModHelp/ModTab.tscn",
@@ -10763,12 +10763,12 @@
   {
    "relpath": "Scenes/Popups/Dialogs/ModHelp/TierGroup.gde",
    "size": 2896,
-   "sha256": "9e78766f886174d42b206a81572a44302e7b5ae785e3a4a8bc43585c67d45ccc"
+   "sha256": "39fdfec82a47102f34747df4fb81a9d8761c6725886b0f73133b71f4f6d10fa3"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/ModHelp/TierGroup.tscn",
-   "size": 1102,
-   "sha256": "8f3cefce10c96cb80272e3cd75562cb729b678149d52017150f8c6ba0a554d10"
+   "size": 1099,
+   "sha256": "f9fe7c085bc794ff42caa29400c5f69ca12184845306a125eb610eb0f641d94d"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/MTXStore/MTXItem.gd.remap",
@@ -10782,8 +10782,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/MTXStore/MTXItem.tscn",
-   "size": 1865,
-   "sha256": "8572aecc34b3c290b6b58a3f97cb2e92cd84b680573135afbb9e4fd8b859eb61"
+   "size": 1872,
+   "sha256": "e1866afa05799f422f7869352176e8053734ec3fdc564271c3c9663c8f88925d"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/MTXStore/MTXStore.gd.remap",
@@ -10797,8 +10797,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/MTXStore/MTXStore.tscn",
-   "size": 2441,
-   "sha256": "0d3e901fdea3e0f7eb558ed65796c00b86b34c763b8219360b900d159e8be12e"
+   "size": 2443,
+   "sha256": "dc523c6e16f6ef01b676e504b7e8baeb5cdc60c601d40c7eb9b4333abde93a62"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/OutfitSelector/OutfitOption.gd.remap",
@@ -10827,8 +10827,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
-   "size": 13860,
-   "sha256": "751175d98f5e1b4e07e6dd6afbbc94e7eef816a8731ab2960e7fcda4cfb42390"
+   "size": 13849,
+   "sha256": "735db6dded948e75e22f54e052bca6dfc13cedd1222769821c3eb1c6e63358a1"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/PassiveTree/Edge.gd.remap",
@@ -10857,8 +10857,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/PassiveTree/PassiveNode.tscn",
-   "size": 2277,
-   "sha256": "c0c5bbec7f13c28fcf2c1c831af583a6dd83be2dbcb4be464f5a9a97b0fd155d"
+   "size": 2275,
+   "sha256": "fc82fac009c20b2d44e521dc22ee0aa0d10aa718b4a6287619db12d2acac353e"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/PassiveTree/PassiveTree.gd",
@@ -10882,13 +10882,13 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gde",
-   "size": 12560,
-   "sha256": "ac2055b25bcb310197618a88e3c389cc841b0b645da1404ff586afd7b5b6c144"
+   "size": 12544,
+   "sha256": "d15a20e5bad521caf394275f70f0004d82ea58f15ef3e021a614000eee95cf00"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.tscn",
-   "size": 12169,
-   "sha256": "0af7cc1e9556dd5c98e6d93d28290761ab928d27288c692a95544e493c53076b"
+   "size": 12195,
+   "sha256": "420df3a21a606d0c9acb5f2dd82243cbeca058232eeac56e5946de6059fc7335"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/Settings/Settings.gd.remap",
@@ -10897,13 +10897,13 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/Settings/Settings.gde",
-   "size": 4928,
-   "sha256": "e5ce72e813f9053980f46007bf2b5cf5e38a11cdf3d7dc49349a6f6e90fd40a0"
+   "size": 5248,
+   "sha256": "886eb8a0ceb6aa93b0dce548ec3c85586456b316d6a014ab868eeb9cf3e35b19"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
-   "size": 10550,
-   "sha256": "966aca6b47d89339b0aa62165bc45bc2561513d855db983b7f508109ae6abd3c"
+   "size": 11529,
+   "sha256": "4a0ed5b8f4fd1ae6a17d35d9814d34538cc7acc9c1c8ac32e7c72e029c70b777"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillLoadoutSelector/LoadOption.gd.remap",
@@ -10917,8 +10917,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillLoadoutSelector/LoadOption.tscn",
-   "size": 1076,
-   "sha256": "6bd122442a039c71b5fda221d89e1c63177aba7c0c27c715f9a0f95f4b255493"
+   "size": 1041,
+   "sha256": "24c8396367bc333995d607ff63c214c7e5fc0a5515c7ad759e84295d09530c1b"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillLoadoutSelector/SkillLoadoutSelector.gd.remap",
@@ -10932,8 +10932,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillLoadoutSelector/SkillLoadoutSelector.tscn",
-   "size": 2662,
-   "sha256": "fb995b4b51d6d4f702ced4661403b92c2c2c6c25b386f16a8823b2ee5968504a"
+   "size": 2652,
+   "sha256": "635e052ec6779b02cf31bd6eafa1d0752ec7917d15d30500bdaffde6c58bc68c"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SkillButton.gd.remap",
@@ -10942,13 +10942,13 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SkillButton.gde",
-   "size": 2464,
-   "sha256": "86119e3b4172b667fe9391ebe25293b3a67af7159253e087821593b53ba8913f"
+   "size": 2480,
+   "sha256": "3945830b17d0cbd3ac0638a3c1344a747acb876e7b31b327302e489b2acea991"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SkillButton.tscn",
-   "size": 1784,
-   "sha256": "8f078086c4030e41ffbdcafef208016d67e81b2e66988d10f3328ec1940cc1a9"
+   "size": 1724,
+   "sha256": "80dfec02e7785c5967de35ca3b087d5128b5291fd33136e214eff5bb600a40fe"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SkillConfigurator.gd.remap",
@@ -10973,12 +10973,12 @@
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SkillList.gde",
    "size": 4544,
-   "sha256": "c3538e7d5ab648f6e3fc7f21c77716aebd0fbaaa4928824a3b127475281ae8f4"
+   "sha256": "a6cc80b590bc454b0869dd1478c822692aefc9a516ff2af5492d199ffabdb8d8"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SkillList.tscn",
-   "size": 4187,
-   "sha256": "359c4438c43e70f4e683b7a7d6bf14a92953e43c2275a306dd61538d5e3c6229"
+   "size": 4194,
+   "sha256": "45566c0d4031d9f1f0cac645198f1bd52dba1b6b72af1ebad5f37defddcfd088"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SkillListOption.gd.remap",
@@ -11003,17 +11003,17 @@
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SkillSelect.gde",
    "size": 2304,
-   "sha256": "025358d8cca2435046517723864be0fefbaea371fc54a4bb7e7f92922374a6bc"
+   "sha256": "0e5b364493e629a5e5d8fee8d29562a666ba56b5c332d85f6414214ba57027dc"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SkillSelect.tscn",
-   "size": 13163,
-   "sha256": "06d9a90aa49dd1fc1d8fd7a74b64887b7ca483812201bfd9b416e4d0b1b31adc"
+   "size": 13162,
+   "sha256": "5d79dc0464e1ab0113c317c2c3da3f58cfd7f1cdb10c42a0b218bdb36cd52d68"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SkillSelectBackup.tscn",
-   "size": 19362,
-   "sha256": "63600e10f2d721dd7d1fa670155568e18d70784b56101b2aa25479106b95912c"
+   "size": 19394,
+   "sha256": "909dac545b28da57ca3b9697230097612033932166ee8a6a1df36b519901e988"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SupportButton.gd.remap",
@@ -11023,12 +11023,12 @@
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SupportButton.gde",
    "size": 2576,
-   "sha256": "b0b61f270831ccf10a3f9419550de94b2a8b52175c57bbf848edbd9783cbd4b0"
+   "sha256": "340bace41d9a0f695970b65fab4e17228b0c6610ca7ae9d4be61c306989ed5d5"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SupportButton.tscn",
-   "size": 2124,
-   "sha256": "a1bbcbb0c48eddad28b90cb0430fb8f5aa3a066ab5c5e38e8a288b20aa37d6cb"
+   "size": 2055,
+   "sha256": "4fcd27576f9d73e5c6fcd88ad56eedd1a0984b04b670c77120e2ef7af86fb0f1"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SupportList.gd.remap",
@@ -11042,8 +11042,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SupportList.tscn",
-   "size": 4579,
-   "sha256": "12c6c4f1a73bf9c1e55cfb9e67e6a0dad241212be7005b8ce8c8885f9f6f3c6a"
+   "size": 4585,
+   "sha256": "6ccafa4f6cb1a9b7c276a2b447eaadc5114d9778a9690c140867467b9a806657"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SkillSelect/SupportListOption.gd.remap",
@@ -11068,12 +11068,12 @@
   {
    "relpath": "Scenes/Popups/Dialogs/SpecializationPicker/SpecializationOption.gde",
    "size": 768,
-   "sha256": "e4b76b86f446facf6d138d400c9878483c98dd7a7f78d3f657ae41851cf5773b"
+   "sha256": "778043698ce70a42fb3b4e4533e9632866f563733bb8917409e8182dd7eca32c"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SpecializationPicker/SpecializationOption.tscn",
-   "size": 1169,
-   "sha256": "6fa24570a15c5ac473c860b6059316f4b55887ff5136fa7ea5f09da98ef61c16"
+   "size": 1168,
+   "sha256": "e8094bcac4927c5813b79780d832bd61f03f8227ca2b54b53a393e54c07ac5e7"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SpecializationPicker/SpecializationPicker.gd.remap",
@@ -11087,8 +11087,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/SpecializationPicker/SpecializationPicker.tscn",
-   "size": 1986,
-   "sha256": "e871fc24442030bc76dd4d150c3c0537b90111dd65970f0870af3d40d8ebfa56"
+   "size": 2008,
+   "sha256": "ac2e44a4df18b9a76bca37599689339e92c606d764d4b6eac904801118151903"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/StarterPicker/StarterOption.gd.remap",
@@ -11098,7 +11098,7 @@
   {
    "relpath": "Scenes/Popups/Dialogs/StarterPicker/StarterOption.gde",
    "size": 976,
-   "sha256": "e69e9ae8ff137cf2673d8380fb8d7db55f21c776d410ef5e22575d9b83540d40"
+   "sha256": "fd2ddb6463e491bd8e651ad27ebdf21305dc20cb8a83d458f542a2b89545ff77"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/StarterPicker/StarterOption.tscn",
@@ -11117,8 +11117,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/StarterPicker/StarterPicker.tscn",
-   "size": 2082,
-   "sha256": "e1e831710f7f8f5cbadc94e767fff661f277d1fa62e822a05e5d2eda64928ea8"
+   "size": 2114,
+   "sha256": "8aafe0e7ce1e50222eab62e3a6f4a971968cf471de45b1e4ee03dfcfbfe52977"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/StarterPicker/StarterSkillInfo.gd.remap",
@@ -11147,8 +11147,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/TreeSelector/LoadOption.tscn",
-   "size": 1068,
-   "sha256": "0050f1e7cc8a9ad82af38b584bec70cd45e8c54f633bad886e826e295658f99b"
+   "size": 1033,
+   "sha256": "759178b917ed7e2eedfb45ae3f293d2eae590919223295ea47c4ab34014a2670"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/TreeSelector/TreeSelector.gd.remap",
@@ -11162,8 +11162,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/TreeSelector/TreeSelector.tscn",
-   "size": 2638,
-   "sha256": "da23f8098d880259eba4a65e2a91642531ec9934d815510a4c0b7e170386d909"
+   "size": 2628,
+   "sha256": "1045b9d2ccf4f58189df51d9892f7f6d8c7ed8b712888e17f033c1e01b3181a4"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/UniqueHelp/UniqueHelp.gd.remap",
@@ -11177,8 +11177,8 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/UniqueHelp/UniqueHelp.tscn",
-   "size": 2201,
-   "sha256": "e643081441b1b2533196b29234463a6e943ab72260c483c3c4e3fadb03b9401d"
+   "size": 2138,
+   "sha256": "ab54855900c9ddf9ee6d376ceed69a3ad3b0f63a655caf5f108d9765095feab2"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/UniqueHelp/UniqueItem.gd.remap",
@@ -11188,12 +11188,12 @@
   {
    "relpath": "Scenes/Popups/Dialogs/UniqueHelp/UniqueItem.gde",
    "size": 1456,
-   "sha256": "9f84ac4e80afa2f7220eb9782ed64804050b8782d52ea80c7f0d855de96748a7"
+   "sha256": "555de1cb9328d2b68f5e0cb4892e59fe42d0a806a990d8bbfbd560e154e31113"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/UniqueHelp/UniqueItem.tscn",
-   "size": 1539,
-   "sha256": "046b5ce227d71a5a2ff7a71b5663e6dbeb7bec156b464400f523f8f8423b8ccf"
+   "size": 1542,
+   "sha256": "5a99c30804870655363d18d439f2de62d59a136d8e5a8e714c0ac9258f1c7cb8"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/UniqueHelp/UniqueModRange.gd.remap",
@@ -11232,13 +11232,13 @@
   },
   {
    "relpath": "Scenes/Popups/Dialogs/WorldMap/MapNode.gde",
-   "size": 4624,
-   "sha256": "91ef2622682f7370589fa446d56e238be99f25f1d3e413e616db19b1a192e4e6"
+   "size": 4640,
+   "sha256": "b31a43eb1006839a3cb27e6674d549008615b241e4cccc6c2b7864b3894298b1"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/WorldMap/MapNode.tscn",
-   "size": 4418,
-   "sha256": "72e04224b85993d0869c97ed221658109604c5eb2f78fc8c5c0f06b2325e21b3"
+   "size": 4415,
+   "sha256": "e81f782321814f4445816a80698b61c5ad4888b2a29e50b7f38f0563024a35ed"
   },
   {
    "relpath": "Scenes/Popups/Dialogs/WorldMap/WorldMapContainer.gd.remap",
@@ -11263,7 +11263,7 @@
   {
    "relpath": "Scenes/Popups/Dialogs/WorldMap/WorldMapPopup.tscn",
    "size": 60279,
-   "sha256": "60b1784503374af1f6c83e896e07398274ae93970936b2adc23a23583a244ccc"
+   "sha256": "55f962fad3e2613da15a01332fd855500fea5d92e79ace29336bc5d83aae06ac"
   },
   {
    "relpath": "Scenes/Popups/Unlocks/CharacterUnlockItem.gd.remap",
@@ -11277,8 +11277,8 @@
   },
   {
    "relpath": "Scenes/Popups/Unlocks/CharacterUnlockItem.tscn",
-   "size": 1000,
-   "sha256": "54d139eba87581a482da4d33470aba0abaafdc5bd951c7203bd469785d1b9046"
+   "size": 977,
+   "sha256": "f33093f2aee8bc0884aa8fa6560cf9c35f63855961d979c49df4ed7536045659"
   },
   {
    "relpath": "Scenes/Popups/Unlocks/LevelUnlockItem.gd.remap",
@@ -11292,8 +11292,8 @@
   },
   {
    "relpath": "Scenes/Popups/Unlocks/LevelUnlockItem.tscn",
-   "size": 770,
-   "sha256": "6bd7cf23ff2bc5dd71e6c9fc8c1f57ae2830c41fc5488a086e52939b97bd0030"
+   "size": 756,
+   "sha256": "8422392c7d9860b80207eb67cdb781cf4362d932fb3e0223931ba6df3c9b89f1"
   },
   {
    "relpath": "Scenes/Projectiles/Projectile.gd.remap",
@@ -11977,8 +11977,8 @@
   },
   {
    "relpath": "Scenes/Skills/GenericSkill.gde",
-   "size": 49328,
-   "sha256": "72ad17c4aa545ab2de05a6af594042c679985e913da24472473a646235edce24"
+   "size": 49424,
+   "sha256": "fb5bde45e9b1b7fa4700a7a08908b871fdec198fdec91e25b595fd84a20bbb48"
   },
   {
    "relpath": "Scenes/Skills/AcquiredSkills/AcquiredAura.gd.remap",
@@ -12107,8 +12107,8 @@
   },
   {
    "relpath": "Scenes/Skills/Auras/AmplificationAura/AmplificationAura.tscn",
-   "size": 1099,
-   "sha256": "ba390b31a595dfd5e4812fd4cc4968f3506739736bdb59fc9e8cdfe5da0a8eb0"
+   "size": 1105,
+   "sha256": "72758f1ac62e5e5d5f5da9d0052db88ce260417f86160507af09faee7646b835"
   },
   {
    "relpath": "Scenes/Skills/Auras/ColdAura/ColdAura.gd.remap",
@@ -12122,8 +12122,8 @@
   },
   {
    "relpath": "Scenes/Skills/Auras/ColdAura/ColdAura.tscn",
-   "size": 1060,
-   "sha256": "faed5e6f6340860ec0812b6402fd72dbb0f0222099b900d230ad7067987be7b4"
+   "size": 1059,
+   "sha256": "ad423cf06ef0b321ec764f7dd0190b4de48b2c09d95b20df5884057c1fb6f1ef"
   },
   {
    "relpath": "Scenes/Skills/Auras/DoomTether/DoomTether.gd.remap",
@@ -12152,8 +12152,8 @@
   },
   {
    "relpath": "Scenes/Skills/Auras/DoTAura/DoTAura.tscn",
-   "size": 1054,
-   "sha256": "82b1de23e35b229f125b608b7550e46637d7ca370c9d00a6b8af37cdf0f0677f"
+   "size": 1056,
+   "sha256": "379d27486fdfa2347acc9d25dd4408e7ff3d05512ca12d8e546ba79a0f467099"
   },
   {
    "relpath": "Scenes/Skills/Auras/Elusiveness/Elusiveness.gd.remap",
@@ -12167,8 +12167,8 @@
   },
   {
    "relpath": "Scenes/Skills/Auras/Elusiveness/Elusiveness.tscn",
-   "size": 991,
-   "sha256": "65b6f4f8914c4d57c1624f320d0f40e4d33cac3479fb6326172a8e1578c3b817"
+   "size": 995,
+   "sha256": "66b86a72f7f724aac117f3fd41457581cbe831e376304da2b1338098e53f6cd8"
   },
   {
    "relpath": "Scenes/Skills/Auras/FireAura/FireAura.gd.remap",
@@ -12182,8 +12182,8 @@
   },
   {
    "relpath": "Scenes/Skills/Auras/FireAura/FireAura.tscn",
-   "size": 1060,
-   "sha256": "85c8f5f4c64dc0c842520654f937e7f46eed1c6f7f544847e4a6c8462dff01ff"
+   "size": 1058,
+   "sha256": "17a0e95d77df2cf8d2770ba733815f57a50966d99630d3f7875d348114ad3565"
   },
   {
    "relpath": "Scenes/Skills/Auras/FlameTether/FlameTether.gd.remap",
@@ -12212,8 +12212,8 @@
   },
   {
    "relpath": "Scenes/Skills/Auras/Honing/Honing.tscn",
-   "size": 1045,
-   "sha256": "6e0b9c2d2a086b1601090405e903e37728200414ac8c5023b8ede4032ffe98d5"
+   "size": 1044,
+   "sha256": "6c3684ec73f9998ad2ee583b73e7c6c2b9127722b9591fb692ccebc7ab5c1ce7"
   },
   {
    "relpath": "Scenes/Skills/Auras/LightningAura/LightningAura.gd.remap",
@@ -12227,8 +12227,8 @@
   },
   {
    "relpath": "Scenes/Skills/Auras/LightningAura/LightningAura.tscn",
-   "size": 1090,
-   "sha256": "f63aa16bda179d3d095c0fe14c910a9f7ff46f993cf99ec09f8593009686eb74"
+   "size": 1089,
+   "sha256": "5bd1dc3490e25d606ce55b533d2463b7eef4bb8b60484c63acbce9de38e89982"
   },
   {
    "relpath": "Scenes/Skills/Auras/PhysicalAura/PhysicalAura.gd.remap",
@@ -12242,8 +12242,8 @@
   },
   {
    "relpath": "Scenes/Skills/Auras/PhysicalAura/PhysicalAura.tscn",
-   "size": 1084,
-   "sha256": "e68c934cb5be965b5e9d7b57e1bb3aed15ec12e09917843a396fe96fff1ddc79"
+   "size": 1085,
+   "sha256": "2d9776e7b188dd31c2ead22c8ff3a165880945663e78b98a370b0b2053eef8ae"
   },
   {
    "relpath": "Scenes/Skills/Auras/Regeneration/Regeneration.gd.remap",
@@ -12257,8 +12257,8 @@
   },
   {
    "relpath": "Scenes/Skills/Auras/Regeneration/Regeneration.tscn",
-   "size": 994,
-   "sha256": "3a5eef914383edcd1a876f66130965d83d5a40a74d32d60158ec817f9cdbc073"
+   "size": 999,
+   "sha256": "9e29d3c50810a8c533913c8e11b550b61afdd0b39f50305e0c96d24ad5ecd94f"
   },
   {
    "relpath": "Scenes/Skills/Auras/Resilience/Resilience.gd.remap",
@@ -12272,8 +12272,8 @@
   },
   {
    "relpath": "Scenes/Skills/Auras/Resilience/Resilience.tscn",
-   "size": 984,
-   "sha256": "b5f2cde8387129c09fe3ba5f051d254c9e623b59c918706bf0518fbeccf11fd4"
+   "size": 987,
+   "sha256": "e6f121348a81e6c36681501273df4e2f9595f4644e342d5a90d63b7b3b173f32"
   },
   {
    "relpath": "Scenes/Skills/Auras/Rush/Rush.gd.remap",
@@ -12302,8 +12302,8 @@
   },
   {
    "relpath": "Scenes/Skills/Auras/Sturdiness/Sturdiness.tscn",
-   "size": 986,
-   "sha256": "adc674a9462930bbced765da2e166c15314bb2ef32c81c6d64e02f80b8c58de8"
+   "size": 989,
+   "sha256": "8a69d0bbdc7bea6230669dd184cd76fe1a7ee24ddc66f0ede1afa8bc4d6b79f0"
   },
   {
    "relpath": "Scenes/Skills/Auras/ToxicAura/ToxicAura.gd.remap",
@@ -12317,8 +12317,8 @@
   },
   {
    "relpath": "Scenes/Skills/Auras/ToxicAura/ToxicAura.tscn",
-   "size": 1066,
-   "sha256": "b61c714ab22a5972271da30f046f57c2b2fda192b06fcf703009288fafd18a88"
+   "size": 1063,
+   "sha256": "ec09f7f5e693d39641d3b261b45d3a4c1910e5681b45f8917542375c651d97ff"
   },
   {
    "relpath": "Scenes/Skills/MobSkills/MobSkill.gd.remap",
@@ -12887,8 +12887,8 @@
   },
   {
    "relpath": "Scenes/Skills/Playable/Shotgun/Shotgun.tscn",
-   "size": 537,
-   "sha256": "119f8c9a73e2f00072c11eb2ade569389f686401bfa8409d9eee36da1660f189"
+   "size": 521,
+   "sha256": "a6fa25d52d24437c61a4f14b95b5a71794df970fcb8ff2380fa6db34aa6b7450"
   },
   {
    "relpath": "Scenes/Skills/Playable/ShrapnelBomb/ShrapnelBomb.gd.remap",
@@ -12992,8 +12992,8 @@
   },
   {
    "relpath": "Scenes/StatusEffects/Boons/PrecisionBoon.tscn",
-   "size": 434,
-   "sha256": "a5263105eb981e4c2d482f5563ee21eb1667adc2e70431f93c63b224333f31a1"
+   "size": 423,
+   "sha256": "8eeeb9a60464896250e30c8b0d706689a2eede52d0d294bed3c8ff5b0139a498"
   },
   {
    "relpath": "Scenes/StatusEffects/Boons/SwiftnessBoon.gd.remap",
@@ -13007,8 +13007,8 @@
   },
   {
    "relpath": "Scenes/StatusEffects/Boons/SwiftnessBoon.tscn",
-   "size": 434,
-   "sha256": "da508382b99b787d6eb5366432306636bed16d95a67e27b2cff151607d3a0391"
+   "size": 423,
+   "sha256": "c7d64385d97d4af5aef9a599320950b2c073a956266733ceaea4b438b37a20bc"
   },
   {
    "relpath": "Scenes/StatusEffects/Boons/ToughnessBoon.gd.remap",
@@ -13022,8 +13022,8 @@
   },
   {
    "relpath": "Scenes/StatusEffects/Boons/ToughnessBoon.tscn",
-   "size": 435,
-   "sha256": "0b9f3f5550dda1f9eda6bbe10d580db8ab015820899fa132b6d4230370556ed3"
+   "size": 424,
+   "sha256": "cba8b2ac0f21b6a2a717626cf7bf0ef3afa1511c16d80424fa0cb41595ef04d8"
   },
   {
    "relpath": "Scenes/StatusEffects/Curses/Bane.gd.remap",
@@ -13447,8 +13447,8 @@
   },
   {
    "relpath": "Scenes/StatusEffects/Keystones/GrowingPain.tscn",
-   "size": 408,
-   "sha256": "8cfac7ccfe9cd1a9ae83f7fc9b20ad46074d25d43beba294650cc88252a60832"
+   "size": 396,
+   "sha256": "d0ba733fb7eae6e3578387c2ce1f64233624d547c9889d3faaa72da786d67fb6"
   },
   {
    "relpath": "Scenes/StatusEffects/Keystones/HardenedFlesh.gd.remap",
@@ -13462,8 +13462,8 @@
   },
   {
    "relpath": "Scenes/StatusEffects/Keystones/HardenedFlesh.tscn",
-   "size": 387,
-   "sha256": "e3a72de310a547a0c4edbac1d2f77b8b9087d23b26f802751968d108d58551d0"
+   "size": 378,
+   "sha256": "812a43c758fa1e73b93c3dc59b54fbb15a0a014c252f4ed80051cb985bfc12a5"
   },
   {
    "relpath": "Scenes/StatusEffects/Keystones/KillMomentum.gd.remap",
@@ -13477,8 +13477,8 @@
   },
   {
    "relpath": "Scenes/StatusEffects/Keystones/KillMomentum.tscn",
-   "size": 396,
-   "sha256": "6a1caa72dd612f37bbb919d8708123cfc827b5b4901698174d48a56d9c0196c3"
+   "size": 388,
+   "sha256": "8a3cbc335abfefa72cb50568da4fe2609ec1edf638f19c99767eb50e3c12d1f2"
   },
   {
    "relpath": "Scenes/StatusEffects/Keystones/PhantomShield.gd.remap",
@@ -13507,8 +13507,8 @@
   },
   {
    "relpath": "Scenes/StatusEffects/Keystones/RegenerativeFleshEffect.tscn",
-   "size": 428,
-   "sha256": "232c9b9ba850c53085cdf11613c23a9cc523f23461f5025af80fb35756f19020"
+   "size": 423,
+   "sha256": "21250e6b3b2a27797d1fdd1115b84fc7c3c9f5594de36baeb195a34e2a31dda7"
   },
   {
    "relpath": "Scenes/StatusEffects/Keystones/SpikeArmor.gd.remap",
@@ -13582,8 +13582,8 @@
   },
   {
    "relpath": "Scenes/StatusEffects/Keystones/VampiricSkin.tscn",
-   "size": 399,
-   "sha256": "321ec658d651ab5c055c267db1fca88183e0a246b0d03ec4036b351e0e7e85dd"
+   "size": 386,
+   "sha256": "5eb7e23b262b01d373c992d1757904ab0eb5677db1d26dece11d898a47cc3271"
   },
   {
    "relpath": "Scenes/StatusEffects/Pickups/Frenzy.gd.remap",
@@ -13627,8 +13627,8 @@
   },
   {
    "relpath": "Scenes/StatusEffects/Skills/BondedElectrons.tscn",
-   "size": 440,
-   "sha256": "d7afb5585728c81f636d485410a47e61e22af11bb535270ab4ace7a05a277cfb"
+   "size": 444,
+   "sha256": "25588ed13ce65b9a6dbe927e2dc2654d427f8b5731d5e74a0f3bc4761d9f690a"
   },
   {
    "relpath": "Scenes/StatusEffects/Skills/ChainLightning.gd.remap",
@@ -13768,12 +13768,12 @@
   {
    "relpath": "Scenes/Tooltips/GeneTooltip/GeneInfo.gde",
    "size": 2304,
-   "sha256": "89148e82d7bb86016e9d92d64222395622ebaff63fbee9a3b402be0bdca332db"
+   "sha256": "0f488d5a39ce9870dc5bd1f4b4dd8647153b09adbacd79285ef57019a982bb0c"
   },
   {
    "relpath": "Scenes/Tooltips/GeneTooltip/GeneInfo.tscn",
-   "size": 2153,
-   "sha256": "7e4fb881f1276f85abbd409f6db8da3d22367ee813e18c07309d96edea8c5558"
+   "size": 2071,
+   "sha256": "14c71661d8767dc2abb898d81f0a3aa0d7bca19c7a4d142a2b108bc5d0a8737c"
   },
   {
    "relpath": "Scenes/Tooltips/GeneTooltip/GeneTooltip.gd.remap",
@@ -13798,7 +13798,7 @@
   {
    "relpath": "Scenes/Tooltips/SkillTooltip/SkillTooltip.gde",
    "size": 6224,
-   "sha256": "fd83d335635c051a95021e436e85dc30841f83bc9a257f7108d0c3e81cce398b"
+   "sha256": "2370f7165725da5810a38bdda7fc6d89dcc19522cbf84e2962827d2bde200182"
   },
   {
    "relpath": "Scenes/Tooltips/SkillTooltip/SkillTooltip.tscn",
@@ -13812,13 +13812,13 @@
   },
   {
    "relpath": "Scenes/UI/ModItem.gde",
-   "size": 3904,
-   "sha256": "1f2e23ae1d090868f6d500d4d80633f1a93a37f9d2dd15d79db24078e4bda812"
+   "size": 3888,
+   "sha256": "a323e751a74273e51e753b02de578cf19b3af75e0e6f137998c4494adf5da8f2"
   },
   {
    "relpath": "Scenes/UI/ModItem.tscn",
-   "size": 1355,
-   "sha256": "7f45d5420699505c23efa01b1d07308be39b594aaa4c36598821863e682bc352"
+   "size": 1301,
+   "sha256": "3a292cd82f8124a18e8339a1b9b0a4e2ae35dda9e4aeae4fb98716e61dd8166c"
   },
   {
    "relpath": "Scenes/UI/Notice.gd.remap",
