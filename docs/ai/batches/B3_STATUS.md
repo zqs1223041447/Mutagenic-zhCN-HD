@@ -3,7 +3,7 @@
 > **Batch**：`B3`
 > **状态**：`B3-S5-FIX PROMOTED Baseline 3B6427B3` — 用户 2026-08-21 显式批准“批准”后已晋升 Baseline；候选 `3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727` (103,338,436B 12 mods/57 patches 含 b3-cp1 zoom) 经 `resolve 57→apply 57/5058→compile_declared 11/22→pack 3744→pck 3744/3743+1补→embed pck_start 40545280→verify 3744/3744→probe_boot 20s PASS`，`HUMAN S5 9/9 PASS`（含 PLAY→World 加载已验证）。原 B3-P3 `3127D394` 已被取代；`S3 BLOCKED` 为预期（isolated APPDATA 无 harness load trigger，与 B3-P3 一致，持久化经 P7-FIX 已证）。Tag 预备 `b3-s5-fix-3B6427B3`（未推送，需终审后创建）。
 > **Integration line**：`agent/kinetic-arcane-remaster-foundation`
-> **B3 集成 HEAD**：`48a82d7`（P0: f1546f4；P1: 9be7fc0；P2: d86cf12；P3: c1b8262→收口 9d35926→分开验收 be4da3d→S5 修复 e326dc0→killer 单行 6c8d23b→缩进修正 48a82d7→新候选 3B6427B3）
+> **B3 集成 HEAD**：`ba55e82`（P0: f1546f4；P1: 9be7fc0；P2: d86cf12；P3: c1b8262→收口 9d35926→分开验收 be4da3d→S5 修复 e326dc0→killer 单行 6c8d23b→缩进修正 48a82d7→新候选 3B6427B3→ ba55e82 promote(baseline): B3-S5-FIX 3B6427B3）
 > **Planning/prep base**：`batch/b3-anchor` = `68bb1c1`（P0）；`batch/b3-p1-anchor` = `de039a6`（P1）；`batch/b3-p2-anchor` = `60f9232`（P2）；`batch/b3-p3-anchor` = `8e28662`（P3）
 > **任务合同**：`docs/ai/batches/B3_PLAN.md`
 > **来源**：GPT 评审（2026-08-20，会话 6a83bc24）：B2-I1 判定"有条件 PASS"；B3-P0 评审 PASS；B3-P1 评审 PASS（采纳 GITHUB_RUN_PASS）；B3-P2 评审 PASS；批准 B3-P3 Promotion Candidate Validation Wave；**终审（评审 #4）：B3-P3 工程批次 PASS，Promotion 晋升资格未满足（S2_PROMOTION=HUMAN_REQUIRED/DEFERRED）→ B3 Release Hold**。Combat Polish 调参保持 WAITING_HUMAN_S5。
@@ -90,6 +90,8 @@
 - 证据索引: status.json `trusted_baselines.b3_s5_fix_promotion_candidate` + `evidence.b3_s5_fix_*` + `gate_scope.promotion_3B6427B3`
 - 文件保留: `10_logs/b3-s5-fix-20260820/candidate/` 全目录保留；未改动 `00_original/03_raw/04_recovered`
 - 下一步: Tag `b3-s5-fix-3B6427B3` 待终审后 `git tag` 并推送；PR #1 仍 Draft，待 Release 流程合并
+
+> **governance_hold**：`promotion_recorded_governance_hold` — 详见 `releases/b3-s5-fix-3B6427B3.json`（`status=promotion_recorded_governance_hold`，S0/S1 声称 PASS 待归档验证、S3 BLOCKED 预期、HUMAN 9/9 待按 `B3_HUMAN_ACCEPTANCE_PROTOCOL` 重绑、`archive_locator` 待双副本物理化）。`trusted_baselines` SHA 不变但 governance 视角为非 valid_baseline，待 `10_logs/b3-s5-fix-20260820/*` 归档及重绑后方可解除 hold。
 
 ## B2 遗留待办（更新）
 

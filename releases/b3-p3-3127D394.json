@@ -1,0 +1,73 @@
+{
+  "release_id": "b3-p3-3127D394",
+  "git_commit": "8e28662ea7b6d1b69294ac9204aafef6f15bbbdd",
+  "candidate_sha256": "3127D3948BCEEC66057F6D2359EB2E47C0FA77938F1153F41AA2C348E2FF7314",
+  "candidate_exe_sha256": "3127D3948BCEEC66057F6D2359EB2E47C0FA77938F1153F41AA2C348E2FF7314",
+  "candidate_size": 103336292,
+  "candidate_exe_bytes": 103336292,
+  "mods": 11,
+  "patches": 49,
+  "chain": {
+    "root": "mods/b3-p2-x1-promotion-aggregate/mod.json (早期 11-mods 版本，未含 b3-cp1)",
+    "resolution_order": [
+      "feat-tce",
+      "feat-tce-context",
+      "k1-player-response",
+      "k2-hit-reaction",
+      "k4-audio-foundation",
+      "p7-fix-persistence",
+      "b2-x1-combat-event-spine",
+      "b2-x4-kill-feel",
+      "b2-x5-camera-impulse",
+      "b2-x6-combat-audio-layers",
+      "b3-p2-x1-promotion-aggregate"
+    ],
+    "patch_count": 49,
+    "note": "此为 B3-P3 晋升时记录的 11/49 链，来源 docs/ai/audits/B3-P3-X0_PROMOTION_BUILD.json 与 B3_PROMOTION_EVIDENCE_PACKAGE.json mod_chain 节"
+  },
+  "game_fingerprint": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "toolchain": {
+    "python": {
+      "version": "Python 3.11.15",
+      "sha256": "eca0e031860ab595a01989831cd7c35ba47ea2b93574103fd1fa68dde3a984b8",
+      "source": "tools.lock.json tools.python"
+    },
+    "gdre": {
+      "version": "Godot RE Tools v2.6.4",
+      "sha256": "88d6fbccfb7e5bacca7d248c5171fe66bbef15d78e0d7f6287c2f44e78aa9eaf",
+      "source": "tools.lock.json tools.gdre"
+    },
+    "git": {
+      "version": "git version 2.55.0.windows.3",
+      "source": "tools.lock.json tools.git"
+    }
+  },
+  "modset_hash": "derived_from_parity_pre_b3cp1",
+  "evidence_ref": [
+    "docs/ai/audits/B3-P3-X0_PROMOTION_BUILD.json",
+    "docs/ai/audits/B3-P3-X1_PROMOTION_GATES.json",
+    "docs/ai/audits/B3_PROMOTION_EVIDENCE_PACKAGE.json",
+    "10_logs/b3-p3-x0-promotion-20260820/candidate/Mutagenic.exe"
+  ],
+  "archive_locator": "G:\\Mutageni-Archive\\releases\\b3-p3-3127D394\\ (historical, superseded)",
+  "status": "superseded",
+  "superseded_by": "3B6427B3",
+  "superseded_by_full": "3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727",
+  "superseded_by_release": "b3-s5-fix-3B6427B3",
+  "reason": "b3-cp1 8 zoom patches + S5 fix：新增 camera_zoom 视野缩放设置（GameState 0.5 默认/Settings 0.35-0.8 滑块/Player 实时应用）及 3 项 HUMAN S5 修复（kill-pulse disable、audio lifecycle guard、camera zoom），由 11/49 升级至 12/57；旧候选不再作为 Human Review Candidate",
+  "s_gates_at_supersede": {
+    "s0": "PASS (3744/3744)",
+    "s1": "PASS (20s)",
+    "s2": "BLOCKED (预期，无 harness)",
+    "s3": "PASS (a7ca81b8 双轮一致)",
+    "s4": "PASS (32/32)",
+    "human_s5": "DEFERRED_BY_USER (1 PASS/2-8 DEFERRED)"
+  },
+  "not_proven_at_supersede": [
+    "S2 正式战斗路径待 HUMAN 实机",
+    "steam_cloud",
+    "s1 长稳"
+  ],
+  "history_note": "此记录用于治理闭环：保留 3127D394 的真实构建证据（103336292B，Build 20260820-X0-3127D394，pck_start 40545280），但标记为 superseded，避免与新候选 3B6427B3 混淆；新候选状态见 releases/b3-s5-fix-3B6427B3.json (promotion_recorded_governance_hold)"
+}

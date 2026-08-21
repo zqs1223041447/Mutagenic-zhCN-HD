@@ -222,5 +222,68 @@
     }
   },
   "proves": "Promotion Evidence Package 组装完成：Promotion Candidate（sha 3127D394…/103336292B/Build 20260820-X0-3127D394）来自 X0 构建证据；MOD chain（11 mods/49 patches）与 parity（32/32）引用 B3-P2-X1_PARITY_REPORT.json 真实值；S0–S4 门禁结果引用 B3-P3-X1_PROMOTION_GATES.json（S0/S1/S3/S4 PASS、S2 如实 BLOCKED）；S3 persistence 已在 Promotion Candidate 重跑 PASS（语义指纹 a7ca81b8…双轮一致）；CI 汇总引用真实 run id（32355579771 等，全 success）；未验证项逐条带来源；HUMAN S5 checklist 绑定 Promotion Candidate SHA（3127D394…）状态 WAITING",
-  "not_proven": "S2 基础战斗路径正式冒烟（BLOCKED 待 HUMAN S5 实机）；Steam 云存档分支；HUMAN S5 八项未获完整人工验收（2–8 DEFERRED_BY_USER，1 PENDING_FULL_TEST）；最终 baseline promotion 未批准"
+  "not_proven": "S2 基础战斗路径正式冒烟（BLOCKED 待 HUMAN S5 实机）；Steam 云存档分支；HUMAN S5 八项未获完整人工验收（2–8 DEFERRED_BY_USER，1 PENDING_FULL_TEST）；最终 baseline promotion 未批准",
+  "addendum": {
+    "added_at": "2026-08-21",
+    "added_by": "B3 治理闭环 fixer (agent/kinetic-arcane-remaster-foundation ba55e82)",
+    "purpose": "不改写历史 11/49 已验证事实，仅追加新候选说明，避免破坏历史证据；治理诊断 PROMOTION_RECORDED_BUT_GOVERNANCE_HOLD 要求的新候选绑定在此 addendum 中说明，需新 package 另行组装",
+    "original_binding": {
+      "candidate_sha256": "3127D3948BCEEC66057F6D2359EB2E47C0FA77938F1153F41AA2C348E2FF7314",
+      "candidate_bytes": 103336292,
+      "mods": 11,
+      "patches": 49,
+      "build_id": "20260820-X0-3127D394",
+      "status": "历史已验证事实保持不变，见本文件 sections.promotion_candidate / mod_chain / gates_s0_s4 / human_s5_checklist",
+      "parity_ref": "docs/ai/audits/B3-P2-X1_PARITY_REPORT.json 历史版本（当时 head 750865b 等）"
+    },
+    "new_candidate": {
+      "candidate_sha256": "3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727",
+      "candidate_size": 103338436,
+      "mods": 12,
+      "patches": 57,
+      "build_id": "b3-s5-fix-20260820-3B6427B3",
+      "delta_vs_original": "b3-cp1 8 zoom patches（GameState camera_zoom_default/set_camera_zoom、Settings zoom_handler/on_settings_change_zoom/zoom_slider_nodes、Player apply_func/ready_apply/settings_connect）+ S5 三修复（b2-x5 blocked_kill_pulses、b2-x6 killer 守卫、b3-cp1 zoom），链从 11/49 → 12/57",
+      "chain_root": "mods/b3-p2-x1-promotion-aggregate/mod.json (含 b3-cp1-camera-zoom-setting)",
+      "resolution_order": [
+        "feat-tce",
+        "feat-tce-context",
+        "k1-player-response",
+        "k2-hit-reaction",
+        "k4-audio-foundation",
+        "p7-fix-persistence",
+        "b2-x1-combat-event-spine",
+        "b2-x4-kill-feel",
+        "b2-x5-camera-impulse",
+        "b2-x6-combat-audio-layers",
+        "b3-cp1-camera-zoom-setting",
+        "b3-p2-x1-promotion-aggregate"
+      ]
+    },
+    "parity": {
+      "report": "docs/ai/audits/B3-P2-X1_PARITY_REPORT.json",
+      "head_sha": "095d57c06ba80fd3a0dc500b1b80e9c0abf2f8db (当前 HEAD，更新于 2026-08-21)",
+      "legacy_ref": "derived_from_parity_5689b44（任务占位引用，实际以 095d57c 为准，需由 resolve_mod_chain 复算 modset_hash）",
+      "checks": "32/32 PASS",
+      "shared_formal_patch_count": 49,
+      "promotion_minus_validation": "8 zoom units（b3-cp1）",
+      "validation_minus_promotion": "2 units（k5 harness + ENABLE_TEST_ZONE）"
+    },
+    "governance_hold": {
+      "status": "promotion_recorded_governance_hold",
+      "reason": "releases/b3-s5-fix-3B6427B3.json 中新候选标记为 governance_hold，非 valid_baseline；S3/HUMAN 证据未物理化（10_logs/b3-s5-fix-20260820/* gitignored）、steam_cloud 未验证、s1 长稳未证、HUMAN 9/9 需重绑",
+      "s_gates": {
+        "s0": "CLAIMED_PASS_NOT_VERIFIABLE",
+        "s1": "CLAIMED_PASS_NOT_VERIFIABLE",
+        "s2": "BLOCKED_EXPECTED",
+        "s3": "BLOCKED_NEEDS_RERUN",
+        "s4": "PASS",
+        "human_s5": "CLAIMED_9_9_NEEDS_REBIND"
+      },
+      "releases_ref": "releases/b3-s5-fix-3B6427B3.json",
+      "superseded_ref": "releases/b3-p3-3127D394.json (status superseded, superseded_by 3B6427B3)"
+    },
+    "human_s5_note": "原 bundle human_s5_checklist 绑定 3127D394 WAITING 状态保持历史；新候选 HUMAN 9/9 PASS 声称来自 10_logs/s5-human-feedback-20260820.md（2026-08-21）但未归档，需按 docs/ai/batches/B3_HUMAN_ACCEPTANCE_PROTOCOL.md §1.1 重绑后方可写入新 evidence package；本 addendum 不伪造 PASS",
+    "next_package": "需基于 3B6427B3 重新组装新的 Promotion Evidence Package（新 candidate / 12/57 / 新 HUMAN 验收 / 新 archive 双副本），本文件仅作 addendum 指向，不替代新 package",
+    "modset_hash_note": "modset_hash 在 releases/b3-s5-fix-3B6427B3.json 中暂写 derived_from_parity_5689b44，需由 scripts/patch/resolve_mod_chain.py 复算后回填；此处 parity 5689b44 为任务占位，实际报告为 095d57c"
+  }
 }
