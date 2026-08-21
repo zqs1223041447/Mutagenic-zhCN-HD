@@ -1,9 +1,9 @@
 # B3 协调状态视图
 
 > **Batch**：`B3`
-> **状态**：`B3-P3_RELEASE_HOLD`（B3-P0 四任务 + B3-P1 三任务 + B3-P2 三任务 + **B3-P3 Promotion Candidate Validation Wave** 全部集成；check_all 13/13 PASS；GPT 终审 B3-P3 工程批次 PASS，Promotion 资格未满足 → 冻结 Human Review Candidate，进入 Release Hold，不启动新 gameplay 批次）
+> **状态**：`B3-S5-FIX (Human Review Candidate 调参波)` — 三项 S5 人工反馈修复已声明式验证完成并提交 `e326dc0`；待构建新 candidate 复测。原 B3-P3 为 `B3-P3_RELEASE_HOLD`（四任务 + 三任务 + 三任务 + Promotion Candidate Validation Wave 全部集成；check_all 13/13 PASS；GPT 终审 B3-P3 工程批次 PASS，Promotion 资格未满足 → 冻结 Human Review Candidate 3127D394）
 > **Integration line**：`agent/kinetic-arcane-remaster-foundation`
-> **B3 集成 HEAD**：`9d35926`（P0: f1546f4；P1: 9be7fc0；P2: d86cf12；P3: X0→X1→X2 依序合并 c1b8262 → 状态/证据收口 9d35926）
+> **B3 集成 HEAD**：`e326dc0`（P0: f1546f4；P1: 9be7fc0；P2: d86cf12；P3: c1b8262→收口 9d35926→分开验收 be4da3d→S5 修复 e326dc0）
 > **Planning/prep base**：`batch/b3-anchor` = `68bb1c1`（P0）；`batch/b3-p1-anchor` = `de039a6`（P1）；`batch/b3-p2-anchor` = `60f9232`（P2）；`batch/b3-p3-anchor` = `8e28662`（P3）
 > **任务合同**：`docs/ai/batches/B3_PLAN.md`
 > **来源**：GPT 评审（2026-08-20，会话 6a83bc24）：B2-I1 判定"有条件 PASS"；B3-P0 评审 PASS；B3-P1 评审 PASS（采纳 GITHUB_RUN_PASS）；B3-P2 评审 PASS；批准 B3-P3 Promotion Candidate Validation Wave；**终审（评审 #4）：B3-P3 工程批次 PASS，Promotion 晋升资格未满足（S2_PROMOTION=HUMAN_REQUIRED/DEFERRED）→ B3 Release Hold**。Combat Polish 调参保持 WAITING_HUMAN_S5。
