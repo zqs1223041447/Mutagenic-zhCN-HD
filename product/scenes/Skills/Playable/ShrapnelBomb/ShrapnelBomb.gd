@@ -1,6 +1,6 @@
 extends GenericSkill
 
-var projectile_scene = preload("res://scenes/DelayedSkill/ShrapnelBomb/ShrapnelBomb.tscn")
+var projectile_scene = load("res://scenes/DelayedSkill/ShrapnelBomb/ShrapnelBomb.tscn")
 
 var DURATION = 0.6
 

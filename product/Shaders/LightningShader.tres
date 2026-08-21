@@ -3,7 +3,7 @@
 [resource]
 code = "shader_type canvas_item;
 
-uniform vec4 lightning_color: hint_color;
+uniform vec4 lightning_color: source_color;
 
 uniform float size: hint_range (0.,1.);
 uniform float width: hint_range (0.,1.);
@@ -11,7 +11,6 @@ uniform float speed;
 uniform float cycle;
 uniform float ratio;
 uniform float time_shift;
-const float PI = 3.14159265359;
 
 float rand(float x){
 	return fract(sin(x)*100000.0);

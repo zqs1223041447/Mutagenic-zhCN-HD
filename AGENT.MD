@@ -174,7 +174,9 @@ Godot 3.5.3 = Legacy Reference
 
 **P1-WAVE-M（已完成）：** 战斗资产补全，import blocker 1000→784，boot 错误 575→490。
 
-**P1-WAVE-N（当前批次）：着色器与类解析级联收敛**
+**P1-WAVE-N（已完成）：** 着色器与类解析级联收敛。P1 静态迁移主体收敛：import SCRIPT ERROR 1、shader 错误 0。
+
+**当前决策点：** P2 进入条件已满足（headless 可运行、验证闭环可用、自动化可用）。剩余运行时 missing_asset 属美术管线边界，Steam 层需会诊。
 
 | ID | Goal | 关键验收 |
 |----|------|----------|

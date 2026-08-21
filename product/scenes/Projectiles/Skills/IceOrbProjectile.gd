@@ -28,7 +28,7 @@ func on_hit(target):
 				for k in dmg.damage:
 								dmg.damage[k] *= dmg_mult
 
-				var info = target.stats.apply_damage(dmg, Color.aqua, stats, true, false, sp)
+				var info = target.stats.apply_damage(dmg, Color.AQUA, stats, true, false, sp)
 				track_hit(info)
 
 				for k in dmg.damage:

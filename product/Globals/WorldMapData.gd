@@ -73,7 +73,7 @@ func get_map_name(node_id):
 
 func get_node_config(node_id):
 				var tag = get_map_name(node_id)
-				var map_config = Levels.config[tag]
+				var map_config = Levels.get("config")[tag]
 				return map_config
 
 func is_connected_to_root(node_id):

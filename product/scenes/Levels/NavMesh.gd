@@ -98,7 +98,7 @@ func get_shortest_path_target(start, end):
 								var node_position_in_world = Vector2(node_position.x * cell_size.x, node_position.y * cell_size.y)
 
 								
-								var result = space_state.intersect_ray(start, node_position_in_world, [self], 256)
+								var result = space_state.intersect_ray(PhysicsRayQueryParameters2D.create(start, node_position_in_world, 256))
 
 								if not result:
 												

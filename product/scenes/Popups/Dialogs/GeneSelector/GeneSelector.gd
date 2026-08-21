@@ -68,7 +68,7 @@ func render_available_genes(ids: Array):
 				for child in genelist.get_children():
 								child.queue_free()
 
-				ids.sort_custom(self, "_sort_genes")
+				ids.sort_custom(Callable(self, "_sort_genes"))
 				for id in ids:
 								var opt = gene_option.instantiate()
 								opt.gene_id = id
@@ -144,8 +144,9 @@ func _on_CancelButton_focus_entered() -> void :
 func _on_CancelButton_mouse_entered() -> void :
 				$CenterContainer/GeneEditor/VBoxContainer/HBoxContainer2/CancelButton.grab_focus()
 
-func _unhandled_key_input(event: InputEventKey) -> void :
-				if event.scancode == KEY_F:
+func _unhandled_key_input(event: InputEvent) -> void :
+				var key_event = event as InputEventKey
+				if key_event and key_event.keycode == KEY_F:
 								if Input.is_key_pressed(KEY_SHIFT):
 												$CenterContainer/GeneEditor/VBoxContainer/HBoxContainer3/LineEdit.grab_focus()
 

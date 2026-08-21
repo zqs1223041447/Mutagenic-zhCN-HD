@@ -34,7 +34,7 @@ func cast():
 												inst.skill_parent = self
 												inst.global_position = target.global_position + Vector2(randf() * 16, randf() * 16)
 												inst.lifetime = get_duration()
-												inst.pulse_cooldown = .get_cooldown()
+												inst.pulse_cooldown = super.get_cooldown()
 												projectile_layer.call_deferred("add_child", inst)
 								play_sound()
 

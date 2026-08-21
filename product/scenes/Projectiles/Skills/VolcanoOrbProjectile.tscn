@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/Projectiles/Skills/VolcanoOrbProjectile.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="2"]
-[ext_resource type="SpriteFrames" path="res://sprites/projectiles/volcano_projectile.aseprite" id="3"]
+[ext_resource type="SpriteFrames" path="res://sprites/projectiles/volcano_projectile.png" id="3"]
 
 [node name="VolcanoOrbProjectile" instance=ExtResource("2")]
 z_index = 30

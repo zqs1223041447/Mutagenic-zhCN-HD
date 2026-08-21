@@ -1,14 +1,14 @@
 extends Node2D
 
-var sfx = preload("res://Sounds/UI/passive_allocate.wav")
-var sfx_large = preload("res://Sounds/UI/passive_allocate.wav")
+var sfx = load("res://Sounds/UI/passive_allocate.wav")
+var sfx_large = load("res://Sounds/UI/passive_allocate.wav")
 
 signal selected_node(node_id)
 signal focus_changed
 
-var small_passive_frames = preload("res://sprites/gui/small_passive.aseprite")
-var large_passive_frames = preload("res://sprites/gui/large_passive.aseprite")
-var keystone_passive_frames = preload("res://sprites/gui/keystone_passive.aseprite")
+var small_passive_frames = load("res://sprites/gui/small_passive.aseprite")
+var large_passive_frames = load("res://sprites/gui/large_passive.aseprite")
+var keystone_passive_frames = load("res://sprites/gui/keystone_passive.aseprite")
 
 var frames
 var focused
@@ -39,7 +39,7 @@ func _ready() -> void :
 								visible = false
 								return
 
-				node_config = PassiveTagStats.stats[node_tag]
+				node_config = PassiveTagStats.get("stats")[node_tag]
 
 				searchable_string += node_config.name + " "
 
@@ -94,7 +94,7 @@ func _ready() -> void :
 				$PassiveButton.connect("focus_entered", Callable(self, "show_hover"))
 				$PassiveButton.connect("focus_exited", Callable(self, "hide_hover"))
 				$PassiveButton/StatInfoContainer/VBoxContainer/NodeNameLabel.modulate = Colors.buffed
-				connect("focus_changed", self, "reset_focus_sprite")
+				connect("focus_changed", Callable(self, "reset_focus_sprite"))
 				GameState.connect("passives_changed", Callable(self, "_resync"))
 				Globals.connect("search_changed", Callable(self, "_on_search_change"))
 				_on_search_change(Globals.search_string)

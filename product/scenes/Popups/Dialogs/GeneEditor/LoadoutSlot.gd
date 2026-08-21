@@ -52,7 +52,7 @@ func _select():
 				$Button.grab_focus()
 
 func _on_Button_focus_entered() -> void :
-				tooltip.render(gene_id, rect_global_position, size)
+				tooltip.render(gene_id, global_position, size)
 
 func _on_Button_focus_exited() -> void :
 				$GeneTooltip.visible = false

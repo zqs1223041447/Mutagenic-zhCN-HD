@@ -4,7 +4,7 @@ var passive_node_scene = preload("res://scenes/Popups/Dialogs/PassiveTree/Passiv
 var edge_scene = preload("res://scenes/Popups/Dialogs/PassiveTree/Edge.tscn")
 
 var text_input_dialog = preload("res://scenes/Popups/Dialogs/TextInputDialog.tscn")
-var load_dialog = preload("res://scenes/Popups/Dialogs/TreeSelector/TreeSelector.tscn")
+var load_dialog = load("res://scenes/Popups/Dialogs/TreeSelector/TreeSelector.tscn")
 
 @onready var passive_container = $PassiveTree/PassiveTreeContainer
 @onready var selector = $PassiveTreeGUI/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/SelectorContainer/Selector
@@ -61,7 +61,7 @@ func _process(delta: float) -> void :
 								stat_scroller.scroll_vertical -= 3.0
 
 				if Input.is_key_pressed(KEY_F):
-								if Input.is_key_pressed(KEY_CONTROL):
+								if Input.is_key_pressed(KEY_CTRL):
 												searcher.grab_focus()
 												searcher.select_all()
 

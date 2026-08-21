@@ -16,7 +16,7 @@ func _exit_tree() -> void :
 
 func on_expire():
 				var attacker_stats = applier_stats_weakref.get_ref()
-				var info = target_stats.apply_damage(damage_bundle, Color.blueviolet, attacker_stats, false, false, skill_parent_weakref.get_ref())
+				var info = target_stats.apply_damage(damage_bundle, Color.BLUE_VIOLET, attacker_stats, false, false, skill_parent_weakref.get_ref())
 
 				var sp = skill_parent_weakref.get_ref()
 				if sp:

@@ -9,9 +9,9 @@ var shatter = preload("res://scenes/Explosions/TexturedExplosions/ShatterExplosi
 var poof = preload("res://scenes/Explosions/TexturedExplosions/BurningDeath.tscn")
 
 
-var gene_pickup = preload("res://scenes/Pickups/Gene/GenePickup.tscn")
-var orb_pickup = preload("res://scenes/Pickups/Orb/OrbPickup.tscn")
-var portal_pickup = preload("res://scenes/Pickups/Portal/PortalPickup.tscn")
+var gene_pickup = load("res://scenes/Pickups/Gene/GenePickup.tscn")
+var orb_pickup = load("res://scenes/Pickups/Orb/OrbPickup.tscn")
+var portal_pickup = load("res://scenes/Pickups/Portal/PortalPickup.tscn")
 
 @onready var target = GameState.get_global("player")
 @onready var level = GameState.get_global("level_layer")
@@ -23,7 +23,7 @@ var portal_pickup = preload("res://scenes/Pickups/Portal/PortalPickup.tscn")
 @onready var pathing = $PathingController
 var velocity
 
-@export var type
+@export var type = ""
 @export var disable_when_out_of_view = true
 @export var target_proximity = 20.0
 @export var is_flying = false
@@ -244,15 +244,15 @@ func _on_stats_changed():
 				if stats.status_flags.has(Constants.StatusFlags.BLEEDING):
 								modulate_color = modulate_color.blend(Color.RED)
 				if stats.status_flags.has(Constants.StatusFlags.BURNING):
-								modulate_color = modulate_color.blend(Color.orangered)
+								modulate_color = modulate_color.blend(Color.ORANGE_RED)
 				if stats.status_flags.has(Constants.StatusFlags.CHILLED):
-								modulate_color = modulate_color.blend(Color.aqua)
+								modulate_color = modulate_color.blend(Color.AQUA)
 				if stats.status_flags.has(Constants.StatusFlags.JOLTED):
 								modulate_color = modulate_color.blend(Color.YELLOW)
 				if stats.status_flags.has(Constants.StatusFlags.VULNERABLE):
 								modulate_color = modulate_color.blend(Color.GRAY)
 				if stats.status_flags.has(Constants.StatusFlags.EXPOSED):
-								modulate_color = modulate_color.blend(Color.darkorchid)
+								modulate_color = modulate_color.blend(Color.DARK_ORCHID)
 
 				if stats.status_flags.has(Constants.StatusFlags.FROZEN):
 								modulate_color = Color.BLUE
@@ -313,9 +313,9 @@ func get_random_offset():
 
 func get_unique_pools():
 				if type == MonsterTypes.MonsterType.BOSS_SPIRIT_OF_THE_ANCIENT:
-								return [UniquePoolSota.pool]
+								return [UniquePoolSota.get("pool")]
 				else:
-								return [UniquePoolGeneric.pool]
+								return [UniquePoolGeneric.get("pool")]
 
 func _on_death():
 				if stats.accumulated_applied_damage > 0.0:

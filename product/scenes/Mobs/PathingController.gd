@@ -18,8 +18,8 @@ func _ready():
 func _physics_process(delta: float):
 				if _needs_check:
 								var space_state = get_world_2d().direct_space_state
-								var result = space_state.intersect_ray(global_position, target.global_position, [self], 256)
-								var offset_result = space_state.intersect_ray(global_position, target.global_position + offset, [self], 256)
+								var result = space_state.intersect_ray(PhysicsRayQueryParameters2D.create(global_position, target.global_position, 256))
+								var offset_result = space_state.intersect_ray(PhysicsRayQueryParameters2D.create(global_position, target.global_position + offset, 256))
 								if not result:
 												_is_target_visible = true
 								else:

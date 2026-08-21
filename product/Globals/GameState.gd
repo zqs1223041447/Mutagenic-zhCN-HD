@@ -2,7 +2,7 @@ extends Node
 
 var notification_message = preload("res://scenes/GUI/NotificationMessage.tscn")
 
-var help_tip = preload("res://scenes/Popups/Dialogs/HelpTip/LevelupTip/LevelupTip.tscn")
+var help_tip = load("res://scenes/Popups/Dialogs/HelpTip/LevelupTip/LevelupTip.tscn")
 
 signal changed
 signal genes_changed
@@ -26,6 +26,8 @@ signal class_changed(spec)
 signal seen_items_changed
 
 var quitting = false
+
+var Steam = Engine.get_singleton("Steam") if Engine.has_singleton("Steam") else null
 
 var keystone_cache = {}
 var globals_cache = {}
@@ -124,10 +126,10 @@ func _ready():
 								Steam.connect("file_read_async_complete", Callable(self, "_on_load"))
 								Steam.connect("file_write_async_complete", Callable(self, "_on_save"))
 
-				connect("changed", self, "_on_change")
-				connect("settings_changed", self, "_on_change")
-				connect("gene_loadout_changed", self, "save_game")
-				connect("keybinds_changed", self, "update_ui_keybinds")
+				connect("changed", Callable(self, "_on_change"))
+				connect("settings_changed", Callable(self, "_on_change"))
+				connect("gene_loadout_changed", Callable(self, "save_game"))
+				connect("keybinds_changed", Callable(self, "update_ui_keybinds"))
 
 
 func _physics_process(delta: float) -> void :
@@ -285,7 +287,7 @@ func _on_save(result):
 
 				if quitting:
 								print("QUIT")
-								get_tree().notification(MainLoop.NOTIFICATION_WM_QUIT_REQUEST)
+								get_tree().notification(Node.NOTIFICATION_WM_CLOSE_REQUEST)
 
 func reset_saved_state():
 				
@@ -324,7 +326,7 @@ func reset_game_state():
 								if Steam.fileExists(saved_game):
 												Steam.fileDelete(saved_game)
 				else:
-								DirAccess.remove(saved_game)
+								DirAccess.remove_absolute(saved_game)
 
 				
 				reset_saved_state()
@@ -1447,8 +1449,8 @@ func is_support_allowed(skill_slot, support):
 				var skill = eq[skill_slot].skill
 				if skill:
 								
-								var tags = Skills.config[skill].tags
-								var support_info = SkillSupports.supports[support]
+								var tags = Skills.get("config")[skill].tags
+								var support_info = SkillSupports.get("supports")[support]
 								if support_info.has("tags"):
 												var support_tags = support_info.tags
 												
@@ -1553,18 +1555,18 @@ func get_equipped_skills():
 				return stats.skill_loadout
 
 func set_keybind(action, event):
-				saved_stats.keybind_overrides[action] = event.physical_scancode
-				for ev in InputMap.get_action_list(action):
+				saved_stats.keybind_overrides[action] = event.physical_keycode
+				for ev in InputMap.action_get_events(action):
 								if ev is InputEventKey:
 												InputMap.action_erase_event(action, ev)
 				var new_event = InputEventKey.new()
-				new_event.physical_scancode = event.physical_scancode
+				new_event.physical_keycode = event.physical_keycode
 				InputMap.action_add_event(action, new_event)
 				emit_signal("keybinds_changed")
 
 func get_keybind(action):
 				if saved_stats.keybind_overrides.has(action):
-								return OS.get_scancode_string(saved_stats.keybind_overrides[action])
+								return OS.get_keycode_string(saved_stats.keybind_overrides[action])
 				return "Unassigned"
 
 func load_keybinds():
@@ -1575,25 +1577,25 @@ func load_keybinds():
 				for action in Keybindings.configurable_actions:
 								if saved_stats.keybind_overrides.has(action):
 												
-												for event in InputMap.get_action_list(action):
+												for event in InputMap.action_get_events(action):
 																if event is InputEventKey:
 																				InputMap.action_erase_event(action, event)
 												
 												var new_event = InputEventKey.new()
 												if saved_stats.keybind_overrides[action]:
-																new_event.physical_scancode = saved_stats.keybind_overrides[action]
+																new_event.physical_keycode = saved_stats.keybind_overrides[action]
 																InputMap.action_add_event(action, new_event)
 								else:
-												var events = InputMap.get_action_list(action)
+												var events = InputMap.action_get_events(action)
 												for event in events:
 																if event is InputEventKey:
-																				saved_stats.keybind_overrides[action] = event.physical_scancode
+																				saved_stats.keybind_overrides[action] = event.physical_keycode
 				emit_signal("keybinds_changed")
 
 func update_ui_keybinds():
 				for ui_action in Keybindings.ui_map:
 								InputMap.action_erase_events(ui_action)
-								for event in InputMap.get_action_list(Keybindings.ui_map[ui_action]):
+								for event in InputMap.action_get_events(Keybindings.ui_map[ui_action]):
 												InputMap.action_add_event(ui_action, event)
 				save_game()
 

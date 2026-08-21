@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="1"]
 [ext_resource type="Script" path="res://scenes/Projectiles/MobSkills/SpiderWeb/SpiderWeb.gd" id="2"]
-[ext_resource type="SpriteFrames" path="res://sprites/projectiles/spider_web.aseprite" id="3"]
+[ext_resource type="SpriteFrames" path="res://sprites/projectiles/spider_web.png" id="3"]
 [ext_resource type="Material" path="res://scenes/Shaders/RotateMaterial.tres" id="4"]
 
 [node name="SpiderWeb" instance=ExtResource("1")]

@@ -5,7 +5,7 @@ func _ready():
 				read_tiles()
 
 				
-				var boss_scene = Levels.config[Globals.selected_level].boss_scene
+				var boss_scene = Levels.get("config")[Globals.selected_level].boss_scene
 				var boss = boss_scene.instantiate()
 				boss.global_position = $BossSpawner.global_position
 				add_child(boss)

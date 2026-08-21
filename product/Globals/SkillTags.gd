@@ -60,7 +60,7 @@ var DAMAGE_TAGS = [
 ]
 
 func get_tag_list(skill_name):
-				var tags = Skills.config[skill_name].tags
+				var tags = Skills.get("config")[skill_name].tags
 				return render_tag_list(tags)
 
 func render_tag_list(tags):

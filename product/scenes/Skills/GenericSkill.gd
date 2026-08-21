@@ -9,7 +9,7 @@ class_name GenericSkill
 @onready var projectile_layer = GameState.get_global("projectiles")
 @onready var sky_layer = GameState.get_global("sky")
 
-@export var texture
+@export var texture = null
 @export var target_group = "enemies"
 @export var is_castable = true
 
@@ -119,7 +119,7 @@ func _physics_process(delta: float) -> void :
 												_cast()
 
 func get_tags():
-				var tags = Skills.config[self.name].tags.duplicate()
+				var tags = Skills.get("config")[self.name].tags.duplicate()
 				if stats.keystones.has("TREE_WEAPON_DEXTERITY"):
 								if tags.has(SkillTags.Tags.ATTACK):
 												tags.append(SkillTags.Tags.SPELL)
@@ -129,9 +129,9 @@ func get_tags():
 
 
 func get_damage_tag():
-				if Skills.config.has(self.name):
-								if Skills.config[self.name].has("damage_tag"):
-												return Skills.config[self.name].damage_tag
+				if Skills.get("config").has(self.name):
+								if Skills.get("config")[self.name].has("damage_tag"):
+												return Skills.get("config")[self.name].damage_tag
 				return null
 
 func recompute_supported_stats():
@@ -298,7 +298,7 @@ func compute_attribute_additions():
 												computed_support_stats_added["toxic_damage"] = added_amount
 
 func render_supports():
-				if Skills.config[self.name].playable:
+				if Skills.get("config")[self.name].playable:
 								var supports = []
 								var eq = GameState.get_equipped_skills()
 
@@ -320,7 +320,7 @@ func get_effective_tier():
 				return Skills.tier_for_level(parent_level)
 
 func is_skill():
-				return Skills.config[self.name].type == Constants.ItemType.SKILL
+				return Skills.get("config")[self.name].type == Constants.ItemType.SKILL
 
 func has_tag(tag):
 				return cached_tags.has(tag)

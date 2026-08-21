@@ -1,6 +1,6 @@
 extends BaseLevel
 
-var starter_popup = preload("res://scenes/Popups/Dialogs/StarterPicker/StarterPicker.tscn")
+var starter_popup = load("res://scenes/Popups/Dialogs/StarterPicker/StarterPicker.tscn")
 
 func get_spawnables():
 				return spawnables

@@ -3,8 +3,6 @@
 [resource]
 code = "shader_type canvas_item;
 
-const float PI = 3.14159;
-
 uniform sampler2D color_gradient;
 uniform sampler2D noiseTexture;
 uniform float elapsed: hint_range(-1.0, 1.0, 0.1);

@@ -11,7 +11,7 @@
     "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
   "current_phase": "P1_GODOT_4_7_1_MIGRATION",
-  "current_gate": "P1-WAVE-N",
+  "current_gate": "P2-ENTRY-REVIEW",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -99,7 +99,12 @@
       "status": "DONE",
       "blocked_by": [],
       "acceptance": {
-        "categories": ["Script", "Scene", "Resource", "Settings"],
+        "categories": [
+          "Script",
+          "Scene",
+          "Resource",
+          "Settings"
+        ],
         "files_scanned": 913,
         "item_count": 1274,
         "blocker_dag_nodes": 43
@@ -168,7 +173,11 @@
         "autoloads": 179,
         "scripts_converted": 185,
         "recovered_unmodified": true,
-        "data_copied": ["passive_tree_data", "skillgen", "world_map_data"]
+        "data_copied": [
+          "passive_tree_data",
+          "skillgen",
+          "world_map_data"
+        ]
       }
     },
     "P1-B2": {
@@ -285,7 +294,9 @@
         "files_copied": 27,
         "converted_text_files": 26,
         "binaries": 1,
-        "excluded": ["Scenes/Mobs/Basic/TrainingDummy.tscn (deferred to Hideout batch)"],
+        "excluded": [
+          "Scenes/Mobs/Basic/TrainingDummy.tscn (deferred to Hideout batch)"
+        ],
         "mob_tscn_format3": true,
         "dash_impulse_present": true,
         "main_scene_still_loadgame": true,
@@ -343,7 +354,11 @@
         "script_fixes": 6,
         "gene_mods_cascade_resolved": true,
         "files_copied": 61,
-        "roots": ["sprites/gui/equipment", "sprites/base_types", "Sounds/UI/Crafting"],
+        "roots": [
+          "sprites/gui/equipment",
+          "sprites/base_types",
+          "Sounds/UI/Crafting"
+        ],
         "dash_impulse_present": true,
         "main_scene_still_loadgame": true,
         "recovered_unmodified": true,
@@ -499,7 +514,13 @@
         "boot_status": "BOOTED_WITH_ERRORS",
         "boot_script_errors": 490,
         "boot_error_delta_vs_575_baseline": -85,
-        "boot_errors_by_class": {"missing_asset": 313, "other": 393, "load_fail": 140, "class_resolve": 102, "api_member": 55},
+        "boot_errors_by_class": {
+          "missing_asset": 313,
+          "other": 393,
+          "load_fail": 140,
+          "class_resolve": 102,
+          "api_member": 55
+        },
         "dash_impulse_present": true,
         "main_scene_still_loadgame": true,
         "recovered_unmodified": true,
@@ -510,6 +531,47 @@
         "migration/conversion/wave_m_report.json",
         "migration/conversion/wave_m_boot_probe.json",
         "migration/inventory/wave_m_boot_errors_inventory.json"
+      ]
+    },
+    "P1-WAVE-N": {
+      "goal": "Shader compilation fixes + super-class cascade + api_member convergence",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "import_script_error_lines": {
+          "before": 784,
+          "after": 1
+        },
+        "import_shader_error_lines": {
+          "before": 24,
+          "after": 0
+        },
+        "autoload_compile_failures": {
+          "before": 17,
+          "after": 0
+        },
+        "runtime_class_resolve": 0,
+        "runtime_api_member": 0,
+        "cascade_api_files_changed": 53,
+        "preload_to_load_conversions": 193,
+        "tooltipbase_migrated": true,
+        "aseprite_refs_rewritten_to_png": 20,
+        "effect_renders_copied": 14,
+        "shader_files_fixed": 11,
+        "boot_status": "BOOTED_WITH_ERRORS",
+        "boot_script_errors": 662,
+        "boot_error_attribution": "count rose 490->662 because preload->load moved missing-resource failures from parse-time to run-time; parse-time collapsed to 1. Runtime missing_asset (256) is art-pipeline boundary.",
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "tests": "155 OK"
+      },
+      "note": "P1 static migration converged. P2 entry conditions met (headless stable run, self-verification loop, automation). Remaining runtime missing_asset = aseprite sources/UI audio at art-pipeline boundary; Steam layer needs consult.",
+      "evidence": [
+        "migration/conversion/wave_n_report.json",
+        "migration/conversion/wave_n_boot_probe.json",
+        "migration/conversion/wave_n_aseprite_raw.json",
+        "migration/conversion/wave_n_tooltip_raw.json"
       ]
     }
   },
@@ -543,11 +605,13 @@
   },
   "next_ready": [
     {
-      "id": "P1-WAVE-N",
-      "goal": "Shader compilation fixes + super-class cascade + api_member residue convergence (boot 490 baseline)",
-      "depends_on": ["P1-WAVE-M"],
+      "id": "P2-ENTRY-REVIEW",
+      "goal": "Review P2 entry conditions and define P2 Minimal AI Autonomous Loop scope",
+      "depends_on": [
+        "P1-WAVE-N"
+      ],
       "status": "READY",
-      "note": "Godot 4 shader syntax conversion, class inheritance cascade fixes, 55 api_member sites. Steam layer deferred pending gpt consult; aseprite frames stay at art-pipeline boundary. Execution mode: parallel background subagents per AGENT.MD."
+      "note": "Per GATES section 6: headless stable run OK, multi-agent self-verification loop OK, state/cleanup/integration automation OK. Remaining runtime missing_asset is art-pipeline boundary; Steam replacement layer needs gpt consult before implementation. Execution mode: parallel background subagents per AGENT.MD."
     }
   ]
 }

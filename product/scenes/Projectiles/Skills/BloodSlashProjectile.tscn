@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/Projectiles/Skills/BloodSlashProjectile.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="2"]
-[ext_resource type="SpriteFrames" path="res://sprites/effects/blood_slash.aseprite" id="3"]
+[ext_resource type="SpriteFrames" path="res://sprites/effects/blood_slash.png" id="3"]
 
 [sub_resource type="CircleShape2D" id=1]
 resource_local_to_scene = true

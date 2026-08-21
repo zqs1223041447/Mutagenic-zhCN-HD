@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/Projectiles/Skills/ShurikenProjectile.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="2"]
-[ext_resource type="SpriteFrames" path="res://sprites/projectiles/shuriken.aseprite" id="3"]
+[ext_resource type="SpriteFrames" path="res://sprites/projectiles/shuriken.png" id="3"]
 [ext_resource type="Shader" path="res://scenes/Shaders/RotateProjectile.tres" id="4"]
 
 [sub_resource type="ShaderMaterial" id=1]

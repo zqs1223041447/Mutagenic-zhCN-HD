@@ -16,13 +16,15 @@ const MTX_DEFINITIONS = {
 				}, 
 }
 
-const MTX_PURCHASED = {}
+var MTX_PURCHASED = {}
 
 var MTX_FOR_SALE = {}
 var inventory_id = null
 var loaded_shop = false
 var loaded_inventory = false
 var currency_string = ""
+
+var Steam = Engine.get_singleton("Steam") if Engine.has_singleton("Steam") else null
 
 func initialize():
 				Steam.connect("inventory_full_update", Callable(self, "handle_inventory_full_update"))

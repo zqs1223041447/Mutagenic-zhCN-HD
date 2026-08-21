@@ -45,7 +45,7 @@ func on_tick(delta):
 																								for tag in damage_bundle.damage:
 																												damage_bundle.damage[tag] *= (1.0 + 0.5 * curse_count)
 
-																				var info = target_stats.apply_damage(damage_bundle, Color.blueviolet, attacker_stats, false, false, sp)
+																				var info = target_stats.apply_damage(damage_bundle, Color.BLUE_VIOLET, attacker_stats, false, false, sp)
 																				track_hit(info)
 
 																				if curse_count > 0:

@@ -84,8 +84,7 @@ func _render_map():
 																				image.set_pixel(IMAGE_PADDING + i, IMAGE_PADDING + j, Color(1, 1, 1, 0.7))
 								image.unlock()
 
-								image_texture = ImageTexture.new()
-								image_texture.create_from_image(image, 0)
+								image_texture = ImageTexture.create_from_image(image)
 								texture_rect.initialize()
 
 
@@ -101,4 +100,4 @@ func render_portal(x_pixel, y_pixel):
 																continue
 												image.set_pixel(IMAGE_PADDING + x - offset_x + i, IMAGE_PADDING + y - offset_y + j, Color.BLUE)
 				image.unlock()
-				image_texture.create_from_image(image, 0)
+				image_texture.update(image)

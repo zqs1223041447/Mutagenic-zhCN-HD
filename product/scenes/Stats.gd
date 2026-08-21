@@ -48,11 +48,11 @@ var exposed_status_effect = preload("res://scenes/StatusEffects/Generic/Exposed.
 var hamstring_effect = preload("res://scenes/StatusEffects/Generic/Hamstrung.tscn")
 
 
-var cycle_of_destruction = preload("res://scenes/KeystoneCycles/CycleOfDestruction.tscn")
-var goblins_girdle = preload("res://scenes/KeystoneCycles/GoblinsGirdle.tscn")
-var regenerative_flesh = preload("res://scenes/KeystoneCycles/RegenerativeFlesh.tscn")
-var phantom_shield = preload("res://scenes/KeystoneCycles/PhantomShield.tscn")
-var unleash = preload("res://scenes/KeystoneCycles/Unleash.tscn")
+var cycle_of_destruction = load("res://scenes/KeystoneCycles/CycleOfDestruction.tscn")
+var goblins_girdle = load("res://scenes/KeystoneCycles/GoblinsGirdle.tscn")
+var regenerative_flesh = load("res://scenes/KeystoneCycles/RegenerativeFlesh.tscn")
+var phantom_shield = load("res://scenes/KeystoneCycles/PhantomShield.tscn")
+var unleash = load("res://scenes/KeystoneCycles/Unleash.tscn")
 
 
 var dread_aura = preload("res://scenes/Skills/AcquiredSkills/DreadAura/DreadAura.tscn")
@@ -301,8 +301,8 @@ func apply_status_effect(effect: BaseEffect):
 				effect.stats = self
 				effect.initialize()
 				if effect.unique_group == null or effect.only_apply_strongest:
-								effect.connect("on_apply", Callable(Callable(self, "on_status_effect_changed")).bind(effect))
-								effect.connect("on_expire", Callable(Callable(self, "on_status_effect_changed")).bind(effect))
+								effect.connect("effect_applied", Callable(Callable(self, "on_status_effect_changed")).bind(effect))
+								effect.connect("effect_expired", Callable(Callable(self, "on_status_effect_changed")).bind(effect))
 								$StatusEffects.add_child(effect)
 				else:
 								var group = effect.unique_group
@@ -310,8 +310,8 @@ func apply_status_effect(effect: BaseEffect):
 												var existing = effect_for_group[group].get_ref()
 												if existing.expired:
 																effect_for_group[group] = weakref(effect)
-																effect.connect("on_apply", Callable(Callable(self, "on_status_effect_changed")).bind(effect))
-																effect.connect("on_expire", Callable(Callable(self, "on_status_effect_changed")).bind(effect))
+																effect.connect("effect_applied", Callable(Callable(self, "on_status_effect_changed")).bind(effect))
+																effect.connect("effect_expired", Callable(Callable(self, "on_status_effect_changed")).bind(effect))
 
 																$StatusEffects.add_child(effect)
 												else:
@@ -331,8 +331,8 @@ func apply_status_effect(effect: BaseEffect):
 																effect.queue_free()
 								else:
 												effect_for_group[group] = weakref(effect)
-												effect.connect("on_apply", Callable(Callable(self, "on_status_effect_changed")).bind(effect))
-												effect.connect("on_expire", Callable(Callable(self, "on_status_effect_changed")).bind(effect))
+												effect.connect("effect_applied", Callable(Callable(self, "on_status_effect_changed")).bind(effect))
+												effect.connect("effect_expired", Callable(Callable(self, "on_status_effect_changed")).bind(effect))
 												$StatusEffects.add_child(effect)
 
 				recompute_status_effects(effect.fast_flags)

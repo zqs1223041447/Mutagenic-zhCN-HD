@@ -38,11 +38,11 @@ func _input(event: InputEvent) -> void :
 												panning = false
 
 								if not disable_zoom:
-												if event.button_index == BUTTON_WHEEL_UP:
+												if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 																if get_zoom() < max_zoom:
 																				_zoom_at_point(1.05, get_global_mouse_position())
 
-												if event.button_index == BUTTON_WHEEL_DOWN:
+												if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 																if get_zoom() > min_zoom:
 																				_zoom_at_point(0.95, get_global_mouse_position())
 

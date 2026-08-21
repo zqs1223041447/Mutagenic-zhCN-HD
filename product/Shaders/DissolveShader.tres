@@ -7,7 +7,7 @@ uniform sampler2D noiseTexture;
 uniform float noiseTiling = 2;
 uniform float dissolveAmount : hint_range(0, 1);
 uniform float edgeThickness = 0.01;
-uniform vec4 edgeColor : hint_color;
+uniform vec4 edgeColor : source_color;
 
 void fragment()
 {

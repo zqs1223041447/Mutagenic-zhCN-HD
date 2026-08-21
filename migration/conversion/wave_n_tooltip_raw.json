@@ -1,0 +1,9 @@
+{
+  "task": "P1-WAVE-N",
+  "tooltip_files": [
+    {
+      "file": "scenes/Tooltips/TooltipBase.gd",
+      "confine_to_window_dropped": 1
+    }
+  ]
+}

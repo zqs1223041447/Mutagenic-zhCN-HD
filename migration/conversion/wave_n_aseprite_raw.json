@@ -1,0 +1,27 @@
+{
+  "task": "P1-WAVE-N",
+  "effect_renders_copied": 14,
+  "aseprite_refs_rewritten_to_png": 20,
+  "files_changed": [
+    "scenes/Projectiles/MobSkills/SotaSpear/SotaSpear.tscn",
+    "scenes/Projectiles/MobSkills/SpiderWeb/SpiderWeb.tscn",
+    "scenes/Projectiles/Skills/AxeProjectile.tscn",
+    "scenes/Projectiles/Skills/BladeShieldProjectile.tscn",
+    "scenes/Projectiles/Skills/BloodSlashProjectile.tscn",
+    "scenes/Projectiles/Skills/EnergizedAxeProjectile.tscn",
+    "scenes/Projectiles/Skills/IceOrbProjectile.tscn",
+    "scenes/Projectiles/Skills/LightningSpearProjectile.tscn",
+    "scenes/Projectiles/Skills/MinigunProjectile.tscn",
+    "scenes/Projectiles/Skills/OrbProjectile.tscn",
+    "scenes/Projectiles/Skills/ShardMainProjectile.tscn",
+    "scenes/Projectiles/Skills/ShardOrbProjectile.tscn",
+    "scenes/Projectiles/Skills/SharknadoShardProjectile.tscn",
+    "scenes/Projectiles/Skills/SharknadoShotProjectile.tscn",
+    "scenes/Projectiles/Skills/ShotgunProjectile.tscn",
+    "scenes/Projectiles/Skills/ShurikenProjectile.tscn",
+    "scenes/Projectiles/Skills/VolcanoOrbProjectile.tscn",
+    "scenes/Projectiles/Skills/VolcanoProjectile.tscn",
+    "scenes/Skills/Auras/Elusiveness/Elusiveness.tscn",
+    "scenes/Skills/Auras/Sturdiness/Sturdiness.tscn"
+  ]
+}

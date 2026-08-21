@@ -72,7 +72,7 @@ func attempt_spawn():
 
 func trigger_spawn_countdown():
 				_is_spawning = true
-				Globals.show_message("Wave " + str(current_wave) + " Spawning Shortly...")
+				Globals.push_message("Wave " + str(current_wave) + " Spawning Shortly...")
 
 func _on_TimeUpdater_timeout() -> void :
 				time_label.text = str(snapped(floor(time_remaining), 0.1)) + "s"

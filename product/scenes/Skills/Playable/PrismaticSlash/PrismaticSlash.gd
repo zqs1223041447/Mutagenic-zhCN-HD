@@ -1,6 +1,6 @@
 extends GenericSkill
 
-var slash_effect = preload("res://scenes/ShaderExplosions/SlashEffect/SlashEffect.tscn")
+var slash_effect = load("res://scenes/ShaderExplosions/SlashEffect/SlashEffect.tscn")
 var splash_applier = preload("res://scenes/AreaInstantDamageApplier/AreaInstanceDamageApplier.tscn")
 
 const SLASH_WIDTH = PI / 2.0
@@ -69,7 +69,7 @@ func get_damage_bundle(apply = true, use_cache = true, apply_as = null):
 				if apply:
 								var options = [SkillTags.Tags.LIGHTNING, SkillTags.Tags.COLD, SkillTags.Tags.FIRE]
 								var chosen = options[randi() % len(options)]
-								var dmg = .get_damage_bundle(apply, false, chosen).duplicate(true)
+								var dmg = super.get_damage_bundle(apply, false, chosen).duplicate(true)
 								return dmg
 				else:
-								return .get_damage_bundle(apply, false)
+								return super.get_damage_bundle(apply, false)

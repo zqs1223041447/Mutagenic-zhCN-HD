@@ -9,7 +9,7 @@ signal show_notification(child)
 signal show_message(text)
 
 var sound_effect = preload("res://scenes/SoundEffect.tscn")
-var rare_orb_sfx = preload("res://Sounds/Pickups/rare_orb.wav")
+var rare_orb_sfx = load("res://Sounds/Pickups/rare_orb.wav")
 
 var selected_character_name = "default"
 var selected_level = null
@@ -39,6 +39,8 @@ var stage_iiq = 0.0
 var stage_iir = 0.0
 
 var STEAM_USERNAME
+
+var Steam = Engine.get_singleton("Steam") if Engine.has_singleton("Steam") else null
 
 func _ready():
 				randomize()
@@ -71,7 +73,7 @@ func _process(delta: float) -> void :
 
 				if Input.is_action_just_pressed("ui_screenshot"):
 								print("Taking screenshot")
-								var image = get_viewport().get_texture().get_data()
+								var image = get_viewport().get_texture().get_image()
 								image.flip_y()
 								image.save_png("user://mutagenic_screenshot_%d.png" % Time.get_ticks_msec())
 
@@ -125,7 +127,7 @@ func is_using_controller():
 				return use_controllers
 
 func _notification(what: int) -> void :
-				if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+				if what == Node.NOTIFICATION_WM_CLOSE_REQUEST:
 								if Constants.USE_STEAM:
 												print("Shutting down Steam")
 												if use_controllers:
@@ -207,10 +209,10 @@ func clear_context_entity():
 				current_context_entity = null
 				emit_signal("context_entity_changed", null)
 
-func show_notification(child):
+func push_notification(child):
 				emit_signal("show_notification", child)
 
-func show_message(text):
+func push_message(text):
 				emit_signal("show_message", text)
 
 func play_orb_sound(orb_type):

@@ -1,6 +1,6 @@
 extends GenericSkill
 
-var projectile_scene = preload("res://scenes/DelayedSkill/ClusterBombs/ClusterBombs.tscn")
+var projectile_scene = load("res://scenes/DelayedSkill/ClusterBombs/ClusterBombs.tscn")
 
 var DURATION = 0.6
 

@@ -3,7 +3,7 @@
 [ext_resource type="AudioStream" path="res://Sounds/Skills/Shots/bomb.wav" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="2"]
 [ext_resource type="Script" path="res://scenes/Projectiles/Skills/VolcanoProjectile.gd" id="3"]
-[ext_resource type="SpriteFrames" path="res://sprites/skills/volcano.aseprite" id="6"]
+[ext_resource type="SpriteFrames" path="res://sprites/skills/volcano.png" id="6"]
 
 [node name="VolcanoProjectile" instance=ExtResource("2")]
 z_index = -10

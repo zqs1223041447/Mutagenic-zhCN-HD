@@ -221,7 +221,7 @@ func _recheck_modulation():
 				if stats.status_flags.has(Constants.StatusFlags.BLEEDING):
 								modulate_color = modulate_color.blend(Color.RED)
 				if stats.status_flags.has(Constants.StatusFlags.CHILLED):
-								modulate_color = modulate_color.blend(Color.aqua)
+								modulate_color = modulate_color.blend(Color.AQUA)
 				if stats.status_flags.has(Constants.StatusFlags.VULNERABLE):
 								modulate_color = modulate_color.blend(Color.GRAY)
 

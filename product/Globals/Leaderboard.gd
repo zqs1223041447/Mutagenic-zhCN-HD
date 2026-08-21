@@ -4,6 +4,8 @@ signal loaded
 signal uploaded(new_rank)
 signal downloaded(results)
 
+var Steam = Engine.get_singleton("Steam") if Engine.has_singleton("Steam") else null
+
 var result = {
 				"handle": 0, 
 				"found": 0, 

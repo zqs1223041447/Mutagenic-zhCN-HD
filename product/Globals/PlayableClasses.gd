@@ -1,9 +1,9 @@
 extends Node
 
-var warrior_icon = preload("res://sprites/gui/class_icons/warrior_icon.png")
-var rogue_icon = preload("res://sprites/gui/class_icons/rogue_icon.png")
-var mage_icon = preload("res://sprites/gui/class_icons/mage_icon.png")
-var tank_icon = preload("res://sprites/gui/class_icons/tank_icon.png")
+var warrior_icon = load("res://sprites/gui/class_icons/warrior_icon.png")
+var rogue_icon = load("res://sprites/gui/class_icons/rogue_icon.png")
+var mage_icon = load("res://sprites/gui/class_icons/mage_icon.png")
+var tank_icon = load("res://sprites/gui/class_icons/tank_icon.png")
 
 var PLAYABLE_CLASSES = {
 				"ROGUE": "ROGUE", 

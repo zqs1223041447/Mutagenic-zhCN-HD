@@ -4,17 +4,17 @@ var all_uniques = {}
 var unique_ids_for_slot = {}
 
 func _ready() -> void :
-				for unique_gene_id in UniquePoolGeneric.pool:
-								all_uniques[unique_gene_id] = UniquePoolGeneric.pool[unique_gene_id]
-								var slot = Genes.slot_for_base(UniquePoolGeneric.pool[unique_gene_id].type)
+				for unique_gene_id in UniquePoolGeneric.get("pool"):
+								all_uniques[unique_gene_id] = UniquePoolGeneric.get("pool")[unique_gene_id]
+								var slot = Genes.slot_for_base(UniquePoolGeneric.get("pool")[unique_gene_id].type)
 								if unique_ids_for_slot.has(slot):
 												unique_ids_for_slot[slot].append(unique_gene_id)
 								else:
 												unique_ids_for_slot[slot] = [unique_gene_id]
 
-				for unique_gene_id in UniquePoolSota.pool:
-								all_uniques[unique_gene_id] = UniquePoolSota.pool[unique_gene_id]
-								var slot = Genes.slot_for_base(UniquePoolSota.pool[unique_gene_id].type)
+				for unique_gene_id in UniquePoolSota.get("pool"):
+								all_uniques[unique_gene_id] = UniquePoolSota.get("pool")[unique_gene_id]
+								var slot = Genes.slot_for_base(UniquePoolSota.get("pool")[unique_gene_id].type)
 								if unique_ids_for_slot.has(slot):
 												unique_ids_for_slot[slot].append(unique_gene_id)
 								else:
@@ -34,7 +34,7 @@ func weighted_distribution(options):
 								accum.append(weight)
 				return [weight, accum]
 
-func roll_random_unique(level, drop_pool = [UniquePoolGeneric.pool]):
+func roll_random_unique(level, drop_pool = [UniquePoolGeneric.get("pool")]):
 				var options = []
 				for pool in drop_pool:
 								for unique_id in pool:

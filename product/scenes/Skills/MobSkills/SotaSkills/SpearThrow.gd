@@ -15,7 +15,7 @@ func get_damage_tag():
 
 func get_cooldown(apply_rand_keystones = true):
 				if not cooldown_reset:
-								return .get_cooldown(apply_rand_keystones)
+								return super.get_cooldown(apply_rand_keystones)
 				cooldown_reset = false
 				return 1.5
 

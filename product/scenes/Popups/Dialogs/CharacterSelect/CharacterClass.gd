@@ -15,7 +15,7 @@ func _ready() -> void :
 				$ClassNameLabel.text = cn
 				$ClassDescriptionLabel.text = description
 				$Button.text = "Choose " + cn
-				$TextureRect.texture = PlayableClasses.class_icons[class_id]
+				$TextureRect.texture = PlayableClasses.get("class_icons")[class_id]
 
 func _on_Button_pressed() -> void :
 				if only_choose_class:

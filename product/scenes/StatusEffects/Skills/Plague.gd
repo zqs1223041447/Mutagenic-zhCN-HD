@@ -21,7 +21,7 @@ func on_tick(delta):
 				accumulated += delta
 				if accumulated >= 1.0 / PLAGUE_RATE:
 								var attacker_stats = applier_stats_weakref.get_ref()
-								var info = target_stats.apply_damage(cached_dps, Color.blueviolet, attacker_stats, false, true)
+								var info = target_stats.apply_damage(cached_dps, Color.BLUE_VIOLET, attacker_stats, false, true)
 								track_hit(info)
 								accumulated -= 1.0 / PLAGUE_RATE
 

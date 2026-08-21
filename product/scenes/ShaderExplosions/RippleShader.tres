@@ -6,9 +6,7 @@ code = "// Converted/modified from ShaderToy: https://www.shadertoy.com/view/ldB
 
 shader_type canvas_item;
 
-const float PI = 3.14159;
-
-uniform vec4 color: hint_color;
+uniform vec4 color: source_color;
 uniform float pct_done: hint_range(0.0, 1.0, 0.1) = 0.0;
 uniform float burst_width: hint_range(0.01, 0.5, 0.01) = 0.1;
 uniform float start_amount: hint_range(0.0, 1.0, 0.1) = 0.3;

@@ -362,7 +362,7 @@ func _ready():
 				PopupManager.reset()
 				Globals.reset()
 
-				$TileMap.tile_set.tile_set_texture(0, Levels.config[Globals.selected_level].tileset)
+				$TileMap.tile_set.tile_set_texture(0, Levels.get("config")[Globals.selected_level].tileset)
 
 				if GameState.saved_stats.settings.enable_music:
 								$AudioStreamPlayer.playing = true

@@ -3,8 +3,8 @@ class_name BaseEffect
 
 @onready var ground_layer = GameState.get_global("ground")
 
-signal on_apply
-signal on_expire
+signal effect_applied
+signal effect_expired
 
 
 
@@ -63,7 +63,7 @@ func trigger():
 								lifetime *= stats.gs("self_duration")
 				on_apply()
 				has_applied = true
-				emit_signal("on_apply")
+				emit_signal("effect_applied")
 
 
 func _physics_process(delta: float) -> void :
@@ -80,7 +80,7 @@ func remove_effect():
 				queue_free()
 				if is_active:
 								on_expire()
-								emit_signal("on_expire")
+								emit_signal("effect_expired")
 
 func on_apply():
 				

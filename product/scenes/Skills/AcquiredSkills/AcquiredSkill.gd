@@ -26,4 +26,4 @@ func get_tiers():
 func get_stat(stat, default = 0):
 				if override_stats.has(stat):
 								return override_stats[stat]
-				return .get_stat(stat, default)
+				return super.get_stat(stat, default)

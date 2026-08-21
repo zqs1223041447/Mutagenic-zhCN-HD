@@ -276,20 +276,13 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 
 **结果：** 15 个资产根批量复制（380 文件）；import blocker 1000→784；boot script errors 575→490。
 
-## 5m. P1-WAVE-N（当前批次）— 着色器与类解析级联收敛
+## 5m. P1-WAVE-N（已完成）— 着色器与类解析级联收敛
 
-**Allowed:** `product/**` 中 shader 编译错误修复（Godot 4 shader 语法机械转换）、super-class 解析级联修复、api_member 残留（55 处）、`migration/conversion/wave_n_report.json`、tests、boot probe 复跑证据
+**结果：** import SCRIPT ERROR 784→1；shader 错误 24→0；class_resolve/api_member 运行时清零；autoload 编译失败 17→0；TooltipBase 迁移完成；20 处 .aseprite 引用重写为 png；EffectRenders 补齐（14 文件）。
 
-**Forbidden:** `03_raw/**`、`04_recovered/**`、语义重写、新增 Gameplay、Steam 替代层实现
+## 5n. P1 当前剩余信号（下一批次决策点）
 
-**Acceptance:**
-- boot probe script_error_count 相对 490 基线显著下降
-- Shader compilation failed 类错误清零或逐条归类 residuals
-- Player 保留 dash；`run/main_scene` 仍是 LoadGame
-- recovered 指纹不变
-- 错误归因区分"新暴露"与"回归"
-
-后续子系统（本波不做）：Steam 替代层（需会诊）→ .aseprite SpriteFrames（美术管线边界）
+运行时 missing_asset ≈256（.aseprite 无源 SpriteFrames、UI 音效/贴图）属美术管线边界；Steam 替代层属架构决策需会诊。P1 静态迁移主体已收敛，下一步应评估进入 P2（最小自主循环）的条件是否满足：Product 可稳定 headless 运行 ✓、多 Agent 自我验证闭环 ✓、状态/清理/集成自动化 ✓。
 
 ## 5j. P1-WAVE-K（已完成）— Globals 脚本 API 残留清理
 

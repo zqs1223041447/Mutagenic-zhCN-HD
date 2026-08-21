@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="1"]
-[ext_resource type="SpriteFrames" path="res://sprites/projectiles/sota_spear.aseprite" id="2"]
+[ext_resource type="SpriteFrames" path="res://sprites/projectiles/sota_spear.png" id="2"]
 [ext_resource type="Script" path="res://scenes/Projectiles/MobSkills/SotaSpear/SotaSpear.gd" id="3"]
 
 [sub_resource type="RectangleShape2D" id=1]

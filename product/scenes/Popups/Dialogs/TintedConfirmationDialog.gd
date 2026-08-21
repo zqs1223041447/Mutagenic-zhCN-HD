@@ -4,9 +4,10 @@ var window_theme = preload("res://Themes/MainTheme.tres")
 
 
 func _enter_tree() -> void :
-				set_as_minsize()
+				reset_size()
 				theme = window_theme
-				get_close_button().visible = false
+				if has_method("get_close_button"):
+								call("get_close_button").visible = false
 
 func _ready():
 				var parent_offset = size / 2.0

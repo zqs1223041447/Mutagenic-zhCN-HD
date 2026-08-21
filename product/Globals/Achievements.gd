@@ -21,6 +21,8 @@ var ACHIEVEMENTS = {
 var ready_to_achieve = false
 var achievement_queue = []
 
+var Steam = Engine.get_singleton("Steam") if Engine.has_singleton("Steam") else null
+
 
 func _get_Achievement(value: String) -> void :
 				var ACHIEVEMENT: Dictionary = Steam.getAchievement(value)
@@ -39,7 +41,7 @@ func _get_Achievement(value: String) -> void :
 func initialize():
 				print("Initializing Achievements...")
 				if Constants.USE_STEAM:
-								Steam.connect("current_stats_received", self, "_is_ready", [], CONNECT_ONESHOT)
+								Steam.connect("current_stats_received", Callable(self, "_is_ready"), CONNECT_ONE_SHOT)
 								Steam.requestCurrentStats()
 
 func _is_ready(game, result, user):
