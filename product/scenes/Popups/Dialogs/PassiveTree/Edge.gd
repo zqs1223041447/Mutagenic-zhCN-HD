@@ -26,10 +26,10 @@ func _update_edge():
 												in_allocation_path = true
 								else:
 												in_allocation_path = false
-				update()
+				queue_redraw()
 
 func _process(_d) -> void :
-				update()
+				queue_redraw()
 
 func _draw() -> void :
 				var c = Colors.edge_locked

@@ -125,7 +125,7 @@ func update_info():
 																var effective_stat = item.get_effective_stat(stat)
 																var stat_name = StatsInfo.stat_name[stat]
 
-																if typeof(effective_stat) == TYPE_REAL or typeof(effective_stat) == TYPE_INT:
+																if typeof(effective_stat) == TYPE_FLOAT or typeof(effective_stat) == TYPE_INT:
 																				if effective_stat == 0:
 																								continue
 																				content.add_text(stat_name + ": " + StatsInfo.render_skill_stat_line(stat, effective_stat))

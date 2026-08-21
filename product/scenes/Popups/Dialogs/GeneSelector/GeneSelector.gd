@@ -102,7 +102,7 @@ func _render_gene_stats(gene_id):
 				var gene = GameState.get_active_stats().genes[gene_id]
 
 				var item_level_label = Label.new()
-				item_level_label.align = Label.ALIGN_CENTER
+				item_level_label.align = HORIZONTAL_ALIGNMENT_CENTER
 				item_level_label.text = "Item Level: " + str(gene.level)
 				genestats.add_child(item_level_label)
 

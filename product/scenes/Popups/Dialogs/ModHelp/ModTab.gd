@@ -7,7 +7,7 @@ var base_type
 func _ready() -> void :
 				name = Genes.name_for_base_type[base_type]
 				var label = Label.new()
-				label.align = Label.ALIGN_CENTER
+				label.align = HORIZONTAL_ALIGNMENT_CENTER
 				label.text = "Available Affixes"
 				add_child(label)
 				var mods = Genes.mods_for_base_type(base_type)
@@ -21,7 +21,7 @@ func _ready() -> void :
 
 
 				label = Label.new()
-				label.align = Label.ALIGN_CENTER
+				label.align = HORIZONTAL_ALIGNMENT_CENTER
 				label.text = "Drop Only Mods"
 				add_child(label)
 				mods = Genes.drop_only_mods_for_base_type(base_type)

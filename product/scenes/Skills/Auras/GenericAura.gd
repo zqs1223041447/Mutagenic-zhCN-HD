@@ -48,8 +48,8 @@ func _update_radius():
 								return
 				radius = r
 				$Area2D/CollisionShape2D.shape.radius = radius
-				$AuraDisplay.rect_size = Vector2(2.0 * radius, 2.0 * radius)
-				$AuraDisplay.rect_position = Vector2( - radius, - radius)
+				$AuraDisplay.size = Vector2(2.0 * radius, 2.0 * radius)
+				$AuraDisplay.position = Vector2( - radius, - radius)
 
 func get_buffs_and_nerfs():
 				var b_and_n = get_aura_buffs().duplicate(true)

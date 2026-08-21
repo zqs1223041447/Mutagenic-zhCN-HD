@@ -168,7 +168,9 @@ Godot 3.5.3 = Legacy Reference
 
 **P1-WAVE-J（已完成）：** Interactables / Environment 补全。
 
-**P1-WAVE-K（当前批次）：Globals 脚本 API 残留清理**
+**P1-WAVE-K（已完成）：** Globals 脚本 API 残留清理。
+
+**P1 当前剩余 blocker 类别：** Steam 替代层（架构决策，需会诊）、.aseprite SpriteFrames（美术管线边界）、OS.window_*/Directory/set_target_fps 语义改写、UI 音效/贴图补全。
 
 | ID | Goal | 关键验收 |
 |----|------|----------|

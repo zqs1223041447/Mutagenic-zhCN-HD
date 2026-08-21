@@ -14,19 +14,19 @@ func initialize():
 				step_x = level.tiles.cell_size.x
 				step_y = level.tiles.cell_size.y
 				initialized = true
-				rect_size = Vector2(32, 32)
-				rect_scale = Vector2(zoom_scale, zoom_scale)
+				size = Vector2(32, 32)
+				scale = Vector2(zoom_scale, zoom_scale)
 
 func _process(delta: float) -> void :
 				if initialized:
-								update()
+								queue_redraw()
 
 func _draw() -> void :
 				if initialized:
 								var p_x = player.global_position.x / step_x - parent.offset_x + parent.IMAGE_PADDING
 								var p_y = player.global_position.y / step_y - parent.offset_y + parent.IMAGE_PADDING
-								var pos = Vector2(p_x, p_y) - (rect_size / 2.0)
-								draw_texture_rect_region(parent.image_texture, Rect2(Vector2.ZERO, rect_size), Rect2(pos, rect_size))
-								draw_circle(rect_size / 2.0, 1, Color.GREEN)
+								var pos = Vector2(p_x, p_y) - (size / 2.0)
+								draw_texture_rect_region(parent.image_texture, Rect2(Vector2.ZERO, size), Rect2(pos, size))
+								draw_circle(size / 2.0, 1, Color.GREEN)
 
 

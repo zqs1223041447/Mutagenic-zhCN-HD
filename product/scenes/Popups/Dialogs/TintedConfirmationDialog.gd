@@ -9,7 +9,7 @@ func _enter_tree() -> void :
 				get_close_button().visible = false
 
 func _ready():
-				var parent_offset = rect_size / 2.0
+				var parent_offset = size / 2.0
 				var actual_rect = get_viewport().get_visible_rect()
-				$Node/ColorRect.rect_size = actual_rect.size
-				$Node/ColorRect.rect_global_position = - $Node/ColorRect.rect_size / 2.0 + parent_offset
+				$Node/ColorRect.size = actual_rect.size
+				$Node/ColorRect.rect_global_position = - $Node/ColorRect.size / 2.0 + parent_offset

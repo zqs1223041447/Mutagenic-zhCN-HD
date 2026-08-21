@@ -222,7 +222,7 @@ func render_effective_stats():
 				for keystone in applied_stats.keystones:
 								var label = Label.new()
 								label.autowrap = true
-								label.align = Label.ALIGN_CENTER
+								label.align = HORIZONTAL_ALIGNMENT_CENTER
 								label.text = Keystones.keystones[keystone].description
 								stat_container.add_child(label)
 
@@ -232,7 +232,7 @@ func render_effective_stats():
 												for scaling_type in stat_config:
 																var label = Label.new()
 																label.autowrap = true
-																label.align = Label.ALIGN_CENTER
+																label.align = HORIZONTAL_ALIGNMENT_CENTER
 																label.text = StatsInfo.render_passive_stat_line(stat, {
 																				"scaling_type": scaling_type, 
 																				"amount": stat_config[scaling_type]
@@ -248,7 +248,7 @@ func render_effective_stats():
 																for scaling_type in stat_config:
 																				var label = Label.new()
 																				label.autowrap = true
-																				label.align = Label.ALIGN_CENTER
+																				label.align = HORIZONTAL_ALIGNMENT_CENTER
 																				label.text = StatsInfo.render_passive_stat_line(stat, {
 																								"scaling_type": scaling_type, 
 																								"amount": stat_config[scaling_type], 

@@ -13,7 +13,7 @@ func _ready() -> void :
 
 func render_mod(mod):
 				mod_string.clear()
-				mod_string.push_align(RichTextLabel.ALIGN_CENTER)
+				mod_string.push_align(HORIZONTAL_ALIGNMENT_CENTER)
 				
 				if mod.has("keystone"):
 								mod_string.add_text(Keystones.keystones[mod.keystone].description)

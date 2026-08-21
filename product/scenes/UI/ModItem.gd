@@ -83,7 +83,7 @@ func _ready() -> void :
 				if is_implicit:
 								if not mod.drop_only:
 												mod_label.modulate = Colors.implicit
-								mod_label.align = Label.ALIGN_CENTER
+								mod_label.align = HORIZONTAL_ALIGNMENT_CENTER
 								lock_container.visible = false
 
 func _on_LockedIcon_pressed() -> void :

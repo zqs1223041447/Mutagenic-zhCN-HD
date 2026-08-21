@@ -11,8 +11,8 @@ var apply_in_arc = false
 var tint = null
 
 func _ready() -> void :
-				$ColorRect.rect_size = 2.0 * Vector2(radius, radius)
-				$ColorRect.rect_position = - $ColorRect.rect_size / 2.0
+				$ColorRect.size = 2.0 * Vector2(radius, radius)
+				$ColorRect.position = - $ColorRect.size / 2.0
 				duration_target = $Timer.wait_time
 
 				if apply_in_arc:

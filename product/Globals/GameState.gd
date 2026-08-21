@@ -1571,7 +1571,7 @@ func get_keybind(action):
 func load_keybinds():
 				for action in Keybindings.configurable_actions:
 								if saved_stats.keybind_overrides.has(action):
-												if typeof(saved_stats.keybind_overrides[action]) != TYPE_REAL:
+												if typeof(saved_stats.keybind_overrides[action]) != TYPE_FLOAT:
 																saved_stats.keybind_overrides.erase(action)
 				for action in Keybindings.configurable_actions:
 								if saved_stats.keybind_overrides.has(action):

@@ -1,0 +1,580 @@
+{
+  "schema_version": 1,
+  "task": "P1-WAVE-K",
+  "scanned_at": "2026-08-22T02:17:33+08:00",
+  "sites": [
+    {
+      "file": "product/Globals/GameState.gd",
+      "line": 268,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\tOS.window_fullscreen = saved_stats.settings.enable_fullscreen",
+      "pattern": "os_member",
+      "proposed_fix": "DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)（取消全屏用 WINDOW_MODE_WINDOWED）"
+    },
+    {
+      "file": "product/Globals/GameState.gd",
+      "line": 269,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\tOS.window_maximized = saved_stats.settings.enable_fullscreen",
+      "pattern": "os_member",
+      "proposed_fix": "DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)"
+    },
+    {
+      "file": "product/Globals/GameState.gd",
+      "line": 288,
+      "snippet": "\t\t\t\t\t\t\t\tget_tree().notification(MainLoop.NOTIFICATION_WM_QUIT_REQUEST)",
+      "pattern": "notification_wm_quit_request",
+      "proposed_fix": "NOTIFICATION_WM_CLOSE_REQUEST（Godot 4 更名且常量位于 Node）"
+    },
+    {
+      "file": "product/Globals/GameState.gd",
+      "line": 327,
+      "snippet": "\t\t\t\t\t\t\t\tvar d = Directory.new()",
+      "pattern": "directory_class",
+      "proposed_fix": "Directory.new()+open(path) 两步合并为静态 DirAccess.open(path)，删除后续 d.open(...) 行；其余方法在 DirAccess 同名可用"
+    },
+    {
+      "file": "product/Globals/GameState.gd",
+      "line": 357,
+      "snippet": "\t\t\t\tOS.window_maximized = enabled",
+      "pattern": "os_member",
+      "proposed_fix": "DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)"
+    },
+    {
+      "file": "product/Globals/GameState.gd",
+      "line": 358,
+      "snippet": "\t\t\t\tOS.window_fullscreen = enabled",
+      "pattern": "os_member",
+      "proposed_fix": "DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)（取消全屏用 WINDOW_MODE_WINDOWED）"
+    },
+    {
+      "file": "product/Globals/GameState.gd",
+      "line": 363,
+      "snippet": "\t\t\t\tOS.vsync_enabled = enabled",
+      "pattern": "os_member",
+      "proposed_fix": "DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED 或 VSYNC_DISABLED，按布尔值选择)"
+    },
+    {
+      "file": "product/Globals/GameState.gd",
+      "line": 365,
+      "snippet": "\t\t\t\t\t\t\t\tvar refresh_rate = OS.get_screen_refresh_rate()",
+      "pattern": "os_member",
+      "proposed_fix": "DisplayServer.screen_get_refresh_rate()（自 OS 移至 DisplayServer）"
+    },
+    {
+      "file": "product/Globals/GameState.gd",
+      "line": 370,
+      "snippet": "\t\t\t\t\t\t\t\tEngine.set_target_fps(60)",
+      "pattern": "engine_fps_refresh",
+      "proposed_fix": "Engine.max_fps = <目标帧率>"
+    },
+    {
+      "file": "product/Globals/GameState.gd",
+      "line": 1568,
+      "snippet": "\t\t\t\t\t\t\t\treturn OS.get_scancode_string(saved_stats.keybind_overrides[action])",
+      "pattern": "os_member",
+      "proposed_fix": "OS.get_keycode_string(<keycode>)；相关 scancode 字段同步更名 keycode"
+    },
+    {
+      "file": "product/Globals/GameState.gd",
+      "line": 1574,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\tif typeof(saved_stats.keybind_overrides[action]) != TYPE_REAL:",
+      "pattern": "type_real",
+      "proposed_fix": "TYPE_FLOAT"
+    },
+    {
+      "file": "product/Globals/Globals.gd",
+      "line": 128,
+      "snippet": "\t\t\t\tif what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:",
+      "pattern": "notification_wm_quit_request",
+      "proposed_fix": "NOTIFICATION_WM_CLOSE_REQUEST（Godot 4 更名且常量位于 Node）"
+    },
+    {
+      "file": "product/scenes/Levels/NavMesh.gd",
+      "line": 101,
+      "snippet": "\t\t\t\t\t\t\t\tvar result = space_state.intersect_ray(start, node_position_in_world, [self], 256)",
+      "pattern": "intersect_ray_old_signature",
+      "proposed_fix": "旧签名(4参)：改为 PhysicsRayQueryParameters2D/3D.create(from,to[,collision_mask][,exclude]) 后以单参数传入 intersect_ray(params)；按所在空间选 2D/3D"
+    },
+    {
+      "file": "product/scenes/Menu.gd",
+      "line": 47,
+      "snippet": "\t\t\t\tOS.shell_open(\"https://discord.gg/TzF3aRWnhZ\")",
+      "pattern": "os_member",
+      "proposed_fix": "KEEP_AS_IS：Godot 4 中该 API 仍有效，无需修改"
+    },
+    {
+      "file": "product/scenes/Minimap/Minimap.gd",
+      "line": 31,
+      "snippet": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_RIGHT",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_RIGHT（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Minimap/Minimap.gd",
+      "line": 41,
+      "snippet": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_RIGHT",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_RIGHT（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Minimap/Minimap.gd",
+      "line": 47,
+      "snippet": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_RIGHT",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_RIGHT（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Minimap/Minimap.gd",
+      "line": 53,
+      "snippet": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_RIGHT",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_RIGHT（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Minimap/Minimap.gd",
+      "line": 60,
+      "snippet": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_RIGHT",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_RIGHT（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Minimap/Minimap.gd",
+      "line": 70,
+      "snippet": "\t\t\t\tvar rect_size = Vector2(width, height)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Minimap/Minimap.gd",
+      "line": 88,
+      "snippet": "\t\t\t\t\t\t\t\timage_texture.create_from_image(image, 0)",
+      "pattern": "create_from_image_old_signature",
+      "proposed_fix": "2参旧签名：ImageTexture.create_from_image(img) 为 Godot4 静态方法，移除 flags 等附加参数；若原为 new()+实例调用，直接用静态返回值替换"
+    },
+    {
+      "file": "product/scenes/Minimap/Minimap.gd",
+      "line": 104,
+      "snippet": "\t\t\t\timage_texture.create_from_image(image, 0)",
+      "pattern": "create_from_image_old_signature",
+      "proposed_fix": "2参旧签名：ImageTexture.create_from_image(img) 为 Godot4 静态方法，移除 flags 等附加参数；若原为 new()+实例调用，直接用静态返回值替换"
+    },
+    {
+      "file": "product/scenes/Minimap/TextureRect.gd",
+      "line": 17,
+      "snippet": "\t\t\t\trect_size = Vector2(32, 32)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Minimap/TextureRect.gd",
+      "line": 18,
+      "snippet": "\t\t\t\trect_scale = Vector2(zoom_scale, zoom_scale)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_scale → scale"
+    },
+    {
+      "file": "product/scenes/Minimap/TextureRect.gd",
+      "line": 22,
+      "snippet": "\t\t\t\t\t\t\t\tupdate()",
+      "pattern": "update_method",
+      "proposed_fix": "queue_redraw()"
+    },
+    {
+      "file": "product/scenes/Minimap/TextureRect.gd",
+      "line": 28,
+      "snippet": "\t\t\t\t\t\t\t\tvar pos = Vector2(p_x, p_y) - (rect_size / 2.0)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Minimap/TextureRect.gd",
+      "line": 29,
+      "snippet": "\t\t\t\t\t\t\t\tdraw_texture_rect_region(parent.image_texture, Rect2(Vector2.ZERO, rect_size), Rect2(pos, rect_size))",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Minimap/TextureRect.gd",
+      "line": 30,
+      "snippet": "\t\t\t\t\t\t\t\tdraw_circle(rect_size / 2.0, 1, Color.GREEN)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Mobs/PathingController.gd",
+      "line": 21,
+      "snippet": "\t\t\t\t\t\t\t\tvar result = space_state.intersect_ray(global_position, target.global_position, [self], 256)",
+      "pattern": "intersect_ray_old_signature",
+      "proposed_fix": "旧签名(4参)：改为 PhysicsRayQueryParameters2D/3D.create(from,to[,collision_mask][,exclude]) 后以单参数传入 intersect_ray(params)；按所在空间选 2D/3D"
+    },
+    {
+      "file": "product/scenes/Mobs/PathingController.gd",
+      "line": 22,
+      "snippet": "\t\t\t\t\t\t\t\tvar offset_result = space_state.intersect_ray(global_position, target.global_position + offset, [self], 256)",
+      "pattern": "intersect_ray_old_signature",
+      "proposed_fix": "旧签名(4参)：改为 PhysicsRayQueryParameters2D/3D.create(from,to[,collision_mask][,exclude]) 后以单参数传入 intersect_ray(params)；按所在空间选 2D/3D"
+    },
+    {
+      "file": "product/scenes/Particles/FloatingDamage.gd",
+      "line": 11,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\t$Label.rect_position, $Label.rect_position + movement, ",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_position → position"
+    },
+    {
+      "file": "product/scenes/Particles/FloatingDamage.gd",
+      "line": 20,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\t$Label.rect_scale * 2, $Label.rect_scale, ",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_scale → scale"
+    },
+    {
+      "file": "product/scenes/Particles/FloatingDamageManager.gd",
+      "line": 14,
+      "snippet": "\t\t\t\tfct.global_position = global_position - fct.label.rect_size / 2",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Particles/FloatingDamageManager.gd",
+      "line": 16,
+      "snippet": "\t\t\t\tif typeof(value) == TYPE_REAL:",
+      "pattern": "type_real",
+      "proposed_fix": "TYPE_FLOAT"
+    },
+    {
+      "file": "product/scenes/Particles/FloatingDamageManager.gd",
+      "line": 23,
+      "snippet": "\t\t\t\tfct.global_position = global_position - fct.label.rect_size / 2",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Particles/FloatingDamageManager.gd",
+      "line": 25,
+      "snippet": "\t\t\t\tif typeof(value) == TYPE_REAL:",
+      "pattern": "type_real",
+      "proposed_fix": "TYPE_FLOAT"
+    },
+    {
+      "file": "product/scenes/Particles/FloatingDamageManager.gd",
+      "line": 32,
+      "snippet": "\t\t\t\tfct.global_position = global_position - fct.label.rect_size / 2",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Particles/FloatingDamageManager.gd",
+      "line": 34,
+      "snippet": "\t\t\t\tif typeof(value) == TYPE_REAL:",
+      "pattern": "type_real",
+      "proposed_fix": "TYPE_FLOAT"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/GeneEditor/CraftButton.gd",
+      "line": 23,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\ttex.rect_min_size = Vector2(32, 32)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_min_size → custom_minimum_size"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+      "line": 112,
+      "snippet": "\t\t\t\ttooltip.render(gene_id, rect_global_position, rect_size, is_in_shared)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+      "line": 38,
+      "snippet": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_CENTER（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+      "line": 44,
+      "snippet": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_CENTER（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+      "line": 55,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_CENTER（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+      "line": 70,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_CENTER（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd",
+      "line": 55,
+      "snippet": "\t\t\t\ttooltip.render(gene_id, rect_global_position, rect_size)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/GeneSelector/GeneSelector.gd",
+      "line": 105,
+      "snippet": "\t\t\t\titem_level_label.align = Label.ALIGN_CENTER",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_CENTER（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/ModHelp/ModTab.gd",
+      "line": 10,
+      "snippet": "\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_CENTER（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/ModHelp/ModTab.gd",
+      "line": 24,
+      "snippet": "\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_CENTER（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/PassiveTree/Edge.gd",
+      "line": 29,
+      "snippet": "\t\t\t\tupdate()",
+      "pattern": "update_method",
+      "proposed_fix": "queue_redraw()"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/PassiveTree/Edge.gd",
+      "line": 32,
+      "snippet": "\t\t\t\tupdate()",
+      "pattern": "update_method",
+      "proposed_fix": "queue_redraw()"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+      "line": 60,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\tlabel.rect_min_size = Vector2(320, 16)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_min_size → custom_minimum_size"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+      "line": 75,
+      "snippet": "\t\t\t\t\t\t\t\t$PassiveButton.rect_size = Vector2(16.0, 16.0)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+      "line": 82,
+      "snippet": "\t\t\t\t\t\t\t\t$PassiveButton.rect_size = Vector2(24.0, 24.0)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+      "line": 89,
+      "snippet": "\t\t\t\t\t\t\t\t$PassiveButton.rect_size = Vector2(32.0, 32.0)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+      "line": 229,
+      "snippet": "\t\t\t\t$PassiveButton/StatInfoContainer.rect_scale = Vector2(1.0 / zoom, 1.0 / zoom)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_scale → scale"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/PassiveTree/PassiveTreeContainer.gd",
+      "line": 102,
+      "snippet": "\t\t\t\tvar sz = selector_container.rect_size",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+      "line": 225,
+      "snippet": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_CENTER（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+      "line": 235,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_CENTER（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+      "line": 251,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_CENTER（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/TintedConfirmationDialog.gd",
+      "line": 12,
+      "snippet": "\t\t\t\tvar parent_offset = rect_size / 2.0",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/TintedConfirmationDialog.gd",
+      "line": 14,
+      "snippet": "\t\t\t\t$Node/ColorRect.rect_size = actual_rect.size",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/TintedConfirmationDialog.gd",
+      "line": 15,
+      "snippet": "\t\t\t\t$Node/ColorRect.rect_global_position = - $Node/ColorRect.rect_size / 2.0 + parent_offset",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Popups/Dialogs/UniqueHelp/UniqueModRange.gd",
+      "line": 16,
+      "snippet": "\t\t\t\tmod_string.push_align(RichTextLabel.ALIGN_CENTER)",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_CENTER（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Popups/EscapeMenu.gd",
+      "line": 40,
+      "snippet": "\t\t\t\t\t\t\t\tbutton.rect_scale = Vector2(4.0, 4.0)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_scale → scale"
+    },
+    {
+      "file": "product/scenes/Popups/EscapeMenu.gd",
+      "line": 41,
+      "snippet": "\t\t\t\t\t\t\t\tbutton.rect_min_size = Vector2(64, 64)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_min_size → custom_minimum_size"
+    },
+    {
+      "file": "product/scenes/Popups/EscapeMenu.gd",
+      "line": 43,
+      "snippet": "\t\t\t\t\t\t\t\tbutton.icon_align = Button.ALIGN_CENTER",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_CENTER（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    },
+    {
+      "file": "product/scenes/Popups/ItemTabContent.gd",
+      "line": 100,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\tif typeof(effective_stat) == TYPE_REAL or typeof(effective_stat) == TYPE_INT:",
+      "pattern": "type_real",
+      "proposed_fix": "TYPE_FLOAT"
+    },
+    {
+      "file": "product/scenes/ShaderExplosions/ShaderExplosion.gd",
+      "line": 14,
+      "snippet": "\t\t\t\t$ColorRect.rect_size = 2.0 * Vector2(radius, radius)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/ShaderExplosions/ShaderExplosion.gd",
+      "line": 15,
+      "snippet": "\t\t\t\t$ColorRect.rect_position = - $ColorRect.rect_size / 2.0",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_position → position"
+    },
+    {
+      "file": "product/scenes/ShaderExplosions/ShaderExplosion.gd",
+      "line": 15,
+      "snippet": "\t\t\t\t$ColorRect.rect_position = - $ColorRect.rect_size / 2.0",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Skills/Auras/GenericAura.gd",
+      "line": 51,
+      "snippet": "\t\t\t\t$AuraDisplay.rect_size = Vector2(2.0 * radius, 2.0 * radius)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Skills/Auras/GenericAura.gd",
+      "line": 52,
+      "snippet": "\t\t\t\t$AuraDisplay.rect_position = Vector2( - radius, - radius)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_position → position"
+    },
+    {
+      "file": "product/scenes/Skills/Playable/Arc/Arc.gd",
+      "line": 47,
+      "snippet": "\t\t\t\t$ColorRect.rect_size = Vector2(r * 2.0, r * 2.0)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_size → size"
+    },
+    {
+      "file": "product/scenes/Skills/Playable/Arc/Arc.gd",
+      "line": 48,
+      "snippet": "\t\t\t\t$ColorRect.rect_position = Vector2( - r, - r)",
+      "pattern": "rect_properties",
+      "proposed_fix": "rect_position → position"
+    },
+    {
+      "file": "product/scenes/Stats.gd",
+      "line": 2048,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\tvar result = space_state.intersect_ray(global_position, enemy.global_position, [], 256)",
+      "pattern": "intersect_ray_old_signature",
+      "proposed_fix": "旧签名(4参)：改为 PhysicsRayQueryParameters2D/3D.create(from,to[,collision_mask][,exclude]) 后以单参数传入 intersect_ray(params)；按所在空间选 2D/3D"
+    },
+    {
+      "file": "product/scenes/Tooltips/SkillTooltip/SkillTooltip.gd",
+      "line": 128,
+      "snippet": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif typeof(effective_stat) == TYPE_REAL or typeof(effective_stat) == TYPE_INT:",
+      "pattern": "type_real",
+      "proposed_fix": "TYPE_FLOAT"
+    },
+    {
+      "file": "product/scenes/UI/ModItem.gd",
+      "line": 86,
+      "snippet": "\t\t\t\t\t\t\t\tmod_label.align = Label.ALIGN_CENTER",
+      "pattern": "align_constants",
+      "proposed_fix": "HORIZONTAL_ALIGNMENT_CENTER（Label/Button 的 ALIGN_* 已移除，改用全局 HorizontalAlignment 枚举）"
+    }
+  ],
+  "by_pattern": {
+    "align_constants": 18,
+    "create_from_image_old_signature": 2,
+    "directory_class": 1,
+    "engine_fps_refresh": 1,
+    "intersect_ray_old_signature": 4,
+    "notification_wm_quit_request": 2,
+    "os_member": 8,
+    "rect_properties": 32,
+    "type_real": 6,
+    "update_method": 3
+  },
+  "by_file_top20": {
+    "product/Globals/GameState.gd": 11,
+    "product/scenes/Minimap/Minimap.gd": 8,
+    "product/scenes/Minimap/TextureRect.gd": 6,
+    "product/scenes/Particles/FloatingDamageManager.gd": 6,
+    "product/scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd": 5,
+    "product/scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd": 4,
+    "product/scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd": 3,
+    "product/scenes/Popups/Dialogs/TintedConfirmationDialog.gd": 3,
+    "product/scenes/Popups/EscapeMenu.gd": 3,
+    "product/scenes/ShaderExplosions/ShaderExplosion.gd": 3,
+    "product/scenes/Mobs/PathingController.gd": 2,
+    "product/scenes/Particles/FloatingDamage.gd": 2,
+    "product/scenes/Popups/Dialogs/ModHelp/ModTab.gd": 2,
+    "product/scenes/Popups/Dialogs/PassiveTree/Edge.gd": 2,
+    "product/scenes/Skills/Auras/GenericAura.gd": 2,
+    "product/scenes/Skills/Playable/Arc/Arc.gd": 2,
+    "product/Globals/Globals.gd": 1,
+    "product/scenes/Levels/NavMesh.gd": 1,
+    "product/scenes/Menu.gd": 1,
+    "product/scenes/Popups/Dialogs/GeneEditor/CraftButton.gd": 1
+  }
+}

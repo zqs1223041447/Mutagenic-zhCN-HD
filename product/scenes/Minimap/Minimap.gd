@@ -28,7 +28,7 @@ func _render_mods():
 				if len(mods) > 0 or Levels.is_current_level_hideout():
 								var label = Label.new()
 								label.text = "Zone Mods"
-								label.align = Label.ALIGN_RIGHT
+								label.align = HORIZONTAL_ALIGNMENT_RIGHT
 								mod_list.add_child(label)
 								$PanelContainer.visible = true
 				else:
@@ -38,26 +38,26 @@ func _render_mods():
 								var text = MapMods.render_stat(mod)
 								var label = mod_label.instantiate()
 								label.text = text
-								label.align = Label.ALIGN_RIGHT
+								label.align = HORIZONTAL_ALIGNMENT_RIGHT
 								mod_list.add_child(label)
 
 				if Levels.is_current_level_hideout():
 								var label = mod_label.instantiate()
 								label.text = "Players have 25% More Movement Speed"
-								label.align = Label.ALIGN_RIGHT
+								label.align = HORIZONTAL_ALIGNMENT_RIGHT
 								mod_list.add_child(label)
 
 				if Globals.stage_iiq > 0.0:
 								var label = mod_label.instantiate()
 								label.text = str(snapped(Globals.stage_iiq * 100.0, 1)) + "% Increased Quantity of Items Found"
-								label.align = Label.ALIGN_RIGHT
+								label.align = HORIZONTAL_ALIGNMENT_RIGHT
 								mod_list.add_child(label)
 								$PanelContainer.visible = true
 
 				if Globals.stage_iir > 0.0:
 								var label = mod_label.instantiate()
 								label.text = str(snapped(Globals.stage_iir * 100.0, 1)) + "% Increased Rarity of Items Found"
-								label.align = Label.ALIGN_RIGHT
+								label.align = HORIZONTAL_ALIGNMENT_RIGHT
 								mod_list.add_child(label)
 								$PanelContainer.visible = true
 
@@ -67,7 +67,7 @@ func _render_map():
 				var width = bounds[2] - bounds[0] + 1
 				var height = bounds[3] - bounds[1] + 1
 
-				var rect_size = Vector2(width, height)
+				var size = Vector2(width, height)
 
 				if width > 0 and height > 0:
 								image = Image.new()

@@ -268,7 +268,7 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 
 后续子系统（本波不做）：Steam 替代层（架构决策，需会诊）→ VFX/Audio 收尾
 
-## 5j. P1-WAVE-K（当前批次）— Globals 脚本 API 残留清理
+## 5j. P1-WAVE-K（已完成）— Globals 脚本 API 残留清理
 
 **Allowed:** `product/Globals/**`、`product/scenes/**` 中机械 API 重命名（OS.*→DisplayServer/Window、Directory→DirAccess、TYPE_REAL→TYPE_FLOAT、ALIGN_RIGHT→HORIZONTAL_ALIGNMENT_RIGHT、rect_size→size、get_screen_refresh_rate 等已迁移脚本的残留项）、`scripts/migration/api_residue_convert.py`、`migration/conversion/wave_k_report.json`、tests
 

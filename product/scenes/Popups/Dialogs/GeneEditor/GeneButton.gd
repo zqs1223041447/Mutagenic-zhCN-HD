@@ -109,7 +109,7 @@ func _select():
 func _on_GeneButton_focus_entered() -> void :
 				if not is_in_shared:
 								GameState.mark_gene_seen(gene_id)
-				tooltip.render(gene_id, rect_global_position, rect_size, is_in_shared)
+				tooltip.render(gene_id, rect_global_position, size, is_in_shared)
 
 func _on_GeneButton_focus_exited() -> void :
 				tooltip.visible = false

@@ -57,7 +57,7 @@ func _ready() -> void :
 												label.text = keystone.description
 												searchable_string += label.text + " "
 												label.autowrap = true
-												label.rect_min_size = Vector2(320, 16)
+												label.custom_minimum_size = Vector2(320, 16)
 												$PassiveButton/StatInfoContainer/VBoxContainer/StatList.add_child(label)
 
 				searchable_string = searchable_string.to_lower()
@@ -72,21 +72,21 @@ func _ready() -> void :
 								$PassiveButton/Sprite.offset = SMALL_OFFSET
 								$Glow.offset = SMALL_OFFSET / 2.0
 								$Glow.scale = Vector2.ONE * 2.0
-								$PassiveButton.rect_size = Vector2(16.0, 16.0)
+								$PassiveButton.size = Vector2(16.0, 16.0)
 								sound = sfx
 				if node_config.passive_type == PassiveTypes.LARGE:
 								frames = large_passive_frames
 								$PassiveButton/Sprite.offset = LARGE_OFFSET
 								$Glow.offset = LARGE_OFFSET / 4.0
 								$Glow.scale = Vector2.ONE * 4.0
-								$PassiveButton.rect_size = Vector2(24.0, 24.0)
+								$PassiveButton.size = Vector2(24.0, 24.0)
 								sound = sfx_large
 				if node_config.passive_type == PassiveTypes.KEYSTONE:
 								frames = keystone_passive_frames
 								$PassiveButton/Sprite.offset = KEYSTONE_OFFSET
 								$Glow.offset = KEYSTONE_OFFSET / 4.0
 								$Glow.scale = Vector2.ONE * 4.0
-								$PassiveButton.rect_size = Vector2(32.0, 32.0)
+								$PassiveButton.size = Vector2(32.0, 32.0)
 								sound = sfx_large
 
 				$PassiveButton.connect("mouse_entered", Callable($PassiveButton, "grab_focus"))
@@ -226,4 +226,4 @@ func _on_search_change(text):
 
 
 func set_zoom(zoom):
-				$PassiveButton/StatInfoContainer.rect_scale = Vector2(1.0 / zoom, 1.0 / zoom)
+				$PassiveButton/StatInfoContainer.scale = Vector2(1.0 / zoom, 1.0 / zoom)

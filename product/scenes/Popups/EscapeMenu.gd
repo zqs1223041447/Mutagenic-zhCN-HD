@@ -37,10 +37,10 @@ func _ready() -> void :
 								button.connect("focus_entered", Callable(Callable(self, "_select")).bind(tab_index))
 								button.connect("pressed", Callable(Callable(self, "_select")).bind(tab_index))
 								tab_icon_container.add_child(button)
-								button.rect_scale = Vector2(4.0, 4.0)
-								button.rect_min_size = Vector2(64, 64)
+								button.scale = Vector2(4.0, 4.0)
+								button.custom_minimum_size = Vector2(64, 64)
 								button.expand_icon = true
-								button.icon_align = Button.ALIGN_CENTER
+								button.icon_align = HORIZONTAL_ALIGNMENT_CENTER
 
 								tab_index += 1
 

@@ -430,6 +430,36 @@
         "scripts/migration/interactables_convert.py",
         "scripts/ai/tests/test_interactables_convert.py"
       ]
+    },
+    "P1-WAVE-K": {
+      "goal": "Globals script API residue cleanup (mechanical Godot 4 renames)",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "total_replacements": 61,
+        "files_changed": 24,
+        "residuals_manual_review": 7,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_runs": 2,
+        "import_result": "ERRORS_CLASSIFIED",
+        "error_count": 1089,
+        "blocker_count": 1000,
+        "blocker_delta_vs_prev": -35,
+        "resolved_vs_prev_wave": 36,
+        "newly_exposed_vs_prev_wave": 1,
+        "zero_errors_required": false,
+        "tests": "131 OK"
+      },
+      "note": "Mechanical renames only: TYPE_REAL/ALIGN_*/rect_*/update()/get_screen_refresh_rate/get_action_list/get_scancode_string. Residual MANUAL_REVIEW: OS.window_*/vsync, Directory, Engine.set_target_fps (semantic rewrites).",
+      "evidence": [
+        "migration/conversion/wave_k_report.json",
+        "migration/inventory/wave_k_api_residue_inventory.json",
+        "scripts/migration/api_residue_convert.py",
+        "scripts/ai/tests/test_api_residue_convert.py"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -462,11 +492,11 @@
   },
   "next_ready": [
     {
-      "id": "P1-WAVE-K",
-      "goal": "Globals script API residue cleanup (OS.*/Directory/TYPE_REAL/ALIGN_RIGHT/rect_size -> Godot 4 equivalents)",
-      "depends_on": ["P1-WAVE-J"],
+      "id": "P1-WAVE-L",
+      "goal": "Semantic residue closure (7 MANUAL_REVIEW sites: OS.window_*/vsync, Directory->DirAccess, Engine.set_target_fps) + P1-V0 headless boot probe",
+      "depends_on": ["P1-WAVE-K"],
       "status": "READY",
-      "note": "Pure mechanical API renames on already-migrated scripts; no semantic rewrites, unequivalent cases stay in residuals. Steam layer + aseprite frames stay deferred (consult/art-pipeline boundary). Execution mode: parallel background subagents per AGENT.MD."
+      "note": "7 sites get Godot 4 equivalent rewrites (standard migrations, not architecture changes); then first headless boot attempt of product main scene for runtime evidence. Steam replacement layer explicitly deferred pending gpt consult (architecture). Execution mode: parallel background subagents per AGENT.MD."
     }
   ]
 }

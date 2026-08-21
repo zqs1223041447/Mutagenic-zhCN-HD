@@ -44,5 +44,5 @@ func cast(damage_multiplier = 1.0, consume_boons = false):
 func _update_radius():
 				
 				var r = get_radius()
-				$ColorRect.rect_size = Vector2(r * 2.0, r * 2.0)
-				$ColorRect.rect_position = Vector2( - r, - r)
+				$ColorRect.size = Vector2(r * 2.0, r * 2.0)
+				$ColorRect.position = Vector2( - r, - r)

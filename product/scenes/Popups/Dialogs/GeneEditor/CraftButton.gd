@@ -20,7 +20,7 @@ func _ready() -> void :
 												$CostBox.add_child(label)
 												var tex = TextureRect.new()
 												tex.expand = true
-												tex.rect_min_size = Vector2(32, 32)
+												tex.custom_minimum_size = Vector2(32, 32)
 												tex.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 												tex.texture = OrbTypes.texture_for_orb[cost.orb]
 												$CostBox.add_child(tex)

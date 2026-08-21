@@ -99,7 +99,7 @@ func get_zoom():
 				return scale.x
 
 func get_center():
-				var sz = selector_container.rect_size
+				var sz = selector_container.size
 				var screen_center = Vector2(sz.x, sz.y) / 2.0 + selector_container.rect_global_position
 				return screen_center
 
