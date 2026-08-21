@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Skills/Auras/GenericAura.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/Skills/Auras/Regeneration/Regeneration.gd" id="2"]
+[ext_resource type="Texture2D" path="res://sprites/status_effects/regeneration.png" id="3"]
+[ext_resource type="SpriteFrames" path="res://sprites/aura_effects/regeneration.aseprite" id="4"]
+
+[sub_resource type="CircleShape2D" id=7]
+resource_local_to_scene = true
+
+[node name="Regeneration" instance=ExtResource("1")]
+modulate = Color(1, 1, 1, 0.392157)
+script = ExtResource("2")
+texture = ExtResource("3")
+is_castable = false
+is_ally_buff = true
+status_effect_description = "Regeneration Aura"
+status_effect_texture = ExtResource("3")
+
+[node name="Area2D" parent="." index="0"]
+collision_mask = 3
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("7")
+
+[node name="AnimatedSprite" parent="." index="1"]
+frames = ExtResource("4")

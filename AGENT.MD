@@ -160,7 +160,9 @@ Godot 3.5.3 = Legacy Reference
 
 **P1-WAVE-F（已完成）：** Mob / AI 基础。
 
-**P1-WAVE-G（当前批次）：Skill 场景资源 + Skill/Passive Tree UI 基础**
+**P1-WAVE-G（已完成）：** Skill 场景资源 + Skill/Passive Tree UI 基础。
+
+**P1-WAVE-H（当前批次）：Equipment / Gene 基础**
 
 | ID | Goal | 关键验收 |
 |----|------|----------|

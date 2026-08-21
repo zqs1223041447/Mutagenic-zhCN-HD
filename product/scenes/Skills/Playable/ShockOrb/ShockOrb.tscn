@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://sprites/skills/shock_orb.png" id="1"]
+[ext_resource type="AudioStream" path="res://Sounds/Skills/Shots/shock_orb.wav" id="2"]
+[ext_resource type="Script" path="res://scenes/Skills/Playable/ShockOrb/ShockOrb.gd" id="3"]
+
+[node name="ShockOrb" type="Node2D"]
+z_index = 5
+script = ExtResource("3")
+texture = ExtResource("1")
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2")
+bus = "SFX"

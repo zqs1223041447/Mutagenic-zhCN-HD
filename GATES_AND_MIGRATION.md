@@ -205,7 +205,7 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 
 执行模式：gork 并行派发 background 子 agent（inventory 扫描 ∥ converter 实现），由 gork 统一集成验证。
 
-## 5f. P1-WAVE-G（当前批次）— Skill 场景资源 + Skill/Passive Tree UI 基础
+## 5f. P1-WAVE-G（已完成）— Skill 场景资源 + Skill/Passive Tree UI 基础
 
 **Allowed:** `product/scenes/Skills/**`（Playable 技能场景）、`product/sprites/skills/**`、SkillTree/PassiveTree UI 场景与脚本、`scripts/migration/skill_convert.py`、`migration/inventory/wave_g_*.json`、`migration/conversion/wave_g_skill_report.json`、tests
 
@@ -219,6 +219,22 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 - 有 4.7.1 则 headless import RAN；错误分类；zero errors 不是本波要求
 
 后续子系统（本波不做）：Equipment → VFX/Audio → Levels 补全
+
+## 5g. P1-WAVE-H（当前批次）— Equipment / Gene 基础
+
+**Allowed:** `product/Globals/Genes/**`、GeneMods 编译链相关脚本修复（机械转换范畴）、Equipment 数据/UI 场景基础、`scripts/migration/equipment_convert.py`、`migration/inventory/wave_h_*.json`、`migration/conversion/wave_h_equipment_report.json`、tests
+
+**Forbidden:** `03_raw/**`、`04_recovered/**`、Levels 全量重写、新增 Gameplay
+
+**Acceptance:**
+- GeneMods autoload 编译链 blocker 显著下降（从 "Could not resolve class GeneMods" 级联中恢复）
+- Equipment 相关场景/脚本在 product 且 format=3 / GDScript 4
+- Player 保留 dash；`run/main_scene` 仍是 LoadGame
+- recovered 指纹不变
+- 有 4.7.1 则 headless import RAN；错误分类；zero errors 不是本波要求
+- 错误归因必须区分"新暴露"与"回归"（对比上一波分类计数）
+
+后续子系统（本波不做）：VFX/Audio → Levels 补全 → Steam 替代层
 
 ## 6. 进入 P2 / P3 的最低条件
 

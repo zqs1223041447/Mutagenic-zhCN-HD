@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/Popups/Dialogs/PassiveTree/Edge.gd" id="1"]
+
+[node name="Edge" type="Node2D"]
+z_index = -1
+z_as_relative = false
+script = ExtResource("1")

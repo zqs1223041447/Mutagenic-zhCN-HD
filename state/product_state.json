@@ -11,7 +11,7 @@
     "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
   "current_phase": "P1_GODOT_4_7_1_MIGRATION",
-  "current_gate": "P1-WAVE-G",
+  "current_gate": "P1-WAVE-H",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -304,6 +304,36 @@
         "scripts/migration/mob_convert.py",
         "scripts/ai/tests/test_mob_convert.py"
       ]
+    },
+    "P1-WAVE-G": {
+      "goal": "Skill playable scenes/sprites + Skill/Passive Tree UI foundation",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "files_copied": 184,
+        "converted_text_files": 127,
+        "binaries": 57,
+        "tree_ui_converted": 8,
+        "playable_skill_format3": true,
+        "passive_tree_popup_format3": true,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "error_count": 1534,
+        "blocker_count": 1485,
+        "zero_errors_required": false,
+        "regression_check": "resolved: 89 preload-missing + 18 cannot-open; net-new errors are newly exposed refs to unmigrated assets (SpriteFrames/auras)",
+        "tests": "110 OK"
+      },
+      "note": "Skills tree + sprites/skills + PassiveTree popup family converted via skill_convert.py with parallel background subagents. .import/.uid never copied.",
+      "evidence": [
+        "migration/conversion/wave_g_skill_report.json",
+        "migration/inventory/wave_g_skills_inventory.json",
+        "scripts/migration/skill_convert.py",
+        "scripts/ai/tests/test_skill_convert.py"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -336,11 +366,11 @@
   },
   "next_ready": [
     {
-      "id": "P1-WAVE-G",
-      "goal": "Skill playable scenes/sprites + Skill/Passive Tree UI foundation",
-      "depends_on": ["P1-WAVE-F"],
+      "id": "P1-WAVE-H",
+      "goal": "Equipment / Gene foundation (GeneMods compile chain + equipment data/UI base)",
+      "depends_on": ["P1-WAVE-G"],
       "status": "READY",
-      "note": "Copy/convert scenes/Skills Playable + sprites/skills to kill dominant preload blockers; tree UI base. Execution mode: parallel background subagents per AGENT.MD."
+      "note": "Fix GeneMods resolve cascade within mechanical-conversion scope; convert equipment scenes/scripts. Regression-vs-exposed error attribution required. Execution mode: parallel background subagents per AGENT.MD."
     }
   ]
 }

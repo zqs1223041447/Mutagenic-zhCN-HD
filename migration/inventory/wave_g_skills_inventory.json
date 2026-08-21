@@ -1,0 +1,1563 @@
+{
+  "schema_version": 1,
+  "task": "P1-WAVE-G",
+  "scanned_at": "2026-08-22T00:52:57+08:00",
+  "sources": {
+    "recovered_scenes_skills": {
+      "root": "04_recovered/Scenes/Skills",
+      "total_files": 128,
+      "by_extension": {
+        ".gd": 65,
+        ".tres": 2,
+        ".tscn": 61
+      },
+      "subdirs": [
+        {
+          "name": "AcquiredSkills",
+          "rel_path": "04_recovered/Scenes/Skills/AcquiredSkills",
+          "files": 12,
+          "by_extension": {
+            ".gd": 7,
+            ".tscn": 5
+          }
+        },
+        {
+          "name": "Auras",
+          "rel_path": "04_recovered/Scenes/Skills/Auras",
+          "files": 33,
+          "by_extension": {
+            ".gd": 16,
+            ".tres": 1,
+            ".tscn": 16
+          }
+        },
+        {
+          "name": "GenericSkill.gd",
+          "rel_path": "04_recovered/Scenes/Skills/GenericSkill.gd",
+          "files": 1,
+          "by_extension": {
+            ".gd": 1
+          }
+        },
+        {
+          "name": "MobSkills",
+          "rel_path": "04_recovered/Scenes/Skills/MobSkills",
+          "files": 13,
+          "by_extension": {
+            ".gd": 7,
+            ".tscn": 6
+          }
+        },
+        {
+          "name": "Playable",
+          "rel_path": "04_recovered/Scenes/Skills/Playable",
+          "files": 69,
+          "by_extension": {
+            ".gd": 34,
+            ".tres": 1,
+            ".tscn": 34
+          }
+        }
+      ],
+      "root_files": [
+        "GenericSkill.gd"
+      ]
+    },
+    "recovered_sprites_skills": {
+      "root": "04_recovered/sprites/skills",
+      "total_files": 150,
+      "png_assets": 58,
+      "import_metadata": 92,
+      "by_extension": {
+        ".import": 92,
+        ".png": 58
+      },
+      "import_entries_with_missing_source": {
+        "count": 34,
+        "items": [
+          {
+            "import_file": "bane.aseprite.import",
+            "expected_source": "bane.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "blade_shield.aseprite.import",
+            "expected_source": "blade_shield.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "blood_slash.aseprite.import",
+            "expected_source": "blood_slash.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "bow.aseprite.import",
+            "expected_source": "bow.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "brittle.aseprite.import",
+            "expected_source": "brittle.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "chain_lightning.aseprite.import",
+            "expected_source": "chain_lightning.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "cluster_bombs.aseprite.import",
+            "expected_source": "cluster_bombs.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "cold_essence.aseprite.import",
+            "expected_source": "cold_essence.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "debilitate.aseprite.import",
+            "expected_source": "debilitate.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "energized_axe.aseprite.import",
+            "expected_source": "energized_axe.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "energized_hammer.aseprite.import",
+            "expected_source": "energized_hammer.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "fire_essence.aseprite.import",
+            "expected_source": "fire_essence.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "hinder.aseprite.import",
+            "expected_source": "hinder.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "hypothermia.aseprite.import",
+            "expected_source": "hypothermia.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "ice_orb.aseprite.import",
+            "expected_source": "ice_orb.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "implant.aseprite.import",
+            "expected_source": "implant.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "lightning_essence.aseprite.import",
+            "expected_source": "lightning_essence.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "lightning_spear.aseprite.import",
+            "expected_source": "lightning_spear.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "lucky_charm.aseprite.import",
+            "expected_source": "lucky_charm.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "magic_missile.aseprite.import",
+            "expected_source": "magic_missile.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "minigun.aseprite.import",
+            "expected_source": "minigun.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "physical_essence.aseprite.import",
+            "expected_source": "physical_essence.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "plague_clouds_skill.aseprite.import",
+            "expected_source": "plague_clouds_skill.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "plasma_orb_skill.aseprite.import",
+            "expected_source": "plasma_orb_skill.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "polarize.aseprite.import",
+            "expected_source": "polarize.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "protraction.aseprite.import",
+            "expected_source": "protraction.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "scorch.aseprite.import",
+            "expected_source": "scorch.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "shard_orb.aseprite.import",
+            "expected_source": "shard_orb.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "sharknado_shot.aseprite.import",
+            "expected_source": "sharknado_shot.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "shockwave.aseprite.import",
+            "expected_source": "shockwave.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "target.aseprite.import",
+            "expected_source": "target.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "thrusting_strike.aseprite.import",
+            "expected_source": "thrusting_strike.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "toxic_essence.aseprite.import",
+            "expected_source": "toxic_essence.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          },
+          {
+            "import_file": "volcano.aseprite.import",
+            "expected_source": "volcano.aseprite",
+            "kind": "aseprite_excluded_from_recovery"
+          }
+        ],
+        "note": ".png.import 无对应 png 属恢复缺口；.aseprite.import 源(.aseprite)未随 GDRE 恢复，迁移时不应复制这些孤立 .import。"
+      }
+    },
+    "notes": [
+      "04_recovered 只读；本清单为只读扫描产物。",
+      "GenericSkill.gd 已在 P1-WAVE-E 迁移（见 classification.already_migrated_wave_e）。"
+    ]
+  },
+  "playable_skills": [
+    {
+      "name": "Arc",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Arc",
+      "scene": "Arc.tscn",
+      "script": "Arc.gd",
+      "extra_files": [
+        "ArcShader.tres"
+      ],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Arrow",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Arrow",
+      "scene": "Arrow.tscn",
+      "script": "Arrow.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Axe",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Axe",
+      "scene": "Axe.tscn",
+      "script": "Axe.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Bane",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Bane",
+      "scene": "Bane.tscn",
+      "script": "Bane.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "BladeShield",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/BladeShield",
+      "scene": "BladeShield.tscn",
+      "script": "BladeShield.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Blizzard",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Blizzard",
+      "scene": "Blizzard.tscn",
+      "script": "Blizzard.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "BloodSlash",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/BloodSlash",
+      "scene": "BloodSlash.tscn",
+      "script": "BloodSlash.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Brittle",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Brittle",
+      "scene": "Brittle.tscn",
+      "script": "Brittle.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "ChainLightning",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/ChainLightning",
+      "scene": "ChainLightning.tscn",
+      "script": "ChainLightning.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "ClusterBombs",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/ClusterBombs",
+      "scene": "ClusterBombs.tscn",
+      "script": "ClusterBombs.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Debilitate",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Debilitate",
+      "scene": "Debilitate.tscn",
+      "script": "Debilitate.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "EnergizedAxe",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/EnergizedAxe",
+      "scene": "EnergizedAxe.tscn",
+      "script": "EnergizedAxe.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Hinder",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Hinder",
+      "scene": "Hinder.tscn",
+      "script": "Hinder.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Hypothermia",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Hypothermia",
+      "scene": "Hypothermia.tscn",
+      "script": "Hypothermia.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "IceOrb",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/IceOrb",
+      "scene": "IceOrb.tscn",
+      "script": "IceOrb.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "LavaSurge",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/LavaSurge",
+      "scene": "LavaSurge.tscn",
+      "script": "LavaSurge.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "LightningSpear",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/LightningSpear",
+      "scene": "LightningSpear.tscn",
+      "script": "LightningSpear.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Minigun",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Minigun",
+      "scene": "Minigun.tscn",
+      "script": "Minigun.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Orb",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Orb",
+      "scene": "Orb.tscn",
+      "script": "Orb.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "PlagueClouds",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/PlagueClouds",
+      "scene": "PlagueClouds.tscn",
+      "script": "PlagueClouds.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "PlasmaOrb",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/PlasmaOrb",
+      "scene": "PlasmaOrb.tscn",
+      "script": "PlasmaOrb.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "PoisonDart",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/PoisonDart",
+      "scene": "PoisonDart.tscn",
+      "script": "PoisonDart.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Polarize",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Polarize",
+      "scene": "Polarize.tscn",
+      "script": "Polarize.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "PrismaticSlash",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/PrismaticSlash",
+      "scene": "PrismaticSlash.tscn",
+      "script": "PrismaticSlash.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Protract",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Protract",
+      "scene": "Protract.tscn",
+      "script": "Protract.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Scorch",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Scorch",
+      "scene": "Scorch.tscn",
+      "script": "Scorch.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "ShardOrb",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/ShardOrb",
+      "scene": "ShardOrb.tscn",
+      "script": "ShardOrb.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "SharknadoShot",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/SharknadoShot",
+      "scene": "SharknadoShot.tscn",
+      "script": "SharknadoShot.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "ShockOrb",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/ShockOrb",
+      "scene": "ShockOrb.tscn",
+      "script": "ShockOrb.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Shockwave",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Shockwave",
+      "scene": "Shockwave.tscn",
+      "script": "Shockwave.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Shotgun",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Shotgun",
+      "scene": "Shotgun.tscn",
+      "script": "Shotgun.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "ShrapnelBomb",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/ShrapnelBomb",
+      "scene": "ShrapnelBomb.tscn",
+      "script": "ShrapnelBomb.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Shuriken",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Shuriken",
+      "scene": "Shuriken.tscn",
+      "script": "Shuriken.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    },
+    {
+      "name": "Volcano",
+      "recovered_dir": "04_recovered/Scenes/Skills/Playable/Volcano",
+      "scene": "Volcano.tscn",
+      "script": "Volcano.gd",
+      "extra_files": [],
+      "complete_scene_script_pair": true
+    }
+  ],
+  "playable_stats": {
+    "count": 34,
+    "complete_pairs": 34,
+    "incomplete": [],
+    "total_files_under_playable": 69
+  },
+  "tree_ui_files": [
+    "04_recovered/Globals/PassiveTreeData.gd",
+    "04_recovered/Globals/PassiveTreeUtils.gd",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/Edge.gd",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/Edge.tscn",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveNode.tscn",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTree.gd",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTreeContainer.gd",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.tscn",
+    "04_recovered/passive_tree_data/passive_tree_gen.json"
+  ],
+  "tree_ui_pending_for_wave_g": [
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/Edge.gd",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/Edge.tscn",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveNode.tscn",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTree.gd",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTreeContainer.gd",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.tscn"
+  ],
+  "tree_ui_autoconverted_artifacts_excluded": {
+    "count": 4,
+    "items": [
+      "04_recovered/.autoconverted/Globals/PassiveTreeData.gde",
+      "04_recovered/.autoconverted/Globals/PassiveTreeUtils.gde",
+      "04_recovered/.autoconverted/Scenes/Popups/Dialogs/PassiveTree/PassiveTreeContainer.gde",
+      "04_recovered/.autoconverted/Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gde"
+    ],
+    "note": ".gde 为 GDRE 字节码产物，非源码，不迁移。"
+  },
+  "tree_ui_key_path_existence": {
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.tscn": true,
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd": true,
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTreeContainer.tscn": false,
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTreeContainer.gd": true,
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveNode.tscn": true,
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd": true,
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/Edge.tscn": true,
+    "04_recovered/Scenes/Popups/Dialogs/PassiveTree/Edge.gd": true,
+    "04_recovered/Globals/PassiveTreeData.gd": true,
+    "04_recovered/Globals/PassiveTreeUtils.gd": true,
+    "04_recovered/Scenes/PassiveTree/PassiveTree.tscn": false,
+    "04_recovered/Scenes/PassiveTree/PassiveTree.gd": false,
+    "04_recovered/passive_tree_data/passive_tree_gen.json": true
+  },
+  "tree_ui_related_dialog_dirs": {
+    "04_recovered/Scenes/Popups/Dialogs/SkillSelect": {
+      "exists": true,
+      "files": 17
+    },
+    "04_recovered/Scenes/Popups/Dialogs/SkillLoadoutSelector": {
+      "exists": true,
+      "files": 4
+    },
+    "04_recovered/Scenes/Popups/Dialogs/TreeSelector": {
+      "exists": true,
+      "files": 4
+    },
+    "04_recovered/Scenes/Popups/Dialogs/SpecializationPicker": {
+      "exists": true,
+      "files": 4
+    },
+    "04_recovered/Scenes/Popups/Dialogs/StarterPicker": {
+      "exists": true,
+      "files": 6
+    }
+  },
+  "tree_ui_dangling_reference": {
+    "target": "res://Scenes/PassiveTree/PassiveTree.tscn",
+    "referenced_by": "04_recovered/Scenes/Menu.gd",
+    "exists_in_recovered": false,
+    "menu_literal_present": true
+  },
+  "product_references": {
+    "scenes_skills_playable": 34,
+    "sprites_skills": 53,
+    "mention_occurrences": {
+      "scenes_Skills_playable": 47,
+      "scenes_Skills_other": 27,
+      "sprites_skills": 62
+    },
+    "unique_targets_detail": [
+      {
+        "target": "res://scenes/Skills/AcquiredSkills/BloodArmorExplosion/BloodArmorExplosion.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/AcquiredSkills/BondedElectrons/BondedElectrons.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/AcquiredSkills/DreadAura/DreadAura.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/AcquiredSkills/EnergeticFlesh/EnergeticFlesh.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/AcquiredSkills/VileDomainAura/VileDomainAura.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/AmplificationAura/AmplificationAura.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/ColdAura/ColdAura.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/DoTAura/DoTAura.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/DoomTether/DoomTether.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/Elusiveness/Elusiveness.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/FireAura/FireAura.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/FlameTether/FlameTether.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/Honing/Honing.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/LightningAura/LightningAura.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/PhysicalAura/PhysicalAura.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/Regeneration/Regeneration.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/Resilience/Resilience.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/Rush/Rush.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/Sturdiness/Sturdiness.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Auras/ToxicAura/ToxicAura.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/MobSkills/BasicAttack/BasicAttack.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/MobSkills/BossSludgeSkills/GlobThrow.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/MobSkills/MutatedSpiderSkills/WebThrow.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/MobSkills/SotaSkills/SpearThrow.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/MobSkills/TheGatekeeperSkills/PoisonNova.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/MobSkills/TheGatekeeperSkills/ZombieSummoner.tscn",
+        "category": "scenes_Skills_other",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Arc/Arc.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Arrow/Arrow.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Axe/Axe.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Bane/Bane.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/BladeShield/BladeShield.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Blizzard/Blizzard.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/BloodSlash/BloodSlash.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Brittle/Brittle.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/ChainLightning/ChainLightning.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/ClusterBombs/ClusterBombs.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Debilitate/Debilitate.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/EnergizedAxe/EnergizedAxe.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Hinder/Hinder.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Hypothermia/Hypothermia.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/IceOrb/IceOrb.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/LavaSurge/LavaSurge.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/LightningSpear/LightningSpear.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Minigun/Minigun.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Orb/Orb.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/PlagueClouds/PlagueClouds.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/PlasmaOrb/PlasmaOrb.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/PoisonDart/PoisonDart.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Polarize/Polarize.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/PrismaticSlash/PrismaticSlash.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Protract/Protract.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Scorch/Scorch.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/ShardOrb/ShardOrb.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/SharknadoShot/SharknadoShot.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/ShockOrb/ShockOrb.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Shockwave/Shockwave.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Shotgun/Shotgun.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/ShrapnelBomb/ShrapnelBomb.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Shuriken/Shuriken.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://scenes/Skills/Playable/Volcano/Volcano.tscn",
+        "category": "scenes_Skills_playable",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/amplifier.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/arc.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/axe.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/bane.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/blade_shield.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/blizzard_skill.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/blood_slash.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/boots.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/bow.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/brittle.png",
+        "category": "sprites_skills",
+        "in_product_already": true,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/chain_lightning.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/cluster_bombs.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/cold_essence.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/debilitate.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/doom_tether.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/energized_axe.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/fire_essence.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/flame_surge.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/flame_tether.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/growth_wand.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/gunpowder.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/hinder.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/hypothermia.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/ice_orb.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/jar.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/lightning_essence.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/lightning_spear.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/lucky_charm.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/minigun.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/mirror.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/oak_shield.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/orb.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/physical_essence.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/pinpoint.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/plague_clouds_skill.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/plasma_orb_skill.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/polarize.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/prismatic_slash.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/protraction.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/ring.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/salamander.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/scorch.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/shard_orb.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/sharknado_shot.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/shock_orb.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/shockwave.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/shotgun.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/shrapnelbomb.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/shuriken.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/steak.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/syringe.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/toxic_essence.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      },
+      {
+        "target": "res://sprites/skills/volcano.png",
+        "category": "sprites_skills",
+        "in_product_already": false,
+        "in_recovered": true
+      }
+    ],
+    "missing_in_recovered": [],
+    "referring_product_files": [
+      "product/Globals/Skills.gd",
+      "product/Globals/StatusEffects.gd",
+      "product/scenes/GUI/StatusDisplay.tscn",
+      "product/scenes/Mobs/Basic/Creatures/Ninja.tscn",
+      "product/scenes/Mobs/Basic/Creatures/SkeletonArcher.tscn",
+      "product/scenes/Mobs/Basic/Creatures/SkeletonCurser.gd",
+      "product/scenes/Mobs/Basic/Creatures/SkeletonMage.tscn",
+      "product/scenes/Mobs/Basic/Creatures/SkeletonSparker.tscn",
+      "product/scenes/Mobs/Bosses/GateKeeper.tscn",
+      "product/scenes/Mobs/Bosses/MutatedSpider.tscn",
+      "product/scenes/Mobs/Bosses/Sludge.tscn",
+      "product/scenes/Mobs/Bosses/SpiritOfTheAncient.tscn",
+      "product/scenes/Mobs/Mob.gd",
+      "product/scenes/Mobs/Mob.tscn",
+      "product/scenes/Stats.gd"
+    ],
+    "note": "N 为唯一 res:// 目标路径数（preload/load 字符串 + tscn/tres ext_resource），即本波要消掉的 blocker 路径。"
+  },
+  "product_current_state": {
+    "product_scenes_Skills_files": [
+      "product/scenes/Skills/GenericSkill.gd",
+      "product/scenes/Skills/GenericSkill.gd.uid"
+    ],
+    "product_Globals_tree_scripts": {
+      "product/Globals/PassiveTreeData.gd": true,
+      "product/Globals/PassiveTreeUtils.gd": true
+    },
+    "product_passive_tree_data_present": true,
+    "product_popups_dialogs_PassiveTree_present": false,
+    "generic_skill_migrated_wave_e": true
+  },
+  "classification": {
+    "in_scope_wave_g": [
+      "04_recovered/Scenes/Skills/Playable/Arc/Arc.gd",
+      "04_recovered/Scenes/Skills/Playable/Arc/Arc.tscn",
+      "04_recovered/Scenes/Skills/Playable/Arc/ArcShader.tres",
+      "04_recovered/Scenes/Skills/Playable/Arrow/Arrow.gd",
+      "04_recovered/Scenes/Skills/Playable/Arrow/Arrow.tscn",
+      "04_recovered/Scenes/Skills/Playable/Axe/Axe.gd",
+      "04_recovered/Scenes/Skills/Playable/Axe/Axe.tscn",
+      "04_recovered/Scenes/Skills/Playable/Bane/Bane.gd",
+      "04_recovered/Scenes/Skills/Playable/Bane/Bane.tscn",
+      "04_recovered/Scenes/Skills/Playable/BladeShield/BladeShield.gd",
+      "04_recovered/Scenes/Skills/Playable/BladeShield/BladeShield.tscn",
+      "04_recovered/Scenes/Skills/Playable/Blizzard/Blizzard.gd",
+      "04_recovered/Scenes/Skills/Playable/Blizzard/Blizzard.tscn",
+      "04_recovered/Scenes/Skills/Playable/BloodSlash/BloodSlash.gd",
+      "04_recovered/Scenes/Skills/Playable/BloodSlash/BloodSlash.tscn",
+      "04_recovered/Scenes/Skills/Playable/Brittle/Brittle.gd",
+      "04_recovered/Scenes/Skills/Playable/Brittle/Brittle.tscn",
+      "04_recovered/Scenes/Skills/Playable/ChainLightning/ChainLightning.gd",
+      "04_recovered/Scenes/Skills/Playable/ChainLightning/ChainLightning.tscn",
+      "04_recovered/Scenes/Skills/Playable/ClusterBombs/ClusterBombs.gd",
+      "04_recovered/Scenes/Skills/Playable/ClusterBombs/ClusterBombs.tscn",
+      "04_recovered/Scenes/Skills/Playable/Debilitate/Debilitate.gd",
+      "04_recovered/Scenes/Skills/Playable/Debilitate/Debilitate.tscn",
+      "04_recovered/Scenes/Skills/Playable/EnergizedAxe/EnergizedAxe.gd",
+      "04_recovered/Scenes/Skills/Playable/EnergizedAxe/EnergizedAxe.tscn",
+      "04_recovered/Scenes/Skills/Playable/Hinder/Hinder.gd",
+      "04_recovered/Scenes/Skills/Playable/Hinder/Hinder.tscn",
+      "04_recovered/Scenes/Skills/Playable/Hypothermia/Hypothermia.gd",
+      "04_recovered/Scenes/Skills/Playable/Hypothermia/Hypothermia.tscn",
+      "04_recovered/Scenes/Skills/Playable/IceOrb/IceOrb.gd",
+      "04_recovered/Scenes/Skills/Playable/IceOrb/IceOrb.tscn",
+      "04_recovered/Scenes/Skills/Playable/LavaSurge/LavaSurge.gd",
+      "04_recovered/Scenes/Skills/Playable/LavaSurge/LavaSurge.tscn",
+      "04_recovered/Scenes/Skills/Playable/LightningSpear/LightningSpear.gd",
+      "04_recovered/Scenes/Skills/Playable/LightningSpear/LightningSpear.tscn",
+      "04_recovered/Scenes/Skills/Playable/Minigun/Minigun.gd",
+      "04_recovered/Scenes/Skills/Playable/Minigun/Minigun.tscn",
+      "04_recovered/Scenes/Skills/Playable/Orb/Orb.gd",
+      "04_recovered/Scenes/Skills/Playable/Orb/Orb.tscn",
+      "04_recovered/Scenes/Skills/Playable/PlagueClouds/PlagueClouds.gd",
+      "04_recovered/Scenes/Skills/Playable/PlagueClouds/PlagueClouds.tscn",
+      "04_recovered/Scenes/Skills/Playable/PlasmaOrb/PlasmaOrb.gd",
+      "04_recovered/Scenes/Skills/Playable/PlasmaOrb/PlasmaOrb.tscn",
+      "04_recovered/Scenes/Skills/Playable/PoisonDart/PoisonDart.gd",
+      "04_recovered/Scenes/Skills/Playable/PoisonDart/PoisonDart.tscn",
+      "04_recovered/Scenes/Skills/Playable/Polarize/Polarize.gd",
+      "04_recovered/Scenes/Skills/Playable/Polarize/Polarize.tscn",
+      "04_recovered/Scenes/Skills/Playable/PrismaticSlash/PrismaticSlash.gd",
+      "04_recovered/Scenes/Skills/Playable/PrismaticSlash/PrismaticSlash.tscn",
+      "04_recovered/Scenes/Skills/Playable/Protract/Protract.gd",
+      "04_recovered/Scenes/Skills/Playable/Protract/Protract.tscn",
+      "04_recovered/Scenes/Skills/Playable/Scorch/Scorch.gd",
+      "04_recovered/Scenes/Skills/Playable/Scorch/Scorch.tscn",
+      "04_recovered/Scenes/Skills/Playable/ShardOrb/ShardOrb.gd",
+      "04_recovered/Scenes/Skills/Playable/ShardOrb/ShardOrb.tscn",
+      "04_recovered/Scenes/Skills/Playable/SharknadoShot/SharknadoShot.gd",
+      "04_recovered/Scenes/Skills/Playable/SharknadoShot/SharknadoShot.tscn",
+      "04_recovered/Scenes/Skills/Playable/ShockOrb/ShockOrb.gd",
+      "04_recovered/Scenes/Skills/Playable/ShockOrb/ShockOrb.tscn",
+      "04_recovered/Scenes/Skills/Playable/Shockwave/Shockwave.gd",
+      "04_recovered/Scenes/Skills/Playable/Shockwave/Shockwave.tscn",
+      "04_recovered/Scenes/Skills/Playable/Shotgun/Shotgun.gd",
+      "04_recovered/Scenes/Skills/Playable/Shotgun/Shotgun.tscn",
+      "04_recovered/Scenes/Skills/Playable/ShrapnelBomb/ShrapnelBomb.gd",
+      "04_recovered/Scenes/Skills/Playable/ShrapnelBomb/ShrapnelBomb.tscn",
+      "04_recovered/Scenes/Skills/Playable/Shuriken/Shuriken.gd",
+      "04_recovered/Scenes/Skills/Playable/Shuriken/Shuriken.tscn",
+      "04_recovered/Scenes/Skills/Playable/Volcano/Volcano.gd",
+      "04_recovered/Scenes/Skills/Playable/Volcano/Volcano.tscn",
+      "04_recovered/sprites/skills/amplifier.png",
+      "04_recovered/sprites/skills/arc.png",
+      "04_recovered/sprites/skills/axe.png",
+      "04_recovered/sprites/skills/bane.png",
+      "04_recovered/sprites/skills/blade_shield.png",
+      "04_recovered/sprites/skills/blizzard_skill.png",
+      "04_recovered/sprites/skills/blood_slash.png",
+      "04_recovered/sprites/skills/bomb.png",
+      "04_recovered/sprites/skills/book_of_hex.png",
+      "04_recovered/sprites/skills/boots.png",
+      "04_recovered/sprites/skills/bow.png",
+      "04_recovered/sprites/skills/brittle.png",
+      "04_recovered/sprites/skills/chain_lightning.png",
+      "04_recovered/sprites/skills/cluster_bombs.png",
+      "04_recovered/sprites/skills/cold_essence.png",
+      "04_recovered/sprites/skills/debilitate.png",
+      "04_recovered/sprites/skills/doom_tether.png",
+      "04_recovered/sprites/skills/energized_axe.png",
+      "04_recovered/sprites/skills/energized_hammer.png",
+      "04_recovered/sprites/skills/fire_essence.png",
+      "04_recovered/sprites/skills/flame_surge.png",
+      "04_recovered/sprites/skills/flame_tether.png",
+      "04_recovered/sprites/skills/growth_wand.png",
+      "04_recovered/sprites/skills/gunpowder.png",
+      "04_recovered/sprites/skills/hinder.png",
+      "04_recovered/sprites/skills/hypothermia.png",
+      "04_recovered/sprites/skills/ice_orb.png",
+      "04_recovered/sprites/skills/implant.png",
+      "04_recovered/sprites/skills/jar.png",
+      "04_recovered/sprites/skills/lightning_essence.png",
+      "04_recovered/sprites/skills/lightning_spear.png",
+      "04_recovered/sprites/skills/lucky_charm.png",
+      "04_recovered/sprites/skills/minigun.png",
+      "04_recovered/sprites/skills/mirror.png",
+      "04_recovered/sprites/skills/oak_shield.png",
+      "04_recovered/sprites/skills/orb.png",
+      "04_recovered/sprites/skills/physical_essence.png",
+      "04_recovered/sprites/skills/pinpoint.png",
+      "04_recovered/sprites/skills/plague_clouds_skill.png",
+      "04_recovered/sprites/skills/plasma_orb_skill.png",
+      "04_recovered/sprites/skills/polarize.png",
+      "04_recovered/sprites/skills/prismatic_slash.png",
+      "04_recovered/sprites/skills/protraction.png",
+      "04_recovered/sprites/skills/ring.png",
+      "04_recovered/sprites/skills/salamander.png",
+      "04_recovered/sprites/skills/scorch.png",
+      "04_recovered/sprites/skills/shard_orb.png",
+      "04_recovered/sprites/skills/sharknado_shot.png",
+      "04_recovered/sprites/skills/shock_orb.png",
+      "04_recovered/sprites/skills/shockwave.png",
+      "04_recovered/sprites/skills/shotgun.png",
+      "04_recovered/sprites/skills/shrapnelbomb.png",
+      "04_recovered/sprites/skills/shuriken.png",
+      "04_recovered/sprites/skills/steak.png",
+      "04_recovered/sprites/skills/syringe.png",
+      "04_recovered/sprites/skills/thrusting_strike.png",
+      "04_recovered/sprites/skills/toxic_essence.png",
+      "04_recovered/sprites/skills/volcano.png",
+      "04_recovered/Scenes/Popups/Dialogs/PassiveTree/Edge.gd",
+      "04_recovered/Scenes/Popups/Dialogs/PassiveTree/Edge.tscn",
+      "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+      "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveNode.tscn",
+      "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTree.gd",
+      "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTreeContainer.gd",
+      "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+      "04_recovered/Scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.tscn"
+    ],
+    "deferred_later_waves": [
+      "04_recovered/Scenes/Skills/Auras/Auras/AmplificationAura/AmplificationAura.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/AmplificationAura/AmplificationAura.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/AuraShader.tres",
+      "04_recovered/Scenes/Skills/Auras/Auras/ColdAura/ColdAura.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/ColdAura/ColdAura.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/DoTAura/DoTAura.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/DoTAura/DoTAura.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/DoomTether/DoomTether.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/DoomTether/DoomTether.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/Elusiveness/Elusiveness.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/Elusiveness/Elusiveness.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/FireAura/FireAura.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/FireAura/FireAura.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/FlameTether/FlameTether.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/FlameTether/FlameTether.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/GenericAura.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/GenericAura.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/Honing/Honing.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/Honing/Honing.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/LightningAura/LightningAura.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/LightningAura/LightningAura.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/PhysicalAura/PhysicalAura.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/PhysicalAura/PhysicalAura.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/Regeneration/Regeneration.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/Regeneration/Regeneration.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/Resilience/Resilience.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/Resilience/Resilience.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/Rush/Rush.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/Rush/Rush.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/Sturdiness/Sturdiness.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/Sturdiness/Sturdiness.tscn",
+      "04_recovered/Scenes/Skills/Auras/Auras/ToxicAura/ToxicAura.gd",
+      "04_recovered/Scenes/Skills/Auras/Auras/ToxicAura/ToxicAura.tscn",
+      "04_recovered/Scenes/Skills/MobSkills/MobSkills/BasicAttack/BasicAttack.gd",
+      "04_recovered/Scenes/Skills/MobSkills/MobSkills/BasicAttack/BasicAttack.tscn",
+      "04_recovered/Scenes/Skills/MobSkills/MobSkills/BossSludgeSkills/GlobThrow.gd",
+      "04_recovered/Scenes/Skills/MobSkills/MobSkills/BossSludgeSkills/GlobThrow.tscn",
+      "04_recovered/Scenes/Skills/MobSkills/MobSkills/MobSkill.gd",
+      "04_recovered/Scenes/Skills/MobSkills/MobSkills/MutatedSpiderSkills/WebThrow.gd",
+      "04_recovered/Scenes/Skills/MobSkills/MobSkills/MutatedSpiderSkills/WebThrow.tscn",
+      "04_recovered/Scenes/Skills/MobSkills/MobSkills/SotaSkills/SpearThrow.gd",
+      "04_recovered/Scenes/Skills/MobSkills/MobSkills/SotaSkills/SpearThrow.tscn",
+      "04_recovered/Scenes/Skills/MobSkills/MobSkills/TheGatekeeperSkills/PoisonNova.gd",
+      "04_recovered/Scenes/Skills/MobSkills/MobSkills/TheGatekeeperSkills/PoisonNova.tscn",
+      "04_recovered/Scenes/Skills/MobSkills/MobSkills/TheGatekeeperSkills/ZombieSummoner.gd",
+      "04_recovered/Scenes/Skills/MobSkills/MobSkills/TheGatekeeperSkills/ZombieSummoner.tscn",
+      "04_recovered/Scenes/Skills/AcquiredSkills/AcquiredSkills/AcquiredAura.gd",
+      "04_recovered/Scenes/Skills/AcquiredSkills/AcquiredSkills/AcquiredSkill.gd",
+      "04_recovered/Scenes/Skills/AcquiredSkills/AcquiredSkills/BloodArmorExplosion/BloodArmorExplosion.gd",
+      "04_recovered/Scenes/Skills/AcquiredSkills/AcquiredSkills/BloodArmorExplosion/BloodArmorExplosion.tscn",
+      "04_recovered/Scenes/Skills/AcquiredSkills/AcquiredSkills/BondedElectrons/BondedElectrons.gd",
+      "04_recovered/Scenes/Skills/AcquiredSkills/AcquiredSkills/BondedElectrons/BondedElectrons.tscn",
+      "04_recovered/Scenes/Skills/AcquiredSkills/AcquiredSkills/DreadAura/DreadAura.gd",
+      "04_recovered/Scenes/Skills/AcquiredSkills/AcquiredSkills/DreadAura/DreadAura.tscn",
+      "04_recovered/Scenes/Skills/AcquiredSkills/AcquiredSkills/EnergeticFlesh/EnergeticFlesh.gd",
+      "04_recovered/Scenes/Skills/AcquiredSkills/AcquiredSkills/EnergeticFlesh/EnergeticFlesh.tscn",
+      "04_recovered/Scenes/Skills/AcquiredSkills/AcquiredSkills/VileDomainAura/VileDomainAura.gd",
+      "04_recovered/Scenes/Skills/AcquiredSkills/AcquiredSkills/VileDomainAura/VileDomainAura.tscn"
+    ],
+    "already_migrated_wave_e": [
+      "Scenes/Skills/GenericSkill.gd"
+    ]
+  },
+  "classification_extra": {
+    "already_migrated_other_waves": [
+      {
+        "recovered_path": "04_recovered/Globals/PassiveTreeData.gd",
+        "migrated_as": "product/Globals/PassiveTreeData.gd",
+        "wave": "P1-WAVE-B"
+      },
+      {
+        "recovered_path": "04_recovered/Globals/PassiveTreeUtils.gd",
+        "migrated_as": "product/Globals/PassiveTreeUtils.gd",
+        "wave": "P1-WAVE-B"
+      },
+      {
+        "recovered_path": "04_recovered/passive_tree_data/passive_tree_gen.json",
+        "migrated_as": "product/passive_tree_data/passive_tree_gen.json",
+        "wave": "P1-WAVE-B"
+      }
+    ],
+    "rules": {
+      "in_scope_wave_g": "Scenes/Skills/Playable/** 全部 + sprites/skills/*.png 资产 + 文件名匹配 skilltree/passivetree 的 Tree UI 文件（含 Popups/Dialogs/PassiveTree 与 Globals 树数据脚本中尚未迁移者）",
+      "deferred_later_waves": "Scenes/Skills 下 Auras/**、MobSkills/**、AcquiredSkills/**（未被本波 grep 命中的部分随后续波次）",
+      "already_migrated_wave_e": "Scenes/Skills/GenericSkill.gd（Wave E Combat 批次）"
+    },
+    "deferred_note": "若 deferred 文件被 product 引用命中，会体现在 product_references.unique_targets_detail(category=scenes_Skills_other)，迁移时应一并处理或保持 blocker 分类。"
+  }
+}
