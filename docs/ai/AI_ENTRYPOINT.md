@@ -2,6 +2,8 @@
 
 > **角色**：所有 AI 新任务的统一入口。开始任何工作前固定读取：`AGENTS.md` → `status.json` → 本文件 → 任务对应 workflow。
 
+> **🚀 Fresh Clone 强制前置** — 所有新机器 / AI 新会话 **必须先执行 `docs/dev-environment/QUICKSTART_FRESH_CLONE.md` 的 `bootstrap` / `doctor` 流程，达到 `DEV_ENV_READY` 再进入 Xi 任务**。该文档 30 秒跑通 4 条命令即完成 `LEVEL_0 → LEVEL_1/3` 判定；未达 `DEV_ENV_READY` 不得假定已具备构建/验证能力。
+
 ---
 
 ## 1. 任务路由表
@@ -34,6 +36,7 @@
 | Kinetic Arcane 总方向 | `docs/requirements/KINETIC_ARCANE_REMASTER.md` |
 | Combat Vertical Slice | `docs/requirements/COMBAT_VERTICAL_SLICE.md` |
 | 多 Agent 并发/交接/集成 | `docs/ai/PARALLEL_BATCH_WORKFLOW.md` |
+| Fresh Clone 如何就绪 | `docs/dev-environment/QUICKSTART_FRESH_CLONE.md` → `bootstrap_dev_env.py` → `dev_doctor.py` → `DEV_ENV_READY`（必读前置） |
 | 如何跑游戏/验证 | `docs/dev-environment/VM_DEVELOPMENT.md` + Hyper-V skill |
 | baseline | `status.json` trusted_baselines + `releases/*.json` |
 | archive | 本地配置的 archive root；仓库不得假设宿主绝对路径 |
@@ -41,6 +44,8 @@
 ---
 
 ## 3. Mandatory Preflight
+
+> **前置门槛**：`docs/dev-environment/QUICKSTART_FRESH_CLONE.md` — 执行 `python scripts/bootstrap/bootstrap_dev_env.py` → `python scripts/bootstrap/dev_doctor.py`，确认 `overall: DEV_ENV_READY`（无私资产时预期 `BLOCKED_BY_PRIVATE_ASSET` 属正常，需按该文档配置 `MUTAGENIC_DEVKIT_ROOT` 后重检至 `LEVEL_1_BUILD_READY` / `LEVEL_3`）。
 
 1. 读取 `AGENTS.md`、`status.json`、本文件。
 2. 动态解析当前 clone 的 `repo_root`，优先 `git rev-parse --show-toplevel`。
