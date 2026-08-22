@@ -1,0 +1,2058 @@
+{
+  "schema_version": 1,
+  "task": "P4-ART-SCAN",
+  "generated_at": "2026-08-22T07:32:13Z",
+  "scan_root": "product",
+  "files_scanned": 853,
+  "totals": {
+    "references_total": 1691,
+    "references_unique": 1129,
+    "missing_unique": 217
+  },
+  "missing_by_suffix": {
+    ".aseprite": 98,
+    ".png": 96,
+    ".tscn": 15,
+    ".wav": 5,
+    ".stex": 1,
+    ".ogg": 1,
+    ".json": 1
+  },
+  "missing_by_category": {
+    "actors": 68,
+    "status": 53,
+    "ui": 36,
+    "other": 23,
+    "equipment": 22,
+    "tiles": 6,
+    "items": 5,
+    "skills": 4
+  },
+  "items": [
+    {
+      "missing_ref": "res://.import/arrow.png-1d15507c595a5a38dd9c02bebf3df3ea.stex",
+      "expected_suffix": ".stex",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Projectiles/Skills/ArrowProjectile.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://Sounds/BackgroundMusic/Space Laboratory Loop.ogg",
+      "expected_suffix": ".ogg",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Menu.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://Sounds/Misc/FUI Power Up.wav",
+      "expected_suffix": ".wav",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Player/Player.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav",
+      "expected_suffix": ".wav",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Skills/Playable/Arrow/Arrow.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://Sounds/Pickups/drop_only.wav",
+      "expected_suffix": ".wav",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Pickups/Gene/GenePickup.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://Sounds/Pickups/rare_orb.wav",
+      "expected_suffix": ".wav",
+      "category": "other",
+      "referrers": [
+        "product/Globals/Globals.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://Sounds/UI/passive_allocate.wav",
+      "expected_suffix": ".wav",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/DelayedSkill/ClusterBombs/ClusterBombs.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Skills/Playable/ClusterBombs/ClusterBombs.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/DelayedSkill/ShrapnelBomb/ShrapnelBomb.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Skills/Playable/ShrapnelBomb/ShrapnelBomb.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/GeneEditor/GeneInventory.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Menu.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/GeneEditor/GeneLoadout.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Menu.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/CycleOfDestruction.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Stats.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/GoblinsGirdle.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Stats.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/PhantomShield.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Stats.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/RegenerativeFlesh.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Stats.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/Unleash.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Stats.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/PassiveTree/PassiveTree.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Menu.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/Pickups/Orb/OrbPickup.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Levels/_validate/p3_d_driver.gd",
+        "product/scenes/Mobs/Mob.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://scenes/Pickups/Portal/PortalPickup.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Levels/_validate/p3_d_driver.gd",
+        "product/scenes/Mobs/Mob.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://scenes/Popups/Dialogs/HelpTip/GeneTip/GeneTip.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Pickups/Gene/GenePickup.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/Popups/Dialogs/StarterPicker/StarterPicker.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Levels/Hideout/HideoutLevel.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/ShaderExplosions/SlashEffect/SlashEffect.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Skills/Playable/PrismaticSlash/PrismaticSlash.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://skillgen/skills/%s.json",
+      "expected_suffix": ".json",
+      "category": "other",
+      "referrers": [
+        "product/Globals/SkillTiers/TierLoader.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/amplification.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/AmplificationAura/AmplificationAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/amplification.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/AmplificationAura/AmplificationAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/cold_aura.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/ColdAura/ColdAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/cold_aura.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/ColdAura/ColdAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/dot_aura.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/DoTAura/DoTAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/dot_aura.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/DoTAura/DoTAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/fire_aura.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/FireAura/FireAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/fire_aura.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/FireAura/FireAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/honing.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/Honing/Honing.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/honing.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/Honing/Honing.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/lightning_aura.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/LightningAura/LightningAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/lightning_aura.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/LightningAura/LightningAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/physical_aura.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/PhysicalAura/PhysicalAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/physical_aura.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/PhysicalAura/PhysicalAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/regeneration.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/Regeneration/Regeneration.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/resilience.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/Resilience/Resilience.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/rush.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/Rush/Rush.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/toxic_aura.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/ToxicAura/ToxicAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/toxic_aura.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/Auras/ToxicAura/ToxicAura.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/aura_effects/vile_domain.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/scenes/Skills/AcquiredSkills/DreadAura/DreadAura.tscn",
+        "product/scenes/Skills/AcquiredSkills/VileDomainAura/VileDomainAura.tscn"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/drops/blue_orb.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "items",
+      "referrers": [
+        "product/Globals/OrbTypes.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/drops/corruption.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "items",
+      "referrers": [
+        "product/Globals/OrbTypes.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/drops/gold_orb.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "items",
+      "referrers": [
+        "product/Globals/OrbTypes.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/drops/green_orb.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "items",
+      "referrers": [
+        "product/Globals/OrbTypes.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/drops/red_orb.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "items",
+      "referrers": [
+        "product/Globals/OrbTypes.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/environment/brazier.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "tiles",
+      "referrers": [
+        "product/scenes/Environment/Brazier.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/class_icons/mage_icon.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/PlayableClasses.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/class_icons/rogue_icon.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/PlayableClasses.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/class_icons/tank_icon.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/PlayableClasses.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/class_icons/warrior_icon.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/PlayableClasses.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/gene_lesser.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/Genes.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/gene_unique.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/scenes/Pickups/Gene/GenePickup.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/important.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn",
+        "product/scenes/Popups/Dialogs/OutfitSelector/OutfitOption.tscn"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/keystone_passive.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "ui",
+      "referrers": [
+        "product/scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/large_passive.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "ui",
+      "referrers": [
+        "product/scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/notice.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "ui",
+      "referrers": [
+        "product/scenes/UI/Notice.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/agility.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/ailment.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/ailment_mastery.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/aoe.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/armor.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/block.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/bomb.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/chain.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/cold_damage.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/constitution.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/crit.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/curse.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/damage.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/dot.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/SkillSupports.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 3
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/duration.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/evasion.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/finesse.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/fire_damage.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/goliath.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/haste.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/hit_attunement.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/life.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/lightning_damage.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/movement.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/penetration.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/physical_damage.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/pierce.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/projectile_speed.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/resistance.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/strength.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/thunderstorm.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/toxic_damage.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/passives/wisdom.png",
+      "expected_suffix": ".png",
+      "category": "status",
+      "referrers": [
+        "product/Globals/PassiveTagStats.gd",
+        "product/Globals/__OldPassiveStats.gd"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/selector.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.tscn",
+        "product/scenes/Popups/Dialogs/WorldMap/WorldMapPopup.tscn"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/extra_munitions.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd",
+        "product/scenes/Popups/Dialogs/SkillSelect/SupportListOption.tscn"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_ailment.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_aoe.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_background.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/scenes/Popups/Dialogs/SkillSelect/SupportButton.tscn",
+        "product/scenes/Popups/Dialogs/SkillSelect/SupportListOption.tscn"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_cast_on_crit.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_cast_on_kill.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_cast_speed.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_chain.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_cold.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_collateral_damage.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_crit.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_doom.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_duration.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_fire.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_focus.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_lightning.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_physical.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_pierce.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_projectile_speed.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_proliferate.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_sacrifice.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_sniper.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_toxic.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/skill_supports/support_volatility.png",
+      "expected_suffix": ".png",
+      "category": "ui",
+      "referrers": [
+        "product/Globals/SkillSupports.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/gui/small_passive.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "ui",
+      "referrers": [
+        "product/scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/hideout/bench.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "tiles",
+      "referrers": [
+        "product/scenes/Interactables/Interactable.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/hideout/chest.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "tiles",
+      "referrers": [
+        "product/scenes/Interactables/SharedStash/SharedStash.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/hideout/portal.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "tiles",
+      "referrers": [
+        "product/scenes/Interactables/Portal/Portal.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/hideout/statue.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "tiles",
+      "referrers": [
+        "product/scenes/Interactables/ClassChanger/ClassStatue.tscn",
+        "product/scenes/Interactables/SpecializationStatue/SpecializationStatue.tscn"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/monsters/attack_dog.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Basic/Creatures/AttackDog.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/chilled_bones.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Basic/Creatures/ChilledBones.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/fire_bomber.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Basic/Creatures/FireBomber.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/ice_golem.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Basic/Creatures/IceGolem.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/lightning_dog.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Basic/Creatures/LightningDog.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/mutated_spider.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Bosses/MutatedSpider.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/ninja.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Basic/Creatures/Ninja.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/skeleton_archer.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Mob.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/skeleton_curser.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Basic/Creatures/SkeletonCurser.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/skeleton_mage.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Basic/Creatures/SkeletonMage.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/skeleton_sparker.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Basic/Creatures/SkeletonSparker.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/skeleton_warrior.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Basic/Creatures/SkeletonWarrior.tscn",
+        "product/scenes/Mobs/Basic/TrainingDummy.tscn"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/monsters/skeletor.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Basic/Creatures/Skeletor.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/sludge.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Bosses/Sludge.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/spider.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Basic/Creatures/Spider.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/spirit_of_the_ancient.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Bosses/SpiritOfTheAncient.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/monsters/zombie.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/scenes/Mobs/Basic/Creatures/Zombie.tscn",
+        "product/scenes/Mobs/Bosses/GateKeeper.tscn"
+      ],
+      "referrer_count": 2
+    },
+    {
+      "missing_ref": "res://sprites/player/back/bloody.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/back/demon_wings.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/back/dragon_wings.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/back/ninja_cape.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/back/pixie_wings.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd",
+        "product/scenes/Player/Player.tscn",
+        "product/scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.tscn",
+        "product/scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+        "product/scenes/Popups/EscapeMenu.tscn"
+      ],
+      "referrer_count": 5
+    },
+    {
+      "missing_ref": "res://sprites/player/back/poison.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/back/tail.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/back/thrusters.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/feet/claws.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/feet/default.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd",
+        "product/scenes/Player/Player.tscn",
+        "product/scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.tscn",
+        "product/scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+        "product/scenes/Popups/EscapeMenu.tscn"
+      ],
+      "referrer_count": 5
+    },
+    {
+      "missing_ref": "res://sprites/player/feet/flame_boots.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/feet/frozen_boots.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/feet/glow.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/feet/golden.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/feet/hoof.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/feet/mutant.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/hands/blades.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/hands/chains.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/hands/default.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd",
+        "product/scenes/Player/Player.tscn",
+        "product/scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.tscn",
+        "product/scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+        "product/scenes/Popups/EscapeMenu.tscn"
+      ],
+      "referrer_count": 5
+    },
+    {
+      "missing_ref": "res://sprites/player/hands/guns.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/hands/icicles.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/hands/knife.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/hands/orbs.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd",
+        "product/scenes/Player/Player.tscn",
+        "product/scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.tscn",
+        "product/scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+        "product/scenes/Popups/EscapeMenu.tscn"
+      ],
+      "referrer_count": 5
+    },
+    {
+      "missing_ref": "res://sprites/player/hands/spear.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/hands/swords.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/hands/wands.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/heads/chiller.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/heads/default.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd",
+        "product/scenes/Player/Player.tscn",
+        "product/scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.tscn",
+        "product/scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+        "product/scenes/Popups/EscapeMenu.tscn"
+      ],
+      "referrer_count": 5
+    },
+    {
+      "missing_ref": "res://sprites/player/heads/dragon.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/heads/fire.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/heads/mutant.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/heads/robot.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/heads/skull.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/heads/vampire.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/heads/zombie.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/helmets/crown.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/helmets/fire.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/helmets/flame_helmet.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd",
+        "product/scenes/Player/Player.tscn",
+        "product/scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.tscn",
+        "product/scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+        "product/scenes/Popups/EscapeMenu.tscn"
+      ],
+      "referrer_count": 5
+    },
+    {
+      "missing_ref": "res://sprites/player/helmets/horned.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/helmets/iron.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/helmets/ninja.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/helmets/top_hat.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/pants/coal.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/pants/default.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd",
+        "product/scenes/Player/Player.tscn",
+        "product/scenes/Popups/Dialogs/CharacterSelect/CharacterSlot.tscn",
+        "product/scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+        "product/scenes/Popups/EscapeMenu.tscn"
+      ],
+      "referrer_count": 5
+    },
+    {
+      "missing_ref": "res://sprites/player/pants/dragon.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/pants/emerald.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/pants/fire.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/pants/golden.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/pants/ninja.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/pants/wings.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/player/pants/zombie.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "actors",
+      "referrers": [
+        "product/Globals/Outfits.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/projectiles/MobProjectiles/glob.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "skills",
+      "referrers": [
+        "product/scenes/Projectiles/MobSkills/Glob/Glob.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/projectiles/plasma_orb.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "skills",
+      "referrers": [
+        "product/scenes/Projectiles/Skills/PlasmaOrbProjectile.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/projectiles/poison_dart_projectile.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "skills",
+      "referrers": [
+        "product/scenes/Projectiles/Skills/PoisonDartProjectile.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/projectiles/shock_orb.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "skills",
+      "referrers": [
+        "product/scenes/Projectiles/Skills/ShockOrbProjectile.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/ancients_charm.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolSOTA.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/balance_of_power.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/balanced_oppression.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/bloody_knuckle.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/cheetahs.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/chill_burn.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/crown_of_ice.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/echoes_of_sin.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/echoing_fury.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/elder_ward.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/expansion_charm.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/fishing_rod.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/gladiators_resolve.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/goblins_girdle.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/harrowing_cold.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/mercurial_venom.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/ogre_talisman.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/prismatic_bow.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/skull_crusher.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/spreading_flames.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/strength_from_strength.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/uniques/tinkerers_toys.png",
+      "expected_suffix": ".png",
+      "category": "equipment",
+      "referrers": [
+        "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://sprites/worldmap/map_highlighted.aseprite",
+      "expected_suffix": ".aseprite",
+      "category": "tiles",
+      "referrers": [
+        "product/scenes/Popups/Dialogs/WorldMap/MapNode.tscn"
+      ],
+      "referrer_count": 1
+    }
+  ]
+}

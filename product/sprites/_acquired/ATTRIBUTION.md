@@ -1,6 +1,19 @@
 # Art Attribution (P4)
 
-Generated: 2026-08-22T12:59:52Z
+Generated: 2026-08-22T13:35:18Z
+
+## game-icons.net
+
+- URL: https://game-icons.net/
+- License: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+- Local: `product/sprites/_acquired/game-icons.net/icons/**`
+- Used icons by author:
+
+  - carl-olsen: 1 icon(s) (spider-alt)
+  - delapouite: 5 icon(s) (fox-tail, hook-swords, ice-golem, park-bench, robot-leg)
+  - lorc: 11 icon(s) (bloody-stash, bone-knife, crown, hoof, horned-helm, ice-spear, icicles-aura, iron-mask, sea-dragon, spinning-blades, wavy-chains)
+  - sbed: 1 icon(s) (evil-wings)
+  - skoll: 1 icon(s) (raise-zombie)
 
 ## Kenney Tiny Dungeon
 

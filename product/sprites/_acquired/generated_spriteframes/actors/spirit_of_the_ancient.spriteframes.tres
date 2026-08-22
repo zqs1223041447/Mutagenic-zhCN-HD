@@ -1,6 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=2 format=3]
 
-[ext_resource type="Texture2D" path="res://sprites/_mapped/actors/spirit_of_the_ancient.png" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/_placeholders/actors/spirit_of_the_ancient.png" id="1"]
 
 [resource]
 animations = [{

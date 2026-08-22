@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "task": "P4-ART-FETCH",
-  "generated_at": "2026-08-22T12:59:52Z",
+  "generated_at": "2026-08-22T13:35:18Z",
   "policy_note": "all verified and downloaded via token flow (see product/sprites/_acquired/*/SOURCE.txt and runtime/p4_art_downloads/*)",
   "items": [
     {

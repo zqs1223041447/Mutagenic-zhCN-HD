@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "task": "P4-ART-SCAN",
-  "generated_at": "2026-08-22T12:57:06Z",
+  "generated_at": "2026-08-22T14:00:29Z",
   "scan_root": "product",
-  "files_scanned": 1048,
+  "files_scanned": 1051,
   "totals": {
-    "references_total": 1906,
-    "references_unique": 1210,
+    "references_total": 1909,
+    "references_unique": 1212,
     "missing_unique": 23
   },
   "missing_by_suffix": {

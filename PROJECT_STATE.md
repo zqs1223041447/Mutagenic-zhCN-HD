@@ -1,12 +1,23 @@
-# PROJECT_STATE.md
+# PROJECT_STATE
 
-这不是当前项目状态。
+当前阶段重点：
 
-| 要看什么 | 去哪 |
-|---|---|
-| 当前 Gate / 任务 | `state/product_state.json` |
-| 执行协议 | `AGENT.MD` |
-| Legacy 3.5.3 汉化/MOD 机器记录 | `status.json` |
-| Legacy 批次证据 | `releases/`、`docs/ai/audits/` |
+从基础迁移和工程收敛阶段，进入真正的可玩内容建设阶段。
 
-`status.json` 仍停在 `PHASE_6_INCREMENTAL_MOD_LOCALIZATION_INTEGRATION` / `promotion_recorded_governance_hold`（候选 `3B6427B3`）。那是 **Godot 3.5.3** 历史，不是 Godot 4.7.1 Product Gate。不要按那里的「下一步汉化」开工。
+下一阶段目标：
+
+建立完整游戏体验闭环：
+
+进入游戏
+→ 操作角色
+→ 战斗
+→ 技能释放
+→ 击败敌人
+→ 获得奖励
+→ 强化角色
+→ 再挑战
+
+状态判断：
+
+不要只看代码完成度。
+以实际游玩体验判断完成度。

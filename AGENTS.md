@@ -1,20 +1,31 @@
-# AGENTS.md — 兼容入口
+# AGENTS.md — Mutagenic 游戏开发 Agent 入口
 
-部分 Agent、CLI 或 IDE 会自动寻找 `AGENTS.md`，因此保留本文件。
+这是 Mutagenic 项目的 AI 开发入口。
 
-**唯一完整根执行协议是 `AGENT.MD`。**
+目标：
+把 Mutagenic 持续推进成为一个自己愿意长期游玩的 Godot 游戏。
 
-本项目本地 Agent 角色：
-- **gork**：主 AGENT（Coordinator），负责安排工作、并行调度
-- **AGY**：优先 Worker（gemini cli），必须 background 模式执行
-- **opencode**：备用 Worker（额度不足时切换），必须 background 模式执行
-- **gpt**：外部专家，疑难杂症时由 gork 调用会诊
+开发优先级：
+1. 游戏是否好玩
+2. 核心循环是否成立
+3. 战斗、成长、探索是否有吸引力
+4. 内容丰富度
+5. 表现、美术、UI
+6. 代码整理与工程优化
 
-开始工作前：
+不要为了流程完整而增加流程。
+不要为了测试数量而测试。
+不要为了架构优雅牺牲开发速度。
 
-1. 读取 `AGENT.MD`
-2. 读取 `state/product_state.json`
-3. 按 `AGENT.MD` 的 GOAL 循环和权威顺序执行
-4. **无依赖 Task 必须并行 + background 启动**
+开始工作：
+1. 阅读 AGENT.MD
+2. 阅读 PROJECT_STATE.md
+3. 阅读 PRODUCT_CONTRACT.md
+4. 根据当前阶段推进游戏内容。
 
-本文件不得扩展成第二套治理规则。
+所有任务必须回答：
+- 是否改善玩家体验？
+- 是否增强可玩性？
+- 是否减少未来开发阻碍？
+
+如果答案都是否，则降低优先级。
