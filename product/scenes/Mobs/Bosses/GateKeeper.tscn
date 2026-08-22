@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/Mobs/Mob.tscn" id="1"]
-[ext_resource type="SpriteFrames" path="res://sprites/monsters/zombie.aseprite" id="2"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/actors/zombie.spriteframes.tres" id="2"]
 [ext_resource type="Shader" path="res://scenes/Shaders/OutlineShader.tres" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/Skills/MobSkills/TheGatekeeperSkills/PoisonNova.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://scenes/Skills/MobSkills/TheGatekeeperSkills/ZombieSummoner.tscn" id="5"]

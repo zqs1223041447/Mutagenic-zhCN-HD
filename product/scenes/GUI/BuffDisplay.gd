@@ -9,7 +9,8 @@ var buff_count = 0
 func _ready() -> void :
 				effect_weakref = weakref(effect)
 				$VBoxContainer/Buff/BuffIcon.texture = texture
-				$VBoxContainer/Buff.hint_tooltip = effect.description
+				# P4-WIRE: G3 hint_tooltip renamed tooltip_text in Godot 4
+				$VBoxContainer/Buff.tooltip_text = effect.description
 				if effect.permanent:
 								$VBoxContainer/DurationLabel.text = ""
 				else:

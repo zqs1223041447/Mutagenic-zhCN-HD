@@ -25,6 +25,10 @@ func _process(delta: float) -> void :
 
 func _draw() -> void :
 				if initialized:
+								# P4-WIRE guard: the player global may not be published yet
+								# (or already freed on scene teardown) when _draw runs.
+								if player == null or not is_instance_valid(player):
+												return
 								var p_x = player.global_position.x / step_x - parent.offset_x + parent.IMAGE_PADDING
 								var p_y = player.global_position.y / step_y - parent.offset_y + parent.IMAGE_PADDING
 								var pos = Vector2(p_x, p_y) - (size / 2.0)

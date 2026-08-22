@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" path="res://sprites/drops/red_orb.png" id="7"]
 [ext_resource type="Texture2D" path="res://sprites/drops/green_orb.png" id="8"]
 [ext_resource type="Texture2D" path="res://sprites/drops/corruption.png" id="9"]
-[ext_resource type="Texture2D" path="res://sprites/gui/important.png" id="10"]
+[ext_resource type="Texture2D" path="res://sprites/_mapped/ui/important.png" id="10"]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 16.0

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" path="res://scenes/StatusBar/StatusBar.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/Mobs/PathingController.tscn" id="4"]
 [ext_resource type="Texture2D" path="res://sprites/effects/shadow.png" id="5"]
-[ext_resource type="SpriteFrames" path="res://sprites/monsters/skeleton_archer.aseprite" id="6"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/actors/skeleton_archer.spriteframes.tres" id="6"]
 [ext_resource type="Shader" path="res://scenes/Shaders/OutlineShader.tres" id="7"]
 [ext_resource type="PackedScene" path="res://scenes/Skills/MobSkills/BasicAttack/BasicAttack.tscn" id="8"]
 

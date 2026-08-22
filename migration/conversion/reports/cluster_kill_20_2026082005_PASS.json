@@ -2,7 +2,7 @@
   "event": "B1-X5 combat-harness scenario run",
   "task_id": "B1-X5",
   "branch": "agent/kinetic-arcane-remaster-foundation",
-  "repo_head_sha": "0fe970cb5718b467a347e3006c590fac585a0aa8",
+  "repo_head_sha": "8f2a664a922a08f3b60cc8ffb8d42b165afa0fd3",
   "schema_version": "1.0",
   "scenario": {
     "id": "cluster_kill_20",
@@ -17,15 +17,15 @@
   },
   "candidate": {
     "provided": true,
-    "path": "<repo>02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+    "path": "<repo>/02_tools/godot/Godot_v4.7.1-stable_win64.exe",
     "sha256": "323f9c4cc5db674e98815cdd8e69da007d5efc779abedc8c0e42883b7fdea12a",
     "exists": true,
     "path_repo_relative": "02_tools/godot/Godot_v4.7.1-stable_win64.exe"
   },
   "modset": "none",
   "timestamps": {
-    "started_at": "2026-08-22T04:29:42Z",
-    "ended_at": "2026-08-22T04:30:00Z"
+    "started_at": "2026-08-22T11:07:26Z",
+    "ended_at": "2026-08-22T11:07:43Z"
   },
   "boot": {
     "alert_count": 0,
@@ -36,25 +36,25 @@
     "alive": 0,
     "checkpoint_count": 2,
     "damage_events": 40,
-    "dashes": 1,
+    "dashes": 0,
     "duplicate_deaths": 0,
     "killed": 20,
-    "player_moves": 18,
+    "player_moves": 43,
     "spawned": 20
   },
   "perf": {
-    "fps_avg": 54.34,
+    "fps_avg": 46.1,
     "fps_max": 145.0,
     "fps_min": 1.0,
     "frame_pacing_p95_ms": 0.0,
-    "frames": 187
+    "frames": 81
   },
   "capture": null,
   "runtime": {
     "ran": true,
     "in_game_exit_code": 0,
     "in_game_result": "PASS",
-    "launcher": "python <repo>scripts/validate/p3_bc_launch_godot.py --scenario cluster_kill_20 --seed 2026082005 --out-dir <repo>migration/conversion",
+    "launcher": "python <repo>/scripts/validate/p3_bc_launch_godot.py --scenario cluster_kill_20 --seed 2026082005 --out-dir <repo>/migration/conversion",
     "launcher_returncode": 0
   },
   "telemetry": {
@@ -112,7 +112,7 @@
       "field": "perf.fps_avg",
       "op": ">=",
       "expected": 30.0,
-      "actual": 54.34,
+      "actual": 46.1,
       "capability": "optional",
       "measured": true,
       "passed": true,

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" path="res://scenes/Skills/Auras/GenericAura.tscn" id="1"]
 [ext_resource type="Script" path="res://scenes/Skills/Auras/Rush/Rush.gd" id="2"]
-[ext_resource type="SpriteFrames" path="res://sprites/aura_effects/rush.aseprite" id="3"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/status/rush.spriteframes.tres" id="3"]
 [ext_resource type="Texture2D" path="res://sprites/status_effects/rush.png" id="4"]
 
 [sub_resource type="CircleShape2D" id=7]

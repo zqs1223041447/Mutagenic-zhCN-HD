@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3]
 
-[ext_resource type="SpriteFrames" path="res://sprites/monsters/attack_dog.aseprite" id="1"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/actors/attack_dog.spriteframes.tres" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/Mobs/Mob.tscn" id="2"]
 
 [sub_resource type="CircleShape2D" id=1]

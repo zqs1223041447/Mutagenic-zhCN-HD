@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/Popups/Dialogs/OutfitSelector/OutfitOption.gd" id="1"]
 [ext_resource type="Theme" path="res://Themes/MainTheme.tres" id="2"]
-[ext_resource type="Texture2D" path="res://sprites/gui/important.png" id="3"]
+[ext_resource type="Texture2D" path="res://sprites/_mapped/ui/important.png" id="3"]
 
 [node name="OutfitOption" type="Button"]
 offset_right = 20.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://scenes/Interactables/Interactable.gd" id="1"]
-[ext_resource type="SpriteFrames" path="res://sprites/hideout/bench.aseprite" id="2"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/tiles/bench.spriteframes.tres" id="2"]
 [ext_resource type="Theme" path="res://Themes/InGameText.tres" id="3"]
 
 [sub_resource type="RectangleShape2D" id=1]

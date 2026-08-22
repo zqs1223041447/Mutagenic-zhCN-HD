@@ -151,10 +151,10 @@ def main(argv: list[str] | None = None) -> int:
            / "p4_b_perf_baseline.json").resolve()
 
     counts: list[int] = []
-    for token in args.counts.split(","):
-        token = token.strip()
-        if token:
-            counts.append(max(1, int(token)))
+    for count_str in args.counts.split(","):
+        count_str = count_str.strip()
+        if count_str:
+            counts.append(max(1, int(count_str)))
 
     discovery = discover_product_godot(root)
     engine = discovery.get("engine") or {}

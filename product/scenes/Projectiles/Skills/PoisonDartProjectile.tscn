@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/Projectiles/Skills/PoisonDartProjectile.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="2"]
-[ext_resource type="SpriteFrames" path="res://sprites/projectiles/poison_dart_projectile.aseprite" id="3"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/skills/poison_dart_projectile.spriteframes.tres" id="3"]
 
 [node name="PoisonDartProjectile" instance=ExtResource("2")]
 z_index = -5

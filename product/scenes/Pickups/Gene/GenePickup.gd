@@ -27,8 +27,8 @@ var help_tip: PackedScene = null
 func _ready() -> void:
 	if ResourceLoader.exists("res://Sounds/Pickups/drop_only.wav"):
 		drop_only_sound = load("res://Sounds/Pickups/drop_only.wav")
-	if ResourceLoader.exists("res://sprites/gui/gene_unique.png"):
-		unique_gene_sprite = load("res://sprites/gui/gene_unique.png")
+	if ResourceLoader.exists("res://sprites/_mapped/ui/gene_unique.png"):
+		unique_gene_sprite = load("res://sprites/_mapped/ui/gene_unique.png")
 	if ResourceLoader.exists("res://scenes/Popups/Dialogs/HelpTip/GeneTip/GeneTip.tscn"):
 		help_tip = load("res://scenes/Popups/Dialogs/HelpTip/GeneTip/GeneTip.tscn")
 

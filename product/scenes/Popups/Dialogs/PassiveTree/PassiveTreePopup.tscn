@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/Popups/Dialogs/PassiveTree/PassiveTreeContainer.gd" id="1"]
 [ext_resource type="Script" path="res://scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd" id="3"]
 [ext_resource type="Theme" path="res://Themes/MainTheme.tres" id="4"]
-[ext_resource type="Texture2D" path="res://sprites/gui/selector.png" id="5"]
+[ext_resource type="Texture2D" path="res://sprites/_mapped/ui/selector.png" id="5"]
 
 [node name="PassiveTreePopup" type="CanvasLayer"]
 process_mode = 3

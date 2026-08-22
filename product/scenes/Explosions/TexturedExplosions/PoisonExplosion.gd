@@ -5,9 +5,12 @@ extends FlipbookExplosion
 func _ready() -> void :
 				emitting = true
 				if radius:
-								process_material.scale = radius / 64.0
+								# P4-WIRE: G3 float scale -> scale_min/scale_max (Godot 4)
+								process_material.scale_min = radius / 64.0
+								process_material.scale_max = radius / 64.0
 				if override_scale != 0:
-								process_material.scale = override_scale
+								process_material.scale_min = override_scale
+								process_material.scale_max = override_scale
 
 				modulate = modulation
 

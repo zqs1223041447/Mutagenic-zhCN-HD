@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/Mobs/Mob.tscn" id="1"]
-[ext_resource type="SpriteFrames" path="res://sprites/monsters/spirit_of_the_ancient.aseprite" id="2"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/actors/spirit_of_the_ancient.spriteframes.tres" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/Skills/MobSkills/SotaSkills/SpearThrow.tscn" id="3"]
 [ext_resource type="Shader" path="res://scenes/Shaders/OutlineShader.tres" id="4"]
 

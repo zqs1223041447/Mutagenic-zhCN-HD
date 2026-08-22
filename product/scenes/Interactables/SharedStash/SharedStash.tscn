@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" path="res://scenes/Interactables/Interactable.tscn" id="2"]
 [ext_resource type="Texture2D" path="res://sprites/effects/shadow.png" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/UI/Notice.tscn" id="4"]
-[ext_resource type="SpriteFrames" path="res://sprites/hideout/chest.aseprite" id="5"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/tiles/chest.spriteframes.tres" id="5"]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2(14, 12.5)

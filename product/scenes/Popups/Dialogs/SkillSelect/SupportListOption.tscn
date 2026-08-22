@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://scenes/Popups/Dialogs/SkillSelect/SupportListOption.gd" id="1"]
-[ext_resource type="Texture2D" path="res://sprites/gui/skill_supports/extra_munitions.png" id="2"]
+[ext_resource type="Texture2D" path="res://sprites/_mapped/ui/extra_munitions.png" id="2"]
 [ext_resource type="Theme" path="res://Themes/MainTheme.tres" id="3"]
-[ext_resource type="Texture2D" path="res://sprites/gui/skill_supports/support_background.png" id="4"]
+[ext_resource type="Texture2D" path="res://sprites/_mapped/ui/support_background.png" id="4"]
 
 [node name="SupportListOption" type="Button"]
 offset_right = 64.0

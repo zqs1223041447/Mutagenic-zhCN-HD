@@ -796,44 +796,41 @@
   },
   "next_ready": [
     {
-      "id": "P4-A",
-      "goal": "可读性+反馈+位置应用：R1 敌我轮廓/受击闪白/精英标记（程序化材质）；R2 hit-stop/screen shake/击杀微效果（配置化）；C2 读档位置应用（load 后传送回存档位置）",
+      "id": "P4-GLOBALS",
+      "goal": "Globals 139 条引用接线：OrbTypes/Outfits/Genes 等 Globals 脚本中剩余 missing_asset 引用按映射表重写（与 P4-WIRE 同逻辑）",
       "depends_on": [],
       "status": "READY",
       "parallelizable": true,
-      "lane": "A（fix-1 复用）"
+      "note": "接线后预期 missing_asset 143→接近 0"
     },
     {
-      "id": "P4-B",
-      "goal": "VFX节奏+性能基线+真实掉落链：F1 击杀/受击 VFX 节奏（程序化先行）；F2 spawn 50/100 怪帧时基线探针（首测建基线不设门）；C1 OrbPickup/PortalPickup 真实移植（消除 E6 测试桩）",
+      "id": "P4-ANIM",
+      "goal": "动画重建（可选）：将单帧 SpriteFrames 包装器升级为多帧动画（若用户提供源或授权素材）；当前为静帧过渡方案",
       "depends_on": [],
       "status": "READY",
       "parallelizable": true,
-      "lane": "B（fix-2 复用）"
+      "note": "非阻塞，HUMAN_INPUT_REQUIRED 仅当需要新动画源"
     },
     {
-      "id": "ART-C",
-      "goal": "美术清单与素材库（禁改场景文件）：缺失引用全量扫描分类 inventory + 自有 PNG 同名重映射表（OWN_REMAP）+ 批准自由包下载（SOURCE.txt/ATTRIBUTION.md，itch 不可程序化下载的记 NEEDS_MANUAL_DOWNLOAD）+ _acquired/_mapped/_placeholders 建设 + 映射表 JSON（OWN_REMAP|MAPPED|PLACEHOLDER）",
+      "id": "P4-PERF-GPU",
+      "goal": "GPU 性能基线：窗口化渲染下高密度帧时采样（补充 headless CPU 基线）",
       "depends_on": [],
       "status": "READY",
-      "parallelizable": true,
-      "lane": "C（新 fixer）"
-    },
+      "parallelizable": true
+    }
+  ],
+  "completed_batches": [
     {
-      "id": "P4-WIRE",
-      "goal": "美术接线批次：按映射表重写场景 ext_resource（.aseprite→_mapped PNG）、default_texture_filter=0（Nearest）、占位登记收口 + 二次回归门（boot/pytest/harness 无新错误）",
-      "depends_on": [
-        "P4-A",
-        "P4-B",
-        "ART-C"
-      ],
-      "status": "BLOCKED",
-      "blocked_by": [
-        "P4-A",
-        "P4-B",
-        "ART-C"
-      ],
-      "parallelizable": false
+      "id": "P4-BATCH-1",
+      "completed_at": "2026-08-22",
+      "lanes": ["P4-A", "P4-B", "ART-C", "P4-WIRE"],
+      "summary": "可读性/摄像反馈/位置应用 + VFX/性能基线/真实掉落链 + 217条美术映射(136 OWN_REMAP/43 MAPPED/38 PLACEHOLDER) + WIRE 56文件92引用接线；boot错误293→146(-50%)，harness 8/8 PASS，pytest 276绿",
+      "evidence": [
+        "migration/inventory/p4_art_missing_inventory.json",
+        "migration/inventory/p4_art_mapping.json",
+        "migration/conversion/p4_wire_report.json",
+        "migration/conversion/p3_e2e_full_report_v3.json"
+      ]
     }
   ],
   "decisions": [

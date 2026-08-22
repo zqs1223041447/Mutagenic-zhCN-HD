@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" path="res://scenes/Skills/Auras/GenericAura.tscn" id="1"]
 [ext_resource type="Script" path="res://scenes/Skills/Auras/ToxicAura/ToxicAura.gd" id="2"]
-[ext_resource type="SpriteFrames" path="res://sprites/aura_effects/toxic_aura.aseprite" id="3"]
-[ext_resource type="Texture2D" path="res://sprites/aura_effects/toxic_aura.png" id="4"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/status/toxic_aura.spriteframes.tres" id="3"]
+[ext_resource type="Texture2D" path="res://sprites/_mapped/status/toxic_aura.png" id="4"]
 [ext_resource type="Texture2D" path="res://sprites/status_effects/toxic_aura.png" id="5"]
 
 [sub_resource type="CircleShape2D" id=7]

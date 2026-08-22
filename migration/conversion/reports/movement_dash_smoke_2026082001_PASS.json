@@ -2,7 +2,7 @@
   "event": "B1-X5 combat-harness scenario run",
   "task_id": "B1-X5",
   "branch": "agent/kinetic-arcane-remaster-foundation",
-  "repo_head_sha": "0fe970cb5718b467a347e3006c590fac585a0aa8",
+  "repo_head_sha": "8f2a664a922a08f3b60cc8ffb8d42b165afa0fd3",
   "schema_version": "1.0",
   "scenario": {
     "id": "movement_dash_smoke",
@@ -17,15 +17,15 @@
   },
   "candidate": {
     "provided": true,
-    "path": "<repo>02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+    "path": "<repo>/02_tools/godot/Godot_v4.7.1-stable_win64.exe",
     "sha256": "323f9c4cc5db674e98815cdd8e69da007d5efc779abedc8c0e42883b7fdea12a",
     "exists": true,
     "path_repo_relative": "02_tools/godot/Godot_v4.7.1-stable_win64.exe"
   },
   "modset": "none",
   "timestamps": {
-    "started_at": "2026-08-22T04:28:21Z",
-    "ended_at": "2026-08-22T04:29:06Z"
+    "started_at": "2026-08-22T11:06:23Z",
+    "ended_at": "2026-08-22T11:07:09Z"
   },
   "boot": {
     "alert_count": 0,
@@ -39,11 +39,11 @@
     "dashes": 7,
     "duplicate_deaths": 0,
     "killed": 0,
-    "player_moves": 0,
+    "player_moves": 37,
     "spawned": 0
   },
   "perf": {
-    "fps_avg": 59.69,
+    "fps_avg": 59.65,
     "fps_max": 145.0,
     "fps_min": 1.0,
     "frame_pacing_p95_ms": 0.0,
@@ -54,7 +54,7 @@
     "ran": true,
     "in_game_exit_code": 0,
     "in_game_result": "PASS",
-    "launcher": "python <repo>scripts/validate/p3_bc_launch_godot.py --scenario movement_dash_smoke --seed 2026082001 --out-dir <repo>migration/conversion",
+    "launcher": "python <repo>/scripts/validate/p3_bc_launch_godot.py --scenario movement_dash_smoke --seed 2026082001 --out-dir <repo>/migration/conversion",
     "launcher_returncode": 0
   },
   "telemetry": {
@@ -101,16 +101,14 @@
       "field": "counters.player_moves",
       "op": ">=",
       "expected": 1,
-      "actual": 0,
+      "actual": 37,
       "capability": "optional",
       "measured": true,
-      "passed": false,
-      "status": "fail"
+      "passed": true,
+      "status": "pass"
     }
   ],
-  "failed_optional_assertions": [
-    "player_moved"
-  ],
+  "failed_optional_assertions": [],
   "result": "PASS",
   "exit_code": 0,
   "proves": [

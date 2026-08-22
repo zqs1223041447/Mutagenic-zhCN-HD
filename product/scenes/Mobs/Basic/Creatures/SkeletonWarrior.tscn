@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/Mobs/Mob.tscn" id="2"]
-[ext_resource type="SpriteFrames" path="res://sprites/monsters/skeleton_warrior.aseprite" id="3"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/actors/skeleton_warrior.spriteframes.tres" id="3"]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 4.0

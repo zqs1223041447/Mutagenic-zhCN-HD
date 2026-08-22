@@ -18,6 +18,7 @@
     "p3_combat_probe": "scripts/validate/p3_combat_probe.py",
     "p3_loot_probe": "scripts/validate/p3_loot_probe.py",
     "p3_ui_probe": "scripts/validate/p3_ui_probe.py",
+    "p4_b_loot_real_probe": "scripts/validate/p4_b_loot_real_probe.py",
     "p3_a_probe": "scripts/validate/run_p3_a_character_save.py",
     "p3_b_probe": "scripts/validate/run_p3_b_world_movement.py",
     "p3_bc_world_entry": "scripts/validate/run_p3_bc_world_entry.py",
@@ -85,10 +86,10 @@
       "exit_criteria": "E6: a dropped item picked up from the ground appears in the character inventory state.",
       "runner": {
         "implemented": true,
-        "strategy": "headless loot probe: drop stub uses the real Pickup.gd collision contract (Area2D overlap with player-group entity); credit goes through the REAL Stats.add_orb inventory API; orb_pickup signal asserted",
-        "command_template": "\"{python}\" \"{p3_loot_probe}\" --root \"{repo_root}\" --out \"{step_evidence}\"",
+        "strategy": "real loot chain probe: restored OrbPickup/PortalPickup scenes + real Mob elite drop branch replace the P3-D stub; touch -> vacuum -> Stats.add_orb credit -> orb_pickup signal; elite kill -> OrbPickup on ground",
+        "command_template": "\"{python}\" \"{p4_b_loot_real_probe}\" --out \"{step_evidence}\"",
         "timeout_s": 600,
-        "note": "wired to scripts/validate/p3_loot_probe.py (PASS 2026-08-22); CAVEAT: drop itself is a test stub mirroring Pickup.gd's collision contract - real Pickups scene restoration (OrbPickup/GenePickup) is owned by another lane and was only partially landed when this step was wired"
+        "note": "wired to scripts/validate/p4_b_loot_real_probe.py - real drop chain end to end (stub retired); evidence p4_b_loot_real.json"
       }
     },
     "E7": {

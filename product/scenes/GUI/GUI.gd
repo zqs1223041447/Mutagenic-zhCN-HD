@@ -208,6 +208,10 @@ func update_completion_status(stage_id):
 								$LevelInfoContainer/MarginContainer/LevelInfo/ZoneCompletion.visible = true
 
 func _render_damage_notification(amounts, attacker_stats, was_crit):
+				# P4-WIRE guard: the real emit path always passes the effective
+				# damage Dictionary; ignore anything else instead of crashing.
+				if typeof(amounts) != TYPE_DICTIONARY or amounts.is_empty():
+								return
 				var content = message_scene.instantiate()
 				$NotificationContainer/NotificationList.add_child(content)
 				content.add_text("Took ")
@@ -268,7 +272,9 @@ func trim_notifications():
 func _update_context_entity(entity):
 				
 				if context_entity != null and is_instance_valid(context_entity):
-								context_entity.stats.disconnect("status_effect_changed", self, "update_flags")
+								# P4-WIRE: Godot 4 disconnect takes (signal, Callable) - the
+								# G3 (signal, node, method) form was removed.
+								context_entity.stats.disconnect("status_effect_changed", Callable(self, "update_flags"))
 								context_entity = null
 				if entity:
 								context_entity = entity

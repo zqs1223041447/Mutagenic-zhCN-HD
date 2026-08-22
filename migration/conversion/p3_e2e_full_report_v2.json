@@ -18,19 +18,19 @@
       "step_id": "E1",
       "status": "PASS",
       "detail": "runner rc=0 in 28547ms",
-      "evidence_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\evidence\\e1_evidence.json"
+      "evidence_path": "<repo>\\runtime\\p3_harness\\evidence\\e1_evidence.json"
     },
     {
       "step_id": "E2",
       "status": "PASS",
       "detail": "runner rc=0 in 18389ms",
-      "evidence_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\evidence\\e2_evidence.json"
+      "evidence_path": "<repo>\\runtime\\p3_harness\\evidence\\e2_evidence.json"
     },
     {
       "step_id": "E3",
       "status": "PASS",
       "detail": "runner rc=0 in 45516ms",
-      "evidence_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\evidence\\e3_evidence.json"
+      "evidence_path": "<repo>\\runtime\\p3_harness\\evidence\\e3_evidence.json"
     },
     {
       "step_id": "E4",
@@ -48,19 +48,19 @@
       "step_id": "E6",
       "status": "PASS",
       "detail": "runner rc=0 in 13906ms",
-      "evidence_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\evidence\\e6_evidence.json"
+      "evidence_path": "<repo>\\runtime\\p3_harness\\evidence\\e6_evidence.json"
     },
     {
       "step_id": "E7",
       "status": "PASS",
       "detail": "runner rc=0 in 16625ms",
-      "evidence_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\evidence\\e7_evidence.json"
+      "evidence_path": "<repo>\\runtime\\p3_harness\\evidence\\e7_evidence.json"
     },
     {
       "step_id": "E8",
       "status": "PASS",
       "detail": "runner rc=0 in 28250ms",
-      "evidence_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\evidence\\e8_evidence.json"
+      "evidence_path": "<repo>\\runtime\\p3_harness\\evidence\\e8_evidence.json"
     }
   ],
   "summary": {

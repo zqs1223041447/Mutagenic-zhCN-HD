@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "task": "P4-WIRE",
+  "generated_at": "2026-08-22T12:03:10Z",
+  "plan_size": 194,
+  "rewrites": {
+    "files_changed": 0,
+    "references_rewritten": 0,
+    "by_status": {}
+  },
+  "registered_not_wired": 23,
+  "skipped": [
+    {
+      "missing_ref": "res://skillgen/skills/%s.json",
+      "expected_suffix": ".json",
+      "reason": "runtime-generated path template - not a static asset"
+    },
+    {
+      "missing_ref": "res://.import/arrow.png-1d15507c595a5a38dd9c02bebf3df3ea.stex",
+      "expected_suffix": ".stex",
+      "reason": "legacy G3 import-cache reference - WIRE should repoint to source texture"
+    },
+    {
+      "missing_ref": "res://scenes/DelayedSkill/ClusterBombs/ClusterBombs.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/CycleOfDestruction.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://Sounds/Pickups/drop_only.wav",
+      "expected_suffix": ".wav",
+      "reason": "audio asset - visual placeholder not applicable"
+    },
+    {
+      "missing_ref": "res://Sounds/Misc/FUI Power Up.wav",
+      "expected_suffix": ".wav",
+      "reason": "audio asset - visual placeholder not applicable"
+    },
+    {
+      "missing_ref": "res://scenes/GeneEditor/GeneInventory.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://scenes/GeneEditor/GeneLoadout.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://scenes/Popups/Dialogs/HelpTip/GeneTip/GeneTip.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/GoblinsGirdle.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav",
+      "expected_suffix": ".wav",
+      "reason": "audio asset - visual placeholder not applicable"
+    },
+    {
+      "missing_ref": "res://scenes/Pickups/Orb/OrbPickup.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://Sounds/UI/passive_allocate.wav",
+      "expected_suffix": ".wav",
+      "reason": "audio asset - visual placeholder not applicable"
+    },
+    {
+      "missing_ref": "res://scenes/PassiveTree/PassiveTree.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/PhantomShield.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://scenes/Pickups/Portal/PortalPickup.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://Sounds/Pickups/rare_orb.wav",
+      "expected_suffix": ".wav",
+      "reason": "audio asset - visual placeholder not applicable"
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/RegenerativeFlesh.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://scenes/DelayedSkill/ShrapnelBomb/ShrapnelBomb.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://scenes/ShaderExplosions/SlashEffect/SlashEffect.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://Sounds/BackgroundMusic/Space Laboratory Loop.ogg",
+      "expected_suffix": ".ogg",
+      "reason": "audio asset - visual placeholder not applicable"
+    },
+    {
+      "missing_ref": "res://scenes/Popups/Dialogs/StarterPicker/StarterPicker.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/Unleash.tscn",
+      "expected_suffix": ".tscn",
+      "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
+    }
+  ],
+  "per_file": [],
+  "errors": []
+}

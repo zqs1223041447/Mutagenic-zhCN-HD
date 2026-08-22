@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="SpriteFrames" path="res://sprites/gui/notice.aseprite" id="1"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/ui/notice.spriteframes.tres" id="1"]
 [ext_resource type="Script" path="res://scenes/UI/Notice.gd" id="2"]
 
 [node name="Notice" type="Node2D"]

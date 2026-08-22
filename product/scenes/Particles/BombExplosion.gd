@@ -13,7 +13,9 @@ func _ready() -> void :
 
 				var d_scale = radius / 64.0
 
-				process_material.scale = d_scale
+				# P4-WIRE: G3 float scale -> scale_min/scale_max (Godot 4)
+				process_material.scale_min = d_scale
+				process_material.scale_max = d_scale
 
 				Globals.play_sound_effect(sound)
 

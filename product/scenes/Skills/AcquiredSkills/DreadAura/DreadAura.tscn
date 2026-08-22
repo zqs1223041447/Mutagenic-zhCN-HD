@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" path="res://scenes/Skills/Auras/GenericAura.tscn" id="1"]
 [ext_resource type="Script" path="res://scenes/Skills/AcquiredSkills/DreadAura/DreadAura.gd" id="2"]
 [ext_resource type="Texture2D" path="res://sprites/status_effects_new/dread.png" id="3"]
-[ext_resource type="Texture2D" path="res://sprites/aura_effects/vile_domain.png" id="4"]
+[ext_resource type="Texture2D" path="res://sprites/_mapped/status/vile_domain.png" id="4"]
 
 [sub_resource type="CircleShape2D" id=7]
 resource_local_to_scene = true

@@ -207,7 +207,9 @@ func _orchestrate() -> void:
 		var v_base: float = vignette.color.a
 		var ts_min := 1.0
 		var off_max := 0.0
-		player.stats.emit_signal("damage_taken", [], null, true)
+		# P4-WIRE: amounts must be a Dictionary ({tag: amount}) - the real
+		# signal contract per Stats.on_take_damage; [] crashed GUI.keys().
+		player.stats.emit_signal("damage_taken", {}, null, true)
 		for i in range(20):
 			await get_tree().process_frame
 			ts_min = minf(ts_min, Engine.time_scale)

@@ -6,9 +6,9 @@ var sfx_large = load("res://Sounds/UI/passive_allocate.wav")
 signal selected_node(node_id)
 signal focus_changed
 
-var small_passive_frames = load("res://sprites/gui/small_passive.aseprite")
-var large_passive_frames = load("res://sprites/gui/large_passive.aseprite")
-var keystone_passive_frames = load("res://sprites/gui/keystone_passive.aseprite")
+var small_passive_frames = load("res://sprites/_acquired/generated_spriteframes/ui/small_passive.spriteframes.tres")
+var large_passive_frames = load("res://sprites/_acquired/generated_spriteframes/ui/large_passive.spriteframes.tres")
+var keystone_passive_frames = load("res://sprites/_acquired/generated_spriteframes/ui/keystone_passive.spriteframes.tres")
 
 var frames
 var focused
