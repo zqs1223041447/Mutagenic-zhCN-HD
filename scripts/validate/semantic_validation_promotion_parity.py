@@ -96,7 +96,8 @@ FORBIDDEN_TOKENS = [
 ]
 NEW_FILE_RELS = [
     "scripts/validate/semantic_validation_promotion_parity.py",
-    "docs/ai/batches/B3_CANDIDATE_SPLIT.md",
+    # B3_CANDIDATE_SPLIT.md removed in docs-hygiene audit (2026-08-21, 29 non-reusable docs deleted);
+    # manifest updated to match reality instead of restoring a process doc.
     "docs/ai/audits/B3-P2-X1_PARITY_REPORT.json",
     "mods/b3-p2-x1-promotion-aggregate/mod.json",
 ]
