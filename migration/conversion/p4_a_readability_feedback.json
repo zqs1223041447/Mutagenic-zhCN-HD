@@ -6,7 +6,7 @@
     "R1",
     "R2"
   ],
-  "generated_at": "2026-08-22T10:47:56Z",
+  "generated_at": "2026-08-22T10:55:31Z",
   "engine": {
     "binary_name": "Godot_v4.7.1-stable_win64.exe",
     "resolved_via": "REPO_RELATIVE",
@@ -15,23 +15,84 @@
   },
   "driver_scene": "res://scenes/Levels/_validate/P4AFeedbackDriver.tscn",
   "command": [
-    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
+    "<repo>\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
     "--headless",
     "--path",
-    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\product",
+    "<repo>\\product",
     "res://scenes/Levels/_validate/P4AFeedbackDriver.tscn"
   ],
-  "returncode": null,
-  "timed_out": true,
-  "duration_ms": 300031,
-  "attempts": 2,
-  "flaked": true,
-  "result": null,
+  "returncode": 0,
+  "timed_out": false,
+  "duration_ms": 35891,
+  "attempts": 1,
+  "flaked": false,
+  "result": {
+    "errors": [],
+    "finished": true,
+    "pass": true,
+    "r1": {
+      "character_ready": true,
+      "connections_on_target": 2,
+      "controller_instance_id_at_end": 1293775015876,
+      "controller_instance_id_at_start": 1293775015876,
+      "controller_present": true,
+      "controller_same_instance": true,
+      "controllers_in_group_census": [
+        1293775015876
+      ],
+      "debug_connect_count": 301,
+      "debug_damage_events": 3,
+      "debug_flash_count": 3,
+      "debug_marker_count": 1,
+      "elite_marker_attached": true,
+      "enemy_flash_fired": true,
+      "enemy_flash_restored": true,
+      "enemy_sampled": true,
+      "flash_delta": 1,
+      "flash_peak_modulate_r": 1.0,
+      "natural_elite_found": false,
+      "own_handler_fired": true,
+      "pass": true,
+      "target_connections": [
+        "<anonymous lambda>:0",
+        "<anonymous lambda>:0"
+      ],
+      "vignette_alpha_after_trigger": 0.151,
+      "vignette_baseline_alpha": 0.0,
+      "vignette_fired": true,
+      "vignette_present": true,
+      "vignette_restored": true,
+      "wave_spawned": true
+    },
+    "r2": {
+      "camera_present": true,
+      "change_scene_ok": true,
+      "enemies_after_isolation": 0,
+      "hitstop_engaged": true,
+      "hitstop_time_scale_min": 0.25,
+      "kill_zoom_fired": true,
+      "kill_zoom_peak": 1.019,
+      "kill_zoom_restored": true,
+      "map_done": true,
+      "pass": true,
+      "player_spawned": true,
+      "shake_fired": true,
+      "shake_offset_max": 4.87,
+      "shake_restored": true,
+      "time_scale_restored": true,
+      "world_entered": true
+    },
+    "task": "P4-A"
+  },
   "script_errors": [
-    "SCRIPT ERROR: Parse Error: Identifier \"max_r\" not declared in the current scope."
+    "SCRIPT ERROR: Invalid call to function 'disconnect' in base 'Node2D (Stats.gd)'. Expected 2 argument(s).",
+    "SCRIPT ERROR: Invalid access to property or key 'global_position' on a base object of type 'Nil'.",
+    "SCRIPT ERROR: Invalid assignment of property or key 'scale' with value of type 'float' on a base object of type 'ParticleProcessMaterial'.",
+    "SCRIPT ERROR: Invalid assignment of property or key 'hint_tooltip' with value of type 'String' on a base object of type 'TextureRect'.",
+    "SCRIPT ERROR: Invalid call. Nonexistent function 'keys' in base 'Array'."
   ],
-  "verdict_detail": "no P3_PROBE_RESULT line in driver output; fatal signature present",
-  "verdict": "FLAKE",
+  "verdict_detail": "probe assertions satisfied",
+  "verdict": "PASS",
   "proves": "enemy hit flash (modulate overbright tween fires and restores), elite ring marker attachment, kill zoom punch, player red vignette flash, screen shake offset jitter and Engine.time_scale hit-stop — each asserted to fire AND restore inside the real World.tscn chain.",
   "not_proven": "subjective feel/tuning quality (human judgement); visual correctness of the hit_flash shader on textured sprites."
 }

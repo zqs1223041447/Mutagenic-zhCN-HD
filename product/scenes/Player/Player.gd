@@ -29,6 +29,9 @@ var debug_path_points = []
 
 var dash_cooldown = 0.0
 
+# P4-A R2: player-follow camera (shake / zoom punch / hit-stop host)
+var camera: P4PlayerCamera
+
 func _ready() -> void :
 				stats.connect("health_changed", Callable(self, "_on_update_healthbar"))
 				stats.connect("died", Callable(self, "_on_death"))
@@ -66,6 +69,11 @@ func _ready() -> void :
 				stats.fill_health()
 
 				_on_outfit_changed()
+
+				# P4-A R2: spawn the feedback camera under the player
+				camera = P4PlayerCamera.new()
+				camera.config = preload("res://scenes/GUI/Feedback/p4_feedback_config.tres")
+				add_child(camera)
 
 func _physics_process(delta):
 				if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
@@ -169,6 +177,14 @@ func _on_skills_changed(any = null):
 
 func _on_damage(amounts, attacker_stats, was_crit):
 				Globals.play_sound_effect(sound_hit_damage.stream)
+				# P4-A R1/R2: red vignette + shake; crit counts as a heavy hit for hit-stop.
+				var vignette = get_tree().get_first_node_in_group("p4_vignette")
+				if vignette != null and vignette.has_method("flash"):
+								vignette.flash()
+				if camera != null:
+								camera.shake()
+								if was_crit:
+												camera.hit_stop()
 
 func _on_shielded():
 				Globals.play_sound_effect(sound_hit_damage.stream)

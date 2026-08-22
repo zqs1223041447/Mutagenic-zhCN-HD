@@ -387,6 +387,24 @@ func _ready():
 				if spawn_mobs and not Levels.is_current_level_ladder():
 								create_spawn_locations()
 
+func apply_saved_player_position() -> void:
+				# P4-A C2: read-only consumption of the H2 save field
+				# characters[name].position = {x, y, level}. Applies only when the
+				# recorded level matches the current one; absence keeps the default
+				# spawn behaviour untouched.
+				var cname = Globals.selected_character_name
+				if cname == null or not GameState.saved_stats.characters.has(cname):
+								return
+				if player == null or not is_instance_valid(player):
+								return
+				var pos = GameState.saved_stats.characters[cname].get("position")
+				if typeof(pos) != TYPE_DICTIONARY:
+								return
+				var lvl = str(pos.get("level", ""))
+				if lvl != "" and lvl != Globals.selected_level:
+								return
+				player.global_position = Vector2(float(pos.get("x", 0.0)), float(pos.get("y", 0.0)))
+
 func get_layout_generator():
 				var stage_id = GameState.get_global("active_stage_id")
 				return Levels.get_layout_for_stage_id(stage_id)

@@ -14,10 +14,10 @@
   },
   "driver_scene": "res://scenes/Levels/_validate/P4APositionDriver.tscn",
   "command": [
-    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
+    "<repo>\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
     "--headless",
     "--path",
-    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\product",
+    "<repo>\\product",
     "res://scenes/Levels/_validate/P4APositionDriver.tscn"
   ],
   "returncode": 0,

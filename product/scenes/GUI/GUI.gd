@@ -33,6 +33,17 @@ class SkillSorter:
 								return a.total_damage > b.total_damage
 
 func _ready() -> void :
+				# P4-A lane A: readability + screen feedback surfaces
+				var feedback_config: P4FeedbackConfig = preload("res://scenes/GUI/Feedback/p4_feedback_config.tres")
+				var vignette: P4VignetteOverlay = preload("res://scenes/GUI/Feedback/VignetteOverlay.gd").new()
+				vignette.config = feedback_config
+				vignette.add_to_group("p4_vignette")
+				add_child(vignette)
+				var enemy_feedback: P4EnemyFeedbackController = preload("res://scenes/GUI/Feedback/EnemyFeedbackController.gd").new()
+				enemy_feedback.config = feedback_config
+				enemy_feedback.add_to_group("p4_feedback_controller")
+				add_child(enemy_feedback)
+
 				Globals.connect("context_changed", Callable(self, "_update_context"))
 				Globals.connect("context_entity_changed", Callable(self, "_update_context_entity"))
 				Globals.connect("show_notification", Callable(self, "_render_notification"))

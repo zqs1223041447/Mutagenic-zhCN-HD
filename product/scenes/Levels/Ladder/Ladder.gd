@@ -19,6 +19,7 @@ func get_spawnables():
 func _ready():
 				player.global_position = Vector2.ZERO
 				read_tiles()
+				apply_saved_player_position()
 				await FrameTimer.idle_frame(self).timeout
 				emit_signal("map_done")
 				Globals.reset()

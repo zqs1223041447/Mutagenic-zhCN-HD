@@ -9,6 +9,7 @@ func _ready():
 				Globals.reset()
 				player.global_position = Vector2.ZERO
 				read_tiles()
+				apply_saved_player_position()
 				await FrameTimer.idle_frame(self).timeout
 				emit_signal("map_done")
 				call_deferred("check_for_starter_build")
