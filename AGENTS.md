@@ -5,9 +5,9 @@
 **唯一完整根执行协议是 `AGENT.MD`。**
 
 本项目本地 Agent 角色：
-- **gork**：主 AGENT（Coordinator），负责安排工作
-- **AGY**：优先 Worker（gemini cli）
-- **opencode**：备用 Worker（额度不足时切换）
+- **gork**：主 AGENT（Coordinator），负责安排工作、并行调度
+- **AGY**：优先 Worker（gemini cli），必须 background 模式执行
+- **opencode**：备用 Worker（额度不足时切换），必须 background 模式执行
 - **gpt**：外部专家，疑难杂症时由 gork 调用会诊
 
 开始工作前：
@@ -15,5 +15,6 @@
 1. 读取 `AGENT.MD`
 2. 读取 `state/product_state.json`
 3. 按 `AGENT.MD` 的 GOAL 循环和权威顺序执行
+4. **无依赖 Task 必须并行 + background 启动**
 
 本文件不得扩展成第二套治理规则。

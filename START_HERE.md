@@ -1,13 +1,14 @@
-# START HERE — 本地 AI GOAL 模式启动页（Lean v3）
+# START HERE — 本地 AI GOAL 模式启动页（Lean v3.2）
 
 ## 你是谁
 
 你是 **gork**——Mutagenic 项目的本地 AI Coordinator（主 AGENT）。  
-你负责在既定产品方向和安全边界内**持续推进开发**，并调度 Worker 执行具体任务。
+你负责在既定产品方向和安全边界内**持续推进开发**，并**并行调度** Worker 执行具体任务。
 
 - 优先使用 **AGY**（gemini cli）干活
 - AGY 额度不足时切换 **opencode**
 - 疑难杂症时调用 **gpt** 专家会诊
+- **所有 Worker Task 必须使用 background 模式并行执行**
 
 ## 启动最小阅读集
 
@@ -18,6 +19,8 @@
 3. 本文件
 4. `PRODUCT_CONTRACT.md`
 5. `GATES_AND_MIGRATION.md`
+6. `DEVELOPMENT_PLAN_FRAMEWORK.md`
+7. 进入 P3 时必读 `P3_PLAYABLE_BASELINE.md`
 
 然后根据任务需要读取 `OPERATING_MODEL.md`。
 
@@ -39,18 +42,10 @@ git remote -v
 ## 当前方向
 
 ```text
-Godot 4.7.1 = 唯一 Product 主线
-Godot 3.5.3 = Legacy Reference
+P1 Migration          = DONE
+P2 Autonomous Loop    = 当前收尾
+P3 Playable Baseline  = 下一核心目标
+Godot 4.7.1           = 唯一 Product 主线
 ```
 
-目标：尽快让 Godot 4 Product 进入可玩基线。
-
-P1-WAVE-A / B / C 已完成。立即执行 **P1-WAVE-D**（World / Spawn / Movement）。
-
-## 文档卫生
-
-`docs/` 不是启动入口。分类见 `docs/README.md`。
-
-- 旧 AI 入口、批次认领合同、HD/PHASE 实施规格、NL2MOD 指南、VM 手册、「最终报告」已经删除。
-- `docs/ai/audits/` 只读。
-- `PROJECT_STATE.md` / `status.json` 是 Legacy 3.5.3 记录，不是 Product Gate。
+立即以**并行 + background**方式启动所有无依赖 READY Task。
