@@ -1,9 +1,9 @@
 {
   "contract_id": "semantic_validation_promotion_parity",
   "schema_version": 1,
-  "created_at_utc": "2026-08-21T09:03:55Z",
+  "created_at_utc": "2026-08-22T00:29:58Z",
   "branch": "agent/kinetic-arcane-remaster-foundation",
-  "head_sha": "ba55e822692beb78090e6ecdfad722633b9905d3",
+  "head_sha": "9c8cce7166ad56b73f05f913515825d3524a9ba2",
   "resolver": "scripts/patch/resolve_mod_chain.py",
   "candidates": {
     "validation": {
@@ -292,8 +292,8 @@
     }
   },
   "checks": {
-    "total": 32,
-    "passed": 32
+    "total": 31,
+    "passed": 31
   },
   "verdict": "PASS"
 }
