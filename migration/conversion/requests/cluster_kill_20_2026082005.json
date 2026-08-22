@@ -434,7 +434,7 @@
       "mob_type": "ATTACK_DOG"
     }
   },
-  "expected_telemetry_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\migration\\conversion\\telemetry\\cluster_kill_20_2026082005.json",
+  "expected_telemetry_path": "<repo>\\migration\\conversion\\telemetry\\cluster_kill_20_2026082005.json",
   "contract": "ScenarioDirector.gd reads 'game_request' (scenario_id/seed/duration/plan with res+x+y+count), seeds Godot RNG with 'seed', spawns per the plan, then writes telemetry JSON conforming to combat_telemetry_schema.json to 'expected_telemetry_path'.",
   "game_request": {
     "schema_version": "1.0",

@@ -3,7 +3,7 @@
   "task": "P3-BC-E2",
   "generated_at": "2026-08-22T04:00:56Z",
   "driver_scene": "res://scenes/Levels/_validate/P3BCHarnessBoot.tscn",
-  "request": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\world_entry_probe\\requests\\world_entry_probe_2026082299.json",
+  "request": "<repo>\\runtime\\p3_harness\\world_entry_probe\\requests\\world_entry_probe_2026082299.json",
   "timeout_s": 360,
   "launcher_returncode": 0,
   "launcher_tail": "[p3_bc_launch][stderr tail]\nERROR: Required object \"rp_texture\" is null.\n   at: draw_texture_rect_region (scene/main/canvas_item.cpp:1009)\n   GDScript backtrace (most recent call first):\n       [0] _draw (res://scenes/Minimap/TextureRect.gd:31)\nERROR: Required object \"rp_texture\" is null.\n   at: draw_texture_rect_region (scene/main/canvas_item.cpp:1009)\n   GDScript backtrace (most recent call first):\n       [0] _draw (res://scenes/Minimap/TextureRect.gd:31)\nWARNING: 1 ObjectDB instance was leaked at exit (run with `--verbose` for details).\n   at: cleanup (core/object/object.cpp:2536)\n[p3_bc_launch] OK in 21s rc=0 scenario=world_entry_probe seed=2026082299 killed=0/0 damage_events=0 dashes=1 moves=40",
@@ -40,5 +40,5 @@
     "all_pass": true
   },
   "overall": "PASS",
-  "cli": "python scripts/validate/run_p3_bc_world_entry.py --out C:/AI-GAME/Mutagenic-zhCN-HD/runtime/p3_harness/evidence/e2_evidence.json"
+  "cli": "python scripts/validate/run_p3_bc_world_entry.py --out <repo>/runtime/p3_harness/evidence/e2_evidence.json"
 }

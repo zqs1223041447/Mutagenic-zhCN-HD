@@ -17,7 +17,7 @@
   },
   "candidate": {
     "provided": true,
-    "path": "C:/AI-GAME/Mutagenic-zhCN-HD/02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+    "path": "<repo>/02_tools/godot/Godot_v4.7.1-stable_win64.exe",
     "sha256": "323f9c4cc5db674e98815cdd8e69da007d5efc779abedc8c0e42883b7fdea12a",
     "exists": true,
     "path_repo_relative": "02_tools/godot/Godot_v4.7.1-stable_win64.exe"
@@ -54,7 +54,7 @@
     "ran": true,
     "in_game_exit_code": 0,
     "in_game_result": "PASS",
-    "launcher": "python C:/AI-GAME/Mutagenic-zhCN-HD/scripts/validate/p3_bc_launch_godot.py --scenario single_melee_hit --seed 2026082002 --out-dir C:/AI-GAME/Mutagenic-zhCN-HD/runtime",
+    "launcher": "python <repo>/scripts/validate/p3_bc_launch_godot.py --scenario single_melee_hit --seed 2026082002 --out-dir <repo>/runtime",
     "launcher_returncode": 0
   },
   "telemetry": {
@@ -124,9 +124,9 @@
     "gameplay feel / human S5 acceptance (human gate)"
   ],
   "evidence_paths": {
-    "request": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\requests\\single_melee_hit_2026082002.json",
-    "telemetry": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\telemetry\\single_melee_hit_2026082002.json",
+    "request": "<repo>\\runtime\\requests\\single_melee_hit_2026082002.json",
+    "telemetry": "<repo>\\runtime\\telemetry\\single_melee_hit_2026082002.json",
     "plan": null,
-    "report": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\reports\\single_melee_hit_2026082002_PASS.json"
+    "report": "<repo>\\runtime\\reports\\single_melee_hit_2026082002_PASS.json"
   }
 }
