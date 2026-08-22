@@ -113,9 +113,18 @@ def rewrite_files(product: Path, plan: dict) -> tuple[list[dict], Counter]:
     by_status: Counter[str] = Counter()
     total_refs = 0
 
-    sources = sorted(list((product / "scenes").rglob("*.tscn"))
-                     + list((product / "scenes").rglob("*.tres"))
-                     + list((product / "scenes").rglob("*.gd")))
+    # P4-GLOBALS lane: also wire Globals/*.gd where most missing_asset refs live
+    # (OrbTypes/Outfits/PassiveTagStats/SkillSupports etc). Exclude generated outputs.
+    def _is_generated(p: Path) -> bool:
+        parts = p.relative_to(product).parts
+        return any(seg in ("_acquired", "_mapped", "_placeholders") for seg in parts)
+    candidates = []
+    for pat in ("**/*.tscn", "**/*.tres", "**/*.gd"):
+        for p in product.rglob(pat):
+            if _is_generated(p):
+                continue
+            candidates.append(p)
+    sources = sorted(candidates)
     for path in sources:
         try:
             text = path.read_text(encoding="utf-8", errors="replace")

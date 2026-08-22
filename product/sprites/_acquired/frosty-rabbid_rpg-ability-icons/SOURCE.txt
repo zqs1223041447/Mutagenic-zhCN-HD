@@ -1,0 +1,7 @@
+pack: frosty-rabbid_rpg-ability-icons
+url: https://frosty-rabbid.itch.io/rpg-ability-icons
+license: CC0 1.0 (public domain)
+author: frosty_rabbid
+downloaded_at: 2026-08-22
+extracted: full pack (skill icon stock; reserved for WIRE batch)
+local_archive: runtime/p4_art_downloads/frosty-rabbid/rpg icon collection v1.2.1.zip

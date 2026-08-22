@@ -1,12 +1,16 @@
 {
   "schema_version": 1,
   "task": "P4-WIRE",
-  "generated_at": "2026-08-22T12:03:10Z",
+  "generated_at": "2026-08-22T12:55:57Z",
   "plan_size": 194,
   "rewrites": {
-    "files_changed": 0,
-    "references_rewritten": 0,
-    "by_status": {}
+    "files_changed": 9,
+    "references_rewritten": 173,
+    "by_status": {
+      "OWN_REMAP": 139,
+      "MAPPED": 25,
+      "PLACEHOLDER": 9
+    }
   },
   "registered_not_wired": 23,
   "skipped": [
@@ -126,6 +130,72 @@
       "reason": "scene reference gap - owned by scene/WIRE batch, not an art asset"
     }
   ],
-  "per_file": [],
+  "per_file": [
+    {
+      "file": "product/Globals/Outfits.gd",
+      "rewrites": 51,
+      "by_status": {
+        "MAPPED": 25,
+        "OWN_REMAP": 17,
+        "PLACEHOLDER": 9
+      }
+    },
+    {
+      "file": "product/Globals/__OldPassiveStats.gd",
+      "rewrites": 33,
+      "by_status": {
+        "OWN_REMAP": 33
+      }
+    },
+    {
+      "file": "product/Globals/PassiveTagStats.gd",
+      "rewrites": 33,
+      "by_status": {
+        "OWN_REMAP": 33
+      }
+    },
+    {
+      "file": "product/Globals/SkillSupports.gd",
+      "rewrites": 24,
+      "by_status": {
+        "OWN_REMAP": 24
+      }
+    },
+    {
+      "file": "product/Globals/Genes/UniquePools/UniquePoolGeneric.gd",
+      "rewrites": 21,
+      "by_status": {
+        "OWN_REMAP": 21
+      }
+    },
+    {
+      "file": "product/Globals/OrbTypes.gd",
+      "rewrites": 5,
+      "by_status": {
+        "OWN_REMAP": 5
+      }
+    },
+    {
+      "file": "product/Globals/PlayableClasses.gd",
+      "rewrites": 4,
+      "by_status": {
+        "OWN_REMAP": 4
+      }
+    },
+    {
+      "file": "product/Globals/Genes/UniquePools/UniquePoolSOTA.gd",
+      "rewrites": 1,
+      "by_status": {
+        "OWN_REMAP": 1
+      }
+    },
+    {
+      "file": "product/Globals/Genes.gd",
+      "rewrites": 1,
+      "by_status": {
+        "OWN_REMAP": 1
+      }
+    }
+  ],
   "errors": []
 }

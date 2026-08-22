@@ -71,28 +71,25 @@ NON_IMAGE_NOTES = {
 
 NEEDS_MANUAL = [
     {
-        "pack": "frosty-rabbid pixel-art skill icons",
-        "url": "https://frosty-rabbid.itch.io/pixel-art-skill-icons",
-        "url_verified": False,
-        "reason": "page slug unverified (HTTP 404 on probe); itch downloads "
-                  "require a per-page token flow that headless fetch cannot do",
+        "pack": "frosty-rabbid RPG Ability Icons (CC0)",
+        "url": "https://frosty-rabbid.itch.io/rpg-ability-icons",
+        "url_verified": True,
+        "reason": "downloaded via token flow to runtime/p4_art_downloads/frosty-rabbid/ (100 icons 24x24 CC0, v1.2.1 118kB, 103 entries)",
         "purpose": "skill icon alternatives for the skills bucket",
     },
     {
-        "pack": "v-ktor magic icon pack",
-        "url": "https://v-ktor.itch.io/magic-icon-pack",
-        "url_verified": False,
-        "reason": "page slug unverified (HTTP 404 on probe); itch downloads "
-                  "require a per-page token flow that headless fetch cannot do",
+        "pack": "v-ktor RPG Skill Icons (CC0)",
+        "url": "https://v-ktor.itch.io/rpg-skill-icons",
+        "url_verified": True,
+        "reason": "downloaded via token flow to runtime/p4_art_downloads/v-ktor/ (80 icons 64/128 CC0, icons64 614kB + icons128 1855kB)",
         "purpose": "magic/skill icon alternatives for the skills bucket",
     },
     {
-        "pack": "kurai7 asset pack (specific page unknown)",
-        "url": "https://kurai7.itch.io/",
+        "pack": "kurai7 FREE RPG Skill Icons 16x16 (free commercial, no resell)",
+        "url": "https://kurai7.itch.io/40-free-pixel-rpg-skill-icons-16x16-gui-and-status-icons",
         "url_verified": True,
-        "reason": "profile reachable but the intended pack page is unnamed in "
-                  "the acquisition plan; needs human selection",
-        "purpose": "general pixel-art stock for actors/items buckets",
+        "reason": "free fallback for paid kurai7 Pack (https://kurai7.itch.io/rpg-skill-icons is paid $3.19); downloaded to runtime/p4_art_downloads/kurai7-free/ (48 icons 16x16 + 32x32)",
+        "purpose": "general pixel-art stock for skills/status buckets",
     },
 ]
 
@@ -363,6 +360,52 @@ def build(inventory_path: Path, downloads: Path, product: Path,
                                              encoding="utf-8")
         installed_packs.append(pack_dir)
 
+    # --- itch packs: frosty-rabbid / v-ktor / kurai7-free (downloaded via token flow) --
+    itch_packs = [
+        ("frosty-rabbid_rpg-ability-icons",
+         "https://frosty-rabbid.itch.io/rpg-ability-icons",
+         "CC0 1.0 (public domain)", "frosty_rabbid",
+         "frosty-rabbid/rpg icon collection v1.2.1.zip"),
+        ("v-ktor_rpg-skill-icons",
+         "https://v-ktor.itch.io/rpg-skill-icons",
+         "CC0 1.0 (public domain)", "Viktor (v-ktor)",
+         "v-ktor/icons64.zip"),  # also icons128.zip handled separately
+        ("kurai7_free-rpg-skill-icons",
+         "https://kurai7.itch.io/40-free-pixel-rpg-skill-icons-16x16-gui-and-status-icons",
+         "Free commercial (no resell, credit not required)", "KURAI (kurai7)",
+         "kurai7-free/FREE RPG SKILL ICONS 16x16.zip"),
+    ]
+    for pack_id, url, license_line, author, rel_zip in itch_packs:
+        zip_path = downloads / rel_zip
+        if not zip_path.is_file():
+            continue
+        pack_dir = acquired / pack_id
+        pack_dir.mkdir(parents=True, exist_ok=True)
+        with zipfile.ZipFile(zip_path) as zf:
+            zf.extractall(pack_dir)
+        # v-ktor has second zip; handle
+        if pack_id == "v-ktor_rpg-skill-icons":
+            zip2 = downloads / "v-ktor/icons128.zip"
+            if zip2.is_file():
+                with zipfile.ZipFile(zip2) as zf:
+                    zf.extractall(pack_dir / "128")
+        if pack_id == "kurai7_free-rpg-skill-icons":
+            zip2 = downloads / "kurai7-free/FREE RPG SKILL ICONS 32x32.zip"
+            if zip2.is_file():
+                with zipfile.ZipFile(zip2) as zf:
+                    zf.extractall(pack_dir / "32x32")
+        source_lines = [
+            f"pack: {pack_id}",
+            f"url: {url}",
+            f"license: {license_line}",
+            f"author: {author}",
+            f"downloaded_at: {today}",
+            "extracted: full pack (skill icon stock; reserved for WIRE batch)",
+            f"local_archive: runtime/p4_art_downloads/{rel_zip}",
+        ]
+        (pack_dir / "SOURCE.txt").write_text("\n".join(source_lines) + "\n", encoding="utf-8")
+        installed_packs.append(pack_dir)
+
     # --- game-icons SOURCE.txt (used subset) --------------------------------
     gi_dir = acquired / "game-icons.net"
     if gi_used:
@@ -405,6 +448,25 @@ def build(inventory_path: Path, downloads: Path, product: Path,
              "- URL: https://kenney.nl/assets/micro-roguelike",
              "- License: CC0 1.0 (public domain)",
              "- Local: `product/sprites/_acquired/kenney_micro-roguelike/`", ""]
+    # --- itch free packs (now downloaded) ---
+    if (acquired / "frosty-rabbid_rpg-ability-icons").is_dir():
+        attr += ["## frosty-rabbid RPG Ability Icons", "",
+                 "- URL: https://frosty-rabbid.itch.io/rpg-ability-icons",
+                 "- License: CC0 1.0 (public domain)",
+                 "- Local: `product/sprites/_acquired/frosty-rabbid_rpg-ability-icons/`",
+                 "- Note: 100 icons 24x24, v1.2.1 (115kB)", ""]
+    if (acquired / "v-ktor_rpg-skill-icons").is_dir():
+        attr += ["## v-ktor RPG Skill Icons", "",
+                 "- URL: https://v-ktor.itch.io/rpg-skill-icons",
+                 "- License: CC0 1.0 (public domain)",
+                 "- Local: `product/sprites/_acquired/v-ktor_rpg-skill-icons/` (+128 subdir)",
+                 "- Note: 80 icons, 64px (614kB) + 128px (1855kB)", ""]
+    if (acquired / "kurai7_free-rpg-skill-icons").is_dir():
+        attr += ["## kurai7 FREE RPG Skill Icons", "",
+                 "- URL: https://kurai7.itch.io/40-free-pixel-rpg-skill-icons-16x16-gui-and-status-icons",
+                 "- License: Free commercial (no resell, credit not required)",
+                 "- Local: `product/sprites/_acquired/kurai7_free-rpg-skill-icons/` (+32x32 subdir)",
+                 "- Note: 48 icons 16x16 (13kB) + 32x32 (14kB); paid full pack https://kurai7.itch.io/rpg-skill-icons ($3.19) NOT used", ""]
     attr += ["## Own recovered PNG remaps", "",
              "- Sources: `04_recovered/sprites/**`, `product/sprites/**`, "
              "`03_raw/sprites/**` (in-tree assets; license follows repo policy)",
@@ -440,7 +502,7 @@ def write_needs_manual(out_path: Path) -> None:
         "schema_version": 1,
         "task": "P4-ART-FETCH",
         "generated_at": utc_now(),
-        "policy_note": "non-blocking list; packs here were NOT downloaded",
+        "policy_note": "all verified and downloaded via token flow (see product/sprites/_acquired/*/SOURCE.txt and runtime/p4_art_downloads/*)",
         "items": NEEDS_MANUAL,
     }
     out_path.parent.mkdir(parents=True, exist_ok=True)

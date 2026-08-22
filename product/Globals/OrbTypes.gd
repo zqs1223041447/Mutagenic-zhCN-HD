@@ -6,11 +6,11 @@ var green_tex = preload("res://sprites/drops/green_orb.png")
 var gold_tex = preload("res://sprites/drops/gold_orb.png")
 var corruption_tex = preload("res://sprites/drops/corruption.png")
 
-var blue_animated = load("res://sprites/drops/blue_orb.aseprite")
-var red_animated = load("res://sprites/drops/red_orb.aseprite")
-var green_animated = load("res://sprites/drops/green_orb.aseprite")
-var gold_animated = load("res://sprites/drops/gold_orb.aseprite")
-var corruption_animated = load("res://sprites/drops/corruption.aseprite")
+var blue_animated = load("res://sprites/_acquired/generated_spriteframes/items/blue_orb.spriteframes.tres")
+var red_animated = load("res://sprites/_acquired/generated_spriteframes/items/red_orb.spriteframes.tres")
+var green_animated = load("res://sprites/_acquired/generated_spriteframes/items/green_orb.spriteframes.tres")
+var gold_animated = load("res://sprites/_acquired/generated_spriteframes/items/gold_orb.spriteframes.tres")
+var corruption_animated = load("res://sprites/_acquired/generated_spriteframes/items/corruption.spriteframes.tres")
 
 var texture_for_orb = {
 				Constants.OrbType.BLUE: blue_tex, 

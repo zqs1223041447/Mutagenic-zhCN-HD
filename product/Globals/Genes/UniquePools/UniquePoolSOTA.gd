@@ -1,6 +1,6 @@
 extends Node
 
-var ancients_charm_texture = load("res://sprites/uniques/ancients_charm.png")
+var ancients_charm_texture = load("res://sprites/_mapped/equipment/ancients_charm.png")
 
 var pool = {
 				"ancients_charm": {

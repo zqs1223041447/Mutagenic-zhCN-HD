@@ -1,0 +1,7 @@
+pack: kurai7_free-rpg-skill-icons
+url: https://kurai7.itch.io/40-free-pixel-rpg-skill-icons-16x16-gui-and-status-icons
+license: Free commercial (no resell, credit not required)
+author: KURAI (kurai7)
+downloaded_at: 2026-08-22
+extracted: full pack (skill icon stock; reserved for WIRE batch)
+local_archive: runtime/p4_art_downloads/kurai7-free/FREE RPG SKILL ICONS 16x16.zip

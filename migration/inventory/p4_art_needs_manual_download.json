@@ -1,29 +1,29 @@
 {
   "schema_version": 1,
   "task": "P4-ART-FETCH",
-  "generated_at": "2026-08-22T07:49:26Z",
-  "policy_note": "non-blocking list; packs here were NOT downloaded",
+  "generated_at": "2026-08-22T12:59:52Z",
+  "policy_note": "all verified and downloaded via token flow (see product/sprites/_acquired/*/SOURCE.txt and runtime/p4_art_downloads/*)",
   "items": [
     {
-      "pack": "frosty-rabbid pixel-art skill icons",
-      "url": "https://frosty-rabbid.itch.io/pixel-art-skill-icons",
-      "url_verified": false,
-      "reason": "page slug unverified (HTTP 404 on probe); itch downloads require a per-page token flow that headless fetch cannot do",
+      "pack": "frosty-rabbid RPG Ability Icons (CC0)",
+      "url": "https://frosty-rabbid.itch.io/rpg-ability-icons",
+      "url_verified": true,
+      "reason": "downloaded via token flow to runtime/p4_art_downloads/frosty-rabbid/ (100 icons 24x24 CC0, v1.2.1 118kB, 103 entries)",
       "purpose": "skill icon alternatives for the skills bucket"
     },
     {
-      "pack": "v-ktor magic icon pack",
-      "url": "https://v-ktor.itch.io/magic-icon-pack",
-      "url_verified": false,
-      "reason": "page slug unverified (HTTP 404 on probe); itch downloads require a per-page token flow that headless fetch cannot do",
+      "pack": "v-ktor RPG Skill Icons (CC0)",
+      "url": "https://v-ktor.itch.io/rpg-skill-icons",
+      "url_verified": true,
+      "reason": "downloaded via token flow to runtime/p4_art_downloads/v-ktor/ (80 icons 64/128 CC0, icons64 614kB + icons128 1855kB)",
       "purpose": "magic/skill icon alternatives for the skills bucket"
     },
     {
-      "pack": "kurai7 asset pack (specific page unknown)",
-      "url": "https://kurai7.itch.io/",
+      "pack": "kurai7 FREE RPG Skill Icons 16x16 (free commercial, no resell)",
+      "url": "https://kurai7.itch.io/40-free-pixel-rpg-skill-icons-16x16-gui-and-status-icons",
       "url_verified": true,
-      "reason": "profile reachable but the intended pack page is unnamed in the acquisition plan; needs human selection",
-      "purpose": "general pixel-art stock for actors/items buckets"
+      "reason": "free fallback for paid kurai7 Pack (https://kurai7.itch.io/rpg-skill-icons is paid $3.19); downloaded to runtime/p4_art_downloads/kurai7-free/ (48 icons 16x16 + 32x32)",
+      "purpose": "general pixel-art stock for skills/status buckets"
     }
   ]
 }

@@ -4,7 +4,7 @@ var sound_keystone = preload("res://Sounds/UI/Crafting/change_keystone.wav")
 var sound_recombinate = preload("res://Sounds/UI/Crafting/recombinate.wav")
 var sound_craft = preload("res://Sounds/UI/Crafting/scramble.wav")
 
-var lesser_icon = load("res://sprites/gui/gene_lesser.png")
+var lesser_icon = load("res://sprites/_mapped/ui/gene_lesser.png")
 
 var helmet_slot_icon = preload("res://sprites/gui/equipment/helmet_slot.png")
 var body_slot_icon = preload("res://sprites/gui/equipment/body_slot.png")
