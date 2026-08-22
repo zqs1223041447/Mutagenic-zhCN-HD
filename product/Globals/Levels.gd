@@ -2,11 +2,11 @@ extends Node
 
 
 var default_level = preload("res://scenes/Levels/Default/DefaultLevel.tscn")
-var hideout_level = preload("res://scenes/Levels/Hideout/HideoutLevel.tscn")
-var boss_level = preload("res://scenes/Levels/BossArenas/BossArena.tscn")
-var spirit_of_the_ancient_level = preload("res://scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.tscn")
-var ladder_level = preload("res://scenes/Levels/Ladder/Ladder.tscn")
-var test_level = preload("res://scenes/Levels/TestLevel/TestLevel.tscn")
+var hideout_level = load("res://scenes/Levels/Hideout/HideoutLevel.tscn")
+var boss_level = load("res://scenes/Levels/BossArenas/BossArena.tscn")
+var spirit_of_the_ancient_level = load("res://scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.tscn")
+var ladder_level = load("res://scenes/Levels/Ladder/Ladder.tscn")
+var test_level = load("res://scenes/Levels/TestLevel/TestLevel.tscn")
 
 
 var tileset_factory = preload("res://Tilesets/tileset_factory.png")
