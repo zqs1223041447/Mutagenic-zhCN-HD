@@ -796,54 +796,44 @@
   },
   "next_ready": [
     {
-      "id": "P3-H1",
-      "goal": "World.tscn 全链路解锁（ItemTabContent.gd:95,110 + MapMods.gd:265 sort_custom G3 双参→Callable；Minimap.gd Image.lock G4 等价）→ E2/E3 升级 world_scene 模式复验",
-      "depends_on": [
-        "P3-PHASE-1"
-      ],
-      "status": "DONE",
-      "parallelizable": true
-    },
-    {
-      "id": "P3-H2",
-      "goal": "存档 schema 增加 position 持久化（GameState save/load + 往返断言）→ E8 补齐位置恢复",
-      "depends_on": [
-        "P3-PHASE-1"
-      ],
-      "status": "DONE",
-      "parallelizable": true
-    },
-    {
-      "id": "P3-H3",
-      "goal": "运行时错误收敛：Projectile 家族 _ready 缺 super() 调用（~20 文件）+ FloatingDamage.gd interpolate_property G3 Tween→G4 create_tween",
-      "depends_on": [],
-      "status": "DONE",
-      "parallelizable": true
-    },
-    {
-      "id": "P3-I",
-      "goal": "E9 Evidence 晋升：harness 全量单命令统一跑通报告 + product_state 收口 + E10 评估（product_runtime_ready 或仅剩美术 BLOCKED）",
-      "depends_on": [
-        "P3-H1",
-        "P3-H2",
-        "P3-H3"
-      ],
-      "status": "DONE",
-      "parallelizable": false
-    },
-    {
-      "id": "P4-BATCH-1-PLAN",
-      "goal": "P4 Visual/Density/Combat Feel 批次规划（在现有资产边界内：可读性、节奏、打击感；主观视觉裁决留人类）",
+      "id": "P4-A",
+      "goal": "可读性+反馈+位置应用：R1 敌我轮廓/受击闪白/精英标记（程序化材质）；R2 hit-stop/screen shake/击杀微效果（配置化）；C2 读档位置应用（load 后传送回存档位置）",
       "depends_on": [],
       "status": "READY",
-      "parallelizable": false
+      "parallelizable": true,
+      "lane": "A（fix-1 复用）"
     },
     {
-      "id": "BACKLOG-ORB-PORTAL-PICKUP",
-      "goal": "OrbPickup/PortalPickup 恢复移植（Mob.gd 精英/orb 掉落与 boss portal 分支补全，同 Pickups 家族既有模式）",
+      "id": "P4-B",
+      "goal": "VFX节奏+性能基线+真实掉落链：F1 击杀/受击 VFX 节奏（程序化先行）；F2 spawn 50/100 怪帧时基线探针（首测建基线不设门）；C1 OrbPickup/PortalPickup 真实移植（消除 E6 测试桩）",
       "depends_on": [],
       "status": "READY",
-      "parallelizable": true
+      "parallelizable": true,
+      "lane": "B（fix-2 复用）"
+    },
+    {
+      "id": "ART-C",
+      "goal": "美术清单与素材库（禁改场景文件）：缺失引用全量扫描分类 inventory + 自有 PNG 同名重映射表（OWN_REMAP）+ 批准自由包下载（SOURCE.txt/ATTRIBUTION.md，itch 不可程序化下载的记 NEEDS_MANUAL_DOWNLOAD）+ _acquired/_mapped/_placeholders 建设 + 映射表 JSON（OWN_REMAP|MAPPED|PLACEHOLDER）",
+      "depends_on": [],
+      "status": "READY",
+      "parallelizable": true,
+      "lane": "C（新 fixer）"
+    },
+    {
+      "id": "P4-WIRE",
+      "goal": "美术接线批次：按映射表重写场景 ext_resource（.aseprite→_mapped PNG）、default_texture_filter=0（Nearest）、占位登记收口 + 二次回归门（boot/pytest/harness 无新错误）",
+      "depends_on": [
+        "P4-A",
+        "P4-B",
+        "ART-C"
+      ],
+      "status": "BLOCKED",
+      "blocked_by": [
+        "P4-A",
+        "P4-B",
+        "ART-C"
+      ],
+      "parallelizable": false
     }
   ],
   "decisions": [
@@ -852,6 +842,12 @@
       "decision": "STEAM_REAL_INTEGRATION_DELETED",
       "by": "user",
       "detail": "USE_STEAM=false local fallback is final. No batch may plan Steam integration work again; Steam call sites and guards remain in code as historical evidence, never activated."
+    },
+    {
+      "date": "2026-08-22",
+      "decision": "ART_SOURCE_POLICY_ADOPTED",
+      "by": "user",
+      "detail": "ART_SOURCE_POLICY=OWN_RECOVERED_PNG+APPROVED_FREE_PACKS; ASEPRITE_SOURCES=PERMANENTLY_WAIVED; POE_CDN_ART=NOT_USED_AS_GAME_STOCK. missing_asset 不再列为人类阻塞；按 P4_ART_ASSET_ACQUISITION_PLAN.md 执行补全，映射状态只用 OWN_REMAP|MAPPED|PLACEHOLDER。"
     }
   ]
 }

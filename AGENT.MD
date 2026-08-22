@@ -252,9 +252,9 @@ Canonical 文档**原位更新**。禁止制造 PLAN_V2 / PLAN_FINAL / STATUS_RE
 ## 11. 当前优先级与 Non-Goals
 
 **现在优先：**
-1. 完成 P2 自主循环的稳定与证据标准化（boot → 冒烟 → 取证 → 状态回写 可重复）
-2. 先完成 P2-BATCH-3，再按 `P3_PLAYABLE_BASELINE.md` 并行推进 P3（角色→世界→战斗→拾取→UI→存档 全自动可验证）
-3. 并行收敛剩余运行时错误与 missing_asset 中可由代码/数据解决的部分
+1. 推进 **P4 Visual / Density / Combat Feel**（P3 已于 2026-08-22 收口，E1–E10 全 PASS）：按 `DEVELOPMENT_PLAN_FRAMEWORK.md` §4 四方向——轮廓/危险信息可读性、击杀/受击 VFX 节奏、摄像机与屏幕反馈、高密度性能基线；主观手感裁决留人类
+2. 执行美术补全（`P4_ART_ASSET_ACQUISITION_PLAN.md`）：ART_SOURCE_POLICY=OWN_RECOVERED_PNG+APPROVED_FREE_PACKS，ASEPRITE_SOURCES=PERMANENTLY_WAIVED；missing_asset 不再列为人类阻塞
+3. 收尾清障：真实 OrbPickup/PortalPickup 掉落链、读档位置应用、陈旧状态清理
 4. 保持工作区干净，持续并行调度
 
 **明确不做（Non-Goals）：**
