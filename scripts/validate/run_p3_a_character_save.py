@@ -24,6 +24,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -32,6 +33,31 @@ import p3_probe_common as common  # noqa: E402
 
 LEGACY_DRIVER = "res://scenes/Levels/_validate/P3ADriver.tscn"
 H2_DRIVER = "res://scenes/Projectiles/_validate/p3_h2_position_driver.tscn"
+
+
+def _sanitize_evidence(path: Path) -> None:
+    """Replace host-absolute repo paths with a <repo> placeholder.
+
+    Evidence records land in the git tree (migration/conversion/*.json);
+    abs_path_scan classifies raw host paths there as production_hardcode.
+    """
+    if not path.is_file():
+        return
+    root_str = str(Path(__file__).resolve().parents[2])
+
+    def walk(obj):
+        if isinstance(obj, dict):
+            return {k: walk(v) for k, v in obj.items()}
+        if isinstance(obj, list):
+            return [walk(v) for v in obj]
+        if isinstance(obj, str):
+            return obj.replace(root_str, "<repo>").replace(
+                root_str.replace("\\", "/"), "<repo>")
+        return obj
+
+    data = json.loads(path.read_text(encoding="utf-8"))
+    path.write_text(json.dumps(walk(data), ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8")
 
 
 def _run_phase(engine: dict, product: Path, driver_scene: str,
@@ -82,6 +108,7 @@ def main(argv: list[str] | None = None) -> int:
         engine=engine, final=l_final, attempts=l_attempts, flaked=l_flaked,
         result=l_result, script_errors=l_errors)
     common.write_evidence(l_evidence, legacy_out)
+    _sanitize_evidence(legacy_out)
 
     # --- phase 2: P3-H2 position roundtrip ----------------------------------
     h_final, h_attempts, h_flaked, h_result, h_errors = _run_phase(
@@ -103,6 +130,7 @@ def main(argv: list[str] | None = None) -> int:
         engine=engine, final=h_final, attempts=h_attempts, flaked=h_flaked,
         result=h_result, script_errors=h_errors)
     common.write_evidence(h_evidence, h2_out)
+    _sanitize_evidence(h2_out)
 
     print(f"P3-A-E1-E8={l_evidence['verdict']} "
           f"(rc={l_final['returncode']}, script_errors={len(l_errors)}, "

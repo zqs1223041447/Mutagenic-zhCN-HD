@@ -5,7 +5,7 @@
   "exit_criteria": [
     "E7"
   ],
-  "generated_at": "2026-08-22T03:07:10Z",
+  "generated_at": "2026-08-22T04:16:41Z",
   "engine": {
     "binary_name": "Godot_v4.7.1-stable_win64.exe",
     "resolved_via": "REPO_RELATIVE",
@@ -22,7 +22,7 @@
   ],
   "returncode": 0,
   "timed_out": false,
-  "duration_ms": 17686,
+  "duration_ms": 16718,
   "attempts": 1,
   "flaked": false,
   "result": {

@@ -41,10 +41,10 @@
       "exit_criteria": "E2: TestLevel loads with zero fatal signatures (crash / failed scene load / SCRIPT ERROR beyond known-benign asset noise).",
       "runner": {
         "implemented": true,
-        "strategy": "P3-BC world-entry probe: player spawned + tile pipeline paints (used_cells=320) + navmesh builds (252 points), asserted explicitly; canonical evidence migration/conversion/p3_bc_world_entry.json",
-        "command_template": "\"{python}\" \"{p3_bc_world_entry}\" --out \"{step_evidence}\" --timeout 360",
+        "strategy": "production world entry via change_scene_to_file(World.tscn): player spawned by production code + tile pipeline paints (used_cells=320) + navmesh builds (252 points), asserted explicitly",
+        "command_template": "\"{python}\" \"{p3_b_probe}\" --out \"{step_evidence}\" --timeout 360",
         "timeout_s": 420,
-        "note": "wired to scripts/validate/run_p3_bc_world_entry.py (PASS 2026-08-22: player_present/tile_used_cells_gt_zero/navmesh_built all true); CAVEAT world_entry_mode=manual_assembly - World.tscn full chain blocked by concurrent-lane parse errors"
+        "note": "wired to scripts/validate/run_p3_b_world_movement.py in world_scene mode (PASS 2026-08-22: change_scene_ok=true, world_entry_mode=world_scene); evidence p3_h1_world_chain.json"
       }
     },
     "E3": {

@@ -1,0 +1,76 @@
+{
+  "harness_id": "P3-E2E",
+  "schema_version": "1.0",
+  "ran_at": "2026-08-22T04:30:59Z",
+  "repo_head_sha": "0fe970cb5718b467a347e3006c590fac585a0aa8",
+  "selected_steps": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E7",
+    "E8"
+  ],
+  "steps": [
+    {
+      "step_id": "E1",
+      "status": "PASS",
+      "detail": "runner rc=0 in 28547ms",
+      "evidence_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\evidence\\e1_evidence.json"
+    },
+    {
+      "step_id": "E2",
+      "status": "PASS",
+      "detail": "runner rc=0 in 18389ms",
+      "evidence_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\evidence\\e2_evidence.json"
+    },
+    {
+      "step_id": "E3",
+      "status": "PASS",
+      "detail": "runner rc=0 in 45516ms",
+      "evidence_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\evidence\\e3_evidence.json"
+    },
+    {
+      "step_id": "E4",
+      "status": "PASS",
+      "detail": "runner rc=0 in 35562ms",
+      "evidence_path": null
+    },
+    {
+      "step_id": "E5",
+      "status": "PASS",
+      "detail": "runner rc=0 in 18702ms",
+      "evidence_path": null
+    },
+    {
+      "step_id": "E6",
+      "status": "PASS",
+      "detail": "runner rc=0 in 13906ms",
+      "evidence_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\evidence\\e6_evidence.json"
+    },
+    {
+      "step_id": "E7",
+      "status": "PASS",
+      "detail": "runner rc=0 in 16625ms",
+      "evidence_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\evidence\\e7_evidence.json"
+    },
+    {
+      "step_id": "E8",
+      "status": "PASS",
+      "detail": "runner rc=0 in 28250ms",
+      "evidence_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\evidence\\e8_evidence.json"
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "pass": 8,
+    "fail": 0,
+    "not_run": 0,
+    "skip": 0
+  },
+  "result": "PASS",
+  "proves": "all executed P3 exit-criteria steps passed end to end",
+  "not_proven": "steps skipped via --steps are unproven"
+}

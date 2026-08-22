@@ -29,7 +29,7 @@ var status_display = preload("res://scenes/GUI/StatusDisplay.tscn")
 
 
 class SkillSorter:
-				static func c(a, b):
+				static func sort_by_damage(a, b):
 								return a.total_damage > b.total_damage
 
 func _ready() -> void :
@@ -158,7 +158,7 @@ func _on_gear_changed():
 								n.queue_free()
 
 				var sorted_gear = gear.get_children()
-				sorted_gear.sort_custom(SkillSorter, "sort_by_damage")
+				sorted_gear.sort_custom(SkillSorter.sort_by_damage)
 
 				for item in sorted_gear:
 								if item.is_queued_for_deletion():

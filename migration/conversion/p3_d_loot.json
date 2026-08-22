@@ -5,7 +5,7 @@
   "exit_criteria": [
     "E6"
   ],
-  "generated_at": "2026-08-22T03:06:53Z",
+  "generated_at": "2026-08-22T04:16:24Z",
   "engine": {
     "binary_name": "Godot_v4.7.1-stable_win64.exe",
     "resolved_via": "REPO_RELATIVE",
@@ -22,7 +22,7 @@
   ],
   "returncode": 0,
   "timed_out": false,
-  "duration_ms": 16657,
+  "duration_ms": 14141,
   "attempts": 1,
   "flaked": false,
   "result": {
@@ -41,5 +41,5 @@
   "verdict_detail": "probe assertions satisfied",
   "verdict": "PASS",
   "proves": "a spawned drop picked up through real Area2D collision with a player-group entity lands in queryable inventory state (Stats.metrics.orbs.blue 0 -> 3) with the orb_pickup signal emitted by production code",
-  "not_proven": "the real OrbPickup/GenePickup scenes (product/scenes/Pickups/** missing, outside this lane's write domain); the drop itself is a test stub mirroring Pickup.gd's collision contract"
+  "not_proven": "the real OrbPickup/GenePickup scenes (product/scenes/Pickups/** restoration is owned by another lane); the drop itself is a test stub mirroring Pickup.gd's collision contract"
 }
