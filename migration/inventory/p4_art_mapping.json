@@ -10,8 +10,8 @@
   "summary": {
     "inventory_total": 217,
     "own_remap": 136,
-    "mapped": 43,
-    "placeholder": 38
+    "mapped": 34,
+    "placeholder": 47
   },
   "coverage": {
     "inventory_total": 217,
@@ -24,12 +24,12 @@
       "expected_suffix": ".aseprite",
       "category": "actors",
       "bucket": "actors",
-      "status": "MAPPED",
-      "mapped_path": "res://sprites/_mapped/actors/attack_dog.png",
-      "source": "game-icons.net:delapouite/attack-gauge",
-      "license": "CC BY 3.0",
-      "author": "delapouite",
-      "note": ""
+      "status": "PLACEHOLDER",
+      "mapped_path": "res://sprites/_placeholders/actors/attack_dog.png",
+      "source": null,
+      "license": "generated-placeholder",
+      "author": "-",
+      "note": "downgraded weak semantic MAPPED->PLACEHOLDER (score 3-16 substring mismatch)"
     },
     {
       "missing_ref": "res://sprites/player/hands/blades.aseprite",
@@ -72,12 +72,12 @@
       "expected_suffix": ".aseprite",
       "category": "actors",
       "bucket": "actors",
-      "status": "MAPPED",
-      "mapped_path": "res://sprites/_mapped/actors/chilled_bones.png",
-      "source": "game-icons.net:lorc/crossed-bones",
-      "license": "CC BY 3.0",
-      "author": "lorc",
-      "note": ""
+      "status": "PLACEHOLDER",
+      "mapped_path": "res://sprites/_placeholders/actors/chilled_bones.png",
+      "source": null,
+      "license": "generated-placeholder",
+      "author": "-",
+      "note": "downgraded weak semantic MAPPED->PLACEHOLDER (score 3-16 substring mismatch)"
     },
     {
       "missing_ref": "res://sprites/player/heads/chiller.aseprite",
@@ -192,36 +192,36 @@
       "expected_suffix": ".aseprite",
       "category": "actors",
       "bucket": "actors",
-      "status": "MAPPED",
-      "mapped_path": "res://sprites/_mapped/actors/dragon.png",
-      "source": "game-icons.net:lorc/dragonfly",
-      "license": "CC BY 3.0",
-      "author": "lorc",
-      "note": ""
+      "status": "PLACEHOLDER",
+      "mapped_path": "res://sprites/_placeholders/actors/dragon.png",
+      "source": null,
+      "license": "generated-placeholder",
+      "author": "-",
+      "note": "downgraded weak semantic MAPPED->PLACEHOLDER (score 3-16 substring mismatch)"
     },
     {
       "missing_ref": "res://sprites/player/pants/dragon.aseprite",
       "expected_suffix": ".aseprite",
       "category": "actors",
       "bucket": "actors",
-      "status": "MAPPED",
-      "mapped_path": "res://sprites/_mapped/actors/dragon.png",
-      "source": "game-icons.net:lorc/dragonfly",
-      "license": "CC BY 3.0",
-      "author": "lorc",
-      "note": "shares mapped file with res://sprites/player/heads/dragon.aseprite"
+      "status": "PLACEHOLDER",
+      "mapped_path": "res://sprites/_placeholders/actors/dragon.png",
+      "source": null,
+      "license": "generated-placeholder",
+      "author": "-",
+      "note": "downgraded weak semantic MAPPED->PLACEHOLDER (score 3-16 substring mismatch)"
     },
     {
       "missing_ref": "res://sprites/player/back/dragon_wings.aseprite",
       "expected_suffix": ".aseprite",
       "category": "actors",
       "bucket": "actors",
-      "status": "MAPPED",
-      "mapped_path": "res://sprites/_mapped/actors/dragon_wings.png",
-      "source": "game-icons.net:lorc/dragonfly",
-      "license": "CC BY 3.0",
-      "author": "lorc",
-      "note": ""
+      "status": "PLACEHOLDER",
+      "mapped_path": "res://sprites/_placeholders/actors/dragon_wings.png",
+      "source": null,
+      "license": "generated-placeholder",
+      "author": "-",
+      "note": "downgraded weak semantic MAPPED->PLACEHOLDER (score 3-16 substring mismatch)"
     },
     {
       "missing_ref": "res://sprites/player/pants/emerald.aseprite",
@@ -312,12 +312,12 @@
       "expected_suffix": ".aseprite",
       "category": "actors",
       "bucket": "actors",
-      "status": "MAPPED",
-      "mapped_path": "res://sprites/_mapped/actors/frozen_boots.png",
-      "source": "game-icons.net:lorc/frozen-orb",
-      "license": "CC BY 3.0",
-      "author": "lorc",
-      "note": ""
+      "status": "PLACEHOLDER",
+      "mapped_path": "res://sprites/_placeholders/actors/frozen_boots.png",
+      "source": null,
+      "license": "generated-placeholder",
+      "author": "-",
+      "note": "downgraded weak semantic MAPPED->PLACEHOLDER (score 3-16 substring mismatch)"
     },
     {
       "missing_ref": "res://sprites/player/feet/glow.aseprite",
@@ -444,12 +444,12 @@
       "expected_suffix": ".aseprite",
       "category": "actors",
       "bucket": "actors",
-      "status": "MAPPED",
-      "mapped_path": "res://sprites/_mapped/actors/lightning_dog.png",
-      "source": "game-icons.net:lorc/lightning-arc",
-      "license": "CC BY 3.0",
-      "author": "lorc",
-      "note": ""
+      "status": "PLACEHOLDER",
+      "mapped_path": "res://sprites/_placeholders/actors/lightning_dog.png",
+      "source": null,
+      "license": "generated-placeholder",
+      "author": "-",
+      "note": "downgraded weak semantic MAPPED->PLACEHOLDER (score 3-16 substring mismatch)"
     },
     {
       "missing_ref": "res://sprites/player/feet/mutant.aseprite",
@@ -708,12 +708,12 @@
       "expected_suffix": ".aseprite",
       "category": "actors",
       "bucket": "actors",
-      "status": "MAPPED",
-      "mapped_path": "res://sprites/_mapped/actors/spirit_of_the_ancient.png",
-      "source": "game-icons.net:delapouite/ancient-ruins",
-      "license": "CC BY 3.0",
-      "author": "delapouite",
-      "note": ""
+      "status": "PLACEHOLDER",
+      "mapped_path": "res://sprites/_placeholders/actors/spirit_of_the_ancient.png",
+      "source": null,
+      "license": "generated-placeholder",
+      "author": "-",
+      "note": "downgraded weak semantic MAPPED->PLACEHOLDER (score 3-16 substring mismatch)"
     },
     {
       "missing_ref": "res://sprites/player/hands/swords.aseprite",
@@ -2160,12 +2160,12 @@
       "expected_suffix": ".aseprite",
       "category": "tiles",
       "bucket": "tiles",
-      "status": "MAPPED",
-      "mapped_path": "res://sprites/_mapped/tiles/map_highlighted.png",
-      "source": "game-icons.net:lorc/maple-leaf",
-      "license": "CC BY 3.0",
-      "author": "lorc",
-      "note": ""
+      "status": "PLACEHOLDER",
+      "mapped_path": "res://sprites/_placeholders/tiles/map_highlighted.png",
+      "source": null,
+      "license": "generated-placeholder",
+      "author": "-",
+      "note": "downgraded weak semantic MAPPED->PLACEHOLDER (score 3-16 substring mismatch)"
     },
     {
       "missing_ref": "res://sprites/hideout/portal.aseprite",

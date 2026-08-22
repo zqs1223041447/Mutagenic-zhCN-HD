@@ -62,6 +62,14 @@ BUCKET_COLORS = {
 
 STOPWORDS = {"default", "small", "large", "icon", "new", "sprite", "effect"}
 
+MIN_SCORE = 12
+
+# bucket-aware deny list: token must match as word boundary in icon name
+BUCKET_DENY: dict[str, set[str]] = {
+    "actors": {"orb", "gauge", "leaf", "ruins"},
+    "tiles": {"orb", "gauge", "leaf", "ruins"},
+}
+
 NON_IMAGE_NOTES = {
     ".tscn": "scene reference gap - owned by scene/WIRE batch, not an art asset",
     ".wav": "audio asset - visual placeholder not applicable",
@@ -137,13 +145,14 @@ def tokenize(stem: str) -> list[str]:
 
 
 def match_score(stem: str, tokens: list[str], icon_name: str) -> int:
-    """Higher is better; 0 means no match."""
+    """Higher is better; 0 means no match. Word-boundary matching."""
     name = icon_name.lower().replace("-", "_")
     if name == stem.lower():
         return 100
     if not tokens:
         return 0
-    hits = [t for t in tokens if t in name]
+    name_tokens = name.split("_")
+    hits = [t for t in tokens if t in name_tokens]
     if not hits:
         return 0
     score = sum(len(t) for t in hits)
@@ -171,11 +180,27 @@ class GameIconsIndex:
             self.by_name.setdefault(key, []).append(
                 {"zip_path": name, "author": author, "icon": icon})
 
-    def best(self, stem: str, tokens: list[str]) -> dict | None:
+    def best(self, stem: str, tokens: list[str], bucket: str = "") -> dict | None:
         candidates: list[tuple[int, str, dict]] = []
+        deny = BUCKET_DENY.get(bucket, set())
         for key, entries in self.by_name.items():
             for entry in entries:
+                # bucket-aware deny: skip icon if its name tokens contain denied word
+                if deny:
+                    icon_name_tokens = entry["icon"].lower().replace("-", "_").split("_")
+                    if any(d in icon_name_tokens for d in deny):
+                        continue
                 score = match_score(stem, tokens, entry["icon"])
+                if score < MIN_SCORE:
+                    continue
+                # full-hit mandatory
+                if tokens:
+                    name_tokens = entry["icon"].lower().replace("-", "_").split("_")
+                    hits = [t for t in tokens if t in name_tokens]
+                    # exact stem match already scored 100; otherwise require all tokens
+                    if stem.lower() != entry["icon"].lower().replace("-", "_"):
+                        if len(hits) != len(tokens):
+                            continue
                 if score > 0:
                     candidates.append((score, entry["icon"], entry))
         if not candidates:
@@ -295,7 +320,7 @@ def build(inventory_path: Path, downloads: Path, product: Path,
         # 2) MAPPED from game-icons
         elif gi_index is not None:
             tokens = tokenize(stem)
-            best = gi_index.best(stem, tokens)
+            best = gi_index.best(stem, tokens, bucket)
             if best is not None:
                 acq_dir = acquired / "game-icons.net" / "icons" / best["author"]
                 acq_file = acq_dir / f"{best['icon']}.png"

@@ -1,0 +1,28 @@
+pack: OGA 16x16 base sprites (CC0)
+source: https://opengameart.org/ (base_male.png / base_female.png)
+license: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)
+fetched_at: 2026-08-22T13:14:36.269726Z
+dest: product/sprites/_acquired/oga_16x16-base-sprites/
+tool: scripts/bootstrap/fetch_cc0_anim.py (UA: mutagenic-fetch-cc0-anim/1.0 (+https://opengameart.org/ CC0))
+
+files:
+  - filename: base_male.png
+    url: https://opengameart.org/sites/default/files/base_male.png
+    status: DOWNLOADED
+    sha256: 62ce53be0a21aab54fbca2fbf5c8ef4156ae0d30dfc74044599e33a7c0cf319c
+    bytes: 2966
+    license: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)
+  - filename: base_female.png
+    url: https://opengameart.org/sites/default/files/base_female.png
+    status: DOWNLOADED
+    sha256: 787d7a4a8a281ae547b6843c2c2ae898fb4ba9284f4cc04aee1024b26da9b0b1
+    bytes: 3012
+    license: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)
+
+notes:
+  - OGA 16x16 base: sheet is 1 idle + 6 walk frames x 4 directions, 16px grid (actual PNG 126x144, includes spacing).
+  - If status is PLACEHOLDER_*, the direct URL was unreachable (common in CI without internet or OGA auth page).
+    A 1x1 placeholder PNG was written to keep Godot import pipeline unblocked; re-run with network to replace.
+  - After real images land, slicing plan is in migration/inventory/p4_anim_plan.md and example SpriteFrames.
+  - Supplemental packs (blocky dungeon / skeleton / slimes) are also CC0; use --with-optional to fetch.
+  - itch manual packs (0x72 / o_lobster / Shade) require user manual 0$ download into _acquired/; see p4_art_needs_manual_download.json.

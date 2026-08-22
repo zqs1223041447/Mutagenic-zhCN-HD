@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3]
+
+# P4-ANIM 示例：OGA base_male walk 占位
+# TODO: 当前为整图占位（126x144），待按 18px 网格切片为 6 帧 walk side（16x16 AtlasTexture）
+# 真图位于 product/sprites/_acquired/oga_16x16-base-sprites/base_male.png
+# 实测网格：7 cols x 8 rows，cell 18px（含 2px padding），有效 16px 居中
+# 推荐：row=0（side walk），col=0..5 各取 Rect2(col*18+1, row*18+1, 16, 16) 生成 AtlasTexture 6 帧，FPS 8，loop true
+# 工具待补充：scripts/bootstrap/slice_oga_sheet.py 可批量导出 walk_0..5.png 再合成 SpriteFrames
+# 本文件当前为单帧占位，保证 AnimatedSprite2D.frames = preload("res://sprites/_mapped/player/player_walk.tres") 管线可导入
+# 真帧落地后调用方把 set_fake_walk() 改为 sprite.play("walk")
+
+[ext_resource type="Texture2D" path="res://sprites/_acquired/oga_16x16-base-sprites/base_male.png" id="1"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
