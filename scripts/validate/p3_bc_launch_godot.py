@@ -55,8 +55,9 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--scenario", required=True)
     parser.add_argument("--seed", type=int, required=True)
-    parser.add_argument("--out-dir", required=True,
-                        help="same out-dir combat_harness.py run used")
+    parser.add_argument("--out-dir", default=None,
+                        help="same out-dir combat_harness.py run used "
+                             "(optional when --request/--expected-telemetry given)")
     parser.add_argument("--request", default=None,
                         help="explicit request path override")
     parser.add_argument("--expected-telemetry", default=None,
@@ -65,8 +66,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT)
     args = parser.parse_args(argv)
 
-    out_dir = Path(args.out_dir)
-    if not out_dir.is_absolute():
+    out_dir = Path(args.out_dir) if args.out_dir else None
+    if out_dir is not None and not out_dir.is_absolute():
         out_dir = (REPO / out_dir).resolve()
     request_path = (Path(args.request) if args.request
                     else out_dir / "requests" / f"{args.scenario}_{args.seed}.json")

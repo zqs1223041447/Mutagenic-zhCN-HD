@@ -6,6 +6,9 @@ var rotations_per_second = 0.0
 var current_angle = 0.0
 
 func _ready():
+				# P3-H3a: Godot 4 no longer auto-chains parent _ready(); run
+				# Projectile._ready() first (weakref/collision/damage snapshot).
+				super._ready()
 				current_angle = randf() * 2.0 * PI * 0.25
 				var one_rotation_distance = 2.0 * PI * ROTATION_RADIUS
 				rotations_per_second = linear_velocity.length() / one_rotation_distance

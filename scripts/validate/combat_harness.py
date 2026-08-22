@@ -508,8 +508,14 @@ def run_command(root: Path, args: argparse.Namespace) -> int:
         try:
             # posix=False on Windows keeps drive-letter backslash paths intact
             # (same convention as tests/p3_harness/p3_e2e.py split_command).
+            # A fully-quoted launch value (e.g. emitted by p3_e2e templates)
+            # arrives with its outer quotes retained by non-posix shlex; strip
+            # them so the inner split sees plain space-separated tokens.
+            launch_cmd = args.launch.strip()
+            if len(launch_cmd) >= 2 and launch_cmd[0] == '"' and launch_cmd[-1] == '"':
+                launch_cmd = launch_cmd[1:-1]
             proc = subprocess.run(
-                shlex.split(args.launch, posix=(os.name != "nt")), cwd=str(root),
+                shlex.split(launch_cmd, posix=(os.name != "nt")), cwd=str(root),
                 capture_output=True, text=True, timeout=args.launch_timeout,
             )
             runtime_info["ran"] = True

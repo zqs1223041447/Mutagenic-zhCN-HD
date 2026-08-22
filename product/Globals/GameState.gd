@@ -108,7 +108,8 @@ var initial_configuration = {
 				"gene_loadout": {}, 
 				"genes": {}, 
 				"stored_mods": {}, 
-				"filters": {}
+				"filters": {}, 
+				"position": null
 }
 
 
@@ -203,7 +204,32 @@ func save_game(debounce = true):
 				else:
 								do_save_game()
 
+func capture_player_position():
+				# P3-H2: persist the active character's world position so a later
+				# session can restore where they were.  Only meaningful once a
+				# level has spawned a player into the globals; without that world
+				# context the field is omitted entirely (erased), keeping menu-era
+				# saves byte-compatible with the pre-H2 schema.  Old saves that
+				# lack the field migrate cleanly: merge_in_saved_data() backfills
+				# initial_configuration's "position": null default.
+				var cname = Globals.selected_character_name
+				if cname == null or not saved_stats.characters.has(cname):
+								return
+				var stats = saved_stats.characters[cname]
+				var player = get_global("player")
+				if player == null or not is_instance_valid(player) \
+								or not player.is_inside_tree():
+								stats.erase("position")
+								return
+				var pos: Vector2 = player.global_position
+				stats["position"] = {
+												"x": pos.x, 
+												"y": pos.y, 
+												"level": Globals.selected_level
+				}
+
 func do_save_game():
+				capture_player_position()
 
 
 				var old_time = saved_stats.timestamp

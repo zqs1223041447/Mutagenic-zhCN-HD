@@ -1,63 +1,36 @@
 {
   "schema_version": 1,
   "task": "P3-BC-E2",
-  "generated_at": "2026-08-22T02:57:21Z",
-  "engine": {
-    "binary_name": "Godot_v4.7.1-stable_win64.exe",
-    "resolved_via": "REPO_RELATIVE",
-    "version": "4.7.1",
-    "status": "SUCCESS"
-  },
-  "driver_scene": "res://scenes/Levels/_validate/P3BDriver.tscn",
+  "generated_at": "2026-08-22T04:00:56Z",
+  "driver_scene": "res://scenes/Levels/_validate/P3BCHarnessBoot.tscn",
+  "request": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\p3_harness\\world_entry_probe\\requests\\world_entry_probe_2026082299.json",
   "timeout_s": 360,
-  "cmd": [
-    "<repo>\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
-    "--headless",
-    "--path",
-    "<repo>\\product",
-    "res://scenes/Levels/_validate/P3BDriver.tscn"
-  ],
-  "returncode": 0,
-  "timed_out": false,
-  "duration_ms": 19422,
-  "driver_result": {
-    "all_pass": true,
-    "e2": {
-      "active_stage_id": "test_level",
-      "change_scene_ok": false,
-      "enemies_culled_early": 0,
-      "map_done": true,
-      "navmesh_built": true,
+  "launcher_returncode": 0,
+  "launcher_tail": "[p3_bc_launch][stderr tail]\nERROR: Required object \"rp_texture\" is null.\n   at: draw_texture_rect_region (scene/main/canvas_item.cpp:1009)\n   GDScript backtrace (most recent call first):\n       [0] _draw (res://scenes/Minimap/TextureRect.gd:31)\nERROR: Required object \"rp_texture\" is null.\n   at: draw_texture_rect_region (scene/main/canvas_item.cpp:1009)\n   GDScript backtrace (most recent call first):\n       [0] _draw (res://scenes/Minimap/TextureRect.gd:31)\nWARNING: 1 ObjectDB instance was leaked at exit (run with `--verbose` for details).\n   at: cleanup (core/object/object.cpp:2536)\n[p3_bc_launch] OK in 21s rc=0 scenario=world_entry_probe seed=2026082299 killed=0/0 damage_events=0 dashes=1 moves=40",
+  "launcher_stderr_tail": "",
+  "duration_ms": 21516,
+  "telemetry": {
+    "scenario_id": "world_entry_probe",
+    "seed": 2026082299,
+    "exit_reason": "timeout",
+    "boot": {
+      "alert_count": 0,
+      "fatal_count": 0,
+      "ok": true
+    },
+    "world": {
       "navmesh_points": 252,
-      "pass": true,
-      "player_parent_is_level_layer": true,
-      "player_spawned": true,
-      "probe_character_created": true,
-      "spawnable_tile_count": 252,
-      "test_level_instance_found": true,
-      "tile_used_cells": 320,
-      "tiles_painted": true,
-      "world_entered": true,
-      "world_entry_mode": "manual_assembly",
-      "world_scene_blocked_note": "World.tscn could not be loaded; see world_scene_blocked_by. Manual assembly replicates World.switch_levels(reset=true) core steps."
+      "player_in_tree": true,
+      "tile_used_cells": 320
     },
-    "e3": {
-      "dash_burst_px": 22.3,
-      "dash_cd_after_trigger": 0.733,
-      "dash_cd_before": 0.0,
-      "dash_fired_state": true,
-      "dash_pass": true,
-      "enemies_culled": 0,
-      "enemies_culled_second_pass": 0,
-      "moved": true,
-      "pass": true,
-      "walk_dx_px": 42.54,
-      "walk_dy_px": 4.17
-    },
-    "finished": true,
-    "task": "P3-B"
+    "runtime_notes": [
+      "run_seconds=6.27",
+      "exit_reason=timeout",
+      "skill_used=<none>",
+      "harness_mode=TestLevel.gd+ScenarioDirector.gd",
+      "spawn_positions_adjusted=0/0 (clamped to 64.0px engagement radius)"
+    ]
   },
-  "script_error_total": 522,
   "p3_bc_assertions": {
     "player_present": true,
     "tile_used_cells_gt_zero": true,
@@ -67,8 +40,5 @@
     "all_pass": true
   },
   "overall": "PASS",
-  "note": "",
-  "stdout_head": "Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org\n\nLoaded data for Arc\nLoaded data for Orb\nLoaded data for Shotgun\nLoaded data for PoisonDart\nLoaded data for Shuriken\nLoaded data for Blizzard\nLoaded data for Brittle\nLoaded data for Scorch\nLoaded data for Debilitate\nLoaded data for Protract\nLoaded data for Polarize\nLoaded data for Hinder\nLoaded data for Hypothermia\nLoaded data for IceOrb\nLoaded data for Regeneration\nLoaded data for ShrapnelBomb\nLoaded data for Bane\nLoaded data for PlagueClouds\nLoaded data for Axe\nLoaded data for ShockOrb\nLoaded data for Volcano\nLoaded data for Rush\nLoaded data for Arrow\nLoaded data for Resilience\nLoaded data for ShardOrb\nLoaded data for Minigun\nLoaded data for ChainLightning\nLoaded data for FlameTether\nLoaded data for DoomTether\nLoaded data for Sturdiness\nLoaded data for Elusiveness\nLoaded data for PrismaticSlash\nLoaded data for LavaSurge\nLoaded data for LightningSpear\nLoaded data for ClusterBombs\nLoaded data for AmplificationAura\nLoaded data for Honing\nLoaded data for PhysicalAura\nLoaded data for LightningAura\nLoaded data for ColdAura\nLoaded data for FireAura\nLoaded data for ToxicAura\nLoaded data for DoTAura\nLoaded data for Shockwave\nLoaded data for BladeShield\nLoaded data for EnergizedAxe\nLoaded data for SharknadoShot\nLoaded data for BloodSlash\nLoaded data for PlasmaOrb\nGameState getting ready...\nPassive tree integrity passed.\nPassive tree integrity passed.\nDone integrity check for specialization trees\nWorld Map integrity passed.\nClean tiles added: 0\nBuilding navmesh started...\nBuilding navmesh finished.\nP3B_RESULT_JSON<<<{\"all_pass\":true,\"e2\":{\"active_stage_id\":\"test_level\",\"change_scene_ok\":false,\"enemies_culled_early\":0,\"map_done\":true,\"navmesh_built\":true,\"navmesh_points\":252,\"pass\":true,\"player_parent_is_level_layer\":true,\"player_spawned\":true,\"probe_character_created\":true,\"spawnable_tile_count\":252,\"test_level_instance_found\":true,\"tile_used_cells\":320,\"tiles_painted\":true,\"world_entered\":true,\"world_en",
-  "stderr_head": "ERROR: Resource file not found: res://sprites/projectiles/plasma_orb.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Projectiles/Skills/PlasmaOrbProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/plasma_orb.aseprite.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Resource file not found: res://sprites/projectiles/poison_dart_projectile.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Projectiles/Skills/PoisonDartProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/poison_dart_projectile.aseprite.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Resource file not found: res://sprites/projectiles/shock_orb.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Projectiles/Skills/ShockOrbProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/shock_orb.aseprite.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Unable to open file: res://.import/arrow.png-1d15507c595a5a38dd9c02bebf3df3ea.stex.\n   at: _load_data (scene/resources/compressed_texture.cpp:45)\nERROR: Resource file not found: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav (expected type: AudioStream)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Skills/Playable/Arrow/Arrow.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Resource file not found: res://sprites/aura_effects/rush.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Skills/Auras/Rush/Rush.tscn:27 - Parse Error: [ext_",
-  "cli": "python scripts/validate/run_p3_bc_world_entry.py --out <none>"
+  "cli": "python scripts/validate/run_p3_bc_world_entry.py --out C:/AI-GAME/Mutagenic-zhCN-HD/runtime/p3_harness/evidence/e2_evidence.json"
 }

@@ -7,6 +7,9 @@ var force = 0.0
 var initial_hits = 0
 
 func _ready():
+				# P3-H3a: Godot 4 no longer auto-chains parent _ready(); run
+				# Projectile._ready() first (weakref/collision/damage snapshot).
+				super._ready()
 				initial_hits = hits
 
 func on_hit(target):

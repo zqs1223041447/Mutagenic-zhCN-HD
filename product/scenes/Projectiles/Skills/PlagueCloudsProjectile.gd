@@ -8,6 +8,9 @@ var particle_multiplier = 1.0
 var effective_radius = 0
 
 func _ready():
+				# P3-H3a: Godot 4 no longer auto-chains parent _ready(); run
+				# Projectile._ready() first (weakref/collision/damage snapshot).
+				super._ready()
 				
 				
 				$GPUParticles2D.lifetime = radius / $GPUParticles2D.process_material.initial_velocity

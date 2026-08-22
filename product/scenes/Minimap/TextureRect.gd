@@ -11,8 +11,10 @@ var initialized = false
 var zoom_scale = 6.0
 
 func initialize():
-				step_x = level.tiles.cell_size.x
-				step_y = level.tiles.cell_size.y
+				# Godot 4：TileMap.cell_size 已移除，改读 tile_set.tile_size
+				var ts := Vector2(level.tiles.tile_set.tile_size)
+				step_x = ts.x
+				step_y = ts.y
 				initialized = true
 				size = Vector2(32, 32)
 				scale = Vector2(zoom_scale, zoom_scale)

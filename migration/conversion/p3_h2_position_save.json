@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "task": "P3-H2",
+  "probe_id": "P3-H2-position-save",
+  "exit_criteria": [
+    "E8"
+  ],
+  "generated_at": "2026-08-22T04:03:38Z",
+  "engine": {
+    "binary_name": "Godot_v4.7.1-stable_win64.exe",
+    "resolved_via": "REPO_RELATIVE",
+    "version": "4.7.1",
+    "status": "SUCCESS"
+  },
+  "driver_scene": "res://scenes/Projectiles/_validate/p3_h2_position_driver.tscn",
+  "command": [
+    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
+    "--headless",
+    "--path",
+    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\product",
+    "res://scenes/Projectiles/_validate/p3_h2_position_driver.tscn"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "duration_ms": 15687,
+  "attempts": 1,
+  "flaked": false,
+  "result": {
+    "character_ready": true,
+    "errors": [],
+    "file_has_position_field": true,
+    "file_position_roundtrip_shape": true,
+    "finished": true,
+    "memory_position_written": true,
+    "no_world_context_omits_field": true,
+    "pass": true,
+    "reloaded_character_present": true,
+    "reloaded_position_values": {
+      "level": "p3_h2_probe",
+      "x": 123.5,
+      "y": -77.25
+    },
+    "reloaded_position_within_tolerance": true
+  },
+  "script_errors": [],
+  "verdict_detail": "probe assertions satisfied",
+  "verdict": "PASS",
+  "proves": "with a world context published into the globals, do_save_game persists the active character's position (x/y/level) into the per-character save schema; after reset_saved_state + the real load_game() the position roundtrips within 0.01 tolerance; without a world context the field is omitted entirely so pre-H2 saves stay backward compatible.",
+  "not_proven": "actual on-level player teleport on load (restore application lives with the level lane); Steam-cloud save paths; multi-character position isolation under real gameplay."
+}

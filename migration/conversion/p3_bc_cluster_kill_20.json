@@ -1,0 +1,143 @@
+{
+  "event": "B1-X5 combat-harness scenario run",
+  "task_id": "B1-X5",
+  "branch": "agent/kinetic-arcane-remaster-foundation",
+  "repo_head_sha": "7a2c5868a79a51eee817143410c8796ebb43250c",
+  "schema_version": "1.0",
+  "scenario": {
+    "id": "cluster_kill_20",
+    "version": 1,
+    "summary": "20 mobs (10 melee + 5 ranged + 5 zombie) in a 300px cluster. Flagship 5-20 enemy cluster-kill slice: all killed, death settles exactly once per mob, no duplicate-death fanout."
+  },
+  "seed": 2026082005,
+  "plan": {
+    "plan_version": 1,
+    "plan_sha256": "e9d0092824315d3645c496a6ed2ce6d6cdeb5a4c6570ed920c53e14de3e8fc89",
+    "total_spawn": 20
+  },
+  "candidate": {
+    "provided": true,
+    "path": "C:/AI-GAME/Mutagenic-zhCN-HD/02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+    "sha256": "323f9c4cc5db674e98815cdd8e69da007d5efc779abedc8c0e42883b7fdea12a",
+    "exists": true,
+    "path_repo_relative": "02_tools/godot/Godot_v4.7.1-stable_win64.exe"
+  },
+  "modset": "none",
+  "timestamps": {
+    "started_at": "2026-08-22T03:50:57Z",
+    "ended_at": "2026-08-22T03:51:15Z"
+  },
+  "boot": {
+    "alert_count": 0,
+    "fatal_count": 0,
+    "ok": true
+  },
+  "counters": {
+    "alive": 0,
+    "checkpoint_count": 2,
+    "damage_events": 40,
+    "dashes": 0,
+    "duplicate_deaths": 0,
+    "killed": 20,
+    "player_moves": 4,
+    "spawned": 20
+  },
+  "perf": {
+    "fps_avg": 38.0,
+    "fps_max": 124.0,
+    "fps_min": 1.0,
+    "frame_pacing_p95_ms": 0.0,
+    "frames": 89
+  },
+  "capture": null,
+  "runtime": {
+    "ran": true,
+    "in_game_exit_code": 0,
+    "in_game_result": "PASS",
+    "launcher": "python C:/AI-GAME/Mutagenic-zhCN-HD/scripts/validate/p3_bc_launch_godot.py --scenario cluster_kill_20 --seed 2026082005 --out-dir C:/AI-GAME/Mutagenic-zhCN-HD/runtime",
+    "launcher_returncode": 0
+  },
+  "telemetry": {
+    "provided": true,
+    "valid": true,
+    "issues": []
+  },
+  "assertions": [
+    {
+      "label": "boot_ok",
+      "field": "boot.ok",
+      "op": "==",
+      "expected": true,
+      "actual": true,
+      "capability": "required",
+      "measured": true,
+      "passed": true,
+      "status": "pass"
+    },
+    {
+      "label": "all_twenty_spawned",
+      "field": "counters.spawned",
+      "op": ">=",
+      "expected": 20,
+      "actual": 20,
+      "capability": "required",
+      "measured": true,
+      "passed": true,
+      "status": "pass"
+    },
+    {
+      "label": "cluster_fully_killed",
+      "field": "counters.killed",
+      "op": ">=",
+      "expected": 20,
+      "actual": 20,
+      "capability": "required",
+      "measured": true,
+      "passed": true,
+      "status": "pass"
+    },
+    {
+      "label": "no_duplicate_death",
+      "field": "counters.duplicate_deaths",
+      "op": "==",
+      "expected": 0,
+      "actual": 0,
+      "capability": "required",
+      "measured": true,
+      "passed": true,
+      "status": "pass"
+    },
+    {
+      "label": "fps_floor",
+      "field": "perf.fps_avg",
+      "op": ">=",
+      "expected": 30.0,
+      "actual": 38.0,
+      "capability": "optional",
+      "measured": true,
+      "passed": true,
+      "status": "pass"
+    }
+  ],
+  "failed_optional_assertions": [],
+  "result": "PASS",
+  "exit_code": 0,
+  "proves": [
+    "request-driven world entry with live player; plan spawn executed; skill->damage->kill counters wired; movement/dash input driven",
+    "scenario 'cluster_kill_20' definition parsed and spawn plan deterministic under seed 2026082005",
+    "candidate identity resolved (hash / repo HEAD / modset) when a candidate was provided",
+    "that a 20-mob mixed cluster is spawned deterministically, fully killed, and that every death is settled exactly once under the declared seed on the candidate"
+  ],
+  "not_proven": [
+    "candidate build identity; frame pacing accuracy; visual/audio quality",
+    "nothing: runtime executed",
+    "visual noise level, kill-feedback pacing, audio/camera aggregation, or cluster-kill feel (those need B1-X2/X4 plus an S5 human checkpoint)",
+    "gameplay feel / human S5 acceptance (human gate)"
+  ],
+  "evidence_paths": {
+    "request": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\requests\\cluster_kill_20_2026082005.json",
+    "telemetry": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\telemetry\\cluster_kill_20_2026082005.json",
+    "plan": null,
+    "report": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\runtime\\reports\\cluster_kill_20_2026082005_PASS.json"
+  }
+}

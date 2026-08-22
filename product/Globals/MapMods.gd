@@ -262,7 +262,8 @@ func reroll_mods(zone_level):
 												"roll": roll_stat(option.roll[0], option.roll[1], option.stepified)
 								})
 
-				active_mods.sort_custom(self, "sort_mods")
+				# Godot 4：sort_custom 只接受单个 Callable，不再收 (对象, "方法名") 双参
+				active_mods.sort_custom(sort_mods)
 				print("Mods rolled:", active_mods)
 				emit_signal("mods_changed")
 

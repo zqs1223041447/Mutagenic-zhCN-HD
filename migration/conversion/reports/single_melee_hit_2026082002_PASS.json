@@ -1,0 +1,132 @@
+{
+  "event": "B1-X5 combat-harness scenario run",
+  "task_id": "B1-X5",
+  "branch": "agent/kinetic-arcane-remaster-foundation",
+  "repo_head_sha": "7a2c5868a79a51eee817143410c8796ebb43250c",
+  "schema_version": "1.0",
+  "scenario": {
+    "id": "single_melee_hit",
+    "version": 1,
+    "summary": "One melee SkeletonWarrior spawned near the player. Baseline direct-hit observation: damage arrives, mob reacts, death settles exactly once."
+  },
+  "seed": 2026082002,
+  "plan": {
+    "plan_version": 1,
+    "plan_sha256": "668ecefebdb5132e1d4e7145ee5ee89f0162652bb681bddc4437d3da345ae058",
+    "total_spawn": 1
+  },
+  "candidate": {
+    "provided": true,
+    "path": "C:/AI-GAME/Mutagenic-zhCN-HD/02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+    "sha256": "323f9c4cc5db674e98815cdd8e69da007d5efc779abedc8c0e42883b7fdea12a",
+    "exists": true,
+    "path_repo_relative": "02_tools/godot/Godot_v4.7.1-stable_win64.exe"
+  },
+  "modset": "none",
+  "timestamps": {
+    "started_at": "2026-08-22T04:02:04Z",
+    "ended_at": "2026-08-22T04:02:19Z"
+  },
+  "boot": {
+    "alert_count": 0,
+    "fatal_count": 0,
+    "ok": true
+  },
+  "counters": {
+    "alive": 0,
+    "checkpoint_count": 2,
+    "damage_events": 2,
+    "dashes": 0,
+    "duplicate_deaths": 0,
+    "killed": 1,
+    "player_moves": 4,
+    "spawned": 1
+  },
+  "perf": {
+    "fps_avg": 12.27,
+    "fps_max": 1.0,
+    "fps_min": 1.0,
+    "frame_pacing_p95_ms": 0.0,
+    "frames": 6
+  },
+  "capture": null,
+  "runtime": {
+    "ran": true,
+    "in_game_exit_code": 0,
+    "in_game_result": "PASS",
+    "launcher": "python C:/AI-GAME/Mutagenic-zhCN-HD/scripts/validate/p3_bc_launch_godot.py --scenario single_melee_hit --seed 2026082002 --out-dir C:/AI-GAME/Mutagenic-zhCN-HD/migration/conversion",
+    "launcher_returncode": 0
+  },
+  "telemetry": {
+    "provided": true,
+    "valid": true,
+    "issues": []
+  },
+  "assertions": [
+    {
+      "label": "boot_ok",
+      "field": "boot.ok",
+      "op": "==",
+      "expected": true,
+      "actual": true,
+      "capability": "required",
+      "measured": true,
+      "passed": true,
+      "status": "pass"
+    },
+    {
+      "label": "exactly_one_spawned",
+      "field": "counters.spawned",
+      "op": ">=",
+      "expected": 1,
+      "actual": 1,
+      "capability": "required",
+      "measured": true,
+      "passed": true,
+      "status": "pass"
+    },
+    {
+      "label": "direct_hit_damage_observed",
+      "field": "counters.damage_events",
+      "op": ">=",
+      "expected": 1,
+      "actual": 2,
+      "capability": "optional",
+      "measured": true,
+      "passed": true,
+      "status": "pass"
+    },
+    {
+      "label": "no_duplicate_death",
+      "field": "counters.duplicate_deaths",
+      "op": "==",
+      "expected": 0,
+      "actual": 0,
+      "capability": "optional",
+      "measured": true,
+      "passed": true,
+      "status": "pass"
+    }
+  ],
+  "failed_optional_assertions": [],
+  "result": "PASS",
+  "exit_code": 0,
+  "proves": [
+    "request-driven world entry with live player; plan spawn executed; skill->damage->kill counters wired; movement/dash input driven",
+    "scenario 'single_melee_hit' definition parsed and spawn plan deterministic under seed 2026082002",
+    "candidate identity resolved (hash / repo HEAD / modset) when a candidate was provided",
+    "the minimal melee combat path is exercised end to end with a single deterministic mob and clean boot under the declared seed"
+  ],
+  "not_proven": [
+    "candidate build identity; frame pacing accuracy; visual/audio quality",
+    "nothing: runtime executed",
+    "crit globals, mob hit-reaction quality (B1-X2), player-response feel (B1-X1), or kill-feedback timing",
+    "gameplay feel / human S5 acceptance (human gate)"
+  ],
+  "evidence_paths": {
+    "request": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\migration\\conversion\\requests\\single_melee_hit_2026082002.json",
+    "telemetry": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\migration\\conversion\\telemetry\\single_melee_hit_2026082002.json",
+    "plan": null,
+    "report": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\migration\\conversion\\reports\\single_melee_hit_2026082002_PASS.json"
+  }
+}

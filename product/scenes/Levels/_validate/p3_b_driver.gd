@@ -175,9 +175,6 @@ func _orchestrate() -> void:
 	e2["active_stage_id"] = str(GameState.get_global("active_stage_id"))
 
 	# --- wait for map_done: navmesh built is the strongest completion signal ---
-	# Cull the wave first: TestLevel dumps 300 mobs at the player origin whose
-	# per-frame error spam can crawl the frame rate to a crawl.
-	e2["enemies_culled_early"] = _cull_enemies(level)
 	var map_ready := func() -> bool:
 		var nm: Variant = Globals.navmesh
 		if nm == null or not is_instance_valid(nm):
@@ -186,7 +183,18 @@ func _orchestrate() -> void:
 		return astar != null and is_instance_valid(astar) and astar.get_point_count() > 0
 	e2["map_done"] = await _until(map_ready, MAPDONE_TIMEOUT_FRAMES)
 
-	# --- E2 tile-pipeline evidence (read_tiles/set_cells_terrain_connect ran) ---
+	# --- determinize the sampling window ---
+	# TestLevel._ready emits map_done BEFORE spawn_cluster_in_ladder dumps the
+	# 300-mob wave, so navmesh-built alone does NOT mean the wave exists yet.
+	# Wait for the wave, then cull it and let queue_free drain — otherwise mobs
+	# land on the player mid-sampling and jam displacement measurements.
+	var wave_seen := await _until(func() -> bool:
+		return get_tree().get_nodes_in_group("enemies").size() >= 100, 600)
+	e2["mob_wave_spawned"] = wave_seen
+	e2["enemies_culled_early"] = _cull_enemies(level)
+	await _physics_frames(8)
+	e2["enemies_culled_early_second_pass"] = _cull_enemies(level)
+	e2["enemies_remaining_after_cull"] = get_tree().get_nodes_in_group("enemies").size()
 	if level != null and is_instance_valid(level):
 		var tiles: Node = level.get_node_or_null("TileMap")
 		if tiles != null:

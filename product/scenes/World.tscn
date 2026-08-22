@@ -22,14 +22,14 @@ z_index = -3900
 [node name="ProjectileLayer" type="Node2D" parent="."]
 z_index = 100
 
-[node name="Level" type=\"Node2D\" parent="."]
+[node name="Level" type="Node2D" parent="."]
 y_sort_enabled = true
 z_index = 512
 
 [node name="SkyLayer" type="Node2D" parent="."]
 z_index = 1024
 
-[node name="FloatingDamageTexts" type=\"Node2D\" parent="."]
+[node name="FloatingDamageTexts" type="Node2D" parent="."]
 y_sort_enabled = true
 z_index = 1000
 

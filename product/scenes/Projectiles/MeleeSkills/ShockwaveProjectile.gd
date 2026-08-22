@@ -3,6 +3,9 @@ extends Projectile
 var parts = preload("res://scenes/Particles/ShockwaveBurst.tscn")
 
 func _ready():
+				# P3-H3a: Godot 4 no longer auto-chains parent _ready(); run
+				# Projectile._ready() first (weakref/collision/damage snapshot).
+				super._ready()
 				$CollisionShape2D.shape.radius = radius
 
 func _on_Timer_timeout() -> void :

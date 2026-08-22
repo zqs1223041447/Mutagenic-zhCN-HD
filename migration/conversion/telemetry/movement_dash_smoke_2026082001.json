@@ -1,0 +1,108 @@
+{
+	"boot": {
+		"alert_count": 0,
+		"fatal_count": 0,
+		"ok": true
+	},
+	"checkpoints": [
+		{
+			"alive": 0,
+			"damage_events": 0,
+			"fps": 1.0,
+			"killed": 0,
+			"spawned": 0,
+			"t": 0.0
+		},
+		{
+			"alive": 0,
+			"damage_events": 0,
+			"fps": 145.0,
+			"killed": 0,
+			"spawned": 0,
+			"t": 5.02
+		},
+		{
+			"alive": 0,
+			"damage_events": 0,
+			"fps": 145.0,
+			"killed": 0,
+			"spawned": 0,
+			"t": 10.03
+		},
+		{
+			"alive": 0,
+			"damage_events": 0,
+			"fps": 145.0,
+			"killed": 0,
+			"spawned": 0,
+			"t": 15.05
+		},
+		{
+			"alive": 0,
+			"damage_events": 0,
+			"fps": 145.0,
+			"killed": 0,
+			"spawned": 0,
+			"t": 20.07
+		},
+		{
+			"alive": 0,
+			"damage_events": 0,
+			"fps": 145.0,
+			"killed": 0,
+			"spawned": 0,
+			"t": 25.08
+		},
+		{
+			"alive": 0,
+			"damage_events": 0,
+			"fps": 145.0,
+			"killed": 0,
+			"spawned": 0,
+			"t": 30.02
+		}
+	],
+	"counters": {
+		"alive": 0,
+		"checkpoint_count": 7,
+		"damage_events": 0,
+		"dashes": 7,
+		"duplicate_deaths": 0,
+		"killed": 0,
+		"player_moves": 55,
+		"spawned": 0
+	},
+	"ended_at": "2026-08-22T04:02:03Z",
+	"exit_reason": "timeout",
+	"not_proven": "candidate build identity; frame pacing accuracy; visual/audio quality",
+	"perf": {
+		"fps_avg": 58.44,
+		"fps_max": 145.0,
+		"fps_min": 1.0,
+		"frame_pacing_p95_ms": 0.0,
+		"frames": 1801
+	},
+	"proves": "request-driven world entry with live player; plan spawn executed; skill->damage->kill counters wired; movement/dash input driven",
+	"runtime": {
+		"exit_code": 0,
+		"in_game_result": "PASS",
+		"notes": [
+			"run_seconds=30.82",
+			"exit_reason=timeout",
+			"skill_used=<none>",
+			"harness_mode=TestLevel.gd+ScenarioDirector.gd",
+			"spawn_positions_adjusted=0/0 (clamped to 64.0px engagement radius)"
+		]
+	},
+	"scenario_id": "movement_dash_smoke",
+	"schema_version": "1.0",
+	"seed": 2026082001,
+	"session_file": "session_movement_dash_smoke_2026082001.json",
+	"started_at": "2026-08-22T04:01:33Z",
+	"status": "complete",
+	"world": {
+		"navmesh_points": 252,
+		"player_in_tree": true,
+		"tile_used_cells": 320
+	}
+}

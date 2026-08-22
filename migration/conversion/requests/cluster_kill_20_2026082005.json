@@ -1,0 +1,587 @@
+{
+  "schema_version": "1.0",
+  "scenario": {
+    "id": "cluster_kill_20",
+    "version": 1,
+    "summary": "20 mobs (10 melee + 5 ranged + 5 zombie) in a 300px cluster. Flagship 5-20 enemy cluster-kill slice: all killed, death settles exactly once per mob, no duplicate-death fanout.",
+    "default_seed": 2026082005,
+    "duration_seconds": 60.0,
+    "end_condition": {
+      "type": "all_mobs_dead_or_timeout",
+      "timeout_seconds": 60.0
+    },
+    "spawn": {
+      "mode": "ladder",
+      "ladder": {
+        "x": 0,
+        "y": 0,
+        "wave": 1
+      },
+      "origin": [
+        180.0,
+        0.0
+      ],
+      "spread": 300.0
+    },
+    "player": {
+      "position": [
+        0.0,
+        0.0
+      ]
+    },
+    "mob_composition": [
+      {
+        "mob": "skeleton_warrior",
+        "count": 10
+      },
+      {
+        "mob": "skeleton_archer",
+        "count": 5
+      },
+      {
+        "mob": "zombie",
+        "count": 5
+      }
+    ],
+    "asserts": [
+      {
+        "label": "boot_ok",
+        "field": "boot.ok",
+        "op": "==",
+        "value": true,
+        "capability": "required"
+      },
+      {
+        "label": "all_twenty_spawned",
+        "field": "counters.spawned",
+        "op": ">=",
+        "value": 20,
+        "capability": "required"
+      },
+      {
+        "label": "cluster_fully_killed",
+        "field": "counters.killed",
+        "op": ">=",
+        "value": 20,
+        "capability": "required"
+      },
+      {
+        "label": "no_duplicate_death",
+        "field": "counters.duplicate_deaths",
+        "op": "==",
+        "value": 0,
+        "capability": "required"
+      },
+      {
+        "label": "fps_floor",
+        "field": "perf.fps_avg",
+        "op": ">=",
+        "value": 30.0,
+        "capability": "optional"
+      }
+    ],
+    "proves": "that a 20-mob mixed cluster is spawned deterministically, fully killed, and that every death is settled exactly once under the declared seed on the candidate",
+    "not_proven": "visual noise level, kill-feedback pacing, audio/camera aggregation, or cluster-kill feel (those need B1-X2/X4 plus an S5 human checkpoint)",
+    "requires": [
+      "boot",
+      "killed",
+      "duplicate_deaths",
+      "fps"
+    ],
+    "stress": false
+  },
+  "seed": 2026082005,
+  "plan": {
+    "plan_version": 1,
+    "scenario_id": "cluster_kill_20",
+    "seed": 2026082005,
+    "total_spawn": 20,
+    "spawns": [
+      {
+        "order": 1,
+        "mob": "skeleton_warrior",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_WARRIOR"
+        },
+        "count_index": 0,
+        "position": [
+          204.2,
+          -265.5
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 2,
+        "mob": "skeleton_warrior",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_WARRIOR"
+        },
+        "count_index": 1,
+        "position": [
+          196.1,
+          -270.8
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 3,
+        "mob": "skeleton_warrior",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_WARRIOR"
+        },
+        "count_index": 2,
+        "position": [
+          327.0,
+          -15.6
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 4,
+        "mob": "skeleton_warrior",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_WARRIOR"
+        },
+        "count_index": 3,
+        "position": [
+          130.1,
+          -87.1
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 5,
+        "mob": "skeleton_warrior",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_WARRIOR"
+        },
+        "count_index": 4,
+        "position": [
+          -63.5,
+          -273.1
+        ],
+        "elite": false,
+        "magic": true
+      },
+      {
+        "order": 6,
+        "mob": "skeleton_warrior",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_WARRIOR"
+        },
+        "count_index": 5,
+        "position": [
+          271.3,
+          170.0
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 7,
+        "mob": "skeleton_warrior",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_WARRIOR"
+        },
+        "count_index": 6,
+        "position": [
+          63.3,
+          -52.9
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 8,
+        "mob": "skeleton_warrior",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_WARRIOR"
+        },
+        "count_index": 7,
+        "position": [
+          266.6,
+          17.8
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 9,
+        "mob": "skeleton_warrior",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_WARRIOR"
+        },
+        "count_index": 8,
+        "position": [
+          157.1,
+          -257.4
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 10,
+        "mob": "skeleton_warrior",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_WARRIOR"
+        },
+        "count_index": 9,
+        "position": [
+          326.5,
+          -137.1
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 11,
+        "mob": "skeleton_archer",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_ARCHER"
+        },
+        "count_index": 0,
+        "position": [
+          148.4,
+          30.0
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 12,
+        "mob": "skeleton_archer",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_ARCHER"
+        },
+        "count_index": 1,
+        "position": [
+          -42.8,
+          -220.8
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 13,
+        "mob": "skeleton_archer",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_ARCHER"
+        },
+        "count_index": 2,
+        "position": [
+          -51.0,
+          -276.1
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 14,
+        "mob": "skeleton_archer",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_ARCHER"
+        },
+        "count_index": 3,
+        "position": [
+          61.9,
+          -80.7
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 15,
+        "mob": "skeleton_archer",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_ARCHER"
+        },
+        "count_index": 4,
+        "position": [
+          238.5,
+          -186.0
+        ],
+        "elite": false,
+        "magic": true
+      },
+      {
+        "order": 16,
+        "mob": "zombie",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "ZOMBIE"
+        },
+        "count_index": 0,
+        "position": [
+          20.7,
+          145.6
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 17,
+        "mob": "zombie",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "ZOMBIE"
+        },
+        "count_index": 1,
+        "position": [
+          180.5,
+          -6.0
+        ],
+        "elite": false,
+        "magic": true
+      },
+      {
+        "order": 18,
+        "mob": "zombie",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "ZOMBIE"
+        },
+        "count_index": 2,
+        "position": [
+          429.1,
+          56.8
+        ],
+        "elite": false,
+        "magic": true
+      },
+      {
+        "order": 19,
+        "mob": "zombie",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "ZOMBIE"
+        },
+        "count_index": 3,
+        "position": [
+          -32.4,
+          151.9
+        ],
+        "elite": false,
+        "magic": false
+      },
+      {
+        "order": 20,
+        "mob": "zombie",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "ZOMBIE"
+        },
+        "count_index": 4,
+        "position": [
+          -83.3,
+          273.7
+        ],
+        "elite": false,
+        "magic": false
+      }
+    ],
+    "plan_sha256": "e9d0092824315d3645c496a6ed2ce6d6cdeb5a4c6570ed920c53e14de3e8fc89"
+  },
+  "mob_resources": {
+    "skeleton_warrior": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "SKELETON_WARRIOR"
+    },
+    "skeleton_archer": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "SKELETON_ARCHER"
+    },
+    "skeleton_sparker": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "SKELETON_SPARKER"
+    },
+    "skeleton_mage": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "SKELETON_MAGE"
+    },
+    "zombie": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "ZOMBIE"
+    },
+    "spider": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "SPIDER"
+    },
+    "skeletor": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "SKELETOR"
+    },
+    "attack_dog": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "ATTACK_DOG"
+    }
+  },
+  "expected_telemetry_path": "C:\\AI-GAME\\Mutagenic-zhCN-HD\\migration\\conversion\\telemetry\\cluster_kill_20_2026082005.json",
+  "contract": "ScenarioDirector.gd reads 'game_request' (scenario_id/seed/duration/plan with res+x+y+count), seeds Godot RNG with 'seed', spawns per the plan, then writes telemetry JSON conforming to combat_telemetry_schema.json to 'expected_telemetry_path'.",
+  "game_request": {
+    "schema_version": "1.0",
+    "scenario_id": "cluster_kill_20",
+    "seed": 2026082005,
+    "duration": 60.0,
+    "plan": [
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 204.2,
+        "y": -265.5,
+        "count": 1,
+        "mob_type": "SKELETON_WARRIOR"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 196.1,
+        "y": -270.8,
+        "count": 1,
+        "mob_type": "SKELETON_WARRIOR"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 327.0,
+        "y": -15.6,
+        "count": 1,
+        "mob_type": "SKELETON_WARRIOR"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 130.1,
+        "y": -87.1,
+        "count": 1,
+        "mob_type": "SKELETON_WARRIOR"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": -63.5,
+        "y": -273.1,
+        "count": 1,
+        "mob_type": "SKELETON_WARRIOR"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 271.3,
+        "y": 170.0,
+        "count": 1,
+        "mob_type": "SKELETON_WARRIOR"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 63.3,
+        "y": -52.9,
+        "count": 1,
+        "mob_type": "SKELETON_WARRIOR"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 266.6,
+        "y": 17.8,
+        "count": 1,
+        "mob_type": "SKELETON_WARRIOR"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 157.1,
+        "y": -257.4,
+        "count": 1,
+        "mob_type": "SKELETON_WARRIOR"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 326.5,
+        "y": -137.1,
+        "count": 1,
+        "mob_type": "SKELETON_WARRIOR"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 148.4,
+        "y": 30.0,
+        "count": 1,
+        "mob_type": "SKELETON_ARCHER"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": -42.8,
+        "y": -220.8,
+        "count": 1,
+        "mob_type": "SKELETON_ARCHER"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": -51.0,
+        "y": -276.1,
+        "count": 1,
+        "mob_type": "SKELETON_ARCHER"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 61.9,
+        "y": -80.7,
+        "count": 1,
+        "mob_type": "SKELETON_ARCHER"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 238.5,
+        "y": -186.0,
+        "count": 1,
+        "mob_type": "SKELETON_ARCHER"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 20.7,
+        "y": 145.6,
+        "count": 1,
+        "mob_type": "ZOMBIE"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 180.5,
+        "y": -6.0,
+        "count": 1,
+        "mob_type": "ZOMBIE"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 429.1,
+        "y": 56.8,
+        "count": 1,
+        "mob_type": "ZOMBIE"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": -32.4,
+        "y": 151.9,
+        "count": 1,
+        "mob_type": "ZOMBIE"
+      },
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": -83.3,
+        "y": 273.7,
+        "count": 1,
+        "mob_type": "ZOMBIE"
+      }
+    ]
+  }
+}

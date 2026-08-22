@@ -78,28 +78,27 @@ func _render_map():
 								offset_x = bounds[0]
 								offset_y = bounds[1]
 
-								
-								image.lock()
+
+								# Godot 4：Image.lock()/unlock() 已移除，set_pixel 直接可用
 								for i in range(width):
 												for j in range(height):
 																if level.is_spawnable_tile(i + offset_x, j + offset_y):
 																				image.set_pixel(IMAGE_PADDING + i, IMAGE_PADDING + j, Color(1, 1, 1, 0.7))
-								image.unlock()
 
 								image_texture = ImageTexture.create_from_image(image)
 								texture_rect.initialize()
 
 
 func render_portal(x_pixel, y_pixel):
-				var x_step = level.tiles.cell_size.x
-				var y_step = level.tiles.cell_size.y
+				# Godot 4：TileMap.cell_size 已移除，改读 tile_set.tile_size
+				var ts := Vector2(level.tiles.tile_set.tile_size)
+				var x_step = ts.x
+				var y_step = ts.y
 				var x = round(x_pixel / x_step)
 				var y = round(y_pixel / y_step)
-				image.lock()
 				for i in [ - 1, 0, 1]:
 								for j in [ - 1, 0, 1]:
 												if i == 0 and j == 0:
 																continue
 												image.set_pixel(IMAGE_PADDING + x - offset_x + i, IMAGE_PADDING + y - offset_y + j, Color.BLUE)
-				image.unlock()
 				image_texture.update(image)

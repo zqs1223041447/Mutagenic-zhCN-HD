@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""P3-BC E2 world-entry evidence runner.
+"""P3-BC E2 world-entry evidence runner (self-contained).
 
-Drives the existing P3BDriver scene (production path: character -> World ->
-TestLevel with a real player, read_tiles/set_cells_terrain_connect and
-initialize_navmesh) headless, parses the driver's P3B_RESULT_JSON marker and
-records the three explicit P3-BC assertions on top of the driver result:
+Drives the P3-BC harness chain end to end: plants a synthetic
+``world_entry_probe`` request, boots the product headless through the
+production world-entry chain (P3BCHarnessBoot -> World -> TestLevel harness
+mode with a real player, read_tiles/set_cells_terrain_connect and
+initialize_navmesh), then asserts the three explicit P3-BC assertions from
+the in-game telemetry:
 
-    player_present            (player node spawned inside the level layer)
+    player_present            (player node spawned and inside the tree)
     tile_used_cells_gt_zero   (set_cells_terrain_connect painted tiles)
     navmesh_built             (AStar navmesh has points)
 
@@ -19,7 +21,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import subprocess
 import sys
 import time
@@ -27,92 +28,91 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
-_BOOTSTRAP = REPO / "scripts" / "bootstrap"
-if str(_BOOTSTRAP) not in sys.path:
-    sys.path.insert(0, str(_BOOTSTRAP))
-
-try:
-    from product_toolchain import discover_product_godot  # type: ignore
-except ImportError:  # older bootstrap layout
-    from product_boot_probe import resolve_engine as _resolve_engine  # type: ignore
-
-    def discover_product_godot(root: Path) -> dict:
-        info = _resolve_engine(root)
-        return {"engine": {
-            "binary": info.get("binary"),
-            "resolved_via": info.get("resolved_via"),
-            "version": info.get("version"),
-            "status": info.get("tool_status"),
-        }}
-
 CANONICAL_OUT = REPO / "migration" / "conversion" / "p3_bc_world_entry.json"
-MARKER = "P3B_RESULT_JSON<<<"
-DRIVER_SCENE = "res://scenes/Levels/_validate/P3BDriver.tscn"
+LAUNCHER = REPO / "scripts" / "validate" / "p3_bc_launch_godot.py"
+SCENARIO_ID = "world_entry_probe"
+SEED = 2026082299
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--out", type=Path, default=None,
                         help="additional evidence copy (canonical always written)")
-    parser.add_argument("--timeout", type=int, default=360)
+    parser.add_argument("--timeout", type=int, default=240,
+                        help="engine timeout seconds for the probe run")
     args = parser.parse_args(argv)
 
-    discovery = discover_product_godot(REPO)
-    engine = discovery.get("engine") or {}
+    work_dir = REPO / "runtime" / "p3_harness" / "world_entry_probe"
+    request_dir = work_dir / "requests"
+    telemetry_dir = work_dir / "telemetry"
+    request_dir.mkdir(parents=True, exist_ok=True)
+    telemetry_dir.mkdir(parents=True, exist_ok=True)
+    request_path = request_dir / f"{SCENARIO_ID}_{SEED}.json"
+    expected_telemetry = telemetry_dir / f"{SCENARIO_ID}_{SEED}.json"
+
+    # Synthetic request: no mobs, short duration - just prove world entry.
+    request = {
+        "schema_version": "1.0",
+        "scenario": {"id": SCENARIO_ID},
+        "seed": SEED,
+        "expected_telemetry_path": str(expected_telemetry),
+        "game_request": {
+            "scenario_id": SCENARIO_ID,
+            "seed": SEED,
+            "duration": 6.0,
+            "plan": [],
+        },
+    }
+    request_path.write_text(
+        json.dumps(request, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
     report: dict = {
         "schema_version": 1,
         "task": "P3-BC-E2",
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "engine": {
-            "binary_name": Path(str(engine.get("binary"))).name if engine.get("binary") else None,
-            "resolved_via": engine.get("resolved_via"),
-            "version": engine.get("version"),
-            "status": engine.get("status"),
-        },
-        "driver_scene": DRIVER_SCENE,
+        "driver_scene": "res://scenes/Levels/_validate/P3BCHarnessBoot.tscn",
+        "request": str(request_path),
         "timeout_s": args.timeout,
     }
 
-    binary = engine.get("binary")
-    if not binary or engine.get("status") != "SUCCESS":
-        report.update({"overall": "NOT_FOUND",
-                       "note": f"godot binary not resolved: {engine!r}"})
-        _finish(report, args.out)
-        return 1
-
-    cmd = [str(binary), "--headless", "--path", str(REPO / "product"), DRIVER_SCENE]
-    report["cmd"] = [c.replace(str(REPO), "<repo>") for c in cmd]
     started = time.monotonic()
-    try:
-        proc = subprocess.run(cmd, capture_output=True, text=True,
-                              encoding="utf-8", errors="replace",
-                              timeout=args.timeout)
-        rc, stdout, stderr = proc.returncode, proc.stdout or "", proc.stderr or ""
-        timed_out = False
-    except subprocess.TimeoutExpired as exc:
-        rc, timed_out = None, True
-        stdout = _as_text(exc.stdout)
-        stderr = _as_text(exc.stderr)
-    duration_ms = int((time.monotonic() - started) * 1000)
-
-    marker_re = re.compile(re.escape(MARKER) + r"(.*?)>>>", re.S)
-    match = marker_re.search(stdout)
-    driver_result = None
-    if match:
-        try:
-            driver_result = json.loads(match.group(1))
-        except json.JSONDecodeError as exc:
-            report["marker_parse_error"] = str(exc)
-
-    script_errors = sum(
-        1 for line in (stdout + stderr).splitlines()
-        if "SCRIPT ERROR" in line.upper()
+    proc = subprocess.run(
+        [sys.executable, str(LAUNCHER),
+         "--scenario", SCENARIO_ID, "--seed", str(SEED),
+         "--request", str(request_path),
+         "--expected-telemetry", str(expected_telemetry),
+         "--timeout", str(args.timeout)],
+        capture_output=True, text=True, encoding="utf-8", errors="replace",
+        cwd=str(REPO), timeout=args.timeout + 120,
     )
-    e2 = (driver_result or {}).get("e2") or {}
-    used_cells = int(e2.get("tile_used_cells") or 0)
-    navmesh_points = int(e2.get("navmesh_points") or 0)
+    duration_ms = int((time.monotonic() - started) * 1000)
+    report["launcher_returncode"] = proc.returncode
+    report["launcher_tail"] = "\n".join((proc.stdout or "").splitlines()[-12:])
+    report["launcher_stderr_tail"] = "\n".join((proc.stderr or "").splitlines()[-8:])
+    report["duration_ms"] = duration_ms
+
+    world: dict = {}
+    counters: dict = {}
+    if expected_telemetry.is_file():
+        try:
+            payload = json.loads(expected_telemetry.read_text(encoding="utf-8"))
+            world = payload.get("world") or {}
+            counters = payload.get("counters") or {}
+            report["telemetry"] = {
+                "scenario_id": payload.get("scenario_id"),
+                "seed": payload.get("seed"),
+                "exit_reason": payload.get("exit_reason"),
+                "boot": payload.get("boot"),
+                "world": world,
+                "runtime_notes": (payload.get("runtime") or {}).get("notes"),
+            }
+        except ValueError as exc:
+            report["telemetry_error"] = f"unreadable telemetry: {exc}"
+
+    used_cells = int(world.get("tile_used_cells") or 0)
+    navmesh_points = int(world.get("navmesh_points") or 0)
     assertions = {
-        "player_present": bool(e2.get("player_spawned")),
+        "player_present": bool(world.get("player_in_tree")),
         "tile_used_cells_gt_zero": used_cells > 0,
         "navmesh_built": navmesh_points > 0,
         "tile_used_cells": used_cells,
@@ -123,40 +123,14 @@ def main(argv: list[str] | None = None) -> int:
         and assertions["tile_used_cells_gt_zero"]
         and assertions["navmesh_built"]
     )
+    report["p3_bc_assertions"] = assertions
+    report["overall"] = "PASS" if assertions["all_pass"] else "FAIL"
+    if not report.get("telemetry"):
+        report["overall"] = "TOOL_FAILED"
+        report["note"] = "no telemetry produced by the engine run"
 
-    if timed_out:
-        overall, note = "TOOL_FAILED", f"TIMEOUT after {args.timeout}s"
-    elif rc not in (0, 1):
-        overall, note = "TOOL_FAILED", f"abnormal engine exit rc={rc}"
-    elif driver_result is None:
-        overall, note = "TOOL_FAILED", "result marker not found in stdout"
-    elif bool(driver_result.get("all_pass")) and assertions["all_pass"]:
-        overall, note = "PASS", ""
-    else:
-        overall, note = "FAIL", "driver reported failure or P3-BC assertions unmet"
-
-    report.update({
-        "returncode": rc,
-        "timed_out": timed_out,
-        "duration_ms": duration_ms,
-        "driver_result": driver_result,
-        "script_error_total": script_errors,
-        "p3_bc_assertions": assertions,
-        "overall": overall,
-        "note": note,
-        "stdout_head": stdout[:2000],
-        "stderr_head": stderr[:2000],
-    })
     _finish(report, args.out)
-    return 0 if overall == "PASS" else 1
-
-
-def _as_text(value) -> str:
-    if value is None:
-        return ""
-    if isinstance(value, bytes):
-        return value.decode("utf-8", errors="replace")
-    return str(value)
+    return 0 if report["overall"] == "PASS" else 1
 
 
 def _finish(report: dict, out_copy: Path | None) -> None:

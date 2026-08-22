@@ -92,7 +92,8 @@ func _ready() -> void :
 																else:
 																				valid_stats[stat] = true
 								var statlist = valid_stats.keys()
-								statlist.sort_custom(StatsInfo, "skill_sorter")
+								# Godot 4：autoload 实例属性即 Callable，替代 G3 的 (对象, "方法名")
+								statlist.sort_custom(StatsInfo.skill_sorter)
 								for stat in statlist:
 												var effective_stat = item.get_effective_stat(stat)
 												var stat_name = StatsInfo.stat_name[stat]
@@ -107,7 +108,7 @@ func _ready() -> void :
 																var sorted_items = []
 																for s in effective_stat:
 																				sorted_items.append([s, effective_stat[s]])
-																sorted_items.sort_custom(self, "damage_sorter")
+																sorted_items.sort_custom(damage_sorter)
 																for pair in sorted_items:
 																				var pair_item = pair[0]
 																				content.push_color(Colors.color_for_skill_tag[pair_item])

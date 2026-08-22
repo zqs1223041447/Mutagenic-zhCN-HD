@@ -6,7 +6,7 @@
     "E2",
     "E3"
   ],
-  "generated_at": "2026-08-22T03:16:57Z",
+  "generated_at": "2026-08-22T03:45:27Z",
   "engine": {
     "binary_name": "Godot_v4.7.1-stable_win64.exe",
     "resolved_via": "REPO_RELATIVE",
@@ -23,15 +23,18 @@
   ],
   "returncode": 0,
   "timed_out": false,
-  "duration_ms": 18141,
+  "duration_ms": 19531,
   "attempts": 1,
   "flaked": false,
   "result": {
     "e2": {
       "active_stage_id": "test_level",
-      "change_scene_ok": false,
+      "change_scene_ok": true,
       "enemies_culled_early": 300,
+      "enemies_culled_early_second_pass": 0,
+      "enemies_remaining_after_cull": 0,
       "map_done": true,
+      "mob_wave_spawned": true,
       "navmesh_built": true,
       "navmesh_points": 252,
       "pass": true,
@@ -43,11 +46,10 @@
       "tile_used_cells": 320,
       "tiles_painted": true,
       "world_entered": true,
-      "world_entry_mode": "manual_assembly",
-      "world_scene_blocked_note": "World.tscn could not be loaded; see world_scene_blocked_by. Manual assembly replicates World.switch_levels(reset=true) core steps."
+      "world_entry_mode": "world_scene"
     },
     "e3": {
-      "dash_burst_px": 9.22,
+      "dash_burst_px": 0.0,
       "dash_cd_after_trigger": 0.733,
       "dash_cd_before": 0.0,
       "dash_fired_state": true,
@@ -61,10 +63,10 @@
       "pass": true,
       "player_can_sleep": true,
       "player_freeze": false,
-      "player_sleeping_before": false,
+      "player_sleeping_before": true,
       "walk_attempts": [
         {
-          "dx": 26.83,
+          "dx": 18.46,
           "point_index": 0,
           "spot_x": -272.0
         }
@@ -76,11 +78,9 @@
     "task": "P3-B"
   },
   "script_errors": [
-    "SCRIPT ERROR: Parse Error: Too many arguments for \"sort_custom()\" call. Expected at most 1 but received 2.",
-    "SCRIPT ERROR: Parse Error: Invalid argument for \"sort_custom()\" function: argument 1 should be \"Callable\" but is \"res://Globals/StatsInfo.gd\".",
-    "SCRIPT ERROR: Parse Error: Invalid argument for \"sort_custom()\" function: argument 1 should be \"Callable\" but is \"res://scenes/Popups/ItemTabContent.gd\".",
-    "SCRIPT ERROR: Invalid call to function 'sort_custom' in base 'Array'. Expected 1 argument(s).",
-    "SCRIPT ERROR: Invalid call. Nonexistent function 'lock' in base 'Image'."
+    "SCRIPT ERROR: Invalid assignment of property or key 'value' with value of type 'float' on a base object of type 'null instance'.",
+    "SCRIPT ERROR: Invalid call to function 'sort_custom' in base 'Array[Node]'. Expected 1 argument(s).",
+    "SCRIPT ERROR: Invalid access to property or key 'process_material' on a base object of type 'null instance'."
   ],
   "verdict_detail": "probe assertions satisfied",
   "verdict": "PASS",

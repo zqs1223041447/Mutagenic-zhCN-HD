@@ -12,7 +12,5 @@ offset_right = 22.0
 offset_bottom = 13.0
 theme = ExtResource("2")
 text = "test"
-align = 1
-valign = 1
-
-[node name="Tween" type="Tween" parent="Label"]
+horizontal_alignment = 1
+vertical_alignment = 1

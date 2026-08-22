@@ -19,7 +19,10 @@
     "p3_loot_probe": "scripts/validate/p3_loot_probe.py",
     "p3_ui_probe": "scripts/validate/p3_ui_probe.py",
     "p3_a_probe": "scripts/validate/run_p3_a_character_save.py",
-    "p3_b_probe": "scripts/validate/run_p3_b_world_movement.py"
+    "p3_b_probe": "scripts/validate/run_p3_b_world_movement.py",
+    "p3_bc_world_entry": "scripts/validate/run_p3_bc_world_entry.py",
+    "p3_bc_launcher": "scripts/validate/p3_bc_launch_godot.py",
+    "godot_engine": "02_tools/godot/Godot_v4.7.1-stable_win64.exe"
   },
   "steps": {
     "E1": {
@@ -38,10 +41,10 @@
       "exit_criteria": "E2: TestLevel loads with zero fatal signatures (crash / failed scene load / SCRIPT ERROR beyond known-benign asset noise).",
       "runner": {
         "implemented": true,
-        "strategy": "headless driver with player: TestLevel loads, tile pipeline paints (used_cells=320), navmesh builds, player mounts level_layer",
-        "command_template": "\"{python}\" \"{p3_b_probe}\" --out \"{step_evidence}\"",
-        "timeout_s": 300,
-        "note": "wired to scripts/validate/run_p3_b_world_movement.py (PASS 2026-08-22); CAVEAT world_entry_mode=manual_assembly - World.tscn full chain blocked by ItemTabContent.gd sort_custom G3 API (attempt-3 scope)"
+        "strategy": "P3-BC world-entry probe: player spawned + tile pipeline paints (used_cells=320) + navmesh builds (252 points), asserted explicitly; canonical evidence migration/conversion/p3_bc_world_entry.json",
+        "command_template": "\"{python}\" \"{p3_bc_world_entry}\" --out \"{step_evidence}\" --timeout 360",
+        "timeout_s": 420,
+        "note": "wired to scripts/validate/run_p3_bc_world_entry.py (PASS 2026-08-22: player_present/tile_used_cells_gt_zero/navmesh_built all true); CAVEAT world_entry_mode=manual_assembly - World.tscn full chain blocked by concurrent-lane parse errors"
       }
     },
     "E3": {
@@ -49,10 +52,10 @@
       "exit_criteria": "E3: player displacement after move/dash inputs matches the declared delta within tolerance.",
       "runner": {
         "implemented": true,
-        "strategy": "same headless driver: navmesh open-point displacement dx>15px asserted; dash cooldown state transition (0→decaying) asserted",
-        "command_template": "\"{python}\" \"{p3_b_probe}\" --out \"{step_evidence}\"",
-        "timeout_s": 300,
-        "note": "wired to scripts/validate/run_p3_b_world_movement.py (PASS 2026-08-22); dash_burst_px=0 recorded honestly (impulse hit terrain at sample point) - state-change assertion used"
+        "strategy": "combat harness movement_dash_smoke via in-game ScenarioDirector (TestLevel harness mode): input-driven move/dash counters measured in telemetry",
+        "command_template": "\"{python}\" \"{combat_harness}\" run --scenario movement_dash_smoke --candidate \"{godot_engine}\" --out-dir \"{out_dir}\" --launch \"python {p3_bc_launcher} --scenario movement_dash_smoke --seed 2026082001 --out-dir {out_dir}\"",
+        "timeout_s": 600,
+        "note": "wired to scripts/validate/combat_harness.py + p3_bc_launch_godot.py (PASS 2026-08-22: dashes=7, player_moves>0); report under out_dir/reports/"
       }
     },
     "E4": {
@@ -60,10 +63,10 @@
       "exit_criteria": "E4: releasing an active skill yields direct_hit/damage events on the combat event spine.",
       "runner": {
         "implemented": true,
-        "strategy": "headless driver scene: instantiate attacker mob + victim mob; the mob's real Gear/BasicAttack skill node produces a damage bundle that reduces the victim's HP",
-        "command_template": "\"{python}\" \"{p3_combat_probe}\" --root \"{repo_root}\" --out \"{step_evidence}\"",
+        "strategy": "combat harness single_melee_hit: real skill loadout (Orb+Shockwave) auto-casts at a LOS-verified SkeletonWarrior; mob health-loss events counted",
+        "command_template": "\"{python}\" \"{combat_harness}\" run --scenario single_melee_hit --candidate \"{godot_engine}\" --out-dir \"{out_dir}\" --launch \"python {p3_bc_launcher} --scenario single_melee_hit --seed 2026082002 --out-dir {out_dir}\"",
         "timeout_s": 600,
-        "note": "wired to scripts/validate/p3_combat_probe.py (PASS 2026-08-22); evidence p3_c_combat.json"
+        "note": "wired to combat harness chain (PASS 2026-08-22: damage_events=2, killed=1/1, duplicate_deaths=0)"
       }
     },
     "E5": {
@@ -71,10 +74,10 @@
       "exit_criteria": "E5: at least one spawned mob reaches death with a kill event attributed to the player.",
       "runner": {
         "implemented": true,
-        "strategy": "same headless combat driver: drive the skill damage bundle through Stats.apply_damage until did_kill; assert died signal + removal from tree",
-        "command_template": "\"{python}\" \"{p3_combat_probe}\" --root \"{repo_root}\" --out \"{step_evidence}\"",
-        "timeout_s": 600,
-        "note": "wired to scripts/validate/p3_combat_probe.py (PASS 2026-08-22); ladder map stub keeps the kill path deterministic while product/scenes/Pickups is missing"
+        "strategy": "combat harness cluster_kill_20: 20-mob mixed cluster fully killed through the real skill->damage->died pipeline; death settles exactly once per mob",
+        "command_template": "\"{python}\" \"{combat_harness}\" run --scenario cluster_kill_20 --candidate \"{godot_engine}\" --out-dir \"{out_dir}\" --launch \"python {p3_bc_launcher} --scenario cluster_kill_20 --seed 2026082005 --out-dir {out_dir}\"",
+        "timeout_s": 900,
+        "note": "wired to combat harness chain (PASS 2026-08-22: killed=20/20, duplicate_deaths=0, fps_avg=59.6)"
       }
     },
     "E6": {

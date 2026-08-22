@@ -94,7 +94,8 @@ func switch_levels(stage_id, reset = false, zone_level_override = null):
 								Globals.stage_iir = ZoneScaling.get_iir_scaler(Globals.zone_level)
 								print("Removing player")
 								
-								if $Level.is_a_parent_of(player):
+								# Godot 4：Node.is_a_parent_of 已更名 is_ancestor_of
+								if $Level.is_ancestor_of(player):
 												$Level.remove_child(player)
 
 								print("Clearing Ground")

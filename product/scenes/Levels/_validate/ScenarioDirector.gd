@@ -230,11 +230,11 @@ func _spawn_from_plan() -> void:
 			if offset.length() > ENGAGEMENT_RADIUS or not _has_los(player_pos, pos):
 				# 收敛到玩家近战圈并做确定性 LOS 扫描（12 个方位角），
 				# 保证 Mob AI 的可见性判定成立、玩家技能可锁定目标。
-				var dist := clamp(offset.length(), 24.0, ENGAGEMENT_RADIUS)
+				var dist: float = clamp(offset.length(), 24.0, ENGAGEMENT_RADIUS)
 				var base_angle := offset.angle()
 				var placed := false
 				for attempt in range(12):
-					var candidate := player_pos \
+					var candidate: Vector2 = player_pos \
 							+ Vector2.RIGHT.rotated(base_angle + attempt * TAU / 12.0) * dist
 					if _has_los(player_pos, candidate):
 						pos = candidate
@@ -249,7 +249,9 @@ func _spawn_from_plan() -> void:
 			var stats: Node = inst.get("stats")
 			if stats != null:
 				stats.connect("died", Callable(self, "_on_harness_died").bind(inst.get_instance_id()))
-				stats.connect("damage_taken", Callable(self, "_on_harness_damage"))
+				# 注意：product 的 Stats 只在 is_player 时才 emit damage_taken；
+				# 野怪掉血经由每帧轮询块 emit health_changed（血条同款通路）。
+				stats.connect("health_changed", Callable(self, "_on_harness_damage"))
 			_spawned += 1
 
 
@@ -430,6 +432,7 @@ func _finish(exit_reason: String) -> void:
 			"dashes": _dashes,
 			"checkpoint_count": _checkpoints.size(),
 		},
+		"world": _collect_world_evidence(),
 		"status": "complete",
 		"exit_reason": exit_reason,
 		"checkpoints": _checkpoints,
@@ -465,6 +468,24 @@ func _finish(exit_reason: String) -> void:
 			+ " moves=" + str(_player_moves) + " dashes=" + str(_dashes)
 			+ " reason=" + exit_reason)
 	get_tree().quit(0)
+
+
+func _collect_world_evidence() -> Dictionary:
+	# E2 world-entry evidence: player mounted, tiles painted, navmesh built.
+	var evidence := {
+		"player_in_tree": _is_valid_node(_player) and _player.is_inside_tree(),
+		"tile_used_cells": 0,
+		"navmesh_points": 0,
+	}
+	var tilemap: Node = _level.get_node_or_null("TileMap") if _is_valid_node(_level) else null
+	if tilemap != null:
+		evidence["tile_used_cells"] = tilemap.get_used_cells(0).size()
+	var nav = Globals.get("navmesh")
+	if nav != null and is_instance_valid(nav):
+		var astar = nav.get("navmesh")
+		if astar != null and is_instance_valid(astar):
+			evidence["navmesh_points"] = astar.get_point_count()
+	return evidence
 
 
 func _write_telemetry(telemetry: Dictionary) -> void:

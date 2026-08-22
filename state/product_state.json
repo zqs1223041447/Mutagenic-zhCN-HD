@@ -10,12 +10,12 @@
     "remote_url": "https://github.com/zqs1223041447/Mutagenic-zhCN-HD.git",
     "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
-  "current_phase": "P3_PLAYABLE_BASELINE",
-  "current_gate": "P3-PHASE-2（收口：世界链路升级 + E8 位置持久化 + E9/E10）",
+  "current_phase": "P4_VISUAL_DENSITY_COMBAT_FEEL",
+  "current_gate": "P4-BATCH-1（待规划；P3 已于 2026-08-22 收口）",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
-    "product_runtime_ready": false,
+    "product_runtime_ready": true,
     "godot_4_7_1_on_path": false,
     "godot_4_7_1_discovery_this_session": "SUCCESS",
     "discovery_overall": "SUCCESS",
@@ -731,6 +731,39 @@
         "migration/conversion/p3_e_ui.json",
         "migration/conversion/p3_asset_restore.json"
       ]
+    },
+    "P3-PHASE-2": {
+      "goal": "P3 收口（E9/E10）：域外残留清零 + 位置持久化 + 全链统一报告",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "e2e_full_report": "PASS（pass=8 fail=0 not_run=0 skip=0）",
+        "boot_status": "BOOTED",
+        "boot_script_errors": 0,
+        "E1_character_entry": "PASS",
+        "E2_world_entry": "PASS",
+        "E3_movement_dash": "PASS",
+        "E4_skill_combat_event": "PASS",
+        "E5_mob_kill": "PASS（cluster_kill_20 20/20）",
+        "E6_loot_pickup": "PASS",
+        "E7_ui_open_close": "PASS",
+        "E8_save_load": "PASS（含 position 持久化，GameState.capture_player_position）",
+        "E9_evidence_promoted": true,
+        "E10_runtime_ready": "true（剩余 BLOCKED 仅美术源缺失类）",
+        "domain_leftovers_fixed": [
+          "ItemTabContent/MapMods sort_custom→Callable",
+          "Minimap Image.lock G4 等价",
+          "Projectile 家族 super()._ready() 与 G4 弹道修复",
+          "FloatingDamage G3 Tween→create_tween"
+        ]
+      },
+      "note": "P3 Playable Baseline 收口：进入角色→世界→移动Dash→技能→击杀→拾取→UI→存读档全链自动化可验证。ScenarioDirector G4 版严格门控挂载 TestLevel；combat_harness 三场景 rc=0。",
+      "evidence": [
+        "migration/conversion/p3_e2e_full_report.json",
+        "migration/conversion/p3_bc_world_entry.json",
+        "migration/conversion/p3_burst_boot_final.json",
+        "tests/p3_harness/config.json"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -768,7 +801,7 @@
       "depends_on": [
         "P3-PHASE-1"
       ],
-      "status": "READY",
+      "status": "DONE",
       "parallelizable": true
     },
     {
@@ -777,14 +810,14 @@
       "depends_on": [
         "P3-PHASE-1"
       ],
-      "status": "READY",
+      "status": "DONE",
       "parallelizable": true
     },
     {
       "id": "P3-H3",
       "goal": "运行时错误收敛：Projectile 家族 _ready 缺 super() 调用（~20 文件）+ FloatingDamage.gd interpolate_property G3 Tween→G4 create_tween",
       "depends_on": [],
-      "status": "READY",
+      "status": "DONE",
       "parallelizable": true
     },
     {
@@ -795,8 +828,22 @@
         "P3-H2",
         "P3-H3"
       ],
+      "status": "DONE",
+      "parallelizable": false
+    },
+    {
+      "id": "P4-BATCH-1-PLAN",
+      "goal": "P4 Visual/Density/Combat Feel 批次规划（在现有资产边界内：可读性、节奏、打击感；主观视觉裁决留人类）",
+      "depends_on": [],
       "status": "READY",
       "parallelizable": false
+    },
+    {
+      "id": "BACKLOG-ORB-PORTAL-PICKUP",
+      "goal": "OrbPickup/PortalPickup 恢复移植（Mob.gd 精英/orb 掉落与 boss portal 分支补全，同 Pickups 家族既有模式）",
+      "depends_on": [],
+      "status": "READY",
+      "parallelizable": true
     }
   ],
   "decisions": [

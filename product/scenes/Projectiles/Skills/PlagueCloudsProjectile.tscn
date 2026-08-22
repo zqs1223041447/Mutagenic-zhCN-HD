@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scenes/Projectiles/Skills/PlagueCloudsProjectile.gd" id="3"]
 
 [sub_resource type="Gradient" id=4]
-colors = PoolColorArray( 1, 1, 1, 0.411765, 1, 1, 1, 0.0470588 )
+colors = PackedColorArray( 1, 1, 1, 0.411765, 1, 1, 1, 0.0470588 )
 
 [sub_resource type="GradientTexture" id=5]
 gradient = SubResource("4")
