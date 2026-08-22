@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "harness_id": "P3-E2E",
+  "description": "P3 playable-baseline end-to-end automation constants and per-step runner hooks (E1-E8). Every runner ships implemented=false; flip to true only when the backing probe/script is wired for that attempt.",
+  "default_report_path": "runtime/p3_harness_report.json",
+  "evidence_dir": "runtime/p3_harness/evidence",
+  "product_dir": "product",
+  "scene_paths": {
+    "load_game": "res://scenes/LoadGame.tscn",
+    "menu": "res://scenes/Menu.tscn",
+    "test_level": "res://scenes/Levels/TestLevel/TestLevel.tscn"
+  },
+  "tools": {
+    "boot_probe": "scripts/bootstrap/product_boot_probe.py",
+    "smoke_probe": "scripts/bootstrap/product_smoke_probe.py",
+    "combat_harness": "scripts/validate/combat_harness.py",
+    "s3_persistence_gate": "scripts/validate/s3_persistence_gate.py"
+  },
+  "steps": {
+    "E1": {
+      "title": "LoadGame reaches character selectable/selected",
+      "exit_criteria": "E1: launching the product reaches the character-select state (character selectable or already selected) without blocking errors.",
+      "runner": {
+        "implemented": false,
+        "strategy": "boot probe hop over the LoadGame scene, then assert the character-select marker in the captured output/evidence",
+        "command_template": "\"{python}\" \"{boot_probe}\" --root \"{repo_root}\" --out \"{step_evidence}\"",
+        "timeout_s": 300,
+        "note": "hook reserved: flip implemented=true once the attempt wires the character-select marker assertion on top of the boot probe report"
+      }
+    },
+    "E2": {
+      "title": "Enter TestLevel without blocking errors",
+      "exit_criteria": "E2: TestLevel loads with zero fatal signatures (crash / failed scene load / SCRIPT ERROR beyond known-benign asset noise).",
+      "runner": {
+        "implemented": false,
+        "strategy": "smoke probe hop chain restricted to TestLevel; require reached=true and no fatal signature",
+        "command_template": "\"{python}\" \"{smoke_probe}\" --root \"{repo_root}\" --scenes \"{test_level_scene}\" --out \"{step_evidence}\"",
+        "timeout_s": 300,
+        "note": "hook reserved: flip implemented=true when the attempt maps smoke-hop results onto this step's verdict"
+      }
+    },
+    "E3": {
+      "title": "Movement + Dash position assertion",
+      "exit_criteria": "E3: player displacement after move/dash inputs matches the declared delta within tolerance.",
+      "runner": {
+        "implemented": false,
+        "strategy": "combat harness movement_dash_smoke scenario; candidate/launch wiring supplied by the attempt",
+        "command_template": "\"{python}\" \"{combat_harness}\" run --scenario movement_dash_smoke --out-dir \"{out_dir}\"",
+        "timeout_s": 900,
+        "note": "hook reserved: attempt must append --candidate/--launch (and --telemetry) before flipping implemented=true"
+      }
+    },
+    "E4": {
+      "title": "Active skill release produces combat events",
+      "exit_criteria": "E4: releasing an active skill yields direct_hit/damage events on the combat event spine.",
+      "runner": {
+        "implemented": false,
+        "strategy": "combat harness single_melee_hit scenario as the minimal combat-event producer; candidate/launch wiring supplied by the attempt",
+        "command_template": "\"{python}\" \"{combat_harness}\" run --scenario single_melee_hit --out-dir \"{out_dir}\"",
+        "timeout_s": 900,
+        "note": "hook reserved: attempt must wire --candidate/--launch and assert spine damage events > 0"
+      }
+    },
+    "E5": {
+      "title": "Kill a mob",
+      "exit_criteria": "E5: at least one spawned mob reaches death with a kill event attributed to the player.",
+      "runner": {
+        "implemented": false,
+        "strategy": "combat harness cluster_kill_20 scenario; killed counter >= 1 (full 20 for the strict variant)",
+        "command_template": "\"{python}\" \"{combat_harness}\" run --scenario cluster_kill_20 --out-dir \"{out_dir}\"",
+        "timeout_s": 1200,
+        "note": "hook reserved: attempt must wire --candidate/--launch and map telemetry.killed onto this step's verdict"
+      }
+    },
+    "E6": {
+      "title": "Pickup drop lands in inventory",
+      "exit_criteria": "E6: a dropped item picked up from the ground appears in the character inventory state.",
+      "runner": {
+        "implemented": false,
+        "strategy": "pending: needs an input-driver probe that walks to a drop, collects it and dumps inventory state (no existing tool covers this yet)",
+        "command_template": null,
+        "timeout_s": 600,
+        "note": "hook reserved: attempt supplies the pickup/inventory probe script and its command template here"
+      }
+    },
+    "E7": {
+      "title": "Skill screen and passive tree screen open without crash",
+      "exit_criteria": "E7: toggling the skill screen and the passive/mutation tree screen in-game produces no fatal signature and both close cleanly.",
+      "runner": {
+        "implemented": false,
+        "strategy": "pending: needs a UI-toggle probe driving the in-game screens (skill panel + passive tree) and scanning for fatal signatures",
+        "command_template": null,
+        "timeout_s": 600,
+        "note": "hook reserved: attempt supplies the UI probe script and its command template here"
+      }
+    },
+    "E8": {
+      "title": "Save -> Load restores key state",
+      "exit_criteria": "E8: after save then reload, semantic key state (character/orbs/loadouts/stash) survives the round trip.",
+      "runner": {
+        "implemented": false,
+        "strategy": "s3 persistence gate (save->exit->reload semantic compare); attempt supplies --candidate/--apdata/--seed-save paths",
+        "command_template": null,
+        "timeout_s": 1800,
+        "note": "hook reserved: attempt fills the s3_persistence_gate invocation (candidate exe, apdata dir, seeded save) into command_template"
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-21T21:45:12+08:00",
+  "updated_at": "2026-08-22T10:05:00+08:00",
   "coordinator": "gork",
   "central_branch": "agent/kinetic-arcane-remaster-foundation",
   "git": {
@@ -10,8 +10,8 @@
     "remote_url": "https://github.com/zqs1223041447/Mutagenic-zhCN-HD.git",
     "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
-  "current_phase": "P2_MINIMAL_AI_AUTONOMOUS_LOOP",
-  "current_gate": "P2-BATCH-2",
+  "current_phase": "P3_PLAYABLE_BASELINE",
+  "current_gate": "P3-PHASE-1（A–E 并行）",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -634,6 +634,46 @@
       "evidence": [
         "git diff 62b3703..HEAD -- product/scenes"
       ]
+    },
+    "P2-BATCH-3": {
+      "goal": "BaseLevel tile pipeline Godot 4 residue + TierLoader Array errors + audio bus index",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "tierloader_array_errors": {
+          "before": 49,
+          "after": 0
+        },
+        "audio_bus_index_errors": {
+          "before": 18,
+          "after": 0
+        },
+        "tooltipbase_super_resolve": {
+          "before": 1,
+          "after": 0
+        },
+        "keybind_input_signature": {
+          "before": 1,
+          "after": 0
+        },
+        "to_utf8_api": {
+          "before": 1,
+          "after": 0
+        },
+        "boot_script_errors_total": {
+          "before": 52,
+          "after": 8
+        },
+        "smoke_regression": "3/3 SMOKE_PASS",
+        "tests": "215 OK",
+        "tile_pipeline_runtime_with_player": "NOT_YET_PROVEN（TestLevel 直启 player==null 跳过 read_tiles，需真实进世界链路复验）"
+      },
+      "note": "Remaining 8 SCRIPT ERROR = preload-missing .tscn asset family (out of scope); ~223 missing_asset art boundary unchanged. default_bus_layout.tres + InGameText.tres recovered as new files.",
+      "evidence": [
+        "migration/conversion/p2_batch3_boot_probe.json",
+        "migration/conversion/p2_batch3_smoke.json",
+        "git diff HEAD~1..HEAD -- product/"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -666,13 +706,44 @@
   },
   "next_ready": [
     {
-      "id": "P2-BATCH-3",
-      "goal": "BaseLevel tile pipeline Godot 4 residue (get_used_cells layer param, set_cell G3 form, update_bitmask_region) + TierLoader Array errors + audio bus index",
+      "id": "P3-A",
+      "goal": "Character Entry & Save surface（E1/E8：LoadGame→角色已选，Save→Load 往返）",
       "depends_on": [
-        "P2-BATCH-2"
+        "P2-BATCH-3"
       ],
       "status": "READY",
-      "note": "Blocking normal world-entry flow. Execution mode: parallel background subagents per AGENT.MD."
+      "parallelizable": true
+    },
+    {
+      "id": "P3-B",
+      "goal": "World Entry + Movement/Dash（E2/E3：带 player 真实进世界，tile pipeline 实机复验，位置断言）",
+      "depends_on": [
+        "P2-BATCH-3"
+      ],
+      "status": "READY",
+      "parallelizable": true,
+      "note": "含 P2-BATCH-3 遗留风险：read_tiles 运行时行为未经带 player 链路验证"
+    },
+    {
+      "id": "P3-C",
+      "goal": "Combat Loop（E4/E5：技能释放→伤害→击杀，扩展 tests/combat_harness）",
+      "depends_on": [],
+      "status": "READY",
+      "parallelizable": true
+    },
+    {
+      "id": "P3-D",
+      "goal": "Loot/Equipment 基础（E6：掉落生成→拾取→库存断言）",
+      "depends_on": [],
+      "status": "READY",
+      "parallelizable": true
+    },
+    {
+      "id": "P3-E",
+      "goal": "Skill UI + Passive Tree UI（E7：界面打开/关闭不崩溃探针）",
+      "depends_on": [],
+      "status": "READY",
+      "parallelizable": true
     }
   ],
   "decisions": [

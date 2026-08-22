@@ -9,7 +9,7 @@ func _load_json_data(skill):
 				if FileAccess.file_exists(datafile):
 								var data = f.get_as_text()
 								var json = JSON.parse_string(data)
-								if json.error == OK and typeof(json) == TYPE_ARRAY:
+								if json != null and typeof(json) == TYPE_ARRAY:
 												print("Loaded data for ", skill)
 												tiers = json
 								else:

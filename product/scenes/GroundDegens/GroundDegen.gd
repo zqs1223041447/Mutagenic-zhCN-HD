@@ -17,10 +17,10 @@ var enabled = true
 
 func _ready() -> void :
 				if not is_beam:
-								$ColorRect.rect_position = Vector2( - radius, - radius)
-								$ColorRect.rect_size = Vector2(2 * radius, 2 * radius)
-								$ColorRect2.rect_position = Vector2( - radius, - radius)
-								$ColorRect2.rect_size = Vector2(2 * radius, 2 * radius)
+								$ColorRect.position = Vector2( - radius, - radius)
+								$ColorRect.size = Vector2(2 * radius, 2 * radius)
+								$ColorRect2.position = Vector2( - radius, - radius)
+								$ColorRect2.size = Vector2(2 * radius, 2 * radius)
 								$CollisionShape2D.shape.radius = radius
 								$GPUParticles2D.process_material.emission_sphere_radius = radius
 								$GPUParticles2D.amount *= 0.5 * sqrt(PI * radius * radius)

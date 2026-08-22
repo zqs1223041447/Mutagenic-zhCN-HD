@@ -24,7 +24,7 @@ func _update():
 func _on_Button_pressed() -> void :
 				is_setting = true
 
-func _unhandled_key_input(event: InputEventKey) -> void :
+func _unhandled_key_input(event: InputEvent) -> void :
 				if not is_setting:
 								return
 				if event is InputEventKey:

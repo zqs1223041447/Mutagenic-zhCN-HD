@@ -49,7 +49,7 @@ func build_navmesh(tiles, cell_size):
 				var queue = [tiles[0]]
 				print("Building navmesh started...")
 				
-				while not queue.empty():
+				while not queue.is_empty():
 								var tile = queue.pop_front()
 								mark_seen(tile)
 								var point_id = get_point(tile)

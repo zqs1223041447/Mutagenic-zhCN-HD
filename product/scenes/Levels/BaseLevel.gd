@@ -284,8 +284,9 @@ func get_spawnable_away_from_origin():
 				return filtered
 
 func get_spawnable_tiles_near_position(pos, max_dist = INF):
-				var x_step = tiles.cell_size.x
-				var y_step = tiles.cell_size.y
+				var tile_size := Vector2(tiles.tile_set.tile_size)
+				var x_step = tile_size.x
+				var y_step = tile_size.y
 
 				var current_x = round(pos.x / x_step)
 				var current_y = round(pos.y / y_step)
@@ -295,7 +296,7 @@ func get_spawnable_tiles_near_position(pos, max_dist = INF):
 
 				seen[str(current_x) + "-" + str(current_y)] = true
 
-				while not queue.empty():
+				while not queue.is_empty():
 								var next = queue.pop_front()
 								var current_tile = next[0]
 								var current_distance = next[1]
@@ -321,13 +322,14 @@ func get_spawnable_tiles_near_position(pos, max_dist = INF):
 				return tile_options
 
 func get_random_spawn_location_in_tile(tile_x, tile_y):
-				var x_step = tiles.cell_size.x
-				var y_step = tiles.cell_size.y
+				var tile_size := Vector2(tiles.tile_set.tile_size)
+				var x_step = tile_size.x
+				var y_step = tile_size.y
 
 				return [tile_x * x_step + randf() * x_step, tile_y * y_step + randf() * y_step]
 
 func initialize_navmesh():
-				navmesh.build_navmesh(get_all_spawnable_tiles(), Vector2(tiles.cell_size.x, tiles.cell_size.y))
+				navmesh.build_navmesh(get_all_spawnable_tiles(), Vector2(tiles.tile_set.tile_size))
 				Globals.navmesh = navmesh
 
 func process_tiles():
@@ -337,10 +339,13 @@ func process_tiles():
 
 				emit_signal("status_changed", "Computing Spawns...")
 				var final_tiles = get_all_potential_tiles()
-				var tile_to_set = tiles.tile_set.get_tiles_ids()[0]
+				# Godot 4 迁移：G3 的三参 set_cell 与区域 bitmask 重算（2x2 autotile）
+				# 由 G4 地形系统等价替代。GenericTileset.tres 已转换为 corners 匹配模式的 G4 TileSet，
+				# set_cells_terrain_connect 会按对角邻接自动挑选正确的图块变体。
+				var cells: Array[Vector2i] = []
 				for tile in final_tiles:
-								tiles.set_cell(tile[0], tile[1], tile_to_set)
-				tiles.update_bitmask_region()
+								cells.append(Vector2i(tile[0], tile[1]))
+				tiles.set_cells_terrain_connect(cells, 0, 0)
 
 				
 				for tile in final_tiles:
@@ -352,7 +357,8 @@ func process_tiles():
 				emit_signal("status_changed", "Spawning Genes...")
 
 func read_tiles():
-				var tiles_existing = tiles.get_used_cells()
+				# Godot 4：TileMap.get_used_cells 需要 layer 参数（默认层 0）
+				var tiles_existing = tiles.get_used_cells(0)
 				for tile in tiles_existing:
 								set_potential_tile(tile.x, tile.y, true)
 				process_tiles()
@@ -362,7 +368,11 @@ func _ready():
 				PopupManager.reset()
 				Globals.reset()
 
-				$TileMap.tile_set.tile_set_texture(0, Levels.get("config")[Globals.selected_level].tileset)
+				# Godot 4：G3 按瓦片 id 设置纹理的接口已删除，改为直接设置图集源的 texture
+				#（GenericTileset.tres 带 resource_local_to_scene，运行时替换不会跨场景泄漏）。
+				var level_tile_set: TileSet = $TileMap.tile_set
+				var atlas_source := level_tile_set.get_source(level_tile_set.get_source_id(0)) as TileSetAtlasSource
+				atlas_source.texture = Levels.get("config")[Globals.selected_level].tileset
 
 				if GameState.saved_stats.settings.enable_music:
 								$AudioStreamPlayer.playing = true
@@ -400,7 +410,7 @@ func create_spawn_locations():
 								var location = randi() % len(tile_options)
 								var tile = tile_options[location]
 								create_spawn_location(tile)
-								tile_options.remove(location)
+								tile_options.remove_at(location)
 								if i % 4 == 0:
 												await FrameTimer.idle_frame(self).timeout
 				print("Done")

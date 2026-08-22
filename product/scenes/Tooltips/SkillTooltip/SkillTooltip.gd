@@ -120,7 +120,7 @@ func update_info():
 																				content.add_text(StatsInfo.render_passive_stat_line(stat, {"amount": stat_inst.amount, "scaling_type": stat_inst.type}))
 								else:
 												var statlist = stats.keys()
-												statlist.sort_custom(StatsInfo, "skill_sorter")
+												statlist.sort_custom(Callable(StatsInfo, "skill_sorter"))
 												for stat in statlist:
 																var effective_stat = item.get_effective_stat(stat)
 																var stat_name = StatsInfo.stat_name[stat]
@@ -135,7 +135,7 @@ func update_info():
 																				var sorted_items = []
 																				for s in effective_stat:
 																								sorted_items.append([s, effective_stat[s]])
-																				sorted_items.sort_custom(self, "damage_sorter")
+																				sorted_items.sort_custom(Callable(self, "damage_sorter"))
 																				for pair in sorted_items:
 																								var pair_item = pair[0]
 																								content.push_color(Colors.color_for_skill_tag[pair_item])

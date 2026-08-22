@@ -214,7 +214,7 @@ func do_save_game():
 				saved_stats.stamp = compute_stamp(saved_stats)
 				var serialized = JSON.stringify(saved_stats, "", true)
 				var save_file = get_save_name()
-				var data_to_write = serialized.to_utf8()
+				var data_to_write = serialized.to_utf8_buffer()
 				if Constants.USE_STEAM:
 								Steam.fileWriteAsync(save_file, data_to_write, len(data_to_write))
 				else:
