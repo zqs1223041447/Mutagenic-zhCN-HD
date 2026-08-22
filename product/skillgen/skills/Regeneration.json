@@ -1,0 +1,652 @@
+[
+    {
+        "skill": {
+            "radius": 60
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 5.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 5.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 6.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 62
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 6.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 7.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 8.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 64
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 8.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 9.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 10.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 66
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 11.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 12.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 13.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 68
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 14.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 15.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 16.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 70
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 18.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 71
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 19.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 21.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 22.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 73
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 24.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 74
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 27.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 29.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 31.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 76
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 34.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 77
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 37.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 78
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 40.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 79
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 44.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 48.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 52.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 81
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 56.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 82
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 61.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 83
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 67.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 84
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 72.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 85
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 79.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 86.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 93.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 87
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 101.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 88
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 110.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 89
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 120.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 90
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 130.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 91
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 141.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 92
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 154.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 93
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 167.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 94
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 182.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 95
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 198.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 96
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 215.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 97
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 233.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 98
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 254.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 99
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 276.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 100
+        },
+        "aura": {
+            "health_regen": [
+                {
+                    "amount": 300.0,
+                    "type": "flat"
+                }
+            ]
+        }
+    }
+]

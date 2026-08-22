@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://sprites/drops/frenzy_pickup.png" id="1"]
+[ext_resource type="Script" path="res://scenes/StatusEffects/Pickups/Frenzy.gd" id="2"]
+
+[node name="Frenzy" type="Node"]
+script = ExtResource("2")
+description = "Frenzy"
+on_apply_tip = "Speed Buff"
+is_powerup = true
+texture = ExtResource("1")
+lifetime = 25.0

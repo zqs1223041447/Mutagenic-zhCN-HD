@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "description": "batchctl check-all 组件注册表：repo-relative 路径，新契约落盘即自动接入。B3-X1 已闭合 B2 全部机器语义契约（event spine / kill feel / camera / combat audio / combat audio policy selftest / S5 evidence selfcheck），全部为 required：任一入口缺失或失败即 FAIL",
+  "components": [
+    {
+      "id": "batchctl_unit_tests",
+      "kind": "unittest",
+      "relpath": "scripts/ai/tests",
+      "top_level": "scripts/ai/tests",
+      "timeout_s": 600,
+      "required": true,
+      "description": "batchctl 生命周期与控制平面单测 + P1-WAVE-A conversion/inventory/preservation/toolchain 单测"
+    },
+    {
+      "id": "abs_path_scan",
+      "kind": "python",
+      "relpath": "scripts/ai/abs_path_scan.py",
+      "args": ["--json"],
+      "timeout_s": 300,
+      "required": true,
+      "description": "repo-wide 宿主绝对路径扫描（AGENTS.md 9.4，production_hardcode 即 FAIL）"
+    },
+    {
+      "id": "secret_scan",
+      "kind": "python",
+      "relpath": "scripts/ai/secret_scan.py",
+      "args": ["--json"],
+      "timeout_s": 300,
+      "required": true,
+      "description": "repo-wide 脱敏 secret 扫描（key 文件只报 presence+SHA，永不输出内容）"
+    },
+    {
+      "id": "combat_harness_selftests",
+      "kind": "python",
+      "relpath": "scripts/validate/combat_harness_selftests.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B1-X5 combat harness 结构/确定性/遥测契约/退出码自测 16/16（无需游戏运行）"
+    },
+    {
+      "id": "semantic_combat_pipeline_contract",
+      "kind": "python",
+      "relpath": "scripts/validate/semantic_combat_pipeline_contract.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B1-X3 战斗管线语义契约 78/78（SHA canary/锚点/作用域守卫/feat-tce-context 不变量）"
+    },
+    {
+      "id": "event_spine_contract",
+      "kind": "python",
+      "relpath": "scripts/validate/semantic_event_spine_contract.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B2-X1 combat event spine 语义契约 44/44（B3-X1 起 required：入口缺失即 FAIL）"
+    },
+    {
+      "id": "semantic_kill_feel_contract",
+      "kind": "python",
+      "relpath": "scripts/validate/semantic_kill_feel_contract.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B2-X4 kill feel 语义契约 80/80（tier 分层 normal/dot/elite/boss + cluster budget + X1 kill 事件只读消费 + 无伤害数学）"
+    },
+    {
+      "id": "semantic_camera_impulse_contract",
+      "kind": "python",
+      "relpath": "scripts/validate/semantic_camera_impulse_contract.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B2-X5 camera impulse 语义契约 93/93（emit 策略 kill/elite_kill/heavy + aggregator mirror 模拟 + 无伤害逻辑改动）"
+    },
+    {
+      "id": "semantic_combat_audio_contract",
+      "kind": "python",
+      "relpath": "scripts/validate/semantic_combat_audio_contract.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B2-X6 combat audio layers 语义契约 120/120（依赖链全链模拟 + 单 play_sound_effect 漏斗 + k4 budget 保留 + drain 时序）"
+    },
+    {
+      "id": "combat_audio_selftest",
+      "kind": "python",
+      "relpath": "tests/combat_audio/test_combat_audio_layers.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B2-X6 combat audio 策略模型自测 14/14（纯 python 转录 + 从 applied Globals.gd 解析常量驱动，无游戏执行）"
+    },
+    {
+      "id": "s5_evidence_selfcheck",
+      "kind": "python",
+      "relpath": "scripts/validate/s5_evidence.py",
+      "args": ["selfcheck"],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B2-X2 combat S5 evidence 驱动自检 23/23（aspects/plan determinism/NOT_RUN 语义/human gate 卫生/abs-path+secret 扫描）"
+    },
+    {
+      "id": "validation_promotion_parity",
+      "kind": "python",
+      "relpath": "scripts/validate/semantic_validation_promotion_parity.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B3-P2-X1 Validation/Promotion 候选分隔 parity 契约 32/32（真实 resolve 三根对比：Validation 14 mods/51 patches、Promotion 11 mods/49 patches、差集恰为 k5 harness+bridge+diagnostic；promotion 零禁用面；pristine ENABLE_TEST_ZONE 影响面 false/2 sites；机器报告 B3-P2-X1_PARITY_REPORT.json）"
+    },
+    {
+      "id": "product_toolchain_discovery",
+      "kind": "python",
+      "relpath": "scripts/bootstrap/product_toolchain.py",
+      "args": ["--sanitize"],
+      "timeout_s": 60,
+      "required": true,
+      "description": "P1-X2 Godot 4.7.1 discovery: SUCCESS/NOT_FOUND/MISSING_PRIVATE/TOOL_FAILED — honest NOT_FOUND is exit 0, never PASS"
+    },
+    {
+      "id": "s3_persistence_selfcheck",
+      "kind": "python",
+      "relpath": "scripts/validate/s3_persistence_selftests.py",
+      "args": [],
+      "timeout_s": 300,
+      "required": true,
+      "description": "B3-P2-X2 S3 persistence gate 离线自检 17/17（语义指纹/volatile 豁免 timestamp·checksum·stamp/同态判定/planted marker/非法输入/PASS·FAIL·BLOCKED 分类/可移植性+secret 卫生；不含游戏运行——真实 save→exit→reload 由 s3_persistence_gate.py 对候选 EXE 显式执行）"
+    }
+  ]
+}

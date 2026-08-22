@@ -1,0 +1,40 @@
+{
+  "experiment_id": "B2-X0-AGGREGATE-EVIDENCE",
+  "recorded_at": "2026-08-20",
+  "branch": "agent/b2-x0",
+  "base_sha": "2a40ec4d844a76f53c525a54e602b85f85f432b9",
+  "aggregate_mod": "mods/b2-x0-aggregate/mod.json (RESOLVED_MOD_CHAIN v0.2.0)",
+  "resolution_order": [
+    "feat-tce", "feat-tce-context", "k1-player-response", "k2-hit-reaction",
+    "k4-audio-foundation", "k5-combat-harness", "p7-fix-persistence",
+    "b2-x0-combat-harness-bridge", "b2-x0-aggregate"
+  ],
+  "build": {
+    "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+    "evidence_dir": "<repo_root>/10_logs/b2-x0-aggregate-20260820/",
+    "apply_patches": 32,
+    "compile_bytecode": "3.5.3.stable",
+    "pack_entries": 3744,
+    "fresh_embed": "from 00_original Mutagenic.exe",
+    "candidate": "candidate/Mutagenic.exe (103,331,396 bytes)"
+  },
+  "S0_structure": "PASS",
+  "S0_detail": {
+    "roundtrip": "11/11 PASS (GDRE 恢复比对一致)",
+    "delta_report": "PASS (pack path/content delta == manifest 展开，unexpected_changed_paths 空)",
+    "normalize": "PASS (3744 entries；仅修正已知 GDRE zero-byte MD5 缺陷 PassiveTree.gd，rejected_mismatches 空)",
+    "verify_exe_structure": "PASS (entry_count=3744 valid_entries=3744 bad_entries 空，pck_section/expected_ds 精确)"
+  },
+  "S1_boot": "PASS",
+  "S1_detail": "isolated APPDATA + seed save：window_found=true, save_loaded=true, enter_menu_sent=true, enter_character_sent=true, f10_sent=true；godot logs fatal_lines 空",
+  "S2_core_smoke": "BLOCKED (harness telemetry 未取到)",
+  "S2_detail": {
+    "launcher_steps": "window/save/menu/character/f10 全部成功；telemetry_found=false",
+    "scenario": "movement_dash_smoke seed=2026082001 → NOT_PROVEN (launcher status=FAIL)",
+    "reason": "游戏成功启动并执行键盘序列，但 k5 harness 未产出 telemetry 文件（TestLevel 路由或 harness 触发未达预期）",
+    "recovery": "需 VM/人工介入核查 goto_test_level 路由与 harness request 消费；或由后续批次在真实运行环境重试"
+  },
+  "selfcheck": "combat_harness_selftests 16/16 PASS",
+  "proves": "B1 全部 gameplay/foundation MOD 在同一 aggregate candidate 中 resolve/apply/compile/pack/embed 无冲突，S0 结构与 S1 boot 通过",
+  "not_proven": "S2 真实运行态 telemetry、FPS/voice/camera 计数、场景内击杀/死亡语义、S4/S5"
+}

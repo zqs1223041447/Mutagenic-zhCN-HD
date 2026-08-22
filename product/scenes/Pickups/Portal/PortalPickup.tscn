@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Pickups/Pickup.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/Pickups/Portal/PortalPickup.gd" id="2"]
+[ext_resource type="Texture2D" path="res://sprites/effects/shadow.png" id="3"]
+[ext_resource type="Texture2D" path="res://sprites/effects/glow.png" id="4"]
+
+[sub_resource type="Curve" id="1"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="2"]
+curve = SubResource("1")
+
+[sub_resource type="ParticlesMaterial" id="3"]
+flag_disable_z = true
+direction = Vector3(0, 1, 0)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 20.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_min = 2.0
+scale_max = 3.0
+scale_curve = SubResource("2")
+color = Color(0.603922, 0.611765, 0.117647, 1)
+
+[node name="PortalPickup" instance=ExtResource("1")]
+script = ExtResource("2")
+persistent = true
+
+[node name="Swirl" type="GPUParticles2D" parent="."]
+z_index = -1
+amount = 32
+lifetime = 1.0
+process_material = SubResource("3")
+
+[node name="Glow" type="Sprite2D" parent="."]
+modulate = Color(0.603922, 0.611765, 0.117647, 0.501961)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+texture = ExtResource("3")
+
+[node name="Node2D" parent="." ]
+position = Vector2(0, -17)
+
+[node name="InfoContainer" parent="Node2D/VBoxContainer"]
+offset_right = 466.0
+offset_bottom = 82.0
+
+[node name="Button" parent="Node2D/VBoxContainer/HBoxContainer/HBoxContainer"]
+offset_right = 142.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(0.502783, 0.749529, 0.916992, 1)
+text = "Portal to Hideout"

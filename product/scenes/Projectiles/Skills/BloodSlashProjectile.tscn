@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scenes/Projectiles/Skills/BloodSlashProjectile.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="2"]
+[ext_resource type="SpriteFrames" path="res://sprites/effects/blood_slash.png" id="3"]
+
+[sub_resource type="CircleShape2D" id=1]
+resource_local_to_scene = true
+radius = 16.0
+
+[node name="BloodSlashProjectile" instance=ExtResource("2")]
+visible = false
+z_index = -2
+script = ExtResource("1")
+has_limited_hits = false
+ignore_terrain = true
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("1")
+disabled = true
+
+[node name="Sprite" parent="." index="1"]
+frames = ExtResource("3")
+playing = true

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="1"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/skills/glob.spriteframes.tres" id="2"]
+[ext_resource type="Script" path="res://scenes/Projectiles/MobSkills/Glob/Glob.gd" id="3"]
+
+[node name="Glob" instance=ExtResource("1")]
+script = ExtResource("3")
+
+[node name="Sprite" parent="." index="1"]
+frames = ExtResource("2")
+
+[node name="Glow" parent="." index="2"]
+visible = true

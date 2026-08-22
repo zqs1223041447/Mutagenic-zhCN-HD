@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/StatusEffects/Generic/Exposed.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/buff_icons/exposed.png" id="2"]
+
+[node name="Exposed" type="Node"]
+script = ExtResource("1")
+description = "Exposure"
+texture = ExtResource("2")
+only_apply_strongest = true
+base_lifetime = 4.0
+unique_group = "Exposed"

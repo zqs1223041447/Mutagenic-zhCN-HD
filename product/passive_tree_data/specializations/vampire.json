@@ -1,0 +1,110 @@
+{
+    "nodes": [
+        {
+            "id": "root",
+            "passive_tag": "root",
+            "position": [
+                0,
+                0
+            ]
+        },
+        {
+            "id": "a2109",
+            "passive_tag": "retaliatory_mark",
+            "position": [
+                160,
+                0
+            ]
+        },
+        {
+            "id": "5ee00",
+            "passive_tag": "leeching_presence",
+            "position": [
+                0,
+                -160
+            ]
+        },
+        {
+            "id": "f058e",
+            "passive_tag": "blood_armor",
+            "position": [
+                0,
+                160
+            ]
+        },
+        {
+            "id": "17039",
+            "passive_tag": "magmatic_blood",
+            "position": [
+                -160,
+                0
+            ]
+        },
+        {
+            "id": "9c353",
+            "passive_tag": "veil_of_night",
+            "position": [
+                -160,
+                -160
+            ]
+        },
+        {
+            "id": "1863d",
+            "passive_tag": "effect_of_the_horde",
+            "position": [
+                -160,
+                160
+            ]
+        },
+        {
+            "id": "ee470",
+            "passive_tag": "caustics",
+            "position": [
+                160,
+                160
+            ]
+        },
+        {
+            "id": "d4ff7",
+            "passive_tag": "blood_price",
+            "position": [
+                160,
+                -160
+            ]
+        }
+    ],
+    "edges": [
+        [
+            "a2109",
+            "root"
+        ],
+        [
+            "5ee00",
+            "root"
+        ],
+        [
+            "f058e",
+            "root"
+        ],
+        [
+            "17039",
+            "root"
+        ],
+        [
+            "9c353",
+            "root"
+        ],
+        [
+            "1863d",
+            "root"
+        ],
+        [
+            "ee470",
+            "root"
+        ],
+        [
+            "d4ff7",
+            "root"
+        ]
+    ]
+}

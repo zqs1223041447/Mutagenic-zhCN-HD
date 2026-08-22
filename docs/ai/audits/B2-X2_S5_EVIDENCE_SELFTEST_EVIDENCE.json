@@ -1,0 +1,135 @@
+{
+  "evidence_id": "B2-X2-s5-evidence-selfcheck",
+  "task_id": "B2-X2",
+  "ran_at": "2026-08-19T18:15:47Z",
+  "repo_head_sha": "2a40ec4d844a76f53c525a54e602b85f85f432b9",
+  "branch": "agent/b2-x2-s5-evidence",
+  "repo_root": "<repo_root>",
+  "driver_sha256": "87fdc4cfb5bd13c74e3afc3762377ccde93f784b68ed59ef489491d37f3ad15a",
+  "python_version": "3.11.15",
+  "tests": [
+    {
+      "id": "aspects_catalog_parses",
+      "passed": true,
+      "detail": "5 aspects, zero contract errors"
+    },
+    {
+      "id": "five_aspect_ids_present",
+      "passed": true,
+      "detail": "all five required S5 aspects present"
+    },
+    {
+      "id": "aspect_bindings_resolve_in_harness_catalog",
+      "passed": true,
+      "detail": "every aspect scenario binding resolves in combat_scenarios.json"
+    },
+    {
+      "id": "capture_plan_determinism_same_seed",
+      "passed": true,
+      "detail": "same seed -> identical capture plan (sha a0ff44fbab19...)"
+    },
+    {
+      "id": "capture_plan_determinism_diff_seed",
+      "passed": true,
+      "detail": "different seed -> different capture plan"
+    },
+    {
+      "id": "camera_start_declared_and_shared",
+      "passed": true,
+      "detail": "camera_start rendered in plan for every binding (same value on both sides by construction)"
+    },
+    {
+      "id": "capture_plan_spawn_reuses_harness_plan",
+      "passed": true,
+      "detail": "capture plan spawn comes from the B1-X5 harness plan (same sha, same total)"
+    },
+    {
+      "id": "pair_dry_run_skeleton_not_run",
+      "passed": true,
+      "detail": "pair dry-run -> exit 3, NOT_RUN skeleton, template + manifest written, no captures claimed"
+    },
+    {
+      "id": "manifest_determinism_same_inputs",
+      "passed": true,
+      "detail": "identical inputs -> identical deterministic core + matching recorded sha"
+    },
+    {
+      "id": "manifest_determinism_diff_seed",
+      "passed": true,
+      "detail": "different seed -> different deterministic core"
+    },
+    {
+      "id": "telemetry_s5_extension_passes_harness_schema",
+      "passed": true,
+      "detail": "telemetry with s5 extension stays compatible with combat_telemetry_schema.json"
+    },
+    {
+      "id": "missing_candidate_usage_exit",
+      "passed": true,
+      "detail": "missing or nonexistent candidate -> stable USAGE exit 4"
+    },
+    {
+      "id": "missing_vm_not_run",
+      "passed": true,
+      "detail": "no VM launcher -> exit 3, machine-readable manifest with vm_not_launched reasons"
+    },
+    {
+      "id": "require_event_spine_missing_not_run",
+      "passed": true,
+      "detail": "--require-event-spine with absent B2-X1 spine -> exit 3 NOT_RUN (documented pre-X1 semantic)"
+    },
+    {
+      "id": "full_evidence_prepared_synthetic_captures",
+      "passed": true,
+      "detail": "full machine-prepared pair with labeled-synthetic captures + bound build id/modset -> EVIDENCE_PREPARED (0)"
+    },
+    {
+      "id": "human_gate_never_auto_accepted",
+      "passed": true,
+      "detail": "no generated manifest/template claims HUMAN_ACCEPTED; machine gate stays EVIDENCE_PREPARED"
+    },
+    {
+      "id": "checklist_template_structure",
+      "passed": true,
+      "detail": "6 unanswered questions; machine gate EVIDENCE_PREPARED; verdict null"
+    },
+    {
+      "id": "checklist_end_to_end_structural",
+      "passed": true,
+      "detail": "filled checklist (fixture) validates; broken checklist fails with exit 2; driver never writes verdict"
+    },
+    {
+      "id": "validate_package_structure",
+      "passed": true,
+      "detail": "validate --package enforces required structure (template present) with exit 0/2"
+    },
+    {
+      "id": "usage_unknown_aspect_scenario",
+      "passed": true,
+      "detail": "unknown aspect / scenario -> stable nonzero usage exit"
+    },
+    {
+      "id": "repo_root_from_any_cwd",
+      "passed": true,
+      "detail": "driver resolves repo root from nested cwd"
+    },
+    {
+      "id": "abs_path_scan_s5_files",
+      "passed": true,
+      "detail": "no drive-letter / UNC absolute paths in X2-owned files"
+    },
+    {
+      "id": "secret_scan_s5_files",
+      "passed": true,
+      "detail": "no secret-like tokens in X2-owned files"
+    }
+  ],
+  "summary": {
+    "total": 23,
+    "passed": 23,
+    "failed": 0
+  },
+  "result": "PASS",
+  "proves": "the S5 evidence flow parses its aspect catalog, resolves every aspect scenario binding against the B1-X5 harness catalog, reuses the harness spawn plan and telemetry schema, is deterministic (plan + manifest core), produces dry-run/NOT_RUN skeletons with stable exit codes (USAGE 4 / NOT_RUN 3 / EVIDENCE_FAIL 2 / EVIDENCE_PREPARED 0), keeps the machine human gate at EVIDENCE_PREPARED (never HUMAN_ACCEPTED), validates human-filled checklist structure without writing verdicts, and carries no host-absolute paths or secrets",
+  "not_proven": "in-game execution, real screenshots/frame sequences/video/audio, real B2-X0 aggregate candidate build ids, real B2-X1 event spine telemetry, human S5 acceptance"
+}

@@ -1,21 +1,21 @@
-# PHASE 0 —— Visual Audit（Mutagenic HD UI Remaster）
+# 3.5.3 视觉只读审计（2026-08-16）
 
-> 记录：2026-08-16。来源：两条只读 explore lane（世界层 / HUD-UI 层），全程零写入。
-> 定位：PHASE 0 权威产物；PHASE 1 实施与后续阶段的事实基线。所有路径相对仓库根。
-> 关联：需求 `docs/requirements/HD_UI_REMASTER.md`；进度 `.slim/deepwork/hd-ui-remaster.md`。
+只读事实，路径相对仓库根。**不是**实施合同，不启动 HD / PHASE 1–6 / 像素资产轨。当前主线是 P1 Godot 4.7.1 迁移。
 
 ---
 
 ## 0. 关键结论（先读）
 
 1. **"优先程序化高清重制"的前提不成立**。世界层 100% 由贴图构成（Sprite/AnimatedSprite/TileMap/Label），无任何 `_draw()`（全仓仅 3 处 `_draw`：Minimap/WorldMap/PassiveTree）。HUD 亦以 16×16/32×32 贴图为主。像素感的源头是**低分辨率像素美术资产（C 类）**，不是渲染参数。
-2. 因此 PHASE 6 的 HD Asset Replacement List 将**显著偏大**（玩家/雕像/工作台/火把/传送门/全部技能图标/装备图标/血球贴图/九宫格按钮贴图/ tileset）。
-3. 但仍有**低成本的渲染级杠杆**（PHASE 1 可用，不改布局）：`use_gpu_pixel_snap=true` 关掉、按钮 pressed/disabled 状态缺失、ProgressBar 全局亮红 fg、TooltipBase 定位 bug、字体描边层级混乱。
-4. `project.binary` 实测值已全部解码（见 §D），多数此前未知：pixel_snap=true、texture filter=false、default_clear_color 中灰、tooltip_delay=0。
+2. 若将来做资产替换，清单会显著偏大（玩家/雕像/工作台/火把/传送门/技能图标/装备图标/血球/九宫格按钮/tileset）。那是 P4+ 的事，不是 P1。
+3. 3.5.3 上曾观察到的渲染杠杆（当时不是布局改动）：`use_gpu_pixel_snap=true` 关掉、按钮 pressed/disabled 状态缺失、ProgressBar 全局亮红 fg、TooltipBase 定位 bug、字体描边层级混乱。迁到 Godot 4 后必须重新验证，不能照搬。
+4. `project.binary` 实测值已全部解码（见 §D）：pixel_snap=true、texture filter=false、default_clear_color 中灰、tooltip_delay=0。
 
 ---
 
 ## A. 世界层审计（Hub / Hideout）
+
+表中「建议 / PHASE 2 / PHASE 6」是 2026-08-16 对 3.5.3 的观察，**不是当前实施任务**。
 
 | # | 元素 | 场景 | 脚本 | 渲染方法 | 质量现状 | 分类 | 建议 |
 |---|---|---|---|---|---|---|---|
@@ -93,9 +93,9 @@
 
 ---
 
-## E. PHASE 1 最终范围（oracle 门禁裁决 2026-08-16：修改后放行）
+## E. 当时拟定的 3.5.3 PHASE 1 范围（历史，不要当当前任务）
 
-> 依据 oracle 评审（记录于 `.slim/deepwork/hd-ui-remaster.md`）。约束不变：布局不动、基础分辨率不动、不伪造高清、deterministic build。
+> 2026-08-16 的 oracle 记录。下面条目是当时对 3.5.3 MOD 的设想，**不要**再按 CODE_PATCH/RESOURCE_PATCH 实施。Godot 4 迁移后这些问题要重新验证。
 
 1. **TooltipBase.gd:17 定位 bug 修复**（CODE_PATCH，最先做）：`centered_position.x += position_offset.y` → `.x`。
 2. **XP 条 StyleBox 精修**（GUI.tscn 内联，RESOURCE_PATCH）：fg/bg 色、圆角 4-6、边框；**保持 rect_min_size 高度 12 不变**（高度 16-20 属布局变更，推后）。

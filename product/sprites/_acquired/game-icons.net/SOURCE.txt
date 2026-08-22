@@ -1,0 +1,7 @@
+pack: game-icons.net
+url: https://game-icons.net/
+archive: https://game-icons.net/archives/png/zip/000000/ffffff/game-icons.net.png.zip
+license: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+downloaded_at: 2026-08-22
+extracted: used subset only (19 of 4133 icons); full archive retained at runtime/p4_art_downloads/game-icons.net.png.zip
+authors_in_subset: carl-olsen, delapouite, lorc, sbed, skoll

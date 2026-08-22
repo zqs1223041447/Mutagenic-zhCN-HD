@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/Projectiles/Skills/ShardMainProjectile.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="2"]
+[ext_resource type="SpriteFrames" path="res://sprites/projectiles/shard_orb_main.png" id="3"]
+
+[node name="ShardMainProjectile" instance=ExtResource("2")]
+z_index = -4
+script = ExtResource("1")
+does_hit = false
+always_collide = true
+pulse_cooldown = 0.1
+
+[node name="Sprite" parent="." index="1"]
+frames = ExtResource("3")
+playing = true

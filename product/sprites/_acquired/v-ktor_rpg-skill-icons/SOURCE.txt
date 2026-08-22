@@ -1,0 +1,7 @@
+pack: v-ktor_rpg-skill-icons
+url: https://v-ktor.itch.io/rpg-skill-icons
+license: CC0 1.0 (public domain)
+author: Viktor (v-ktor)
+downloaded_at: 2026-08-22
+extracted: full pack (skill icon stock; reserved for WIRE batch)
+local_archive: runtime/p4_art_downloads/v-ktor/icons64.zip

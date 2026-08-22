@@ -1,0 +1,703 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/Popups/Dialogs/Help/Help.gd" id="1"]
+[ext_resource type="Theme" path="res://Themes/MainTheme.tres" id="2"]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 16.0
+content_margin_right = 16.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.203922, 0.203922, 0.203922, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+
+[node name="HelpScreen" type="CanvasLayer"]
+script = ExtResource("1")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("2")
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+offset_top = 59.0
+offset_right = 1312.0
+offset_bottom = 740.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 1296.0
+offset_bottom = 665.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer"]
+offset_right = 1280.0
+offset_bottom = 45.0
+
+[node name="BackButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+offset_right = 64.0
+offset_bottom = 45.0
+focus_neighbour_bottom = NodePath("../../TabContainer/Ailments")
+text = "Close"
+
+[node name="TabContainer" type="TabContainer" parent="CenterContainer/PanelContainer/VBoxContainer"]
+offset_top = 49.0
+offset_right = 1280.0
+offset_bottom = 649.0
+custom_minimum_size = Vector2(1280, 600)
+size_flags_vertical = 3
+theme_override_colors/font_color_fg = Color(0.827451, 0.545098, 0.101961, 1)
+theme_override_constants/hseparation = 32
+theme_override_styles/tab_fg = SubResource("1")
+theme_override_styles/tab_bg = SubResource("1")
+
+[node name="Controls" type="ScrollContainer" parent="CenterContainer/PanelContainer/VBoxContainer/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 36.0
+offset_right = -3.0
+offset_bottom = -3.0
+focus_neighbour_top = NodePath("../../HBoxContainer/BackButton")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/PanelContainer/VBoxContainer/TabContainer/Controls"]
+offset_right = 1274.0
+offset_bottom = 561.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[center]Default Controls[/center]
+
+Movement:
+WASD, Mouse Left Click, Gamepad Joystick, D-PAD
+
+Interact:
+Spacebar, Gamepad A, Mouse Left Click
+
+Dash/Dodge:
+Shift, Xbox Layout B
+
+Open Gene Loadout:
+I, Xbox Layout Y
+
+Open Character Sheet:
+Escape, C
+
+Some of these keybinds can be changed in the Settings menu.
+"
+text = "Default Controls
+
+Movement:
+WASD, Mouse Left Click, Gamepad Joystick, D-PAD
+
+Interact:
+Spacebar, Gamepad A, Mouse Left Click
+
+Dash/Dodge:
+Shift, Xbox Layout B
+
+Open Gene Loadout:
+I, Xbox Layout Y
+
+Open Character Sheet:
+Escape, C
+
+Some of these keybinds can be changed in the Settings menu.
+"
+fit_content_height = true
+scroll_active = false
+
+[node name="Challenge Ladders" type="ScrollContainer" parent="CenterContainer/PanelContainer/VBoxContainer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 32.0
+offset_right = -3.0
+offset_bottom = -3.0
+focus_neighbour_top = NodePath("../../HBoxContainer/BackButton")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/PanelContainer/VBoxContainer/TabContainer/Challenge Ladders"]
+offset_right = 1274.0
+offset_bottom = 565.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[center]Challenge Ladders[/center]
+
+There are 4 Challenge Ladder zones, found at zone levels 25, 50, and 100.
+
+Scoring for these ladders is as follows:
+
+score = waves_completed * 10000 - time_elapsed_in_seconds
+
+This means to get a higher score, beat waves faster!
+
+Each wave in a ladder is equal to 20 zone levels in difficulty."
+text = "Challenge Ladders
+
+There are 4 Challenge Ladder zones, found at zone levels 25, 50, and 100.
+
+Scoring for these ladders is as follows:
+
+score = waves_completed * 10000 - time_elapsed_in_seconds
+
+This means to get a higher score, beat waves faster!
+
+Each wave in a ladder is equal to 20 zone levels in difficulty."
+fit_content_height = true
+scroll_active = false
+
+[node name="Mechanics" type="ScrollContainer" parent="CenterContainer/PanelContainer/VBoxContainer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 32.0
+offset_right = -3.0
+offset_bottom = -3.0
+focus_neighbour_top = NodePath("../../HBoxContainer/BackButton")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/PanelContainer/VBoxContainer/TabContainer/Mechanics"]
+offset_right = 1274.0
+offset_bottom = 4966.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[center]Mutation Tree[/center]
+
+As you kill monsters, you'll increase your Mutation Tier, which allows you to allocate Mutation Points in the Mutation Tree. These are permanent upgrades to all characters -- don't worry, you can refund them any time for free, and save loadouts!
+
+
+[center]Equipment[/center]
+
+Equipment Items are powerful upgrades to your characters, providing a various array of damage and survivability upgrades, as well as mechanical changes to skills! Equipment can drop from killing monsters, with a small chance to contain a high tier locked mod.
+
+In later game zones (>100), Items can start dropping with Affix Effectiveness quality which boosts the power of all rollable affixes (non-unique) on the item by a percentage. The maximum Affix Effectiveness for any item is deteremined by the item level. This cannot be rerolled.
+
+Max Affix Effectiveness = max(0, (Item Level - 100))
+
+[color=#d0dd5d]Mods which appear yellow[/color] are implicits and cannot be rerolled.
+
+[color=#2eb62a]Mods which appear green[/color] are already at their maximum Mod Level for the gene it is on.
+
+[color=#942ab6]Mods which appear purple[/color] are Drop Only mods, and can only be found, not crafted.
+
+
+
+[center]Damage Types[/center]
+[color=#b3b3b3]Physical Damage[/color]
+[color=#a3b300]Lightning Damage[/color]
+[color=#006cb3]Cold Damage[/color]
+[color=#b33b00]Fire Damage[/color]
+[color=#7700b3]Toxic Damage[/color]
+
+
+[center]Maximum Level[/center]
+
+The maximum character level is 150.
+
+[center]Enemy Scaling[/center]
+
+Enemy damage stops scaling past zone 125, but their life pool scales indefinitely.
+
+[center]Zone Level Resistance Penalty[/center]
+
+Players and their allies have all resistances reduced by half the zone level, rounded down.
+
+
+[center]Attributes[/center]
+
+Constitution: Grants 1 Maximum Life per Constitution
+Strength: Grants 1% Increased Armor per Strength
+Agility:  Grants 1% Increased Evasion per Agility
+Wisdom: Grants 1% Increased Damage per 5 Wisdom
+Finesse: Grants 1% Increased Cast Speed per 5 Finesse
+
+
+[center] Boons [/center]
+
+There are 3 Boon types: Precision, Swiftness, and Toughness
+
+Precision Boons each grant 30% Increased Critical Strike Chance.
+
+Swiftness Boons each grant 4% More Movement Speed and 4% More Cast Speed.
+
+Toughness Boons each grant 5% Less Damage Taken, up to 90%..
+
+
+[center]Triggered Skills[/center]
+
+Skills can only be supported by a single trigger support, otherwise they become disabled. If a skill is triggered, it has an internal cooldown of 100ms, so cannot trigger more than 10 times per second.
+
+
+[center]Ailment Damage & Critical Strike Interactions[/center]
+
+Ailment damage is calculated on the crit-rolled, but unmitigated damage of a skill. Thus, critical strikes do affect ailment strength.
+
+
+[center]Armor[/center]
+
+Armor applies Less Damage taken from Hits, and it's effectiveness is dependent on your account level.
+As your level increases, you need more Armor to achieve the same defensive value.
+
+The exact formula for the mitigation percentage is as follows:
+
+[color=#d38b1a]damage_taken_multiplier = 1.0 / min(4.0, 2.0 ^ (armor / (level ^ 2)))[/color]
+
+At level 150, the cap is reached at around 225k Armor.
+
+Armor has maximum effectiveness of 75% damage reduction.
+
+[center]Evasion[/center]
+
+Evasion gives a chance to evade hits, and it's effectiveness is dependent on your account level.
+As your level increases, you need more Evasion to achieve the same defensive value.
+
+The exact formula for the evade percentage is as follows:
+
+[color=#d38b1a]evade_chance = 1.0 - 1.0 / min(4.0, 2.0 ^ (armor / (level ^ 2)))[/color]
+
+At level 150, the cap is reached at around 225k Evasion.
+
+Evasion has maximum effectiveness of 75% evade chance.
+
+
+[center]Layering Defenses[/center]
+
+It's usually a good idea to stack multiple layers of damage mitigation. For example, if you have 90% damage reduction from Armor, and 75% Fire Resistance, then incoming Fire Hit Damage will by reduced by Armor and then Fire Resistance.
+
+For example, 100 Fire damage would reduce down as follows:
+After Armor: 100 * 0.1 = 10 Fire Damage
+After Fire Resistance = 10 * 0.25 = 2.5 Fire Damage
+
+So stacking both Armor and Fire Resistance would result in 97.5% less damage taken from Fire hits. Very effective! This continues to work with damage reduction from Toughness Boons, Curses, etc.
+
+
+[center]Increased vs More[/center]
+
+For any given stat, generally speaking, [color=#d38b1a]Increased[/color] and [color=#d38b1a]Reduced[/color] act additively with each other, and [color=#d38b1a]More[/color] and [color=#d38b1a]Less[/color] work multiplicatively with each other.
+
+For any Damaging skill, Increases and Reductions to damage types with matching tags (ie. Physical, Toxic, Hit, etc) are pooled together.
+
+The general formula is as follows for each damage type:
+
+[color=#d38b1a]final_damage = base_damage * max(0, (1.0 + sum(increases) - sum(reduces)) * product(mores) * product(lesses)[/color]
+
+As an example, consider having a Gene with the following stats:
+100% Increased Hit Damage
+100% Increased Physical Damage
+20% More Projectile Damage
+
+If you have a skill with 10 Physical Damage, the final damage of the skill would be computed as follows:
+
+final_damage = 10 * (1.0 + 1.00 + 1.00) * (1.2)
+
+which gives 36 Physical Damage
+
+
+[center]Unique Mods[/center]
+
+Unique modifiers, marked with [color=#d38b1a]orange text[/color], do not stack.
+
+
+[center]Damage Conversion[/center]
+ 
+To prevent cyclic conversions, and infinite loops, Damage types can only be converted in one direction (but can skip converted types). In Mutagenic, this is as follows:
+
+[color=#d38b1a]Physical -> Lightning -> Cold - > Fire -> Toxic.[/color]
+
+This choice was inspired by a popular ARPG.
+
+If a damage type has more than 100% Conversion, it will scale down proportionately to 100%.
+
+eg. If you have 75% Physical Damage Converted to Cold Damage and 75% Physical Damage Converted to Fire Damage, this will get scaled down to 50%/50%.
+
+Converted damage will be affected by all Damage Type modifiers that apply during the conversion process.
+
+As an example, consider having a Gene with the following stats:
+25% Physical Damage Converted to Lightning Damage
+100% Lightning Damage Converted to Toxic Damage
+50% Increased Lightning Damage
+50% Increased Toxic Damage
+
+If you have a skill with 10 Physical Damage, the final damage after conversions would be the following:
+
+Non Converted Damage:
+7.5 Physical Damage
+
+Converted Damage:
+10 Physical Damage * (25% phys->lightning) 2.5 Lightning Damage					 ** Lightning modifiers affect this
+	-> 2.5 Lightning Damage (100% lightning->toxic) -> 2.5 Toxic Damage				** Toxic modifiers affect this
+		-> 2.5 Toxic Damage
+				
+Now that the conversions are done, we get the following:
+7.5 Physical Damage (no modifiers affecting it)
+2.5 Toxic Damage (Physical, Lightning, Toxic all affecting this damage amount)
+	Now, using the damage formula above, we get the following final Toxic Damage:
+	-> 2.5 * (1.0 + 0.50 + 0.50) = 5.0 Toxic Damage
+	
+This results in the final damage of this skill being (7.5 Physical Damage + 5.0 Toxic Damage).
+
+
+
+[center]Damage Over Time[/center]
+
+[color=#d38b1a]Damage Over Time[/color] is a special modifier which acts as a More multiplier to any damage over time, either dealt by Ailments or Skills.
+
+
+
+
+
+
+"
+text = "Mutation Tree
+
+As you kill monsters, you'll increase your Mutation Tier, which allows you to allocate Mutation Points in the Mutation Tree. These are permanent upgrades to all characters -- don't worry, you can refund them any time for free, and save loadouts!
+
+
+Equipment
+
+Equipment Items are powerful upgrades to your characters, providing a various array of damage and survivability upgrades, as well as mechanical changes to skills! Equipment can drop from killing monsters, with a small chance to contain a high tier locked mod.
+
+In later game zones (>100), Items can start dropping with Affix Effectiveness quality which boosts the power of all rollable affixes (non-unique) on the item by a percentage. The maximum Affix Effectiveness for any item is deteremined by the item level. This cannot be rerolled.
+
+Max Affix Effectiveness = max(0, (Item Level - 100))
+
+Mods which appear yellow are implicits and cannot be rerolled.
+
+Mods which appear green are already at their maximum Mod Level for the gene it is on.
+
+Mods which appear purple are Drop Only mods, and can only be found, not crafted.
+
+
+
+Damage Types
+Physical Damage
+Lightning Damage
+Cold Damage
+Fire Damage
+Toxic Damage
+
+
+Maximum Level
+
+The maximum character level is 150.
+
+Enemy Scaling
+
+Enemy damage stops scaling past zone 125, but their life pool scales indefinitely.
+
+Zone Level Resistance Penalty
+
+Players and their allies have all resistances reduced by half the zone level, rounded down.
+
+
+Attributes
+
+Constitution: Grants 1 Maximum Life per Constitution
+Strength: Grants 1% Increased Armor per Strength
+Agility:  Grants 1% Increased Evasion per Agility
+Wisdom: Grants 1% Increased Damage per 5 Wisdom
+Finesse: Grants 1% Increased Cast Speed per 5 Finesse
+
+
+ Boons 
+
+There are 3 Boon types: Precision, Swiftness, and Toughness
+
+Precision Boons each grant 30% Increased Critical Strike Chance.
+
+Swiftness Boons each grant 4% More Movement Speed and 4% More Cast Speed.
+
+Toughness Boons each grant 5% Less Damage Taken, up to 90%..
+
+
+Triggered Skills
+
+Skills can only be supported by a single trigger support, otherwise they become disabled. If a skill is triggered, it has an internal cooldown of 100ms, so cannot trigger more than 10 times per second.
+
+
+Ailment Damage & Critical Strike Interactions
+
+Ailment damage is calculated on the crit-rolled, but unmitigated damage of a skill. Thus, critical strikes do affect ailment strength.
+
+
+Armor
+
+Armor applies Less Damage taken from Hits, and it's effectiveness is dependent on your account level.
+As your level increases, you need more Armor to achieve the same defensive value.
+
+The exact formula for the mitigation percentage is as follows:
+
+damage_taken_multiplier = 1.0 / min(4.0, 2.0 ^ (armor / (level ^ 2)))
+
+At level 150, the cap is reached at around 225k Armor.
+
+Armor has maximum effectiveness of 75% damage reduction.
+
+Evasion
+
+Evasion gives a chance to evade hits, and it's effectiveness is dependent on your account level.
+As your level increases, you need more Evasion to achieve the same defensive value.
+
+The exact formula for the evade percentage is as follows:
+
+evade_chance = 1.0 - 1.0 / min(4.0, 2.0 ^ (armor / (level ^ 2)))
+
+At level 150, the cap is reached at around 225k Evasion.
+
+Evasion has maximum effectiveness of 75% evade chance.
+
+
+Layering Defenses
+
+It's usually a good idea to stack multiple layers of damage mitigation. For example, if you have 90% damage reduction from Armor, and 75% Fire Resistance, then incoming Fire Hit Damage will by reduced by Armor and then Fire Resistance.
+
+For example, 100 Fire damage would reduce down as follows:
+After Armor: 100 * 0.1 = 10 Fire Damage
+After Fire Resistance = 10 * 0.25 = 2.5 Fire Damage
+
+So stacking both Armor and Fire Resistance would result in 97.5% less damage taken from Fire hits. Very effective! This continues to work with damage reduction from Toughness Boons, Curses, etc.
+
+
+Increased vs More
+
+For any given stat, generally speaking, Increased and Reduced act additively with each other, and More and Less work multiplicatively with each other.
+
+For any Damaging skill, Increases and Reductions to damage types with matching tags (ie. Physical, Toxic, Hit, etc) are pooled together.
+
+The general formula is as follows for each damage type:
+
+final_damage = base_damage * max(0, (1.0 + sum(increases) - sum(reduces)) * product(mores) * product(lesses)
+
+As an example, consider having a Gene with the following stats:
+100% Increased Hit Damage
+100% Increased Physical Damage
+20% More Projectile Damage
+
+If you have a skill with 10 Physical Damage, the final damage of the skill would be computed as follows:
+
+final_damage = 10 * (1.0 + 1.00 + 1.00) * (1.2)
+
+which gives 36 Physical Damage
+
+
+Unique Mods
+
+Unique modifiers, marked with orange text, do not stack.
+
+
+Damage Conversion
+ 
+To prevent cyclic conversions, and infinite loops, Damage types can only be converted in one direction (but can skip converted types). In Mutagenic, this is as follows:
+
+Physical -> Lightning -> Cold - > Fire -> Toxic.
+
+This choice was inspired by a popular ARPG.
+
+If a damage type has more than 100% Conversion, it will scale down proportionately to 100%.
+
+eg. If you have 75% Physical Damage Converted to Cold Damage and 75% Physical Damage Converted to Fire Damage, this will get scaled down to 50%/50%.
+
+Converted damage will be affected by all Damage Type modifiers that apply during the conversion process.
+
+As an example, consider having a Gene with the following stats:
+25% Physical Damage Converted to Lightning Damage
+100% Lightning Damage Converted to Toxic Damage
+50% Increased Lightning Damage
+50% Increased Toxic Damage
+
+If you have a skill with 10 Physical Damage, the final damage after conversions would be the following:
+
+Non Converted Damage:
+7.5 Physical Damage
+
+Converted Damage:
+10 Physical Damage * (25% phys->lightning) 2.5 Lightning Damage					 ** Lightning modifiers affect this
+	-> 2.5 Lightning Damage (100% lightning->toxic) -> 2.5 Toxic Damage				** Toxic modifiers affect this
+		-> 2.5 Toxic Damage
+				
+Now that the conversions are done, we get the following:
+7.5 Physical Damage (no modifiers affecting it)
+2.5 Toxic Damage (Physical, Lightning, Toxic all affecting this damage amount)
+	Now, using the damage formula above, we get the following final Toxic Damage:
+	-> 2.5 * (1.0 + 0.50 + 0.50) = 5.0 Toxic Damage
+	
+This results in the final damage of this skill being (7.5 Physical Damage + 5.0 Toxic Damage).
+
+
+
+Damage Over Time
+
+Damage Over Time is a special modifier which acts as a More multiplier to any damage over time, either dealt by Ailments or Skills.
+
+
+
+
+
+
+"
+fit_content_height = true
+scroll_active = false
+
+[node name="Ailments" type="ScrollContainer" parent="CenterContainer/PanelContainer/VBoxContainer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 30.0
+offset_right = -3.0
+offset_bottom = -3.0
+focus_neighbour_top = NodePath("../../HBoxContainer/BackButton")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/PanelContainer/VBoxContainer/TabContainer/Ailments"]
+offset_right = 1274.0
+offset_bottom = 1872.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[center]Ailments[/center]
+
+There are 2 ailment types for each damage type. The first is the ordinary Ailment, and the second is the Enhanced Ailment. For each Ailment, there is a corresponding Ailment Chance stat which is used to calculate the chances of inflicting the Ailment. If the Ailment is successfully inflicted, then your Enhanced Ailment Chance is used to possibly inflict the enhanced version of the Ailment as well!
+
+Note: [color=#d38b1a]Penetration does not affect ailments, but it does affect Damage over Time skills.[/color]
+
+[center][color=#b3b3b3]Physical Ailments[/color][/center]
+
+[color=#b3b3b3][i]Bleed:[/i][/color] Bleeds deal physical damage over time. The base Bleed damage is equal to 5% of the physical hit amount, and have a base duration of 4 seconds.
+
+[color=#b3b3b3][i]Rupture:[/i][/color] Ruptures are Bleeds which deal 100% More Damage, but have 50% Less Duration.
+
+[center][color=#a3b300]Lightning Ailments[/color][/center]
+
+[color=#a3b300][i]Jolt:[/i][/color] Jolted enemies take increased damaged. The effect of the Jolt scales with how much damage the hit inflicted, as a percentage of the targets maximum life. Base Jolt duration is 4 seconds.
+
+[color=#a3b300][i]Electrocution:[/i][/color] Electrocuted enemies have reduced resistances. The effect of the Electrocution scales with how much damage the hit inflicted, as a percentage of the targets maximum life. Base Electrocution duration is 4 seconds.
+
+[center][color=#006cb3]Cold Ailments[/color][/center]
+
+[color=#006cb3][i]Chill:[/i][/color] Chilled enemies move and attack slower. The effect of the Chill scales with how much damage the hit inflicted, as a percentage of the targets maximum life. Base Chill duration is 4 seconds.
+
+[color=#006cb3][i]Freeze:[/i][/color] Frozen enemies cannot move or attack. Base Freeze duration is 0.25 seconds.
+
+[center][color=#b33b00]Fire Ailments[/color][/center]
+
+[color=#b33b00][i]Burn:[/i][/color] Burn deals fire damage over time. The base Burn damage is equal to 100% of the fire hit amount, and have a base duration of 4 seconds. Burns cannot stack.
+
+[color=#b33b00][i]Char:[/i][/color] Charred enemies deal Less Damage. The effect of the Char scales with how much damage the hit inflicted, as a percentage of the targets maximum life. Base Char duration is 2 seconds.
+
+[center][color=#7700b3]Toxic Ailments[/color][/center]
+
+[color=#7700b3][i]Poison:[/i][/color] Poison deals Toxic damage over time. The base Poison damage is equal to 5% of the Toxic hit amount, and have a base duration of 4 seconds.
+
+[color=#7700b3][i]Infection:[/i][/color] Infections are Poisons which spread to a nearby enemy when their current host dies. Only the strongest infection will spread, but this can be increased by Infection Spread Count.
+
+[center]Vulnerable[/center]
+[color=#d38b1a]Vulnerable[/color] causes the affected enemy/player to take 25% More Damage.
+
+[center]Exposed[/center]
+[color=#d38b1a]Exposed[/color] causes the affected enemy/player have -10% to All Resistances.
+
+
+
+[center]Ailment Ramping[/center]
+
+Certain ailments which apply damage over time which stack (Bleed, Rupture, Poison, Infection), apply their damage in a unique way.
+
+When one of these ailments is applied, one of the following happens:
+
+1. If there is no ailment of the given type on the enemy, apply the ailment as normal.
+2. If there is an existing ailment of the given type on the enemy, ramp up the damage of the existing one instead.
+
+When an ailment gets ramped up, it takes the entire damage of the incoming ailment, and spreads it over the existing ailments duration.
+
+For example:
+
+1. Bleed A gets applied to do 5 dps, for 5 seconds. The total damage this Bleed will apply is 5 * 5 = 25 damage units.
+2. Bleed B gets applied after 2.5 seconds, doing the same 5 dps for 5 seconds.
+3. Since Bleed A is still active, Bleed B will instead ramp up Bleed A.
+4. Bleed B total damage is 5 * 5 = 25 damage units, and Bleed A has 2.5 seconds remaining. This means Bleed B will \"ramp up\" Bleed A by 10 dps, since the remaining duration is 2.5 seconds, and it has to apply 25 more damage units.
+
+Once Bleed A expires, the ramp starts over once the next ailment is applied."
+text = "Ailments
+
+There are 2 ailment types for each damage type. The first is the ordinary Ailment, and the second is the Enhanced Ailment. For each Ailment, there is a corresponding Ailment Chance stat which is used to calculate the chances of inflicting the Ailment. If the Ailment is successfully inflicted, then your Enhanced Ailment Chance is used to possibly inflict the enhanced version of the Ailment as well!
+
+Note: Penetration does not affect ailments, but it does affect Damage over Time skills.
+
+Physical Ailments
+
+Bleed: Bleeds deal physical damage over time. The base Bleed damage is equal to 5% of the physical hit amount, and have a base duration of 4 seconds.
+
+Rupture: Ruptures are Bleeds which deal 100% More Damage, but have 50% Less Duration.
+
+Lightning Ailments
+
+Jolt: Jolted enemies take increased damaged. The effect of the Jolt scales with how much damage the hit inflicted, as a percentage of the targets maximum life. Base Jolt duration is 4 seconds.
+
+Electrocution: Electrocuted enemies have reduced resistances. The effect of the Electrocution scales with how much damage the hit inflicted, as a percentage of the targets maximum life. Base Electrocution duration is 4 seconds.
+
+Cold Ailments
+
+Chill: Chilled enemies move and attack slower. The effect of the Chill scales with how much damage the hit inflicted, as a percentage of the targets maximum life. Base Chill duration is 4 seconds.
+
+Freeze: Frozen enemies cannot move or attack. Base Freeze duration is 0.25 seconds.
+
+Fire Ailments
+
+Burn: Burn deals fire damage over time. The base Burn damage is equal to 100% of the fire hit amount, and have a base duration of 4 seconds. Burns cannot stack.
+
+Char: Charred enemies deal Less Damage. The effect of the Char scales with how much damage the hit inflicted, as a percentage of the targets maximum life. Base Char duration is 2 seconds.
+
+Toxic Ailments
+
+Poison: Poison deals Toxic damage over time. The base Poison damage is equal to 5% of the Toxic hit amount, and have a base duration of 4 seconds.
+
+Infection: Infections are Poisons which spread to a nearby enemy when their current host dies. Only the strongest infection will spread, but this can be increased by Infection Spread Count.
+
+Vulnerable
+Vulnerable causes the affected enemy/player to take 25% More Damage.
+
+Exposed
+Exposed causes the affected enemy/player have -10% to All Resistances.
+
+
+
+Ailment Ramping
+
+Certain ailments which apply damage over time which stack (Bleed, Rupture, Poison, Infection), apply their damage in a unique way.
+
+When one of these ailments is applied, one of the following happens:
+
+1. If there is no ailment of the given type on the enemy, apply the ailment as normal.
+2. If there is an existing ailment of the given type on the enemy, ramp up the damage of the existing one instead.
+
+When an ailment gets ramped up, it takes the entire damage of the incoming ailment, and spreads it over the existing ailments duration.
+
+For example:
+
+1. Bleed A gets applied to do 5 dps, for 5 seconds. The total damage this Bleed will apply is 5 * 5 = 25 damage units.
+2. Bleed B gets applied after 2.5 seconds, doing the same 5 dps for 5 seconds.
+3. Since Bleed A is still active, Bleed B will instead ramp up Bleed A.
+4. Bleed B total damage is 5 * 5 = 25 damage units, and Bleed A has 2.5 seconds remaining. This means Bleed B will \"ramp up\" Bleed A by 10 dps, since the remaining duration is 2.5 seconds, and it has to apply 25 more damage units.
+
+Once Bleed A expires, the ramp starts over once the next ailment is applied."
+fit_content_height = true
+scroll_active = false
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_Button_pressed"]

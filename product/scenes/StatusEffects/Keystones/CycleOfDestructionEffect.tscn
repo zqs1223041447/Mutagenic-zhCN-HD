@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://sprites/buff_icons/cycle_of_destruction.png" id="1"]
+[ext_resource type="Script" path="res://scenes/StatusEffects/Keystones/CycleOfDestructionEffect.gd" id="2"]
+
+[node name="CycleOfDesctructionEffect" type="Node"]
+script = ExtResource("2")
+description = "Cycle of Destruction"
+retriggerable = true
+texture = ExtResource("1")
+lifetime = 5.0
+base_lifetime = 5.0
+unique_group = "CycleOfDestruction"

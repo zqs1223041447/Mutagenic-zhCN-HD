@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Pickups/Pickup.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/Pickups/Orb/OrbPickup.gd" id="2"]
+
+[sub_resource type="CircleShape2D" id="1"]
+radius = 75.0
+
+[node name="OrbPickup" instance=ExtResource("1")]
+script = ExtResource("2")
+does_vaccuum = true
+
+[node name="CollisionShape2D" parent="." ]
+shape = SubResource("1")
+
+[node name="Sprite" parent="." ]
+visible = false
+scale = Vector2(0.5, 0.5)
+
+[node name="InfoContainer" parent="Node2D/VBoxContainer"]
+offset_right = 466.0
+offset_bottom = 82.0
+
+[node name="Button" parent="Node2D/VBoxContainer/HBoxContainer/HBoxContainer"]
+offset_right = 98.0
+offset_bottom = 29.0
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)

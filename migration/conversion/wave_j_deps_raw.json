@@ -1,0 +1,14 @@
+{
+  "task": "P1-WAVE-J",
+  "dep_assets_copied": [
+    "scenes/Popups/Dialogs/CharacterSelect/CharacterChanger.tscn",
+    "scenes/Popups/Dialogs/SkillSelect/SkillSelect.tscn",
+    "scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn",
+    "scenes/Popups/Dialogs/WorldMap/WorldMapPopup.tscn",
+    "scenes/Popups/Dialogs/HelpTip/NoWeaponWarning/NoWeaponWarning.tscn",
+    "scenes/Popups/Dialogs/SpecializationPicker/SpecializationPicker.tscn",
+    "scenes/Popups/Dialogs/HelpTip/CraftingHelp/CraftingHelp.tscn"
+  ],
+  "count": 7,
+  "closure_rounds": 1
+}

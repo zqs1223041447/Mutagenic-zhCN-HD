@@ -1,0 +1,503 @@
+{
+  "files_changed": [
+    "Globals/GameState.gd",
+    "scenes/Minimap/Minimap.gd",
+    "scenes/Minimap/TextureRect.gd",
+    "scenes/Particles/FloatingDamage.gd",
+    "scenes/Particles/FloatingDamageManager.gd",
+    "scenes/Popups/Dialogs/GeneEditor/CraftButton.gd",
+    "scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+    "scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+    "scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd",
+    "scenes/Popups/Dialogs/GeneSelector/GeneSelector.gd",
+    "scenes/Popups/Dialogs/ModHelp/ModTab.gd",
+    "scenes/Popups/Dialogs/PassiveTree/Edge.gd",
+    "scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+    "scenes/Popups/Dialogs/PassiveTree/PassiveTreeContainer.gd",
+    "scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+    "scenes/Popups/Dialogs/TintedConfirmationDialog.gd",
+    "scenes/Popups/Dialogs/UniqueHelp/UniqueModRange.gd",
+    "scenes/Popups/EscapeMenu.gd",
+    "scenes/Popups/ItemTabContent.gd",
+    "scenes/ShaderExplosions/ShaderExplosion.gd",
+    "scenes/Skills/Auras/GenericAura.gd",
+    "scenes/Skills/Playable/Arc/Arc.gd",
+    "scenes/Tooltips/SkillTooltip/SkillTooltip.gd",
+    "scenes/UI/ModItem.gd"
+  ],
+  "replacements": [
+    {
+      "file": "Globals/GameState.gd",
+      "line": 1574,
+      "pattern": "TYPE_REAL",
+      "before": "\t\t\t\t\t\t\t\t\t\t\t\tif typeof(saved_stats.keybind_overrides[action]) != TYPE_REAL:",
+      "after": "\t\t\t\t\t\t\t\t\t\t\t\tif typeof(saved_stats.keybind_overrides[action]) != TYPE_FLOAT:"
+    },
+    {
+      "file": "scenes/Minimap/Minimap.gd",
+      "line": 31,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_RIGHT",
+      "after": "\t\t\t\t\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_RIGHT"
+    },
+    {
+      "file": "scenes/Minimap/Minimap.gd",
+      "line": 41,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_RIGHT",
+      "after": "\t\t\t\t\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_RIGHT"
+    },
+    {
+      "file": "scenes/Minimap/Minimap.gd",
+      "line": 47,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_RIGHT",
+      "after": "\t\t\t\t\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_RIGHT"
+    },
+    {
+      "file": "scenes/Minimap/Minimap.gd",
+      "line": 53,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_RIGHT",
+      "after": "\t\t\t\t\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_RIGHT"
+    },
+    {
+      "file": "scenes/Minimap/Minimap.gd",
+      "line": 60,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_RIGHT",
+      "after": "\t\t\t\t\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_RIGHT"
+    },
+    {
+      "file": "scenes/Minimap/Minimap.gd",
+      "line": 70,
+      "pattern": "rect_size",
+      "before": "\t\t\t\tvar rect_size = Vector2(width, height)",
+      "after": "\t\t\t\tvar size = Vector2(width, height)"
+    },
+    {
+      "file": "scenes/Minimap/TextureRect.gd",
+      "line": 17,
+      "pattern": "rect_size",
+      "before": "\t\t\t\trect_size = Vector2(32, 32)",
+      "after": "\t\t\t\tsize = Vector2(32, 32)"
+    },
+    {
+      "file": "scenes/Minimap/TextureRect.gd",
+      "line": 18,
+      "pattern": "rect_scale",
+      "before": "\t\t\t\trect_scale = Vector2(zoom_scale, zoom_scale)",
+      "after": "\t\t\t\tscale = Vector2(zoom_scale, zoom_scale)"
+    },
+    {
+      "file": "scenes/Minimap/TextureRect.gd",
+      "line": 22,
+      "pattern": "update()",
+      "before": "\t\t\t\t\t\t\t\tupdate()",
+      "after": "\t\t\t\t\t\t\t\tqueue_redraw()"
+    },
+    {
+      "file": "scenes/Minimap/TextureRect.gd",
+      "line": 28,
+      "pattern": "rect_size",
+      "before": "\t\t\t\t\t\t\t\tvar pos = Vector2(p_x, p_y) - (rect_size / 2.0)",
+      "after": "\t\t\t\t\t\t\t\tvar pos = Vector2(p_x, p_y) - (size / 2.0)"
+    },
+    {
+      "file": "scenes/Minimap/TextureRect.gd",
+      "line": 29,
+      "pattern": "rect_size",
+      "before": "\t\t\t\t\t\t\t\tdraw_texture_rect_region(parent.image_texture, Rect2(Vector2.ZERO, rect_size), Rect2(pos, rect_size))",
+      "after": "\t\t\t\t\t\t\t\tdraw_texture_rect_region(parent.image_texture, Rect2(Vector2.ZERO, size), Rect2(pos, size))"
+    },
+    {
+      "file": "scenes/Minimap/TextureRect.gd",
+      "line": 30,
+      "pattern": "rect_size",
+      "before": "\t\t\t\t\t\t\t\tdraw_circle(rect_size / 2.0, 1, Color.GREEN)",
+      "after": "\t\t\t\t\t\t\t\tdraw_circle(size / 2.0, 1, Color.GREEN)"
+    },
+    {
+      "file": "scenes/Particles/FloatingDamage.gd",
+      "line": 10,
+      "pattern": "rect_position",
+      "before": "\t\t\t\t$Label/Tween.interpolate_property($Label, \"rect_position\", ",
+      "after": "\t\t\t\t$Label/Tween.interpolate_property($Label, \"position\", "
+    },
+    {
+      "file": "scenes/Particles/FloatingDamage.gd",
+      "line": 11,
+      "pattern": "rect_position",
+      "before": "\t\t\t\t\t\t\t\t\t\t\t\t$Label.rect_position, $Label.rect_position + movement, ",
+      "after": "\t\t\t\t\t\t\t\t\t\t\t\t$Label.position, $Label.position + movement, "
+    },
+    {
+      "file": "scenes/Particles/FloatingDamage.gd",
+      "line": 19,
+      "pattern": "rect_scale",
+      "before": "\t\t\t\t\t\t\t\t$Label/Tween.interpolate_property($Label, \"rect_scale\", ",
+      "after": "\t\t\t\t\t\t\t\t$Label/Tween.interpolate_property($Label, \"scale\", "
+    },
+    {
+      "file": "scenes/Particles/FloatingDamage.gd",
+      "line": 20,
+      "pattern": "rect_scale",
+      "before": "\t\t\t\t\t\t\t\t\t\t\t\t$Label.rect_scale * 2, $Label.rect_scale, ",
+      "after": "\t\t\t\t\t\t\t\t\t\t\t\t$Label.scale * 2, $Label.scale, "
+    },
+    {
+      "file": "scenes/Particles/FloatingDamageManager.gd",
+      "line": 14,
+      "pattern": "rect_size",
+      "before": "\t\t\t\tfct.global_position = global_position - fct.label.rect_size / 2",
+      "after": "\t\t\t\tfct.global_position = global_position - fct.label.size / 2"
+    },
+    {
+      "file": "scenes/Particles/FloatingDamageManager.gd",
+      "line": 16,
+      "pattern": "TYPE_REAL",
+      "before": "\t\t\t\tif typeof(value) == TYPE_REAL:",
+      "after": "\t\t\t\tif typeof(value) == TYPE_FLOAT:"
+    },
+    {
+      "file": "scenes/Particles/FloatingDamageManager.gd",
+      "line": 23,
+      "pattern": "rect_size",
+      "before": "\t\t\t\tfct.global_position = global_position - fct.label.rect_size / 2",
+      "after": "\t\t\t\tfct.global_position = global_position - fct.label.size / 2"
+    },
+    {
+      "file": "scenes/Particles/FloatingDamageManager.gd",
+      "line": 25,
+      "pattern": "TYPE_REAL",
+      "before": "\t\t\t\tif typeof(value) == TYPE_REAL:",
+      "after": "\t\t\t\tif typeof(value) == TYPE_FLOAT:"
+    },
+    {
+      "file": "scenes/Particles/FloatingDamageManager.gd",
+      "line": 32,
+      "pattern": "rect_size",
+      "before": "\t\t\t\tfct.global_position = global_position - fct.label.rect_size / 2",
+      "after": "\t\t\t\tfct.global_position = global_position - fct.label.size / 2"
+    },
+    {
+      "file": "scenes/Particles/FloatingDamageManager.gd",
+      "line": 34,
+      "pattern": "TYPE_REAL",
+      "before": "\t\t\t\tif typeof(value) == TYPE_REAL:",
+      "after": "\t\t\t\tif typeof(value) == TYPE_FLOAT:"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/GeneEditor/CraftButton.gd",
+      "line": 23,
+      "pattern": "rect_min_size",
+      "before": "\t\t\t\t\t\t\t\t\t\t\t\ttex.rect_min_size = Vector2(32, 32)",
+      "after": "\t\t\t\t\t\t\t\t\t\t\t\ttex.custom_minimum_size = Vector2(32, 32)"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/GeneEditor/GeneButton.gd",
+      "line": 112,
+      "pattern": "rect_size",
+      "before": "\t\t\t\ttooltip.render(gene_id, rect_global_position, rect_size, is_in_shared)",
+      "after": "\t\t\t\ttooltip.render(gene_id, rect_global_position, size, is_in_shared)"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+      "line": 38,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "after": "\t\t\t\t\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_CENTER"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+      "line": 44,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "after": "\t\t\t\t\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_CENTER"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+      "line": 55,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "after": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_CENTER"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/GeneEditor/GeneLoadout.gd",
+      "line": 70,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "after": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_CENTER"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/GeneEditor/LoadoutSlot.gd",
+      "line": 55,
+      "pattern": "rect_size",
+      "before": "\t\t\t\ttooltip.render(gene_id, rect_global_position, rect_size)",
+      "after": "\t\t\t\ttooltip.render(gene_id, rect_global_position, size)"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/GeneSelector/GeneSelector.gd",
+      "line": 105,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\titem_level_label.align = Label.ALIGN_CENTER",
+      "after": "\t\t\t\titem_level_label.align = HORIZONTAL_ALIGNMENT_CENTER"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/ModHelp/ModTab.gd",
+      "line": 10,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "after": "\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_CENTER"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/ModHelp/ModTab.gd",
+      "line": 24,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "after": "\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_CENTER"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/PassiveTree/Edge.gd",
+      "line": 29,
+      "pattern": "update()",
+      "before": "\t\t\t\tupdate()",
+      "after": "\t\t\t\tqueue_redraw()"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/PassiveTree/Edge.gd",
+      "line": 32,
+      "pattern": "update()",
+      "before": "\t\t\t\tupdate()",
+      "after": "\t\t\t\tqueue_redraw()"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+      "line": 60,
+      "pattern": "rect_min_size",
+      "before": "\t\t\t\t\t\t\t\t\t\t\t\tlabel.rect_min_size = Vector2(320, 16)",
+      "after": "\t\t\t\t\t\t\t\t\t\t\t\tlabel.custom_minimum_size = Vector2(320, 16)"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+      "line": 75,
+      "pattern": "rect_size",
+      "before": "\t\t\t\t\t\t\t\t$PassiveButton.rect_size = Vector2(16.0, 16.0)",
+      "after": "\t\t\t\t\t\t\t\t$PassiveButton.size = Vector2(16.0, 16.0)"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+      "line": 82,
+      "pattern": "rect_size",
+      "before": "\t\t\t\t\t\t\t\t$PassiveButton.rect_size = Vector2(24.0, 24.0)",
+      "after": "\t\t\t\t\t\t\t\t$PassiveButton.size = Vector2(24.0, 24.0)"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+      "line": 89,
+      "pattern": "rect_size",
+      "before": "\t\t\t\t\t\t\t\t$PassiveButton.rect_size = Vector2(32.0, 32.0)",
+      "after": "\t\t\t\t\t\t\t\t$PassiveButton.size = Vector2(32.0, 32.0)"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+      "line": 229,
+      "pattern": "rect_scale",
+      "before": "\t\t\t\t$PassiveButton/StatInfoContainer.rect_scale = Vector2(1.0 / zoom, 1.0 / zoom)",
+      "after": "\t\t\t\t$PassiveButton/StatInfoContainer.scale = Vector2(1.0 / zoom, 1.0 / zoom)"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/PassiveTree/PassiveTreeContainer.gd",
+      "line": 102,
+      "pattern": "rect_size",
+      "before": "\t\t\t\tvar sz = selector_container.rect_size",
+      "after": "\t\t\t\tvar sz = selector_container.size"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+      "line": 225,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "after": "\t\t\t\t\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_CENTER"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+      "line": 235,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "after": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_CENTER"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+      "line": 251,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel.align = Label.ALIGN_CENTER",
+      "after": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel.align = HORIZONTAL_ALIGNMENT_CENTER"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/TintedConfirmationDialog.gd",
+      "line": 12,
+      "pattern": "rect_size",
+      "before": "\t\t\t\tvar parent_offset = rect_size / 2.0",
+      "after": "\t\t\t\tvar parent_offset = size / 2.0"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/TintedConfirmationDialog.gd",
+      "line": 14,
+      "pattern": "rect_size",
+      "before": "\t\t\t\t$Node/ColorRect.rect_size = actual_rect.size",
+      "after": "\t\t\t\t$Node/ColorRect.size = actual_rect.size"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/TintedConfirmationDialog.gd",
+      "line": 15,
+      "pattern": "rect_size",
+      "before": "\t\t\t\t$Node/ColorRect.rect_global_position = - $Node/ColorRect.rect_size / 2.0 + parent_offset",
+      "after": "\t\t\t\t$Node/ColorRect.rect_global_position = - $Node/ColorRect.size / 2.0 + parent_offset"
+    },
+    {
+      "file": "scenes/Popups/Dialogs/UniqueHelp/UniqueModRange.gd",
+      "line": 16,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\tmod_string.push_align(RichTextLabel.ALIGN_CENTER)",
+      "after": "\t\t\t\tmod_string.push_align(HORIZONTAL_ALIGNMENT_CENTER)"
+    },
+    {
+      "file": "scenes/Popups/EscapeMenu.gd",
+      "line": 40,
+      "pattern": "rect_scale",
+      "before": "\t\t\t\t\t\t\t\tbutton.rect_scale = Vector2(4.0, 4.0)",
+      "after": "\t\t\t\t\t\t\t\tbutton.scale = Vector2(4.0, 4.0)"
+    },
+    {
+      "file": "scenes/Popups/EscapeMenu.gd",
+      "line": 41,
+      "pattern": "rect_min_size",
+      "before": "\t\t\t\t\t\t\t\tbutton.rect_min_size = Vector2(64, 64)",
+      "after": "\t\t\t\t\t\t\t\tbutton.custom_minimum_size = Vector2(64, 64)"
+    },
+    {
+      "file": "scenes/Popups/EscapeMenu.gd",
+      "line": 43,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\tbutton.icon_align = Button.ALIGN_CENTER",
+      "after": "\t\t\t\t\t\t\t\tbutton.icon_align = HORIZONTAL_ALIGNMENT_CENTER"
+    },
+    {
+      "file": "scenes/Popups/ItemTabContent.gd",
+      "line": 100,
+      "pattern": "TYPE_REAL",
+      "before": "\t\t\t\t\t\t\t\t\t\t\t\tif typeof(effective_stat) == TYPE_REAL or typeof(effective_stat) == TYPE_INT:",
+      "after": "\t\t\t\t\t\t\t\t\t\t\t\tif typeof(effective_stat) == TYPE_FLOAT or typeof(effective_stat) == TYPE_INT:"
+    },
+    {
+      "file": "scenes/ShaderExplosions/ShaderExplosion.gd",
+      "line": 14,
+      "pattern": "rect_size",
+      "before": "\t\t\t\t$ColorRect.rect_size = 2.0 * Vector2(radius, radius)",
+      "after": "\t\t\t\t$ColorRect.size = 2.0 * Vector2(radius, radius)"
+    },
+    {
+      "file": "scenes/ShaderExplosions/ShaderExplosion.gd",
+      "line": 15,
+      "pattern": "rect_size",
+      "before": "\t\t\t\t$ColorRect.rect_position = - $ColorRect.rect_size / 2.0",
+      "after": "\t\t\t\t$ColorRect.rect_position = - $ColorRect.size / 2.0"
+    },
+    {
+      "file": "scenes/ShaderExplosions/ShaderExplosion.gd",
+      "line": 15,
+      "pattern": "rect_position",
+      "before": "\t\t\t\t$ColorRect.rect_position = - $ColorRect.size / 2.0",
+      "after": "\t\t\t\t$ColorRect.position = - $ColorRect.size / 2.0"
+    },
+    {
+      "file": "scenes/Skills/Auras/GenericAura.gd",
+      "line": 51,
+      "pattern": "rect_size",
+      "before": "\t\t\t\t$AuraDisplay.rect_size = Vector2(2.0 * radius, 2.0 * radius)",
+      "after": "\t\t\t\t$AuraDisplay.size = Vector2(2.0 * radius, 2.0 * radius)"
+    },
+    {
+      "file": "scenes/Skills/Auras/GenericAura.gd",
+      "line": 52,
+      "pattern": "rect_position",
+      "before": "\t\t\t\t$AuraDisplay.rect_position = Vector2( - radius, - radius)",
+      "after": "\t\t\t\t$AuraDisplay.position = Vector2( - radius, - radius)"
+    },
+    {
+      "file": "scenes/Skills/Playable/Arc/Arc.gd",
+      "line": 47,
+      "pattern": "rect_size",
+      "before": "\t\t\t\t$ColorRect.rect_size = Vector2(r * 2.0, r * 2.0)",
+      "after": "\t\t\t\t$ColorRect.size = Vector2(r * 2.0, r * 2.0)"
+    },
+    {
+      "file": "scenes/Skills/Playable/Arc/Arc.gd",
+      "line": 48,
+      "pattern": "rect_position",
+      "before": "\t\t\t\t$ColorRect.rect_position = Vector2( - r, - r)",
+      "after": "\t\t\t\t$ColorRect.position = Vector2( - r, - r)"
+    },
+    {
+      "file": "scenes/Tooltips/SkillTooltip/SkillTooltip.gd",
+      "line": 128,
+      "pattern": "TYPE_REAL",
+      "before": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif typeof(effective_stat) == TYPE_REAL or typeof(effective_stat) == TYPE_INT:",
+      "after": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif typeof(effective_stat) == TYPE_FLOAT or typeof(effective_stat) == TYPE_INT:"
+    },
+    {
+      "file": "scenes/UI/ModItem.gd",
+      "line": 86,
+      "pattern": "Label.ALIGN_*",
+      "before": "\t\t\t\t\t\t\t\tmod_label.align = Label.ALIGN_CENTER",
+      "after": "\t\t\t\t\t\t\t\tmod_label.align = HORIZONTAL_ALIGNMENT_CENTER"
+    }
+  ],
+  "residuals": [
+    {
+      "file": "Globals/GameState.gd",
+      "line": 268,
+      "pattern": "OS.window_*",
+      "reason": "MANUAL_REVIEW: OS.window_* read/write semantics differ; needs DisplayServer window mode API rewrite"
+    },
+    {
+      "file": "Globals/GameState.gd",
+      "line": 269,
+      "pattern": "OS.window_*",
+      "reason": "MANUAL_REVIEW: OS.window_* read/write semantics differ; needs DisplayServer window mode API rewrite"
+    },
+    {
+      "file": "Globals/GameState.gd",
+      "line": 327,
+      "pattern": "Directory",
+      "reason": "MANUAL_REVIEW: Directory new/open/list_dir_begin needs DirAccess semantic rewrite"
+    },
+    {
+      "file": "Globals/GameState.gd",
+      "line": 357,
+      "pattern": "OS.window_*",
+      "reason": "MANUAL_REVIEW: OS.window_* read/write semantics differ; needs DisplayServer window mode API rewrite"
+    },
+    {
+      "file": "Globals/GameState.gd",
+      "line": 358,
+      "pattern": "OS.window_*",
+      "reason": "MANUAL_REVIEW: OS.window_* read/write semantics differ; needs DisplayServer window mode API rewrite"
+    },
+    {
+      "file": "Globals/GameState.gd",
+      "line": 363,
+      "pattern": "OS.vsync_enabled",
+      "reason": "MANUAL_REVIEW: OS.vsync_enabled read/write semantics differ; needs DisplayServer.window_set_vsync_mode rewrite"
+    },
+    {
+      "file": "Globals/GameState.gd",
+      "line": 370,
+      "pattern": "Engine.set_target_fps(",
+      "reason": "MANUAL_REVIEW: Engine.set_target_fps is Engine.max_fps property setter in Godot 4; textual rewrite unsafe"
+    }
+  ],
+  "total_replacements": 61,
+  "dry_run": false
+}

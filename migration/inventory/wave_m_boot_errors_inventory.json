@@ -1,0 +1,754 @@
+{
+    "schema_version":  1,
+    "task":  "P1-WAVE-M",
+    "generated_at":  "2026-08-22T03:08:34+08:00",
+    "method":  "read-only scan of 04_recovered vs product; no files modified except this inventory",
+    "path_convention":  {
+                            "case_mapping_note":  "recovered 使用 Godot3 大写 Scenes/、Sounds/ 前缀；product 为 scenes/ 小写。Windows 文件系统大小写不敏感可加载，但导出/一致性要求复制时按 product 大小写归一（Scenes-\u003escenes）。Sounds 与 sprites 大小写两侧一致。",
+                            "repo_relative_only":  true,
+                            "uid_sidecars":  "recovered 为 Godot3 源无 .uid；复制后由 Godot 4 导入期自动生成，无需迁移"
+                        },
+    "totals":  {
+                   "to_copy_total":  233,
+                   "existing_in_product_total":  14,
+                   "recovered_assets_total":  247,
+                   "closure_missing_groups":  12,
+                   "closure_refs_resolvable":  169,
+                   "closure_refs_total":  259
+               },
+    "roots":  {
+                  "scenes/StatusEffects":  {
+                                               "import_sidecars":  0,
+                                               "note":  "product 已有 BaseEffect.gd 与 Generic/ 五个状态效果，skipped_existing 保护",
+                                               "stale_import_sidecars":  [
+
+                                                                         ],
+                                               "recovered_dir":  "04_recovered/Scenes/StatusEffects",
+                                               "to_copy_import_sidecars":  0,
+                                               "to_copy_files":  [
+                                                                     "Auras/AuraEffect.gd",
+                                                                     "Auras/AuraEffect.tscn",
+                                                                     "Boons/PrecisionBoon.gd",
+                                                                     "Boons/PrecisionBoon.tscn",
+                                                                     "Boons/SwiftnessBoon.gd",
+                                                                     "Boons/SwiftnessBoon.tscn",
+                                                                     "Boons/ToughnessBoon.gd",
+                                                                     "Boons/ToughnessBoon.tscn",
+                                                                     "Curses/Bane.gd",
+                                                                     "Curses/Bane.tscn",
+                                                                     "Curses/Brittle.gd",
+                                                                     "Curses/Brittle.tscn",
+                                                                     "Curses/Debilitate.gd",
+                                                                     "Curses/Debilitate.tscn",
+                                                                     "Curses/Dread.tscn",
+                                                                     "Curses/Hinder.gd",
+                                                                     "Curses/Hinder.tscn",
+                                                                     "Curses/Hypothermia.gd",
+                                                                     "Curses/Hypothermia.tscn",
+                                                                     "Curses/Polarize.gd",
+                                                                     "Curses/Polarize.tscn",
+                                                                     "Curses/Protract.gd",
+                                                                     "Curses/Protract.tscn",
+                                                                     "Curses/Scorch.gd",
+                                                                     "Curses/Scorch.tscn",
+                                                                     "DamageAilments/Bleed.gd",
+                                                                     "DamageAilments/Bleed.tscn",
+                                                                     "DamageAilments/Burn.gd",
+                                                                     "DamageAilments/Burn.tscn",
+                                                                     "DamageAilments/Charred.gd",
+                                                                     "DamageAilments/Charred.tscn",
+                                                                     "DamageAilments/Chill.gd",
+                                                                     "DamageAilments/Chill.tscn",
+                                                                     "DamageAilments/Electrocution.gd",
+                                                                     "DamageAilments/Electrocution.tscn",
+                                                                     "DamageAilments/Freeze.gd",
+                                                                     "DamageAilments/Freeze.tscn",
+                                                                     "DamageAilments/Infection.gd",
+                                                                     "DamageAilments/Infection.tscn",
+                                                                     "DamageAilments/Jolt.gd",
+                                                                     "DamageAilments/Jolt.tscn",
+                                                                     "DamageAilments/Poison.gd",
+                                                                     "DamageAilments/Poison.tscn",
+                                                                     "DamageAilments/Rupture.gd",
+                                                                     "DamageAilments/Rupture.tscn",
+                                                                     "Keystones/Adrenaline.gd",
+                                                                     "Keystones/Adrenaline.tscn",
+                                                                     "Keystones/BloodBoil.gd",
+                                                                     "Keystones/BloodBoil.tscn",
+                                                                     "Keystones/CycleOfDestructionEffect.gd",
+                                                                     "Keystones/CycleOfDestructionEffect.tscn",
+                                                                     "Keystones/Endurance.gd",
+                                                                     "Keystones/Endurance.tscn",
+                                                                     "Keystones/GrowingPain.gd",
+                                                                     "Keystones/GrowingPain.tscn",
+                                                                     "Keystones/HardenedFlesh.gd",
+                                                                     "Keystones/HardenedFlesh.tscn",
+                                                                     "Keystones/KillMomentum.gd",
+                                                                     "Keystones/KillMomentum.tscn",
+                                                                     "Keystones/PhantomShield.gd",
+                                                                     "Keystones/PhantomShield.tscn",
+                                                                     "Keystones/RegenerativeFleshEffect.gd",
+                                                                     "Keystones/RegenerativeFleshEffect.tscn",
+                                                                     "Keystones/SpikeArmor.gd",
+                                                                     "Keystones/SpikeArmor.tscn",
+                                                                     "Keystones/ToxicRunner.gd",
+                                                                     "Keystones/ToxicRunner.tscn",
+                                                                     "Keystones/Transfusion.gd",
+                                                                     "Keystones/Transfusion.tscn",
+                                                                     "Keystones/UnleashEffect.gd",
+                                                                     "Keystones/UnleashEffect.tscn",
+                                                                     "Keystones/VampiricSkin.gd",
+                                                                     "Keystones/VampiricSkin.tscn",
+                                                                     "Pickups/Frenzy.gd",
+                                                                     "Pickups/Frenzy.tscn",
+                                                                     "Pickups/Magnifier.gd",
+                                                                     "Pickups/Magnifier.tscn",
+                                                                     "Skills/BondedElectrons.gd",
+                                                                     "Skills/BondedElectrons.tscn",
+                                                                     "Skills/ChainLightning.gd",
+                                                                     "Skills/ChainLightning.tscn",
+                                                                     "Skills/DoomTether.gd",
+                                                                     "Skills/DoomTether.tscn",
+                                                                     "Skills/Dread.gd",
+                                                                     "Skills/Dread.tscn",
+                                                                     "Skills/EnergeticFlesh.gd",
+                                                                     "Skills/EnergeticFlesh.tscn",
+                                                                     "Skills/FlameTether.gd",
+                                                                     "Skills/FlameTether.tscn",
+                                                                     "Skills/Plague.gd",
+                                                                     "Skills/Plague.tscn",
+                                                                     "Skills/VileDomain.gd",
+                                                                     "Skills/VileDomain.tscn",
+                                                                     "Skills/Webbed.gd",
+                                                                     "Skills/Webbed.tscn"
+                                                                 ],
+                                               "product_dir":  "product/scenes/StatusEffects",
+                                               "existing_in_product":  11,
+                                               "recovered_files":  106,
+                                               "to_copy":  95,
+                                               "exists_in_recovered":  true,
+                                               "skipped_existing_files":  [
+                                                                              "BaseEffect.gd",
+                                                                              "Generic/Echoing.gd",
+                                                                              "Generic/Echoing.tscn",
+                                                                              "Generic/Exposed.gd",
+                                                                              "Generic/Exposed.tscn",
+                                                                              "Generic/Hamstrung.gd",
+                                                                              "Generic/Hamstrung.tscn",
+                                                                              "Generic/RecentlyHit.gd",
+                                                                              "Generic/RecentlyHit.tscn",
+                                                                              "Generic/Vulnerable.gd",
+                                                                              "Generic/Vulnerable.tscn"
+                                                                          ]
+                                           },
+                  "scenes/GroundDegens":  {
+                                              "import_sidecars":  0,
+                                              "note":  "product 无此目录，全新复制",
+                                              "stale_import_sidecars":  [
+
+                                                                        ],
+                                              "recovered_dir":  "04_recovered/Scenes/GroundDegens",
+                                              "to_copy_import_sidecars":  0,
+                                              "to_copy_files":  [
+                                                                    "BeamDegen.gd",
+                                                                    "BeamDegen.tscn",
+                                                                    "GroundDegen.gd",
+                                                                    "GroundDegen.tscn",
+                                                                    "GroundDegenShader.tres",
+                                                                    "OnDeathEffects/ToxicPoolDegen.gd",
+                                                                    "OnDeathEffects/ToxicPoolDegen.tscn",
+                                                                    "Skills/Blizzard/BlizzardDegen.gd",
+                                                                    "Skills/Blizzard/BlizzardDegen.tscn",
+                                                                    "Skills/LavaSurge/LavaSurge.tscn"
+                                                                ],
+                                              "product_dir":  "product/scenes/GroundDegens",
+                                              "existing_in_product":  0,
+                                              "recovered_files":  10,
+                                              "to_copy":  10,
+                                              "exists_in_recovered":  true,
+                                              "skipped_existing_files":  [
+
+                                                                         ]
+                                          },
+                  "sprites/projectiles":  {
+                                              "import_sidecars":  42,
+                                              "note":  "product 无此目录，全新复制；recovered 含无对应 png 的陈旧 .import 需剔除",
+                                              "stale_import_sidecars":  [
+                                                                            "acid_attack.aseprite.import",
+                                                                            "arrow.aseprite.import",
+                                                                            "axe.aseprite.import",
+                                                                            "blizzard_projectile.aseprite.import",
+                                                                            "blizzard_skill.aseprite.import",
+                                                                            "bomb.aseprite.import",
+                                                                            "cluster_bomb.aseprite.import",
+                                                                            "ice_orb.aseprite.import",
+                                                                            "lightning_spear.aseprite.import",
+                                                                            "magic_missile_projectile.aseprite.import",
+                                                                            "orb_projectile.aseprite.import",
+                                                                            "plasma_orb.aseprite.import",
+                                                                            "poison_dart_projectile.aseprite.import",
+                                                                            "shard_orb.aseprite.import",
+                                                                            "shard_orb_main.aseprite.import",
+                                                                            "shark.aseprite.import",
+                                                                            "sharknado_shard.aseprite.import",
+                                                                            "shock_orb.aseprite.import",
+                                                                            "shotgun_bullet.aseprite.import",
+                                                                            "shrapnelbomb.aseprite.import",
+                                                                            "shuriken.aseprite.import",
+                                                                            "sota_spear.aseprite.import",
+                                                                            "spider_web.aseprite.import",
+                                                                            "volcano_projectile.aseprite.import",
+                                                                            "MobProjectiles/glob.aseprite.import"
+                                                                        ],
+                                              "recovered_dir":  "04_recovered/sprites/projectiles",
+                                              "to_copy_import_sidecars":  42,
+                                              "to_copy_files":  [
+                                                                    "arrow.png",
+                                                                    "axe.png",
+                                                                    "blizzard_projectile.png",
+                                                                    "bomb.png",
+                                                                    "ice_orb.png",
+                                                                    "lightning_spear.png",
+                                                                    "orb_projectile.png",
+                                                                    "shard_orb.png",
+                                                                    "shard_orb_main.png",
+                                                                    "shark.png",
+                                                                    "sharknado_shard.png",
+                                                                    "shotgun_bullet.png",
+                                                                    "shrapnelbomb.png",
+                                                                    "shuriken.png",
+                                                                    "sota_spear.png",
+                                                                    "spider_web.png",
+                                                                    "volcano_projectile.png"
+                                                                ],
+                                              "product_dir":  "product/sprites/projectiles",
+                                              "existing_in_product":  0,
+                                              "recovered_files":  17,
+                                              "to_copy":  17,
+                                              "exists_in_recovered":  true,
+                                              "skipped_existing_files":  [
+
+                                                                         ]
+                                          },
+                  "Sounds/Skills":  {
+                                        "import_sidecars":  45,
+                                        "note":  "product 仅有 Sounds/Skills/Shots/arc.wav(+import)，其余补齐",
+                                        "stale_import_sidecars":  [
+
+                                                                  ],
+                                        "recovered_dir":  "04_recovered/Sounds/Skills",
+                                        "to_copy_import_sidecars":  44,
+                                        "to_copy_files":  [
+                                                              "Explosions/cluster_bombs.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_01_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_02_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_03_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_04_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_05_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_07_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_08_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_09_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_10_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_11_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_12_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_13_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_14_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_15_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_16_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_17_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_18_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_19_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_20_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_21_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_22_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/EXPLDsgn_Explosion Impact_23_SFRMS_SCIWPNS.wav",
+                                                              "Explosions/shatter.wav",
+                                                              "Explosions/shrapnel_explosion.wav",
+                                                              "Shots/axe.wav",
+                                                              "Shots/axe_swing.wav",
+                                                              "Shots/blizzard.wav",
+                                                              "Shots/bomb.wav",
+                                                              "Shots/chain_lightning.wav",
+                                                              "Shots/dart.wav",
+                                                              "Shots/doom_explosion.wav",
+                                                              "Shots/fireball.wav",
+                                                              "Shots/fireball_clean.wav",
+                                                              "Shots/fireball_new.wav",
+                                                              "Shots/ice_orb.wav",
+                                                              "Shots/orb_whoosh.wav",
+                                                              "Shots/roman_candle.wav",
+                                                              "Shots/shockwave.wav",
+                                                              "Shots/shock_orb.wav",
+                                                              "Shots/shotgun.wav",
+                                                              "Shots/shuriken.wav",
+                                                              "Shots/shuriken_2.wav",
+                                                              "Shots/shuriken_reverse.wav"
+                                                          ],
+                                        "product_dir":  "product/Sounds/Skills",
+                                        "existing_in_product":  1,
+                                        "recovered_files":  45,
+                                        "to_copy":  44,
+                                        "exists_in_recovered":  true,
+                                        "skipped_existing_files":  [
+                                                                       "Shots/arc.wav"
+                                                                   ]
+                                    },
+                  "scenes/Projectiles":  {
+                                             "import_sidecars":  1,
+                                             "note":  "product 已有 Projectile.gd/.tscn(+uid)，skipped_existing 保护，不覆盖",
+                                             "stale_import_sidecars":  [
+
+                                                                       ],
+                                             "recovered_dir":  "04_recovered/Scenes/Projectiles",
+                                             "to_copy_import_sidecars":  1,
+                                             "to_copy_files":  [
+                                                                   "MeleeSkills/ShockwaveProjectile.gd",
+                                                                   "MeleeSkills/ShockwaveProjectile.tscn",
+                                                                   "MobSkills/Glob/Glob.gd",
+                                                                   "MobSkills/Glob/Glob.tscn",
+                                                                   "MobSkills/SotaSpear/SotaSpear.gd",
+                                                                   "MobSkills/SotaSpear/SotaSpear.tscn",
+                                                                   "MobSkills/SpiderWeb/SpiderWeb.gd",
+                                                                   "MobSkills/SpiderWeb/SpiderWeb.tscn",
+                                                                   "Skills/arrow.png",
+                                                                   "Skills/ArrowProjectile.gd",
+                                                                   "Skills/ArrowProjectile.tscn",
+                                                                   "Skills/AxeProjectile.gd",
+                                                                   "Skills/AxeProjectile.tscn",
+                                                                   "Skills/BaneProjectile.gd",
+                                                                   "Skills/BaneProjectile.tscn",
+                                                                   "Skills/BladeShieldProjectile.gd",
+                                                                   "Skills/BladeShieldProjectile.tscn",
+                                                                   "Skills/BloodSlashProjectile.gd",
+                                                                   "Skills/BloodSlashProjectile.tscn",
+                                                                   "Skills/BrittleProjectile.gd",
+                                                                   "Skills/BrittleProjectile.tscn",
+                                                                   "Skills/DebilitateProjectile.gd",
+                                                                   "Skills/DebilitateProjectile.tscn",
+                                                                   "Skills/EnergizedAxeProjectile.gd",
+                                                                   "Skills/EnergizedAxeProjectile.tscn",
+                                                                   "Skills/HinderProjectile.gd",
+                                                                   "Skills/HinderProjectile.tscn",
+                                                                   "Skills/HypothermiaProjectile.gd",
+                                                                   "Skills/HypothermiaProjectile.tscn",
+                                                                   "Skills/IceOrbProjectile.gd",
+                                                                   "Skills/IceOrbProjectile.tscn",
+                                                                   "Skills/LightningSpearProjectile.gd",
+                                                                   "Skills/LightningSpearProjectile.tscn",
+                                                                   "Skills/MinigunProjectile.gd",
+                                                                   "Skills/MinigunProjectile.tscn",
+                                                                   "Skills/OrbProjectile.gd",
+                                                                   "Skills/OrbProjectile.tscn",
+                                                                   "Skills/PlagueCloudsProjectile.gd",
+                                                                   "Skills/PlagueCloudsProjectile.tscn",
+                                                                   "Skills/PlasmaOrbProjectile.gd",
+                                                                   "Skills/PlasmaOrbProjectile.tscn",
+                                                                   "Skills/PoisonDartProjectile.gd",
+                                                                   "Skills/PoisonDartProjectile.tscn",
+                                                                   "Skills/PolarizeProjectile.gd",
+                                                                   "Skills/PolarizeProjectile.tscn",
+                                                                   "Skills/ProtractProjectile.gd",
+                                                                   "Skills/ProtractProjectile.tscn",
+                                                                   "Skills/ScorchProjectile.gd",
+                                                                   "Skills/ScorchProjectile.tscn",
+                                                                   "Skills/ShardMainProjectile.gd",
+                                                                   "Skills/ShardMainProjectile.tscn",
+                                                                   "Skills/ShardOrbProjectile.gd",
+                                                                   "Skills/ShardOrbProjectile.tscn",
+                                                                   "Skills/SharknadoShardProjectile.gd",
+                                                                   "Skills/SharknadoShardProjectile.tscn",
+                                                                   "Skills/SharknadoShotProjectile.gd",
+                                                                   "Skills/SharknadoShotProjectile.tscn",
+                                                                   "Skills/ShockOrbProjectile.gd",
+                                                                   "Skills/ShockOrbProjectile.tscn",
+                                                                   "Skills/ShotgunProjectile.gd",
+                                                                   "Skills/ShotgunProjectile.tscn",
+                                                                   "Skills/ShurikenProjectile.gd",
+                                                                   "Skills/ShurikenProjectile.tscn",
+                                                                   "Skills/VolcanoOrbProjectile.gd",
+                                                                   "Skills/VolcanoOrbProjectile.tscn",
+                                                                   "Skills/VolcanoProjectile.gd",
+                                                                   "Skills/VolcanoProjectile.tscn"
+                                                               ],
+                                             "product_dir":  "product/scenes/Projectiles",
+                                             "existing_in_product":  2,
+                                             "recovered_files":  69,
+                                             "to_copy":  67,
+                                             "exists_in_recovered":  true,
+                                             "skipped_existing_files":  [
+                                                                            "Projectile.gd",
+                                                                            "Projectile.tscn"
+                                                                        ]
+                                         }
+              },
+    "generic_skill_cascade":  {
+                                  "root_cause":  "boot 时 autoload GameState.gd 仍含 Godot4 已删除的 GD3 API（05bcabe 版本 L327 Directory.new() 等，probe 运行于该提交之后 24 分钟），GameState 编译失败导致其标识符不可解析；GenericSkill.gd L6-10 引用 GameState 被连带编译失败、全局类未注册，全部 extends GenericSkill/GenericAura 的脚本级联报 Could not resolve class——并非 GenericSkill.gd 自身缺文件。",
+                                  "evidence":  [
+                                                   "git show 05bcabe:product/Globals/GameState.gd 含 Directory.new()(L327)/OS.window_*/NOTIFICATION_WM_QUIT_REQUEST 等 GD3 残留；probe generated_at 2026-08-21T18:46:52Z 晚于该提交 2026-08-22T02:22:20+08",
+                                                   "product/scenes/Skills/GenericSkill.gd 静态检查：无 preload/load 缺失引用、无未知类型、全树唯一 class_name GenericSkill、已注册于 product/.godot/global_script_class_cache.cfg",
+                                                   "probe stderr 全部 Could not resolve class GenericSkill 均出现在依赖脚本的 extends 行（如 Orb.gd:1）",
+                                                   "GenericAura.gd 另有自身硬缺失：preload res://scenes/StatusEffects/Auras/AuraEffect.tscn，源文件在 04_recovered/Scenes/StatusEffects/Auras/ 可补"
+                                               ],
+                                  "deps":  [
+                                               {
+                                                   "path":  "product/Globals/GameState.gd",
+                                                   "status":  "wave_k 清理后仍残留 OS.get_scancode_string(L1567，运行时错误非编译错误)；Directory.new 已在 K 提交后修复",
+                                                   "action":  "无需 WAVE-M 处理；建议后续波次验证编译",
+                                                   "role":  "autoload_compile_blocker"
+                                               },
+                                               {
+                                                   "path":  "product/scenes/Skills/GenericSkill.gd",
+                                                   "status":  "自身健康，被 autoload 连带",
+                                                   "action":  "WAVE-M 复制缺失资源并重导入后预期自动恢复解析",
+                                                   "role":  "cascade_hub"
+                                               },
+                                               {
+                                                   "path":  "product/scenes/Skills/Auras/GenericAura.gd",
+                                                   "status":  "preload AuraEffect.tscn 缺失",
+                                                   "action":  "由 roots.scenes/StatusEffects 复制补齐",
+                                                   "role":  "hard_missing_preload"
+                                               },
+                                               {
+                                                   "path":  "04_recovered/Scenes/StatusEffects/Auras/AuraEffect.tscn",
+                                                   "status":  "recovered 可用",
+                                                   "role":  "source"
+                                               }
+                                           ]
+                              },
+    "closure_extra_dirs":  [
+                               {
+                                   "in_recovered_top":  true,
+                                   "group":  "scenes/explosions",
+                                   "referenced_by":  [
+                                                         "04_recovered/Scenes/Projectiles/Skills/BaneProjectile.gd",
+                                                         "04_recovered/Scenes/Projectiles/Skills/BrittleProjectile.gd",
+                                                         "04_recovered/Scenes/Projectiles/Skills/DebilitateProjectile.gd",
+                                                         "04_recovered/Scenes/Projectiles/Skills/HinderProjectile.gd",
+                                                         "04_recovered/Scenes/Projectiles/Skills/HypothermiaProjectile.gd",
+                                                         "04_recovered/Scenes/Projectiles/Skills/IceOrbProjectile.gd",
+                                                         "04_recovered/Scenes/Projectiles/Skills/PolarizeProjectile.gd",
+                                                         "04_recovered/Scenes/Projectiles/Skills/ProtractProjectile.gd"
+                                                     ],
+                                   "sample_refs":  [
+                                                       "res://Scenes/Explosions/TexturedExplosions/CurseExplosion.tscn",
+                                                       "res://Scenes/Explosions/TexturedExplosions/DoomExplosion.tscn",
+                                                       "res://Scenes/Explosions/TexturedExplosions/FlameExplosion.tscn",
+                                                       "res://Scenes/Explosions/TexturedExplosions/IceExplosion.tscn"
+                                                   ],
+                                   "ref_count":  4
+                               },
+                               {
+                                   "in_recovered_top":  true,
+                                   "group":  "scenes/particles",
+                                   "referenced_by":  [
+                                                         "04_recovered/Scenes/GroundDegens/BeamDegen.tscn",
+                                                         "04_recovered/Scenes/Projectiles/MeleeSkills/ShockwaveProjectile.gd",
+                                                         "04_recovered/Scenes/StatusEffects/DamageAilments/Infection.gd",
+                                                         "04_recovered/Scenes/StatusEffects/Skills/ChainLightning.gd",
+                                                         "04_recovered/Scenes/StatusEffects/Skills/DoomTether.gd",
+                                                         "04_recovered/Scenes/StatusEffects/Skills/FlameTether.gd"
+                                                     ],
+                                   "sample_refs":  [
+                                                       "res://Scenes/Particles/Beams/Beam.tscn",
+                                                       "res://Scenes/Particles/ChainLightning.tscn",
+                                                       "res://Scenes/Particles/DoomTether.tscn",
+                                                       "res://Scenes/Particles/FlameTether.tscn",
+                                                       "res://Scenes/Particles/InfectionChain.tscn"
+                                                   ],
+                                   "ref_count":  6
+                               },
+                               {
+                                   "in_recovered_top":  true,
+                                   "group":  "scenes/shaders",
+                                   "referenced_by":  [
+                                                         "04_recovered/Scenes/GroundDegens/Skills/LavaSurge/LavaSurge.tscn",
+                                                         "04_recovered/Scenes/Projectiles/MobSkills/SpiderWeb/SpiderWeb.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/AxeProjectile.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/BladeShieldProjectile.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/IceOrbProjectile.tscn"
+                                                     ],
+                                   "sample_refs":  [
+                                                       "res://Scenes/Shaders/BeamShader.tres",
+                                                       "res://Scenes/Shaders/RotateMaterial.tres"
+                                                   ],
+                                   "ref_count":  2
+                               },
+                               {
+                                   "in_recovered_top":  true,
+                                   "group":  "shaders",
+                                   "referenced_by":  [
+                                                         "04_recovered/Scenes/Projectiles/Skills/EnergizedAxeProjectile.tscn"
+                                                     ],
+                                   "sample_refs":  [
+                                                       "res://Shaders/AttackBlur.tres"
+                                                   ],
+                                   "ref_count":  1
+                               },
+                               {
+                                   "in_recovered_top":  true,
+                                   "group":  "sounds/sfx",
+                                   "referenced_by":  [
+                                                         "04_recovered/Scenes/StatusEffects/DamageAilments/Burn.gd",
+                                                         "04_recovered/Scenes/StatusEffects/DamageAilments/Jolt.gd"
+                                                     ],
+                                   "sample_refs":  [
+                                                       "res://Sounds/SFX/burn.wav",
+                                                       "res://Sounds/SFX/jolt.wav"
+                                                   ],
+                                   "ref_count":  2
+                               },
+                               {
+                                   "in_recovered_top":  true,
+                                   "group":  "sprites/buff_icons",
+                                   "referenced_by":  [
+                                                         "04_recovered/Scenes/StatusEffects/Keystones/Adrenaline.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Keystones/CycleOfDestructionEffect.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Keystones/Endurance.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Keystones/GrowingPain.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Keystones/KillMomentum.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Keystones/PhantomShield.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Keystones/RegenerativeFleshEffect.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Keystones/SpikeArmor.tscn"
+                                                     ],
+                                   "sample_refs":  [
+                                                       "res://sprites/buff_icons/adrenaline.png",
+                                                       "res://sprites/buff_icons/cycle_of_destruction.png",
+                                                       "res://sprites/buff_icons/endurance.png",
+                                                       "res://sprites/buff_icons/growing_pain.png",
+                                                       "res://sprites/buff_icons/kill_momentum.png"
+                                                   ],
+                                   "ref_count":  12
+                               },
+                               {
+                                   "in_recovered_top":  true,
+                                   "group":  "sprites/drops",
+                                   "referenced_by":  [
+                                                         "04_recovered/Scenes/StatusEffects/Pickups/Frenzy.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Pickups/Magnifier.tscn"
+                                                     ],
+                                   "sample_refs":  [
+                                                       "res://sprites/drops/frenzy_pickup.png",
+                                                       "res://sprites/drops/magnifier.png"
+                                                   ],
+                                   "ref_count":  2
+                               },
+                               {
+                                   "in_recovered_top":  true,
+                                   "group":  "sprites/effects",
+                                   "referenced_by":  [
+                                                         "04_recovered/Scenes/GroundDegens/OnDeathEffects/ToxicPoolDegen.tscn",
+                                                         "04_recovered/Scenes/GroundDegens/Skills/Blizzard/BlizzardDegen.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/BloodSlashProjectile.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/BrittleProjectile.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/DebilitateProjectile.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/EnergizedAxeProjectile.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/HinderProjectile.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/HypothermiaProjectile.tscn"
+                                                     ],
+                                   "sample_refs":  [
+                                                       "res://sprites/effects/blood.png",
+                                                       "res://sprites/effects/blood_slash.aseprite",
+                                                       "res://sprites/effects/curse.png",
+                                                       "res://sprites/effects/slash.aseprite",
+                                                       "res://sprites/effects/smoke.png"
+                                                   ],
+                                   "ref_count":  5
+                               },
+                               {
+                                   "in_recovered_top":  true,
+                                   "group":  "sprites/projectiles",
+                                   "referenced_by":  [
+                                                         "04_recovered/Scenes/Projectiles/MobSkills/Glob/Glob.tscn",
+                                                         "04_recovered/Scenes/Projectiles/MobSkills/SotaSpear/SotaSpear.tscn",
+                                                         "04_recovered/Scenes/Projectiles/MobSkills/SpiderWeb/SpiderWeb.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/AxeProjectile.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/IceOrbProjectile.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/LightningSpearProjectile.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/MinigunProjectile.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/OrbProjectile.tscn"
+                                                     ],
+                                   "sample_refs":  [
+                                                       "res://sprites/projectiles/axe.aseprite",
+                                                       "res://sprites/projectiles/ice_orb.aseprite",
+                                                       "res://sprites/projectiles/lightning_spear.aseprite",
+                                                       "res://sprites/projectiles/MobProjectiles/glob.aseprite",
+                                                       "res://sprites/projectiles/orb_projectile.aseprite"
+                                                   ],
+                                   "ref_count":  17
+                               },
+                               {
+                                   "in_recovered_top":  true,
+                                   "group":  "sprites/skills",
+                                   "referenced_by":  [
+                                                         "04_recovered/Scenes/Projectiles/Skills/BladeShieldProjectile.tscn",
+                                                         "04_recovered/Scenes/Projectiles/Skills/VolcanoProjectile.tscn"
+                                                     ],
+                                   "sample_refs":  [
+                                                       "res://sprites/skills/blade_shield.aseprite",
+                                                       "res://sprites/skills/volcano.aseprite"
+                                                   ],
+                                   "ref_count":  2
+                               },
+                               {
+                                   "in_recovered_top":  true,
+                                   "group":  "sprites/status_effects",
+                                   "referenced_by":  [
+                                                         "04_recovered/Scenes/StatusEffects/Boons/PrecisionBoon.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Boons/SwiftnessBoon.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Boons/ToughnessBoon.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/DamageAilments/Bleed.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/DamageAilments/Burn.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/DamageAilments/Charred.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/DamageAilments/Chill.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/DamageAilments/Electrocution.tscn"
+                                                     ],
+                                   "sample_refs":  [
+                                                       "res://sprites/status_effects/bleeding.png",
+                                                       "res://sprites/status_effects/burning.png",
+                                                       "res://sprites/status_effects/charred.png",
+                                                       "res://sprites/status_effects/chilled.png",
+                                                       "res://sprites/status_effects/electrocuted.png"
+                                                   ],
+                                   "ref_count":  13
+                               },
+                               {
+                                   "in_recovered_top":  true,
+                                   "group":  "sprites/status_effects_new",
+                                   "referenced_by":  [
+                                                         "04_recovered/Scenes/StatusEffects/Keystones/BloodBoil.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Keystones/Transfusion.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Skills/BondedElectrons.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Skills/Dread.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Skills/EnergeticFlesh.tscn",
+                                                         "04_recovered/Scenes/StatusEffects/Skills/VileDomain.tscn"
+                                                     ],
+                                   "sample_refs":  [
+                                                       "res://sprites/status_effects_new/blood_boil.png",
+                                                       "res://sprites/status_effects_new/bonded_electrons.png",
+                                                       "res://sprites/status_effects_new/dread.png",
+                                                       "res://sprites/status_effects_new/energetic_flesh.png",
+                                                       "res://sprites/status_effects_new/transfusion.png"
+                                                   ],
+                                   "ref_count":  6
+                               }
+                           ],
+    "aseprite_source_refs":  {
+                                 "rewrite_possible":  17,
+                                 "note":  "原项目经 aseprite-wizard 插件直接把 .aseprite 作为纹理资源引用；recovered 仅含导出 .png 与陈旧 .import，无 .aseprite 源。迁移时需把 tscn 的 ext_resource 重写到同名 .png（has_png_sibling=true 可重写），否则仍报缺失。",
+                                 "total":  21,
+                                 "refs":  {
+                                              "res://sprites/projectiles/MobProjectiles/glob.aseprite":  {
+                                                                                                             "has_png_sibling":  false,
+                                                                                                             "referenced_by":  "04_recovered/Scenes/Projectiles/MobSkills/Glob/Glob.tscn"
+                                                                                                         },
+                                              "res://sprites/projectiles/volcano_projectile.aseprite":  {
+                                                                                                            "has_png_sibling":  true,
+                                                                                                            "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/VolcanoOrbProjectile.tscn"
+                                                                                                        },
+                                              "res://sprites/projectiles/axe.aseprite":  {
+                                                                                             "has_png_sibling":  true,
+                                                                                             "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/AxeProjectile.tscn"
+                                                                                         },
+                                              "res://sprites/skills/volcano.aseprite":  {
+                                                                                            "has_png_sibling":  true,
+                                                                                            "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/VolcanoProjectile.tscn"
+                                                                                        },
+                                              "res://sprites/projectiles/orb_projectile.aseprite":  {
+                                                                                                        "has_png_sibling":  true,
+                                                                                                        "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/OrbProjectile.tscn"
+                                                                                                    },
+                                              "res://sprites/projectiles/plasma_orb.aseprite":  {
+                                                                                                    "has_png_sibling":  false,
+                                                                                                    "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/PlasmaOrbProjectile.tscn"
+                                                                                                },
+                                              "res://sprites/projectiles/ice_orb.aseprite":  {
+                                                                                                 "has_png_sibling":  true,
+                                                                                                 "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/IceOrbProjectile.tscn"
+                                                                                             },
+                                              "res://sprites/effects/slash.aseprite":  {
+                                                                                           "has_png_sibling":  true,
+                                                                                           "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/EnergizedAxeProjectile.tscn"
+                                                                                       },
+                                              "res://sprites/projectiles/shock_orb.aseprite":  {
+                                                                                                   "has_png_sibling":  false,
+                                                                                                   "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/ShockOrbProjectile.tscn"
+                                                                                               },
+                                              "res://sprites/projectiles/shard_orb_main.aseprite":  {
+                                                                                                        "has_png_sibling":  true,
+                                                                                                        "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/ShardMainProjectile.tscn"
+                                                                                                    },
+                                              "res://sprites/projectiles/shark.aseprite":  {
+                                                                                               "has_png_sibling":  true,
+                                                                                               "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/SharknadoShotProjectile.tscn"
+                                                                                           },
+                                              "res://sprites/projectiles/spider_web.aseprite":  {
+                                                                                                    "has_png_sibling":  true,
+                                                                                                    "referenced_by":  "04_recovered/Scenes/Projectiles/MobSkills/SpiderWeb/SpiderWeb.tscn"
+                                                                                                },
+                                              "res://sprites/projectiles/lightning_spear.aseprite":  {
+                                                                                                         "has_png_sibling":  true,
+                                                                                                         "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/LightningSpearProjectile.tscn"
+                                                                                                     },
+                                              "res://sprites/projectiles/sharknado_shard.aseprite":  {
+                                                                                                         "has_png_sibling":  true,
+                                                                                                         "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/SharknadoShardProjectile.tscn"
+                                                                                                     },
+                                              "res://sprites/skills/blade_shield.aseprite":  {
+                                                                                                 "has_png_sibling":  true,
+                                                                                                 "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/BladeShieldProjectile.tscn"
+                                                                                             },
+                                              "res://sprites/projectiles/shard_orb.aseprite":  {
+                                                                                                   "has_png_sibling":  true,
+                                                                                                   "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/ShardOrbProjectile.tscn"
+                                                                                               },
+                                              "res://sprites/projectiles/poison_dart_projectile.aseprite":  {
+                                                                                                                "has_png_sibling":  false,
+                                                                                                                "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/PoisonDartProjectile.tscn"
+                                                                                                            },
+                                              "res://sprites/effects/blood_slash.aseprite":  {
+                                                                                                 "has_png_sibling":  true,
+                                                                                                 "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/BloodSlashProjectile.tscn"
+                                                                                             },
+                                              "res://sprites/projectiles/sota_spear.aseprite":  {
+                                                                                                    "has_png_sibling":  true,
+                                                                                                    "referenced_by":  "04_recovered/Scenes/Projectiles/MobSkills/SotaSpear/SotaSpear.tscn"
+                                                                                                },
+                                              "res://sprites/projectiles/shotgun_bullet.aseprite":  {
+                                                                                                        "has_png_sibling":  true,
+                                                                                                        "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/ShotgunProjectile.tscn"
+                                                                                                    },
+                                              "res://sprites/projectiles/shuriken.aseprite":  {
+                                                                                                  "has_png_sibling":  true,
+                                                                                                  "referenced_by":  "04_recovered/Scenes/Projectiles/Skills/ShurikenProjectile.tscn"
+                                                                                              }
+                                          }
+                             },
+    "classification":  {
+                           "in_scope_wave_m":  [
+                                                   "04_recovered/Scenes/Projectiles/** -\u003e product/scenes/Projectiles/**（跳过已存在 Projectile.*）",
+                                                   "04_recovered/Scenes/StatusEffects/** -\u003e product/scenes/StatusEffects/**（跳过 BaseEffect.gd 与 Generic/ 已存在项）",
+                                                   "04_recovered/Scenes/GroundDegens/** -\u003e product/scenes/GroundDegens/**",
+                                                   "04_recovered/Sounds/Skills/** -\u003e product/Sounds/Skills/**",
+                                                   "04_recovered/sprites/projectiles/*.png(+有效.import) -\u003e product/sprites/projectiles/",
+                                                   "closure_extra_dirs 中标记 in_recovered_top=true 的目录按需一并复制"
+                                               ],
+                           "non_migratable":  [
+                                                  {
+                                                      "path":  "04_recovered/.autoconverted/**",
+                                                      "reason":  "GD3 加密/转换中间产物(.gde 等)，非资源源文件，product 引用链不含它"
+                                                  },
+                                                  {
+                                                      "path":  "sprites/projectiles 陈旧 .import",
+                                                      "reason":  "大量 .import 对应 .aseprite 源从未被恢复，无源资产的 .import 不复制（明细见 roots.sprites/projectiles.stale_import_sidecars）"
+                                                  },
+                                                  {
+                                                      "path":  "aseprite_source_refs 中 has_png_sibling=false 的引用",
+                                                      "reason":  "recovered 全树既无 .aseprite 也无同名 .png，无法从 recovered 补齐，需另行处理"
+                                                  },
+                                                  {
+                                                      "path":  "closure_extra_dirs 中 in_recovered_top=false 的分组",
+                                                      "reason":  "recovered 全树无对应目录，无法从 recovered 补齐"
+                                                  }
+                                              ]
+                       }
+}

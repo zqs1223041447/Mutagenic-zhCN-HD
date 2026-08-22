@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Mobs/Mob.tscn" id="1"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/actors/mutated_spider.spriteframes.tres" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/Skills/MobSkills/MutatedSpiderSkills/WebThrow.tscn" id="3"]
+[ext_resource type="Shader" path="res://scenes/Shaders/OutlineShader.tres" id="4"]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 13.0
+
+[sub_resource type="CircleShape2D" id=4]
+resource_local_to_scene = true
+radius = 32.0
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/color = Color(0, 0.141176, 0.898039, 0.313726)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/enabled = false
+shader_parameter/inside = true
+shader_parameter/make_transparent = false
+shader_parameter/add_margins = false
+
+[node name="MutatedSpider" instance=ExtResource("1")]
+type="BOSS_MUTATED_SPIDER"
+is_level_boss = true
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("1")
+
+[node name="MobCollider" parent="." index="1"]
+position = Vector2(0, -16.5563)
+
+[node name="CollisionShape2D" parent="MobCollider" index="0"]
+shape = SubResource("4")
+
+[node name="WebThrow" parent="Gear" index="1" instance=ExtResource("3")]
+
+[node name="SpriteContainer" parent="." index="3"]
+position = Vector2(0, -41)
+scale = Vector2(3, 3)
+
+[node name="Sprite" parent="SpriteContainer" index="0"]
+material = SubResource("3")
+position = Vector2(0, 5)
+frames = ExtResource("2")
+
+[node name="Shadow" parent="SpriteContainer" index="1"]
+position = Vector2(0, 6.33333)
+scale = Vector2(1.73333, 1.73333)
+
+[node name="StatusBar" parent="." index="6"]
+offset_top = -81.0
+offset_bottom = -47.0

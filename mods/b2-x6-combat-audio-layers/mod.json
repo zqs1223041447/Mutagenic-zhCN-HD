@@ -1,0 +1,63 @@
+{
+  "id": "b2-x6-combat-audio-layers",
+  "patch_type": "CODE_PATCH",
+  "version": "1",
+  "scope": {
+    "targets": [
+      "04_recovered/Globals/Globals.gd",
+      "04_recovered/Scenes/Stats.gd"
+    ],
+    "files": [
+      "Globals/Globals.gd",
+      "Scenes/Stats.gd"
+    ]
+  },
+  "summary": "Combat Audio Layers v1: layered combat audio over B1 k4-audio-foundation limiter and B2-X1 combat event spine. direct_hit -> light layer (PUNCH_CLEAN_LIGHT_02, 100ms window), crit -> heavy layer (ice_crack, 150ms window), kill -> kill layer (blood_explosion, 300ms window + cluster aggregation >=3 -> single sound), dot_tick -> suppressed (no per-tick impact spam). All audio still funnels through k4 play_sound_effect (voice budget 16 / per-stream 60ms / pitch+volume variation / tree_exited accounting preserved). Stats.gd drains _spine_last_events incrementally (consumed-seq) at the end of apply_damage, capturing kill records before the victim is freed by the deferred died signal. No damage/event semantics change; no new binary assets. B3-S5 FIX 2026-08-20: kill layer suppressed when killer dead (no sound after player death); player drain suppressed after death.",
+  "dependencies": [
+    "b2-x1-combat-event-spine",
+    "k4-audio-foundation"
+  ],
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "patches": [
+    {
+      "unit_id": "globals::combat_audio_state",
+      "path": "Globals/Globals.gd",
+      "preimage_sha256": "C1778CB8549B2A0EC15F50C010AFF294D6A3DF94B1A2954EBC7F2190F65942DD",
+      "expected_occurrences": 1,
+      "old_text": "var selected_character_name = \"default\"",
+      "new_text": "var selected_character_name = \"default\"\n# b2-x6-combat-audio-layers (Wave B): layered combat audio state\nconst COMBAT_LAYER_LIGHT_WINDOW_MS = 100\nconst COMBAT_LAYER_HEAVY_WINDOW_MS = 150\nconst COMBAT_LAYER_KILL_WINDOW_MS = 300\nconst COMBAT_KILL_CLUSTER_THRESHOLD = 3\nvar _combat_audio_last_played: Dictionary = {}\nvar _combat_kill_cluster_start = 0\nvar _combat_kill_cluster_count = 0\nvar combat_sfx_light = preload(\"res://Sounds/Hits/PUNCH_CLEAN_LIGHT_02.wav\")\nvar combat_sfx_heavy = preload(\"res://Sounds/Hits/ice_crack.wav\")\nvar combat_sfx_kill = preload(\"res://Sounds/SFX/blood_explosion.wav\")"
+    },
+    {
+      "unit_id": "globals::play_combat_event_layer_policy",
+      "path": "Globals/Globals.gd",
+      "preimage_sha256": "C1778CB8549B2A0EC15F50C010AFF294D6A3DF94B1A2954EBC7F2190F65942DD",
+      "expected_occurrences": 1,
+      "old_text": "func play_orb_sound(orb_type):",
+      "new_text": "func play_combat_event(record):\n\t\t\t\tvar event_class = record.get(\"event_class\", \"\")\n\t\t\t\tif event_class == \"dot_tick\":\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tif event_class == \"kill\":\n\t\t\t\t\t\t\t\tvar killer = record.get(\"source\")\n\t\t\t\t\t\t\t\tif killer == null or not killer.is_player or killer.is_dead:\n\t\t\t\t\t\t\t\t\t\t\t\treturn\n\t\t\t\tvar layer = _combat_audio_layer_for(event_class)\n\t\t\t\tvar stream = _combat_audio_stream_for(layer)\n\t\t\t\tif stream == null:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tvar now = OS.get_ticks_msec()\n\t\t\t\tif _combat_audio_last_played.has(layer) and now - _combat_audio_last_played[layer] < _combat_audio_window_for(layer):\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tif layer == \"kill\" and not _combat_audio_allow_kill_cluster(now):\n\t\t\t\t\t\t\t\treturn\n\t\t\t\t_combat_audio_last_played[layer] = now\n\t\t\t\tplay_sound_effect(stream)\n\nfunc _combat_audio_layer_for(event_class):\n\t\t\t\tif event_class == \"crit\":\n\t\t\t\t\t\t\t\treturn \"heavy\"\n\t\t\t\tif event_class == \"kill\":\n\t\t\t\t\t\t\t\treturn \"kill\"\n\t\t\t\treturn \"light\"\n\nfunc _combat_audio_stream_for(layer):\n\t\t\t\tif layer == \"heavy\":\n\t\t\t\t\t\t\t\treturn combat_sfx_heavy\n\t\t\t\tif layer == \"kill\":\n\t\t\t\t\t\t\t\treturn combat_sfx_kill\n\t\t\t\treturn combat_sfx_light\n\nfunc _combat_audio_window_for(layer):\n\t\t\t\tif layer == \"heavy\":\n\t\t\t\t\t\t\t\treturn COMBAT_LAYER_HEAVY_WINDOW_MS\n\t\t\t\tif layer == \"kill\":\n\t\t\t\t\t\t\t\treturn COMBAT_LAYER_KILL_WINDOW_MS\n\t\t\t\treturn COMBAT_LAYER_LIGHT_WINDOW_MS\n\nfunc _combat_audio_allow_kill_cluster(now):\n\t\t\t\tif now - _combat_kill_cluster_start > COMBAT_LAYER_KILL_WINDOW_MS:\n\t\t\t\t\t\t\t\t_combat_kill_cluster_start = now\n\t\t\t\t\t\t\t\t_combat_kill_cluster_count = 0\n\t\t\t\t_combat_kill_cluster_count += 1\n\t\t\t\tif _combat_kill_cluster_count > COMBAT_KILL_CLUSTER_THRESHOLD:\n\t\t\t\t\t\t\t\treturn false\n\t\t\t\treturn _combat_kill_cluster_count == 1\n\nfunc play_orb_sound(orb_type):"
+    },
+    {
+      "unit_id": "stats::drain_consumed_seq_var",
+      "path": "Scenes/Stats.gd",
+      "preimage_sha256": "C187245E4F475E0928252610BB9D6D27FCB4A23C68754B4409DF5A6EB9997234",
+      "expected_occurrences": 1,
+      "old_text": "var accumulated_time = 0",
+      "new_text": "var accumulated_time = 0\nvar _combat_audio_consumed_seq = 0"
+    },
+    {
+      "unit_id": "stats::drain_func_before_physics_process",
+      "path": "Scenes/Stats.gd",
+      "preimage_sha256": "C187245E4F475E0928252610BB9D6D27FCB4A23C68754B4409DF5A6EB9997234",
+      "expected_occurrences": 1,
+      "old_text": "func _physics_process(delta: float) -> void :",
+      "new_text": "func _combat_audio_drain_spine_events():\n\t\t\t\tif is_player and is_dead:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tif _spine_event_seq <= _combat_audio_consumed_seq:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tfor record in _spine_last_events:\n\t\t\t\t\t\t\t\tif record.seq <= _combat_audio_consumed_seq:\n\t\t\t\t\t\t\t\t\t\t\t\tcontinue\n\t\t\t\t\t\t\t\t_combat_audio_consumed_seq = record.seq\n\t\t\t\t\t\t\t\tGlobals.play_combat_event(record)\n\nfunc _physics_process(delta: float) -> void :"
+    },
+    {
+      "unit_id": "stats::drain_call_before_return",
+      "path": "Scenes/Stats.gd",
+      "preimage_sha256": "C187245E4F475E0928252610BB9D6D27FCB4A23C68754B4409DF5A6EB9997234",
+      "expected_occurrences": 1,
+      "old_text": "\t\t\t\treturn {\n\t\t\t\t\t\t\t\t\"did_kill\": did_kill, \n\t\t\t\t\t\t\t\t\"damage\": combined_effective_damage",
+      "new_text": "\t\t\t\t_combat_audio_drain_spine_events()\n\n\t\t\t\treturn {\n\t\t\t\t\t\t\t\t\"did_kill\": did_kill, \n\t\t\t\t\t\t\t\t\"damage\": combined_effective_damage"
+    }
+  ]
+}

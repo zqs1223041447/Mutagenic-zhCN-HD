@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scenes/Projectiles/Skills/EnergizedAxeProjectile.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="2"]
+[ext_resource type="SpriteFrames" path="res://sprites/effects/slash.png" id="3"]
+[ext_resource type="Shader" path="res://Shaders/AttackBlur.tres" id="4"]
+
+[sub_resource type="CircleShape2D" id=1]
+resource_local_to_scene = true
+radius = 16.0
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource("4")
+shader_parameter/pivot = Vector2(0, 0)
+shader_parameter/amount = 0.1
+shader_parameter/quality = 4
+shader_parameter/marginDebug = false
+
+[node name="EnergizedAxeProjectile" instance=ExtResource("2")]
+z_index = -2
+script = ExtResource("1")
+has_limited_hits = false
+expire_on_distance = false
+manual_movement = true
+ignore_terrain = true
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("1")
+
+[node name="Sprite" parent="." index="1"]
+material = SubResource("2")
+frames = ExtResource("3")
+playing = true

@@ -1,0 +1,28 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3]
+
+# P4-ANIM 示例：OGA base_male idle 占位
+# TODO: 当前为整图占位（126x144），待按 18px 网格切片为 1-4 帧 idle（16x16 AtlasTexture）
+# 真图位于 product/sprites/_acquired/oga_16x16-base-sprites/base_male.png
+# 切片后用 AtlasTexture(region=Rect2(col*18+1, row*18+1, 16, 16)) 生成多帧，FPS 6-10
+# 届时将本文件的 "idle" 帧数组替换为 4 帧 AtlasTexture，保留 "default" 指向 idle 首帧以兼容旧代码
+
+[ext_resource type="Texture2D" path="res://sprites/_acquired/oga_16x16-base-sprites/base_male.png" id="1"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="FontFile" path="res://Fonts/space.ttf" id="1"]
+
+[sub_resource type="FontFile" id=1]
+font_data = ExtResource("1")
+
+[node name="MinimapModLabel" type="Label"]
+offset_right = 40.0
+offset_bottom = 14.0
+theme_override_fonts/font = SubResource("1")

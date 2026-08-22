@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "task": "P3-C",
+  "probe_id": "p3_combat_probe",
+  "exit_criteria": [
+    "E4",
+    "E5"
+  ],
+  "generated_at": "2026-08-22T04:16:10Z",
+  "engine": {
+    "binary_name": "Godot_v4.7.1-stable_win64.exe",
+    "resolved_via": "REPO_RELATIVE",
+    "version": "4.7.1",
+    "status": "SUCCESS"
+  },
+  "driver_scene": "res://scenes/Mobs/probes/p3_combat_probe.tscn",
+  "command": [
+    "<repo>\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
+    "--headless",
+    "--path",
+    "<repo>\\product",
+    "res://scenes/Mobs/probes/p3_combat_probe.tscn"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "duration_ms": 14422,
+  "attempts": 1,
+  "flaked": false,
+  "result": {
+    "did_kill": true,
+    "died_signal_received": true,
+    "e4_pass": true,
+    "e5_pass": true,
+    "errors": [],
+    "first_hit_damage": 5.4883536696434,
+    "hit_attempts": 1,
+    "hp_after_first_hit": 0,
+    "hp_before": 5.0,
+    "mob_instantiated": true,
+    "pass": true,
+    "probe_id": "p3_combat_probe",
+    "removed_from_tree": true,
+    "script_errors_during_probe": 0,
+    "skill_instantiated": true,
+    "skill_is_generic_skill": true,
+    "victim_type": "SKELETON_ARCHER"
+  },
+  "script_errors": [],
+  "verdict_detail": "probe assertions satisfied",
+  "verdict": "PASS",
+  "proves": "a real instantiated skill node produces a damage bundle that reduces a real instantiated mob's HP (E4) and driving it to zero fires the died signal, runs Mob._on_death and removes the mob from the tree (E5), headlessly",
+  "not_proven": "player-cast playable skills through the projectile layer, visual/audio feedback, and drop-table spawning (Pickups scenes still absent from product/)"
+}

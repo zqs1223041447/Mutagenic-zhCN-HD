@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "task": "P4-ART-SCAN",
+  "generated_at": "2026-08-22T14:00:29Z",
+  "scan_root": "product",
+  "files_scanned": 1051,
+  "totals": {
+    "references_total": 1909,
+    "references_unique": 1212,
+    "missing_unique": 23
+  },
+  "missing_by_suffix": {
+    ".tscn": 14,
+    ".wav": 6,
+    ".stex": 1,
+    ".ogg": 1,
+    ".json": 1
+  },
+  "missing_by_category": {
+    "other": 23
+  },
+  "items": [
+    {
+      "missing_ref": "res://.import/arrow.png-1d15507c595a5a38dd9c02bebf3df3ea.stex",
+      "expected_suffix": ".stex",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Projectiles/Skills/ArrowProjectile.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://Sounds/BackgroundMusic/Space Laboratory Loop.ogg",
+      "expected_suffix": ".ogg",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Menu.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://Sounds/Misc/FUI Power Up.wav",
+      "expected_suffix": ".wav",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Player/Player.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav",
+      "expected_suffix": ".wav",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Skills/Playable/Arrow/Arrow.tscn"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://Sounds/Pickups/collect_orb.wav",
+      "expected_suffix": ".wav",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Pickups/Orb/OrbPickup.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://Sounds/Pickups/drop_only.wav",
+      "expected_suffix": ".wav",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Pickups/Gene/GenePickup.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://Sounds/Pickups/rare_orb.wav",
+      "expected_suffix": ".wav",
+      "category": "other",
+      "referrers": [
+        "product/Globals/Globals.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://Sounds/UI/passive_allocate.wav",
+      "expected_suffix": ".wav",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/DelayedSkill/ClusterBombs/ClusterBombs.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Skills/Playable/ClusterBombs/ClusterBombs.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/DelayedSkill/ShrapnelBomb/ShrapnelBomb.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Skills/Playable/ShrapnelBomb/ShrapnelBomb.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/GeneEditor/GeneInventory.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Menu.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/GeneEditor/GeneLoadout.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Menu.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/CycleOfDestruction.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Stats.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/GoblinsGirdle.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Stats.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/PhantomShield.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Stats.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/RegenerativeFlesh.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Stats.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/KeystoneCycles/Unleash.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Stats.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/PassiveTree/PassiveTree.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Menu.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/Popups/Dialogs/HelpTip/GeneTip/GeneTip.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Pickups/Gene/GenePickup.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/Popups/Dialogs/HelpTip/OrbHelp/OrbTip.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Pickups/Orb/OrbPickup.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/Popups/Dialogs/StarterPicker/StarterPicker.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Levels/Hideout/HideoutLevel.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://scenes/ShaderExplosions/SlashEffect/SlashEffect.tscn",
+      "expected_suffix": ".tscn",
+      "category": "other",
+      "referrers": [
+        "product/scenes/Skills/Playable/PrismaticSlash/PrismaticSlash.gd"
+      ],
+      "referrer_count": 1
+    },
+    {
+      "missing_ref": "res://skillgen/skills/%s.json",
+      "expected_suffix": ".json",
+      "category": "other",
+      "referrers": [
+        "product/Globals/SkillTiers/TierLoader.gd"
+      ],
+      "referrer_count": 1
+    }
+  ]
+}

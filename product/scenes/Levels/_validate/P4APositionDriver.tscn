@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/Levels/_validate/p4_a_position_driver.gd" id="1"]
+
+[node name="P4APositionDriver" type="Node"]
+script = ExtResource("1")

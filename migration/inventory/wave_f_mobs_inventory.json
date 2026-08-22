@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "task": "P1-WAVE-F",
+  "scanned_at": "2026-08-21T16:36:18+00:00",
+  "source": "04_recovered/Scenes/Mobs",
+  "totals": {
+    "files": 28,
+    "by_extension": {
+      ".gd": 5,
+      ".tres": 1,
+      ".tscn": 22
+    }
+  },
+  "subdirs": [
+    {
+      "path": "04_recovered/Scenes/Mobs/Basic",
+      "name": "Basic",
+      "files": 17,
+      "scenes": 15
+    },
+    {
+      "path": "04_recovered/Scenes/Mobs/Bosses",
+      "name": "Bosses",
+      "files": 4,
+      "scenes": 4
+    },
+    {
+      "path": "04_recovered/Scenes/Mobs/Basic/Creatures",
+      "name": "Creatures",
+      "files": 16,
+      "scenes": 14
+    }
+  ],
+  "key_files": {
+    "Mob.tscn": true,
+    "Mob.gd": true,
+    "PathingController.tscn": true,
+    "PathingController.gd": true,
+    "DissolveMob.tscn": true,
+    "DissolveMob.gd": true,
+    "H4QX.tres": true,
+    "Stats_node_in_Mob.tscn": true,
+    "Stats.tscn_referenced_by_Mob.tscn": true
+  },
+  "stats_dependency": {
+    "recovered_path": "04_recovered/Scenes/Stats.tscn",
+    "exists_in_recovered": true,
+    "migrated_product_path": "product/scenes/Stats.tscn",
+    "already_migrated_to_product": true,
+    "note": "Mob.tscn instantiates Scenes/Stats.tscn as child node 'Stats'; dependency already satisfied."
+  },
+  "product_references_to_mobs": [
+    "res://scenes/Mobs/Basic/Creatures/AttackDog.tscn",
+    "res://scenes/Mobs/Basic/Creatures/ChilledBones.tscn",
+    "res://scenes/Mobs/Basic/Creatures/FireBomber.tscn",
+    "res://scenes/Mobs/Basic/Creatures/IceGolem.tscn",
+    "res://scenes/Mobs/Basic/Creatures/LightningDog.tscn",
+    "res://scenes/Mobs/Basic/Creatures/Ninja.tscn",
+    "res://scenes/Mobs/Basic/Creatures/SkeletonArcher.tscn",
+    "res://scenes/Mobs/Basic/Creatures/SkeletonCurser.tscn",
+    "res://scenes/Mobs/Basic/Creatures/SkeletonMage.tscn",
+    "res://scenes/Mobs/Basic/Creatures/SkeletonSparker.tscn",
+    "res://scenes/Mobs/Basic/Creatures/SkeletonWarrior.tscn",
+    "res://scenes/Mobs/Basic/Creatures/Skeletor.tscn",
+    "res://scenes/Mobs/Basic/Creatures/Spider.tscn",
+    "res://scenes/Mobs/Basic/Creatures/Zombie.tscn",
+    "res://scenes/Mobs/Bosses/GateKeeper.tscn",
+    "res://scenes/Mobs/Bosses/MutatedSpider.tscn",
+    "res://scenes/Mobs/Bosses/Sludge.tscn",
+    "res://scenes/Mobs/Bosses/SpiritOfTheAncient.tscn"
+  ],
+  "product_reference_sources": [
+    "product/Globals/Levels.gd",
+    "product/Globals/MonsterLevels.gd"
+  ],
+  "missing_source_files_for_refs": [],
+  "classification": {
+    "in_scope_wave_f": [
+      "04_recovered/Scenes/Mobs/Basic/Creatures/AttackDog.tscn",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/ChilledBones.tscn",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/FireBomber.tscn",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/IceGolem.tscn",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/LightningDog.tscn",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/Ninja.tscn",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/PoisonDeath.gd",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/SkeletonArcher.tscn",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/SkeletonCurser.gd",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/SkeletonCurser.tscn",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/SkeletonMage.tscn",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/SkeletonSparker.tscn",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/SkeletonWarrior.tscn",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/Skeletor.tscn",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/Spider.tscn",
+      "04_recovered/Scenes/Mobs/Basic/Creatures/Zombie.tscn",
+      "04_recovered/Scenes/Mobs/Bosses/GateKeeper.tscn",
+      "04_recovered/Scenes/Mobs/Bosses/MutatedSpider.tscn",
+      "04_recovered/Scenes/Mobs/Bosses/Sludge.tscn",
+      "04_recovered/Scenes/Mobs/Bosses/SpiritOfTheAncient.tscn",
+      "04_recovered/Scenes/Mobs/DissolveMob.gd",
+      "04_recovered/Scenes/Mobs/DissolveMob.tscn",
+      "04_recovered/Scenes/Mobs/H4QX.tres",
+      "04_recovered/Scenes/Mobs/Mob.gd",
+      "04_recovered/Scenes/Mobs/Mob.tscn",
+      "04_recovered/Scenes/Mobs/PathingController.gd",
+      "04_recovered/Scenes/Mobs/PathingController.tscn"
+    ],
+    "deferred_later_waves": [
+      "04_recovered/Scenes/Mobs/Basic/TrainingDummy.tscn"
+    ]
+  },
+  "classification_rules": {
+    "in_scope_wave_f": "Mobs 根目录基础子系统文件 + 被 product 直接 preload/load 的场景 + 这些场景直接挂载的伴随脚本",
+    "deferred_later_waves": "未被 product 引用的场景（如 TrainingDummy.tscn，仅被 04_recovered 的 HideoutLevel.tscn 引用，随关卡批次迁移）"
+  }
+}

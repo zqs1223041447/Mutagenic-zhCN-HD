@@ -1,0 +1,852 @@
+[
+    {
+        "skill": {
+            "radius": 60
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 300.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.2,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 314.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.2,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 330.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.21,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 62
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 345.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.21,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 362.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.22,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 379.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.22,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 64
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 398.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.22,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 417.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.23,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 437.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.23,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 66
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 458.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.24,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 480.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.24,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 503.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.25,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 68
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 527.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.25,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 553.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.26,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 579.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.26,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 70
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 607.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.26,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 71
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 636.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.27,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 667.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.27,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 699.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.28,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 73
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 733.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.29,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 74
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 768.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.29,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 805.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.3,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 844.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.3,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 76
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 884.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.31,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 77
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 927.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.31,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 78
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 971.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.32,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 79
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1018.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.33,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1067.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.33,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1118.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.34,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 81
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1172.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.34,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 82
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1228.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.35,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 83
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1288.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.36,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 84
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1350.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.36,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 85
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1414.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.37,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1483.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.38,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1554.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.38,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 87
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1629.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.39,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 88
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1707.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.4,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 89
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1789.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.41,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 90
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1875.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.41,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 91
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 1965.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.42,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 92
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 2060.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.43,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 93
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 2159.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.44,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 94
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 2263.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.45,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 95
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 2372.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.46,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 96
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 2486.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.46,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 97
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 2606.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.47,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 98
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 2731.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.48,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 99
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 2862.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.49,
+                    "type": "more"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 100
+        },
+        "aura": {
+            "mitigation": [
+                {
+                    "amount": 3000.0,
+                    "type": "flat"
+                },
+                {
+                    "amount": 0.5,
+                    "type": "more"
+                }
+            ]
+        }
+    }
+]

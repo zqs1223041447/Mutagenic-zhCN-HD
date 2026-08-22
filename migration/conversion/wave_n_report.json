@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "task": "P1-WAVE-N",
+  "generated_at": "2026-08-21T20:30:16Z",
+  "product_dir": "product",
+  "import_parse": {
+    "status": "RAN",
+    "result": "ERRORS_CLASSIFIED",
+    "script_error_lines": 1,
+    "prev_script_error_lines": 784,
+    "shader_error_lines": 0,
+    "prev_shader_error_lines": 24,
+    "zero_errors_required": false
+  },
+  "fixes": {
+    "cascade_and_api_files_changed": 53,
+    "targeted_sites": "~60 + 193 preload->load conversions + 12 Color constants",
+    "autoload_compile_failures": {
+      "before": 17,
+      "after": 0
+    },
+    "tooltipbase_migrated": [
+      {
+        "file": "scenes/Tooltips/TooltipBase.gd",
+        "confine_to_window_dropped": 1
+      }
+    ],
+    "effect_renders_copied": 14,
+    "aseprite_refs_rewritten_to_png": 20,
+    "shader_files_fixed": 11,
+    "shader_fix_note": "PI redefinition removed, hint_color->source_color, TEXTURE-in-function inlined; FogShader/RingShader latent hint_color flagged for next wave"
+  },
+  "boot_probe": {
+    "status": "BOOTED_WITH_ERRORS",
+    "returncode": 0,
+    "script_error_count": 662,
+    "prev": 490,
+    "by_class": {
+      "missing_asset": 256,
+      "class_resolve": 0,
+      "load_fail": 2,
+      "api_member": 0,
+      "other": 789
+    },
+    "attribution": "runtime error count rose 490->662 because 193 preload->load conversions moved missing-resource failures from parse-time to run-time; parse-time errors collapsed 784->1. Runtime missing_asset now dominant (287).",
+    "duration_ms": 16343
+  },
+  "recovered_unmodified": true,
+  "notes": [
+    "Wave N converged class cascades (36+), api_member (55), shaders (24) and migrated TooltipBase.",
+    "Remaining runtime signal: missing assets at load time (aseprite SpriteFrames without sources, UI audio/textures) - art-pipeline boundary.",
+    "04_recovered remains immutable."
+  ]
+}

@@ -1,0 +1,427 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Texture2D" path="res://sprites/gui/gene.png" id="1"]
+[ext_resource type="Theme" path="res://Themes/MainTheme.tres" id="2"]
+[ext_resource type="Script" path="res://scenes/Popups/Dialogs/GeneEditor/GeneEditor.gd" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/Popups/Dialogs/GeneEditor/CraftButton.tscn" id="4"]
+[ext_resource type="Texture2D" path="res://sprites/drops/blue_orb.png" id="5"]
+[ext_resource type="Texture2D" path="res://sprites/drops/gold_orb.png" id="6"]
+[ext_resource type="Texture2D" path="res://sprites/drops/red_orb.png" id="7"]
+[ext_resource type="Texture2D" path="res://sprites/drops/green_orb.png" id="8"]
+[ext_resource type="Texture2D" path="res://sprites/drops/corruption.png" id="9"]
+[ext_resource type="Texture2D" path="res://sprites/_mapped/ui/important.png" id="10"]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 16.0
+content_margin_right = 16.0
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.0647035, 0.0675581, 0.0742188, 1)
+
+[node name="GeneEditor" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.815686)
+
+[node name="GeneEditor" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GeneEditor"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 784.0
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GeneEditor/VBoxContainer"]
+offset_right = 1248.0
+offset_bottom = 45.0
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer"]
+offset_right = 447.0
+offset_bottom = 45.0
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="GeneEditor/VBoxContainer/HBoxContainer/HBoxContainer"]
+offset_top = 10.0
+offset_right = 95.0
+offset_bottom = 35.0
+text = "Gene Name"
+
+[node name="NameEdit" type="LineEdit" parent="GeneEditor/VBoxContainer/HBoxContainer/HBoxContainer"]
+offset_left = 127.0
+offset_right = 447.0
+offset_bottom = 45.0
+custom_minimum_size = Vector2(320, 0)
+max_length = 20
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer"]
+offset_left = 451.0
+offset_right = 1029.0
+offset_bottom = 45.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="CraftingHelpButton" type="Button" parent="GeneEditor/VBoxContainer/HBoxContainer"]
+offset_left = 1033.0
+offset_right = 1181.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0.294118, 0.65098, 0.27451, 1)
+text = "Crafting Help"
+icon = ExtResource("10")
+
+[node name="CancelButton" type="Button" parent="GeneEditor/VBoxContainer/HBoxContainer"]
+offset_left = 1185.0
+offset_right = 1248.0
+offset_bottom = 45.0
+text = "Done"
+
+[node name="HSeparator2" type="HSeparator" parent="GeneEditor/VBoxContainer"]
+offset_top = 61.0
+offset_right = 1248.0
+offset_bottom = 65.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GeneEditor/VBoxContainer"]
+offset_top = 81.0
+offset_right = 1248.0
+offset_bottom = 768.0
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2"]
+offset_right = 228.0
+offset_bottom = 687.0
+custom_minimum_size = Vector2(228, 0)
+theme_override_constants/separation = 16
+
+[node name="ScrambleButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer" instance=ExtResource("4")]
+offset_right = 228.0
+offset_bottom = 74.0
+craft_type = "SCRAMBLE"
+
+[node name="ScrambleLuckyButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer" instance=ExtResource("4")]
+offset_top = 90.0
+offset_right = 228.0
+offset_bottom = 164.0
+craft_type = "SCRAMBLE_LUCKY"
+
+[node name="ScrambleUltraButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer" instance=ExtResource("4")]
+offset_top = 180.0
+offset_right = 228.0
+offset_bottom = 254.0
+craft_type = "SCRAMBLE_ULTRA"
+
+[node name="ScramblePrefixesButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer" instance=ExtResource("4")]
+visible = false
+offset_top = 160.0
+offset_right = 228.0
+offset_bottom = 224.0
+craft_type = "SCRAMBLE_PREFIXES"
+
+[node name="ScrambleSuffixesButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer" instance=ExtResource("4")]
+visible = false
+offset_top = 88.0
+offset_right = 228.0
+offset_bottom = 160.0
+craft_type = "SCRAMBLE_SUFFIXES"
+
+[node name="RestoreButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer" instance=ExtResource("4")]
+offset_top = 270.0
+offset_right = 228.0
+offset_bottom = 344.0
+craft_type = "SPLICE"
+
+[node name="ExtractButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer" instance=ExtResource("4")]
+offset_top = 360.0
+offset_right = 228.0
+offset_bottom = 434.0
+craft_type = "EXTRACT"
+
+[node name="RecombinateButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer" instance=ExtResource("4")]
+offset_top = 450.0
+offset_right = 228.0
+offset_bottom = 524.0
+craft_type = "RECOMBINATE"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2"]
+offset_left = 232.0
+offset_right = 1016.0
+offset_bottom = 687.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+offset_right = 784.0
+offset_bottom = 61.0
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4"]
+offset_left = 184.0
+offset_right = 216.0
+offset_bottom = 61.0
+
+[node name="BlueOrbLabel" type="Label" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4/VBoxContainer"]
+offset_right = 32.0
+offset_bottom = 25.0
+text = "5"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4/VBoxContainer"]
+offset_top = 29.0
+offset_right = 32.0
+offset_bottom = 61.0
+custom_minimum_size = Vector2(32, 32)
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4"]
+offset_left = 280.0
+offset_right = 312.0
+offset_bottom = 61.0
+
+[node name="RedOrbLabel" type="Label" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4/VBoxContainer2"]
+offset_right = 32.0
+offset_bottom = 25.0
+text = "5"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4/VBoxContainer2"]
+offset_top = 29.0
+offset_right = 32.0
+offset_bottom = 61.0
+custom_minimum_size = Vector2(32, 32)
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4"]
+offset_left = 376.0
+offset_right = 408.0
+offset_bottom = 61.0
+
+[node name="GreenOrbLabel" type="Label" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4/VBoxContainer3"]
+offset_right = 32.0
+offset_bottom = 25.0
+text = "5"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4/VBoxContainer3"]
+offset_top = 29.0
+offset_right = 32.0
+offset_bottom = 61.0
+custom_minimum_size = Vector2(32, 32)
+texture = ExtResource("8")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4"]
+offset_left = 472.0
+offset_right = 504.0
+offset_bottom = 61.0
+
+[node name="GoldOrbLabel" type="Label" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4/VBoxContainer4"]
+offset_right = 32.0
+offset_bottom = 25.0
+text = "5"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4/VBoxContainer4"]
+offset_top = 29.0
+offset_right = 32.0
+offset_bottom = 61.0
+custom_minimum_size = Vector2(32, 32)
+texture = ExtResource("6")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4"]
+offset_left = 568.0
+offset_right = 600.0
+offset_bottom = 61.0
+
+[node name="CorruptionLabel" type="Label" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4/VBoxContainer5"]
+offset_right = 32.0
+offset_bottom = 25.0
+text = "5"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer4/VBoxContainer5"]
+offset_top = 29.0
+offset_right = 32.0
+offset_bottom = 61.0
+custom_minimum_size = Vector2(32, 32)
+texture = ExtResource("9")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="HSeparator" type="HSeparator" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+offset_top = 65.0
+offset_right = 784.0
+offset_bottom = 69.0
+
+[node name="UniqueNameLabel" type="Label" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+visible = false
+offset_top = 68.0
+offset_right = 784.0
+offset_bottom = 88.0
+text = "UNIQUE NAME"
+align = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+offset_top = 73.0
+offset_right = 784.0
+offset_bottom = 137.0
+
+[node name="IconTexture" type="TextureRect" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/CenterContainer"]
+offset_left = 360.0
+offset_right = 424.0
+offset_bottom = 64.0
+custom_minimum_size = Vector2(64, 64)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="GeneLevelLabel" type="Label" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+offset_top = 141.0
+offset_right = 784.0
+offset_bottom = 166.0
+text = "UNIQUE NAME"
+align = 1
+
+[node name="GeneQualityLabel" type="Label" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+visible = false
+offset_top = 170.0
+offset_right = 784.0
+offset_bottom = 195.0
+text = "UNIQUE NAME"
+align = 1
+
+[node name="ImplicitInfo" type="VBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+offset_top = 170.0
+offset_right = 784.0
+offset_bottom = 170.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+offset_top = 174.0
+offset_right = 784.0
+offset_bottom = 631.0
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer"]
+offset_right = 384.0
+offset_bottom = 457.0
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("1")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer/PanelContainer2"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 441.0
+
+[node name="StoredStatList" type="VBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer/PanelContainer2/ScrollContainer"]
+offset_right = 352.0
+offset_bottom = 425.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="PanelContainer3" type="PanelContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer"]
+offset_left = 400.0
+offset_right = 784.0
+offset_bottom = 457.0
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("1")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer/PanelContainer3"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 441.0
+
+[node name="GeneStatList" type="VBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer/PanelContainer3/ScrollContainer"]
+offset_right = 352.0
+offset_bottom = 425.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+offset_top = 635.0
+offset_right = 784.0
+offset_bottom = 687.0
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer3"]
+offset_right = 513.0
+offset_bottom = 52.0
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer3/HBoxContainer"]
+offset_right = 115.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Delete Item"
+
+[node name="AdvancedToggle" type="CheckButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer3"]
+offset_left = 517.0
+offset_right = 784.0
+offset_bottom = 52.0
+text = "Show Advanced Mods"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="GeneEditor/VBoxContainer/HBoxContainer2"]
+offset_left = 1020.0
+offset_right = 1248.0
+offset_bottom = 687.0
+custom_minimum_size = Vector2(228, 0)
+theme_override_constants/separation = 16
+
+[node name="CosmicButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer3" instance=ExtResource("4")]
+offset_right = 228.0
+offset_bottom = 74.0
+craft_type = "COSMIC"
+
+[node name="RemoveModButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer3" instance=ExtResource("4")]
+visible = false
+offset_top = 88.0
+offset_right = 228.0
+offset_bottom = 160.0
+craft_type = "RECESSIVE"
+
+[node name="AddModButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer3" instance=ExtResource("4")]
+visible = false
+offset_top = 88.0
+offset_right = 228.0
+offset_bottom = 160.0
+craft_type = "GAMMA"
+
+[node name="UpgradeTierButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer3" instance=ExtResource("4")]
+offset_top = 90.0
+offset_right = 228.0
+offset_bottom = 164.0
+craft_type = "UPGRADE_TIER"
+
+[node name="LockModButton" parent="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer3" instance=ExtResource("4")]
+visible = false
+offset_top = 176.0
+offset_right = 228.0
+offset_bottom = 248.0
+craft_type = "LOCK_MOD"
+
+[connection signal="text_changed" from="GeneEditor/VBoxContainer/HBoxContainer/HBoxContainer/NameEdit" to="." method="_on_LineEdit_text_changed"]
+[connection signal="pressed" from="GeneEditor/VBoxContainer/HBoxContainer/CraftingHelpButton" to="." method="_on_CraftingHelpButton_pressed"]
+[connection signal="pressed" from="GeneEditor/VBoxContainer/HBoxContainer/CancelButton" to="." method="_on_CancelButton_pressed"]
+[connection signal="pressed" from="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer3/HBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="toggled" from="GeneEditor/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer3/AdvancedToggle" to="." method="_on_CheckBox_toggled"]

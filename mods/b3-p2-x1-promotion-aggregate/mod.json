@@ -1,0 +1,23 @@
+{
+  "id": "b3-p2-x1-promotion-aggregate",
+  "version": "0.1.0",
+  "patch_type": "RESOLVED_MOD_CHAIN",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "feat-tce",
+    "feat-tce-context",
+    "k1-player-response",
+    "k2-hit-reaction",
+    "k4-audio-foundation",
+    "p7-fix-persistence",
+    "b2-x1-combat-event-spine",
+    "b2-x4-kill-feel",
+    "b2-x5-camera-impulse",
+    "b2-x6-combat-audio-layers",
+    "b3-cp1-camera-zoom-setting"
+  ],
+  "conflicts": [],
+  "scope": "B3-P2-X1 Promotion Candidate aggregate root (see docs/ai/batches/B3_CANDIDATE_SPLIT.md): same 10 formal gameplay MODs as the B2-I1 validation chain (feat-tce, feat-tce-context, k1-player-response, k2-hit-reaction, k4-audio-foundation, p7-fix-persistence, b2-x1-combat-event-spine, b2-x4-kill-feel, b2-x5-camera-impulse, b2-x6-combat-audio-layers) minus the validation-only mods (k5-combat-harness harness driver, b2-x0-combat-harness-bridge ENABLE_TEST_ZONE flag) and minus all diagnostic mods (b3-p1-s2-diagnostic). Composition metadata only: no patches of its own, no gameplay value/semantic change. Produces the Promotion Candidate resolved patch set whose only difference from the Validation Candidate is the harness/test-only entry surface.",
+  "proves": "the 10-mod formal gameplay chain resolves with a single consistent target_original_sha256 and no conflicts, without the harness bridge, the harness driver, or any diagnostic/modification-tool patch; gameplay parity with the Validation Candidate is asserted by the parity contract scripts/validate/semantic_validation_promotion_parity.py",
+  "not_proven": "patch application, compile, pack/embed, S0/S1/S2/S4/S5 runtime evidence (validation evidence for the shared formal mods lives with the B2-I1 candidate)"
+}

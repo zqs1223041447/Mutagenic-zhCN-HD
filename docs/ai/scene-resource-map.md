@@ -1,9 +1,8 @@
 # Mutagenic 场景与资源引用图(Scene & Resource Map)
 
-> **文档角色**:源码参考工程的一部分。定位"改哪里、依赖什么"的机器可验证索引。
-> **数据来源**:`05_schema/game_schema.json`(SHA-256 `C4472A29A3696412A633B858CE8046B2D737BB2C210643336CA68144E9FBA7F1`,schema_version 见该文件)与 `docs/ai/source_index.json`。
-> **可信度**:本文件所有数字与路径均为 FACT(从 schema 机器提取);语义解释为 INFERENCE_HIGH。
-> **生成日期**:2026-08-14。仅限参考,不构成生产输入(见 AGENTS.md §5.3/§13)。
+> 只读对照：3.5.3 场景/资源「改哪里、依赖什么」。不是任务入口。当前主线见 `AGENT.MD`。  
+> 本 clone **没有** `05_schema/game_schema.json`。文中 schema SHA `C4472A29…` 无法就地复核；数字以 `docs/ai/source_index.json` 与 `04_recovered` 为准。  
+> 生成日期 2026-08-14。不构成生产输入。
 
 ---
 
@@ -133,7 +132,7 @@
   - `all_skill_list` / `stat_list` 全量统计键
 - 标签枚举 `Tags`(PHYSICAL/LIGHTNING/COLD/FIRE/TOXIC/DAMAGE/PROJECTILE/DEFENCE/CRIT…)
 
-> 详细条目请直接读 `05_schema/game_schema.json` 的 `skills` / `stats` 节点——本文件只做索引,不复制全量数据。
+> 本 clone 没有 `05_schema/`。细目以 `04_recovered/Globals/Skills.gd`、`Globals/StatsInfo.gd` 和 `docs/ai/source_index.json` 为准。
 
 ---
 
@@ -186,15 +185,15 @@
 
 ---
 
-## 10. 扩展/维护指引(定位速查)
+## 10. 定位速查（只读）
 
-- **想改主菜单文案** → `Scenes/Menu.tscn`(参照 `mods/c5-l1-localization-menu-play-font/`)
-- **想改角色选择** → `Scenes/Popups/Dialogs/CharacterSelect/*` + `Globals/PlayableClasses.gd`
-- **想改技能数值** → `Globals/StatsInfo.gd` / `Globals/Skills.gd`(配合 `05_schema/game_schema.json` skills 节点)
-- **想改关卡** → `Scenes/Levels/*` + `05_schema` levels.config
-- **想改存档逻辑** → `Globals/GameState.gd`(注意 checksum/stamp 契约)
-- **想改按键** → `Globals/Keybindings.gd` + `project.godot` input 段
-- **想加职业** → `Globals/PlayableClasses.gd`(需同步 schema 与存档迁移)
-- **想改装备/掉落** → `Globals/ItemManager.gd` / `Globals/ItemNameGenerator.gd`
+这些是 `04_recovered` 里相关系统的入口，给迁移扫描用。不要直接改 `04_recovered`。本 clone 没有 `05_schema/`。
 
-> 每次修改必须走声明式 mod 流程(见 `docs/ai/secondary-development-guide.md`),禁止直接改 `04_recovered` 后重打包。
+- 主菜单 → `Scenes/Menu.tscn`
+- 角色选择 → `Scenes/Popups/Dialogs/CharacterSelect/*` + `Globals/PlayableClasses.gd`
+- 技能数值 → `Globals/StatsInfo.gd` / `Globals/Skills.gd`
+- 关卡 → `Scenes/Levels/*`
+- 存档 → `Globals/GameState.gd`
+- 按键 → `Globals/Keybindings.gd`
+- 职业 → `Globals/PlayableClasses.gd`
+- 装备/掉落 → `Globals/ItemManager.gd` / `Globals/ItemNameGenerator.gd`

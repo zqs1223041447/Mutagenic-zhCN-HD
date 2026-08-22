@@ -1,0 +1,27 @@
+[gd_resource type="Shader" format=3]
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_add;
+
+uniform vec4 color : source_color = vec4(0.9, 0.4, 0.1, 1.0);
+
+uniform float brightness : hint_range(0.0, 15.0, 0.01) = 5.0;
+
+uniform float alpha : hint_range(0.0, 1.0, 0.01) = .5;
+
+uniform sampler2D noise;
+
+void fragment() {
+	vec2 v = -UV + vec2(0.5, 0.0);
+    vec2 v2 = -UV + vec2(0.5, 1.0);
+	float angle = atan(v.y, v.x);
+    float sangle = sin(angle) * sin(angle);
+    float angle2 = atan(v2.y, v2.x);
+    float sangle2 = sin(angle2) * sin(angle2);
+	float thick_ratio = 1.0 - 2.0 * abs(0.5 - UV.x);
+	vec4 col = thick_ratio * brightness * color;
+	vec3 tex = texture(noise, UV - vec2(0.0, TIME)).rgb;
+	col.a = sangle2*sangle * (alpha * (tex.r + tex.g + tex.b) * clamp(thick_ratio, 0., 1.));
+	COLOR = col;
+}"

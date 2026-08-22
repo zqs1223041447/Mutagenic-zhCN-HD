@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="1"]
+[ext_resource type="SpriteFrames" path="res://sprites/projectiles/sota_spear.png" id="2"]
+[ext_resource type="Script" path="res://scenes/Projectiles/MobSkills/SotaSpear/SotaSpear.gd" id="3"]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2(10, 2.5)
+
+[node name="SotaSpear" instance=ExtResource("1")]
+script = ExtResource("3")
+does_rotate = true
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, 0.5)
+shape = SubResource("1")
+
+[node name="Sprite" parent="." index="1"]
+frames = ExtResource("2")
+
+[node name="Glow" parent="." index="2"]
+visible = true

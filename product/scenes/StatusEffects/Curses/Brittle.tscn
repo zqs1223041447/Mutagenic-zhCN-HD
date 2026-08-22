@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://sprites/skills/brittle.png" id="1"]
+[ext_resource type="Script" path="res://scenes/StatusEffects/Curses/Brittle.gd" id="2"]
+
+[node name="Brittle" type="Node"]
+script = ExtResource("2")
+description = "Brittle"
+texture = ExtResource("1")
+only_apply_strongest = true
+unique_group = "Brittle"

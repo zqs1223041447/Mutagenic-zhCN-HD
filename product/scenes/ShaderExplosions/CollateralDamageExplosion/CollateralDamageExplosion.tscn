@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/ShaderExplosions/ShaderExplosion.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/ShaderExplosions/CollateralDamageExplosion/CollateralDamageExplosion.gd" id="2"]
+[ext_resource type="Shader" path="res://scenes/ShaderExplosions/RippleShader.tres" id="3"]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource("3")
+shader_parameter/color = Color(0.215686, 0.133333, 0.0392157, 1)
+shader_parameter/pct_done = 0.0
+shader_parameter/burst_width = 0.1
+shader_parameter/start_amount = 0.3
+
+[node name="CollateralDamageExplosion" instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="ColorRect" parent="." index="0"]
+material = SubResource("1")
+color = Color(1, 1, 1, 0)
+
+[node name="Timer" parent="." index="1"]
+wait_time = 0.25

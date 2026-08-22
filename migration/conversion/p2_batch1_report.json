@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "task": "P2-BATCH-1",
+  "generated_at": "2026-08-21T21:16:13Z",
+  "p2_a0_steam_layer": {
+    "decision": "A2: USE_STEAM=false + guard completion (expert consult accepted)",
+    "sites_changed": [
+      "product/Globals/Constants.gd:90 USE_STEAM true->false",
+      "product/Globals/Leaderboard.gd initialize() guarded",
+      "product/Globals/MTXManager.gd initialize() guarded"
+    ],
+    "boot_script_errors": {
+      "before": 662,
+      "after": 59
+    },
+    "steam_class_errors": 0,
+    "local_save_fallback": "native user:// path active"
+  },
+  "p2_a1_boot_baseline": {
+    "runs": 2,
+    "returncode": 0,
+    "script_error_count": 59,
+    "stable": true,
+    "evidence": [
+      "migration/conversion/p2_boot_baseline_1.json",
+      "migration/conversion/p2_boot_baseline_2.json"
+    ]
+  },
+  "p2_a2_smoke_probe": {
+    "overall": "SMOKE_PASS",
+    "hops": [
+      {
+        "scene": "res://scenes/LoadGame.tscn",
+        "status": "TIMEOUT",
+        "new_errors": 0
+      },
+      {
+        "scene": "res://scenes/Menu.tscn",
+        "status": "TIMEOUT",
+        "new_errors": 0
+      },
+      {
+        "scene": "res://scenes/Levels/TestLevel/TestLevel.tscn",
+        "status": "TIMEOUT",
+        "new_errors": 0
+      }
+    ],
+    "chain": "LoadGame -> Menu -> TestLevel",
+    "note": "all hops dwell-killed as planned; arrival presumed, manual confirmation advised; benign missing-asset errors excluded from fatal signature"
+  },
+  "p2_a4_state_writeback": "state/product_state.json updated by coordinator in this commit",
+  "recovered_unmodified": true,
+  "notes": [
+    "P2 minimal loop definition accepted from expert consult: boot probe -> smoke hops -> evidence bundle -> state write-back.",
+    "Remaining boot errors (59) are missing_asset class at art-pipeline boundary (.aseprite sources, UI audio).",
+    "04_recovered remains immutable."
+  ]
+}

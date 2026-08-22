@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/StatusEffects/DamageAilments/Infection.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/status_effects/infection.png" id="2"]
+
+[node name="Infection" type="Node"]
+script = ExtResource("1")
+recompute_stats = false
+description = "Infected"
+texture = ExtResource("2")
+is_ailment = true
+does_ramp = true
+damage_combine_group = "Infection"
+is_damaging_ailment = true
+base_lifetime = 4.0
+unique_group = "Infection"

@@ -1,4 +1,14 @@
-pycryptodome>=3.20.0
+# Fresh Clone 安装说明:
+#   1) 确保 Python >=3.11 (见 tools.lock.json 锁定 Python 3.11.15)
+#   2) python -m pip install --upgrade pip
+#   3) pip install -r requirements.txt
+#   4) 若需完整环境: python scripts/bootstrap/bootstrap_dev_env.py
+#      缺失私有资产时将提示 BLOCKED_BY_PRIVATE_ASSET，按 remediation 设置 env 后重试
+#   5) 自检: python scripts/bootstrap/dev_doctor.py [--json <path>] [--verbose]
+# 锁定版本来自 tools.lock.json (locked_at 2026-08-13):
+#   pycryptodome 3.23.0, fonttools 4.63.0, frida 17.17.0, Python 3.11.15
+# 约束保留 >= 下界以允许兼容补丁，CI 应以锁定版本为准
+pycryptodome>=3.20.0  # locked 3.23.0 in tools.lock.json
 pillow>=10.0.0
-fonttools>=4.40.0
-frida>=16.0.0
+fonttools>=4.40.0  # locked 4.63.0 in tools.lock.json
+frida>=16.0.0  # locked 17.17.0 in tools.lock.json

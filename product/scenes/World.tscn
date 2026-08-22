@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Levels/LevelLoader.tscn" id="1"]
+[ext_resource type="Shader" path="res://Shaders/ScreenSpaceGI.tres" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/GUI/GUI.tscn" id="4"]
+[ext_resource type="Script" path="res://scenes/World.gd" id="6"]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource("2")
+
+[node name="World" type="Node2D"]
+material = SubResource("1")
+script = ExtResource("6")
+
+[node name="BackgroundContainer" type="Node2D" parent="."]
+show_behind_parent = true
+z_index = -4000
+
+[node name="GroundEffects" type="Node2D" parent="."]
+z_index = -3900
+
+[node name="ProjectileLayer" type="Node2D" parent="."]
+z_index = 100
+
+[node name="Level" type="Node2D" parent="."]
+y_sort_enabled = true
+z_index = 512
+
+[node name="SkyLayer" type="Node2D" parent="."]
+z_index = 1024
+
+[node name="FloatingDamageTexts" type="Node2D" parent="."]
+y_sort_enabled = true
+z_index = 1000
+
+[node name="GUI" parent="." instance=ExtResource("4")]
+process_mode = 3
+[node name="LoadingScreen" parent="." instance=ExtResource("1")]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Explosions/FlipbookExplosion.tscn" id="1"]
+[ext_resource type="Texture2D" path="res://EffectRenders/shatter_render_all.png" id="2"]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+resource_local_to_scene = true
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 8
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=2]
+offsets = PackedFloat32Array( 0, 0.464 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource("2")
+
+[sub_resource type="ParticlesMaterial" id=4]
+resource_local_to_scene = true
+flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 360.0
+angle_random = 1.0
+color_ramp = SubResource("3")
+anim_speed = 2.0
+
+[node name="ShatterExplosion" instance=ExtResource("1")]
+material = SubResource("1")
+process_material = SubResource("4")
+texture = ExtResource("2")
+override_scale = 0.25

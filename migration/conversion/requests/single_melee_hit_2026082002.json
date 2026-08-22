@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "scenario": {
+    "id": "single_melee_hit",
+    "version": 1,
+    "summary": "One melee SkeletonWarrior spawned near the player. Baseline direct-hit observation: damage arrives, mob reacts, death settles exactly once.",
+    "default_seed": 2026082002,
+    "duration_seconds": 20.0,
+    "end_condition": {
+      "type": "all_mobs_dead_or_timeout",
+      "timeout_seconds": 20.0
+    },
+    "spawn": {
+      "mode": "ladder",
+      "ladder": {
+        "x": 0,
+        "y": 0,
+        "wave": 1
+      },
+      "origin": [
+        140.0,
+        0.0
+      ],
+      "spread": 60.0
+    },
+    "player": {
+      "position": [
+        0.0,
+        0.0
+      ]
+    },
+    "mob_composition": [
+      {
+        "mob": "skeleton_warrior",
+        "count": 1
+      }
+    ],
+    "asserts": [
+      {
+        "label": "boot_ok",
+        "field": "boot.ok",
+        "op": "==",
+        "value": true,
+        "capability": "required"
+      },
+      {
+        "label": "exactly_one_spawned",
+        "field": "counters.spawned",
+        "op": ">=",
+        "value": 1,
+        "capability": "required"
+      },
+      {
+        "label": "direct_hit_damage_observed",
+        "field": "counters.damage_events",
+        "op": ">=",
+        "value": 1,
+        "capability": "optional"
+      },
+      {
+        "label": "no_duplicate_death",
+        "field": "counters.duplicate_deaths",
+        "op": "==",
+        "value": 0,
+        "capability": "optional"
+      }
+    ],
+    "proves": "the minimal melee combat path is exercised end to end with a single deterministic mob and clean boot under the declared seed",
+    "not_proven": "crit globals, mob hit-reaction quality (B1-X2), player-response feel (B1-X1), or kill-feedback timing",
+    "requires": [
+      "boot",
+      "damage_events",
+      "duplicate_deaths"
+    ],
+    "stress": false
+  },
+  "seed": 2026082002,
+  "plan": {
+    "plan_version": 1,
+    "scenario_id": "single_melee_hit",
+    "seed": 2026082002,
+    "total_spawn": 1,
+    "spawns": [
+      {
+        "order": 1,
+        "mob": "skeleton_warrior",
+        "resource": {
+          "res": "res://scenes/Mobs/Mob.tscn",
+          "mob_type": "SKELETON_WARRIOR"
+        },
+        "count_index": 0,
+        "position": [
+          90.3,
+          58.0
+        ],
+        "elite": false,
+        "magic": false
+      }
+    ],
+    "plan_sha256": "668ecefebdb5132e1d4e7145ee5ee89f0162652bb681bddc4437d3da345ae058"
+  },
+  "mob_resources": {
+    "skeleton_warrior": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "SKELETON_WARRIOR"
+    },
+    "skeleton_archer": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "SKELETON_ARCHER"
+    },
+    "skeleton_sparker": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "SKELETON_SPARKER"
+    },
+    "skeleton_mage": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "SKELETON_MAGE"
+    },
+    "zombie": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "ZOMBIE"
+    },
+    "spider": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "SPIDER"
+    },
+    "skeletor": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "SKELETOR"
+    },
+    "attack_dog": {
+      "res": "res://scenes/Mobs/Mob.tscn",
+      "mob_type": "ATTACK_DOG"
+    }
+  },
+  "expected_telemetry_path": "<repo>\\migration\\conversion\\telemetry\\single_melee_hit_2026082002.json",
+  "contract": "ScenarioDirector.gd reads 'game_request' (scenario_id/seed/duration/plan with res+x+y+count), seeds Godot RNG with 'seed', spawns per the plan, then writes telemetry JSON conforming to combat_telemetry_schema.json to 'expected_telemetry_path'.",
+  "game_request": {
+    "schema_version": "1.0",
+    "scenario_id": "single_melee_hit",
+    "seed": 2026082002,
+    "duration": 20.0,
+    "plan": [
+      {
+        "res": "res://scenes/Mobs/Mob.tscn",
+        "x": 90.3,
+        "y": 58.0,
+        "count": 1,
+        "mob_type": "SKELETON_WARRIOR"
+      }
+    ]
+  }
+}

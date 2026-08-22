@@ -1,0 +1,73 @@
+{
+  "checklist_schema_version": 1,
+  "aspect_id": "player_response",
+  "scenario_id": "movement_dash_smoke",
+  "seed": 2026082001,
+  "package_id": "b2x2-player_response-movement_dash_smoke-2026082001",
+  "instructions": "TEST FIXTURE ONLY. This file is synthetic human input used by s5_evidence_selftests.py "
+                   "to prove the driver structurally validates a human-filled checklist without ever "
+                   "writing a verdict itself. It is NOT real acceptance evidence.",
+  "response_types": {
+    "score_1_5": "integer 1..5",
+    "yes_no": "true | false",
+    "free_text": "string",
+    "prefer_side": "baseline | candidate | same | unclear"
+  },
+  "human_gate": {
+    "machine_status": "EVIDENCE_PREPARED",
+    "note": "machine evidence is PREPARED, not accepted; acceptance is decided by the human only"
+  },
+  "questions": [
+    {
+      "id": "pr_01",
+      "question": "整体跟手度：哪个版本控制更直接？",
+      "response_type": "prefer_side",
+      "judgment": "candidate",
+      "comment": "fixture"
+    },
+    {
+      "id": "pr_02",
+      "question": "移动/转向响应直接感（1 很糊, 5 很直接）",
+      "response_type": "score_1_5",
+      "judgment": 4,
+      "comment": "fixture"
+    },
+    {
+      "id": "pr_03",
+      "question": "Dash 启动与收尾可读性（1 难判断, 5 清晰）",
+      "response_type": "score_1_5",
+      "judgment": 4,
+      "comment": "fixture"
+    },
+    {
+      "id": "pr_04",
+      "question": "高速施法/连续 Dash 是否出现输入丢失（被吞）？",
+      "response_type": "yes_no",
+      "judgment": false,
+      "comment": "fixture"
+    },
+    {
+      "id": "pr_05",
+      "question": "是否出现滑动失控或穿过碰撞？",
+      "response_type": "yes_no",
+      "judgment": false,
+      "comment": "fixture"
+    },
+    {
+      "id": "pr_06",
+      "question": "其他观察（自由文本）",
+      "response_type": "free_text",
+      "judgment": "fixture note only",
+      "comment": "fixture"
+    }
+  ],
+  "conclusion": {
+    "verdict": "accept_candidate",
+    "accepted_sides": [
+      "candidate"
+    ],
+    "signed_by": "fixture-human",
+    "signed_at": "2026-08-20T00:00:00Z",
+    "notes": "TEST FIXTURE only; synthetic human input, not real acceptance evidence."
+  }
+}

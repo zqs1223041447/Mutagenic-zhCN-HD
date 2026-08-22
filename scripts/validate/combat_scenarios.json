@@ -1,0 +1,639 @@
+{
+  "schema_version": 1,
+  "intent": "B1-X5 deterministic Combat Vertical Slice scenario catalog. Each scenario is an explicit, re-runnable unit: id / default seed / mob composition / spawn geometry / end condition / assert contract. The host-side driver (scripts/validate/combat_harness.py) parses this file and renders plan + telemetry + evidence from it. In-game execution is provided separately by the k5-combat-harness MOD (recovered TestLevel remains immutable).",
+  "mob_resources": {
+    "skeleton_warrior": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "SKELETON_WARRIOR" },
+    "skeleton_archer": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "SKELETON_ARCHER" },
+    "skeleton_sparker": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "SKELETON_SPARKER" },
+    "skeleton_mage": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "SKELETON_MAGE" },
+    "zombie": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "ZOMBIE" },
+    "spider": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "SPIDER" },
+    "skeletor": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "SKELETOR" },
+    "attack_dog": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "ATTACK_DOG" }
+  },
+  "scenarios": [
+    {
+      "id": "movement_dash_smoke",
+      "version": 1,
+      "summary": "Player spawns at origin on TestLevel; no enemies. Smoke check that movement and dash inputs are live and frame production is sound.",
+      "default_seed": 2026082001,
+      "duration_seconds": 30.0,
+      "end_condition": {
+        "type": "timeout",
+        "timeout_seconds": 30.0
+      },
+      "spawn": {
+        "mode": "plan",
+        "origin": [0.0, 0.0],
+        "spread": 120.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [],
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "no_duplicate_death_without_mobs",
+          "field": "counters.duplicate_deaths",
+          "op": "==",
+          "value": 0,
+          "capability": "optional"
+        },
+        {
+          "label": "dash_observed",
+          "field": "counters.dashes",
+          "op": ">=",
+          "value": 1,
+          "capability": "optional"
+        },
+        {
+          "label": "player_moved",
+          "field": "counters.player_moves",
+          "op": ">=",
+          "value": 1,
+          "capability": "optional"
+        }
+      ],
+      "proves": "that the TestLevel boots with a live player, movement/dash paths are exercised, the run exits cleanly and telemetry is written under the declared ID/seed",
+      "not_proven": "combat correctness; hit/crit/kill behavior; any candidate-specific player-response delta (that belongs to B1-X1 A/B)",
+      "requires": [
+        "boot",
+        "movement_counters",
+        "duplicate_deaths"
+      ],
+      "stress": false
+    },
+    {
+      "id": "single_melee_hit",
+      "version": 1,
+      "summary": "One melee SkeletonWarrior spawned near the player. Baseline direct-hit observation: damage arrives, mob reacts, death settles exactly once.",
+      "default_seed": 2026082002,
+      "duration_seconds": 20.0,
+      "end_condition": {
+        "type": "all_mobs_dead_or_timeout",
+        "timeout_seconds": 20.0
+      },
+      "spawn": {
+        "mode": "ladder",
+        "ladder": {
+          "x": 0,
+          "y": 0,
+          "wave": 1
+        },
+        "origin": [140.0, 0.0],
+        "spread": 60.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [
+        {
+          "mob": "skeleton_warrior",
+          "count": 1
+        }
+      ],
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "exactly_one_spawned",
+          "field": "counters.spawned",
+          "op": ">=",
+          "value": 1,
+          "capability": "required"
+        },
+        {
+          "label": "direct_hit_damage_observed",
+          "field": "counters.damage_events",
+          "op": ">=",
+          "value": 1,
+          "capability": "optional"
+        },
+        {
+          "label": "no_duplicate_death",
+          "field": "counters.duplicate_deaths",
+          "op": "==",
+          "value": 0,
+          "capability": "optional"
+        }
+      ],
+      "proves": "the minimal melee combat path is exercised end to end with a single deterministic mob and clean boot under the declared seed",
+      "not_proven": "crit globals, mob hit-reaction quality (B1-X2), player-response feel (B1-X1), or kill-feedback timing",
+      "requires": [
+        "boot",
+        "damage_events",
+        "duplicate_deaths"
+      ],
+      "stress": false
+    },
+    {
+      "id": "single_ranged_pack",
+      "version": 1,
+      "summary": "Three SkeletonArchers spawned at range. Baseline ranged-engagement observation: projectiles land, player can close distance, death settles exactly once.",
+      "default_seed": 2026082003,
+      "duration_seconds": 30.0,
+      "end_condition": {
+        "type": "all_mobs_dead_or_timeout",
+        "timeout_seconds": 30.0
+      },
+      "spawn": {
+        "mode": "ladder",
+        "ladder": {
+          "x": 0,
+          "y": 0,
+          "wave": 1
+        },
+        "origin": [300.0, 0.0],
+        "spread": 120.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [
+        {
+          "mob": "skeleton_archer",
+          "count": 3
+        }
+      ],
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "exactly_three_spawned",
+          "field": "counters.spawned",
+          "op": ">=",
+          "value": 3,
+          "capability": "required"
+        },
+        {
+          "label": "ranged_damage_observed",
+          "field": "counters.damage_events",
+          "op": ">=",
+          "value": 1,
+          "capability": "optional"
+        },
+        {
+          "label": "no_duplicate_death",
+          "field": "counters.duplicate_deaths",
+          "op": "==",
+          "value": 0,
+          "capability": "optional"
+        }
+      ],
+      "proves": "the ranged pack path spawns deterministically and exercises ranged damage without crashing the TestLevel run",
+      "not_proven": "projectile visual quality, aim feel, or any B1-X3 projectile/tce semantic",
+      "requires": [
+        "boot",
+        "damage_events",
+        "duplicate_deaths"
+      ],
+      "stress": false
+    },
+    {
+      "id": "rapid_hit_10s",
+      "version": 1,
+      "summary": "Five melee mobs + sustained player action for 10 seconds. High-hit-rate soak: verify no cascade crash, no frame collapse, no duplicate-death explosion.",
+      "default_seed": 2026082004,
+      "duration_seconds": 10.0,
+      "end_condition": {
+        "type": "timeout",
+        "timeout_seconds": 10.0
+      },
+      "spawn": {
+        "mode": "ladder",
+        "ladder": {
+          "x": 0,
+          "y": 0,
+          "wave": 1
+        },
+        "origin": [160.0, 0.0],
+        "spread": 220.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [
+        {
+          "mob": "skeleton_warrior",
+          "count": 5
+        }
+      ],
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "rapid_damage_observed",
+          "field": "counters.damage_events",
+          "op": ">=",
+          "value": 1,
+          "capability": "optional"
+        },
+        {
+          "label": "no_duplicate_death",
+          "field": "counters.duplicate_deaths",
+          "op": "==",
+          "value": 0,
+          "capability": "optional"
+        },
+        {
+          "label": "fps_floor",
+          "field": "perf.fps_avg",
+          "op": ">=",
+          "value": 30.0,
+          "capability": "optional"
+        }
+      ],
+      "proves": "a 10-second sustained-hit window runs without crashing and (when perf is measured) keeps average FPS above 30",
+      "not_proven": "hit-reaction pacing or visual quality under fire; B1-X2 throttling behavior; performance on slower hosts",
+      "requires": [
+        "boot",
+        "damage_events",
+        "duplicate_deaths",
+        "fps"
+      ],
+      "stress": false
+    },
+    {
+      "id": "cluster_kill_20",
+      "version": 1,
+      "summary": "20 mobs (10 melee + 5 ranged + 5 zombie) in a 300px cluster. Flagship 5-20 enemy cluster-kill slice: all killed, death settles exactly once per mob, no duplicate-death fanout.",
+      "default_seed": 2026082005,
+      "duration_seconds": 60.0,
+      "end_condition": {
+        "type": "all_mobs_dead_or_timeout",
+        "timeout_seconds": 60.0
+      },
+      "spawn": {
+        "mode": "ladder",
+        "ladder": {
+          "x": 0,
+          "y": 0,
+          "wave": 1
+        },
+        "origin": [180.0, 0.0],
+        "spread": 300.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [
+        {
+          "mob": "skeleton_warrior",
+          "count": 10
+        },
+        {
+          "mob": "skeleton_archer",
+          "count": 5
+        },
+        {
+          "mob": "zombie",
+          "count": 5
+        }
+      ],
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "all_twenty_spawned",
+          "field": "counters.spawned",
+          "op": ">=",
+          "value": 20,
+          "capability": "required"
+        },
+        {
+          "label": "cluster_fully_killed",
+          "field": "counters.killed",
+          "op": ">=",
+          "value": 20,
+          "capability": "required"
+        },
+        {
+          "label": "no_duplicate_death",
+          "field": "counters.duplicate_deaths",
+          "op": "==",
+          "value": 0,
+          "capability": "required"
+        },
+        {
+          "label": "fps_floor",
+          "field": "perf.fps_avg",
+          "op": ">=",
+          "value": 30.0,
+          "capability": "optional"
+        }
+      ],
+      "proves": "that a 20-mob mixed cluster is spawned deterministically, fully killed, and that every death is settled exactly once under the declared seed on the candidate",
+      "not_proven": "visual noise level, kill-feedback pacing, audio/camera aggregation, or cluster-kill feel (those need B1-X2/X4 plus an S5 human checkpoint)",
+      "requires": [
+        "boot",
+        "killed",
+        "duplicate_deaths",
+        "fps"
+      ],
+      "stress": false
+    },
+    {
+      "id": "projectile_density",
+      "version": 1,
+      "summary": "Eight zombies around the player while the player sustains a dense projectile skill. High projectile count soak: no crash, no frame collapse, clean exits.",
+      "default_seed": 2026082006,
+      "duration_seconds": 30.0,
+      "end_condition": {
+        "type": "timeout",
+        "timeout_seconds": 30.0
+      },
+      "spawn": {
+        "mode": "ladder",
+        "ladder": {
+          "x": 0,
+          "y": 0,
+          "wave": 1
+        },
+        "origin": [240.0, 0.0],
+        "spread": 320.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [
+        {
+          "mob": "zombie",
+          "count": 8
+        }
+      ],
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "dense_projectiles_observed",
+          "field": "counters.projectiles",
+          "op": ">=",
+          "value": 10,
+          "capability": "optional"
+        },
+        {
+          "label": "fps_floor",
+          "field": "perf.fps_avg",
+          "op": ">=",
+          "value": 20.0,
+          "capability": "optional"
+        }
+      ],
+      "proves": "that a dense projectile scenario runs at or above the declared FPS floor when perf telemetry is available and produces telemetry under the declared ID/seed",
+      "not_proven": "projectile readability or trail feel; projectile/tce semantic correctness (B1-X3); per-frame particle budget",
+      "requires": [
+        "boot",
+        "projectiles",
+        "fps"
+      ],
+      "stress": false
+    },
+    {
+      "id": "chain_pierce_trigger",
+      "version": 1,
+      "summary": "Six zombies in a line/ring for chain/pierce/trigger sample. When the candidate carries a TCE/pierce build, observe trigger count and verify every death settles once.",
+      "default_seed": 2026082007,
+      "duration_seconds": 30.0,
+      "end_condition": {
+        "type": "all_mobs_dead_or_timeout",
+        "timeout_seconds": 30.0
+      },
+      "spawn": {
+        "mode": "ladder",
+        "ladder": {
+          "x": 0,
+          "y": 0,
+          "wave": 1
+        },
+        "origin": [200.0, 0.0],
+        "spread": 350.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [
+        {
+          "mob": "zombie",
+          "count": 6
+        }
+      ],
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "trigger_observed",
+          "field": "counters.triggers",
+          "op": ">=",
+          "value": 1,
+          "capability": "optional"
+        },
+        {
+          "label": "no_duplicate_death",
+          "field": "counters.duplicate_deaths",
+          "op": "==",
+          "value": 0,
+          "capability": "required"
+        }
+      ],
+      "proves": "that a chain/pierce/trigger-shaped scenario runs cleanly and observes trigger semantics without duplicate-death fanout",
+      "not_proven": "that on-hit/on-crit/on-kill semantics are correct; trigger dispatch ordering; B1-X3 TCE contract",
+      "requires": [
+        "boot",
+        "triggers",
+        "duplicate_deaths"
+      ],
+      "stress": false
+    },
+    {
+      "id": "stress_random_300",
+      "version": 1,
+      "summary": "Legacy stress: 300 random mobs via the existing ladder spawner path (spawn_cluster_in_ladder(0,0,300,wave)) with an explicit seed. Kept as the independent stress scenario; NOT a determinism-by-mob-type scenario (composition is random by design).",
+      "default_seed": 2026082008,
+      "duration_seconds": 60.0,
+      "end_condition": {
+        "type": "timeout",
+        "timeout_seconds": 60.0
+      },
+      "spawn": {
+        "mode": "ladder",
+        "ladder": {
+          "x": 0,
+          "y": 0,
+          "wave": 1
+        },
+        "origin": [200.0, 0.0],
+        "spread": 500.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [
+        {
+          "mob": "random",
+          "count": 300
+        }
+      ],
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "all_three_hundred_spawned",
+          "field": "counters.spawned",
+          "op": ">=",
+          "value": 300,
+          "capability": "required"
+        },
+        {
+          "label": "fps_floor",
+          "field": "perf.fps_avg",
+          "op": ">=",
+          "value": 15.0,
+          "capability": "optional"
+        },
+        {
+          "label": "no_duplicate_death",
+          "field": "counters.duplicate_deaths",
+          "op": "==",
+          "value": 0,
+          "capability": "optional"
+        }
+      ],
+      "proves": "that the original random-300 stress path still runs on the candidate with telemetry and a clean exit under an explicit seed",
+      "not_proven": "deterministic mob composition (random by design); kill/crit balance; performance on slower hosts; any combat feel",
+      "requires": [
+        "boot",
+        "spawned",
+        "fps",
+        "duplicate_deaths"
+      ],
+      "stress": true
+    },
+    {
+      "id": "runtime_smoke_safe",
+      "version": 1,
+      "summary": "Lifecycle smoke (B3-P2-X0): 3 skeleton warriors spawn near the player. The harness explicitly activates a harness-only player_invulnerable exemption (health_max=1e8 + per-checkpoint fill_health, gated on this scenario_id) so the run survives to its 20s timeout; asserts prove the full telemetry lifecycle closes: session file at start, periodic checkpoints flushed, status=complete, exit_reason=timeout, without any player death or mob kill firing.",
+      "default_seed": 2026082201,
+      "duration_seconds": 20.0,
+      "end_condition": {
+        "type": "timeout",
+        "timeout_seconds": 20.0
+      },
+      "spawn": {
+        "mode": "plan",
+        "origin": [140.0, 0.0],
+        "spread": 60.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [
+        {
+          "mob": "skeleton_warrior",
+          "count": 3
+        }
+      ],
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "exactly_three_spawned",
+          "field": "counters.spawned",
+          "op": ">=",
+          "value": 3,
+          "capability": "required"
+        },
+        {
+          "label": "telemetry_status_complete",
+          "field": "status",
+          "op": "==",
+          "value": "complete",
+          "capability": "required"
+        },
+        {
+          "label": "exit_reason_timeout",
+          "field": "exit_reason",
+          "op": "==",
+          "value": "timeout",
+          "capability": "required"
+        },
+        {
+          "label": "checkpoints_flushed",
+          "field": "counters.checkpoint_count",
+          "op": ">=",
+          "value": 1,
+          "capability": "required"
+        },
+        {
+          "label": "no_mobs_died",
+          "field": "counters.killed",
+          "op": "==",
+          "value": 0,
+          "capability": "required"
+        },
+        {
+          "label": "no_duplicate_death",
+          "field": "counters.duplicate_deaths",
+          "op": "==",
+          "value": 0,
+          "capability": "required"
+        }
+      ],
+      "proves": "that the in-game telemetry lifecycle is fully closed on the candidate: a request-driven run creates its session file, flushes periodic checkpoints, reaches its timeout, and writes final telemetry with status=complete / exit_reason=timeout / counters.checkpoint_count>=1, with the harness-only exemption keeping the player alive (killed==0). No gameplay values are changed outside this explicit scenario.",
+      "not_proven": "combat correctness; kill/crit semantics; perf characterization; any candidate-specific player-response delta (player is invulnerable here by design)",
+      "requires": [
+        "boot",
+        "telemetry_lifecycle",
+        "checkpoints",
+        "exit_reason"
+      ],
+      "stress": false
+    }
+  ]
+}

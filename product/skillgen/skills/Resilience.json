@@ -1,0 +1,2152 @@
+[
+    {
+        "skill": {
+            "radius": 60
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.25,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 61
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 62
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.26,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 63
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.27,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 64
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.28,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 65
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 66
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.29,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 67
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.3,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 68
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.31,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.31,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.31,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.31,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.31,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.31,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 69
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.32,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 70
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 71
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.33,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 72
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.34,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 73
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.35,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.35,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.35,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.35,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.35,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.35,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 74
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.36,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 75
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.37,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.37,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.37,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.37,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.37,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.37,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 76
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 77
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.38,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 78
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.39,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.39,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.39,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.39,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.39,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.39,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 79
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.4,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 80
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.41,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.41,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.41,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.41,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.41,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.41,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 81
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.42,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.42,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.42,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.42,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.42,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.42,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 82
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 83
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.43,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 84
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.44,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.44,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.44,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.44,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.44,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.44,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 85
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.45,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.45,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.45,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.45,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.45,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.45,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.46,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.46,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.46,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.46,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.46,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.46,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 86
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.47,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.47,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.47,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.47,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.47,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.47,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 87
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.48,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.48,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.48,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.48,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.48,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.48,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 88
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.48,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.48,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.48,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.48,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.48,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.48,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 89
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.49,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.49,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.49,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.49,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.49,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.49,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 90
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.5,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.5,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.5,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.5,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.5,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.5,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 91
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.51,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.51,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.51,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.51,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.51,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.51,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 92
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.52,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.52,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.52,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.52,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.52,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.52,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 93
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.53,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.53,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.53,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.53,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.53,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.53,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 94
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.54,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.54,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.54,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.54,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.54,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.54,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 95
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.55,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.55,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.55,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.55,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.55,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.55,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 96
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.56,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.56,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.56,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.56,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.56,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.56,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 97
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.57,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.57,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.57,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.57,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.57,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.57,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 98
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.58,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.58,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.58,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.58,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.58,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.58,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 99
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.59,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.59,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.59,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.59,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.59,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.59,
+                    "type": "flat"
+                }
+            ]
+        }
+    },
+    {
+        "skill": {
+            "radius": 100
+        },
+        "aura": {
+            "ailment_avoidance": [
+                {
+                    "amount": 0.6,
+                    "type": "flat"
+                }
+            ],
+            "physical_resistance": [
+                {
+                    "amount": 0.6,
+                    "type": "flat"
+                }
+            ],
+            "lightning_resistance": [
+                {
+                    "amount": 0.6,
+                    "type": "flat"
+                }
+            ],
+            "cold_resistance": [
+                {
+                    "amount": 0.6,
+                    "type": "flat"
+                }
+            ],
+            "fire_resistance": [
+                {
+                    "amount": 0.6,
+                    "type": "flat"
+                }
+            ],
+            "toxic_resistance": [
+                {
+                    "amount": 0.6,
+                    "type": "flat"
+                }
+            ]
+        }
+    }
+]

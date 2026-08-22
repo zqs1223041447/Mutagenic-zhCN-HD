@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/Popups/DeathScreen.gd" id="1"]
+[ext_resource type="Theme" path="res://Themes/MainTheme.tres" id="2"]
+
+[node name="DeathScreen" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.815686)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("2")
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+offset_left = 480.0
+offset_top = 326.0
+offset_right = 800.0
+offset_bottom = 474.0
+custom_minimum_size = Vector2(320, 0)
+
+[node name="CenterContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 304.0
+offset_bottom = 132.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/CenterContainer"]
+offset_right = 288.0
+
+[node name="ItemSummary" type="VBoxContainer" parent="CenterContainer/PanelContainer/CenterContainer/HBoxContainer"]
+offset_right = 288.0
+size_flags_horizontal = 3
+
+[node name="OutOfTime" type="HBoxContainer" parent="CenterContainer/PanelContainer/CenterContainer/HBoxContainer/ItemSummary"]
+visible = false
+offset_right = 348.0
+offset_bottom = 20.0
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/CenterContainer/HBoxContainer/ItemSummary/OutOfTime"]
+offset_right = 348.0
+offset_bottom = 20.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "You've run out of time!"
+align = 1
+
+[node name="ChallengeInfo" type="HBoxContainer" parent="CenterContainer/PanelContainer/CenterContainer"]
+offset_top = 4.0
+offset_right = 288.0
+offset_bottom = 72.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/CenterContainer/ChallengeInfo"]
+offset_right = 288.0
+offset_bottom = 68.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/CenterContainer/ChallengeInfo/VBoxContainer"]
+offset_right = 288.0
+offset_bottom = 20.0
+text = "Challenge Ladder Rank"
+align = 1
+
+[node name="ThisRunLabel" type="Label" parent="CenterContainer/PanelContainer/CenterContainer/ChallengeInfo/VBoxContainer"]
+offset_top = 24.0
+offset_right = 288.0
+offset_bottom = 44.0
+text = "Challenge Ladder Rank"
+align = 1
+
+[node name="ChallengeRankLabel" type="Label" parent="CenterContainer/PanelContainer/CenterContainer/ChallengeInfo/VBoxContainer"]
+offset_top = 48.0
+offset_right = 288.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0.294118, 0.65098, 0.27451, 1)
+text = "loading..."
+align = 1
+
+[node name="ReturnButton" type="Button" parent="CenterContainer/PanelContainer/CenterContainer"]
+offset_top = 76.0
+offset_right = 288.0
+offset_bottom = 116.0
+text = "Respawn to Hideout"
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/CenterContainer/ReturnButton" to="." method="_on_Button_pressed"]

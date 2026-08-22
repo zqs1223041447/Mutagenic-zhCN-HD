@@ -1,0 +1,91 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/GroundDegens/GroundDegen.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/GroundDegens/OnDeathEffects/ToxicPoolDegen.gd" id="2"]
+[ext_resource type="Shader" path="res://scenes/GroundDegens/GroundDegenShader.tres" id="3"]
+[ext_resource type="Texture2D" path="res://sprites/effects/blood.png" id="4"]
+
+[sub_resource type="CircleShape2D" id=14]
+resource_local_to_scene = true
+radius = 3.0
+
+[sub_resource type="OpenSimplexNoise" id=4]
+
+[sub_resource type="NoiseTexture" id=5]
+width = 128
+height = 128
+seamless = true
+noise = SubResource("4")
+
+[sub_resource type="ShaderMaterial" id=8]
+resource_local_to_scene = true
+shader = ExtResource("3")
+shader_parameter/amt = 1.0
+shader_parameter/speed = 0.5
+shader_parameter/color = Color(0.694118, 0.105882, 0.776471, 0.556863)
+shader_parameter/noise_img = SubResource("5")
+
+[sub_resource type="NoiseTexture" id=3]
+width = 64
+height = 64
+seamless = true
+noise = SubResource("4")
+
+[sub_resource type="ShaderMaterial" id=7]
+resource_local_to_scene = true
+shader = ExtResource("3")
+shader_parameter/amt = 0.97
+shader_parameter/speed = 0.3
+shader_parameter/color = Color(0.27451, 0.180392, 0.298039, 0.556863)
+shader_parameter/noise_img = SubResource("3")
+
+[sub_resource type="Gradient" id=9]
+offsets = PackedFloat32Array( 0.628492, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=10]
+gradient = SubResource("9")
+width = 128
+
+[sub_resource type="Curve" id=11]
+_data = [ Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=12]
+width = 128
+curve = SubResource("11")
+
+[sub_resource type="ParticlesMaterial" id=13]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+gravity = Vector3(0, -5, 0)
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 720.0
+angle_random = 1.0
+scale_random = 1.0
+scale_curve = SubResource("12")
+color = Color(0.486275, 0.105882, 0.576471, 1)
+color_ramp = SubResource("10")
+
+[node name="ToxicPoolDegen" instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("14")
+
+[node name="ColorRect2" parent="." index="1"]
+visible = false
+material = SubResource("8")
+
+[node name="ColorRect" parent="." index="2"]
+visible = false
+material = SubResource("7")
+
+[node name="Particles2D" parent="." index="3"]
+visible = true
+amount = 3
+preprocess = 1.0
+process_material = SubResource("13")
+texture = ExtResource("4")

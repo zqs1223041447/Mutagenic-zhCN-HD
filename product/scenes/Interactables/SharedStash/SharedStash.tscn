@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scenes/Interactables/SharedStash/SharedStash.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/Interactables/Interactable.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://sprites/effects/shadow.png" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/UI/Notice.tscn" id="4"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/tiles/chest.spriteframes.tres" id="5"]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2(14, 12.5)
+
+[node name="SharedStash" instance=ExtResource("2")]
+script = ExtResource("1")
+
+[node name="Shadow" type="Sprite2D" parent="." index="0"]
+position = Vector2(0, 3)
+scale = Vector2(2, 2)
+texture = ExtResource("3")
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2(0, 4)
+frames = ExtResource("5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
+collision_layer = 256
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(0, 2)
+shape = SubResource("1")
+
+[node name="Node2D" parent="." index="4"]
+position = Vector2(0, -13)
+
+[node name="Notice" parent="." index="5" instance=ExtResource("4")]
+visible = false
+position = Vector2(0, -16)

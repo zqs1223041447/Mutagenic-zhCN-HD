@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "harness_id": "P3-E2E",
+  "description": "P3 playable-baseline end-to-end automation constants and per-step runner hooks (E1-E8). Every runner ships implemented=false; flip to true only when the backing probe/script is wired for that attempt.",
+  "default_report_path": "runtime/p3_harness_report.json",
+  "evidence_dir": "runtime/p3_harness/evidence",
+  "product_dir": "product",
+  "scene_paths": {
+    "load_game": "res://scenes/LoadGame.tscn",
+    "menu": "res://scenes/Menu.tscn",
+    "test_level": "res://scenes/Levels/TestLevel/TestLevel.tscn"
+  },
+  "tools": {
+    "boot_probe": "scripts/bootstrap/product_boot_probe.py",
+    "smoke_probe": "scripts/bootstrap/product_smoke_probe.py",
+    "combat_harness": "scripts/validate/combat_harness.py",
+    "s3_persistence_gate": "scripts/validate/s3_persistence_gate.py",
+    "p3_combat_probe": "scripts/validate/p3_combat_probe.py",
+    "p3_loot_probe": "scripts/validate/p3_loot_probe.py",
+    "p3_ui_probe": "scripts/validate/p3_ui_probe.py",
+    "p4_b_loot_real_probe": "scripts/validate/p4_b_loot_real_probe.py",
+    "p3_a_probe": "scripts/validate/run_p3_a_character_save.py",
+    "p3_b_probe": "scripts/validate/run_p3_b_world_movement.py",
+    "p3_bc_world_entry": "scripts/validate/run_p3_bc_world_entry.py",
+    "p3_bc_launcher": "scripts/validate/p3_bc_launch_godot.py",
+    "godot_engine": "02_tools/godot/Godot_v4.7.1-stable_win64.exe"
+  },
+  "steps": {
+    "E1": {
+      "title": "LoadGame reaches character selectable/selected",
+      "exit_criteria": "E1: launching the product reaches the character-select state (character selectable or already selected) without blocking errors.",
+      "runner": {
+        "implemented": true,
+        "strategy": "headless driver: LoadGame→Menu→StartButton→CharacterSelect popup opens with slots rendered; create + select character; assert active_stats identity",
+        "command_template": "\"{python}\" \"{p3_a_probe}\" --out \"{step_evidence}\"",
+        "timeout_s": 300,
+        "note": "wired to scripts/validate/run_p3_a_character_save.py (PASS 2026-08-22); evidence p3_a_character_save.json"
+      }
+    },
+    "E2": {
+      "title": "Enter TestLevel without blocking errors",
+      "exit_criteria": "E2: TestLevel loads with zero fatal signatures (crash / failed scene load / SCRIPT ERROR beyond known-benign asset noise).",
+      "runner": {
+        "implemented": true,
+        "strategy": "production world entry via change_scene_to_file(World.tscn): player spawned by production code + tile pipeline paints (used_cells=320) + navmesh builds (252 points), asserted explicitly",
+        "command_template": "\"{python}\" \"{p3_b_probe}\" --out \"{step_evidence}\" --timeout 360",
+        "timeout_s": 420,
+        "note": "wired to scripts/validate/run_p3_b_world_movement.py in world_scene mode (PASS 2026-08-22: change_scene_ok=true, world_entry_mode=world_scene); evidence p3_h1_world_chain.json"
+      }
+    },
+    "E3": {
+      "title": "Movement + Dash position assertion",
+      "exit_criteria": "E3: player displacement after move/dash inputs matches the declared delta within tolerance.",
+      "runner": {
+        "implemented": true,
+        "strategy": "combat harness movement_dash_smoke via in-game ScenarioDirector (TestLevel harness mode): input-driven move/dash counters measured in telemetry",
+        "command_template": "\"{python}\" \"{combat_harness}\" run --scenario movement_dash_smoke --candidate \"{godot_engine}\" --out-dir \"{out_dir}\" --launch \"python {p3_bc_launcher} --scenario movement_dash_smoke --seed 2026082001 --out-dir {out_dir}\"",
+        "timeout_s": 600,
+        "note": "wired to scripts/validate/combat_harness.py + p3_bc_launch_godot.py (PASS 2026-08-22: dashes=7, player_moves>0); report under out_dir/reports/"
+      }
+    },
+    "E4": {
+      "title": "Active skill release produces combat events",
+      "exit_criteria": "E4: releasing an active skill yields direct_hit/damage events on the combat event spine.",
+      "runner": {
+        "implemented": true,
+        "strategy": "combat harness single_melee_hit: real skill loadout (Orb+Shockwave) auto-casts at a LOS-verified SkeletonWarrior; mob health-loss events counted",
+        "command_template": "\"{python}\" \"{combat_harness}\" run --scenario single_melee_hit --candidate \"{godot_engine}\" --out-dir \"{out_dir}\" --launch \"python {p3_bc_launcher} --scenario single_melee_hit --seed 2026082002 --out-dir {out_dir}\"",
+        "timeout_s": 600,
+        "note": "wired to combat harness chain (PASS 2026-08-22: damage_events=2, killed=1/1, duplicate_deaths=0)"
+      }
+    },
+    "E5": {
+      "title": "Kill a mob",
+      "exit_criteria": "E5: at least one spawned mob reaches death with a kill event attributed to the player.",
+      "runner": {
+        "implemented": true,
+        "strategy": "combat harness cluster_kill_20: 20-mob mixed cluster fully killed through the real skill->damage->died pipeline; death settles exactly once per mob",
+        "command_template": "\"{python}\" \"{combat_harness}\" run --scenario cluster_kill_20 --candidate \"{godot_engine}\" --out-dir \"{out_dir}\" --launch \"python {p3_bc_launcher} --scenario cluster_kill_20 --seed 2026082005 --out-dir {out_dir}\"",
+        "timeout_s": 900,
+        "note": "wired to combat harness chain (PASS 2026-08-22: killed=20/20, duplicate_deaths=0, fps_avg=59.6)"
+      }
+    },
+    "E6": {
+      "title": "Pickup drop lands in inventory",
+      "exit_criteria": "E6: a dropped item picked up from the ground appears in the character inventory state.",
+      "runner": {
+        "implemented": true,
+        "strategy": "real loot chain probe: restored OrbPickup/PortalPickup scenes + real Mob elite drop branch replace the P3-D stub; touch -> vacuum -> Stats.add_orb credit -> orb_pickup signal; elite kill -> OrbPickup on ground",
+        "command_template": "\"{python}\" \"{p4_b_loot_real_probe}\" --out \"{step_evidence}\"",
+        "timeout_s": 600,
+        "note": "wired to scripts/validate/p4_b_loot_real_probe.py - real drop chain end to end (stub retired); evidence p4_b_loot_real.json"
+      }
+    },
+    "E7": {
+      "title": "Skill screen and passive tree screen open without crash",
+      "exit_criteria": "E7: toggling the skill screen and the passive/mutation tree screen in-game produces no fatal signature and both close cleanly.",
+      "runner": {
+        "implemented": true,
+        "strategy": "headless UI probe: open SkillSelect and PassiveTreePopup via PopupManager against a seeded character, verify content builds (passive nodes instantiate), close both, popup stack drains to zero",
+        "command_template": "\"{python}\" \"{p3_ui_probe}\" --root \"{repo_root}\" --out \"{step_evidence}\"",
+        "timeout_s": 600,
+        "note": "wired to scripts/validate/p3_ui_probe.py (PASS 2026-08-22); zero SCRIPT ERRORs in evidence run"
+      }
+    },
+    "E8": {
+      "title": "Save -> Load restores key state",
+      "exit_criteria": "E8: after save then reload, semantic key state (character/orbs/loadouts/stash) survives the round trip.",
+      "runner": {
+        "implemented": true,
+        "strategy": "headless driver: do_save_game writes parseable save; reset + load_game; assert identity/class/account_level/account_xp roundtrip consistency and timestamp advance",
+        "command_template": "\"{python}\" \"{p3_a_probe}\" --out \"{step_evidence}\"",
+        "timeout_s": 300,
+        "note": "wired to scripts/validate/run_p3_a_character_save.py (PASS 2026-08-22); CAVEAT save schema has no position field yet - P3 exit criteria requires position persistence (attempt-3 scope)"
+      }
+    }
+  }
+}

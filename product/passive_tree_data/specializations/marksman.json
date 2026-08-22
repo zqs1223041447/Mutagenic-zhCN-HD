@@ -1,0 +1,110 @@
+{
+    "nodes": [
+        {
+            "id": "root",
+            "passive_tag": "root",
+            "position": [
+                0,
+                0
+            ]
+        },
+        {
+            "id": "a2109",
+            "passive_tag": "volatile_casting",
+            "position": [
+                160,
+                0
+            ]
+        },
+        {
+            "id": "5ee00",
+            "passive_tag": "thieves_agility",
+            "position": [
+                0,
+                -160
+            ]
+        },
+        {
+            "id": "f058e",
+            "passive_tag": "chain_gang",
+            "position": [
+                0,
+                160
+            ]
+        },
+        {
+            "id": "17039",
+            "passive_tag": "warped_time",
+            "position": [
+                -160,
+                0
+            ]
+        },
+        {
+            "id": "201c7",
+            "passive_tag": "shocking_moves",
+            "position": [
+                160,
+                -160
+            ]
+        },
+        {
+            "id": "00310",
+            "passive_tag": "hand_to_hand_combat",
+            "position": [
+                160,
+                160
+            ]
+        },
+        {
+            "id": "c1e7e",
+            "passive_tag": "fortified_artillery",
+            "position": [
+                -160,
+                160
+            ]
+        },
+        {
+            "id": "09851",
+            "passive_tag": "bloody_mess",
+            "position": [
+                -160,
+                -160
+            ]
+        }
+    ],
+    "edges": [
+        [
+            "a2109",
+            "root"
+        ],
+        [
+            "5ee00",
+            "root"
+        ],
+        [
+            "f058e",
+            "root"
+        ],
+        [
+            "17039",
+            "root"
+        ],
+        [
+            "201c7",
+            "root"
+        ],
+        [
+            "00310",
+            "root"
+        ],
+        [
+            "c1e7e",
+            "root"
+        ],
+        [
+            "09851",
+            "root"
+        ]
+    ]
+}

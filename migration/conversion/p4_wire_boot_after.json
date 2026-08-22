@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "task": "P1-V0",
+  "generated_at": "2026-08-22T12:57:02Z",
+  "engine": {
+    "binary_name": "Godot_v4.7.1-stable_win64.exe",
+    "resolved_via": "REPO_RELATIVE",
+    "version": "4.7.1",
+    "status": "SUCCESS",
+    "tool_missing": false,
+    "discovery_note": ""
+  },
+  "boot": {
+    "status": "BOOTED",
+    "detail": "",
+    "returncode": 0,
+    "timed_out": false,
+    "script_error_count": 0,
+    "script_errors_by_class": {
+      "missing_asset": 3,
+      "class_resolve": 0,
+      "load_fail": 0,
+      "api_member": 0,
+      "other": 3
+    },
+    "error_lines": [
+      "ERROR: Unable to open file: res://.import/arrow.png-1d15507c595a5a38dd9c02bebf3df3ea.stex.",
+      "ERROR: Resource file not found: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav (expected type: AudioStream)",
+      "ERROR: res://scenes/Skills/Playable/Arrow/Arrow.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav.",
+      "ERROR: Resource file not found: res://Sounds/Pickups/rare_orb.wav (expected type: unknown)",
+      "ERROR: Resource file not found: res://Sounds/BackgroundMusic/Space Laboratory Loop.ogg (expected type: AudioStream)",
+      "ERROR: res://scenes/Menu.tscn:141 - Parse Error: [ext_resource] referenced non-existent resource at: res://Sounds/BackgroundMusic/Space Laboratory Loop.ogg."
+    ],
+    "error_lines_truncated": false,
+    "max_error_lines": 500,
+    "duration_ms": 17780,
+    "quit_after": 600,
+    "timeout_s": 120,
+    "product_dir": "<repo>/product",
+    "cmd": [
+      "<repo>/02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+      "--headless",
+      "--path",
+      "<repo>/product",
+      "--quit-after",
+      "600"
+    ],
+    "stdout_head": "Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org\n\nLoaded data for Arc\nLoaded data for Orb\nLoaded data for Shotgun\nLoaded data for PoisonDart\nLoaded data for Shuriken\nLoaded data for Blizzard\nLoaded data for Brittle\nLoaded data for Scorch\nLoaded data for Debilitate\nLoaded data for Protract\nLoaded data for Polarize\nLoaded data for Hinder\nLoaded data for Hypothermia\nLoaded data for IceOrb\nLoaded data for Regeneration\nLoaded data for ShrapnelBomb\nLoaded data for Bane\nLoaded data for PlagueClouds\nLoaded data for Axe\nLoaded data for ShockOrb\nLoaded data for Volcano\nLoaded data for Rush\nLoaded data for Arrow\nLoaded data for Resilience\nLoaded data for ShardOrb\nLoaded data for Minigun\nLoaded data for ChainLightning\nLoaded data for FlameTether\nLoaded data for DoomTether\nLoaded data for Sturdiness\nLoaded data for Elusiveness\nLoaded data for PrismaticSlash\nLoaded data for LavaSurge\nLoaded data for LightningSpear\nLoaded data for ClusterBombs\nLoaded data for AmplificationAura\nLoaded data for Honing\nLoaded data for PhysicalAura\nLoaded data for LightningAura\nLoaded data for ColdAura\nLoaded data for FireAura\nLoaded data for ToxicAura\nLoaded data for DoTAura\nLoaded data for Shockwave\nLoaded data for BladeShield\nLoaded data for EnergizedAxe\nLoaded data for SharknadoShot\nLoaded data for BloodSlash\nLoaded data for PlasmaOrb\nGameState getting ready...\nPassive tree integrity passed.\nPassive tree integrity passed.\nDone integrity check for specialization trees\nWorld Map integrity passed.\nPhysics FPS set to: 60\n{ \"class\": \"MAGE\", \"passives\": [\"root_mage\"] }\nReset class as it was not found: <null>\nVERIFYING GENES\nVerifying Gene Integrity\nVerifying Stored Mod Integrity\nVerification done\nVerifying trees for character:P3BCHarnessChar\nDONE Verify\nVerifying trees for character:P3BCHarnessChar\nSlot found:primary Check Supports\nSlot found:secondary Check Supports\nSlot found:support_one Check Supports\nSlot found:support_two Check Supports\nSlot found:support_three Check Supports",
+    "stderr_head": "ERROR: Unable to open file: res://.import/arrow.png-1d15507c595a5a38dd9c02bebf3df3ea.stex.\n   at: _load_data (scene/resources/compressed_texture.cpp:45)\nERROR: Resource file not found: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav (expected type: AudioStream)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Skills/Playable/Arrow/Arrow.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nWARNING: Concave polygon is assigned to ConvexPolygonShape2D.\n   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)\nWARNING: Concave polygon is assigned to ConvexPolygonShape2D.\n   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)\nWARNING: Concave polygon is assigned to ConvexPolygonShape2D.\n   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)\nWARNING: Concave polygon is assigned to ConvexPolygonShape2D.\n   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)\nWARNING: Concave polygon is assigned to ConvexPolygonShape2D.\n   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)\nWARNING: Concave polygon is assigned to ConvexPolygonShape2D.\n   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)\nWARNING: Concave polygon is assigned to ConvexPolygonShape2D.\n   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)\nWARNING: Concave polygon is assigned to ConvexPolygonShape2D.\n   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)\nERROR: Resource file not found: res://Sounds/Pickups/rare_orb.wav (expected type: unknown)\n   at: _load (core/io/resource_loader.cpp:325)\n   GDScript backtrace (most recent call first):\n       [0] @implicit_new (res://Globals/Globals.gd:12)\nWARNING: Concave polygon is assigned to ConvexPolygonShape2D.\n   at: _update_shape (scene/resources/2d/convex_polygon_s"
+  },
+  "overall": "BOOTED"
+}

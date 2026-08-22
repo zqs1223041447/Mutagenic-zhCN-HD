@@ -9,7 +9,15 @@ import json
 import shutil
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+# Portable repo_root: prefer dev_environment.find_repo_root, fallback to parents[2]
+try:
+    import sys as _sys
+    from pathlib import Path as _Path2
+    _sys.path.insert(0, str(_Path2(__file__).resolve().parents[2] / "scripts" / "env"))
+    from dev_environment import find_repo_root as _find_repo_root2  # type: ignore
+    ROOT = _find_repo_root2()
+except Exception:
+    ROOT = Path(__file__).resolve().parents[2]
 
 
 def sha(path: Path) -> str:

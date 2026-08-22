@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "task": "P3-B",
+  "probe_id": "P3-B-E2-E3",
+  "exit_criteria": [
+    "E2",
+    "E3"
+  ],
+  "generated_at": "2026-08-22T03:16:57Z",
+  "engine": {
+    "binary_name": "Godot_v4.7.1-stable_win64.exe",
+    "resolved_via": "REPO_RELATIVE",
+    "version": "4.7.1",
+    "status": "SUCCESS"
+  },
+  "driver_scene": "res://scenes/Levels/_validate/P3BDriver.tscn",
+  "command": [
+    "<repo>/02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+    "--headless",
+    "--path",
+    "<repo>/product",
+    "res://scenes/Levels/_validate/P3BDriver.tscn"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "duration_ms": 18141,
+  "attempts": 1,
+  "flaked": false,
+  "result": {
+    "e2": {
+      "active_stage_id": "test_level",
+      "change_scene_ok": false,
+      "enemies_culled_early": 300,
+      "map_done": true,
+      "navmesh_built": true,
+      "navmesh_points": 252,
+      "pass": true,
+      "player_parent_is_level_layer": true,
+      "player_spawned": true,
+      "probe_character_created": true,
+      "spawnable_tile_count": 252,
+      "test_level_instance_found": true,
+      "tile_used_cells": 320,
+      "tiles_painted": true,
+      "world_entered": true,
+      "world_entry_mode": "manual_assembly",
+      "world_scene_blocked_note": "World.tscn could not be loaded; see world_scene_blocked_by. Manual assembly replicates World.switch_levels(reset=true) core steps."
+    },
+    "e3": {
+      "dash_burst_px": 9.22,
+      "dash_cd_after_trigger": 0.733,
+      "dash_cd_before": 0.0,
+      "dash_fired_state": true,
+      "dash_pass": true,
+      "enemies_culled": 0,
+      "enemies_culled_second_pass": 0,
+      "enemies_in_group": 0,
+      "level_child_count": 8,
+      "moved": true,
+      "movement_speed_stat": 90.0,
+      "pass": true,
+      "player_can_sleep": true,
+      "player_freeze": false,
+      "player_sleeping_before": false,
+      "walk_attempts": [
+        {
+          "dx": 26.83,
+          "point_index": 0,
+          "spot_x": -272.0
+        }
+      ]
+    },
+    "errors": [],
+    "finished": true,
+    "pass": true,
+    "task": "P3-B"
+  },
+  "script_errors": [
+    "SCRIPT ERROR: Parse Error: Too many arguments for \"sort_custom()\" call. Expected at most 1 but received 2.",
+    "SCRIPT ERROR: Parse Error: Invalid argument for \"sort_custom()\" function: argument 1 should be \"Callable\" but is \"res://Globals/StatsInfo.gd\".",
+    "SCRIPT ERROR: Parse Error: Invalid argument for \"sort_custom()\" function: argument 1 should be \"Callable\" but is \"res://scenes/Popups/ItemTabContent.gd\".",
+    "SCRIPT ERROR: Invalid call to function 'sort_custom' in base 'Array'. Expected 1 argument(s).",
+    "SCRIPT ERROR: Invalid call. Nonexistent function 'lock' in base 'Image'."
+  ],
+  "verdict_detail": "probe assertions satisfied",
+  "verdict": "PASS",
+  "proves": "world entry with a live player on TestLevel exercises read_tiles -> process_tiles -> set_cells_terrain_connect and navmesh build (E2); input-driven movement displaces the player and the dash action fires with cooldown state change (E3).",
+  "not_proven": "World.tscn full-chain entry when blocked by out-of-domain parse errors (recorded in result.world_entry_mode / blocked note); combat balance or mob AI correctness."
+}

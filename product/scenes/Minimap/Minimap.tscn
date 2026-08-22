@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Theme" path="res://Themes/MainTheme.tres" id="1"]
+[ext_resource type="Script" path="res://scenes/Minimap/Minimap.gd" id="2"]
+[ext_resource type="Script" path="res://scenes/Minimap/TextureRect.gd" id="3"]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color(0, 0, 0, 0.705882)
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[node name="Minimap" type="CanvasLayer"]
+layer = 2
+script = ExtResource("2")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -32.0
+offset_top = 346.0
+offset_right = -22.0
+offset_bottom = 356.0
+grow_horizontal = 0
+theme = ExtResource("1")
+theme_override_styles/panel = SubResource("1")
+
+[node name="ModList" type="VBoxContainer" parent="PanelContainer"]
+offset_right = 10.0
+offset_bottom = 10.0
+size_flags_horizontal = 3
+
+[node name="MinimapContainer" type="PanelContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -212.0
+offset_top = 133.0
+offset_right = -198.0
+offset_bottom = 147.0
+custom_minimum_size = Vector2(206, 206)
+rect_clip_content = true
+
+[node name="TextureRect" type="Control" parent="MinimapContainer"]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 199.0
+offset_bottom = 199.0
+rect_clip_content = true
+script = ExtResource("3")
+
+[node name="TextureRect" type="ColorRect" parent="MinimapContainer/TextureRect"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_minimum_size = Vector2(192, 192)
+rect_clip_content = true
+color = Color(0, 0, 0, 0.196078)

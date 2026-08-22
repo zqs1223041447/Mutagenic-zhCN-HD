@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/tiles/brazier.spriteframes.tres" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/effects/smoke.png" id="2"]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 6.08276
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 1, 1, 1, 0.494118, 0.363281, 0.343321, 0.343321, 1 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource("3")
+
+[sub_resource type="Curve" id=5]
+_data = [ Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+curve = SubResource("5")
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 1
+emission_sphere_radius = 2.0
+flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0, -12, 0)
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_curve = SubResource("6")
+color_ramp = SubResource("4")
+
+[node name="Brazier" type="StaticBody2D"]
+collision_layer = 256
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("1")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -4)
+frames = ExtResource("1")
+speed_scale = 0.5
+playing = true
+
+[node name="Particles2D" type="GPUParticles2D" parent="."]
+position = Vector2(0, -12)
+process_material = SubResource("2")
+texture = ExtResource("2")

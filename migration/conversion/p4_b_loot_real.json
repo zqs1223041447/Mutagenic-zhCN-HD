@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "task": "P4-B",
+  "probe_id": "p4_b_loot_real_probe",
+  "exit_criteria": [
+    "E6",
+    "C1"
+  ],
+  "generated_at": "2026-08-22T09:44:16Z",
+  "engine": {
+    "binary_name": "Godot_v4.7.1-stable_win64.exe",
+    "resolved_via": "REPO_RELATIVE",
+    "version": "4.7.1",
+    "status": "SUCCESS"
+  },
+  "driver_scene": "res://scenes/UI/probes/p4_b_loot_real_probe.tscn",
+  "command": [
+    "<repo>\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
+    "--headless",
+    "--path",
+    "<repo>\\product",
+    "res://scenes/UI/probes/p4_b_loot_real_probe.tscn"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "duration_ms": 15156,
+  "attempts": 1,
+  "flaked": false,
+  "result": {
+    "c1_pass": true,
+    "elite_drop_chain": {
+      "death_settled_once": true,
+      "elite_dropped_orb": true,
+      "genes_dropped": 1,
+      "killed_through_apply_damage": true,
+      "mob_removed": true,
+      "orbs_after": 1,
+      "orbs_before": 0,
+      "pass": true
+    },
+    "errors": [],
+    "orb_drop": {
+      "button_text": "Orb of Experimentation",
+      "collected": true,
+      "counter_after": 1,
+      "counter_before": 0,
+      "counter_credited": 1,
+      "counter_matches_amount": true,
+      "does_vaccuum": true,
+      "drop_spawned": true,
+      "metric_key": "blue",
+      "orb_pickup_signal_seen": true,
+      "pass": true,
+      "removed_from_tree": true,
+      "rolled_amount": 1.0,
+      "rolled_orb_type": 0,
+      "vacuum_engaged": true
+    },
+    "pass": true,
+    "portal": {
+      "confirm_dialog_opened": true,
+      "death_screen_queued": true,
+      "dialog_title": "Return to Hideout?",
+      "dialog_title_correct": true,
+      "pass": true,
+      "persistent": true,
+      "world_stub_present": true
+    },
+    "probe_id": "p4_b_loot_real_probe"
+  },
+  "script_errors": [],
+  "verdict_detail": "probe assertions satisfied",
+  "verdict": "PASS",
+  "proves": "the restored real scenes close the E6 loop without a stub: OrbPickup vacuum-pickup credits Stats.add_orb and fires orb_pickup; an elite mob killed via the real damage pipeline drops an OrbPickup through Mob._on_death; PortalPickup is persistent and its confirmation queues the DeathScreen popup through PopupManager",
+  "not_proven": "visual art for the portal/orb drops (art lane owns portal.png and aseprite orb animations); boss-kill portal branch under a full stage run (harness scope)"
+}

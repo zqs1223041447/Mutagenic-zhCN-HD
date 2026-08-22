@@ -1,0 +1,442 @@
+{
+  "schema_version": "1.0",
+  "intent": "B3-X3 density benchmark pressure ladder contract. Defines four on-screen enemy density levels (5/20/50/100) that reuse the existing combat harness capability end to end: entrance via goto_test_level (the existing launcher key sequence, no new in-game system), deterministic seeded spawn plans rendered with enum mob resources from scripts/validate/combat_scenarios.json, and telemetry written by the existing ScenarioDirector single bus. This file carries ONLY the benchmark framework; it changes no gameplay density value anywhere in mods/.",
+  "entrance": {
+    "routing": "goto_test_level",
+    "mechanism": "复用既有 harness 路由：scripts/validate/launch_harness_game.py 的 Enter/Enter/F10 goto_test_level 键位序列进入 TestLevel，k5-combat-harness ScenarioDirector.gd 消费 game_request（scenario_id/seed/duration/plan）并写出 telemetry；不新建任何游戏内系统",
+    "launcher_relative_path": "scripts/validate/launch_harness_game.py",
+    "new_in_game_system": "none"
+  },
+  "levels": [
+    {
+      "id": "density_5",
+      "label": "5",
+      "version": 1,
+      "summary": "Pressure ladder L1: 5 skeleton warriors on screen. Reference floor: frame-time/FPS/event-rate baseline at the density the base game already reaches.",
+      "default_seed": 2026083001,
+      "duration_seconds": 60.0,
+      "end_condition": {
+        "type": "all_mobs_dead_or_timeout",
+        "timeout_seconds": 60.0
+      },
+      "spawn": {
+        "mode": "ladder",
+        "ladder": {
+          "x": 0,
+          "y": 0,
+          "wave": 1
+        },
+        "origin": [180.0, 0.0],
+        "spread": 300.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [
+        {
+          "mob": "skeleton_warrior",
+          "count": 5
+        }
+      ],
+      "metrics": {
+        "frame_time": {
+          "targets": ["avg_ms", "p95_ms", "p99_ms", "max_ms"]
+        },
+        "fps": {
+          "targets": ["avg", "min", "p1"]
+        },
+        "event_rate": {
+          "events": ["damage_events", "melee_hits", "crits", "projectiles", "triggers"],
+          "unit": "events_per_second",
+          "spine": "B2-X1 combat event spine (single bus)"
+        },
+        "voice_budget": {
+          "limit_concurrent": 16,
+          "funnel": "k4 single funnel (B1 k4-audio-foundation)"
+        },
+        "camera_budget": {
+          "limit_amplitude": 4.0,
+          "limit_offset": 3.5,
+          "source": "B2-X5 get_camera_impulse_telemetry()"
+        }
+      },
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "all_five_spawned",
+          "field": "counters.spawned",
+          "op": ">=",
+          "value": 5,
+          "capability": "required"
+        },
+        {
+          "label": "all_five_killed",
+          "field": "counters.killed",
+          "op": ">=",
+          "value": 5,
+          "capability": "required"
+        },
+        {
+          "label": "no_duplicate_death",
+          "field": "counters.duplicate_deaths",
+          "op": "==",
+          "value": 0,
+          "capability": "required"
+        },
+        {
+          "label": "draft_fps_floor",
+          "field": "perf.fps_avg",
+          "op": ">=",
+          "value": 30.0,
+          "capability": "optional"
+        }
+      ],
+      "proves": "a stable 5-on-screen baseline that renders a deterministic seeded plan and settles every death exactly once on the candidate",
+      "not_proven": "gameplay density values of the real game (unmodified), frame-time percentiles and budgets without a benchmark-capable candidate, S5 feel",
+      "requires": ["boot", "killed", "duplicate_deaths", "fps", "metrics"],
+      "stress": true
+    },
+    {
+      "id": "density_20",
+      "label": "20",
+      "version": 1,
+      "summary": "Pressure ladder L2: 20 skeleton warriors on screen. First density step above the current cluster_kill_20 slice; same 300px cluster footprint.",
+      "default_seed": 2026083002,
+      "duration_seconds": 60.0,
+      "end_condition": {
+        "type": "all_mobs_dead_or_timeout",
+        "timeout_seconds": 60.0
+      },
+      "spawn": {
+        "mode": "ladder",
+        "ladder": {
+          "x": 0,
+          "y": 0,
+          "wave": 1
+        },
+        "origin": [180.0, 0.0],
+        "spread": 300.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [
+        {
+          "mob": "skeleton_warrior",
+          "count": 20
+        }
+      ],
+      "metrics": {
+        "frame_time": {
+          "targets": ["avg_ms", "p95_ms", "p99_ms", "max_ms"]
+        },
+        "fps": {
+          "targets": ["avg", "min", "p1"]
+        },
+        "event_rate": {
+          "events": ["damage_events", "melee_hits", "crits", "projectiles", "triggers"],
+          "unit": "events_per_second",
+          "spine": "B2-X1 combat event spine (single bus)"
+        },
+        "voice_budget": {
+          "limit_concurrent": 16,
+          "funnel": "k4 single funnel (B1 k4-audio-foundation)"
+        },
+        "camera_budget": {
+          "limit_amplitude": 4.0,
+          "limit_offset": 3.5,
+          "source": "B2-X5 get_camera_impulse_telemetry()"
+        }
+      },
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "all_twenty_spawned",
+          "field": "counters.spawned",
+          "op": ">=",
+          "value": 20,
+          "capability": "required"
+        },
+        {
+          "label": "all_twenty_killed",
+          "field": "counters.killed",
+          "op": ">=",
+          "value": 20,
+          "capability": "required"
+        },
+        {
+          "label": "no_duplicate_death",
+          "field": "counters.duplicate_deaths",
+          "op": "==",
+          "value": 0,
+          "capability": "required"
+        },
+        {
+          "label": "draft_fps_floor",
+          "field": "perf.fps_avg",
+          "op": ">=",
+          "value": 30.0,
+          "capability": "optional"
+        }
+      ],
+      "proves": "a 20-on-screen step above the current slice renders deterministically and settles every death exactly once",
+      "not_proven": "gameplay density values of the real game (unmodified), frame-time percentiles and budgets without a benchmark-capable candidate, S5 feel",
+      "requires": ["boot", "killed", "duplicate_deaths", "fps", "metrics"],
+      "stress": true
+    },
+    {
+      "id": "density_50",
+      "label": "50",
+      "version": 1,
+      "summary": "Pressure ladder L3: 50 skeleton warriors on screen. Mid ladder: 5x the reference floor, stresses event rate, voice funnel and camera impulse aggregation at once.",
+      "default_seed": 2026083003,
+      "duration_seconds": 60.0,
+      "end_condition": {
+        "type": "all_mobs_dead_or_timeout",
+        "timeout_seconds": 60.0
+      },
+      "spawn": {
+        "mode": "ladder",
+        "ladder": {
+          "x": 0,
+          "y": 0,
+          "wave": 1
+        },
+        "origin": [180.0, 0.0],
+        "spread": 300.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [
+        {
+          "mob": "skeleton_warrior",
+          "count": 50
+        }
+      ],
+      "metrics": {
+        "frame_time": {
+          "targets": ["avg_ms", "p95_ms", "p99_ms", "max_ms"]
+        },
+        "fps": {
+          "targets": ["avg", "min", "p1"]
+        },
+        "event_rate": {
+          "events": ["damage_events", "melee_hits", "crits", "projectiles", "triggers"],
+          "unit": "events_per_second",
+          "spine": "B2-X1 combat event spine (single bus)"
+        },
+        "voice_budget": {
+          "limit_concurrent": 16,
+          "funnel": "k4 single funnel (B1 k4-audio-foundation)"
+        },
+        "camera_budget": {
+          "limit_amplitude": 4.0,
+          "limit_offset": 3.5,
+          "source": "B2-X5 get_camera_impulse_telemetry()"
+        }
+      },
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "all_fifty_spawned",
+          "field": "counters.spawned",
+          "op": ">=",
+          "value": 50,
+          "capability": "required"
+        },
+        {
+          "label": "all_fifty_killed",
+          "field": "counters.killed",
+          "op": ">=",
+          "value": 50,
+          "capability": "required"
+        },
+        {
+          "label": "no_duplicate_death",
+          "field": "counters.duplicate_deaths",
+          "op": "==",
+          "value": 0,
+          "capability": "required"
+        },
+        {
+          "label": "draft_fps_floor",
+          "field": "perf.fps_avg",
+          "op": ">=",
+          "value": 30.0,
+          "capability": "optional"
+        }
+      ],
+      "proves": "a 50-on-screen step keeps the seeded ladder plan deterministic and settles every death exactly once",
+      "not_proven": "gameplay density values of the real game (unmodified), frame-time percentiles and budgets without a benchmark-capable candidate, S5 feel",
+      "requires": ["boot", "killed", "duplicate_deaths", "fps", "metrics"],
+      "stress": true
+    },
+    {
+      "id": "density_100",
+      "label": "100",
+      "version": 1,
+      "summary": "Pressure ladder L4: 100 skeleton warriors on screen. Ladder top (also covered by the legacy stress_random_300 plan counts as reference): event-rate, voice funnel and camera budget cap check at 20x the reference floor.",
+      "default_seed": 2026083004,
+      "duration_seconds": 60.0,
+      "end_condition": {
+        "type": "all_mobs_dead_or_timeout",
+        "timeout_seconds": 60.0
+      },
+      "spawn": {
+        "mode": "ladder",
+        "ladder": {
+          "x": 0,
+          "y": 0,
+          "wave": 1
+        },
+        "origin": [180.0, 0.0],
+        "spread": 300.0
+      },
+      "player": {
+        "position": [0.0, 0.0]
+      },
+      "mob_composition": [
+        {
+          "mob": "skeleton_warrior",
+          "count": 100
+        }
+      ],
+      "metrics": {
+        "frame_time": {
+          "targets": ["avg_ms", "p95_ms", "p99_ms", "max_ms"]
+        },
+        "fps": {
+          "targets": ["avg", "min", "p1"]
+        },
+        "event_rate": {
+          "events": ["damage_events", "melee_hits", "crits", "projectiles", "triggers"],
+          "unit": "events_per_second",
+          "spine": "B2-X1 combat event spine (single bus)"
+        },
+        "voice_budget": {
+          "limit_concurrent": 16,
+          "funnel": "k4 single funnel (B1 k4-audio-foundation)"
+        },
+        "camera_budget": {
+          "limit_amplitude": 4.0,
+          "limit_offset": 3.5,
+          "source": "B2-X5 get_camera_impulse_telemetry()"
+        }
+      },
+      "asserts": [
+        {
+          "label": "boot_ok",
+          "field": "boot.ok",
+          "op": "==",
+          "value": true,
+          "capability": "required"
+        },
+        {
+          "label": "all_hundred_spawned",
+          "field": "counters.spawned",
+          "op": ">=",
+          "value": 100,
+          "capability": "required"
+        },
+        {
+          "label": "all_hundred_killed",
+          "field": "counters.killed",
+          "op": ">=",
+          "value": 100,
+          "capability": "required"
+        },
+        {
+          "label": "no_duplicate_death",
+          "field": "counters.duplicate_deaths",
+          "op": "==",
+          "value": 0,
+          "capability": "required"
+        },
+        {
+          "label": "draft_fps_floor",
+          "field": "perf.fps_avg",
+          "op": ">=",
+          "value": 30.0,
+          "capability": "optional"
+        }
+      ],
+      "proves": "a 100-on-screen pressure step renders its deterministic seeded plan and settles every death exactly once",
+      "not_proven": "gameplay density values of the real game (unmodified), frame-time percentiles and budgets without a benchmark-capable candidate, S5 feel",
+      "requires": ["boot", "killed", "duplicate_deaths", "fps", "metrics"],
+      "stress": true
+    }
+  ],
+  "thresholds": {
+    "draft": true,
+    "calibration_note": "全部阈值为草案（B3-X3 只建基线框架）：需 VM 真实数据校准后才能 gate（后续批次）。校准前阈值只报告、不打分、不影响 PASS/FAIL 判定；仅 level 内 requires/asserts 参与判定。",
+    "frame_time_p95_ms": {
+      "max": 33.33,
+      "rationale": "30fps 地板等效（与既有 fps_floor=30 草案一致）",
+      "draft": true
+    },
+    "frame_time_p99_ms": {
+      "max": 50.0,
+      "rationale": "尾部帧保护草案（p99 不容许长时间卡顿窗口）",
+      "draft": true
+    },
+    "fps_avg": {
+      "min": 30.0,
+      "rationale": "与 cluster_kill_20 既有 fps_floor 草案同值",
+      "draft": true
+    },
+    "fps_p1": {
+      "min": 20.0,
+      "rationale": "长尾帧保护草案（1% 帧仍须维持可玩）",
+      "draft": true
+    },
+    "event_rate": {
+      "max_per_second": null,
+      "rationale": "只记录不设上限；峰值由聚合/预算机制（voice 16 / camera clamp / X6 层窗口）吸收",
+      "draft": true
+    },
+    "voice_max_concurrent": {
+      "max": 16,
+      "rationale": "k4 单漏斗 16 concurrent voice budget（B1 k4-audio-foundation）",
+      "draft": true
+    },
+    "voice_over_budget_count": {
+      "max": 0,
+      "rationale": "任意超预算即丧失漏斗语义；草案期报告超标帧数",
+      "draft": true
+    },
+    "camera_max_amplitude": {
+      "max": 4.0,
+      "rationale": "X5 IMPULSE_BUDGET_MAX 常量（B2-X5 camera impulse）",
+      "draft": true
+    },
+    "camera_max_offset": {
+      "max": 3.5,
+      "rationale": "X5 IMPULSE_MAX_OFFSET 安全帽常量",
+      "draft": true
+    },
+    "camera_capped_ratio": {
+      "max": 0.1,
+      "rationale": "钳制占比草案：capped_amplitude_count / impulses_total 不超 10%（需真实数据校准）",
+      "draft": true
+    }
+  }
+}

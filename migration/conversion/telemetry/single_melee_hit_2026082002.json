@@ -1,0 +1,68 @@
+{
+	"boot": {
+		"alert_count": 0,
+		"fatal_count": 0,
+		"ok": true
+	},
+	"checkpoints": [
+		{
+			"alive": 1,
+			"damage_events": 0,
+			"fps": 1.0,
+			"killed": 0,
+			"spawned": 1,
+			"t": 0.0
+		},
+		{
+			"alive": 0,
+			"damage_events": 2,
+			"fps": 1.0,
+			"killed": 1,
+			"spawned": 1,
+			"t": 0.1
+		}
+	],
+	"counters": {
+		"alive": 0,
+		"checkpoint_count": 2,
+		"damage_events": 2,
+		"dashes": 0,
+		"duplicate_deaths": 0,
+		"killed": 1,
+		"player_moves": 4,
+		"spawned": 1
+	},
+	"ended_at": "2026-08-22T11:07:26Z",
+	"exit_reason": "all_killed",
+	"not_proven": "candidate build identity; frame pacing accuracy; visual/audio quality",
+	"perf": {
+		"fps_avg": 5.99,
+		"fps_max": 1.0,
+		"fps_min": 1.0,
+		"frame_pacing_p95_ms": 0.0,
+		"frames": 6
+	},
+	"proves": "request-driven world entry with live player; plan spawn executed; skill->damage->kill counters wired; movement/dash input driven",
+	"runtime": {
+		"exit_code": 0,
+		"in_game_result": "PASS",
+		"notes": [
+			"run_seconds=1.0",
+			"exit_reason=all_killed",
+			"skill_used=Orb+Shockwave",
+			"harness_mode=TestLevel.gd+ScenarioDirector.gd",
+			"spawn_positions_adjusted=1/1 (clamped to 64.0px engagement radius)"
+		]
+	},
+	"scenario_id": "single_melee_hit",
+	"schema_version": "1.0",
+	"seed": 2026082002,
+	"session_file": "session_single_melee_hit_2026082002.json",
+	"started_at": "2026-08-22T11:07:25Z",
+	"status": "complete",
+	"world": {
+		"navmesh_points": 252,
+		"player_in_tree": true,
+		"tile_used_cells": 320
+	}
+}

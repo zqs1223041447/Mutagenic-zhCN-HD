@@ -1,0 +1,51 @@
+{
+  "id": "k4-audio-foundation",
+  "version": "0.2.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [],
+  "conflicts": [],
+  "scope": "B1-X4 audio foundation at Globals.play_sound_effect(): 60ms per-bus/per-stream aggregation, max 16 active runtime SFX via explicit counter + tree_exited recovery, and subtle pitch/volume variation. Camera remains audit-only because Player preimage belongs to X1.",
+  "entities": [
+    {
+      "kind": "audio_event_limiter",
+      "id": "Globals/Globals.gd::play_sound_effect::limiter",
+      "confidence": "FACT",
+      "expected_runtime_effect": "All play_sound_effect callers share one limiter. Repeated identical bus+stream plays inside 60ms collapse, active SoundEffect instances are capped at 16 using an explicit lifecycle counter, and each accepted SFX gets small pitch/volume variation."
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/Globals.gd",
+      "unit_id": "Globals/Globals.gd::audio_foundation::state_vars",
+      "classification": "CODE_PATCH",
+      "old_text": "var sound_effect = preload(\"res://Scenes/SoundEffect.tscn\")\nvar rare_orb_sfx = preload(\"res://Sounds/Pickups/rare_orb.wav\")",
+      "new_text": "var sound_effect = preload(\"res://Scenes/SoundEffect.tscn\")\nvar rare_orb_sfx = preload(\"res://Sounds/Pickups/rare_orb.wav\")\n# k4-audio-foundation (B1-X4): combat audio event limiter state\nvar _sfx_last_play: Dictionary = {}\nvar _sfx_active_count = 0\nconst SFX_AGGREGATE_WINDOW_MS = 60\nconst SFX_MAX_CONCURRENT = 16\nconst SFX_PITCH_VARIATION = 0.04\nconst SFX_VOLUME_VARIATION_DB = 2.0",
+      "preimage_sha256": "C1778CB8549B2A0EC15F50C010AFF294D6A3DF94B1A2954EBC7F2190F65942DD",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/Globals.gd",
+      "unit_id": "Globals/Globals.gd::play_sound_effect::limiter",
+      "classification": "CODE_PATCH",
+      "old_text": "func play_sound_effect(stream, bus = \"SFX\"):\n\t\t\t\tif bus == \"SFX\":\n\t\t\t\t\t\t\t\tif GameState.saved_stats.settings.enable_sfx:\n\t\t\t\t\t\t\t\t\t\t\t\tvar sfx = sound_effect.instance()\n\t\t\t\t\t\t\t\t\t\t\t\tsfx.stream = stream\n\t\t\t\t\t\t\t\t\t\t\t\tsfx.bus = bus\n\t\t\t\t\t\t\t\t\t\t\t\tget_tree().get_root().add_child(sfx)\n\t\t\t\tif bus == \"Drops\":\n\t\t\t\t\t\t\t\tif GameState.saved_stats.settings.enable_drops:\n\t\t\t\t\t\t\t\t\t\t\t\tvar sfx = sound_effect.instance()\n\t\t\t\t\t\t\t\t\t\t\t\tsfx.stream = stream\n\t\t\t\t\t\t\t\t\t\t\t\tsfx.bus = bus\n\t\t\t\t\t\t\t\t\t\t\t\tget_tree().get_root().add_child(sfx)",
+      "new_text": "func _on_runtime_sfx_tree_exited():\n\t\t\t\t_sfx_active_count = max(0, _sfx_active_count - 1)\n\nfunc play_sound_effect(stream, bus = \"SFX\"):\n\t\t\t\tif stream == null:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tif bus != \"SFX\" and bus != \"Drops\":\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tif bus == \"SFX\" and not GameState.saved_stats.settings.enable_sfx:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tif bus == \"Drops\" and not GameState.saved_stats.settings.enable_drops:\n\t\t\t\t\t\t\t\treturn\n\n\t\t\t\tvar now = OS.get_ticks_msec()\n\t\t\t\tvar stream_key = str(bus) + \":\" + str(stream.get_instance_id())\n\t\t\t\tif _sfx_last_play.has(stream_key) and now - _sfx_last_play[stream_key] < SFX_AGGREGATE_WINDOW_MS:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tif _sfx_active_count >= SFX_MAX_CONCURRENT:\n\t\t\t\t\t\t\t\treturn\n\n\t\t\t\t_sfx_last_play[stream_key] = now\n\t\t\t\tvar sfx = sound_effect.instance()\n\t\t\t\tsfx.stream = stream\n\t\t\t\tsfx.bus = bus\n\t\t\t\tvar audio = sfx.get_node(\"Audio\")\n\t\t\t\taudio.pitch_scale = 1.0 + rand_range(-SFX_PITCH_VARIATION, SFX_PITCH_VARIATION)\n\t\t\t\taudio.volume_db = -rand_range(0.0, SFX_VOLUME_VARIATION_DB)\n\t\t\t\tsfx.connect(\"tree_exited\", self, \"_on_runtime_sfx_tree_exited\")\n\t\t\t\t_sfx_active_count += 1\n\t\t\t\tget_tree().get_root().add_child(sfx)",
+      "preimage_sha256": "C1778CB8549B2A0EC15F50C010AFF294D6A3DF94B1A2954EBC7F2190F65942DD",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "boot",
+    "semantic_recovery"
+  ],
+  "not_proven": "v0.2.0 lifecycle-counter revision must rerun compile/S0/S1/S4 on the new B1 baseline; final combat feel requires Combat S5. Camera feedback is not implemented."
+}

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/StatusEffects/Skills/Plague.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/buff_icons/plagued.png" id="2"]
+
+[node name="Plague" type="Node"]
+script = ExtResource("1")
+description = "Plague"
+texture = ExtResource("2")
+base_lifetime = 2.0
+unique_group = "Plague"

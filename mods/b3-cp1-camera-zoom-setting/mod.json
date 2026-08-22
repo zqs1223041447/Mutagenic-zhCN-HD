@@ -1,0 +1,136 @@
+{
+  "id": "b3-cp1-camera-zoom-setting",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "b2-x5-camera-impulse"
+  ],
+  "conflicts": [],
+  "scope": "B3-S5 视野缩放设置项：GameState 增加 camera_zoom 默认 0.5（以现状为基线可调）；Settings 增加 zoom 滑块 0.35-0.8（step 0.05）；Player 读取设置应用到 Camera2D zoom 并随 settings_changed 实时更新。",
+  "entities": [
+    {
+      "kind": "camera_zoom_setting",
+      "id": "Globals/GameState.gd::settings::camera_zoom",
+      "confidence": "FACT",
+      "expected_runtime_effect": "global_configuration/初始存档的 settings 字典新增 camera_zoom:0.5；新增 set_camera_zoom(value) 写入 saved_stats.settings.camera_zoom 并 emit settings_changed"
+    },
+    {
+      "kind": "camera_zoom_setting",
+      "id": "Scenes/Popups/Dialogs/Settings/Settings.gd::zoom_ui",
+      "confidence": "FACT",
+      "expected_runtime_effect": "Settings._on_settings_change 同步 ZoomSlider 值；ZoomSlider value_changed 触发 set_camera_zoom"
+    },
+    {
+      "kind": "camera_zoom_setting",
+      "id": "Scenes/Popups/Dialogs/Settings/Settings.tscn::zoom_slider",
+      "confidence": "FACT",
+      "expected_runtime_effect": "Settings 场景新增 HBoxContainer4/ZoomLabel/ZoomSlider(hslider 0.35-0.8, step 0.05)，connection value_changed -> _on_ZoomSlider_value_changed"
+    },
+    {
+      "kind": "camera_zoom_setting",
+      "id": "Scenes/Player/Player.gd::camera_zoom_apply",
+      "confidence": "FACT",
+      "expected_runtime_effect": "Player._ready 连接 settings_changed 并初始应用 zoom；_on_camera_zoom_changed 读取 GameState.saved_stats.settings.camera_zoom 设置 camera2d.zoom"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::settings::camera_zoom_default",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t\t\t\t\t\"volume\": {",
+      "new_text": "\t\t\t\t\t\t\t\t\"camera_zoom\": 0.5,\n\t\t\t\t\t\t\t\t\"volume\": {",
+      "preimage_sha256": "0976E0F463D5E8844209705D545E89BE5DCC1EA53DE4E9BDCF0C7214E31FC6B0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Globals/GameState.gd",
+      "unit_id": "Globals/GameState.gd::settings::set_camera_zoom",
+      "classification": "CODE_PATCH",
+      "old_text": "func set_hide_low_level(enabled):",
+      "new_text": "func set_camera_zoom(value):\n\t\t\t\tsaved_stats.settings.camera_zoom = clamp(value, 0.35, 0.8)\n\t\t\t\temit_signal(\"settings_changed\")\n\nfunc set_hide_low_level(enabled):",
+      "preimage_sha256": "0976E0F463D5E8844209705D545E89BE5DCC1EA53DE4E9BDCF0C7214E31FC6B0",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.gd",
+      "unit_id": "Scenes/Popups/Dialogs/Settings/Settings.gd::on_settings_change_zoom",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\t$MarginContainer / CenterContainer / PanelContainer / VBoxContainer2 / CenterContainer / VBoxContainer2 / HBoxContainer3 / DropSlider.value = GameState.saved_stats.settings.volume.drops",
+      "new_text": "\t\t\t\t$MarginContainer / CenterContainer / PanelContainer / VBoxContainer2 / CenterContainer / VBoxContainer2 / HBoxContainer3 / DropSlider.value = GameState.saved_stats.settings.volume.drops\n\t\t\t\tif GameState.saved_stats.settings.has(\"camera_zoom\"):\n\t\t\t\t\t\t\t\t$MarginContainer / CenterContainer / PanelContainer / VBoxContainer2 / CenterContainer / VBoxContainer2 / HBoxContainer4 / ZoomSlider.value = GameState.saved_stats.settings.camera_zoom",
+      "preimage_sha256": "1805BD8D0E1F411C3C7F669DEC7F97107DA3DD48BDA91AE429E71EE52D7EA35C",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.gd",
+      "unit_id": "Scenes/Popups/Dialogs/Settings/Settings.gd::zoom_handler",
+      "classification": "CODE_PATCH",
+      "old_text": "func _on_DropSlider_value_changed(value: float) -> void :",
+      "new_text": "func _on_ZoomSlider_value_changed(value: float) -> void :\n\t\t\t\tGameState.set_camera_zoom(value)\n\nfunc _on_DropSlider_value_changed(value: float) -> void :",
+      "preimage_sha256": "1805BD8D0E1F411C3C7F669DEC7F97107DA3DD48BDA91AE429E71EE52D7EA35C",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Popups/Dialogs/Settings/Settings.tscn",
+      "unit_id": "Scenes/Popups/Dialogs/Settings/Settings.tscn::zoom_slider_nodes",
+      "classification": "CODE_PATCH",
+      "old_text": "[connection signal=\"value_changed\" from=\"MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer2/HBoxContainer3/DropSlider\" to=\".\" method=\"_on_DropSlider_value_changed\"]",
+      "new_text": "[node name=\"HBoxContainer4\" type=\"HBoxContainer\" parent=\"MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer2\"]\nmargin_top = 144.0\nmargin_right = 320.0\nmargin_bottom = 164.0\n\n[node name=\"Label\" type=\"Label\" parent=\"MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer2/HBoxContainer4\"]\nmargin_right = 156.0\nmargin_bottom = 20.0\nsize_flags_horizontal = 3\ntext = \"Camera Zoom\"\n\n[node name=\"ZoomSlider\" type=\"HSlider\" parent=\"MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer2/HBoxContainer4\"]\nmargin_left = 160.0\nmargin_right = 320.0\nmargin_bottom = 16.0\nrect_min_size = Vector2( 160, 0 )\nmin_value = 0.35\nmax_value = 0.8\nstep = 0.05\nvalue = 0.5\n\n[connection signal=\"value_changed\" from=\"MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer2/HBoxContainer3/DropSlider\" to=\".\" method=\"_on_DropSlider_value_changed\"]\n[connection signal=\"value_changed\" from=\"MarginContainer/CenterContainer/PanelContainer/VBoxContainer2/CenterContainer/VBoxContainer2/HBoxContainer4/ZoomSlider\" to=\".\" method=\"_on_ZoomSlider_value_changed\"]",
+      "preimage_sha256": "49570F2B63AEC71AB965F3FF5ACD694727DFD0977F6621E30AB2CB0012F207CE",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Player/Player.gd",
+      "unit_id": "Scenes/Player/Player.gd::camera_zoom::settings_connect",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tGameState.connect(\"passives_changed\", stats, \"_on_passives_changed\")",
+      "new_text": "\t\t\t\tGameState.connect(\"settings_changed\", self, \"_on_camera_zoom_changed\")\n\t\t\t\tGameState.connect(\"passives_changed\", stats, \"_on_passives_changed\")",
+      "preimage_sha256": "3F0099897FC13C5B16D01042B96042ACB301EC8AD9BA078611C06F646C43B25C",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Player/Player.gd",
+      "unit_id": "Scenes/Player/Player.gd::camera_zoom::apply_func",
+      "classification": "CODE_PATCH",
+      "old_text": "func _on_RecomputePathTimer_timeout() -> void :",
+      "new_text": "func _on_camera_zoom_changed() -> void :\n\t\t\t\tif camera2d == null:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tvar z = 0.5\n\t\t\t\tif GameState.saved_stats.has(\"settings\") and GameState.saved_stats.settings.has(\"camera_zoom\"):\n\t\t\t\t\t\t\t\tz = clamp(float(GameState.saved_stats.settings.camera_zoom), 0.35, 0.8)\n\t\t\t\tcamera2d.zoom = Vector2(z, z)\n\nfunc _on_RecomputePathTimer_timeout() -> void :",
+      "preimage_sha256": "3F0099897FC13C5B16D01042B96042ACB301EC8AD9BA078611C06F646C43B25C",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Player/Player.gd",
+      "unit_id": "Scenes/Player/Player.gd::camera_zoom::ready_apply",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\tgear.connect(\"child_exiting_tree\", self, \"_on_gear_changed\")",
+      "new_text": "\t\t\t\tgear.connect(\"child_exiting_tree\", self, \"_on_gear_changed\")\n\t\t\t\tcall_deferred(\"_on_camera_zoom_changed\")",
+      "preimage_sha256": "3F0099897FC13C5B16D01042B96042ACB301EC8AD9BA078611C06F646C43B25C",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "boot"
+  ],
+  "not_proven": "视野缩放观感需人工 S5 复验；Camera2D zoom 默认 0.5 为基线，滑块 0.35-0.8 step 0.05；设置持久化依赖 GameState.save_game 流程；编译/pack/boot 由 aggregate 构建验证"
+}

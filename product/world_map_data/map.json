@@ -1,0 +1,726 @@
+{
+    "nodes": [
+        {
+            "id": "root",
+            "passive_tag": "",
+            "position": [
+                0,
+                0
+            ]
+        },
+        {
+            "id": "211b0",
+            "passive_tag": "dungeon",
+            "position": [
+                64,
+                0
+            ]
+        },
+        {
+            "id": "693e6",
+            "passive_tag": "red_cave",
+            "position": [
+                128,
+                0
+            ]
+        },
+        {
+            "id": "0adcb",
+            "passive_tag": "dirt_cave",
+            "position": [
+                192,
+                0
+            ]
+        },
+        {
+            "id": "81a33",
+            "passive_tag": "hell",
+            "position": [
+                256,
+                64
+            ]
+        },
+        {
+            "id": "e6c66",
+            "passive_tag": "catacombs",
+            "position": [
+                256,
+                -64
+            ]
+        },
+        {
+            "id": "ef821",
+            "passive_tag": "pit",
+            "position": [
+                320,
+                -64
+            ]
+        },
+        {
+            "id": "4be4b",
+            "passive_tag": "cave",
+            "position": [
+                320,
+                64
+            ]
+        },
+        {
+            "id": "8edd0",
+            "passive_tag": "boss_1",
+            "position": [
+                384,
+                0
+            ]
+        },
+        {
+            "id": "8e2af",
+            "passive_tag": "dungeon",
+            "position": [
+                448,
+                0
+            ]
+        },
+        {
+            "id": "29d5c",
+            "passive_tag": "catacombs",
+            "position": [
+                512,
+                0
+            ]
+        },
+        {
+            "id": "4cb78",
+            "passive_tag": "red_cave",
+            "position": [
+                576,
+                -64
+            ]
+        },
+        {
+            "id": "8c2f5",
+            "passive_tag": "sands",
+            "position": [
+                576,
+                64
+            ]
+        },
+        {
+            "id": "a10aa",
+            "passive_tag": "sands",
+            "position": [
+                640,
+                0
+            ]
+        },
+        {
+            "id": "9a5aa",
+            "passive_tag": "forest",
+            "position": [
+                704,
+                0
+            ]
+        },
+        {
+            "id": "25441",
+            "passive_tag": "flats",
+            "position": [
+                768,
+                64
+            ]
+        },
+        {
+            "id": "bc0d5",
+            "passive_tag": "boss_2",
+            "position": [
+                832,
+                0
+            ]
+        },
+        {
+            "id": "376ef",
+            "passive_tag": "hell",
+            "position": [
+                768,
+                -64
+            ]
+        },
+        {
+            "id": "d0b3e",
+            "passive_tag": "dirt_cave",
+            "position": [
+                896,
+                0
+            ]
+        },
+        {
+            "id": "7db58",
+            "passive_tag": "red_cave",
+            "position": [
+                960,
+                0
+            ]
+        },
+        {
+            "id": "95b61",
+            "passive_tag": "sands",
+            "position": [
+                1024,
+                0
+            ]
+        },
+        {
+            "id": "b1bee",
+            "passive_tag": "flats",
+            "position": [
+                1088,
+                0
+            ]
+        },
+        {
+            "id": "c6d92",
+            "passive_tag": "forest",
+            "position": [
+                1152,
+                0
+            ]
+        },
+        {
+            "id": "942e6",
+            "passive_tag": "cave",
+            "position": [
+                1216,
+                0
+            ]
+        },
+        {
+            "id": "fd15b",
+            "passive_tag": "catacombs",
+            "position": [
+                1280,
+                0
+            ]
+        },
+        {
+            "id": "a488b",
+            "passive_tag": "hell",
+            "position": [
+                1344,
+                128
+            ]
+        },
+        {
+            "id": "5c85f",
+            "passive_tag": "dirt_cave",
+            "position": [
+                1344,
+                -128
+            ]
+        },
+        {
+            "id": "87a6d",
+            "passive_tag": "dungeon",
+            "position": [
+                1344,
+                0
+            ]
+        },
+        {
+            "id": "5d947",
+            "passive_tag": "forest",
+            "position": [
+                1408,
+                -128
+            ]
+        },
+        {
+            "id": "5d28c",
+            "passive_tag": "flats",
+            "position": [
+                1408,
+                128
+            ]
+        },
+        {
+            "id": "2454f",
+            "passive_tag": "boss_3",
+            "position": [
+                1600,
+                0
+            ]
+        },
+        {
+            "id": "7bb23",
+            "passive_tag": "leaderboard_50",
+            "position": [
+                768,
+                0
+            ]
+        },
+        {
+            "id": "91bf1",
+            "passive_tag": "leaderboard_25",
+            "position": [
+                288,
+                0
+            ]
+        },
+        {
+            "id": "b9f9a",
+            "passive_tag": "leaderboard_100",
+            "position": [
+                1440,
+                0
+            ]
+        },
+        {
+            "id": "c922e",
+            "passive_tag": "catacombs",
+            "position": [
+                1664,
+                0
+            ]
+        },
+        {
+            "id": "5a54a",
+            "passive_tag": "hell",
+            "position": [
+                1728,
+                0
+            ]
+        },
+        {
+            "id": "03fea",
+            "passive_tag": "sands",
+            "position": [
+                1792,
+                0
+            ]
+        },
+        {
+            "id": "c4e22",
+            "passive_tag": "cave",
+            "position": [
+                1856,
+                0
+            ]
+        },
+        {
+            "id": "12d29",
+            "passive_tag": "forest",
+            "position": [
+                1920,
+                0
+            ]
+        },
+        {
+            "id": "9e811",
+            "passive_tag": "spirit_of_the_ancient",
+            "position": [
+                2048,
+                0
+            ]
+        },
+        {
+            "id": "e3c58",
+            "passive_tag": "cave",
+            "position": [
+                2176,
+                0
+            ]
+        },
+        {
+            "id": "cf3f8",
+            "passive_tag": "cave",
+            "position": [
+                2304,
+                -64
+            ]
+        },
+        {
+            "id": "31d3c",
+            "passive_tag": "red_cave",
+            "position": [
+                2368,
+                64
+            ]
+        },
+        {
+            "id": "034e3",
+            "passive_tag": "cave",
+            "position": [
+                2432,
+                -64
+            ]
+        },
+        {
+            "id": "21920",
+            "passive_tag": "cave",
+            "position": [
+                2496,
+                64
+            ]
+        },
+        {
+            "id": "b97e8",
+            "passive_tag": "dungeon",
+            "position": [
+                2560,
+                -64
+            ]
+        },
+        {
+            "id": "c572d",
+            "passive_tag": "pit",
+            "position": [
+                2624,
+                64
+            ]
+        },
+        {
+            "id": "b317f",
+            "passive_tag": "cave",
+            "position": [
+                2688,
+                -64
+            ]
+        },
+        {
+            "id": "4ff30",
+            "passive_tag": "cave",
+            "position": [
+                2752,
+                64
+            ]
+        },
+        {
+            "id": "2a68b",
+            "passive_tag": "cave",
+            "position": [
+                2816,
+                -64
+            ]
+        },
+        {
+            "id": "374f0",
+            "passive_tag": "dungeon",
+            "position": [
+                2880,
+                64
+            ]
+        },
+        {
+            "id": "e7478",
+            "passive_tag": "cave",
+            "position": [
+                2944,
+                -64
+            ]
+        },
+        {
+            "id": "8452f",
+            "passive_tag": "cave",
+            "position": [
+                3008,
+                64
+            ]
+        },
+        {
+            "id": "a7f3a",
+            "passive_tag": "cave",
+            "position": [
+                3136,
+                0
+            ]
+        },
+        {
+            "id": "6cd2b",
+            "passive_tag": "red_cave",
+            "position": [
+                3136,
+                128
+            ]
+        },
+        {
+            "id": "8e0df",
+            "passive_tag": "catacombs",
+            "position": [
+                3232,
+                64
+            ]
+        },
+        {
+            "id": "6caf3",
+            "passive_tag": "dungeon",
+            "position": [
+                3328,
+                0
+            ]
+        },
+        {
+            "id": "68e75",
+            "passive_tag": "hell",
+            "position": [
+                3232,
+                -64
+            ]
+        },
+        {
+            "id": "a9263",
+            "passive_tag": "pit",
+            "position": [
+                3136,
+                -128
+            ]
+        }
+    ],
+    "edges": [
+        [
+            "211b0",
+            "root"
+        ],
+        [
+            "211b0",
+            "693e6"
+        ],
+        [
+            "0adcb",
+            "693e6"
+        ],
+        [
+            "0adcb",
+            "81a33"
+        ],
+        [
+            "0adcb",
+            "e6c66"
+        ],
+        [
+            "e6c66",
+            "ef821"
+        ],
+        [
+            "4be4b",
+            "81a33"
+        ],
+        [
+            "4be4b",
+            "8edd0"
+        ],
+        [
+            "8edd0",
+            "ef821"
+        ],
+        [
+            "8edd0",
+            "91bf1"
+        ],
+        [
+            "8e2af",
+            "8edd0"
+        ],
+        [
+            "29d5c",
+            "8e2af"
+        ],
+        [
+            "29d5c",
+            "4cb78"
+        ],
+        [
+            "29d5c",
+            "8c2f5"
+        ],
+        [
+            "4cb78",
+            "a10aa"
+        ],
+        [
+            "8c2f5",
+            "a10aa"
+        ],
+        [
+            "9a5aa",
+            "a10aa"
+        ],
+        [
+            "25441",
+            "9a5aa"
+        ],
+        [
+            "25441",
+            "bc0d5"
+        ],
+        [
+            "bc0d5",
+            "d0b3e"
+        ],
+        [
+            "376ef",
+            "9a5aa"
+        ],
+        [
+            "376ef",
+            "bc0d5"
+        ],
+        [
+            "7db58",
+            "d0b3e"
+        ],
+        [
+            "7db58",
+            "95b61"
+        ],
+        [
+            "95b61",
+            "b1bee"
+        ],
+        [
+            "b1bee",
+            "c6d92"
+        ],
+        [
+            "942e6",
+            "c6d92"
+        ],
+        [
+            "942e6",
+            "fd15b"
+        ],
+        [
+            "5c85f",
+            "87a6d"
+        ],
+        [
+            "5c85f",
+            "5d947"
+        ],
+        [
+            "87a6d",
+            "fd15b"
+        ],
+        [
+            "87a6d",
+            "a488b"
+        ],
+        [
+            "5d28c",
+            "a488b"
+        ],
+        [
+            "2454f",
+            "5d947"
+        ],
+        [
+            "2454f",
+            "5d28c"
+        ],
+        [
+            "2454f",
+            "b9f9a"
+        ],
+        [
+            "2454f",
+            "c922e"
+        ],
+        [
+            "7bb23",
+            "bc0d5"
+        ],
+        [
+            "5a54a",
+            "c922e"
+        ],
+        [
+            "03fea",
+            "5a54a"
+        ],
+        [
+            "03fea",
+            "c4e22"
+        ],
+        [
+            "12d29",
+            "c4e22"
+        ],
+        [
+            "12d29",
+            "9e811"
+        ],
+        [
+            "9e811",
+            "e3c58"
+        ],
+        [
+            "cf3f8",
+            "e3c58"
+        ],
+        [
+            "31d3c",
+            "cf3f8"
+        ],
+        [
+            "034e3",
+            "31d3c"
+        ],
+        [
+            "034e3",
+            "21920"
+        ],
+        [
+            "21920",
+            "b97e8"
+        ],
+        [
+            "b97e8",
+            "c572d"
+        ],
+        [
+            "b317f",
+            "c572d"
+        ],
+        [
+            "4ff30",
+            "b317f"
+        ],
+        [
+            "2a68b",
+            "4ff30"
+        ],
+        [
+            "2a68b",
+            "374f0"
+        ],
+        [
+            "374f0",
+            "e7478"
+        ],
+        [
+            "8452f",
+            "e7478"
+        ],
+        [
+            "8452f",
+            "a7f3a"
+        ],
+        [
+            "a7f3a",
+            "a9263"
+        ],
+        [
+            "6cd2b",
+            "a7f3a"
+        ],
+        [
+            "8e0df",
+            "a7f3a"
+        ],
+        [
+            "6caf3",
+            "a7f3a"
+        ],
+        [
+            "68e75",
+            "a7f3a"
+        ]
+    ]
+}

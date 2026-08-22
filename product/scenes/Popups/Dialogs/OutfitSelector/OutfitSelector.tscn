@@ -1,0 +1,369 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.gd" id="1"]
+[ext_resource type="Theme" path="res://Themes/MainTheme.tres" id="2"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/actors/flame_helmet.spriteframes.tres" id="3"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/actors/default.spriteframes.tres" id="4"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/actors/default.spriteframes.tres" id="5"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/actors/default.spriteframes.tres" id="6"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/actors/default.spriteframes.tres" id="7"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/actors/orbs.spriteframes.tres" id="8"]
+[ext_resource type="SpriteFrames" path="res://sprites/_acquired/generated_spriteframes/actors/pixie_wings.spriteframes.tres" id="9"]
+
+[sub_resource type="ViewportTexture" id=1]
+viewport_path = NodePath("CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport")
+
+[node name="OutfitSelector" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.815686)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("2")
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+offset_left = 304.0
+offset_top = 80.0
+offset_right = 976.0
+offset_bottom = 720.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 656.0
+offset_bottom = 624.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer"]
+offset_right = 640.0
+offset_bottom = 40.0
+alignment = 2
+
+[node name="Button" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+offset_left = 570.0
+offset_right = 640.0
+offset_bottom = 40.0
+text = "Close"
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer"]
+offset_top = 44.0
+offset_right = 640.0
+offset_bottom = 64.0
+text = "Choose Outfit"
+align = 1
+
+[node name="PlayerRenderer" type="CenterContainer" parent="CenterContainer/PanelContainer/VBoxContainer"]
+offset_top = 68.0
+offset_right = 640.0
+offset_bottom = 196.0
+custom_minimum_size = Vector2(128, 128)
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer"]
+offset_left = 256.0
+offset_right = 384.0
+offset_bottom = 128.0
+custom_minimum_size = Vector2(128, 128)
+texture = SubResource("1")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Viewport" type="Viewport" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer"]
+size = Vector2(32, 32)
+own_world = true
+transparent_bg = true
+render_target_v_flip = true
+
+[node name="BodyParts" type="Node2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport"]
+
+[node name="PantsAttachment" type="Node2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts"]
+
+[node name="PantsSprite" type="AnimatedSprite2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts/PantsAttachment"]
+frames = ExtResource("6")
+
+[node name="BackSprite" type="AnimatedSprite2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts/PantsAttachment"]
+position = Vector2(-2.83653, -1.5017)
+frames = ExtResource("9")
+speed_scale = 0.5
+playing = true
+
+[node name="HeadAttachment" type="Node2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts/PantsAttachment"]
+position = Vector2(-0.0496063, -5.21628)
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="HeadSprite" type="AnimatedSprite2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts/PantsAttachment/HeadAttachment"]
+frames = ExtResource("4")
+
+[node name="HelmetSprite" type="AnimatedSprite2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts/PantsAttachment/HeadAttachment"]
+frames = ExtResource("3")
+
+[node name="LeftFoot" type="Node2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts/PantsAttachment"]
+position = Vector2(-3.49842, 3.4874)
+z_index = -1
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Foot" type="AnimatedSprite2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts/PantsAttachment/LeftFoot"]
+frames = ExtResource("5")
+speed_scale = 0.25
+playing = true
+
+[node name="RightFoot" type="Node2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts/PantsAttachment"]
+position = Vector2(3.44015, 3.4874)
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Foot" type="AnimatedSprite2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts/PantsAttachment/RightFoot"]
+frames = ExtResource("5")
+speed_scale = 0.25
+playing = true
+
+[node name="LeftHand" type="Node2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts/PantsAttachment"]
+position = Vector2(-3.98578, 0.580456)
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Hand" type="AnimatedSprite2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts/PantsAttachment/LeftHand"]
+frames = ExtResource("8")
+speed_scale = 0.25
+playing = true
+
+[node name="RightHand" type="Node2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts/PantsAttachment"]
+position = Vector2(4.28293, 0.203137)
+z_index = -1
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Hand" type="AnimatedSprite2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts/PantsAttachment/RightHand"]
+frames = ExtResource("7")
+speed_scale = 0.25
+playing = true
+
+[node name="Camera2D" type="Camera2D" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer/Viewport/BodyParts"]
+current = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/PanelContainer/VBoxContainer/PlayerRenderer"]
+show_behind_parent = true
+offset_left = 256.0
+offset_right = 384.0
+offset_bottom = 128.0
+custom_minimum_size = Vector2(128, 128)
+color = Color(0.501961, 0.67451, 1, 0.211765)
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/PanelContainer/VBoxContainer"]
+offset_top = 200.0
+offset_right = 640.0
+offset_bottom = 204.0
+
+[node name="HBoxContainer" type="TabContainer" parent="CenterContainer/PanelContainer/VBoxContainer"]
+offset_top = 208.0
+offset_right = 640.0
+offset_bottom = 608.0
+custom_minimum_size = Vector2(640, 400)
+
+[node name="Helmets" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 34.0
+offset_right = -3.0
+offset_bottom = -3.0
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Helmets"]
+offset_right = 634.0
+offset_bottom = 20.0
+text = "Helmets"
+align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Helmets"]
+offset_top = 24.0
+offset_right = 634.0
+offset_bottom = 344.0
+custom_minimum_size = Vector2(128, 320)
+size_flags_horizontal = 3
+scroll_horizontal_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Helmets/ScrollContainer"]
+offset_right = 634.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Helmets" type="GridContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Helmets/ScrollContainer/HBoxContainer"]
+offset_left = 317.0
+offset_right = 317.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/hseparation = 16
+columns = 4
+
+[node name="Faces" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+visible = false
+offset_left = 144.0
+offset_right = 272.0
+offset_bottom = 345.0
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Faces"]
+offset_right = 128.0
+offset_bottom = 21.0
+text = "Face"
+align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Faces"]
+offset_top = 25.0
+offset_right = 128.0
+offset_bottom = 345.0
+custom_minimum_size = Vector2(128, 320)
+scroll_horizontal_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Faces/ScrollContainer"]
+offset_right = 128.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Heads" type="GridContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Faces/ScrollContainer/HBoxContainer"]
+offset_left = 317.0
+offset_right = 317.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/hseparation = 16
+columns = 4
+
+[node name="Gloves" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+visible = false
+offset_left = 288.0
+offset_right = 416.0
+offset_bottom = 345.0
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Gloves"]
+offset_right = 128.0
+offset_bottom = 21.0
+text = "Gloves"
+align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Gloves"]
+offset_top = 25.0
+offset_right = 128.0
+offset_bottom = 345.0
+custom_minimum_size = Vector2(128, 320)
+scroll_horizontal_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Gloves/ScrollContainer"]
+offset_right = 128.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Hands" type="GridContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Gloves/ScrollContainer/HBoxContainer"]
+offset_left = 317.0
+offset_right = 317.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/hseparation = 16
+columns = 4
+
+[node name="Body" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+visible = false
+offset_left = 432.0
+offset_right = 560.0
+offset_bottom = 345.0
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Body"]
+offset_right = 128.0
+offset_bottom = 21.0
+text = "Body"
+align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Body"]
+offset_top = 25.0
+offset_right = 128.0
+offset_bottom = 345.0
+custom_minimum_size = Vector2(128, 320)
+scroll_horizontal_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Body/ScrollContainer"]
+offset_right = 128.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Pants" type="GridContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Body/ScrollContainer/HBoxContainer"]
+offset_left = 317.0
+offset_right = 317.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/hseparation = 16
+columns = 4
+
+[node name="Boots" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+visible = false
+offset_left = 576.0
+offset_right = 704.0
+offset_bottom = 345.0
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Boots"]
+offset_right = 128.0
+offset_bottom = 21.0
+text = "Boots"
+align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Boots"]
+offset_top = 25.0
+offset_right = 128.0
+offset_bottom = 345.0
+custom_minimum_size = Vector2(128, 320)
+scroll_horizontal_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Boots/ScrollContainer"]
+offset_right = 128.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Feet" type="GridContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Boots/ScrollContainer/HBoxContainer"]
+offset_left = 317.0
+offset_right = 317.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/hseparation = 16
+columns = 4
+
+[node name="Back" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+visible = false
+offset_left = 720.0
+offset_right = 848.0
+offset_bottom = 345.0
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Back"]
+offset_right = 128.0
+offset_bottom = 21.0
+text = "Back"
+align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Back"]
+offset_top = 25.0
+offset_right = 128.0
+offset_bottom = 345.0
+custom_minimum_size = Vector2(128, 320)
+scroll_horizontal_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Back/ScrollContainer"]
+offset_right = 128.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Back" type="GridContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/Back/ScrollContainer/HBoxContainer"]
+offset_left = 317.0
+offset_right = 317.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/hseparation = 16
+columns = 4
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer2/Button" to="." method="_on_Button_pressed"]

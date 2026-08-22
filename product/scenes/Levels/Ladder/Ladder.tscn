@@ -1,0 +1,194 @@
+[gd_scene load_steps=42 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Levels/BaseLevel.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/Levels/Ladder/Ladder.gd" id="2"]
+[ext_resource type="Texture2D" path="res://Tilesets/tileset_factory.png" id="3"]
+[ext_resource type="AudioStream" path="res://Sounds/BackgroundMusic/ambience_boss.ogg" id="4"]
+[ext_resource type="Texture2D" path="res://Tilesets/tileset_dirt.png" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/Levels/Ladder/LadderSpawner.tscn" id="6"]
+[ext_resource type="Theme" path="res://Themes/MainTheme.tres" id="7"]
+[ext_resource type="FontFile" path="res://Fonts/ChivoMono-VariableFont_wght.ttf" id="8"]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PackedVector2Array( 0, 32, 0, 0, 32, 0, 32, 16, 16, 16, 16, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PackedVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PackedVector2Array( 16, 0, 16, 16, 32, 16, 32, 32, 0, 32, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PackedVector2Array( 0, 16, 32, 16, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PackedVector2Array( 0, 16, 16, 16, 16, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PackedVector2Array( 16, 0, 32, 0, 32, 32, 16, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PackedVector2Array( 0, 16, 0, 0, 32, 0, 32, 32, 16, 32, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PackedVector2Array( 0, 16, 0, 0, 32, 0, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PackedVector2Array( 32, 16, 16, 16, 16, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PackedVector2Array( 32, 32, 16, 32, 16, 16, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PackedVector2Array( 16, 32, 0, 32, 0, 16, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PackedVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PackedVector2Array( 16, 16, 32, 16, 32, 32, 16, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PackedVector2Array( 16, 32, 0, 32, 0, 16, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PackedVector2Array( 16, 0, 32, 0, 32, 16, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PackedVector2Array( 16, 32, 0, 32, 0, 0, 32, 0, 32, 16, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PackedVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PackedVector2Array( 0, 0, 32, 0, 32, 32, 16, 32, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PackedVector2Array( 32, 0, 32, 32, 16, 32, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PackedVector2Array( 32, 0, 32, 32, 0, 32, 0, 16, 16, 16, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+points = PackedVector2Array( 0, 16, 32, 16, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+points = PackedVector2Array( 16, 0, 16, 16, 32, 16, 32, 32, 0, 32, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+points = PackedVector2Array( 16, 0, 16, 32, 0, 32, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PackedVector2Array( 16, 16, 16, 0, 32, 0, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+points = PackedVector2Array( 16, 32, 16, 16, 32, 16, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+points = PackedVector2Array( 0, 32, 0, 16, 16, 16, 16, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PackedVector2Array( 0, 16, 0, 0, 16, 0, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=29]
+points = PackedVector2Array( 16, 16, 16, 0, 32, 0, 32, 16, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+points = PackedVector2Array( 16, 32, 0, 32, 0, 16, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=31]
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=32]
+points = PackedVector2Array( 16, 32, 16, 16, 32, 16, 32, 32, 16, 32 )
+
+[sub_resource type="FontFile" id=34]
+size = 32
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+font_data = ExtResource("8")
+
+[node name="Ladder" instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="AudioStreamPlayer" parent="." index="0"]
+stream = ExtResource("4")
+
+[node name="TileMap" parent="." index="2"]
+tile_data = PackedInt32Array(-458762, 0, 0, -458761, 0, 1, -458760, 0, 1, -458759, 0, 1, -458758, 0, 1, -458757, 0, 1, -458756, 0, 1, -458755, 0, 1, -458754, 0, 1, -458753, 0, 1, -524288, 0, 1, -524287, 0, 1, -524286, 0, 1, -524285, 0, 1, -524284, 0, 1, -524283, 0, 1, -524282, 0, 1, -524281, 0, 1, -524280, 0, 1, -524279, 0, 2, -393226, 0, 65536, -393225, 0, 65542, -393224, 0, 65541, -393223, 0, 65537, -393222, 0, 65537, -393221, 0, 65537, -393220, 0, 65537, -393219, 0, 65537, -393218, 0, 65537, -393217, 0, 65537, -458752, 0, 65541, -458751, 0, 65537, -458750, 0, 65537, -458749, 0, 65537, -458748, 0, 65542, -458747, 0, 65541, -458746, 0, 6, -458745, 0, 65537, -458744, 0, 65537, -458743, 0, 65538, -327690, 0, 65536, -327689, 0, 65537, -327688, 0, 65537, -327687, 0, 65541, -327686, 0, 65537, -327685, 0, 65537, -327684, 0, 65541, -327683, 0, 65537, -327682, 0, 65537, -327681, 0, 65541, -393216, 0, 131078, -393215, 0, 65542, -393214, 0, 65537, -393213, 0, 131078, -393212, 0, 65537, -393211, 0, 65537, -393210, 0, 131077, -393209, 0, 5, -393208, 0, 65537, -393207, 0, 65538, -262154, 0, 65536, -262153, 0, 65537, -262152, 0, 65537, -262151, 0, 131077, -262150, 0, 6, -262149, 0, 131077, -262148, 0, 65537, -262147, 0, 65537, -262146, 0, 65537, -262145, 0, 65537, -327680, 0, 65537, -327679, 0, 65537, -327678, 0, 65537, -327677, 0, 65537, -327676, 0, 65537, -327675, 0, 65541, -327674, 0, 5, -327673, 0, 65537, -327672, 0, 131077, -327671, 0, 65538, -196618, 0, 65536, -196617, 0, 65537, -196616, 0, 65542, -196615, 0, 5, -196614, 0, 65537, -196613, 0, 65537, -196612, 0, 65537, -196611, 0, 65537, -196610, 0, 65541, -196609, 0, 65537, -262144, 0, 5, -262143, 0, 5, -262142, 0, 131077, -262141, 0, 65537, -262140, 0, 6, -262139, 0, 131078, -262138, 0, 65541, -262137, 0, 5, -262136, 0, 6, -262135, 0, 65538, -131082, 0, 65536, -131081, 0, 65537, -131080, 0, 65537, -131079, 0, 65537, -131078, 0, 65537, -131077, 0, 65537, -131076, 0, 131078, -131075, 0, 65537, -131074, 0, 6, -131073, 0, 65537, -196608, 0, 65541, -196607, 0, 6, -196606, 0, 65537, -196605, 0, 65537, -196604, 0, 65542, -196603, 0, 131077, -196602, 0, 131078, -196601, 0, 65537, -196600, 0, 65542, -196599, 0, 65538, -65546, 0, 65536, -65545, 0, 65542, -65544, 0, 131078, -65543, 0, 65541, -65542, 0, 65541, -65541, 0, 65537, -65540, 0, 131077, -65539, 0, 65537, -65538, 0, 65537, -65537, 0, 5, -131072, 0, 65542, -131071, 0, 6, -131070, 0, 65537, -131069, 0, 65542, -131068, 0, 65541, -131067, 0, 5, -131066, 0, 65537, -131065, 0, 65537, -131064, 0, 5, -131063, 0, 65538, -10, 0, 65536, -9, 0, 65537, -8, 0, 65542, -7, 0, 65537, -6, 0, 65537, -5, 0, 131077, -4, 0, 131077, -3, 0, 131077, -2, 0, 65537, -1, 0, 131077, -65536, 0, 65542, -65535, 0, 65537, -65534, 0, 65537, -65533, 0, 65537, -65532, 0, 6, -65531, 0, 5, -65530, 0, 6, -65529, 0, 65537, -65528, 0, 65537, -65527, 0, 65538, 65526, 0, 65536, 65527, 0, 5, 65528, 0, 65537, 65529, 0, 65537, 65530, 0, 65537, 65531, 0, 65537, 65532, 0, 65537, 65533, 0, 65537, 65534, 0, 65537, 65535, 0, 5, 0, 0, 65537, 1, 0, 65537, 2, 0, 65537, 3, 0, 65537, 4, 0, 65537, 5, 0, 5, 6, 0, 65541, 7, 0, 65542, 8, 0, 65537, 9, 0, 65538, 131062, 0, 65536, 131063, 0, 65537, 131064, 0, 65537, 131065, 0, 131077, 131066, 0, 65542, 131067, 0, 65541, 131068, 0, 65537, 131069, 0, 65537, 131070, 0, 65537, 131071, 0, 5, 65536, 0, 65541, 65537, 0, 65541, 65538, 0, 65537, 65539, 0, 6, 65540, 0, 5, 65541, 0, 5, 65542, 0, 65537, 65543, 0, 65537, 65544, 0, 65537, 65545, 0, 65538, 196598, 0, 65536, 196599, 0, 131078, 196600, 0, 65537, 196601, 0, 65537, 196602, 0, 131077, 196603, 0, 65537, 196604, 0, 65537, 196605, 0, 131078, 196606, 0, 65537, 196607, 0, 65537, 131072, 0, 65537, 131073, 0, 5, 131074, 0, 65537, 131075, 0, 131077, 131076, 0, 65542, 131077, 0, 65537, 131078, 0, 5, 131079, 0, 65542, 131080, 0, 131077, 131081, 0, 65538, 262134, 0, 65536, 262135, 0, 131077, 262136, 0, 5, 262137, 0, 65537, 262138, 0, 65537, 262139, 0, 131078, 262140, 0, 131078, 262141, 0, 65537, 262142, 0, 65537, 262143, 0, 131078, 196608, 0, 65537, 196609, 0, 65541, 196610, 0, 65537, 196611, 0, 131078, 196612, 0, 65537, 196613, 0, 131078, 196614, 0, 5, 196615, 0, 65542, 196616, 0, 65537, 196617, 0, 65538, 327670, 0, 65536, 327671, 0, 65542, 327672, 0, 65537, 327673, 0, 131077, 327674, 0, 65537, 327675, 0, 65537, 327676, 0, 65537, 327677, 0, 65537, 327678, 0, 65537, 327679, 0, 65541, 262144, 0, 6, 262145, 0, 65537, 262146, 0, 131078, 262147, 0, 65537, 262148, 0, 65537, 262149, 0, 6, 262150, 0, 65542, 262151, 0, 65537, 262152, 0, 6, 262153, 0, 65538, 393206, 0, 65536, 393207, 0, 65542, 393208, 0, 131078, 393209, 0, 65537, 393210, 0, 65537, 393211, 0, 65537, 393212, 0, 5, 393213, 0, 6, 393214, 0, 65537, 393215, 0, 131077, 327680, 0, 65537, 327681, 0, 65537, 327682, 0, 6, 327683, 0, 131078, 327684, 0, 131077, 327685, 0, 65537, 327686, 0, 65537, 327687, 0, 65537, 327688, 0, 6, 327689, 0, 65538, 458742, 0, 65536, 458743, 0, 65537, 458744, 0, 65537, 458745, 0, 65537, 458746, 0, 65541, 458747, 0, 65537, 458748, 0, 65537, 458749, 0, 65537, 458750, 0, 6, 458751, 0, 65542, 393216, 0, 65537, 393217, 0, 5, 393218, 0, 65541, 393219, 0, 6, 393220, 0, 6, 393221, 0, 65537, 393222, 0, 65537, 393223, 0, 65537, 393224, 0, 131077, 393225, 0, 65538, 524278, 0, 131072, 524279, 0, 131073, 524280, 0, 131073, 524281, 0, 131073, 524282, 0, 131073, 524283, 0, 131073, 524284, 0, 131073, 524285, 0, 131073, 524286, 0, 131073, 524287, 0, 131073, 458752, 0, 131073, 458753, 0, 131073, 458754, 0, 131073, 458755, 0, 131073, 458756, 0, 131073, 458757, 0, 131073, 458758, 0, 131073, 458759, 0, 131073, 458760, 0, 131073, 458761, 0, 131074)
+
+[node name="Spawns" type="Node2D" parent="." index="6"]
+
+[node name="LadderSpawner" parent="Spawns" index="0" instance=ExtResource("6")]
+position = Vector2(0, -160)
+
+[node name="LadderSpawner2" parent="Spawns" index="1" instance=ExtResource("6")]
+position = Vector2(192, -128)
+
+[node name="LadderSpawner3" parent="Spawns" index="2" instance=ExtResource("6")]
+position = Vector2(-192, -128)
+
+[node name="LadderSpawner4" parent="Spawns" index="3" instance=ExtResource("6")]
+position = Vector2(-192, 128)
+
+[node name="LadderSpawner5" parent="Spawns" index="4" instance=ExtResource("6")]
+position = Vector2(192, 128)
+
+[node name="LadderSpawner6" parent="Spawns" index="5" instance=ExtResource("6")]
+position = Vector2(0, 160)
+
+[node name="LadderSpawner7" parent="Spawns" index="6" instance=ExtResource("6")]
+position = Vector2(224, 0)
+
+[node name="LadderSpawner8" parent="Spawns" index="7" instance=ExtResource("6")]
+position = Vector2(-224, 0)
+
+[node name="Timer" type="Timer" parent="." index="7"]
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="8"]
+layer = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer" index="0"]
+offset_right = 1280.0
+offset_bottom = 800.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer" index="0"]
+offset_right = 1280.0
+offset_bottom = 120.0
+custom_minimum_size = Vector2(0, 120)
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+offset_left = 467.0
+offset_top = 40.0
+offset_right = 752.0
+offset_bottom = 79.0
+theme_override_fonts/font = SubResource("34")
+text = "Time Remaining:"
+align = 1
+
+[node name="TimeLabel" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer" index="1"]
+offset_left = 756.0
+offset_top = 40.0
+offset_right = 813.0
+offset_bottom = 79.0
+theme_override_fonts/font = SubResource("34")
+text = "30s"
+align = 1
+
+[node name="TimeUpdater" type="Timer" parent="." index="9"]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="TimeUpdater" to="." method="_on_TimeUpdater_timeout"]

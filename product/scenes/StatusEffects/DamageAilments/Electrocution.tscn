@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/StatusEffects/DamageAilments/Electrocution.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/status_effects/electrocuted.png" id="2"]
+
+[node name="Electrocution" type="Node"]
+script = ExtResource("1")
+description = "Electrocuted"
+texture = ExtResource("2")
+is_ailment = true
+only_apply_strongest = true
+lifetime = 4.0
+base_lifetime = 4.0
+unique_group = "Electrocution"
+does_tick = false

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://sprites/skills/polarize.png" id="1"]
+[ext_resource type="Script" path="res://scenes/Skills/Playable/Polarize/Polarize.gd" id="2"]
+
+[node name="Polarize" type="Node2D"]
+script = ExtResource("2")
+texture = ExtResource("1")

@@ -1,0 +1,865 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-22T10:05:00+08:00",
+  "coordinator": "gork",
+  "central_branch": "agent/kinetic-arcane-remaster-foundation",
+  "git": {
+    "branch": "agent/kinetic-arcane-remaster-foundation",
+    "head": "b3bbb751e6e16bbc601d44c727a770cf4d9ddcbf",
+    "remote": "origin",
+    "remote_url": "https://github.com/zqs1223041447/Mutagenic-zhCN-HD.git",
+    "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
+  },
+  "current_phase": "P4_VISUAL_DENSITY_COMBAT_FEEL",
+  "current_gate": "P4-BATCH-1（待规划；P3 已于 2026-08-22 收口）",
+  "engine": {
+    "product": "4.7.1-stable",
+    "legacy_reference": "3.5.3",
+    "product_runtime_ready": true,
+    "godot_4_7_1_on_path": false,
+    "godot_4_7_1_discovery_this_session": "SUCCESS",
+    "discovery_overall": "SUCCESS",
+    "resolved_via": "REPO_RELATIVE",
+    "version": "4.7.1",
+    "binary_gitignored": "02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+    "fetch_script": "scripts/bootstrap/fetch_godot.py",
+    "note": "Local discovery SUCCESS via gitignored 02_tools/godot. CI fetches linux zip. Not rewritten from NOT_FOUND without a binary."
+  },
+  "environment": {
+    "source": "MACHINE_RECALIBRATED",
+    "independently_reverified_this_session": true,
+    "Git": "PASS",
+    "Python": "PASS",
+    "Private_DevKit": "PASS",
+    "Original_Mutagenic.exe": "PASS",
+    "Script_Key": "PASS",
+    "GDRE": "PASS",
+    "Python_dependencies": "PASS",
+    "Bootstrap": "DEV_ENV_READY",
+    "LEVEL_0_REPO_READY": "PASS",
+    "LEVEL_1_BUILD_READY": "PASS",
+    "Basic_Legacy_Build_Ability": "READY",
+    "LEVEL_2_RUNTIME_READY": "PASS",
+    "LEVEL_3_FULL_VALIDATION": "PASS",
+    "RUNTIME_VM": "BLOCKED",
+    "note": "Doctor LEVEL_3_FULL_VALIDATION_READY is abs-path production_hardcode=0 + secret findings=0 + L2. VM/Hyper-V remains BLOCKED and is not claimed as PASS."
+  },
+  "workspace": {
+    "product_dir": "PRESENT",
+    "migration_dir": "PRESENT",
+    "state_dir": "PRESENT",
+    "schema_dir_05": "MISSING",
+    "baseline_dir_01": "MISSING",
+    "generated_06_to_09": "ABSENT_OK",
+    "docs_dir": "PRESENT_MOSTLY_LEGACY",
+    "godot_4_7_1_tools_dir": "GITIGNORED_PRESENT_LOCALLY"
+  },
+  "legacy_status": {
+    "file": "status.json",
+    "role": "LEGACY_REFERENCE_ONLY",
+    "not_current_authority": true,
+    "project_phase": "PHASE_6_INCREMENTAL_MOD_LOCALIZATION_INTEGRATION",
+    "governance_hold": "promotion_recorded_governance_hold",
+    "human_readable_view": "PROJECT_STATE.md"
+  },
+  "docs_hygiene": {
+    "audited_at": "2026-08-21",
+    "index": "docs/README.md",
+    "action": "non_reusable_deleted_reusable_rewritten",
+    "deleted_count": 29,
+    "read_only_evidence": [
+      "docs/ai/audits/"
+    ],
+    "legacy_reference_only": [
+      "status.json",
+      "PROJECT_STATE.md",
+      "releases/"
+    ]
+  },
+  "tasks": {
+    "P1-X0": {
+      "goal": "Conversion Seed",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "seed": "PASS",
+        "static_parse_godot4": "PASS",
+        "import_parse": "RAN",
+        "import_result": "CLEAN",
+        "engine": "SUCCESS",
+        "zero_errors_required": false
+      },
+      "evidence": [
+        "product/scenes/seed.tscn",
+        "migration/conversion/seed_report.json"
+      ]
+    },
+    "P1-X1": {
+      "goal": "Compatibility Inventory",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "categories": [
+          "Script",
+          "Scene",
+          "Resource",
+          "Settings"
+        ],
+        "files_scanned": 913,
+        "item_count": 1274,
+        "blocker_dag_nodes": 43
+      },
+      "evidence": [
+        "migration/inventory/compat_inventory.json"
+      ]
+    },
+    "P1-X2": {
+      "goal": "Product Toolchain Closure",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "discovery": "DONE",
+        "engine": "SUCCESS",
+        "tool_missing": false,
+        "never_status": "PASS",
+        "ci_job": "PRESENT",
+        "fetch_script": "PRESENT"
+      },
+      "evidence": [
+        "scripts/bootstrap/product_toolchain.py",
+        "scripts/bootstrap/fetch_godot.py",
+        ".github/workflows/ci-static-semantic.yml"
+      ],
+      "note": "Local binary is gitignored. Discovery uses SUCCESS not PASS. CI downloads via fetch_godot.py."
+    },
+    "P1-X3": {
+      "goal": "Preservation Contracts",
+      "status": "DONE",
+      "blocked_by": [],
+      "source_of_truth": "recovered_source_scan",
+      "evidence": [
+        "migration/preservation/contracts.json"
+      ]
+    },
+    "LEVEL_3-C0": {
+      "goal": "LEVEL_3 closure (abs path, secret, bootstrap, CI discovery)",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "abs_path_production_hardcode": 0,
+        "secret_findings": 0,
+        "releases_classified_as": "provenance_metadata",
+        "bootstrap_cmd": "PRESENT",
+        "ci_fetch_godot": "PRESENT",
+        "vm_runtime": "BLOCKED"
+      },
+      "note": "releases/*.json reclassified as provenance (historical evidence), not rewritten as production PASS. Secret log-word false positives filtered; real secrets still FAIL. VM remains BLOCKED."
+    },
+    "P1-B0": {
+      "goal": "Project settings + input map",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "config_version": 5,
+        "input_actions": 27,
+        "required_actions_present": true
+      }
+    },
+    "P1-B1": {
+      "goal": "Autoload registry + Globals conversion",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "autoloads": 179,
+        "scripts_converted": 185,
+        "recovered_unmodified": true,
+        "data_copied": [
+          "passive_tree_data",
+          "skillgen",
+          "world_map_data"
+        ]
+      }
+    },
+    "P1-B2": {
+      "goal": "Headless import evidence",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "returncode": 0,
+        "zero_errors_required": false,
+        "blocker_count": 773
+      },
+      "note": "Dominant remaining blockers: missing preloads (sprites/scenes), Steam singleton, GeneMods resolve, leftover connect() arity. Not rewritten as CLEAN."
+    },
+    "P1-C0": {
+      "goal": "Menu + LoadGame scene conversion",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "loadgame_format3": true,
+        "main_scene": "res://scenes/LoadGame.tscn",
+        "files_copied": 54
+      }
+    },
+    "P1-C1": {
+      "goal": "Character select + save boot surface",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "character_select_present": true,
+        "recovered_unmodified": true
+      }
+    },
+    "P1-C2": {
+      "goal": "Headless import after menu conversion",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "zero_errors_required": false,
+        "case_mismatch": 0
+      },
+      "evidence": [
+        "migration/conversion/wave_c_menu_report.json"
+      ]
+    },
+    "P1-D0": {
+      "goal": "World + Player movement + Dash",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "world_format3": true,
+        "dash_impulse_present": true,
+        "mouse_button_godot4": true,
+        "ysort_folded": true
+      }
+    },
+    "P1-D1": {
+      "goal": "BaseLevel spawn + DefaultLevel + SpawnLocation",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "required_present": true,
+        "files_copied": 160,
+        "recovered_unmodified": true
+      }
+    },
+    "P1-D2": {
+      "goal": "Headless import after world conversion",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "zero_errors_required": false
+      },
+      "evidence": [
+        "migration/conversion/wave_d_world_report.json"
+      ]
+    },
+    "P1-WAVE-E": {
+      "goal": "Combat / Projectile / Status subsystem conversion",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "files_copied": 26,
+        "converted_text_files": 22,
+        "binaries": 4,
+        "projectile_format3": true,
+        "generic_skill_callable": true,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "blocker_count": 777,
+        "zero_errors_required": false,
+        "tests": "102 OK"
+      },
+      "note": "Dominant blockers unchanged: missing preloads (sprites/skills playable scenes/mobs), Steam singleton, GeneMods resolve. Not rewritten as CLEAN.",
+      "evidence": [
+        "migration/conversion/wave_e_combat_report.json",
+        "scripts/migration/combat_convert.py",
+        "scripts/ai/tests/test_combat_convert.py"
+      ]
+    },
+    "P1-WAVE-F": {
+      "goal": "Mob / AI foundation subsystem conversion",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "files_copied": 27,
+        "converted_text_files": 26,
+        "binaries": 1,
+        "excluded": [
+          "Scenes/Mobs/Basic/TrainingDummy.tscn (deferred to Hideout batch)"
+        ],
+        "mob_tscn_format3": true,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "error_count": 1031,
+        "blocker_count": 982,
+        "zero_errors_required": false,
+        "tests": "106 OK"
+      },
+      "note": "Mobs tree converted via mob_convert.py with parallel background subagents (inventory scan || converter impl). Blocker growth from missing skill sprites/playable scenes is expected and classified.",
+      "evidence": [
+        "migration/conversion/wave_f_mob_report.json",
+        "migration/inventory/wave_f_mobs_inventory.json",
+        "scripts/migration/mob_convert.py",
+        "scripts/ai/tests/test_mob_convert.py"
+      ]
+    },
+    "P1-WAVE-G": {
+      "goal": "Skill playable scenes/sprites + Skill/Passive Tree UI foundation",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "files_copied": 184,
+        "converted_text_files": 127,
+        "binaries": 57,
+        "tree_ui_converted": 8,
+        "playable_skill_format3": true,
+        "passive_tree_popup_format3": true,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "error_count": 1534,
+        "blocker_count": 1485,
+        "zero_errors_required": false,
+        "regression_check": "resolved: 89 preload-missing + 18 cannot-open; net-new errors are newly exposed refs to unmigrated assets (SpriteFrames/auras)",
+        "tests": "110 OK"
+      },
+      "note": "Skills tree + sprites/skills + PassiveTree popup family converted via skill_convert.py with parallel background subagents. .import/.uid never copied.",
+      "evidence": [
+        "migration/conversion/wave_g_skill_report.json",
+        "migration/inventory/wave_g_skills_inventory.json",
+        "scripts/migration/skill_convert.py",
+        "scripts/ai/tests/test_skill_convert.py"
+      ]
+    },
+    "P1-WAVE-H": {
+      "goal": "Equipment / Gene foundation (GeneMods compile chain + equipment assets)",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "script_fixes": 6,
+        "gene_mods_cascade_resolved": true,
+        "files_copied": 61,
+        "roots": [
+          "sprites/gui/equipment",
+          "sprites/base_types",
+          "Sounds/UI/Crafting"
+        ],
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_result": "ERRORS_CLASSIFIED",
+        "error_count": 1103,
+        "blocker_count": 1054,
+        "blocker_delta_vs_prev": -431,
+        "resolved_vs_prev_wave": 366,
+        "newly_exposed_vs_prev_wave": 1,
+        "zero_errors_required": false,
+        "tests": "115 OK"
+      },
+      "note": "Root cause was parse_residual: GeneMods.gd:403 sort_custom two-arg form cascading to 75 Genes scripts. Fixed via Callable forms + const->var craft_costs. Deferred: GeneEditor components, GearBench, Notice (Interactables wave).",
+      "evidence": [
+        "migration/conversion/wave_h_equipment_report.json",
+        "migration/inventory/wave_h_equipment_inventory.json",
+        "scripts/migration/equipment_convert.py",
+        "scripts/ai/tests/test_equipment_convert.py"
+      ]
+    },
+    "P1-WAVE-I": {
+      "goal": "Levels completion (Hideout/BossArenas/Ladder/TestLevel) + worldmap/tileset sprites",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "files_copied": 38,
+        "converted_text_files": 13,
+        "binaries": 25,
+        "hideout_format3": true,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_runs": 2,
+        "import_result": "ERRORS_CLASSIFIED",
+        "error_count": 1057,
+        "blocker_count": 968,
+        "blocker_delta_vs_prev": -86,
+        "resolved_vs_prev_wave": 100,
+        "newly_exposed_vs_prev_wave": "14 blocker-class + 40 warnings (known out-of-scope deps)",
+        "zero_errors_required": false,
+        "tests": "120 OK"
+      },
+      "note": "Levels.gd autoload compile restored (preload chicken-and-egg solved by second import run). Abs-path scan caught sandbox path leak in wave_h inventory; scrubbed. Out-of-scope deps deferred to Wave J: Interactables/**, Environment/Brazier, TrainingDummy, ambience_boss.ogg.",
+      "evidence": [
+        "migration/conversion/wave_i_levels_report.json",
+        "migration/inventory/wave_i_levels_inventory.json",
+        "scripts/migration/levels_convert.py",
+        "scripts/ai/tests/test_levels_convert.py"
+      ]
+    },
+    "P1-WAVE-J": {
+      "goal": "Interactables / Environment completion (consolidates Wave H/I deferrals)",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "files_copied": 37,
+        "dep_closure_files_copied": 7,
+        "interactables_scenes": 10,
+        "gearbench_present": true,
+        "brazier_present": true,
+        "training_dummy_present": true,
+        "ambience_boss_ogg_present": true,
+        "gene_editor_components_present": true,
+        "dep_popups_format3": true,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_runs": 2,
+        "import_result": "ERRORS_CLASSIFIED",
+        "error_count": 1124,
+        "blocker_count": 1035,
+        "blocker_delta_vs_prev": 67,
+        "blocker_delta_attribution": "exposed-only: newly parsed scripts referencing unmigrated UI/audio assets + 15 .aseprite SpriteFrames (non-migratable without art pipeline, stays classified)",
+        "zero_errors_required": false,
+        "tests": "125 OK"
+      },
+      "note": "Converter subagent first run falsely reported completion (files absent); re-dispatched with disk verification. Transitive popup dep closure added 7 format=3 scenes.",
+      "evidence": [
+        "migration/conversion/wave_j_report.json",
+        "migration/inventory/wave_j_interactables_inventory.json",
+        "scripts/migration/interactables_convert.py",
+        "scripts/ai/tests/test_interactables_convert.py"
+      ]
+    },
+    "P1-WAVE-K": {
+      "goal": "Globals script API residue cleanup (mechanical Godot 4 renames)",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "total_replacements": 61,
+        "files_changed": 24,
+        "residuals_manual_review": 7,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "import_parse": "RAN",
+        "import_runs": 2,
+        "import_result": "ERRORS_CLASSIFIED",
+        "error_count": 1089,
+        "blocker_count": 1000,
+        "blocker_delta_vs_prev": -35,
+        "resolved_vs_prev_wave": 36,
+        "newly_exposed_vs_prev_wave": 1,
+        "zero_errors_required": false,
+        "tests": "131 OK"
+      },
+      "note": "Mechanical renames only: TYPE_REAL/ALIGN_*/rect_*/update()/get_screen_refresh_rate/get_action_list/get_scancode_string. Residual MANUAL_REVIEW: OS.window_*/vsync, Directory, Engine.set_target_fps (semantic rewrites).",
+      "evidence": [
+        "migration/conversion/wave_k_report.json",
+        "migration/inventory/wave_k_api_residue_inventory.json",
+        "scripts/migration/api_residue_convert.py",
+        "scripts/ai/tests/test_api_residue_convert.py"
+      ]
+    },
+    "P1-WAVE-L": {
+      "goal": "Semantic residue closure + P1-V0 first headless boot",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "semantic_fixes": 8,
+        "file": "product/Globals/GameState.gd",
+        "boot_status": "BOOTED_WITH_ERRORS",
+        "boot_returncode": 0,
+        "boot_script_errors": 575,
+        "boot_duration_ms": 17827,
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "tests": "149 OK"
+      },
+      "note": "MILESTONE: product boots headless for the first time (rc=0). Runtime script errors (575) become the primary signal class. Boot probe tooling landed at scripts/bootstrap/product_boot_probe.py.",
+      "evidence": [
+        "migration/conversion/wave_l_report.json",
+        "migration/conversion/wave_l_boot_probe.json",
+        "scripts/bootstrap/product_boot_probe.py",
+        "scripts/ai/tests/test_boot_probe.py"
+      ]
+    },
+    "P1-WAVE-M": {
+      "goal": "Combat asset roots completion + boot error convergence",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "files_copied": 380,
+        "converted_text_files": 235,
+        "binaries": 145,
+        "roots": 15,
+        "import_blocker_count": 784,
+        "import_blocker_delta_vs_prev": -216,
+        "boot_status": "BOOTED_WITH_ERRORS",
+        "boot_script_errors": 490,
+        "boot_error_delta_vs_575_baseline": -85,
+        "boot_errors_by_class": {
+          "missing_asset": 313,
+          "other": 393,
+          "load_fail": 140,
+          "class_resolve": 102,
+          "api_member": 55
+        },
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "tests": "155 OK"
+      },
+      "note": "15 asset roots copied via generic roots converter. GenericSkill cascade root (GameState Godot3 API) already fixed in Wave L. Exposed: shader compilation errors (10+8) and super-class cascades (36) -> Wave N scope.",
+      "evidence": [
+        "migration/conversion/wave_m_report.json",
+        "migration/conversion/wave_m_boot_probe.json",
+        "migration/inventory/wave_m_boot_errors_inventory.json"
+      ]
+    },
+    "P1-WAVE-N": {
+      "goal": "Shader compilation fixes + super-class cascade + api_member convergence",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "import_script_error_lines": {
+          "before": 784,
+          "after": 1
+        },
+        "import_shader_error_lines": {
+          "before": 24,
+          "after": 0
+        },
+        "autoload_compile_failures": {
+          "before": 17,
+          "after": 0
+        },
+        "runtime_class_resolve": 0,
+        "runtime_api_member": 0,
+        "cascade_api_files_changed": 53,
+        "preload_to_load_conversions": 193,
+        "tooltipbase_migrated": true,
+        "aseprite_refs_rewritten_to_png": 20,
+        "effect_renders_copied": 14,
+        "shader_files_fixed": 11,
+        "boot_status": "BOOTED_WITH_ERRORS",
+        "boot_script_errors": 662,
+        "boot_error_attribution": "count rose 490->662 because preload->load moved missing-resource failures from parse-time to run-time; parse-time collapsed to 1. Runtime missing_asset (256) is art-pipeline boundary.",
+        "dash_impulse_present": true,
+        "main_scene_still_loadgame": true,
+        "recovered_unmodified": true,
+        "tests": "155 OK"
+      },
+      "note": "P1 static migration converged. P2 entry conditions met (headless stable run, self-verification loop, automation). Remaining runtime missing_asset = aseprite sources/UI audio at art-pipeline boundary; Steam layer needs consult.",
+      "evidence": [
+        "migration/conversion/wave_n_report.json",
+        "migration/conversion/wave_n_boot_probe.json",
+        "migration/conversion/wave_n_aseprite_raw.json",
+        "migration/conversion/wave_n_tooltip_raw.json"
+      ]
+    },
+    "P2-BATCH-1": {
+      "goal": "Steam layer A2 + boot baseline + smoke chain",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "steam_decision": "A2 (USE_STEAM=false + guards, expert consult accepted)",
+        "boot_script_errors": {
+          "before": 662,
+          "after": 59
+        },
+        "steam_class_errors": 0,
+        "boot_baseline_runs": 2,
+        "boot_baseline_returncode": 0,
+        "smoke_overall": "SMOKE_PASS",
+        "smoke_chain": [
+          "res://scenes/LoadGame.tscn",
+          "res://scenes/Menu.tscn",
+          "res://scenes/Levels/TestLevel/TestLevel.tscn"
+        ],
+        "smoke_new_errors_per_hop": 0,
+        "recovered_unmodified": true,
+        "tests": "187 OK"
+      },
+      "note": "MILESTONE: full scene chain LoadGame->Menu->TestLevel reaches headless. Local save fallback active. Remaining 59 boot errors are art-pipeline boundary assets.",
+      "evidence": [
+        "migration/conversion/p2_batch1_report.json",
+        "migration/conversion/p2_boot_baseline_1.json",
+        "migration/conversion/p2_boot_baseline_2.json",
+        "migration/conversion/p2_smoke_3.json"
+      ]
+    },
+    "P2-BATCH-2": {
+      "goal": "TestLevel runtime Nil-reference convergence",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "nil_script_errors": {
+          "before": 4,
+          "after": 0
+        },
+        "total_script_errors_same_conditions": {
+          "before": 63,
+          "after": 50
+        },
+        "sites_fixed": 6,
+        "files_changed": 5,
+        "root_causes": {
+          "load_order": 4,
+          "api_misuse": 1,
+          "preload_cycle": 1,
+          "missing_node": 0
+        },
+        "smoke_regression": "3/3 SMOKE_PASS",
+        "tests": "187 OK",
+        "recovered_unmodified": true
+      },
+    "P2-BATCH-3": {
+      "goal": "BaseLevel tile pipeline G4 residue + TierLoader Array + audio bus index + 缺失UI/场景三波闭包",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "boot_status": "BOOTED",
+        "boot_returncode": 0,
+        "boot_script_errors": {
+          "before": 52,
+          "after": 0
+        },
+        "smoke_overall": "SMOKE_PASS",
+        "smoke_chain": [
+          "res://scenes/LoadGame.tscn",
+          "res://scenes/Menu.tscn",
+          "res://scenes/Levels/TestLevel/TestLevel.tscn"
+        ],
+        "smoke_new_errors_per_hop": 0,
+        "tile_api_residue": 0,
+        "tierloader_array_errors": 0,
+        "audio_bus_index_errors": 0,
+        "level_tscn_g3_tileset_removed": 6,
+        "restored_files_total": 45,
+        "tests": "215 OK"
+      },
+      "note": "世界进入阻断清零：BaseLevel.gd 瓦片管线迁移(set_cells_terrain_connect/atlas source)、GenericTileset.tres 转 G4 地形集、6 关卡 tscn 内嵌 G3 TileSet 删除、TierLoader 空安全、default_bus_layout.tres 新建(SFX/Music/Drops)、TooltipBase rect_position 根因、SkillList/SupportList 信号函数同名拆分、45 个缺失 UI/场景文件三波恢复转换。剩余 boot 错误仅 missing_asset 美术边界类。",
+      "evidence": [
+        "migration/conversion/p3_entry_boot_baseline.json",
+        "migration/conversion/p2_batch3_boot_after.json",
+        "migration/conversion/p2_batch3_boot_final.json",
+        "migration/conversion/p2_batch3_boot_final2.json",
+        "migration/conversion/p2_batch3_smoke_after.json",
+        "migration/conversion/p2_batch3_smoke_final.json"
+      ]
+    }
+  },
+    "P2-BATCH-3": {
+      "goal": "BaseLevel tile pipeline Godot 4 residue + TierLoader Array errors + audio bus index",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "tierloader_array_errors": {
+          "before": 49,
+          "after": 0
+        },
+        "audio_bus_index_errors": {
+          "before": 18,
+          "after": 0
+        },
+        "tooltipbase_super_resolve": {
+          "before": 1,
+          "after": 0
+        },
+        "keybind_input_signature": {
+          "before": 1,
+          "after": 0
+        },
+        "to_utf8_api": {
+          "before": 1,
+          "after": 0
+        },
+        "boot_script_errors_total": {
+          "before": 52,
+          "after": 8
+        },
+        "smoke_regression": "3/3 SMOKE_PASS",
+        "tests": "215 OK",
+        "tile_pipeline_runtime_with_player": "NOT_YET_PROVEN（TestLevel 直启 player==null 跳过 read_tiles，需真实进世界链路复验）"
+      },
+      "note": "Remaining 8 SCRIPT ERROR = preload-missing .tscn asset family (out of scope); ~223 missing_asset art boundary unchanged. default_bus_layout.tres + InGameText.tres recovered as new files.",
+      "evidence": [
+        "migration/conversion/p2_batch3_boot_probe.json",
+        "migration/conversion/p2_batch3_smoke.json",
+        "git diff HEAD~1..HEAD -- product/"
+      ]
+    },
+    "P3-PHASE-1": {
+      "goal": "P3-A~E 并行工作流（角色/世界/战斗/拾取/UI）+ harness 接线",
+      "status": "DONE_WITH_CAVEATS",
+      "blocked_by": [],
+      "acceptance": {
+        "E1_character_entry": "PASS",
+        "E2_world_entry": "PASS_VIA_MANUAL_ASSEMBLY（World.tscn 全链路被 ItemTabContent.gd sort_custom G3 API 阻断，attempt-3 升级）",
+        "E3_movement_dash": "PASS（dash_burst_px=0 如实记录，按状态变化判定）",
+        "E4_skill_combat_event": "PASS",
+        "E5_mob_kill": "PASS",
+        "E6_loot_pickup": "PASS（掉落为测试桩，Pickups 场景部分落地）",
+        "E7_ui_open_close": "PASS",
+        "E8_save_load": "PASS_WITH_GAP（存档 schema 无 position 字段，P3 exit 要求位置持久化，attempt-3 补）",
+        "boot_script_errors": 0,
+        "tests": "236 OK"
+      },
+      "note": "8 条 preload-missing .tscn 已恢复清零。域外残留：MapMods.gd sort_custom、Minimap.gd Image.lock、Projectile 家族 super()._ready() 缺失、FloatingDamage.gd G3 Tween。",
+      "evidence": [
+        "migration/conversion/p3_a_character_save.json",
+        "migration/conversion/p3_b_world_movement.json",
+        "migration/conversion/p3_c_combat.json",
+        "migration/conversion/p3_d_loot.json",
+        "migration/conversion/p3_e_ui.json",
+        "migration/conversion/p3_asset_restore.json"
+      ]
+    },
+    "P3-PHASE-2": {
+      "goal": "P3 收口（E9/E10）：域外残留清零 + 位置持久化 + 全链统一报告",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "e2e_full_report": "PASS（pass=8 fail=0 not_run=0 skip=0）",
+        "boot_status": "BOOTED",
+        "boot_script_errors": 0,
+        "E1_character_entry": "PASS",
+        "E2_world_entry": "PASS",
+        "E3_movement_dash": "PASS",
+        "E4_skill_combat_event": "PASS",
+        "E5_mob_kill": "PASS（cluster_kill_20 20/20）",
+        "E6_loot_pickup": "PASS",
+        "E7_ui_open_close": "PASS",
+        "E8_save_load": "PASS（含 position 持久化，GameState.capture_player_position）",
+        "E9_evidence_promoted": true,
+        "E10_runtime_ready": "true（剩余 BLOCKED 仅美术源缺失类）",
+        "domain_leftovers_fixed": [
+          "ItemTabContent/MapMods sort_custom→Callable",
+          "Minimap Image.lock G4 等价",
+          "Projectile 家族 super()._ready() 与 G4 弹道修复",
+          "FloatingDamage G3 Tween→create_tween"
+        ]
+      },
+      "note": "P3 Playable Baseline 收口：进入角色→世界→移动Dash→技能→击杀→拾取→UI→存读档全链自动化可验证。ScenarioDirector G4 版严格门控挂载 TestLevel；combat_harness 三场景 rc=0。",
+      "evidence": [
+        "migration/conversion/p3_e2e_full_report.json",
+        "migration/conversion/p3_bc_world_entry.json",
+        "migration/conversion/p3_burst_boot_final.json",
+        "tests/p3_harness/config.json"
+      ]
+    }
+  },
+  "preservation_counts_unverified": {
+    "note": "AGENT.MD 约数，仅作对照，不是 PASS",
+    "base_classes": 4,
+    "specializations": 8,
+    "skills": 53,
+    "supports": 60,
+    "passive_nodes": 326,
+    "keystones": 88,
+    "stats": 149,
+    "skill_tags": 24
+  },
+  "preservation_counts_scanned": {
+    "note": "P1-X3 从 04_recovered 扫描；passive 1192 来自 PassiveTreeData 加载的 passive_tree_gen.json（tree_data_06.json 为 321 节点，约数来源）",
+    "source_of_truth": "recovered_source_scan",
+    "classes": 4,
+    "specializations": 8,
+    "skills": 53,
+    "supports": 60,
+    "passives": 1192,
+    "keystones": 88,
+    "stats": 148,
+    "tags": 25,
+    "equipment_slots": 10,
+    "equipment_data": 47,
+    "input_actions": 27,
+    "save_keys": 59,
+    "combat_critical_ids": 91
+  },
+  "next_ready": [
+    {
+      "id": "P4-GLOBALS",
+      "goal": "Globals 139 条引用接线：OrbTypes/Outfits/Genes 等 Globals 脚本中剩余 missing_asset 引用按映射表重写（与 P4-WIRE 同逻辑）",
+      "depends_on": [],
+      "status": "DONE",
+      "parallelizable": true,
+      "note": "2026-08-22 已完成：9文件173引用接线，随 0d6090d 提交"
+    },
+    {
+      "id": "P4-ANIM",
+      "goal": "动画重建（可选）：将单帧 SpriteFrames 包装器升级为多帧动画（若用户提供源或授权素材）；当前为静帧过渡方案",
+      "depends_on": [],
+      "status": "READY",
+      "parallelizable": true,
+      "note": "非阻塞，HUMAN_INPUT_REQUIRED 仅当需要新动画源"
+    },
+    {
+      "id": "P4-PERF-GPU",
+      "goal": "GPU 性能基线：窗口化渲染下高密度帧时采样（补充 headless CPU 基线）",
+      "depends_on": [],
+      "status": "READY",
+      "parallelizable": true
+    }
+  ],
+  "completed_batches": [
+    {
+      "id": "P4-BATCH-1",
+      "completed_at": "2026-08-22",
+      "lanes": ["P4-A", "P4-B", "ART-C", "P4-WIRE"],
+      "summary": "可读性/摄像反馈/位置应用 + VFX/性能基线/真实掉落链 + 217条美术映射(136 OWN_REMAP/43 MAPPED/38 PLACEHOLDER) + WIRE 56文件92引用接线；boot错误293→146(-50%)，harness 8/8 PASS，pytest 276绿",
+      "evidence": [
+        "migration/inventory/p4_art_missing_inventory.json",
+        "migration/inventory/p4_art_mapping.json",
+        "migration/conversion/p4_wire_report.json",
+        "migration/conversion/p3_e2e_full_report_v3.json"
+      ]
+    },
+    {
+      "id": "P4-GLOBALS-AND-ITCH",
+      "completed_at": "2026-08-22",
+      "lanes": ["P4-GLOBALS", "ART-ITCH"],
+      "summary": "itch 3包 slug 修复并token流落地 + Globals扩展接线9文件173引用(OWN_REMAP139/MAPPED25/PLACEHOLDER9)；scan missing 217->23(-89%，仅剩other 23非视觉)，boot missing_asset 143->3",
+      "evidence": [
+        "migration/inventory/p4_art_needs_manual_download.json",
+        "migration/inventory/p4_art_missing_inventory.json",
+        "migration/conversion/p4_wire_report.json",
+        "migration/conversion/p4_wire_boot_after.json",
+        "product/sprites/_acquired/frosty-rabbid_rpg-ability-icons/SOURCE.txt",
+        "product/sprites/_acquired/v-ktor_rpg-skill-icons/SOURCE.txt",
+        "product/sprites/_acquired/kurai7_free-rpg-skill-icons/SOURCE.txt"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-08-22",
+      "decision": "STEAM_REAL_INTEGRATION_DELETED",
+      "by": "user",
+      "detail": "USE_STEAM=false local fallback is final. No batch may plan Steam integration work again; Steam call sites and guards remain in code as historical evidence, never activated."
+    },
+    {
+      "date": "2026-08-22",
+      "decision": "ART_SOURCE_POLICY_ADOPTED",
+      "by": "user",
+      "detail": "ART_SOURCE_POLICY=OWN_RECOVERED_PNG+APPROVED_FREE_PACKS; ASEPRITE_SOURCES=PERMANENTLY_WAIVED; POE_CDN_ART=NOT_USED_AS_GAME_STOCK. missing_asset 不再列为人类阻塞；按 P4_ART_ASSET_ACQUISITION_PLAN.md 执行补全，映射状态只用 OWN_REMAP|MAPPED|PLACEHOLDER。"
+    }
+  ]
+}

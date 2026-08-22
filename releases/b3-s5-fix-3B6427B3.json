@@ -1,0 +1,59 @@
+{
+  "release_id": "b3-s5-fix-3B6427B3",
+  "git_commit": "ba55e822692beb78090e6ecdfad722633b9905d3",
+  "candidate_sha256": "3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727",
+  "candidate_exe_sha256": "3B6427B3DBCF0B7DEE2CFC29276AB94F2ADB8F61C3188A0668D0925193489727",
+  "candidate_size": 103338436,
+  "candidate_exe_bytes": 103338436,
+  "mods": 12,
+  "patches": 57,
+  "chain": {
+    "root": "mods/b3-p2-x1-promotion-aggregate/mod.json",
+    "root_version": "0.1.0",
+    "resolution_order": ["feat-tce", "feat-tce-context", "k1-player-response", "k2-hit-reaction", "k4-audio-foundation", "p7-fix-persistence", "b2-x1-combat-event-spine", "b2-x4-kill-feel", "b2-x5-camera-impulse", "b2-x6-combat-audio-layers", "b3-cp1-camera-zoom-setting", "b3-p2-x1-promotion-aggregate"],
+    "dependencies_source": "mods/b3-p2-x1-promotion-aggregate/mod.json dependencies (11) + aggregate 自身 = 12；与 docs/ai/audits/B3-P2-X1_PARITY_REPORT.json candidates.promotion 一致",
+    "patch_count": 57,
+    "shared_formal_patch_count": 49,
+    "promotion_minus_validation_note": "相比 B3-P3 3127D394（11/49），新增 b3-cp1 8 个 zoom patches；validation-only harness/diagnostic 保持排除"
+  },
+  "game_fingerprint": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "toolchain": {
+    "python": {"version": "Python 3.11.15", "sha256": "eca0e031860ab595a01989831cd7c35ba47ea2b93574103fd1fa68dde3a984b8", "path": "02_tools/venv/Scripts/python.exe", "source": "tools.lock.json tools.python"},
+    "gdre": {"version": "Godot RE Tools v2.6.4", "sha256": "88d6fbccfb7e5bacca7d248c5171fe66bbef15d78e0d7f6287c2f44e78aa9eaf", "path": "02_tools/gdre/gdre_tools.exe", "bytecode_target": "3.5.3.stable", "detected_bytecode_revision": "a7aad78 (3.5.0-stable)", "source": "tools.lock.json tools.gdre"},
+    "git": {"version": "git version 2.55.0.windows.3", "version_command": "git --version", "source": "tools.lock.json tools.git"},
+    "uv": {"version": "uv 0.12.3 (507230998 2026-08-07 x86_64-pc-windows-msvc)", "source": "tools.lock.json tools.uv"},
+    "tools_lock_source": "tools.lock.json locked_at 2026-08-13T23:25:00+08:00"
+  },
+  "modset_hash": "derived_from_parity_5689b44",
+  "modset_hash_notes": "modset_hash 未在隔离环境重新计算；为 Legacy 历史占位值，迁移到 Godot 4 Product 时不得误作 Product hash",
+  "evidence_ref": ["docs/ai/audits/B3-P2-X1_PARITY_REPORT.json", "docs/ai/batches/B3_STATUS.md", "status.json:promotion_3B6427B3", "status.json:b3_s5_fix_promotion_candidate", "10_logs/b3-s5-fix-20260820/* (gitignored, archive_locator)"],
+  "evidence_detail": {
+    "parity_report": "docs/ai/audits/B3-P2-X1_PARITY_REPORT.json (checks 32/32 PASS, promotion 12/57, validation 14/51)",
+    "b3_status": "docs/ai/batches/B3_STATUS.md B3-S5-FIX PROMOTION 节",
+    "status_json_keys": ["trusted_baselines.b3_s5_fix_promotion_candidate", "trusted_baselines.promotion_3B6427B3", "gates.b3_s5_fix_candidate", "gates.promotion_3B6427B3", "evidence.b3_s5_fix_*"],
+    "candidate_dir": "10_logs/b3-s5-fix-20260820/candidate/Mutagenic.exe (gitignored，需归档)",
+    "verify_exe": "10_logs/b3-s5-fix-20260820/verify_exe_3B6427B3.json (3744/3744)",
+    "probe_boot": "10_logs/b3-s5-fix-20260820/probe_boot_final.log (20s PASS)",
+    "s3_evidence": "10_logs/b3-s5-fix-20260820/s3_out/s3_persistence_evidence.json (BLOCKED_EXPECTED)",
+    "normalize_report": "10_logs/b3-s5-fix-20260820/normalize_report.json",
+    "human_s5_source": "10_logs/s5-human-feedback-20260820.md (声称 9/9 PASS，待重绑)"
+  },
+  "archive_locator": "<archive_root>/releases/b3-s5-fix-3B6427B3/",
+  "archive_locator_migration_note": "2026-08-21 portability governance removed the host-specific locator from the repository contract; candidate hashes, gate claims and not-proven fields are unchanged",
+  "archive_note": "归档使用本地配置的 archive root；仓库只保存逻辑定位，不保存宿主绝对路径。Legacy 证据仍需按原治理要求物理归档。",
+  "status": "promotion_recorded_governance_hold",
+  "status_note": "Legacy 历史状态：非 valid_baseline；S3/HUMAN 证据物理化问题继续保留，但不阻塞 Godot 4.7.1 Product 迁移启动",
+  "s_gates": {"s0": "CLAIMED_PASS_NOT_VERIFIABLE", "s1": "CLAIMED_PASS_NOT_VERIFIABLE", "s2": "BLOCKED_EXPECTED", "s3": "BLOCKED_NEEDS_RERUN", "s4": "PASS", "human_s5": "CLAIMED_9_9_NEEDS_REBIND"},
+  "s_gates_detail": {
+    "s0": "声称 3744/3744 PASS，但 10_logs 物理文件未归档，无法独立复验",
+    "s1": "声称 20s probe_boot PASS，同上未归档，且 >20s 长稳未证",
+    "s2": "BLOCKED_EXPECTED：promotion 无 harness 自动化入口，与 B3-P3 一致",
+    "s3": "BLOCKED_NEEDS_RERUN：isolated APPDATA 回放未触发 load；P7-FIX 可作旁证但非本候选重放",
+    "s4": "PASS：parity 32/32，共享 49 patch 逐字节一致",
+    "human_s5": "CLAIMED_9_9_NEEDS_REBIND：原声称未完成治理重绑"
+  },
+  "not_proven": ["s0/s1/s3 10_logs 物理文件未归档", "steam_cloud 分支未验证", "s1 >20s 长稳未验证", "HUMAN S5 9/9 未按 B3_HUMAN_ACCEPTANCE_PROTOCOL 重绑", "modset_hash 未复算", "archive 双副本未物理化"],
+  "supersedes": null,
+  "promotion_meta": {"build_id": "b3-s5-fix-20260820 (candidate)", "mods": 12, "patches": 57, "replaces": "b3-p3-3127D394 (11/49)", "delta": "b3-cp1 8 zoom patches + S5 3修复", "pck_start": 40545280, "normalize": "3743 valid + 1 已知零字节修复（PassiveTree.gd，与 b2-i1 一致）"}
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "task": "P2-A2",
+  "generated_at": "2026-08-21T20:52:28Z",
+  "engine": {
+    "binary_name": "Godot_v4.7.1-stable_win64.exe",
+    "resolved_via": "REPO_RELATIVE",
+    "version": "4.7.1",
+    "status": "SUCCESS",
+    "tool_missing": false,
+    "discovery_note": ""
+  },
+  "config": {
+    "scenes": [
+      "res://scenes/LoadGame.tscn",
+      "res://scenes/Menu.tscn",
+      "res://scenes/Levels/TestLevel/TestLevel.tscn"
+    ],
+    "timeout_per_hop_s": 20,
+    "dwell_seconds": 5.0,
+    "max_sample_lines": 10,
+    "product_dir": "<repo>/product"
+  },
+  "hops": [
+    {
+      "index": 0,
+      "scene": "res://scenes/LoadGame.tscn",
+      "status": "TIMEOUT",
+      "detail": "TIMEOUT after 20s",
+      "reached": null,
+      "change_rc": null,
+      "loaded_scene": null,
+      "new_script_errors": 59,
+      "script_errors_total": 59,
+      "sample_lines": [
+        "SCRIPT ERROR: Parse Error: Could not resolve super class inheritance from \"TooltipBase\".",
+        "SCRIPT ERROR: Parse Error: Could not preload resource file \"res://scenes/Levels/Hideout/HideoutLevel.tscn\".",
+        "SCRIPT ERROR: Parse Error: Could not preload resource file \"res://scenes/Levels/BossArenas/BossArena.tscn\".",
+        "SCRIPT ERROR: Parse Error: Could not preload resource file \"res://scenes/Levels/BossArenas/SpiritOfTheAncient/SpiritOfTheAncient.tscn\".",
+        "SCRIPT ERROR: Parse Error: Could not preload resource file \"res://scenes/Levels/Ladder/Ladder.tscn\".",
+        "SCRIPT ERROR: Parse Error: Could not preload resource file \"res://scenes/Levels/TestLevel/TestLevel.tscn\".",
+        "SCRIPT ERROR: Compile Error: Failed to compile depended scripts.",
+        "SCRIPT ERROR: Compile Error: Failed to compile depended scripts.",
+        "SCRIPT ERROR: Compile Error: Failed to compile depended scripts.",
+        "SCRIPT ERROR: Compile Error: Failed to compile depended scripts."
+      ],
+      "returncode": null,
+      "timed_out": true,
+      "duration_ms": 20046,
+      "cmd": [
+        "<repo>/02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+        "--headless",
+        "--path",
+        "<repo>/product",
+        "--script",
+        "smoke_hop.gd"
+      ],
+      "stdout_head": "Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org\n\nSMOKE_PROBE_TARGET scene=res://scenes/LoadGame.tscn\nSMOKE_PROBE_CHANGE_RC=0\nGameState getting ready...\nPassive tree integrity passed.\nPassive tree integrity passed.\nDone integrity check for specialization trees\nWorld Map integrity passed.\nPhysics FPS set to: 60\n",
+      "stderr_head": "ERROR: Resource file not found: res://sprites/projectiles/plasma_orb.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Projectiles/Skills/PlasmaOrbProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/plasma_orb.aseprite.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Resource file not found: res://sprites/projectiles/poison_dart_projectile.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Projectiles/Skills/PoisonDartProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/poison_dart_projectile.aseprite.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Resource file not found: res://sprites/projectiles/shock_orb.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Projectiles/Skills/ShockOrbProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/shock_orb.aseprite.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Unable to open file: res://.import/arrow.png-1d15507c595a5a38dd9c02bebf3df3ea.stex.\n   at: _load_data (scene/resources/compressed_texture.cpp:45)\nERROR: Resource file not found: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav (expected type: AudioStream)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Skills/Playable/Arrow/Arrow.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Resource file not found: res://sprites/aura_effects/rush.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Skills/Auras/Rush/Rush.tscn:27 - Parse Error: [ext_"
+    },
+    {
+      "index": 1,
+      "scene": "res://scenes/Menu.tscn",
+      "status": "TIMEOUT",
+      "detail": "TIMEOUT after 20s",
+      "reached": null,
+      "change_rc": null,
+      "loaded_scene": null,
+      "new_script_errors": 2,
+      "script_errors_total": 61,
+      "sample_lines": [
+        "SCRIPT ERROR: Parse Error: The function signature doesn't match the parent. Parent signature is \"_unhandled_key_input(InputEvent) -> void\".",
+        "SCRIPT ERROR: Parse Error: Identifier \"KEY_CONTROL\" not declared in the current scope. Did you mean to use \"KEY_CTRL\"?"
+      ],
+      "returncode": null,
+      "timed_out": true,
+      "duration_ms": 20015,
+      "cmd": [
+        "<repo>/02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+        "--headless",
+        "--path",
+        "<repo>/product",
+        "--script",
+        "smoke_hop.gd"
+      ],
+      "stdout_head": "Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org\n\nSMOKE_PROBE_TARGET scene=res://scenes/Menu.tscn\nSMOKE_PROBE_CHANGE_RC=0\nGameState getting ready...\nPassive tree integrity passed.\nPassive tree integrity passed.\nDone integrity check for specialization trees\nWorld Map integrity passed.\n",
+      "stderr_head": "ERROR: Resource file not found: res://sprites/projectiles/plasma_orb.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Projectiles/Skills/PlasmaOrbProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/plasma_orb.aseprite.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Resource file not found: res://sprites/projectiles/poison_dart_projectile.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Projectiles/Skills/PoisonDartProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/poison_dart_projectile.aseprite.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Resource file not found: res://sprites/projectiles/shock_orb.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Projectiles/Skills/ShockOrbProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/shock_orb.aseprite.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Unable to open file: res://.import/arrow.png-1d15507c595a5a38dd9c02bebf3df3ea.stex.\n   at: _load_data (scene/resources/compressed_texture.cpp:45)\nERROR: Resource file not found: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav (expected type: AudioStream)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Skills/Playable/Arrow/Arrow.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Resource file not found: res://sprites/aura_effects/rush.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Skills/Auras/Rush/Rush.tscn:27 - Parse Error: [ext_"
+    },
+    {
+      "index": 2,
+      "scene": "res://scenes/Levels/TestLevel/TestLevel.tscn",
+      "status": "TIMEOUT",
+      "detail": "TIMEOUT after 20s",
+      "reached": null,
+      "change_rc": null,
+      "loaded_scene": null,
+      "new_script_errors": 17,
+      "script_errors_total": 76,
+      "sample_lines": [
+        "SCRIPT ERROR: Invalid call. Nonexistent function 'connect' in base 'Nil'.",
+        "SCRIPT ERROR: Invalid assignment of property or key 'global_position' with value of type 'Vector2' on a base object of type 'Nil'.",
+        "SCRIPT ERROR: Invalid call. Nonexistent function 'get_children' in base 'Nil'.",
+        "SCRIPT ERROR: Invalid call. Nonexistent function 'get_children' in base 'Nil'.",
+        "SCRIPT ERROR: Invalid call. Nonexistent function 'get_children' in base 'Nil'.",
+        "SCRIPT ERROR: Invalid call. Nonexistent function 'get_children' in base 'Nil'.",
+        "SCRIPT ERROR: Invalid call. Nonexistent function 'get_children' in base 'Nil'.",
+        "SCRIPT ERROR: Invalid call. Nonexistent function 'get_children' in base 'Nil'.",
+        "SCRIPT ERROR: Invalid call. Nonexistent function 'get_children' in base 'Nil'.",
+        "SCRIPT ERROR: Invalid call. Nonexistent function 'get_children' in base 'Nil'."
+      ],
+      "returncode": null,
+      "timed_out": true,
+      "duration_ms": 20031,
+      "cmd": [
+        "<repo>/02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+        "--headless",
+        "--path",
+        "<repo>/product",
+        "--script",
+        "smoke_hop.gd"
+      ],
+      "stdout_head": "Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org\n\nSMOKE_PROBE_TARGET scene=res://scenes/Levels/TestLevel/TestLevel.tscn\nSMOKE_PROBE_CHANGE_RC=0\nGameState getting ready...\nPassive tree integrity passed.\nPassive tree integrity passed.\nDone integrity check for specialization trees\nWorld Map integrity passed.\n",
+      "stderr_head": "ERROR: Resource file not found: res://sprites/projectiles/plasma_orb.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Projectiles/Skills/PlasmaOrbProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/plasma_orb.aseprite.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Resource file not found: res://sprites/projectiles/poison_dart_projectile.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Projectiles/Skills/PoisonDartProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/poison_dart_projectile.aseprite.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Resource file not found: res://sprites/projectiles/shock_orb.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Projectiles/Skills/ShockOrbProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/shock_orb.aseprite.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Unable to open file: res://.import/arrow.png-1d15507c595a5a38dd9c02bebf3df3ea.stex.\n   at: _load_data (scene/resources/compressed_texture.cpp:45)\nERROR: Resource file not found: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav (expected type: AudioStream)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Skills/Playable/Arrow/Arrow.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav.\n   at: _printerr (scene/resources/resource_format_text.cpp:41)\nERROR: Resource file not found: res://sprites/aura_effects/rush.aseprite (expected type: SpriteFrames)\n   at: _load (core/io/resource_loader.cpp:325)\nERROR: res://scenes/Skills/Auras/Rush/Rush.tscn:27 - Parse Error: [ext_"
+    }
+  ],
+  "reached_count": 0,
+  "total_hops": 3,
+  "overall": "TOOL_FAILED"
+}

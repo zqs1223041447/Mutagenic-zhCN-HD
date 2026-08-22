@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://sprites/status_effects/jolt.png" id="1"]
+[ext_resource type="Script" path="res://scenes/StatusEffects/DamageAilments/Jolt.gd" id="2"]
+
+[node name="Jolt" type="Node"]
+script = ExtResource("2")
+description = "Jolted"
+texture = ExtResource("1")
+is_ailment = true
+only_apply_strongest = true
+base_lifetime = 4.0
+unique_group = "Jolt"

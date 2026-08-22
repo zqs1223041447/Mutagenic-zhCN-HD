@@ -1,0 +1,1153 @@
+=== STDOUT ===
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+
+Loaded data for Arc
+Loaded data for Orb
+Loaded data for Shotgun
+Loaded data for PoisonDart
+Loaded data for Shuriken
+Loaded data for Blizzard
+Loaded data for Brittle
+Loaded data for Scorch
+Loaded data for Debilitate
+Loaded data for Protract
+Loaded data for Polarize
+Loaded data for Hinder
+Loaded data for Hypothermia
+Loaded data for IceOrb
+Loaded data for Regeneration
+Loaded data for ShrapnelBomb
+Loaded data for Bane
+Loaded data for PlagueClouds
+Loaded data for Axe
+Loaded data for ShockOrb
+Loaded data for Volcano
+Loaded data for Rush
+Loaded data for Arrow
+Loaded data for Resilience
+Loaded data for ShardOrb
+Loaded data for Minigun
+Loaded data for ChainLightning
+Loaded data for FlameTether
+Loaded data for DoomTether
+Loaded data for Sturdiness
+Loaded data for Elusiveness
+Loaded data for PrismaticSlash
+Loaded data for LavaSurge
+Loaded data for LightningSpear
+Loaded data for ClusterBombs
+Loaded data for AmplificationAura
+Loaded data for Honing
+Loaded data for PhysicalAura
+Loaded data for LightningAura
+Loaded data for ColdAura
+Loaded data for FireAura
+Loaded data for ToxicAura
+Loaded data for DoTAura
+Loaded data for Shockwave
+Loaded data for BladeShield
+Loaded data for EnergizedAxe
+Loaded data for SharknadoShot
+Loaded data for BloodSlash
+Loaded data for PlasmaOrb
+GameState getting ready...
+Passive tree integrity passed.
+Passive tree integrity passed.
+Done integrity check for specialization trees
+World Map integrity passed.
+P3D_RESULT_JSON<<<{"all_pass":true,"e6":{"active_identity_matches":true,"drop_scene_exists":true,"drop_scene_loaded":true,"drop_spawned":true,"gene_generated":true,"gene_id":"0","gene_type":"LIFE_BOOTS","genes_count_before":0,"inventory_absent_before":true,"inventory_grew":true,"inventory_has_item":true,"inventory_item_type_matches":true,"inventory_slot_recorded":true,"new_item_id_marked":true,"orb_pickup_scene_present":false,"pass":true,"pickup_entity_freed":true,"pickup_fired":true,"pickup_flag_observed":true,"player_stub_ready":true,"portal_pickup_scene_present":false,"probe_character_created":true},"finished":true,"task":"P3-D"}>>>
+
+=== STDERR ===
+ERROR: Resource file not found: res://sprites/projectiles/plasma_orb.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Projectiles/Skills/PlasmaOrbProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/plasma_orb.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/projectiles/poison_dart_projectile.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Projectiles/Skills/PoisonDartProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/poison_dart_projectile.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/projectiles/shock_orb.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Projectiles/Skills/ShockOrbProjectile.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/shock_orb.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Unable to open file: res://.import/arrow.png-1d15507c595a5a38dd9c02bebf3df3ea.stex.
+   at: _load_data (scene/resources/compressed_texture.cpp:45)
+ERROR: Resource file not found: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav (expected type: AudioStream)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/Playable/Arrow/Arrow.tscn:13 - Parse Error: [ext_resource] referenced non-existent resource at: res://Sounds/MovementWhoosh/MOVEMENT_FAST_WHOOSH_01.wav.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/aura_effects/rush.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/Auras/Rush/Rush.tscn:27 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/rush.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/aura_effects/regeneration.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/Auras/Regeneration/Regeneration.tscn:27 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/regeneration.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/aura_effects/resilience.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/Auras/Resilience/Resilience.tscn:27 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/resilience.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/aura_effects/amplification.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: Resource file not found: res://sprites/aura_effects/amplification.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/Auras/AmplificationAura/AmplificationAura.tscn:15 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/amplification.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: res://scenes/Skills/Auras/AmplificationAura/AmplificationAura.tscn:28 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/amplification.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/aura_effects/honing.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: Resource file not found: res://sprites/aura_effects/honing.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/Auras/Honing/Honing.tscn:15 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/honing.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: res://scenes/Skills/Auras/Honing/Honing.tscn:28 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/honing.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/aura_effects/physical_aura.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: Resource file not found: res://sprites/aura_effects/physical_aura.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/Auras/PhysicalAura/PhysicalAura.tscn:15 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/physical_aura.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: res://scenes/Skills/Auras/PhysicalAura/PhysicalAura.tscn:28 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/physical_aura.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/aura_effects/lightning_aura.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: Resource file not found: res://sprites/aura_effects/lightning_aura.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/Auras/LightningAura/LightningAura.tscn:15 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/lightning_aura.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: res://scenes/Skills/Auras/LightningAura/LightningAura.tscn:28 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/lightning_aura.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/aura_effects/cold_aura.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: Resource file not found: res://sprites/aura_effects/cold_aura.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/Auras/ColdAura/ColdAura.tscn:15 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/cold_aura.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: res://scenes/Skills/Auras/ColdAura/ColdAura.tscn:28 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/cold_aura.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/aura_effects/fire_aura.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: Resource file not found: res://sprites/aura_effects/fire_aura.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/Auras/FireAura/FireAura.tscn:15 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/fire_aura.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: res://scenes/Skills/Auras/FireAura/FireAura.tscn:28 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/fire_aura.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/aura_effects/toxic_aura.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: Resource file not found: res://sprites/aura_effects/toxic_aura.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/Auras/ToxicAura/ToxicAura.tscn:15 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/toxic_aura.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: res://scenes/Skills/Auras/ToxicAura/ToxicAura.tscn:28 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/toxic_aura.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/aura_effects/dot_aura.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: Resource file not found: res://sprites/aura_effects/dot_aura.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/Auras/DoTAura/DoTAura.tscn:15 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/dot_aura.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: res://scenes/Skills/Auras/DoTAura/DoTAura.tscn:28 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/dot_aura.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/aura_effects/vile_domain.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/AcquiredSkills/DreadAura/DreadAura.tscn:23 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/vile_domain.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/aura_effects/vile_domain.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Skills/AcquiredSkills/VileDomainAura/VileDomainAura.tscn:23 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/aura_effects/vile_domain.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/skeleton_archer.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Mob.tscn:82 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/skeleton_archer.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/zombie.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Basic/Creatures/Zombie.tscn:37 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/zombie.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: res://scenes/Mobs/Bosses/GateKeeper.tscn:46 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/zombie.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/sludge.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: Resource file not found: res://sprites/projectiles/MobProjectiles/glob.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Projectiles/MobSkills/Glob/Glob.tscn:11 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/projectiles/MobProjectiles/glob.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: res://scenes/Mobs/Bosses/Sludge.tscn:43 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/sludge.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/spirit_of_the_ancient.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Bosses/SpiritOfTheAncient.tscn:47 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/spirit_of_the_ancient.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/mutated_spider.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Bosses/MutatedSpider.tscn:48 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/mutated_spider.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+ERROR: Resource file not found: res://Sounds/Pickups/rare_orb.wav (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Globals.gd:12)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/hideout/bench.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Interactables/Interactable.tscn:14 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/hideout/bench.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/gui/important.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/GeneEditor/GeneEditor.tscn:79 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/gui/important.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/gui/selector.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.tscn:182 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/gui/selector.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/worldmap/map_highlighted.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/WorldMap/MapNode.tscn:131 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/worldmap/map_highlighted.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/gui/selector.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+WARNING: Could not convert 3.x autotiles to 4.x. This operation cannot be done automatically, autotiles must be re-created using the terrain system.
+   at: _compatibility_conversion (scene/resources/2d/tile_set.cpp:3479)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/WorldMap/WorldMapPopup.tscn:100 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/gui/selector.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/hideout/portal.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Interactables/Portal/Portal.tscn:14 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/hideout/portal.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/extra_munitions.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_background.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/SkillSelect/SupportListOption.tscn:30 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/gui/skill_supports/support_background.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/SkillSelect/SupportListOption.tscn:40 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/gui/skill_supports/extra_munitions.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_background.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/SkillSelect/SupportButton.tscn:41 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/gui/skill_supports/support_background.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/gui/notice.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/UI/Notice.tscn:10 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/gui/notice.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/gui/important.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/OutfitSelector/OutfitOption.tscn:30 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/gui/important.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/player/helmets/flame_helmet.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/player/heads/default.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/player/feet/default.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/player/pants/default.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/player/hands/default.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/player/hands/orbs.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/player/back/pixie_wings.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:86 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/player/pants/default.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:90 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/player/back/pixie_wings.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:101 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/player/heads/default.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:104 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/player/helmets/flame_helmet.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:114 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/player/feet/default.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:125 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/player/feet/default.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:136 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/player/hands/orbs.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Popups/Dialogs/OutfitSelector/OutfitSelector.tscn:148 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/player/hands/default.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/monsters/skeleton_warrior.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Mobs/Basic/TrainingDummy.tscn:65 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/skeleton_warrior.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/hideout/statue.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Interactables/SpecializationStatue/SpecializationStatue.tscn:21 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/hideout/statue.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/hideout/statue.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Interactables/ClassChanger/ClassStatue.tscn:21 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/hideout/statue.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/hideout/chest.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Interactables/SharedStash/SharedStash.tscn:22 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/hideout/chest.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: Resource file not found: res://sprites/environment/brazier.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+ERROR: res://scenes/Environment/Brazier.tscn:42 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/environment/brazier.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:5)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:6)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:6)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:6)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:6)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:7)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:7)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:7)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:7)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:8)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:8)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:8)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:8)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:8)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:8)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:8)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:8)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:9)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:9)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:9)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:9)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:9)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:9)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:9)
+WARNING: Concave polygon is assigned to ConvexPolygonShape2D.
+   at: _update_shape (scene/resources/2d/convex_polygon_shape_2d.cpp:74)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Levels.gd:9)
+ERROR: Resource file not found: res://sprites/gui/class_icons/warrior_icon.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PlayableClasses.gd:3)
+ERROR: Resource file not found: res://sprites/gui/class_icons/rogue_icon.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PlayableClasses.gd:4)
+ERROR: Resource file not found: res://sprites/gui/class_icons/mage_icon.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PlayableClasses.gd:5)
+ERROR: Resource file not found: res://sprites/gui/class_icons/tank_icon.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PlayableClasses.gd:6)
+ERROR: Resource file not found: res://sprites/monsters/skeleton_warrior.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Basic/Creatures/SkeletonWarrior.tscn:22 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/skeleton_warrior.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/skeleton_mage.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Basic/Creatures/SkeletonMage.tscn:40 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/skeleton_mage.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/skeleton_sparker.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Basic/Creatures/SkeletonSparker.tscn:40 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/skeleton_sparker.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/skeletor.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Basic/Creatures/Skeletor.tscn:35 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/skeletor.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/chilled_bones.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Basic/Creatures/ChilledBones.tscn:35 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/chilled_bones.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/attack_dog.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Basic/Creatures/AttackDog.tscn:23 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/attack_dog.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/lightning_dog.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Basic/Creatures/LightningDog.tscn:36 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/lightning_dog.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/spider.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Basic/Creatures/Spider.tscn:37 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/spider.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/fire_bomber.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Basic/Creatures/FireBomber.tscn:37 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/fire_bomber.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/ice_golem.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Basic/Creatures/IceGolem.tscn:35 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/ice_golem.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/skeleton_curser.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Basic/Creatures/SkeletonCurser.tscn:38 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/skeleton_curser.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/monsters/ninja.aseprite (expected type: SpriteFrames)
+   at: _load (core/io/resource_loader.cpp:325)
+ERROR: res://scenes/Mobs/Basic/Creatures/Ninja.tscn:40 - Parse Error: [ext_resource] referenced non-existent resource at: res://sprites/monsters/ninja.aseprite.
+   at: _printerr (scene/resources/resource_format_text.cpp:41)
+ERROR: Resource file not found: res://sprites/gui/passives/life.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:3)
+ERROR: Resource file not found: res://sprites/gui/passives/damage.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:5)
+ERROR: Resource file not found: res://sprites/gui/passives/physical_damage.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:6)
+ERROR: Resource file not found: res://sprites/gui/passives/lightning_damage.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:7)
+ERROR: Resource file not found: res://sprites/gui/passives/cold_damage.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:8)
+ERROR: Resource file not found: res://sprites/gui/passives/fire_damage.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:9)
+ERROR: Resource file not found: res://sprites/gui/passives/toxic_damage.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:10)
+ERROR: Resource file not found: res://sprites/gui/passives/movement.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:11)
+ERROR: Resource file not found: res://sprites/gui/passives/armor.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:12)
+ERROR: Resource file not found: res://sprites/gui/passives/evasion.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:13)
+ERROR: Resource file not found: res://sprites/gui/passives/resistance.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:15)
+ERROR: Resource file not found: res://sprites/gui/passives/penetration.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:16)
+ERROR: Resource file not found: res://sprites/gui/passives/curse.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:17)
+ERROR: Resource file not found: res://sprites/gui/passives/haste.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:18)
+ERROR: Resource file not found: res://sprites/gui/passives/pierce.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:19)
+ERROR: Resource file not found: res://sprites/gui/passives/chain.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:20)
+ERROR: Resource file not found: res://sprites/gui/passives/aoe.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:21)
+ERROR: Resource file not found: res://sprites/gui/passives/projectile_speed.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:22)
+ERROR: Resource file not found: res://sprites/gui/passives/duration.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:23)
+ERROR: Resource file not found: res://sprites/gui/passives/strength.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:25)
+ERROR: Resource file not found: res://sprites/gui/passives/agility.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:26)
+ERROR: Resource file not found: res://sprites/gui/passives/constitution.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:27)
+ERROR: Resource file not found: res://sprites/gui/passives/finesse.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:28)
+ERROR: Resource file not found: res://sprites/gui/passives/wisdom.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:29)
+ERROR: Resource file not found: res://sprites/gui/passives/crit.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:50)
+ERROR: Resource file not found: res://sprites/gui/passives/bomb.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:51)
+ERROR: Resource file not found: res://sprites/gui/passives/dot.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:52)
+ERROR: Resource file not found: res://sprites/gui/passives/block.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:53)
+ERROR: Resource file not found: res://sprites/gui/passives/thunderstorm.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:56)
+ERROR: Resource file not found: res://sprites/gui/passives/goliath.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:57)
+ERROR: Resource file not found: res://sprites/gui/passives/hit_attunement.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:58)
+ERROR: Resource file not found: res://sprites/gui/passives/ailment.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:59)
+ERROR: Resource file not found: res://sprites/gui/passives/ailment_mastery.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/PassiveTagStats.gd:60)
+ERROR: Resource file not found: res://sprites/gui/gene_lesser.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes.gd:7)
+ERROR: Resource file not found: res://sprites/drops/blue_orb.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/OrbTypes.gd:9)
+ERROR: Resource file not found: res://sprites/drops/red_orb.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/OrbTypes.gd:10)
+ERROR: Resource file not found: res://sprites/drops/green_orb.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/OrbTypes.gd:11)
+ERROR: Resource file not found: res://sprites/drops/gold_orb.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/OrbTypes.gd:12)
+ERROR: Resource file not found: res://sprites/drops/corruption.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/OrbTypes.gd:13)
+ERROR: Resource file not found: res://sprites/uniques/harrowing_cold.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:3)
+ERROR: Resource file not found: res://sprites/uniques/ogre_talisman.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:4)
+ERROR: Resource file not found: res://sprites/uniques/balanced_oppression.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:5)
+ERROR: Resource file not found: res://sprites/uniques/crown_of_ice.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:6)
+ERROR: Resource file not found: res://sprites/uniques/echoes_of_sin.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:7)
+ERROR: Resource file not found: res://sprites/uniques/strength_from_strength.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:8)
+ERROR: Resource file not found: res://sprites/uniques/gladiators_resolve.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:9)
+ERROR: Resource file not found: res://sprites/uniques/fishing_rod.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:10)
+ERROR: Resource file not found: res://sprites/uniques/mercurial_venom.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:11)
+ERROR: Resource file not found: res://sprites/uniques/skull_crusher.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:12)
+ERROR: Resource file not found: res://sprites/uniques/spreading_flames.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:13)
+ERROR: Resource file not found: res://sprites/uniques/cheetahs.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:14)
+ERROR: Resource file not found: res://sprites/uniques/tinkerers_toys.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:15)
+ERROR: Resource file not found: res://sprites/uniques/goblins_girdle.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:16)
+ERROR: Resource file not found: res://sprites/uniques/chill_burn.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:18)
+ERROR: Resource file not found: res://sprites/uniques/echoing_fury.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:19)
+ERROR: Resource file not found: res://sprites/uniques/prismatic_bow.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:20)
+ERROR: Resource file not found: res://sprites/uniques/bloody_knuckle.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:21)
+ERROR: Resource file not found: res://sprites/uniques/elder_ward.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:22)
+ERROR: Resource file not found: res://sprites/uniques/expansion_charm.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:23)
+ERROR: Resource file not found: res://sprites/uniques/balance_of_power.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolGeneric.gd:24)
+ERROR: Resource file not found: res://sprites/uniques/ancients_charm.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Genes/UniquePools/UniquePoolSOTA.gd:3)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/extra_munitions.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:3)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_collateral_damage.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:4)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_sniper.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:5)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_pierce.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:6)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_projectile_speed.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:7)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_focus.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:8)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_cast_on_crit.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:11)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_cast_on_kill.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:12)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_volatility.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:13)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_fire.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:15)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_chain.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:16)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_cold.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:17)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_toxic.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:18)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_lightning.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:19)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_physical.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:20)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_crit.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:21)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_ailment.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:22)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_duration.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:23)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_cast_speed.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:24)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_doom.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:25)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_aoe.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:26)
+ERROR: Resource file not found: res://sprites/gui/passives/dot.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:29)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_proliferate.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:31)
+ERROR: Resource file not found: res://sprites/gui/skill_supports/support_sacrifice.png (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/SkillSupports.gd:32)
+ERROR: Resource file not found: res://sprites/player/heads/default.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:4)
+ERROR: Resource file not found: res://sprites/player/heads/mutant.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:5)
+ERROR: Resource file not found: res://sprites/player/heads/robot.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:6)
+ERROR: Resource file not found: res://sprites/player/heads/dragon.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:7)
+ERROR: Resource file not found: res://sprites/player/heads/fire.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:8)
+ERROR: Resource file not found: res://sprites/player/heads/vampire.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:9)
+ERROR: Resource file not found: res://sprites/player/heads/skull.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:10)
+ERROR: Resource file not found: res://sprites/player/heads/chiller.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:11)
+ERROR: Resource file not found: res://sprites/player/heads/zombie.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:12)
+ERROR: Resource file not found: res://sprites/player/helmets/flame_helmet.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:15)
+ERROR: Resource file not found: res://sprites/player/helmets/iron.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:16)
+ERROR: Resource file not found: res://sprites/player/helmets/horned.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:17)
+ERROR: Resource file not found: res://sprites/player/helmets/crown.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:18)
+ERROR: Resource file not found: res://sprites/player/helmets/fire.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:19)
+ERROR: Resource file not found: res://sprites/player/helmets/top_hat.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:20)
+ERROR: Resource file not found: res://sprites/player/helmets/ninja.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:21)
+ERROR: Resource file not found: res://sprites/player/feet/default.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:24)
+ERROR: Resource file not found: res://sprites/player/feet/flame_boots.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:25)
+ERROR: Resource file not found: res://sprites/player/feet/frozen_boots.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:26)
+ERROR: Resource file not found: res://sprites/player/feet/mutant.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:27)
+ERROR: Resource file not found: res://sprites/player/feet/claws.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:28)
+ERROR: Resource file not found: res://sprites/player/feet/golden.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:29)
+ERROR: Resource file not found: res://sprites/player/feet/glow.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:30)
+ERROR: Resource file not found: res://sprites/player/feet/hoof.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:31)
+ERROR: Resource file not found: res://sprites/player/pants/default.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:34)
+ERROR: Resource file not found: res://sprites/player/pants/wings.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:35)
+ERROR: Resource file not found: res://sprites/player/pants/dragon.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:36)
+ERROR: Resource file not found: res://sprites/player/pants/coal.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:37)
+ERROR: Resource file not found: res://sprites/player/pants/emerald.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:38)
+ERROR: Resource file not found: res://sprites/player/pants/fire.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:39)
+ERROR: Resource file not found: res://sprites/player/pants/golden.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:40)
+ERROR: Resource file not found: res://sprites/player/pants/ninja.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:41)
+ERROR: Resource file not found: res://sprites/player/pants/zombie.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:42)
+ERROR: Resource file not found: res://sprites/player/hands/default.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:45)
+ERROR: Resource file not found: res://sprites/player/hands/wands.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:46)
+ERROR: Resource file not found: res://sprites/player/hands/knife.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:47)
+ERROR: Resource file not found: res://sprites/player/hands/swords.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:48)
+ERROR: Resource file not found: res://sprites/player/hands/icicles.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:49)
+ERROR: Resource file not found: res://sprites/player/hands/chains.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:50)
+ERROR: Resource file not found: res://sprites/player/hands/orbs.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:51)
+ERROR: Resource file not found: res://sprites/player/hands/guns.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:52)
+ERROR: Resource file not found: res://sprites/player/hands/blades.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:53)
+ERROR: Resource file not found: res://sprites/player/hands/spear.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:54)
+ERROR: Resource file not found: res://sprites/player/back/dragon_wings.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:57)
+ERROR: Resource file not found: res://sprites/player/back/pixie_wings.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:58)
+ERROR: Resource file not found: res://sprites/player/back/ninja_cape.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:59)
+ERROR: Resource file not found: res://sprites/player/back/demon_wings.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:60)
+ERROR: Resource file not found: res://sprites/player/back/thrusters.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:61)
+ERROR: Resource file not found: res://sprites/player/back/poison.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:62)
+ERROR: Resource file not found: res://sprites/player/back/bloody.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:63)
+ERROR: Resource file not found: res://sprites/player/back/tail.aseprite (expected type: unknown)
+   at: _load (core/io/resource_loader.cpp:325)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_new (res://Globals/Outfits.gd:64)
+

@@ -1,0 +1,82 @@
+{
+  "id": "b2-x4-kill-feel",
+  "version": "0.1.0",
+  "patch_type": "CODE_PATCH",
+  "target_original_sha256": "C7B5D5A529CD776609F72730662F1F6A8049FE5DE20541F7EAFE06D0F2451209",
+  "dependencies": [
+    "b2-x1-combat-event-spine"
+  ],
+  "conflicts": [],
+  "scope": "Feat: Kill Feel v1。基于 X1 统一 kill 事件（victim 侧 _spine_last_events 中 event_class='kill' 且 did_kill=true 的记录）驱动死亡 FX 强度分层：普通/DoT 击杀零扩展（低噪声），elite 击杀叠加 Shatter 爆发，boss 击杀叠加 Shatter+BurningDeath 双爆发；GameState globals 共享 400ms 窗口预算（每窗口最多 3 次增强 FX）抑制 cluster kill FX 爆炸。不改变伤害/掉落/死亡顺序；不新增资产（复用现有 shatter/poof 场景）；只读 X1 kill 记录、不发射任何新事件；无 camera shake/hit-stop。",
+  "entities": [
+    {
+      "kind": "kill_feel",
+      "id": "Scenes/Mobs/Mob.gd::_kill_feel_tier",
+      "confidence": "FACT",
+      "expected_runtime_effect": "读取被击杀者 stats._spine_last_events 尾部 kill 记录（event_class=='kill' 且 did_kill==true），按 is_dot/is_level_boss/is_elite 返回强度层：-1=无 kill 记录 / 0=普通或 DoT（不增强）/ 1=elite / 2=boss；仅读取 X1 记录，不发射任何事件"
+    },
+    {
+      "kind": "kill_feel",
+      "id": "Scenes/Mobs/Mob.gd::_kill_feel_consume_budget",
+      "confidence": "FACT",
+      "expected_runtime_effect": "GameState globals 键 kill_feel_budget 维护 {start_ms, count}：窗口内计数递增，超过 KILL_FEEL_CLUSTER_BUDGET(3) 后返回 false 抑制后续增强；窗口 400ms 自动重置"
+    },
+    {
+      "kind": "kill_feel",
+      "id": "Scenes/Mobs/Mob.gd::_kill_feel_apply_boost",
+      "confidence": "FACT",
+      "expected_runtime_effect": "tier<=0 或预算耗尽时零开销返回；elite 在 global_position 实例化 shatter（scale 1.25），boss 实例化 shatter+poof（scale 1.6），全部加挂 ground_layer；复用 Mob.gd 既有 preload 场景，不新增资产"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Scenes/Mobs/Mob.gd",
+      "unit_id": "Scenes/Mobs/Mob.gd::kill_feel::consts",
+      "classification": "CODE_PATCH",
+      "old_text": "var last_global_position\nvar _needs_recheck = false",
+      "new_text": "var last_global_position\nvar _needs_recheck = false\n\n# b2-x4-kill-feel (B2-X4): unified kill-event driven death FX layering\nconst KILL_FEEL_BUDGET_KEY = \"kill_feel_budget\"\nconst KILL_FEEL_CLUSTER_WINDOW_MS = 400\nconst KILL_FEEL_CLUSTER_BUDGET = 3\nconst KILL_FEEL_BOOST_ELITE_SCALE = 1.25\nconst KILL_FEEL_BOOST_BOSS_SCALE = 1.6",
+      "preimage_sha256": "ba46348c8ba490644964a8b9bdabb58a8964199cd3464c468f77cc57babe9364",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Mobs/Mob.gd",
+      "unit_id": "Scenes/Mobs/Mob.gd::kill_feel::helpers",
+      "classification": "CODE_PATCH",
+      "old_text": "func spawn_death_animation():",
+      "new_text": "func _kill_feel_tier():\n\t\t\t\tif stats._spine_last_events.size() == 0:\n\t\t\t\t\t\t\t\treturn -1\n\t\t\t\tvar kill_record = stats._spine_last_events.back()\n\t\t\t\tif kill_record.get(\"event_class\", \"\") != \"kill\":\n\t\t\t\t\t\t\t\treturn -1\n\t\t\t\tif not kill_record.get(\"did_kill\", false):\n\t\t\t\t\t\t\t\treturn -1\n\t\t\t\tif kill_record.get(\"is_dot\", false):\n\t\t\t\t\t\t\t\treturn 0\n\t\t\t\tif is_level_boss:\n\t\t\t\t\t\t\t\treturn 2\n\t\t\t\tif is_elite:\n\t\t\t\t\t\t\t\treturn 1\n\t\t\t\treturn 0\n\nfunc _kill_feel_consume_budget() -> bool:\n\t\t\t\tvar now = OS.get_ticks_msec()\n\t\t\t\tvar budget = GameState.get_global(KILL_FEEL_BUDGET_KEY)\n\t\t\t\tif budget == null or now - budget.get(\"start_ms\", 0) > KILL_FEEL_CLUSTER_WINDOW_MS:\n\t\t\t\t\t\t\t\tbudget = {\"start_ms\": now, \"count\": 0}\n\t\t\t\tbudget[\"count\"] = budget.get(\"count\", 0) + 1\n\t\t\t\tGameState.set_global(KILL_FEEL_BUDGET_KEY, budget)\n\t\t\t\treturn budget[\"count\"] <= KILL_FEEL_CLUSTER_BUDGET\n\nfunc _kill_feel_apply_boost(tier):\n\t\t\t\tif tier <= 0:\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tif not _kill_feel_consume_budget():\n\t\t\t\t\t\t\t\treturn\n\t\t\t\tif tier >= 2:\n\t\t\t\t\t\t\t\tvar boss_burst = shatter.instance()\n\t\t\t\t\t\t\t\tboss_burst.global_position = global_position\n\t\t\t\t\t\t\t\tboss_burst.scale = Vector2(KILL_FEEL_BOOST_BOSS_SCALE, KILL_FEEL_BOOST_BOSS_SCALE)\n\t\t\t\t\t\t\t\tground_layer.add_child(boss_burst)\n\t\t\t\t\t\t\t\tvar boss_poof = poof.instance()\n\t\t\t\t\t\t\t\tboss_poof.global_position = global_position\n\t\t\t\t\t\t\t\tboss_poof.scale = Vector2(KILL_FEEL_BOOST_BOSS_SCALE, KILL_FEEL_BOOST_BOSS_SCALE)\n\t\t\t\t\t\t\t\tground_layer.add_child(boss_poof)\n\t\t\t\telse:\n\t\t\t\t\t\t\t\tvar burst = shatter.instance()\n\t\t\t\t\t\t\t\tburst.global_position = global_position\n\t\t\t\t\t\t\t\tburst.scale = Vector2(KILL_FEEL_BOOST_ELITE_SCALE, KILL_FEEL_BOOST_ELITE_SCALE)\n\t\t\t\t\t\t\t\tground_layer.add_child(burst)\n\nfunc spawn_death_animation():",
+      "preimage_sha256": "ba46348c8ba490644964a8b9bdabb58a8964199cd3464c468f77cc57babe9364",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    },
+    {
+      "path": "Scenes/Mobs/Mob.gd",
+      "unit_id": "Scenes/Mobs/Mob.gd::spawn_death_animation::kill_feel_boost",
+      "classification": "CODE_PATCH",
+      "old_text": "\t\t\t\telif stats.status_flags.has(Constants.StatusFlags.BURNING):\n\t\t\t\t\t\t\t\tvar poof_instance = poof.instance()\n\t\t\t\t\t\t\t\tpoof_instance.global_position = global_position\n\t\t\t\t\t\t\t\tground_layer.add_child(poof_instance)",
+      "new_text": "\t\t\t\telif stats.status_flags.has(Constants.StatusFlags.BURNING):\n\t\t\t\t\t\t\t\tvar poof_instance = poof.instance()\n\t\t\t\t\t\t\t\tpoof_instance.global_position = global_position\n\t\t\t\t\t\t\t\tground_layer.add_child(poof_instance)\n\n\t\t\t\t_kill_feel_apply_boost(_kill_feel_tier())",
+      "preimage_sha256": "ba46348c8ba490644964a8b9bdabb58a8964199cd3464c468f77cc57babe9364",
+      "expected_occurrences": 1,
+      "placeholders": [],
+      "format_tokens": []
+    }
+  ],
+  "asset_overlays": [],
+  "tests": [
+    "preimage_exact_match",
+    "declared_delta",
+    "compiled_script_load",
+    "pck_checksum",
+    "boot",
+    "kill_feel_single",
+    "kill_feel_rapid",
+    "kill_feel_cluster",
+    "kill_feel_elite",
+    "kill_feel_dot_suppress",
+    "death_once",
+    "drop_order"
+  ],
+  "not_proven": "真实 runtime 死亡 FX 表现（需 VM S5）；budget 窗口内 >3 次精英击杀的视觉可读性人工验收；crit 强度层未接入（X1 kill 记录无 did_crit 字段，v1 分层仅 elite/boss/DoT）；kill 记录缺失（极端时序）时静默回退 vanilla"
+}

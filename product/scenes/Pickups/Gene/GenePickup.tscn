@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Pickups/Pickup.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/Pickups/Gene/GenePickup.gd" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/Tooltips/GeneTooltip/GeneInfo.tscn" id="3"]
+[ext_resource type="Texture2D" path="res://sprites/effects/glow.png" id="4"]
+
+[node name="GenePickup" instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="Glow" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4")
+
+[node name="Sprite" parent="." ]
+scale = Vector2(0.5, 0.5)
+
+[node name="InfoContainer" parent="Node2D/VBoxContainer"]
+offset_right = 400.0
+offset_bottom = 112.0
+
+[node name="GeneInfo" parent="Node2D/VBoxContainer/InfoContainer" instance=ExtResource("3")]
+
+[node name="TypeLabel" type="Label" parent="Node2D/VBoxContainer/HBoxContainer"]
+offset_top = 33.0
+offset_right = 98.0
+offset_bottom = 47.0
+size_flags_horizontal = 3
+horizontal_alignment = 1

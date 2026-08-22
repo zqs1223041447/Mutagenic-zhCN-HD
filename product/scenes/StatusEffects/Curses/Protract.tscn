@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://sprites/skills/protraction.png" id="1"]
+[ext_resource type="Script" path="res://scenes/StatusEffects/Curses/Protract.gd" id="2"]
+
+[node name="Protract" type="Node"]
+script = ExtResource("2")
+description = "Protract"
+texture = ExtResource("1")
+only_apply_strongest = true
+unique_group = "Protract"

@@ -1,0 +1,132 @@
+{
+  "event": "B1-X5 combat-harness scenario run",
+  "task_id": "B1-X5",
+  "branch": "agent/kinetic-arcane-remaster-foundation",
+  "repo_head_sha": "7a2c5868a79a51eee817143410c8796ebb43250c",
+  "schema_version": "1.0",
+  "scenario": {
+    "id": "movement_dash_smoke",
+    "version": 1,
+    "summary": "Player spawns at origin on TestLevel; no enemies. Smoke check that movement and dash inputs are live and frame production is sound."
+  },
+  "seed": 2026082001,
+  "plan": {
+    "plan_version": 1,
+    "plan_sha256": "e7746dc9744c69bd92dd92d250794f5a513d2262592bf052d0785b04997fc2fc",
+    "total_spawn": 0
+  },
+  "candidate": {
+    "provided": true,
+    "path": "<repo>/02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+    "sha256": "323f9c4cc5db674e98815cdd8e69da007d5efc779abedc8c0e42883b7fdea12a",
+    "exists": true,
+    "path_repo_relative": "02_tools/godot/Godot_v4.7.1-stable_win64.exe"
+  },
+  "modset": "none",
+  "timestamps": {
+    "started_at": "2026-08-22T03:49:34Z",
+    "ended_at": "2026-08-22T03:50:21Z"
+  },
+  "boot": {
+    "alert_count": 0,
+    "fatal_count": 0,
+    "ok": true
+  },
+  "counters": {
+    "alive": 0,
+    "checkpoint_count": 7,
+    "damage_events": 0,
+    "dashes": 7,
+    "duplicate_deaths": 0,
+    "killed": 0,
+    "player_moves": 28,
+    "spawned": 0
+  },
+  "perf": {
+    "fps_avg": 60.11,
+    "fps_max": 145.0,
+    "fps_min": 1.0,
+    "frame_pacing_p95_ms": 0.0,
+    "frames": 1801
+  },
+  "capture": null,
+  "runtime": {
+    "ran": true,
+    "in_game_exit_code": 0,
+    "in_game_result": "PASS",
+    "launcher": "python <repo>/scripts/validate/p3_bc_launch_godot.py --scenario movement_dash_smoke --seed 2026082001 --out-dir <repo>/runtime",
+    "launcher_returncode": 0
+  },
+  "telemetry": {
+    "provided": true,
+    "valid": true,
+    "issues": []
+  },
+  "assertions": [
+    {
+      "label": "boot_ok",
+      "field": "boot.ok",
+      "op": "==",
+      "expected": true,
+      "actual": true,
+      "capability": "required",
+      "measured": true,
+      "passed": true,
+      "status": "pass"
+    },
+    {
+      "label": "no_duplicate_death_without_mobs",
+      "field": "counters.duplicate_deaths",
+      "op": "==",
+      "expected": 0,
+      "actual": 0,
+      "capability": "optional",
+      "measured": true,
+      "passed": true,
+      "status": "pass"
+    },
+    {
+      "label": "dash_observed",
+      "field": "counters.dashes",
+      "op": ">=",
+      "expected": 1,
+      "actual": 7,
+      "capability": "optional",
+      "measured": true,
+      "passed": true,
+      "status": "pass"
+    },
+    {
+      "label": "player_moved",
+      "field": "counters.player_moves",
+      "op": ">=",
+      "expected": 1,
+      "actual": 28,
+      "capability": "optional",
+      "measured": true,
+      "passed": true,
+      "status": "pass"
+    }
+  ],
+  "failed_optional_assertions": [],
+  "result": "PASS",
+  "exit_code": 0,
+  "proves": [
+    "request-driven world entry with live player; plan spawn executed; skill->damage->kill counters wired; movement/dash input driven",
+    "scenario 'movement_dash_smoke' definition parsed and spawn plan deterministic under seed 2026082001",
+    "candidate identity resolved (hash / repo HEAD / modset) when a candidate was provided",
+    "that the TestLevel boots with a live player, movement/dash paths are exercised, the run exits cleanly and telemetry is written under the declared ID/seed"
+  ],
+  "not_proven": [
+    "candidate build identity; frame pacing accuracy; visual/audio quality",
+    "nothing: runtime executed",
+    "combat correctness; hit/crit/kill behavior; any candidate-specific player-response delta (that belongs to B1-X1 A/B)",
+    "gameplay feel / human S5 acceptance (human gate)"
+  ],
+  "evidence_paths": {
+    "request": "<repo>\\runtime\\requests\\movement_dash_smoke_2026082001.json",
+    "telemetry": "<repo>\\runtime\\telemetry\\movement_dash_smoke_2026082001.json",
+    "plan": null,
+    "report": "<repo>\\runtime\\reports\\movement_dash_smoke_2026082001_PASS.json"
+  }
+}

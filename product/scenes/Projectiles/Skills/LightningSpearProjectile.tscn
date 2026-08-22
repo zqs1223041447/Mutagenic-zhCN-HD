@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scenes/Projectiles/Skills/LightningSpearProjectile.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/Projectiles/Projectile.tscn" id="2"]
+[ext_resource type="SpriteFrames" path="res://sprites/projectiles/lightning_spear.png" id="3"]
+
+[sub_resource type="ParticlesMaterial" id=1]
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity = 25.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color = Color(1, 0.960784, 0.0196078, 1)
+
+[node name="LightningSpearProjectile" instance=ExtResource("2")]
+z_index = -2
+script = ExtResource("1")
+does_rotate = true
+
+[node name="Sprite" parent="." index="1"]
+frames = ExtResource("3")
+playing = true
+
+[node name="Glow" parent="." index="2"]
+visible = true
+
+[node name="Particles2D" type="GPUParticles2D" parent="." index="3"]
+amount = 16
+lifetime = 0.5
+explosiveness = 0.5
+randomness = 0.5
+local_coords = false
+process_material = SubResource("1")

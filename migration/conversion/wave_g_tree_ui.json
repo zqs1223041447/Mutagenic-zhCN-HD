@@ -1,0 +1,14 @@
+{
+  "task": "P1-WAVE-G",
+  "tree_ui_converted": [
+    "scenes/Popups/Dialogs/PassiveTree/Edge.gd",
+    "scenes/Popups/Dialogs/PassiveTree/Edge.tscn",
+    "scenes/Popups/Dialogs/PassiveTree/PassiveNode.gd",
+    "scenes/Popups/Dialogs/PassiveTree/PassiveNode.tscn",
+    "scenes/Popups/Dialogs/PassiveTree/PassiveTree.gd",
+    "scenes/Popups/Dialogs/PassiveTree/PassiveTreeContainer.gd",
+    "scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.gd",
+    "scenes/Popups/Dialogs/PassiveTree/PassiveTreePopup.tscn"
+  ],
+  "recovered_unmodified": true
+}
