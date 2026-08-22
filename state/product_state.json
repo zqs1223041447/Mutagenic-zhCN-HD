@@ -674,5 +674,13 @@
       "status": "READY",
       "note": "Blocking normal world-entry flow. Execution mode: parallel background subagents per AGENT.MD."
     }
+  ],
+  "decisions": [
+    {
+      "date": "2026-08-22",
+      "decision": "STEAM_REAL_INTEGRATION_DELETED",
+      "by": "user",
+      "detail": "USE_STEAM=false local fallback is final. No batch may plan Steam integration work again; Steam call sites and guards remain in code as historical evidence, never activated."
+    }
   ]
 }

@@ -179,7 +179,8 @@ Godot 3.5.3 = Legacy Reference
 **当前主线：P2 Minimal AI Autonomous Loop**
 - P2-BATCH-1（已完成）：Steam 层 A2 落地（boot 错误 662→59）、boot 基线双跑稳定、冒烟三跳 SMOKE_PASS
 - P2 定义：boot probe → 冒烟跳转 → 取证 bundle → 状态回写，单条链路可重复
-- 剩余运行时 missing_asset 属美术管线边界（需人类决策 aseprite 源）；Steam 真接入延后
+- 剩余运行时 missing_asset 属美术管线边界（需人类决策 aseprite 源）
+- 【用户决议】Steam 真接入已从全部计划中**永久删除**：`USE_STEAM=false` 本地回退即最终形态，不再规划、不预留工作量
 
 | ID | Goal | 关键验收 |
 |----|------|----------|

@@ -282,9 +282,13 @@ P1-X0..X3 已完成。Godot 4.7.1 二进制为 DOWNLOADABLE_TOOL：本地 `02_to
 
 ## 5n. P1 当前剩余信号（下一批次决策点）
 
-运行时 missing_asset ≈256（.aseprite 无源 SpriteFrames、UI 音效/贴图）属美术管线边界；Steam 替代层属架构决策需会诊。P1 静态迁移主体已收敛，下一步应评估进入 P2（最小自主循环）的条件是否满足：Product 可稳定 headless 运行 ✓、多 Agent 自我验证闭环 ✓、状态/清理/集成自动化 ✓。
+运行时 missing_asset ≈256（.aseprite 无源 SpriteFrames、UI 音效/贴图）属美术管线边界；Steam 真接入已按用户决议永久删除（见第 6 节决议记录）。P1 静态迁移主体已收敛，下一步应评估进入 P2（最小自主循环）的条件是否满足：Product 可稳定 headless 运行 ✓、多 Agent 自我验证闭环 ✓、状态/清理/集成自动化 ✓。
 
 ## 6. P2 Minimal AI Autonomous Loop
+
+### 决议记录（Decision，append-only）
+
+- **2026-08-22 用户决议：Steam 真接入永久删除。** `USE_STEAM=false` 本地回退为最终形态；任何批次不得再规划 Steam 接入工作量；代码内 Steam 调用点与守卫保留（历史证据），但永不激活。
 
 ### P2-BATCH-1（已完成）— Steam 层落地 + Boot 基线 + 冒烟链路
 
