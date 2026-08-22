@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "task": "P4-A",
+  "probe_id": "P4-A-C2",
+  "exit_criteria": [
+    "C2"
+  ],
+  "generated_at": "2026-08-22T09:03:00Z",
+  "engine": {
+    "binary_name": "Godot_v4.7.1-stable_win64.exe",
+    "resolved_via": "REPO_RELATIVE",
+    "version": "4.7.1",
+    "status": "SUCCESS"
+  },
+  "driver_scene": "res://scenes/Levels/_validate/P4APositionDriver.tscn",
+  "command": [
+    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
+    "--headless",
+    "--path",
+    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\product",
+    "res://scenes/Levels/_validate/P4APositionDriver.tscn"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "duration_ms": 20375,
+  "attempts": 1,
+  "flaked": false,
+  "result": {
+    "absence": {
+      "default_spawn_kept": true,
+      "default_spawn_position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "pass": true,
+      "reentered_without_position": true
+    },
+    "apply": {
+      "pass": true,
+      "position_applied": true,
+      "reentered": true,
+      "respawn_position": {
+        "x": -272.0,
+        "y": -202.23
+      },
+      "save_records_position": true,
+      "saved_position_field": {
+        "level": "test_level",
+        "x": -272.0,
+        "y": -208.0
+      },
+      "teleport_target": {
+        "x": -272.0,
+        "y": -208.0
+      },
+      "world_entered": true
+    },
+    "errors": [],
+    "finished": true,
+    "pass": true,
+    "task": "P4-A-C2"
+  },
+  "script_errors": [
+    "SCRIPT ERROR: Invalid call to function 'disconnect' in base 'Node2D (Stats.gd)'. Expected 2 argument(s).",
+    "SCRIPT ERROR: Invalid access to property or key 'process_material' on a base object of type 'null instance'."
+  ],
+  "verdict_detail": "probe assertions satisfied",
+  "verdict": "PASS",
+  "proves": "do_save_game persists the H2 position field {x,y,level}; a later world entry teleports the player to the saved position (applied after the default spawn logic); saves without the position field keep the default Vector2.ZERO spawn.",
+  "not_proven": "cross-level position restore (level mismatch guard is asserted by code review only); save-file portability across machines."
+}

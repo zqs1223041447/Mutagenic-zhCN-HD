@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "task": "P4-B",
+  "probe_id": "p4_b_vfx_probe",
+  "exit_criteria": [
+    "F1"
+  ],
+  "generated_at": "2026-08-22T09:44:01Z",
+  "engine": {
+    "binary_name": "Godot_v4.7.1-stable_win64.exe",
+    "resolved_via": "REPO_RELATIVE",
+    "version": "4.7.1",
+    "status": "SUCCESS"
+  },
+  "driver_scene": "res://scenes/Mobs/_validate/p4_b_vfx_probe.tscn",
+  "command": [
+    "<repo>\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
+    "--headless",
+    "--path",
+    "<repo>\\product",
+    "res://scenes/Mobs/_validate/p4_b_vfx_probe.tscn"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "duration_ms": 16608,
+  "attempts": 1,
+  "flaked": false,
+  "result": {
+    "death_dissolve": {
+      "configured_freed_after_total": true,
+      "default_freed_after_duration": true,
+      "default_progressing": true,
+      "hold_progress_zero": true,
+      "pass": true,
+      "progress_near_full_before_free": true
+    },
+    "errors": [],
+    "f1_pass": true,
+    "floating_damage": {
+      "crit_lifetime_s": 0.4,
+      "crit_lives_longer_than_normal": true,
+      "crit_pop_visible": true,
+      "crit_tint_applied": true,
+      "font_color_override_applied": true,
+      "normal_lifetime_s": 0.248,
+      "normal_no_pop": true,
+      "pass": true,
+      "rhythm_tables_differ": true
+    },
+    "fx_enabled": true,
+    "hit_burst": {
+      "element_colors_match": {
+        "cold": true,
+        "fire": true,
+        "lightning": true,
+        "physical": true,
+        "toxic": true
+      },
+      "emitting_on_ready": true,
+      "freed_after_lifetime": true,
+      "override_wins": true,
+      "pass": true,
+      "unknown_falls_back_white": true
+    },
+    "mob_hit_wiring": {
+      "burst_spawned_on_hit": true,
+      "bursts_total": 2,
+      "cooldown_throttles": true,
+      "damage_applied": true,
+      "hp_before": 5.0,
+      "mob_alive": true,
+      "pass": true,
+      "second_burst_after_interval": true
+    },
+    "pass": true,
+    "probe_id": "p4_b_vfx_probe"
+  },
+  "script_errors": [],
+  "verdict_detail": "probe assertions satisfied",
+  "verdict": "PASS",
+  "proves": "hit-burst element colors are configuration-driven and spawn through the real Mob damage path with cooldown throttling; death dissolve duration/delay drive both shader ramp and removal; floating-damage normal/crit rhythm tables differ and are honored (tint/pop/lifetime)",
+  "not_proven": "subjective game feel (human adjudication lane); art quality of procedural particles; GPUParticles rendering on real hardware"
+}

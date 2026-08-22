@@ -6,18 +6,25 @@ var pulses = 0
 var particle_multiplier = 1.0
 
 var effective_radius = 0
-
 func _ready():
 				# P3-H3a: Godot 4 no longer auto-chains parent _ready(); run
 				# Projectile._ready() first (weakref/collision/damage snapshot).
 				super._ready()
 				
 				
-				$GPUParticles2D.lifetime = radius / $GPUParticles2D.process_material.initial_velocity
-				$GPUParticles2D.amount *= particle_multiplier
+				
+				
+				var particles = get_node_or_null("GPUParticles2D")
+				if particles == null or particles.process_material == null:
+								
+								set_physics_process(false)
+								return
+
+				particles.lifetime = radius / particles.process_material.initial_velocity
+				particles.amount *= particle_multiplier
 
 				if target_group == "allies":
-								$GPUParticles2D.process_material.color = Color(0.586274, 0.65098, 0.27451)
+								particles.process_material.color = Color(0.586274, 0.65098, 0.27451)
 				effective_radius = radius
 
 func on_pulse(delta):

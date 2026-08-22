@@ -2,7 +2,7 @@
   "event": "B1-X5 combat-harness scenario run",
   "task_id": "B1-X5",
   "branch": "agent/kinetic-arcane-remaster-foundation",
-  "repo_head_sha": "7a2c5868a79a51eee817143410c8796ebb43250c",
+  "repo_head_sha": "0fe970cb5718b467a347e3006c590fac585a0aa8",
   "schema_version": "1.0",
   "scenario": {
     "id": "single_melee_hit",
@@ -17,15 +17,15 @@
   },
   "candidate": {
     "provided": true,
-    "path": "<repo>/02_tools/godot/Godot_v4.7.1-stable_win64.exe",
+    "path": "<repo>02_tools/godot/Godot_v4.7.1-stable_win64.exe",
     "sha256": "323f9c4cc5db674e98815cdd8e69da007d5efc779abedc8c0e42883b7fdea12a",
     "exists": true,
     "path_repo_relative": "02_tools/godot/Godot_v4.7.1-stable_win64.exe"
   },
   "modset": "none",
   "timestamps": {
-    "started_at": "2026-08-22T04:02:04Z",
-    "ended_at": "2026-08-22T04:02:19Z"
+    "started_at": "2026-08-22T04:29:06Z",
+    "ended_at": "2026-08-22T04:29:41Z"
   },
   "boot": {
     "alert_count": 0,
@@ -33,28 +33,28 @@
     "ok": true
   },
   "counters": {
-    "alive": 0,
-    "checkpoint_count": 2,
-    "damage_events": 2,
-    "dashes": 0,
+    "alive": 1,
+    "checkpoint_count": 5,
+    "damage_events": 1,
+    "dashes": 4,
     "duplicate_deaths": 0,
-    "killed": 1,
-    "player_moves": 4,
+    "killed": 0,
+    "player_moves": 18,
     "spawned": 1
   },
   "perf": {
-    "fps_avg": 12.27,
-    "fps_max": 1.0,
+    "fps_avg": 57.95,
+    "fps_max": 145.0,
     "fps_min": 1.0,
     "frame_pacing_p95_ms": 0.0,
-    "frames": 6
+    "frames": 1200
   },
   "capture": null,
   "runtime": {
     "ran": true,
     "in_game_exit_code": 0,
     "in_game_result": "PASS",
-    "launcher": "python <repo>/scripts/validate/p3_bc_launch_godot.py --scenario single_melee_hit --seed 2026082002 --out-dir <repo>/migration/conversion",
+    "launcher": "python <repo>scripts/validate/p3_bc_launch_godot.py --scenario single_melee_hit --seed 2026082002 --out-dir <repo>migration/conversion",
     "launcher_returncode": 0
   },
   "telemetry": {
@@ -90,7 +90,7 @@
       "field": "counters.damage_events",
       "op": ">=",
       "expected": 1,
-      "actual": 2,
+      "actual": 1,
       "capability": "optional",
       "measured": true,
       "passed": true,

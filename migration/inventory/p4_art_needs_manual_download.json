@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "task": "P4-ART-FETCH",
+  "generated_at": "2026-08-22T07:49:26Z",
+  "policy_note": "non-blocking list; packs here were NOT downloaded",
+  "items": [
+    {
+      "pack": "frosty-rabbid pixel-art skill icons",
+      "url": "https://frosty-rabbid.itch.io/pixel-art-skill-icons",
+      "url_verified": false,
+      "reason": "page slug unverified (HTTP 404 on probe); itch downloads require a per-page token flow that headless fetch cannot do",
+      "purpose": "skill icon alternatives for the skills bucket"
+    },
+    {
+      "pack": "v-ktor magic icon pack",
+      "url": "https://v-ktor.itch.io/magic-icon-pack",
+      "url_verified": false,
+      "reason": "page slug unverified (HTTP 404 on probe); itch downloads require a per-page token flow that headless fetch cannot do",
+      "purpose": "magic/skill icon alternatives for the skills bucket"
+    },
+    {
+      "pack": "kurai7 asset pack (specific page unknown)",
+      "url": "https://kurai7.itch.io/",
+      "url_verified": true,
+      "reason": "profile reachable but the intended pack page is unnamed in the acquisition plan; needs human selection",
+      "purpose": "general pixel-art stock for actors/items buckets"
+    }
+  ]
+}

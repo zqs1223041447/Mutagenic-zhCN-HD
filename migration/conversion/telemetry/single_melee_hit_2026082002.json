@@ -14,41 +14,65 @@
 			"t": 0.0
 		},
 		{
-			"alive": 0,
-			"damage_events": 2,
-			"fps": 1.0,
-			"killed": 1,
+			"alive": 1,
+			"damage_events": 1,
+			"fps": 145.0,
+			"killed": 0,
 			"spawned": 1,
-			"t": 0.1
+			"t": 5.02
+		},
+		{
+			"alive": 1,
+			"damage_events": 1,
+			"fps": 145.0,
+			"killed": 0,
+			"spawned": 1,
+			"t": 10.03
+		},
+		{
+			"alive": 1,
+			"damage_events": 1,
+			"fps": 145.0,
+			"killed": 0,
+			"spawned": 1,
+			"t": 15.05
+		},
+		{
+			"alive": 1,
+			"damage_events": 1,
+			"fps": 145.0,
+			"killed": 0,
+			"spawned": 1,
+			"t": 20.0
 		}
 	],
 	"counters": {
-		"alive": 0,
-		"checkpoint_count": 2,
-		"damage_events": 2,
-		"dashes": 0,
+		"alive": 1,
+		"checkpoint_count": 5,
+		"damage_events": 1,
+		"dashes": 4,
 		"duplicate_deaths": 0,
-		"killed": 1,
-		"player_moves": 4,
+		"killed": 0,
+		"player_moves": 18,
 		"spawned": 1
 	},
-	"ended_at": "2026-08-22T04:02:19Z",
-	"exit_reason": "all_killed",
+	"ended_at": "2026-08-22T04:29:41Z",
+	"exit_reason": "timeout",
 	"not_proven": "candidate build identity; frame pacing accuracy; visual/audio quality",
 	"perf": {
-		"fps_avg": 12.27,
-		"fps_max": 1.0,
+		"fps_avg": 57.95,
+		"fps_max": 145.0,
 		"fps_min": 1.0,
 		"frame_pacing_p95_ms": 0.0,
-		"frames": 6
+		"frames": 1200
 	},
 	"proves": "request-driven world entry with live player; plan spawn executed; skill->damage->kill counters wired; movement/dash input driven",
 	"runtime": {
 		"exit_code": 0,
 		"in_game_result": "PASS",
 		"notes": [
-			"run_seconds=0.49",
-			"exit_reason=all_killed",
+			"run_seconds=20.71",
+			"exit_reason=timeout",
 			"skill_used=Orb+Shockwave",
 			"harness_mode=TestLevel.gd+ScenarioDirector.gd",
 			"spawn_positions_adjusted=1/1 (clamped to 64.0px engagement radius)"
@@ -58,7 +82,7 @@
 	"schema_version": "1.0",
 	"seed": 2026082002,
 	"session_file": "session_single_melee_hit_2026082002.json",
-	"started_at": "2026-08-22T04:02:19Z",
+	"started_at": "2026-08-22T04:29:21Z",
 	"status": "complete",
 	"world": {
 		"navmesh_points": 252,

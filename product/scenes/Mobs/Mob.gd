@@ -7,6 +7,7 @@ var speed_aura = preload("res://scenes/Skills/Auras/Rush/Rush.tscn")
 
 var shatter = preload("res://scenes/Explosions/TexturedExplosions/ShatterExplosion.tscn")
 var poof = preload("res://scenes/Explosions/TexturedExplosions/BurningDeath.tscn")
+var hit_burst = preload("res://scenes/Particles/HitBurst.tscn")
 
 
 var gene_pickup = load("res://scenes/Pickups/Gene/GenePickup.tscn")
@@ -37,6 +38,17 @@ var effective_level = 1
 var is_elite = false
 var is_magic = false
 var monster_mods = []
+
+# P4-B F1a/F1b: hit/death VFX rhythm configuration.
+@export var hit_feedback_enabled = true
+## Minimum seconds between two hit bursts on the same mob (DOT ticks share
+## this throttle).
+@export var hit_burst_min_interval = 0.06
+## Death -> dissolve -> removal pacing (seconds); consumed by DissolveMob.
+@export var death_dissolve_duration = 0.25
+
+var _hit_burst_cooldown = 0.0
+var _hit_vfx_prior_health = INF
 
 
 var attacking = false
@@ -138,6 +150,7 @@ func _ready() -> void :
 
 				stats.recompute_stats(true)
 				stats.fill_health()
+				_hit_vfx_prior_health = stats.health
 
 				status_bar.update_healthbar(stats)
 
@@ -157,6 +170,10 @@ func _ready() -> void :
 				stats.connect("stats_changed", Callable(self, "recache_ms"))
 				recache_ms()
 
+				
+				_hit_vfx_prior_health = stats.health
+				stats.connect("health_changed", Callable(self, "_on_hit_vfx_health_changed"))
+
 func recache_ms():
 				cached_ms = stats.gs("movement_speed")
 
@@ -171,6 +188,7 @@ func _physics_process(delta: float) -> void :
 				last_check_time += delta * (0.5 + 0.5 * randf())
 				last_attack_test += delta * (0.5 + 0.5 * randf())
 				time_since_attack += delta
+				_hit_burst_cooldown = max(0.0, _hit_burst_cooldown - delta)
 
 				if cached_ms == 0 or stats.status_flags.has(Constants.StatusFlags.FROZEN):
 								apply_central_impulse( - linear_velocity)
@@ -262,6 +280,44 @@ func _on_stats_changed():
 								$SpriteContainer/Sprite.speed_scale = 1
 
 				$SpriteContainer/Sprite.modulate = modulate_color
+
+# --- P4-B F1a: hit-feedback particle burst -----------------------------------
+
+func _on_hit_vfx_health_changed():
+				var current_health = stats.health
+				
+				if not hit_feedback_enabled or _hit_vfx_prior_health == INF:
+								_hit_vfx_prior_health = current_health
+								return
+				var dropped = _hit_vfx_prior_health - current_health
+				_hit_vfx_prior_health = current_health
+				if dropped <= 0.0:
+								return
+				if _hit_burst_cooldown > 0.0:
+								return
+				_hit_burst_cooldown = hit_burst_min_interval
+				spawn_hit_burst()
+
+func spawn_hit_burst(element = null):
+				if ground_layer == null:
+								return
+				var burst = hit_burst.instantiate()
+				burst.element = _guess_hit_element() if element == null else element
+				ground_layer.add_child(burst)
+				burst.global_position = $SpriteContainer/Sprite.global_position
+
+func _guess_hit_element():
+				
+				
+				if stats.status_flags.has(Constants.StatusFlags.BURNING):
+								return SkillTags.Tags.FIRE
+				if stats.status_flags.has(Constants.StatusFlags.CHILLED) or stats.status_flags.has(Constants.StatusFlags.FROZEN):
+								return SkillTags.Tags.COLD
+				if stats.status_flags.has(Constants.StatusFlags.JOLTED):
+								return SkillTags.Tags.LIGHTNING
+				if stats.status_flags.has(Constants.StatusFlags.POISONED) or stats.status_flags.has(Constants.StatusFlags.INFECTED):
+								return SkillTags.Tags.TOXIC
+				return SkillTags.Tags.PHYSICAL
 
 func _on_MobCollider_area_entered(area: Area2D) -> void :
 				if area.get_parent().is_in_group("player"):
@@ -412,6 +468,7 @@ func set_mob_scale(scale):
 
 func spawn_death_animation():
 				var dissolve = dissolve_sprite.instantiate()
+				dissolve.dissolve_duration = death_dissolve_duration
 				dissolve.global_position = $SpriteContainer/Sprite.global_position
 				level.add_child(dissolve)
 				if $SpriteContainer/Sprite.sprite_frames != null:

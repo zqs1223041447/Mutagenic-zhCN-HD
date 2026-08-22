@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "task": "P4-A",
+  "probe_id": "P4-A-R1-R2",
+  "exit_criteria": [
+    "R1",
+    "R2"
+  ],
+  "generated_at": "2026-08-22T10:47:56Z",
+  "engine": {
+    "binary_name": "Godot_v4.7.1-stable_win64.exe",
+    "resolved_via": "REPO_RELATIVE",
+    "version": "4.7.1",
+    "status": "SUCCESS"
+  },
+  "driver_scene": "res://scenes/Levels/_validate/P4AFeedbackDriver.tscn",
+  "command": [
+    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
+    "--headless",
+    "--path",
+    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\product",
+    "res://scenes/Levels/_validate/P4AFeedbackDriver.tscn"
+  ],
+  "returncode": null,
+  "timed_out": true,
+  "duration_ms": 300031,
+  "attempts": 2,
+  "flaked": true,
+  "result": null,
+  "script_errors": [
+    "SCRIPT ERROR: Parse Error: Identifier \"max_r\" not declared in the current scope."
+  ],
+  "verdict_detail": "no P3_PROBE_RESULT line in driver output; fatal signature present",
+  "verdict": "FLAKE",
+  "proves": "enemy hit flash (modulate overbright tween fires and restores), elite ring marker attachment, kill zoom punch, player red vignette flash, screen shake offset jitter and Engine.time_scale hit-stop — each asserted to fire AND restore inside the real World.tscn chain.",
+  "not_proven": "subjective feel/tuning quality (human judgement); visual correctness of the hit_flash shader on textured sprites."
+}

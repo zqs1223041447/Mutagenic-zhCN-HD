@@ -1,0 +1,7 @@
+pack: kenney_micro-roguelike
+url: https://kenney.nl/assets/micro-roguelike
+license: CC0 1.0 (public domain)
+author: Kenney
+downloaded_at: 2026-08-22
+extracted: full pack (tile-sheet stock; reserved for WIRE batch)
+local_archive: runtime/p4_art_downloads/kenney_micro-roguelike.zip

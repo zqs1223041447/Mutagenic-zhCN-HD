@@ -19,35 +19,35 @@
 			"fps": 145.0,
 			"killed": 20,
 			"spawned": 20,
-			"t": 1.43
+			"t": 3.12
 		}
 	],
 	"counters": {
 		"alive": 0,
 		"checkpoint_count": 2,
 		"damage_events": 40,
-		"dashes": 0,
+		"dashes": 1,
 		"duplicate_deaths": 0,
 		"killed": 20,
-		"player_moves": 0,
+		"player_moves": 18,
 		"spawned": 20
 	},
-	"ended_at": "2026-08-22T04:02:36Z",
+	"ended_at": "2026-08-22T04:30:00Z",
 	"exit_reason": "all_killed",
 	"not_proven": "candidate build identity; frame pacing accuracy; visual/audio quality",
 	"perf": {
-		"fps_avg": 35.94,
+		"fps_avg": 54.34,
 		"fps_max": 145.0,
 		"fps_min": 1.0,
 		"frame_pacing_p95_ms": 0.0,
-		"frames": 86
+		"frames": 187
 	},
 	"proves": "request-driven world entry with live player; plan spawn executed; skill->damage->kill counters wired; movement/dash input driven",
 	"runtime": {
 		"exit_code": 0,
 		"in_game_result": "PASS",
 		"notes": [
-			"run_seconds=2.39",
+			"run_seconds=3.44",
 			"exit_reason=all_killed",
 			"skill_used=Orb+Shockwave",
 			"harness_mode=TestLevel.gd+ScenarioDirector.gd",
@@ -58,7 +58,7 @@
 	"schema_version": "1.0",
 	"seed": 2026082005,
 	"session_file": "session_cluster_kill_20_2026082005.json",
-	"started_at": "2026-08-22T04:02:34Z",
+	"started_at": "2026-08-22T04:29:57Z",
 	"status": "complete",
 	"world": {
 		"navmesh_points": 252,
