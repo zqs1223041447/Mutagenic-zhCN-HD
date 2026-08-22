@@ -141,7 +141,8 @@ func _ready() -> void :
 
 				status_bar.update_healthbar(stats)
 
-				$SpriteContainer/Sprite.frame = randi() % $SpriteContainer/Sprite.frames.get_frame_count("default")
+				if $SpriteContainer/Sprite.sprite_frames != null:
+							$SpriteContainer/Sprite.frame = randi() % $SpriteContainer/Sprite.sprite_frames.get_frame_count("default")
 
 				
 				reset_target_offset()
@@ -413,7 +414,8 @@ func spawn_death_animation():
 				var dissolve = dissolve_sprite.instantiate()
 				dissolve.global_position = $SpriteContainer/Sprite.global_position
 				level.add_child(dissolve)
-				dissolve.sprite.frames = $SpriteContainer/Sprite.frames
+				if $SpriteContainer/Sprite.sprite_frames != null:
+							dissolve.sprite.sprite_frames = $SpriteContainer/Sprite.sprite_frames
 				dissolve.sprite.scale = $SpriteContainer.scale
 				dissolve.sprite.flip_h = $SpriteContainer/Sprite.flip_h
 

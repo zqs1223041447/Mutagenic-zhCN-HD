@@ -630,11 +630,42 @@
         "tests": "187 OK",
         "recovered_unmodified": true
       },
-      "note": "IdleFrame->process_frame rename unblocked permanently-hung coroutines; Levels.gd preload cycle fixed via preload->load; pool %0 guarded.",
+    "P2-BATCH-3": {
+      "goal": "BaseLevel tile pipeline G4 residue + TierLoader Array + audio bus index + 缺失UI/场景三波闭包",
+      "status": "DONE",
+      "blocked_by": [],
+      "acceptance": {
+        "boot_status": "BOOTED",
+        "boot_returncode": 0,
+        "boot_script_errors": {
+          "before": 52,
+          "after": 0
+        },
+        "smoke_overall": "SMOKE_PASS",
+        "smoke_chain": [
+          "res://scenes/LoadGame.tscn",
+          "res://scenes/Menu.tscn",
+          "res://scenes/Levels/TestLevel/TestLevel.tscn"
+        ],
+        "smoke_new_errors_per_hop": 0,
+        "tile_api_residue": 0,
+        "tierloader_array_errors": 0,
+        "audio_bus_index_errors": 0,
+        "level_tscn_g3_tileset_removed": 6,
+        "restored_files_total": 45,
+        "tests": "215 OK"
+      },
+      "note": "世界进入阻断清零：BaseLevel.gd 瓦片管线迁移(set_cells_terrain_connect/atlas source)、GenericTileset.tres 转 G4 地形集、6 关卡 tscn 内嵌 G3 TileSet 删除、TierLoader 空安全、default_bus_layout.tres 新建(SFX/Music/Drops)、TooltipBase rect_position 根因、SkillList/SupportList 信号函数同名拆分、45 个缺失 UI/场景文件三波恢复转换。剩余 boot 错误仅 missing_asset 美术边界类。",
       "evidence": [
-        "git diff 62b3703..HEAD -- product/scenes"
+        "migration/conversion/p3_entry_boot_baseline.json",
+        "migration/conversion/p2_batch3_boot_after.json",
+        "migration/conversion/p2_batch3_boot_final.json",
+        "migration/conversion/p2_batch3_boot_final2.json",
+        "migration/conversion/p2_batch3_smoke_after.json",
+        "migration/conversion/p2_batch3_smoke_final.json"
       ]
-    },
+    }
+  },
     "P2-BATCH-3": {
       "goal": "BaseLevel tile pipeline Godot 4 residue + TierLoader Array errors + audio bus index",
       "status": "DONE",

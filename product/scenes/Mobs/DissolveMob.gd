@@ -9,4 +9,4 @@ func _on_Timer_timeout() -> void :
 
 func _process(delta: float) -> void :
 				dissolved += delta * 4.0
-				sprite.material.set_shader_param("dissolveAmount", min(dissolved, 1.0))
+				sprite.material.set_shader_parameter("dissolveAmount", min(dissolved, 1.0))
