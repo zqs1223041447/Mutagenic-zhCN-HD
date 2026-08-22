@@ -799,9 +799,9 @@
       "id": "P4-GLOBALS",
       "goal": "Globals 139 条引用接线：OrbTypes/Outfits/Genes 等 Globals 脚本中剩余 missing_asset 引用按映射表重写（与 P4-WIRE 同逻辑）",
       "depends_on": [],
-      "status": "READY",
+      "status": "DONE",
       "parallelizable": true,
-      "note": "接线后预期 missing_asset 143→接近 0"
+      "note": "2026-08-22 已完成：9文件173引用接线，随 0d6090d 提交"
     },
     {
       "id": "P4-ANIM",
@@ -830,6 +830,21 @@
         "migration/inventory/p4_art_mapping.json",
         "migration/conversion/p4_wire_report.json",
         "migration/conversion/p3_e2e_full_report_v3.json"
+      ]
+    },
+    {
+      "id": "P4-GLOBALS-AND-ITCH",
+      "completed_at": "2026-08-22",
+      "lanes": ["P4-GLOBALS", "ART-ITCH"],
+      "summary": "itch 3包 slug 修复并token流落地 + Globals扩展接线9文件173引用(OWN_REMAP139/MAPPED25/PLACEHOLDER9)；scan missing 217->23(-89%，仅剩other 23非视觉)，boot missing_asset 143->3",
+      "evidence": [
+        "migration/inventory/p4_art_needs_manual_download.json",
+        "migration/inventory/p4_art_missing_inventory.json",
+        "migration/conversion/p4_wire_report.json",
+        "migration/conversion/p4_wire_boot_after.json",
+        "product/sprites/_acquired/frosty-rabbid_rpg-ability-icons/SOURCE.txt",
+        "product/sprites/_acquired/v-ktor_rpg-skill-icons/SOURCE.txt",
+        "product/sprites/_acquired/kurai7_free-rpg-skill-icons/SOURCE.txt"
       ]
     }
   ],
