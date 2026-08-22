@@ -100,7 +100,7 @@ func get_zoom():
 
 func get_center():
 				var sz = selector_container.size
-				var screen_center = Vector2(sz.x, sz.y) / 2.0 + selector_container.rect_global_position
+				var screen_center = Vector2(sz.x, sz.y) / 2.0 + selector_container.global_position
 				return screen_center
 
 func select_node_in_center():

@@ -35,6 +35,10 @@ func create_point(tile):
 func build_navmesh(tiles, cell_size):
 				self.cell_size = cell_size
 				navmesh = AStar2D.new()
+				if len(tiles) == 0:
+								# Godot 4 迁移守卫：空瓦片集直接返回，避免 tiles[0] 越界中断 _ready 链。
+								print("Building navmesh skipped: no tiles")
+								return
 				if len(tiles) > 64:
 								navmesh.reserve_space(len(tiles))
 

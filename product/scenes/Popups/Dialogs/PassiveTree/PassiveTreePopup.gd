@@ -85,7 +85,7 @@ func rebuild():
 func _on_tree_changed():
 				$PassiveTreeGUI/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/MessageBlocker.visible = false
 				passive_container.can_scroll = true
-				var focus_owner = $PassiveTreeGUI/MarginContainer.get_focus_owner()
+				var focus_owner = $PassiveTreeGUI/MarginContainer.get_viewport().gui_get_focus_owner()
 				if GameState.get_allocated_count() > 0:
 								$PassiveTreeGUI/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/HBoxContainer2/HBoxContainer/HBoxContainer/RefundButton.visible = true
 				else:
@@ -221,7 +221,7 @@ func render_effective_stats():
 
 				for keystone in applied_stats.keystones:
 								var label = Label.new()
-								label.autowrap = true
+								label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 								label.align = HORIZONTAL_ALIGNMENT_CENTER
 								label.text = Keystones.keystones[keystone].description
 								stat_container.add_child(label)
@@ -231,7 +231,7 @@ func render_effective_stats():
 												var stat_config = applied_stats.stats[stat]
 												for scaling_type in stat_config:
 																var label = Label.new()
-																label.autowrap = true
+																label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 																label.align = HORIZONTAL_ALIGNMENT_CENTER
 																label.text = StatsInfo.render_passive_stat_line(stat, {
 																				"scaling_type": scaling_type, 
@@ -247,7 +247,7 @@ func render_effective_stats():
 																var stat_config = stats_for_type[stat]
 																for scaling_type in stat_config:
 																				var label = Label.new()
-																				label.autowrap = true
+																				label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 																				label.align = HORIZONTAL_ALIGNMENT_CENTER
 																				label.text = StatsInfo.render_passive_stat_line(stat, {
 																								"scaling_type": scaling_type, 

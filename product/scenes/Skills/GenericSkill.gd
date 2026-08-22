@@ -119,6 +119,10 @@ func _physics_process(delta: float) -> void :
 												_cast()
 
 func get_tags():
+				# Mob skills (e.g. BasicAttack) are not in the player skill catalog;
+				# they define their own tags, so fall back to an empty list here.
+				if not Skills.get("config").has(self.name):
+								return []
 				var tags = Skills.get("config")[self.name].tags.duplicate()
 				if stats.keystones.has("TREE_WEAPON_DEXTERITY"):
 								if tags.has(SkillTags.Tags.ATTACK):
@@ -298,6 +302,9 @@ func compute_attribute_additions():
 												computed_support_stats_added["toxic_damage"] = added_amount
 
 func render_supports():
+				# Mob skills are not in the player skill catalog and render nothing.
+				if not Skills.get("config").has(self.name):
+								return
 				if Skills.get("config")[self.name].playable:
 								var supports = []
 								var eq = GameState.get_equipped_skills()
@@ -320,6 +327,9 @@ func get_effective_tier():
 				return Skills.tier_for_level(parent_level)
 
 func is_skill():
+				# Mob skills are not in the player skill catalog.
+				if not Skills.get("config").has(self.name):
+								return false
 				return Skills.get("config")[self.name].type == Constants.ItemType.SKILL
 
 func has_tag(tag):

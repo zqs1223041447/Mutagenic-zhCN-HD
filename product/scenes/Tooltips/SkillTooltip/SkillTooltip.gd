@@ -23,8 +23,9 @@ func render(position, position_offset):
 				confine_to_window(container, position, position_offset)
 				container.modulate = Color.WHITE
 
-func hide():
-				visible = false
+# Godot 4：func hide() 覆盖原生 CanvasLayer.hide() 触发 native_method_override
+# 警告（本项目按错误处理）。原生实现同为 visible=false，删除冗余覆盖，
+# 调用方 tooltip.hide() 继续生效。
 
 func update_info():
 				if not visible:

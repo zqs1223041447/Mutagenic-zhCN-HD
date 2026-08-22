@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "task": "P3-A",
+  "probe_id": "P3-A-E1-E8",
+  "exit_criteria": [
+    "E1",
+    "E8"
+  ],
+  "generated_at": "2026-08-22T03:00:55Z",
+  "engine": {
+    "binary_name": "Godot_v4.7.1-stable_win64.exe",
+    "resolved_via": "REPO_RELATIVE",
+    "version": "4.7.1",
+    "status": "SUCCESS"
+  },
+  "driver_scene": "res://scenes/Levels/_validate/P3ADriver.tscn",
+  "command": [
+    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
+    "--headless",
+    "--path",
+    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\product",
+    "res://scenes/Levels/_validate/P3ADriver.tscn"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "duration_ms": 15875,
+  "attempts": 1,
+  "flaked": false,
+  "result": {
+    "e1": {
+      "active_class": "MAGE",
+      "active_identity_matches": true,
+      "menu_arrived": true,
+      "pass": true,
+      "popup_is_character_select": true,
+      "popup_opened": true,
+      "preexisting_character_count": 1,
+      "probe_character_created": true,
+      "selected": true,
+      "slot_count_after_create": 3,
+      "start_button_present": true
+    },
+    "e8": {
+      "class_written": true,
+      "file_nonempty": true,
+      "file_parses": true,
+      "identity_written": true,
+      "level_written": true,
+      "pass": true,
+      "position_like_keys": [],
+      "position_schema_note": "product save schema defines no player-position field; roundtrip anchored on identity/class/account_level/account_xp",
+      "reload_menu_arrived": true,
+      "reloaded_character_present": true,
+      "roundtrip_class": true,
+      "roundtrip_identity": true,
+      "roundtrip_level": true,
+      "roundtrip_xp": true,
+      "timestamp_advanced": true,
+      "xp_written": true
+    },
+    "errors": [],
+    "finished": true,
+    "pass": true,
+    "task": "P3-A"
+  },
+  "script_errors": [],
+  "verdict_detail": "probe assertions satisfied",
+  "verdict": "PASS",
+  "proves": "headless boot reaches Menu via LoadGame; StartButton opens the CharacterSelect popup; a character can be created and selected (E1); do_save_game writes a parsable save whose identity/class/account_level/account_xp survive GameState.load_game (E8).",
+  "not_proven": "player-position persistence (save schema defines no position field); rendering/input fidelity of the real UI."
+}

@@ -2045,7 +2045,10 @@ func get_visible_enemies(check_collision = false, max_distance = INF):
 								var visible_enemies = []
 								var space_state = get_parent().get_world_2d().direct_space_state
 								for enemy in enemies:
-												var result = space_state.intersect_ray(global_position, enemy.global_position, [], 256)
+												# Godot 4 迁移：G3 的 intersect_ray(from, to, exclude, mask) 四参
+												# 签名已删除，改为 PhysicsRayQueryParameters2D。
+												var query := PhysicsRayQueryParameters2D.create(global_position, enemy.global_position, 256)
+												var result = space_state.intersect_ray(query)
 												if not result:
 																visible_enemies.append(enemy)
 								return visible_enemies

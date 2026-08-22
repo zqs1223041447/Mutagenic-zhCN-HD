@@ -11,7 +11,7 @@
     "note": "Pushed b3bbb75 (P1-WAVE-E). CI yaml left at origin (OAuth token lacks workflow scope); fetch_godot.py is in-repo."
   },
   "current_phase": "P3_PLAYABLE_BASELINE",
-  "current_gate": "P3-PHASE-1（A–E 并行）",
+  "current_gate": "P3-PHASE-2（收口：世界链路升级 + E8 位置持久化 + E9/E10）",
   "engine": {
     "product": "4.7.1-stable",
     "legacy_reference": "3.5.3",
@@ -705,6 +705,32 @@
         "migration/conversion/p2_batch3_smoke.json",
         "git diff HEAD~1..HEAD -- product/"
       ]
+    },
+    "P3-PHASE-1": {
+      "goal": "P3-A~E 并行工作流（角色/世界/战斗/拾取/UI）+ harness 接线",
+      "status": "DONE_WITH_CAVEATS",
+      "blocked_by": [],
+      "acceptance": {
+        "E1_character_entry": "PASS",
+        "E2_world_entry": "PASS_VIA_MANUAL_ASSEMBLY（World.tscn 全链路被 ItemTabContent.gd sort_custom G3 API 阻断，attempt-3 升级）",
+        "E3_movement_dash": "PASS（dash_burst_px=0 如实记录，按状态变化判定）",
+        "E4_skill_combat_event": "PASS",
+        "E5_mob_kill": "PASS",
+        "E6_loot_pickup": "PASS（掉落为测试桩，Pickups 场景部分落地）",
+        "E7_ui_open_close": "PASS",
+        "E8_save_load": "PASS_WITH_GAP（存档 schema 无 position 字段，P3 exit 要求位置持久化，attempt-3 补）",
+        "boot_script_errors": 0,
+        "tests": "236 OK"
+      },
+      "note": "8 条 preload-missing .tscn 已恢复清零。域外残留：MapMods.gd sort_custom、Minimap.gd Image.lock、Projectile 家族 super()._ready() 缺失、FloatingDamage.gd G3 Tween。",
+      "evidence": [
+        "migration/conversion/p3_a_character_save.json",
+        "migration/conversion/p3_b_world_movement.json",
+        "migration/conversion/p3_c_combat.json",
+        "migration/conversion/p3_d_loot.json",
+        "migration/conversion/p3_e_ui.json",
+        "migration/conversion/p3_asset_restore.json"
+      ]
     }
   },
   "preservation_counts_unverified": {
@@ -737,44 +763,40 @@
   },
   "next_ready": [
     {
-      "id": "P3-A",
-      "goal": "Character Entry & Save surface（E1/E8：LoadGame→角色已选，Save→Load 往返）",
+      "id": "P3-H1",
+      "goal": "World.tscn 全链路解锁（ItemTabContent.gd:95,110 + MapMods.gd:265 sort_custom G3 双参→Callable；Minimap.gd Image.lock G4 等价）→ E2/E3 升级 world_scene 模式复验",
       "depends_on": [
-        "P2-BATCH-3"
+        "P3-PHASE-1"
       ],
       "status": "READY",
       "parallelizable": true
     },
     {
-      "id": "P3-B",
-      "goal": "World Entry + Movement/Dash（E2/E3：带 player 真实进世界，tile pipeline 实机复验，位置断言）",
+      "id": "P3-H2",
+      "goal": "存档 schema 增加 position 持久化（GameState save/load + 往返断言）→ E8 补齐位置恢复",
       "depends_on": [
-        "P2-BATCH-3"
+        "P3-PHASE-1"
       ],
       "status": "READY",
-      "parallelizable": true,
-      "note": "含 P2-BATCH-3 遗留风险：read_tiles 运行时行为未经带 player 链路验证"
+      "parallelizable": true
     },
     {
-      "id": "P3-C",
-      "goal": "Combat Loop（E4/E5：技能释放→伤害→击杀，扩展 tests/combat_harness）",
+      "id": "P3-H3",
+      "goal": "运行时错误收敛：Projectile 家族 _ready 缺 super() 调用（~20 文件）+ FloatingDamage.gd interpolate_property G3 Tween→G4 create_tween",
       "depends_on": [],
       "status": "READY",
       "parallelizable": true
     },
     {
-      "id": "P3-D",
-      "goal": "Loot/Equipment 基础（E6：掉落生成→拾取→库存断言）",
-      "depends_on": [],
+      "id": "P3-I",
+      "goal": "E9 Evidence 晋升：harness 全量单命令统一跑通报告 + product_state 收口 + E10 评估（product_runtime_ready 或仅剩美术 BLOCKED）",
+      "depends_on": [
+        "P3-H1",
+        "P3-H2",
+        "P3-H3"
+      ],
       "status": "READY",
-      "parallelizable": true
-    },
-    {
-      "id": "P3-E",
-      "goal": "Skill UI + Passive Tree UI（E7：界面打开/关闭不崩溃探针）",
-      "depends_on": [],
-      "status": "READY",
-      "parallelizable": true
+      "parallelizable": false
     }
   ],
   "decisions": [

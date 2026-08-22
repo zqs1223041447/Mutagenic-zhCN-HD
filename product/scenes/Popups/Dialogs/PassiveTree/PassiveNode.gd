@@ -56,7 +56,7 @@ func _ready() -> void :
 												var keystone = Keystones.keystones[item]
 												label.text = keystone.description
 												searchable_string += label.text + " "
-												label.autowrap = true
+												label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 												label.custom_minimum_size = Vector2(320, 16)
 												$PassiveButton/StatInfoContainer/VBoxContainer/StatList.add_child(label)
 
@@ -118,6 +118,11 @@ func _resync():
 												$StartingGlow.visible = false
 
 func reset_focus_sprite():
+				# SpriteFrames come from .aseprite assets that may be absent in
+				# recovery builds; without them the button just has no texture.
+				if frames == null:
+								reset_modulate()
+								return
 				if specialization_tree:
 								if GameState.is_specialization_passive_allocated(node_id):
 												$PassiveButton.texture_normal = frames.get_frame("default", 0)

@@ -32,6 +32,22 @@ def run_main(args):
     return code, buf_out.getvalue(), buf_err.getvalue()
 
 
+def dormant_config_path(tmp):
+    """Copy of the real config with every runner forced dormant.
+
+    Keeps report-schema tests offline: the shipped config now has E4-E7
+    implemented=true and running them would launch real probe subprocesses.
+    """
+    import copy
+    cfg = copy.deepcopy(p3.load_config(HARNESS_DIR / "config.json"))
+    for step in cfg["steps"].values():
+        if isinstance(step.get("runner"), dict):
+            step["runner"]["implemented"] = False
+    path = tmp / "dormant_config.json"
+    path.write_text(json.dumps(cfg), encoding="utf-8")
+    return path
+
+
 def fake_proc(returncode=0, stdout="", stderr=""):
     return SimpleNamespace(returncode=returncode, stdout=stdout, stderr=stderr)
 
@@ -47,9 +63,10 @@ class TempCase(unittest.TestCase):
 
 
 class ReportSchemaTest(TempCase):
-    def test_default_run_all_steps_not_run_writes_schema_valid_report(self):
+    def test_dormant_run_writes_schema_valid_report(self):
         out = self.tmp / "nested" / "deep" / "report.json"
-        code, stdout, _ = run_main(["--out", str(out)])
+        code, stdout, _ = run_main(["--out", str(out),
+                                    "--config", str(dormant_config_path(self.tmp))])
         self.assertEqual(code, p3.EXIT_NOT_RUN)
         data = json.loads(out.read_text(encoding="utf-8"))
         for key in ("harness_id", "schema_version", "ran_at", "steps",
@@ -74,7 +91,8 @@ class ReportSchemaTest(TempCase):
 
     def test_json_only_prints_report_to_stdout(self):
         out = self.out_path()
-        code, stdout, _ = run_main(["--out", str(out), "--json-only"])
+        code, stdout, _ = run_main(["--out", str(out), "--json-only",
+                                    "--config", str(dormant_config_path(self.tmp))])
         self.assertEqual(code, p3.EXIT_NOT_RUN)
         parsed = json.loads(stdout)
         self.assertEqual(parsed["harness_id"], p3.HARNESS_ID)
@@ -84,7 +102,8 @@ class ReportSchemaTest(TempCase):
 
     def test_human_mode_does_not_dump_json(self):
         out = self.out_path()
-        code, stdout, _ = run_main(["--out", str(out)])
+        code, stdout, _ = run_main(["--out", str(out),
+                                    "--config", str(dormant_config_path(self.tmp))])
         self.assertEqual(code, p3.EXIT_NOT_RUN)
         self.assertFalse(stdout.lstrip().startswith("{"))
         self.assertIn("NOT_RUN", stdout)
@@ -119,7 +138,10 @@ class StepSelectionTest(TempCase):
 
     def test_selected_steps_run_others_marked_skip(self):
         out = self.out_path()
-        code, _, _ = run_main(["--steps", "E1,E3", "--out", str(out)])
+        # Dormant config copy: keeps this CLI-semantics test offline now that
+        # every shipped runner is implemented=true (would spawn real probes).
+        code, _, _ = run_main(["--steps", "E1,E3", "--out", str(out),
+                               "--config", str(dormant_config_path(self.tmp))])
         self.assertEqual(code, p3.EXIT_NOT_RUN)
         data = json.loads(out.read_text(encoding="utf-8"))
         by_id = {s["step_id"]: s for s in data["steps"]}
@@ -136,17 +158,24 @@ class StepSelectionTest(TempCase):
 
 
 class NotRunDefaultTest(TempCase):
-    def make_ctx(self, run=None):
-        cfg = p3.load_config(HARNESS_DIR / "config.json")
+    def make_ctx(self, run=None, cfg=None):
+        if cfg is None:
+            cfg = p3.load_config(HARNESS_DIR / "config.json")
         return p3.HarnessContext(config=cfg, repo_root=REPO,
                                  report_path=self.out_path(), run=run)
 
-    def test_every_check_defaults_to_not_run_without_spawning(self):
+    def test_dormant_steps_return_not_run_without_spawning(self):
+        import copy
         def forbidden_run(*a, **k):
             raise AssertionError("dormant runner must never spawn a process")
 
-        ctx = self.make_ctx(run=forbidden_run)
-        for sid in p3.STEP_ORDER:
+        cfg = p3.load_config(HARNESS_DIR / "config.json")
+        for sid in ("E1", "E2", "E3", "E8"):
+            single = copy.deepcopy(cfg)
+            for step in single["steps"].values():
+                if isinstance(step.get("runner"), dict):
+                    step["runner"]["implemented"] = False
+            ctx = self.make_ctx(run=forbidden_run, cfg=single)
             result = p3.CHECKS[sid](ctx)
             self.assertEqual(set(result.keys()), set(p3.RESULT_KEYS), sid)
             self.assertEqual(result["status"], "NOT_RUN", sid)
@@ -174,6 +203,13 @@ class RunnerHookTest(TempCase):
     def test_render_command_rejects_unknown_placeholder(self):
         with self.assertRaises(p3.UsageError):
             p3.render_command("{does_not_exist}", {})
+
+    def test_split_command_handles_windows_paths(self):
+        argv = p3.split_command(
+            '"C:/repo/scripts/validate/p3_combat_probe.py" --root "C:/repo"')
+        self.assertEqual(argv[0], "C:/repo/scripts/validate/p3_combat_probe.py")
+        self.assertEqual(argv[-1], "C:/repo")
+        self.assertTrue(all('"' not in token for token in argv))
 
     def test_rc_zero_classified_pass(self):
         seen = {}
@@ -246,11 +282,18 @@ class ConfigContractTest(TempCase):
     def test_config_loads_with_all_steps(self):
         self.assertEqual(sorted(self.cfg["steps"]), sorted(p3.STEP_ORDER))
 
-    def test_every_runner_ships_dormant(self):
+    def test_runner_wiring_split_matches_delivery_state(self):
+        # All eight steps wired to delivered probe CLIs as of attempt 2
+        # integration; caveats live in each runner's note field.
+        wired = set(p3.STEP_ORDER)
         for sid, step in self.cfg["steps"].items():
             runner = step.get("runner") or {}
-            self.assertFalse(runner.get("implemented", False),
-                             f"{sid} must ship implemented=false")
+            is_impl = bool(runner.get("implemented", False))
+            if sid in wired:
+                self.assertTrue(is_impl, f"{sid} must stay implemented=true")
+                self.assertTrue(runner.get("command_template"), sid)
+            else:
+                self.assertFalse(is_impl, f"{sid} must ship implemented=false")
             self.assertTrue(step.get("title"), sid)
             self.assertTrue(step.get("exit_criteria"), sid)
 

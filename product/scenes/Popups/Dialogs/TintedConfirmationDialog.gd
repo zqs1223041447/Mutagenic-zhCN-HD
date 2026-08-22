@@ -13,4 +13,4 @@ func _ready():
 				var parent_offset = size / 2.0
 				var actual_rect = get_viewport().get_visible_rect()
 				$Node/ColorRect.size = actual_rect.size
-				$Node/ColorRect.rect_global_position = - $Node/ColorRect.size / 2.0 + parent_offset
+				$Node/ColorRect.global_position = - $Node/ColorRect.size / 2.0 + parent_offset

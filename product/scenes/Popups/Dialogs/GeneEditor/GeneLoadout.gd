@@ -34,13 +34,13 @@ func render_loadout_stats(applied_stats):
 				clear_loadout_stats()
 				for keystone in applied_stats.keystones:
 								var label = Label.new()
-								label.autowrap = true
+								label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 								label.align = HORIZONTAL_ALIGNMENT_CENTER
 								label.text = Keystones.keystones[keystone].name
 								label.modulate = Colors.keystone
 								stat_container.add_child(label)
 								label = Label.new()
-								label.autowrap = true
+								label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 								label.align = HORIZONTAL_ALIGNMENT_CENTER
 								label.text = Keystones.keystones[keystone].description
 								label.modulate = Colors.keystone_description
@@ -51,7 +51,7 @@ func render_loadout_stats(applied_stats):
 												var stat_config = applied_stats.stats[stat]
 												for scaling_type in stat_config:
 																var label = Label.new()
-																label.autowrap = true
+																label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 																label.align = HORIZONTAL_ALIGNMENT_CENTER
 																label.text = StatsInfo.render_passive_stat_line(stat, {
 																				"scaling_type": scaling_type, 
@@ -68,7 +68,7 @@ func render_loadout_stats(applied_stats):
 																for scaling_type in stat_config:
 																				var label = Label.new()
 																				label.align = HORIZONTAL_ALIGNMENT_CENTER
-																				label.autowrap = true
+																				label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 																				label.text = StatsInfo.render_passive_stat_line(stat, {
 																								"scaling_type": scaling_type, 
 																								"amount": stat_config[scaling_type], 

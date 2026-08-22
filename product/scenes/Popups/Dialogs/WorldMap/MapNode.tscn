@@ -1,0 +1,142 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scenes/Popups/Dialogs/WorldMap/MapNode.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/worldmap/map.png" id="2"]
+[ext_resource type="Theme" path="res://Themes/MainTheme.tres" id="3"]
+[ext_resource type="SpriteFrames" path="res://sprites/worldmap/map_highlighted.aseprite" id="4"]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color(0, 0, 0, 1)
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+
+[node name="MapNode" type="Node2D"]
+script = ExtResource("1")
+
+[node name="MapButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 16.0
+offset_bottom = 16.0
+action_mode = 0
+texture_normal = ExtResource("2")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="StatInfoContainer" type="PanelContainer" parent="MapButton"]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 33.0
+offset_top = -54.0
+offset_right = 71.0
+offset_bottom = -25.0
+mouse_filter = 2
+theme = ExtResource("3")
+theme_override_styles/panel = SubResource("1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MapButton/StatInfoContainer"]
+offset_right = 404.0
+offset_bottom = 68.0
+size_flags_horizontal = 3
+
+[node name="NodeNameLabel" type="Label" parent="MapButton/StatInfoContainer/VBoxContainer"]
+offset_right = 404.0
+offset_bottom = 20.0
+text = "Abandoned Cave"
+
+[node name="ZoneLabel" type="Label" parent="MapButton/StatInfoContainer/VBoxContainer"]
+offset_top = 24.0
+offset_right = 404.0
+offset_bottom = 44.0
+text = "Zone Level: 10"
+
+[node name="ItemQuanityLabel" type="Label" parent="MapButton/StatInfoContainer/VBoxContainer"]
+visible = false
+offset_top = 48.0
+offset_right = 140.0
+offset_bottom = 68.0
+text = "Zone Level: 10"
+
+[node name="ItemRarityLabel" type="Label" parent="MapButton/StatInfoContainer/VBoxContainer"]
+visible = false
+offset_top = 48.0
+offset_right = 140.0
+offset_bottom = 68.0
+text = "Zone Level: 10"
+
+[node name="LeaderboardInfo" type="VBoxContainer" parent="MapButton/StatInfoContainer/VBoxContainer"]
+visible = false
+offset_top = 48.0
+offset_right = 404.0
+offset_bottom = 68.0
+custom_minimum_size = Vector2(240, 0)
+size_flags_horizontal = 3
+
+[node name="Scores" type="GridContainer" parent="MapButton/StatInfoContainer/VBoxContainer/LeaderboardInfo"]
+offset_right = 404.0
+offset_bottom = 20.0
+size_flags_horizontal = 3
+theme_override_constants/hseparation = 16
+columns = 5
+
+[node name="Label" type="Label" parent="MapButton/StatInfoContainer/VBoxContainer/LeaderboardInfo/Scores"]
+offset_right = 40.0
+offset_bottom = 20.0
+text = "Rank"
+
+[node name="Label2" type="Label" parent="MapButton/StatInfoContainer/VBoxContainer/LeaderboardInfo/Scores"]
+offset_left = 56.0
+offset_right = 116.0
+offset_bottom = 20.0
+text = "Player"
+align = 1
+
+[node name="Label4" type="Label" parent="MapButton/StatInfoContainer/VBoxContainer/LeaderboardInfo/Scores"]
+offset_left = 132.0
+offset_right = 182.0
+offset_bottom = 20.0
+size_flags_horizontal = 3
+text = "Level"
+align = 2
+
+[node name="Label5" type="Label" parent="MapButton/StatInfoContainer/VBoxContainer/LeaderboardInfo/Scores"]
+offset_left = 198.0
+offset_right = 338.0
+offset_bottom = 20.0
+size_flags_horizontal = 3
+text = "Specialization"
+align = 2
+
+[node name="Label3" type="Label" parent="MapButton/StatInfoContainer/VBoxContainer/LeaderboardInfo/Scores"]
+offset_left = 354.0
+offset_right = 404.0
+offset_bottom = 20.0
+size_flags_horizontal = 3
+text = "Score"
+align = 2
+
+[node name="MapIcon" type="TextureRect" parent="MapButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Glow" type="AnimatedSprite2D" parent="MapButton"]
+visible = false
+frames = ExtResource("4")
+frame = 1
+speed_scale = 0.3
+playing = true
+centered = false
+offset = Vector2(-8, -8)
+
+[connection signal="focus_entered" from="MapButton" to="." method="_on_focus"]
+[connection signal="focus_exited" from="MapButton" to="." method="_on_focus_loss"]
+[connection signal="mouse_entered" from="MapButton" to="." method="_on_MapButton_mouse_entered"]
+[connection signal="mouse_exited" from="MapButton" to="." method="_on_MapButton_mouse_exited"]
+[connection signal="pressed" from="MapButton" to="." method="_on_MapButton_pressed"]

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "task": "P3-E",
+  "probe_id": "p3_ui_probe",
+  "exit_criteria": [
+    "E7"
+  ],
+  "generated_at": "2026-08-22T03:07:10Z",
+  "engine": {
+    "binary_name": "Godot_v4.7.1-stable_win64.exe",
+    "resolved_via": "REPO_RELATIVE",
+    "version": "4.7.1",
+    "status": "SUCCESS"
+  },
+  "driver_scene": "res://scenes/UI/probes/p3_ui_probe.tscn",
+  "command": [
+    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
+    "--headless",
+    "--path",
+    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\product",
+    "res://scenes/UI/probes/p3_ui_probe.tscn"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "duration_ms": 17686,
+  "attempts": 1,
+  "flaked": false,
+  "result": {
+    "e7_pass": true,
+    "errors": [],
+    "pass": true,
+    "passive_tree_closed": true,
+    "passive_tree_nodes_built": true,
+    "passive_tree_opened": true,
+    "popup_stack_drained": true,
+    "probe_id": "p3_ui_probe",
+    "skill_screen_closed": true,
+    "skill_screen_opened": true
+  },
+  "script_errors": [],
+  "verdict_detail": "probe assertions satisfied",
+  "verdict": "PASS",
+  "proves": "the skill screen and the passive tree screen open headlessly through PopupManager against a seeded character, build their content (passive nodes instantiate) and close cleanly back to an empty popup stack without crashing",
+  "not_proven": "visual layout/rendering fidelity, controller navigation and allocation interactions inside the screens"
+}

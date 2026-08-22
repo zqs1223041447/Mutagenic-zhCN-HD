@@ -193,8 +193,9 @@ def render_command(template: str, values: dict[str, str]) -> str:
 
 
 def split_command(rendered: str) -> list[str]:
-    # posix=False on Windows keeps drive-letter backslashes intact.
-    return shlex.split(rendered, posix=(os.name != "nt"))
+    # Normalize to forward slashes so a single posix-aware tokenizer works on
+    # every platform; Windows accepts forward-slash paths for executables/args.
+    return shlex.split(rendered.replace("\\", "/"), posix=True)
 
 
 def execute_runner(step_id: str, runner: dict, values: dict[str, str],
@@ -391,6 +392,13 @@ def print_human(report: dict, out_path: Path) -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
+    # Windows consoles default to cp1252; step details carry non-ASCII notes.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            try:
+                stream.reconfigure(encoding="utf-8", errors="replace")
+            except (ValueError, OSError):
+                pass
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--out", type=Path, default=None,
                         help="JSON report path (default: runtime/p3_harness_report.json)")

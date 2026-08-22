@@ -2,14 +2,14 @@
   "schema_version": 1,
   "intent": "B1-X5 deterministic Combat Vertical Slice scenario catalog. Each scenario is an explicit, re-runnable unit: id / default seed / mob composition / spawn geometry / end condition / assert contract. The host-side driver (scripts/validate/combat_harness.py) parses this file and renders plan + telemetry + evidence from it. In-game execution is provided separately by the k5-combat-harness MOD (recovered TestLevel remains immutable).",
   "mob_resources": {
-    "skeleton_warrior": "res://Scenes/Mobs/Basic/Creatures/SkeletonWarrior.tscn",
-    "skeleton_archer": "res://Scenes/Mobs/Basic/Creatures/SkeletonArcher.tscn",
-    "skeleton_sparker": "res://Scenes/Mobs/Basic/Creatures/SkeletonSparker.tscn",
-    "skeleton_mage": "res://Scenes/Mobs/Basic/Creatures/SkeletonMage.tscn",
-    "zombie": "res://Scenes/Mobs/Basic/Creatures/Zombie.tscn",
-    "spider": "res://Scenes/Mobs/Basic/Creatures/Spider.tscn",
-    "skeletor": "res://Scenes/Mobs/Basic/Creatures/Skeletor.tscn",
-    "attack_dog": "res://Scenes/Mobs/Basic/Creatures/AttackDog.tscn"
+    "skeleton_warrior": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "SKELETON_WARRIOR" },
+    "skeleton_archer": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "SKELETON_ARCHER" },
+    "skeleton_sparker": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "SKELETON_SPARKER" },
+    "skeleton_mage": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "SKELETON_MAGE" },
+    "zombie": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "ZOMBIE" },
+    "spider": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "SPIDER" },
+    "skeletor": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "SKELETOR" },
+    "attack_dog": { "res": "res://scenes/Mobs/Mob.tscn", "mob_type": "ATTACK_DOG" }
   },
   "scenarios": [
     {

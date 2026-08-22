@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "task": "P3-D",
+  "probe_id": "p3_loot_probe",
+  "exit_criteria": [
+    "E6"
+  ],
+  "generated_at": "2026-08-22T03:06:53Z",
+  "engine": {
+    "binary_name": "Godot_v4.7.1-stable_win64.exe",
+    "resolved_via": "REPO_RELATIVE",
+    "version": "4.7.1",
+    "status": "SUCCESS"
+  },
+  "driver_scene": "res://scenes/UI/probes/p3_loot_probe.tscn",
+  "command": [
+    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\02_tools\\godot\\Godot_v4.7.1-stable_win64.exe",
+    "--headless",
+    "--path",
+    "C:\\AI-GAME\\Mutagenic-zhCN-HD\\product",
+    "res://scenes/UI/probes/p3_loot_probe.tscn"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "duration_ms": 16657,
+  "attempts": 1,
+  "flaked": false,
+  "result": {
+    "collision_pickup_fired": true,
+    "credited_amount": 3,
+    "drop_spawned": true,
+    "e6_pass": true,
+    "errors": [],
+    "orb_pickup_signal_seen": true,
+    "orbs_blue_after": 3,
+    "orbs_blue_before": 0,
+    "pass": true,
+    "probe_id": "p3_loot_probe"
+  },
+  "script_errors": [],
+  "verdict_detail": "probe assertions satisfied",
+  "verdict": "PASS",
+  "proves": "a spawned drop picked up through real Area2D collision with a player-group entity lands in queryable inventory state (Stats.metrics.orbs.blue 0 -> 3) with the orb_pickup signal emitted by production code",
+  "not_proven": "the real OrbPickup/GenePickup scenes (product/scenes/Pickups/** missing, outside this lane's write domain); the drop itself is a test stub mirroring Pickup.gd's collision contract"
+}

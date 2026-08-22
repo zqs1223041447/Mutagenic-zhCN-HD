@@ -21,7 +21,7 @@ func _on_Timer_timeout() -> void :
 
 
 func _on_TextureRect_mouse_entered() -> void :
-				tooltip.render(rect_global_position, Vector2.ZERO)
+				tooltip.render(global_position, Vector2.ZERO)
 
 func _on_TextureRect_mouse_exited() -> void :
 				tooltip.hide()

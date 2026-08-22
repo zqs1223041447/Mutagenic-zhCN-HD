@@ -1,4 +1,4 @@
-extends Sprite
+extends Sprite2D
 
 @onready var world = GameState.get_global("world")
 

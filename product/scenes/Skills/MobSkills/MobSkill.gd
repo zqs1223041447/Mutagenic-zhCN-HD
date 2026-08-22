@@ -14,6 +14,10 @@ var override_stats = {
 @export var tags = []
 
 func _ready() -> void :
+				# Godot 4 no longer auto-chains parent _ready(); without this call
+				# GenericSkill._ready never runs for mob skills (no damage_tag,
+				# no cooldown init -> empty damage bundles).
+				super._ready()
 				initialize_override_mob_stats()
 
 func initialize_override_mob_stats():

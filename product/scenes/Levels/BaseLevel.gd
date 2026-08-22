@@ -345,7 +345,9 @@ func process_tiles():
 				var cells: Array[Vector2i] = []
 				for tile in final_tiles:
 								cells.append(Vector2i(tile[0], tile[1]))
-				tiles.set_cells_terrain_connect(cells, 0, 0)
+				# Godot 4.7.1 实证签名（ClassDB）：set_cells_terrain_connect(layer, cells,
+				# terrain_set, terrain, ignore_empty_terrains) —— layer 在首位，共 5 参。
+				tiles.set_cells_terrain_connect(0, cells, 0, 0, true)
 
 				
 				for tile in final_tiles:

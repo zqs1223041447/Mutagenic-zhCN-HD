@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import random
 import shlex
 import subprocess
@@ -452,17 +453,30 @@ def run_command(root: Path, args: argparse.Namespace) -> int:
     expected_telemetry = (args.telemetry or telemetry_dir / f"{scenario['id']}_{seed}.json").resolve()
     game_plan: list[dict[str, Any]] = []
     for spawn in plan.get("spawns", []):
-        if spawn.get("resource") is None:
+        resource = spawn.get("resource")
+        if resource is None:
             raise SystemExit(
                 f"ERROR: plan spawn {spawn.get('order')} has no resource; "
                 f"mob {spawn.get('mob')!r} is missing from catalog mob_resources"
             )
-        game_plan.append({
-            "res": spawn["resource"],
+        entry_res, mob_type = resource, None
+        if isinstance(resource, dict):
+            # Product-tree resources: generic Mob.tscn + MonsterTypes enum id.
+            entry_res = resource.get("res")
+            mob_type = resource.get("mob_type")
+        if not entry_res:
+            raise SystemExit(
+                f"ERROR: plan spawn {spawn.get('order')} resource has no 'res': {resource!r}"
+            )
+        game_entry: dict[str, Any] = {
+            "res": entry_res,
             "x": float(spawn["position"][0]),
             "y": float(spawn["position"][1]),
             "count": 1,
-        })
+        }
+        if mob_type:
+            game_entry["mob_type"] = str(mob_type)
+        game_plan.append(game_entry)
     game_request = {
         "schema_version": TELEMETRY_SCHEMA_VERSION,
         "scenario_id": scenario["id"],
@@ -492,8 +506,10 @@ def run_command(root: Path, args: argparse.Namespace) -> int:
     telemetry: dict[str, Any] | None = None
     if args.launch:
         try:
+            # posix=False on Windows keeps drive-letter backslash paths intact
+            # (same convention as tests/p3_harness/p3_e2e.py split_command).
             proc = subprocess.run(
-                shlex.split(args.launch), cwd=str(root),
+                shlex.split(args.launch, posix=(os.name != "nt")), cwd=str(root),
                 capture_output=True, text=True, timeout=args.launch_timeout,
             )
             runtime_info["ran"] = True

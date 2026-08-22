@@ -109,11 +109,11 @@ func _process(delta: float) -> void :
 												_focus_tab_zero()
 
 				if Input.is_action_just_pressed("ui_focus_prev") or Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("zoom_out"):
-								if tab_container.get_focus_owner() == null and tab_container.get_tab_count() > 0:
+								if tab_container.get_viewport().gui_get_focus_owner() == null and tab_container.get_tab_count() > 0:
 												var next = (tab_container.get_tab_count() + tab_container.current_tab - 1) % tab_container.get_tab_count()
 												tab_container.current_tab = next
 				elif Input.is_action_just_pressed("ui_focus_next") or Input.is_action_just_pressed("move_right") or Input.is_action_just_pressed("zoom_in"):
-								if tab_container.get_focus_owner() == null and tab_container.get_tab_count() > 0:
+								if tab_container.get_viewport().gui_get_focus_owner() == null and tab_container.get_tab_count() > 0:
 												var next = (tab_container.get_tab_count() + tab_container.current_tab + 1) % tab_container.get_tab_count()
 												tab_container.current_tab = next
 
